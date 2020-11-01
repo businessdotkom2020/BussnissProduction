@@ -1,0 +1,46 @@
+@font-face {
+    font-family: taj-bold;
+    src: url(../fonts/Tajawal-Bold.ttf);
+}
+
+@font-face {
+    font-family: pop-black;
+    src: url(../fonts/Poppins-Black.ttf);
+}
+
+@font-face {
+    font-family: pop-bold;
+    src: url(../fonts/Poppins-Bold.ttf);
+}
+@font-face {
+    font-family: pop-extralight;
+    src: url(../fonts/Poppins-ExtraLight.ttf);
+}
+
+@font-face {
+    font-family: pop-light;
+    src: url(../fonts/Poppins-Light.ttf);
+}
+
+@font-face {
+    font-family: pop-medium;
+    src: url(../fonts/Poppins-Medium.ttf);
+}
+@font-face {
+    font-family: pop-regular;
+    src: url(../fonts/Poppins-Regular.ttf);
+}
+
+@font-face {
+    font-family: pop-semibold;
+    src: url(../fonts/Poppins-SemiBold.ttf);
+}
+
+@font-face {
+    font-family: taj-light;
+    src: url(../fonts/Tajawal-Light.ttf);
+}
+@font-face {
+    font-family: taj-regular;
+    src: url(../fonts/Tajawal-Regular.ttf);
+}
