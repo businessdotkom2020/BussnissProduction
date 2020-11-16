@@ -11,7 +11,7 @@ return [
     */
 
     'user' => [
-        'add_default_role_on_register' => true,
+        'add_default_role_on_register' => false,
         'default_role'                 => 'user',
         'namespace'                    => null,
         'default_avatar'               => 'users/default.png',
@@ -84,7 +84,7 @@ return [
         'tables' => [
             'hidden' => ['migrations', 'data_rows', 'data_types', 'menu_items', 'password_resets', 'permission_role', 'settings'],
         ],
-        'autoload_migrations' => true,
+        'autoload_migrations' => false,
     ],
 
     /*
@@ -175,7 +175,7 @@ return [
         'default_menu' => 'admin',
 
         // When a BREAD is added, create the related Permission.
-        'add_permission' => true,
+        'add_permission' => false,
 
         // which role add premissions to
         'default_role' => 'admin',

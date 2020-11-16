@@ -9,4 +9,7 @@ class State extends Model
 {
               use  Translatable;
     protected $translatable = ['name'];
+    public function country() {
+        return $this->belongsTo('App\Models\Country','country_id');
+    }
 }

@@ -41,6 +41,11 @@ return [
             'provider' => 'users',
         ],
 
+        'moderator' => [
+            'driver' => 'session',
+            'provider' => 'moderators',
+        ],
+
         'api' => [
             'driver' => 'passport',
             'provider' => 'users',
@@ -70,7 +75,10 @@ return [
             'driver' => 'eloquent',
             'model' => App\Models\User::class,
         ],
-
+        'moderators' => [
+            'driver' => 'eloquent',
+            'model' => App\Models\Moderator::class,
+        ],
         'stores' => [
             'driver' => 'eloquent',
             'model' => App\Models\Store::class,
@@ -100,6 +108,11 @@ return [
     'passwords' => [
         'users' => [
             'provider' => 'users',
+            'table' => 'password_resets',
+            'expire' => 60,
+        ],
+        'moderators' => [
+            'provider' => 'moderators',
             'table' => 'password_resets',
             'expire' => 60,
         ],

@@ -9,4 +9,8 @@ class City extends Model
 {
           use  Translatable;
     protected $translatable = ['name'];
+    public function state()
+    {
+        return $this->belongsTo(State::class);
+    }
 }

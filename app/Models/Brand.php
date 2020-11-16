@@ -12,4 +12,9 @@ class Brand extends Model
 
     protected $translatable = ['name'];
 
+    public function products()
+    {
+        return $this->hasMany(Product::class);
+    }
+
 }
