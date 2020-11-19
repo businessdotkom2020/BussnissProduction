@@ -199,7 +199,7 @@ $url = "http://api.unifonic.com/wrapper/sendSMS.php?userid=naeefm@hotmail.com&pa
 Route::group(['prefix' => 'admin'], function () {
     Route::get('categories/sub'   , 'VoyagerCategoriesController@sub_categories');
     Route::get('categories/sub/sub'   , 'VoyagerCategoriesController@sub_sub_categories');
-//    Voyager::routes();
+
 
 });
 Route::get('/config-cache', function() {
