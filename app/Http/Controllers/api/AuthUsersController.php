@@ -25,6 +25,9 @@ use App\Models\State;
 use App\Http\Resources\UserResource;
 use Lang;
 
+use App\Http\Resources\StoreContactResource;
+
+
 class AuthUsersController extends BaseController
 {
 
@@ -42,7 +45,7 @@ class AuthUsersController extends BaseController
     public function social(SocialAuth $request)
     {
         $check_user = User::where([['email',Request()->email],['social_auth_type',request()->social_auth_type]])->first();
-        
+
               if(User::where([['email',Request()->email],['social_auth_type',null]])->first()){
                     return response()->json([
                         "status" => false,
@@ -54,14 +57,14 @@ class AuthUsersController extends BaseController
                                 ]
                             ],
                         ],422);
-                   
+
               }
       if(!$check_user){
 
 
         $user = User::create($request->only('name','email','social_auth_type','social_id'));
 
-   
+
 }
 else{
     $user = $check_user;
@@ -74,9 +77,16 @@ else{
         return response()->json([
             'status' => true,
             'code' => 200,
-            'token'     =>  $tokenResult->accessToken,
-            'token_type' => 'Bearer',
-            'expires_at' => Carbon::parse($tokenResult->token->expires_at)->toDateTimeString()
+            'message' => 'Registered  Successfully',
+            'data' => [
+                'id' => $user->id ,
+                'name' => $user->name ,
+                'email' => $user->email ,
+                'token'     =>  $tokenResult->accessToken,
+                'token_type' => 'Bearer',
+                'expires_at' => Carbon::parse($tokenResult->token->expires_at)->toDateTimeString()
+            ],
+
 
         ],200);
     }
@@ -102,10 +112,19 @@ else{
         return response()->json([
             'status' => true,
             'code' => 200,
-            'token'     =>  $tokenResult->accessToken,
-            'token_type' => 'Bearer',
-            'expires_at' => Carbon::parse($tokenResult->token->expires_at)->toDateTimeString()
+            'message' => 'Registered  Successfully',
 
+
+            'data' => [
+                'id' => $user->id ,
+                'name' => $user->name ,
+                'email' => $user->email ,
+                'token'     =>  $tokenResult->accessToken,
+                'token_type' => 'Bearer',
+                'expires_at' => Carbon::parse($tokenResult->token->expires_at)->toDateTimeString()
+            ],
+
+             
         ],200);
     }
 
@@ -134,6 +153,7 @@ else{
 
         if (!$token = auth()->attempt($credentials)) {
             return response()->json([
+                'status' => false,
                 'message' => 'The given data was invalid.',
                 'errors' => [
                     'email_password' =>  ['Wrong credentials Please Try Again']
@@ -148,10 +168,17 @@ else{
         $token->save();
 
         return response()->json([
-            'token'     =>  $tokenResult->accessToken,
-            'token_type' => 'Bearer',
-            'expires_at' => Carbon::parse($tokenResult->token->expires_at)->toDateTimeString()
-
+            'status' => true,
+            'code' => 200,
+            'data' => [
+                'id' => $user->id ,
+                'name' => $user->name ,
+                'email' => $user->email ,
+                'token'     =>  $tokenResult->accessToken,
+                'token_type' => 'Bearer',
+                'expires_at' => Carbon::parse($tokenResult->token->expires_at)->toDateTimeString()
+            ],
+           
         ],200);
     }
 
@@ -197,10 +224,17 @@ else{
         return response()->json([
             'status' => true,
             'code' => 200,
-            'type'     => $user->type ? "Supplier" : "user" ,
-            'token'     =>  $tokenResult->accessToken,
-            'token_type' => 'Bearer',
-            'expires_at' => Carbon::parse($tokenResult->token->expires_at)->toDateTimeString()
+            'message' => 'Logged in Successfully',
+            'data' => [
+                'id' => $user->id ,
+                'name' => $user->name ,
+                'email' => $user->email ,
+                'type'     => $user->type ? "Supplier" : "user" ,
+                'token'     =>  $tokenResult->accessToken,
+                'token_type' => 'Bearer',
+                'expires_at' => Carbon::parse($tokenResult->token->expires_at)->toDateTimeString()
+            ],
+
 
         ],200);
     }
@@ -292,14 +326,14 @@ $user = User::where('email',Request()->email)->first();
         // $user->notify(new PasswordResetRequest($passwordReset->code));
 
        return response()->json([
-         
+
            'status' => true,
             'code' => 200,
                 'data'    => [
                     'email' => $user->email,
                     ],
                 'message' =>'message sent successfuly',
-                
+
             ], 200);
 }
 
@@ -319,39 +353,52 @@ $user = User::where('email',Request()->email)->first();
             $token->save();
 
             $password_resset->forceDelete();
-            
+
               return response()->json([
             'status' => true,
             'code' => 200,
-            'token'     =>  $tokenResult->accessToken,
-            'token_type' => 'Bearer',
-            'expires_at' => Carbon::parse($tokenResult->token->expires_at)->toDateTimeString()
+            'data' => [
+                'token'     =>  $tokenResult->accessToken,
+                'token_type' => 'Bearer',
+                'expires_at' => Carbon::parse($tokenResult->token->expires_at)->toDateTimeString()
+            ]
 
         ],200);
       }
-      
-      
+
+
           public function countries()
     {
-        
-        return CountryResource::collection(
-            Country::get()
-        );
+
+  
+        return response()->json([
+
+            'status' => true,
+            'code'    => 200,
+            'data' => CountryResource::collection(Country::get())
+    
+            ]);
     }
           public function state($id)
     {
-        
-        return CountryResource::collection(
-            State::where('country_id',$id)->get()
-        );
+
+                return response()->json([
+
+        'status' => true,
+        'code'    => 200,
+        'data' => CountryResource::collection( State::where('country_id',$id)->get())
+
+        ]);
+
     }
          public function city($id)
     {
-        
-        return CountryResource::collection(
-            City::where('state_id',$id)->get()
-        );
+        return response()->json([
+            'status' => true,
+            'code'    => 200,
+            'data' => CountryResource::collection(   City::where('state_id',$id)->get()  )
+        ]);
     }
-      
+
 
 }

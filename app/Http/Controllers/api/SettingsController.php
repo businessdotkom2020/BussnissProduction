@@ -34,38 +34,56 @@ class SettingsController extends Controller
        $customer_service->title = Request()->title;
        $customer_service->body = Request()->body;
        $customer_service->save();
-       
+
                return response()->json([
-            'status' => "success",
+            'status' => true,
+            'code' => 200,
             'message' => "Support Ticket Created Sussuflly",
             ]) ;
    }
-   
-   
+
+
       public function about(){
-        return new AboutResource(AppSetting::first());
+        return response()->json([
+            'status' => true,
+            'code' => 200,
+            'data' =>  new AboutResource(AppSetting::first())
+        ]) ;
    }
       public function terms_conditions(){
-             return new TermsConditionsResource(AppSetting::first());
+        return response()->json([
+            'status' => true,
+            'code' => 200,
+            'data' =>  new TermsConditionsResource(AppSetting::first())
+        ]) ;
 
    }
       public function privacy_policy(){
-            return new PrivacyPolicyResource(AppSetting::first());
+        return response()->json([
+            'status' => true,
+            'code' => 200,
+            'data' =>  new PrivacyPolicyResource(AppSetting::first())
+        ]) ;
 
    }
-   
+
       public function social_links(){
-            return new SocialLinksResource(AppSetting::first());
+        return response()->json([
+            'status' => true,
+            'code' => 200,
+            'data' => new SocialLinksResource(AppSetting::first())
+        ]) ;
+
 
    }
-   
-   
-   
-   
-   
-   
-   
-   
-   
+
+
+
+
+
+
+
+
+
 
 }

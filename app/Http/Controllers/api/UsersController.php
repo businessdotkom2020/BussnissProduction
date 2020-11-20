@@ -6,9 +6,9 @@ use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use App\Http\Requests\Auth\UpdateUserInfoRequest;
 use App\Http\Requests\Auth\UpdateUserPasswordRequest;
+use App\Http\Resources\StoreContactResource;
 use App\Http\Resources\UserResource;
 use App\Http\Resources\ConsumerContactResource;
-use App\Http\Resources\StoreContactResource;
 use App\Http\Resources\ServiceContactResource;
 use App\Models\User;
 

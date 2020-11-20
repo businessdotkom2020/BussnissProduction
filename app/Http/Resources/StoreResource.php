@@ -16,6 +16,7 @@ class StoreResource extends JsonResource
     {
            // return parent::toArray($request);
            return [
+
             'id'                => $this->id,
             'name'        => $this->name,
             'logo'       => url('storage/'.$this->avatar),
@@ -23,5 +24,10 @@ class StoreResource extends JsonResource
              'products'    => ProductIndexResource::collection($this->products),
 
         ];
+
+
+
     }
+
+
 }
