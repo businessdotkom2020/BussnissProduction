@@ -10,4 +10,8 @@ class AttributeValue extends Model
 {
             use Translatable;
     protected $translatable = ['value'];
+    public function attribute()
+    {
+        return $this->belongsTo(Attribute::class);
+    }
 }

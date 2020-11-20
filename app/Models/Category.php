@@ -19,7 +19,7 @@ class Category extends Model
         'parent_id',
         'order'
     ];
-    // protected $appends = ['slider','top-suppliers'];
+    // protected $appends = ['slider','top-sellers'];
     protected $appends = ['hasChild'];
 
     public function getTopSuppliersAttribute()

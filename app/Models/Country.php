@@ -23,4 +23,8 @@ class Country extends Model
     {
         return $this->belongsToMany(ShippingMethod::class);
     }
+    public function states()
+    {
+        return $this->hasMany(State::class);
+    }
 }

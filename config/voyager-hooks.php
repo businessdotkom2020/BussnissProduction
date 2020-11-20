@@ -6,7 +6,7 @@ return [
 
     'add-route'            => true,
     'add-hook-menu-item'   => true,
-    'add-hook-permissions' => true,
+    'add-hook-permissions' => false,
     'publish-vendor-files' => true,
 
 ];
