@@ -33,7 +33,14 @@ class StoresController extends Controller
 
     public function profile()
     {
-        return new SupplierIndexResource(Request()->user());
+
+        return response()->json([
+            "status" => true,
+            "code" => 200,
+            "data" => new SupplierIndexResource(Request()->user())
+            ]);
+
+
     }
     public function show_factory($supplier_id)
     {
