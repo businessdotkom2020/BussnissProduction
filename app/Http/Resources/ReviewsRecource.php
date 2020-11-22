@@ -29,21 +29,21 @@ class ReviewsRecource extends ProductIndexResource
             'stars'           => (int)$this->stars,
             'comment'           => $this->comment,
              'user_image'       => $this->owner ? url('storage/'.$this->owner->avatar) : "http://businessdotkom.com/storage/users/default.png",
-             'user_name'       =>  $this->owner ? $this->owner->name :  "kareem Elsharkawy",
+             'user_name'       =>  $this->owner ? $this->owner->name :  "Essam Elsharkawy",
              'can_be_deleted'       => $this->isOwner(),
             'created_at'   => $this->created_at,
             'updated_at'   => $this->updated_at,
         ];
 
     }
-     
+
              public function isOwner(){
                if( auth()->guard('api')->user()){
-          return  auth()->guard('api')->user()->id == $this->user_id ? true: false; 
+          return  auth()->guard('api')->user()->id == $this->user_id ? true: false;
     }
         return false;
           }
 
 
- 
+
 }

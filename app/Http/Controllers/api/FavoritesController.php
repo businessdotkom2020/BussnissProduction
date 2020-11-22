@@ -32,7 +32,6 @@ class FavoritesController extends Controller
          return response()->json([
              "status" => true,
              'code' => 200,
-
              "message" => "Toggled Favorite Successfully"
              ]);
     }
