@@ -26,7 +26,7 @@ class FavoritesController extends Controller
 
         $product = Product::find($id);
                 if(!$product)
-                    return response()->json([ "status" => "failed", "mesage" => "product not found" ],401);
+                    return response()->json([ "status" => false,'code' => 422, "mesage" => "product not found" ],422);
         $product->favorite();
 
          return response()->json([
@@ -41,7 +41,7 @@ class FavoritesController extends Controller
 
         $request = \App\Models\Request::find($id);
         if(!$request)
-                    return response()->json([ "status" => "failed", "mesage" => "request not found" ],401);
+                    return response()->json([ "status" => false,'code' => 422, "mesage" => "request not found" ],422);
 
         $request->favorite();
 
@@ -59,7 +59,7 @@ class FavoritesController extends Controller
 
         $service = \App\Models\Service::find($id);
         if(!$service)
-                    return response()->json([ "status" => "failed", "mesage" => "Service not found" ],401);
+                    return response()->json(["status" => false,'code' => 422, "mesage" => "Service not found" ],422);
 
         $service->favorite();
 
