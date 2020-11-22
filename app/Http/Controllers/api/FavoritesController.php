@@ -11,9 +11,11 @@ use Illuminate\Http\Request;
 use App\Http\Resources\ParentCategoryResource;
 use App\Http\Resources\MainCategoryResource;
 use App\Http\Resources\CategoryProductsResource;
+use App\Http\Resources\collections\ProductIndexCollection;
 use App\Http\Resources\ProductIndexResource;
 use App\Http\Resources\ServicesIndexResource;
 use App\Http\Resources\collections\RequestIndexCollection;
+use App\Http\Resources\collections\ServicesIndexCollection;
 use App\Http\Resources\StoreResource;
 
 use App\Http\Resources\RequestIndexResource;
@@ -69,34 +71,9 @@ class FavoritesController extends Controller
              ]);
     }
 
-    public function get_favorites(){
-
-
-        if($type == 'product'){
-             $favorite_model = \App\Models\Favorite::where([['user_id',Request()->user()->id],['favorited_type','App\Models\Product']])->get()->pluck('favorited_id');
-
-        }elseif($type == 'service'){
-             $favorite_model = \App\Models\Favorite::where([['user_id',Request()->user()->id],['favorited_type','App\Models\Service']])->get()->pluck('favorited_id');
-
-
-        }elseif($type == 'request'){
-             $favorite_model = \App\Models\Favorite::where([['user_id',Request()->user()->id],['favorited_type','App\Models\Request']])->get()->pluck('favorited_id');
-
-        }
-        else{
-                     return response()->json([
-             "status" => "failed"
-             ]);
-        }
-
-
-        $products_ids =  \App\Models\Favorite::where([['user_id',Request()->user()->id],['favorited_type','App\Models\Product']])->get()->pluck('favorited_id');
-        return ProductIndexResource::collection(Product::whereIn('id',$products_ids)->get());
-    }
-
     public function get_favorite_products(){
         $products_ids =  \App\Models\Favorite::where([['user_id',Request()->user()->id],['favorited_type','App\Models\Product']])->get()->pluck('favorited_id');
-        return ProductIndexResource::collection(Product::whereIn('id',$products_ids)->get());
+        return ProductIndexCollection::collection(Product::whereIn('id',$products_ids)->get());
     }
 
     public function get_favorite_requests(){
@@ -108,7 +85,7 @@ class FavoritesController extends Controller
     public function get_favorite_services(){
                 $services_ids =  \App\Models\Favorite::where([['user_id',Request()->user()->id],['favorited_type','App\Models\Service']])->get()->pluck('favorited_id');
 
-        return ServicesIndexResource::collection(\App\Models\Service::whereIn('id',$services_ids)->get());
+        return ServicesIndexCollection::collection(\App\Models\Service::whereIn('id',$services_ids)->get());
     }
 
 
