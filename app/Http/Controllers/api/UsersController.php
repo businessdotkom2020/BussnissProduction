@@ -16,20 +16,55 @@ class UsersController extends Controller
 {
     public function profile()
     {
-        return new UserResource(Request()->user());
+        $user = Request()->user();
+         if(!$user)
+        return response()->json([ "status" => false,'code' => 422, "message" => "User not found" ],422);
+
+        return response()->json([
+            "status" => true,
+            'code' => 200,
+            "data" => new UserResource(Request()->user())
+        ]);
+
     }
     public function contact_consumer($id)
     {
-        return new ConsumerContactResource(User::find($id));
-    }
+        $user = User::find($id);
+        if(!$user)
+       return response()->json([ "status" => false,'code' => 422, "message" => "User not found" ],422);
+
+       return response()->json([
+           "status" => true,
+           'code' => 200,
+           "data" => new ConsumerContactResource($user)
+       ]);
+     }
     public function contact_store($id)
     {
-        return new StoreContactResource(User::find($id));
-    }
+        $user = User::find($id);
+        if(!$user)
+                return response()->json([ "status" => false,'code' => 422, "message" => "User not found" ],422);
+
+        return response()->json([
+            "status" => true,
+            'code' => 200,
+            "data" => new StoreContactResource(User::find($id))
+        ]);
+
+     }
     public function contact_service($id)
     {
-        return new ServiceResource(User::find($id));
-    }
+        $user = User::find($id);
+        if(!$user)
+       return response()->json([ "status" => false,'code' => 422, "message" => "User not found" ],422);
+
+       return response()->json([
+           "status" => true,
+           'code' => 200,
+           "data" => new ServiceResource($user)
+       ]);
+
+     }
 
 
 
@@ -51,7 +86,14 @@ class UsersController extends Controller
 
        $user->update();
 
-       return new UserResource(Request()->user());
+
+
+      return response()->json([
+          "status" => true,
+          'code' => 200,
+          "data" => new UserResource($user)
+      ]);
+
     }
 
     public function update_user_password(UpdateUserPasswordRequest $request)
@@ -60,6 +102,12 @@ class UsersController extends Controller
        $user->password = bcrypt(Request()->password);
        $user->update();
 
-       return new UserResource(Request()->user());
+ 
+       return response()->json([
+        "status" => true,
+        'code' => 200,
+        "data" => new UserResource($user)
+    ]);
+
     }
 }
