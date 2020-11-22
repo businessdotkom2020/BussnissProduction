@@ -72,7 +72,7 @@ class FavoritesController extends Controller
 
     public function get_favorite_products(){
         $products_ids =  \App\Models\Favorite::where([['user_id',Request()->user()->id],['favorited_type','App\Models\Product']])->get()->pluck('favorited_id');
-        return ProductIndexCollection::collection(Product::whereIn('id',$products_ids)->get());
+        return new ProductIndexCollection(Product::whereIn('id',$products_ids)->get());
     }
 
     public function get_favorite_requests(){
