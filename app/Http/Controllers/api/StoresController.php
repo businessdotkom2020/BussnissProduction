@@ -48,7 +48,12 @@ class StoresController extends Controller
         if(!\App\Models\User::find($supplier_id))
                                 return response()->json(['status' => 'failed', 'message' => 'not fond']);
 
-        return new SupplierIndexResource($supplier);
+
+        return response()->json([
+            "status" => true,
+            "code" => 200,
+            "data" => new SupplierIndexResource($supplier)
+            ]);
     }
 
     public function suppliers_services()
@@ -105,7 +110,11 @@ class StoresController extends Controller
           $user->categories()->sync(Request()->category_ids);
         }
 
-       return new SupplierIndexResource(Request()->user());
+        return response()->json([
+        "status" => true,
+        "code" => 200,
+        "data" => new SupplierIndexResource(Request()->user())
+        ]);
     }
 
 
@@ -117,6 +126,11 @@ class StoresController extends Controller
         $user->password = bcrypt(Request()->password);
         $user->update();
 
-        return new SupplierIndexResource(Request()->user());
+        return response()->json([
+            "status" => true,
+            "code" => 200,
+            "data" => new SupplierIndexResource(Request()->user())
+        ]);
+
     }
 }
