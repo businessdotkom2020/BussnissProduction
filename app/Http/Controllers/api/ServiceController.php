@@ -21,16 +21,25 @@ class ServiceController extends Controller
 
     public function service_Show($id)
     {
-        return new ServicesIndexResource( Service::find($id) );
-    }
+        return response()->json([
+            "status" => true,
+            "code" => 200,
+            "data" => new ServicesIndexResource( Service::find($id) )
+        ]);
+     }
     public function service_details($id)
     {
                          $Service =  Service::find($id) ;
 
                          if(!$Service)
-                        return response()->json(['status' => 'failed', 'message' => 'not fond']);
-        return new ServicesDetailsResource($Service);
-    }
+                        return response()->json(['status' => false,'code' => 422, 'message' => 'Service not fond']);
+
+                        return response()->json([
+                            "status" => true,
+                            "code" => 200,
+                            "data" => new ServicesDetailsResource($Service)
+                        ]);
+     }
 
 
     public function store_service(AddService $request)
@@ -61,22 +70,23 @@ class ServiceController extends Controller
         $service->images = json_encode($images);
 
         $service->save();
-        
+
         return response()->json([
-            "status" => "success",
+            "status" => true,
+            "code" => 200,
             "message" => "Service Created Successfully",
             ]);
 
     }
-    
-    
+
+
     public function update_service($service_id,EditService $request)
     {
         $service =Service::find($service_id);
-        
+
                          if(!$service)
-                        return response()->json(['status' => 'failed', 'message' => 'not fond']);
-                        
+                        return response()->json(['status' => false,'code' => 422, 'message' => 'not fond']);
+
         $service->name           = Request()->name ? Request()->name : $service->name;
         $service->description          = Request()->description ? Request()->description : $service->description;
         $service->category_id           = Request()->category_id ;
@@ -86,21 +96,21 @@ $images= [];
 
          $images = json_decode($service->images);
 
-         
+
 
        if(request()->deleted_images){
           $deleted_images = request()->deleted_images;
-          
+
             foreach($images as $image){
                 if(!in_array($image,$deleted_images)){
                     $new_images[] = $image;
                 }
             }
-          
+
 
 $images =  $new_images;
-	
-	
+
+
     }
 
 
@@ -116,35 +126,38 @@ $images =  $new_images;
 			}
 
         $service->images = json_encode($images);
-        
 
-        
-        
+
+
+
        $service->update();
-        
+
         return response()->json([
-             "status" => "success",
-             "message" => "Service Updated Successfully",
-        ]);
+            "status" => true,
+            "code" => 200,
+            "message" => "Service Updated Successfully",
+            ]);
+
+
 
     }
 
 
 
-    
-    
+
+
         public function destroy($service_id){
                  $Service =  Service::find($service_id) ;
 
                  if(!$Service)
-                        return response()->json(['status' => 'failed', 'message' => 'not fond']);
+                        return response()->json(['status' => false,'code' => 422, 'message' => 'not fond']);
             $Service->delete();
 
-        return response()->json([
-            'status' => "success",
-             "message" => "service Deleted successfully"
+            return response()->json([
+                "status" => true,
+                "code" => 200,
+                "message" => "Service Deleted Successfully",
+                ]);
 
-            ]) ;
-        
     }
 }
