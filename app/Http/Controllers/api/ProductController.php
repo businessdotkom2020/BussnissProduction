@@ -35,10 +35,13 @@ class ProductController extends Controller
 
     public function offers()
     {
-        
+
         return response()->json([
-    'categories' => MainCategoryResource::collection(Category::with('children')->whereHas('children.products', function ($query)  { 
-    $query->where('sale_price', '!=', null); 
+            'status' => true,
+            'code' => 200,
+
+    'data' => MainCategoryResource::collection(Category::with('children')->whereHas('children.products', function ($query)  {
+    $query->where('sale_price', '!=', null);
 })->get()
 ),
     'top-suppliers' => [['id' => 1 , 'name'=> 'Dell','logo' => 'https://i.imgur.com/6Li4KwM.png' , 'stars' => 4],['id' => 2 ,'name' => 'Nike','logo'=> 'https://i.imgur.com/FAlNOQ3.jpg','stars' => 3]],
@@ -47,13 +50,16 @@ class ProductController extends Controller
         'https://i.imgur.com/lb2nq43.jpg',
         ]
 ]);
-    
+
     }
     public function used()
     {
-        
+
         return response()->json([
-    'categories' => MainCategoryResource::collection(Category::where('id',1)->get()
+            'status' => true,
+            'code' => 200,
+
+    'data' => MainCategoryResource::collection(Category::where('id',1)->get()
 ),
     'top-suppliers' => [['id' => 1 , 'name'=> 'Dell','logo' => 'https://i.imgur.com/6Li4KwM.png' , 'stars' => 4],['id' => 2 ,'name' => 'Nike','logo'=> 'https://i.imgur.com/FAlNOQ3.jpg','stars' => 3]],
     'slider' => [
@@ -61,11 +67,11 @@ class ProductController extends Controller
         'https://i.imgur.com/lb2nq43.jpg',
         ]
 ]);
-    
+
     }
     public function category_info($id)
     {
-        
+
         return response()->json([
 
     'top-suppliers' => [['id' => 1 , 'name'=> 'Dell','logo' => 'https://i.imgur.com/6Li4KwM.png' , 'stars' => 4],['id' => 2 ,'name' => 'Nike','logo'=> 'https://i.imgur.com/FAlNOQ3.jpg','stars' => 3]],
@@ -74,7 +80,7 @@ class ProductController extends Controller
         'https://i.imgur.com/lb2nq43.jpg',
         ]
 ]);
-    
+
     }
 
     public function index()
@@ -87,10 +93,10 @@ class ProductController extends Controller
     }
     public function store_products()
     {
-        
+
         $sortprice = request()->sortprice == "highest" ? "DESC": "ASC"  ;
         $sortdate = request()->sortdate == "latest" ? "DESC": "ASC"  ;
-        
+
         $products = Product::where('user_id',Request()->user()->id)->orderBy('price', $sortprice)->orderBy('created_at', $sortdate)->paginate(10);
 
         return ProductIndexResource::collection(
@@ -136,11 +142,11 @@ class ProductController extends Controller
             //     'id' => 0 ,
             //     'name' => 'Recent Products' ,
             //     'products' => ProductIndexResource::collection(Product::where('user_id',$id)->limit(10)->get()) ,
-                  
+
             //     ]
             // ])
         ;
-        
+
         // return response()->json([
         //     'data' => [
         //         'id' => 0 ,
@@ -149,7 +155,7 @@ class ProductController extends Controller
         //         $tags
         //         ]
         //     ]);
- 
+
 
 
 
@@ -166,17 +172,17 @@ class ProductController extends Controller
         return ProductIndexResource::collection(Product::orderBy('price', $sortprice)->orderBy('created_at', $sortdate)->get());
 
     }
-    
+
     public function factory_categories($id)
     {
         return AuthCategoriesResource::collection(User::with('categories')->find($id)->categories);
     }
-    
+
     public function factory_categories_products($factory_id,$category_id)
     {
         return ProductIndexResource::collection(Product::where('category_id',$category_id)->paginate(10));
     }
-    
+
     public function available_languages(){
          $lang = \Config::get('voyager.multilingual')['locales'];
         return $lang = array_values(array_diff($lang, array(\Config::get('voyager.multilingual')['default'])));
@@ -188,7 +194,7 @@ class ProductController extends Controller
             public function store_images( imageRequest $request){
 
         $product= Product::find(Request()->product_id);
-        
+
 
 
                   		$images = array();
@@ -206,8 +212,8 @@ class ProductController extends Controller
 
 
         $product->images = json_encode($images);
-   
-   
+
+
 
 			if (($request->file('image'))) {
 
@@ -221,30 +227,30 @@ class ProductController extends Controller
 return response()->json([
     "status" => "success",
     "message" => "Product Created",
- 
- 
+
+
     ]);
     }
     public function update_images($product_id,Request $request){
-        
+
         $product= Product::find($product_id);
-        
+
 
          $images = json_decode($product->images);
 
       if(request()->deleted_images){
           $deleted_images = request()->deleted_images;
-          
+
             foreach($images as $image){
                 if(!in_array($image,$deleted_images)){
                     $new_images[] = $image;
                 }
             }
-          
+
 
 $images =  $new_images;
-	
-	
+
+
     }
 if(!$images)
     $images = [];
@@ -261,8 +267,8 @@ if(!$images)
 			}
         $product->images = json_encode($images);
 
-   
-   
+
+
 
 			if ($image = ($request->file('image'))) {
 
@@ -271,15 +277,15 @@ if(!$images)
                     $product->image = 'products/'. $file_name;
 			}
 
-     
-     
+
+
         $product->update();
 
 return response()->json([
     "status" => "success",
     "message" => "Product Images Updated",
- 
- 
+
+
     ]);
     }
 
@@ -292,10 +298,10 @@ return response()->json([
          $lang = array_values(array_diff($lang, array(\Config::get('voyager.multilingual')['default'])));
 
         $langs = [];
-        
 
-         $product = new Product; 
-         
+
+         $product = new Product;
+
          $product->name = $request->name;
          $product->user_id = Request()->user()->id;
          $product->description = $request->description;
@@ -306,15 +312,15 @@ return response()->json([
          $product->brand_id = $request->brand_id;
 
          $product->product_condition = $request->product_condition;
-         
+
 
 
         $product->save();
-    
+
      $product->categories()->attach(Request()->category_ids);
      $price_list = [];
      $price_list = $request->prices;
-   
+
      foreach($price_list as $price){
          $price_option = new ProductPrice;
          $price_option->product_id = $product->id;
@@ -323,7 +329,7 @@ return response()->json([
          $price_option->quantity_to = $price['quantity_to'];
          $price_option->save();
      }
-     
+
           $attributes = [];
      $attributes = $request->options;
 
@@ -335,10 +341,10 @@ return response()->json([
              $attribute->attribute_id = $attribute_id;
              $attribute->value_id = $values_id;
              $attribute->save();
-        
+
      }
-     
-     
+
+
             foreach($lang as $lang_option)  {
           $name_lang_option = "name_" . $lang_option;
           $description_lang_option = "description_" . $lang_option;
@@ -346,20 +352,20 @@ return response()->json([
               DB::table('translations')->updateOrInsert(
     ['table_name' => 'products', 'column_name' => "name" , "foreign_key"=> $product->id , "locale" => $lang_option ],[ "value" => request()->$name_lang_option]
 );
-   
+
            }
            if( request()->$description_lang_option){
               DB::table('translations')->updateOrInsert(
     ['table_name' => 'products', 'column_name' => "description" , "foreign_key"=> $product->id , "locale" => $lang_option ],
     ["value" => request()->$description_lang_option]
-    
+
 );
            }
        }
 return response()->json([
     "status" => "success",
         "product_id" => $product->id
-    
+
     ]);
     }
     public function update_product(Request $request,$product_id)
@@ -370,10 +376,10 @@ return response()->json([
          $lang = array_values(array_diff($lang, array(\Config::get('voyager.multilingual')['default'])));
 
         $langs = [];
-        
 
-         $product =  Product::find($product_id); 
-         
+
+         $product =  Product::find($product_id);
+
          $product->name = $request->name;
          $product->user_id = Request()->user()->id;
          $product->description = $request->description;
@@ -384,18 +390,18 @@ return response()->json([
          $product->brand_id = $request->brand_id;
 
          $product->product_condition = $request->product_condition;
-         
+
 
 
         $product->update();
-    
 
-     
+
+
     ProductPrice::where('product_id',$product_id)->delete();
-     
+
      $price_list = [];
      $price_list = $request->prices;
-   
+
      foreach($price_list as $price){
          $price_option = new ProductPrice;
          $price_option->product_id = $product->id;
@@ -404,7 +410,7 @@ return response()->json([
          $price_option->quantity_to = $price['quantity_to'];
          $price_option->save();
      }
-     
+
           $attributes = [];
      $attributes = $request->options;
 
@@ -419,10 +425,10 @@ return response()->json([
              $attribute->attribute_id = $attribute_id;
              $attribute->value_id = $values_id;
              $attribute->save();
-        
+
      }
-     
-     
+
+
             foreach($lang as $lang_option)  {
           $name_lang_option = "name_" . $lang_option;
           $description_lang_option = "description_" . $lang_option;
@@ -431,45 +437,45 @@ return response()->json([
               DB::table('translations')->updateOrInsert(
     ['table_name' => 'products', 'column_name' => "name" , "foreign_key"=> $product->id , "locale" => $lang_option ],[ "value" => request()->$name_lang_option]
 );
-   
+
            }
            if( request()->$description_lang_option){
               DB::table('translations')->updateOrInsert(
     ['table_name' => 'products', 'column_name' => "description" , "foreign_key"=> $product->id , "locale" => $lang_option ],
     ["value" => request()->$description_lang_option]
-    
+
 );
            }
        }
 return response()->json([
     "status" => "success",
         "product_id" => $product->id
-    
-    ]);
-    
 
-    
-    
+    ]);
+
+
+
+
     }
 
 
 
-    
+
     public function update_product_get($product_id){
-        
+
                 $lang = \Config::get('voyager.multilingual')['locales'];
          $lang = array_values(array_diff($lang, array(\Config::get('voyager.multilingual')['default'])));
 
-        
+
 
 
 
           return new ProductupdateResource(
             Product::withTranslations($lang)->find($product_id)
         );
-        
+
     }
-    
+
 
     protected function attributes()
     {
@@ -491,10 +497,10 @@ return response()->json([
             AttributeValue::where('attribute_id',$id)->get()
         );
     }
-    
-    
-    
-    
+
+
+
+
         public function destroy($id){
                  $product =  Product::find($id) ;
 
@@ -507,7 +513,7 @@ return response()->json([
              "message" => "product Deleted successfully"
 
             ]) ;
-        
+
     }
 
 }

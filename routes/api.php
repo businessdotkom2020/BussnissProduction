@@ -73,14 +73,16 @@ Route::get('sub/sub/category/{sub_sub_category_id}/companies' , 'api\CategoryCon
 
 
 // Auth Routes Sign Up || Log in || Log out || Resset Password
+
 Route::group(['prefix' => 'auth'], function () {
 
         Route::post('social' , 'api\AuthUsersController@social');
         Route::post('login' , 'api\AuthUsersController@login');
         Route::post('register/user' , 'api\AuthUsersController@register_users');
         Route::post('register/supplier' , 'api\AuthStoresController@register');
-        Route::post('register/supplier/firststep' , 'api\AuthStoresController@register');
         Route::post('ValidateSupplierFirstStep'    , 'api\AuthStoresController@auth_check_data');
+        Route::post('register/supplier' , 'api\AuthStoresController@register');
+        Route::post('register/supplier/firststep' , 'api\AuthStoresController@register');
 
 
     Route::group(['middleware' => 'auth:api'], function() {
@@ -261,7 +263,7 @@ Route::get('sub/sub/categories/{id}' , 'api\CategoryController@sub_sub_add_categ
 Route::get('faresponse', function(){
 $merchantCode    = 'MPW3sIOoZt77K//+SCWImw==';
 $merchantRefNumber  ='155856';
-$merchant_sec_key =  '5238a5e389bb40139783de0a68b3acb5'; 
+$merchant_sec_key =  '5238a5e389bb40139783de0a68b3acb5';
 
  return $signature = hash('sha256' , $merchantCode . $merchantRefNumber . $merchant_sec_key);
 $httpClient = new \GuzzleHttp\Client(); // guzzle 6.3

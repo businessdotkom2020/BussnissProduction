@@ -19,7 +19,10 @@ use App\Http\Resources\CompaniesResource;
 use App\Http\Resources\ProductIndexResource;
 use App\Http\Resources\StoreResource;
 use App\Http\Resources\AuthCategoriesResource;
-
+use App\Http\Resources\collections\AuthCategoriesCollection;
+use App\Http\Resources\collections\ProductIndexCollection;
+use App\Http\Resources\collections\ServicesIndexCollection;
+use App\Http\Resources\collections\StoreCollection;
 
 class HomeController extends Controller
 {
@@ -27,16 +30,14 @@ class HomeController extends Controller
                		$categories =  Category::whereNull('parent_id')
                		    ->whereHas('services')
                		->select('id','name')->get();
-               		return AuthCategoriesResource::collection($categories);
-               		return response()->json([
-               		    'data' => $categories
-               		    ]);
-               		
+               		return new AuthCategoriesCollection($categories);
+
+
    }
-   
+
    public function services_categories_show($id){
-               return  ServicesIndexResource::collection(Service::where('category_id',$id)->with('category')->paginate(10));
-       
+               return  new ServicesIndexCollection(Service::where('category_id',$id)->with('category')->paginate(10));
+
    }
 
 public function tag($tag_id){
@@ -45,7 +46,11 @@ public function tag($tag_id){
 }
 
        public function home(){
-        return response()->json(['data'=>HomeTagsResource::collection(\App\Models\Tag::with('products')->get())
+        return response()->json([
+            'status' => true,
+            'code' => 200,
+
+            'data'=>HomeTagsResource::collection(\App\Models\Tag::with('products')->get()),
         //   ->concat([
         //                 'data' => [
         //                     'id' => 9999,
@@ -54,59 +59,56 @@ public function tag($tag_id){
         //                     'products' => ProductIndexResource::collection(Product::whereNotNull('sale_price')->get()),
         //                 ]
         //             ])
-          ->concat([
-                        'data' => [
-                            'id' => 9099,
-                             'slider' => [
+                        
+        'slider' => [
                 'https://i.imgur.com/h3MotVF.jpg',
                 'https://i.imgur.com/h3MotVF.jpg',
                 ]
-                        ]
-                    ])
-                    
+                        
+ 
                     ])
                     ;
     }
-    
+
     public function hot_offers_suppliers(){
-        
-        return  StoreResource::collection(
-    
+
+        return  new StoreCollection(
+
          User::with(["products" => function($q){
                $q->where('sale_price', '!=', null);
-            }]) 
-        
-            ->whereHas('products', function ($query)  { 
-            $query->where('sale_price', '!=', null); 
+            }])
+
+            ->whereHas('products', function ($query)  {
+            $query->where('sale_price', '!=', null);
         })
         ->paginate(10)
     );
     }
     public function hot_offers_companies(){
-        
+
         return  CompaniesResource::collection(
-    
+
          User::with(["products" => function($q){
                $q->where('sale_price', '!=', null);
             }])
-        
-            ->whereHas('products', function ($query)  { 
-            $query->where('sale_price', '!=', null); 
+
+            ->whereHas('products', function ($query)  {
+            $query->where('sale_price', '!=', null);
         })->paginate(10)
     );
     }
-    
+
     public function filter(Request $request){
         $sortprice = request()->sortprice == "highest" ? "DESC": "ASC"  ;
         $sortdate = request()->sortdate == "latest" ? "DESC": "ASC"  ;
-        
+
         $products = Product::orderBy('price', $sortprice)->orderBy('created_at', $sortdate);
-        
-        
-        
-        
-        
-        
+
+
+
+
+
+
         if ($request->has('category_ids')) {
             $categories_ids = Category::whereIn('parent_id',$request->category_ids)->get()->pluck('id');
             $sub_categories_ids =  Category::whereIn('parent_id',$categories_ids)->get()->pluck('id');
@@ -120,7 +122,7 @@ public function tag($tag_id){
                 }
             }
 
-            
+
         }
 
         if ($request->has('brand_ids')) {
@@ -132,18 +134,18 @@ public function tag($tag_id){
         if ($request->has('max_price')) {
             $products->where('price','<=', $request->max_price);
         }
-        
-        
+
+
         if ($request->has('product_condition')) {
             $products->where('product_condition', $request->product_condition);
         }
-        
-        
+
+
         if ($request->has('has_discount')) {
             $products->whereNotNull('sale_price');
         }
-        
-        
+
+
         if ($request->has('saller_rating')) {
             // $products->where('supplier_score', $request->supplier_score);
             foreach($products as $product){
@@ -159,7 +161,7 @@ public function tag($tag_id){
          $q =  Request()->keyword ;
 
 
-    
+
     // return $store_ids;
     if($q){
            $results = Product::withTranslations(['en', 'ar'])->where('name', 'like', '%'.$q.'%')->orWhereHas('translations', function($query) use ($q){
@@ -168,7 +170,7 @@ public function tag($tag_id){
                     return  ProductIndexResource::collection($results);
 
     }
-        
+
         return  ProductIndexResource::collection($products->paginate(10));
     }
     public function hot_offers_products(Request $request){
@@ -180,12 +182,12 @@ public function tag($tag_id){
 
 
 
-        
-        return  ProductIndexResource::collection($products);
+
+        return new ProductIndexCollection($products);
     }
-    
+
     public function latest_slider(){
-        
+
         return response()->json([
                       'data' => [
                              'slider' => [
@@ -195,35 +197,35 @@ public function tag($tag_id){
     ]
             ]);
     }
-    
+
 
     public function suggested_suppliers(){
-          
-        return  StoreResource::collection(User::with("products")->whereHas('products')->paginate(10));
+
+        return  new StoreCollection(User::with("products")->whereHas('products')->paginate(10));
     }
     public function suggested_products(){
         $sortprice = request()->sortprice == "highest" ? "DESC": "ASC"  ;
         $sortdate = request()->sortdate == "latest" ? "DESC": "ASC"  ;
-        
-          
-            return ProductIndexResource::collection(Product::inRandomOrder()->orderBy('price', $sortprice)->orderBy('created_at', $sortdate)->paginate(10));
+
+
+            return new ProductIndexCollection(Product::inRandomOrder()->orderBy('price', $sortprice)->orderBy('created_at', $sortdate)->paginate(10));
     }
     public function suggested_services(){
-          
-        return  ServicesIndexResource::collection(Service::inRandomOrder()->paginate(10));
+
+        return  new ServicesIndexCollection(Service::inRandomOrder()->paginate(10));
     }
-    
-    
-    
+
+
+
       public function suppliers(){
-        
-            return  StoreResource::collection(User::with("products")->whereHas('products')->paginate(10));
+
+            return  new StoreCollection(User::with("products")->whereHas('products')->paginate(10));
 
     }
     public function services(){
-          
-        return  ServicesIndexResource::collection(Service::paginate(10));
+
+        return  new ServicesIndexCollection(Service::paginate(10));
     }
-    
+
 
 }

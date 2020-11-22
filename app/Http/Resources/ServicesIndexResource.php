@@ -30,11 +30,9 @@ class ServicesIndexResource extends ProductIndexResource
             'description'           => $this->description,
             'category'       =>  $this->category ? $this->category->name :   null ,
             'images'       => $this->images(),
-                        'default_image'        => ($this->images ) ? url('storage/'.(json_decode($this->images))[0]) : "https://i.imgur.com/mFI2maG.jpg",
-
-                        'share_url'  => "https://www.facebook.com/",
+            'default_image'        => ($this->images ) ? url('storage/'.(json_decode($this->images))[0]) : "https://i.imgur.com/mFI2maG.jpg",
+            'share_url'  => "https://www.facebook.com/",
             'store_id'  => $this->user_id ,
-
             'rating'       => 5 ,
             'youtube_url'=>       $this->youtube_url ,
             'created_at'   => $this->created_at,

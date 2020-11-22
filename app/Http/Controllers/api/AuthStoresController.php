@@ -9,6 +9,8 @@ use App\Http\Requests\Auth\RegisterSuppliersRequestSecondStep;
 use App\Models\User;
 use Carbon\Carbon;
 use App\Http\Requests\Auth\LoginRequest;
+use App\Http\Resources\StoreContactResource;
+use App\Http\Resources\UserResource;
 
 class AuthStoresController extends Controller
 {
@@ -17,6 +19,7 @@ class AuthStoresController extends Controller
     public function auth_check_data(RegisterSuppliersRequestFirstStep $request){
         return response()->json([
             'status' => true,
+            'message' => ' First Step Registration Completed Successfully',
             'code' => 200,
             ]);
     }
@@ -53,9 +56,15 @@ class AuthStoresController extends Controller
         return response()->json([
             'status' => true,
             'code' => 200,
+            'message' => 'Registration Completed Successfully',
+            'data' =>[
+                'id' => $user->id ,
+                'name' => $user->name ,
+                'email' => $user->email ,
                 'token'     =>  $tokenResult->accessToken,
                 'token_type' => 'Bearer',
                 'expires_at' => Carbon::parse($tokenResult->token->expires_at)->toDateTimeString()
+            ]
 
             ],200);
     }
@@ -73,6 +82,7 @@ class AuthStoresController extends Controller
 
         if (!$token = auth()->attempt($credentials)) {
             return response()->json([
+                'status' => false,
                 'message' => 'The given data was invalid.',
                 'errors' => [
                     'email_password' =>  ['Wrong credentials Please Try Again']
@@ -87,9 +97,18 @@ class AuthStoresController extends Controller
         $token->save();
 
         return response()->json([
-            'token'     =>  $tokenResult->accessToken,
-            'token_type' => 'Bearer',
-            'expires_at' => Carbon::parse($tokenResult->token->expires_at)->toDateTimeString()
+            'status' => true,
+            'code' => 200,
+            'message' => 'Logged in Successfully',
+            'data' =>[
+                'id' => $user->id ,
+                'name' => $user->name ,
+                'email' => $user->email ,
+                'token'     =>  $tokenResult->accessToken,
+                'token_type' => 'Bearer',
+                'expires_at' => Carbon::parse($tokenResult->token->expires_at)->toDateTimeString()
+
+            ]
 
         ],200);
     }
