@@ -21,6 +21,7 @@ use App\Http\Requests\EditBranshRequest;
 use App\Http\Requests\AddBranshRequest;
 use App\Http\Resources\CountryResource;
 use App\Http\Resources\BranshesResource;
+use App\Http\Resources\collections\BranshesCollection;
 use App\Models\Country;
 use App\Models\City;
 use App\Models\State;
@@ -45,21 +46,26 @@ class BranchesController extends BaseController
             $branch->lat           = $request->lat;
             $branch->lang          = $request->lang;
             $branch->save();
-                
+
         return response()->json([
-            'status' => "success",
+            'status' => true,
+            'code' => 200,
              "message" => "Bransh  Created successfully"
             ]) ;
         }
 
 
 public function store_branches($id){
-    return BranshesResource::collection(Branch::where('user_id',$id)->paginate(10));
+    return new BranshesCollection(Branch::where('user_id',$id)->paginate(10));
 }
 
 public function show($id){
-    return new BranshesResource(Branch::find($id));
-}
+    return response()->json([
+        'status' => true,
+        'code' => 200,
+         "data" => new BranshesResource(Branch::find($id))
+        ]) ;
+ }
 public function update($id  , EditBranshRequest $request){
     $branch = Branch::find($id);
            if(!$branch)
@@ -76,12 +82,14 @@ public function update($id  , EditBranshRequest $request){
             $branch->delivery_fee   = $request->delivery_fee   ? $request->delivery_fee   : $branch->delivery_fee;
             $branch->lat            = $request->lat            ? $request->lat            : $branch->lat;
             $branch->lang           = $request->lang           ? $request->lang           : $branch->lang;
-            
+
                       $branch->update();
-            
-                
+
+
         return response()->json([
-            'status' => "success",
+            'status' => true,
+                        'code' => 200,
+
              "message" => "Bransh  Updated successfully"
             ]) ;
 }
@@ -94,7 +102,8 @@ public function destroy($id){
             $bransh->delete();
 
         return response()->json([
-            'status' => "success",
+            'status' => true,
+            'code' => 200,
              "message" => "Bransh Deleted successfully"
 
             ]) ;
