@@ -176,12 +176,12 @@ class ProductController extends Controller
 
     public function factory_categories($id)
     {
- 
+
         if(!$user = User::with('categories')->find($id))
             return response()->json(['status' => false,'code' => 422, 'message' => 'not fond'],422);
         $main_categories_ids = $user->categories->pluck('id');
-        $sub_categories_ids = Category::withIn('parent_id',$main_categories_ids)->get()->pluck('id');
-        $sub_sub_categories_ids = Category::withIn('parent_id',$sub_categories_ids)->whereHas('products')->get();
+        $sub_categories_ids = Category::whereIn('parent_id',$main_categories_ids)->get()->pluck('id');
+        $sub_sub_categories_ids = Category::whereIn('parent_id',$sub_categories_ids)->whereHas('products')->get();
 
         return AuthCategoriesResource::collection($sub_sub_categories_ids);
     }
