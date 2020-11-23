@@ -29,6 +29,10 @@ use App\Models\Branch;
 
 class BranchesController extends BaseController
 {
+    public function my_branches()
+    {
+        return  new BranshesCollection(Branch::where('user_id',Request()->user()->id)->paginate(10));
+    }
 
         public function post(AddBranshRequest $request){
             $branch = new Branch;
