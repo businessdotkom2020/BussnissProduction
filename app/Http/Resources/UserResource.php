@@ -13,14 +13,7 @@ class UserResource extends JsonResource
      * @return array
      */
 
-
-    public function with($request){
-        return [
-          'status'=>'success',
-          'code'=> 200,
-        ];
-    }
-
+ 
     public function toArray($request)
     {
         return [
