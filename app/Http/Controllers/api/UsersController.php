@@ -102,7 +102,7 @@ class UsersController extends Controller
        $user->password = bcrypt(Request()->password);
        $user->update();
 
- 
+ return new UserResource($user);
        return response()->json([
         "status" => true,
         'code' => 200,
