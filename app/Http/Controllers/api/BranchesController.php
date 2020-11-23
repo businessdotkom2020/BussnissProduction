@@ -69,7 +69,7 @@ public function show($id){
 public function update($id  , EditBranshRequest $request){
     $branch = Branch::find($id);
            if(!$branch)
-                return response()->json(['status' => 'failed', 'message' => 'not fond']);
+                return response()->json(['status' => false,'code' => 422, 'message' => 'not fond'],422);
             $branch->name           = $request->name           ? $request->name           : $branch->name;
             $branch->email          = $request->email          ? $request->email          : $branch->email;
             $branch->mobile         = $request->mobile         ? $request->mobile         : $branch->mobile;
@@ -98,8 +98,8 @@ public function destroy($id){
               $bransh =  Branch::find($id) ;
 
                  if(!$bransh)
-                        return response()->json(['status' => 'failed', 'message' => 'not fond']);
-            $bransh->delete();
+                 return response()->json(['status' => false,'code' => 422, 'message' => 'not fond'],422);
+                 $bransh->delete();
 
         return response()->json([
             'status' => true,
