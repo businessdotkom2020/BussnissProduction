@@ -13,7 +13,7 @@ use App\Models\Client;
 class ClientController extends BaseController
 {
 
-    
+
       public function post(ClientRequest $request){
             $client = new Client;
             $client->user_id            = $request->user()->id;
@@ -27,9 +27,10 @@ class ClientController extends BaseController
             $client->image = '/clients/'. $file_name;
         }
             $client->save();
-                
+
         return response()->json([
-            'status' => "success",
+            'status' => true,
+            'code' => 200,
              "message" => "Client Created successfully"
             ]) ;
         }
@@ -46,16 +47,16 @@ class ClientController extends BaseController
         public function show($id){
             return new ClentsResource(Client::find($id));
         }
-        
-        
+
+
 public function update($id  , ClientRequest $request){
     $client = Client::find($id);
            if(!$client)
-                return response()->json(['status' => 'failed', 'message' => 'not fond']);
+           return response()->json(['status' => false,'code' => 422, 'message' => 'not fond'],422);
 
             $client->name              = $request->name;
-       
-       
+
+
        if (Request()->file('image'))
         {
             $file_name     = 'image'.   rand(1, 15). rand(155, 200) . rand(25, 55). '.png';
@@ -64,11 +65,12 @@ public function update($id  , ClientRequest $request){
         }
 
             $client->update();
-            
-                
+
+
         return response()->json([
-            'status' => "success",
-             "message" => "Bransh  Updated successfully"
+            'status' => true,
+            'code' => 200,
+             "message" => "Client Updated successfully"
             ]) ;
 }
 
@@ -76,11 +78,12 @@ public function destroy($id){
               $client =  Client::find($id) ;
 
                  if(!$client)
-                        return response()->json(['status' => 'failed', 'message' => 'not fond']);
+                        return response()->json(['status' => false,'code' => 422, 'message' => 'not fond'],422);
             $client->delete();
 
         return response()->json([
-            'status' => "success",
+            'status' => true,
+            'code' => 200,
              "message" => "Client Deleted successfully"
 
             ]) ;
