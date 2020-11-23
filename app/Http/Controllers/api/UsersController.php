@@ -19,7 +19,7 @@ class UsersController extends Controller
         $user = Request()->user();
          if(!$user)
         return response()->json([ "status" => false,'code' => 422, "message" => "User not found" ],422);
-
+        return new UserResource(Request()->user()) ;
         return response()->json([
             "status" => true,
             'code' => 200,
@@ -111,6 +111,6 @@ class UsersController extends Controller
 
 
 
-    
+
     }
 }
