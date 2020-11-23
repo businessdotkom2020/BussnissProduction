@@ -109,5 +109,8 @@ class UsersController extends Controller
         "data" => new UserResource($user)
     ]);
 
+
+
+    
     }
 }
