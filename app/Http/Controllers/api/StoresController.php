@@ -9,6 +9,7 @@ use App\Http\Resources\ServicesIndexResource;
 use App\Http\Resources\SupplierIndexResource;
 use App\Http\Resources\JobsResource;
 use App\Http\Requests\Auth\UpdateUserPasswordRequest;
+use App\Http\Resources\collections\JobCollection;
 
 class StoresController extends Controller
 {
@@ -16,18 +17,18 @@ class StoresController extends Controller
 
     public function store_jobs($id)
     {
-        return  JobsResource::collection(\App\Models\Job::where('user_id',$id)->paginate(10));
+        return new JobCollection(\App\Models\Job::where('user_id',$id)->paginate(10));
     }
 
     public function my_jobs()
     {
-        return  JobsResource::collection(\App\Models\Job::where('user_id',Request()->user()->id)->paginate(10));
+        return  new JobCollection(\App\Models\Job::where('user_id',Request()->user()->id)->paginate(10));
     }
 
 
     public function store_services($id)
     {
-        return  ServicesIndexResource::collection(\App\Models\Service::where('user_id',$id)->paginate(10));
+        return  new ServicesIndexResource(\App\Models\Service::where('user_id',$id)->paginate(10));
     }
 
 
