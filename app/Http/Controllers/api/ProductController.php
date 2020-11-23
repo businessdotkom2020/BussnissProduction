@@ -89,7 +89,7 @@ class ProductController extends Controller
     {
         $products = Product::withScopes($this->scopes())->paginate(10);
 
-        return ProductIndexResource::collection(
+        return new ProductIndexCollection(
             $products
         );
     }
@@ -101,7 +101,7 @@ class ProductController extends Controller
 
         $products = Product::where('user_id',Request()->user()->id)->orderBy('price', $sortprice)->orderBy('created_at', $sortdate)->paginate(10);
 
-        return ProductIndexResource::collection(
+        return new ProductIndexCollection(
             $products
         );
     }
@@ -111,7 +111,7 @@ class ProductController extends Controller
     {
         $products = Product::limit(10)->get();
 
-        return ProductIndexResource::collection(
+        return new ProductIndexCollection(
             $products
         );
     }
@@ -119,7 +119,7 @@ class ProductController extends Controller
     {
         $products = Product::limit(10)->get();
 
-        return ProductIndexResource::collection(
+        return new ProductIndexCollection(
             $products
         );
     }
@@ -143,7 +143,7 @@ class ProductController extends Controller
             // 'data' => [
             //     'id' => 0 ,
             //     'name' => 'Recent Products' ,
-            //     'products' => ProductIndexResource::collection(Product::where('user_id',$id)->limit(10)->get()) ,
+            //     'products' => new ProductIndexCollection(Product::where('user_id',$id)->limit(10)->get()) ,
 
             //     ]
             // ])
@@ -153,7 +153,7 @@ class ProductController extends Controller
         //     'data' => [
         //         'id' => 0 ,
         //         'name' => 'Recent Products' ,
-        //         'products' => ProductIndexResource::collection(Product::where('user_id',$id)->limit(10)->get()) ,
+        //         'products' => new ProductIndexCollection(Product::where('user_id',$id)->limit(10)->get()) ,
         //         $tags
         //         ]
         //     ]);
@@ -170,7 +170,7 @@ class ProductController extends Controller
     {
                 $sortprice = request()->sortprice == "highest" ? "DESC": "ASC"  ;
         $sortdate = request()->sortdate == "latest" ? "DESC": "ASC"  ;
-        return ProductIndexResource::collection(Product::orderBy('price', $sortprice)->orderBy('created_at', $sortdate)->get());
+        return new ProductIndexCollection(Product::orderBy('price', $sortprice)->orderBy('created_at', $sortdate)->get());
 
     }
 
@@ -181,7 +181,7 @@ class ProductController extends Controller
 
     public function factory_categories_products($factory_id,$category_id)
     {
-        return ProductIndexResource::collection(Product::where('category_id',$category_id)->paginate(10));
+        return new ProductIndexCollection(Product::where('category_id',$category_id)->paginate(10));
     }
 
     public function available_languages(){
