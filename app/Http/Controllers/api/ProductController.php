@@ -176,7 +176,9 @@ class ProductController extends Controller
 
     public function factory_categories($id)
     {
-        return AuthCategoriesResource::collection(User::with('categories')->find($id)->categories);
+        if(!$user = User::with('categories')->find($id))
+        return response()->json(['status' => false,'code' => 422, 'message' => 'not fond'],422);
+        return AuthCategoriesResource::collection($user->categories);
     }
 
     public function factory_categories_products($factory_id,$category_id)
