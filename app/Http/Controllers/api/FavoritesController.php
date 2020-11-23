@@ -84,7 +84,7 @@ class FavoritesController extends Controller
     public function get_favorite_services(){
                 $services_ids =  \App\Models\Favorite::where([['user_id',Request()->user()->id],['favorited_type','App\Models\Service']])->get()->pluck('favorited_id');
 
-        return ServicesIndexCollection::collection(\App\Models\Service::whereIn('id',$services_ids)->get());
+        return new ServicesIndexCollection(\App\Models\Service::whereIn('id',$services_ids)->get());
     }
 
 
