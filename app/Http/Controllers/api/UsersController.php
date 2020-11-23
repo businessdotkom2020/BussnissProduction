@@ -21,7 +21,7 @@ class UsersController extends Controller
         return response()->json([ "status" => false,'code' => 422, "message" => "User not found" ],422);
 
 
-        return (new UserResource(Request()->user()))->response()->body('X-Value', 'True');
+        return (new UserResource(Request()->user()))->response('X-Value', 'True');
 
         return response()->json([
             "status" => true,
