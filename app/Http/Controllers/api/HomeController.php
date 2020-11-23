@@ -59,13 +59,13 @@ public function tag($tag_id){
         //                     'products' => ProductIndexResource::collection(Product::whereNotNull('sale_price')->get()),
         //                 ]
         //             ])
-                        
+
         'slider' => [
                 'https://i.imgur.com/h3MotVF.jpg',
                 'https://i.imgur.com/h3MotVF.jpg',
                 ]
-                        
- 
+
+
                     ])
                     ;
     }
@@ -164,14 +164,12 @@ public function tag($tag_id){
 
     // return $store_ids;
     if($q){
-           $results = Product::withTranslations(['en', 'ar'])->where('name', 'like', '%'.$q.'%')->orWhereHas('translations', function($query) use ($q){
-            $query->where('value', 'like', '%'.$q.'%');
-            })->paginate(10);
-                    return  ProductIndexResource::collection($results);
+           $results = Product::withTranslations(['en', 'ar'])->paginate(10);
+                    return new ProductIndexCollection($results);
 
     }
 
-        return  ProductIndexResource::collection($products->paginate(10));
+        return new ProductIndexCollection($products->paginate(10));
     }
     public function hot_offers_products(Request $request){
 
