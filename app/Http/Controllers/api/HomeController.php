@@ -164,7 +164,7 @@ public function tag($tag_id){
 
     // return $store_ids;
     if($q){
-           $results = Product::withTranslations(['en', 'ar'])->paginate(10);
+           $results = Product::withTranslations(['en', 'ar'])->where('name', 'like', '%'.$q.'%')->paginate(10);
                     return new ProductIndexCollection($results);
 
     }
