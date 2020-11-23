@@ -44,25 +44,25 @@ class ReviewController extends Controller
         }
         else{
                      return response()->json([
-             "status" => "failed"
-             ]);
+             "status" => false,
+             "code" => 422,
+             "message" => 'module not found',
+                     ],422);
         }
 
               if(!$review_model){
                           return response()->json([
-             "status" => "failed",
-                         'code' => 400,
-
-             "message" => "Id Not Found"
-             ]);
+                            "status" => false,
+                            "code" => 422,
+                            "message" => 'module not found',
+                          ],422);
             }
 
         $review_model->review($stars = Request()->stars, $comment = Request()->comment);
 
          return response()->json([
-             "status" => "success",
+             "status" => true,
              'code' => 200,
-
             "message" => "Review Added Successfuly",
 
              ]);
@@ -88,17 +88,20 @@ class ReviewController extends Controller
         }
         else{
                      return response()->json([
-             "status" => "failed"
+             "status" => false,
+             'code' => 422,
+             "message" => 'module not found',
              ]);
         }
    if(!$review_model){
-                          return response()->json([
-             "status" => "failed",
-             'code' => 200,
-
-             "message" => "Id Not Found"
-             ]);
+        return response()->json([
+            "status" => false,
+            'code' => 200,
+            "message" => 'module not found',
+            ]);
             }
+
+
 
         return new ReviewsCollection($review_model->reviews()->paginate(10));
 
@@ -117,12 +120,16 @@ class ReviewController extends Controller
         $product->review($stars = Request()->stars, $comment = Request()->comment);
 
          return response()->json([
-             "status" => "success"
+             "status" => true,
+             'code'   => 200,
+             'message' => 'Review Added Successfully'
              ]);
     }
 
         public function product_reviews($id){
                 $product = Product::find($id);
+                if(!$product)
+                return response()->json(["status" => false,'code' => 422, "message" => "Product not found" ],422);
 
         return new ReviewsCollection($product->reviews()->paginate(10));
 
@@ -138,18 +145,24 @@ class ReviewController extends Controller
     public function review_request(AddReviewRequest $rquest,$id){
 
         $request = \App\Models\Request::find($id);
+        if(!$request)
+        return response()->json(["status" => false,'code' => 422, "message" => "Request not found" ],422);
 
         $request->review($stars = Request()->stars, $comment = Request()->comment);
-         return response()->json([
-             "status" => "success",
-             "message" => "Review Added Successfully"
-             ]);
+        return response()->json([
+            "status" => true,
+            'code'   => 200,
+            'message' => 'Review Added Successfully'
+            ]);
     }
 
 
         public function request_reviews($id){
          $request = \App\Models\Request::find($id);
-        return ReviewsRecource::collection($request->reviews()->paginate(10));
+         if(!$request)
+         return response()->json(["status" => false,'code' => 422, "message" => "Request not found" ],422);
+
+        return new ReviewsCollection($request->reviews()->paginate(10));
 
     }
 
@@ -159,23 +172,30 @@ class ReviewController extends Controller
     public function review_store(AddReviewRequest $rquest,$id){
 
         $store = User::find($id);
+        if(!$store)
+        return response()->json(["status" => false,'code' => 422, "message" => "store not found" ],422);
 
         $store->review($stars = Request()->stars, $comment = Request()->comment);
          return response()->json([
-             "status" => "success"
+             "status" => true,
+             'code'   => 200,
+             'message' => 'Review Added Successfully'
              ]);
     }
 
 
         public function store_reviews($id){
-         $store = User::find($id);
-        return ReviewsRecource::collection($store->reviews()->paginate(10));
+        $store = User::find($id);
+        if(!$store)
+        return response()->json(["status" => false,'code' => 422, "message" => "store not found" ],422);
+
+        return new ReviewsCollection($store->reviews()->paginate(10));
 
     }
 
         public function supplier_reviews(){
           $store = request()->user();
-        return ReviewsRecource::collection($store->reviews()->paginate(10));
+        return new ReviewsCollection($store->reviews()->paginate(10));
 
     }
 
@@ -185,17 +205,24 @@ class ReviewController extends Controller
     public function review_service(AddReviewRequest $rquest,$id){
 
         $service = Service::find($id);
+        if(!$service)
+        return response()->json(["status" => false,'code' => 422, "message" => "service   not found" ],422);
 
         $service->review($stars = Request()->stars, $comment = Request()->comment);
-         return response()->json([
-             "status" => "success"
-             ]);
+        return response()->json([
+            "status" => true,
+            'code'   => 200,
+            'message' => 'Review Added Successfully'
+            ]);
     }
 
 
         public function service_reviews($id){
          $service = Service::find($id);
-        return ReviewsRecource::collection($service->reviews()->paginate(10));
+         if(!$service)
+         return response()->json(["status" => false,'code' => 422, "message" => "service   not found" ],422);
+
+        return new ReviewsCollection($service->reviews()->paginate(10));
 
     }
 
@@ -208,11 +235,9 @@ class ReviewController extends Controller
             $review->delete();
 
         return response()->json([
-            'status' => "success",
+            'status' => true,
             'code' => 200,
-
-             "message" => "Request Deleted successfully"
-
+            "message" => "Request Deleted successfully"
             ]) ;
 
     }
