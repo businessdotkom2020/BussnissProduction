@@ -143,6 +143,7 @@ Route::post('test' , function(){
 
         Route::get('product/{product_id}/update/get'   , 'api\ProductController@update_product_get');
         Route::get('branch/{id}/details'   , 'api\BranchesController@show');
+        Route::get('client/{client_id}/details'   , 'api\ClientController@show');
 
 // Auth Routes Sign Up || Log in || Log out || Resset Password
 Route::group(['middleware' => 'auth:api'], function() {
@@ -188,7 +189,6 @@ Route::group(['middleware' => 'auth:api'], function() {
         Route::post('client/new'   , 'api\ClientController@post');
         // Route::get('supplier/{user_id}/jobs'   , 'api\JobController@supplier_jobs');
         Route::get('my/clients'   , 'api\ClientController@my_clients');
-        Route::get('client/{client_id}/details'   , 'api\ClientController@show');
         Route::post('client/{client_id}/update'   , 'api\ClientController@update');
         Route::post('client/{client_id}/delete'   , 'api\ClientController@destroy');
 
