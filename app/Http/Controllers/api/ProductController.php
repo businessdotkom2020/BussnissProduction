@@ -163,8 +163,7 @@ class ProductController extends Controller
     }
     public function factory_tag($id,$tag_id)
     {
-        return ProductIndexResource::collection(Product::where([['tag_id',$tag_id],['user_id',$id]])->paginate(10));
-
+        return new ProductIndexResource(Product::where([['tag_id',$tag_id],['user_id',$id]])->paginate(10));
     }
     public function factory_used($id)
     {
