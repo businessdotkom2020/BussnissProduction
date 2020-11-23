@@ -156,6 +156,8 @@ Route::group(['middleware' => 'auth:api'], function() {
     Route::post('review/{review_id}/delete'   , 'api\ReviewController@destroy');
       Route::get('my-reviews' , 'api\ReviewController@supplier_reviews');
       Route::get('my-jobs' , 'api\StoresController@my_jobs');
+      Route::get('my-branches' , 'api\BranchesController@my_branches');
+      Route::get('my-services' , 'api\ServiceController@my_services');
 
 
         Route::post('product/{product_id}/update'   , 'api\ProductController@update_product');

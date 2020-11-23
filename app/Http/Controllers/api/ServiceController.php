@@ -12,12 +12,17 @@ use App\Http\Resources\SupplierIndexResource;
 use App\Http\Resources\ServicesDetailsResource;
 use App\Http\Resources\ServiceResource;
 use App\Http\Requests\Auth\UpdateUserPasswordRequest;
+use App\Http\Resources\collections\ServicesIndexCollection;
 use App\Models\User;
 use App\Models\Service;
 
 class ServiceController extends Controller
 {
 
+    public function my_services()
+    {
+        return  new ServicesIndexCollection(Service::where('user_id',Request()->user()->id)->paginate(10));
+    }
 
     public function service_Show($id)
     {
