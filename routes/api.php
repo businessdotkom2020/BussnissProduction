@@ -142,6 +142,7 @@ Route::post('test' , function(){
         Route::get('job/{job_id}/details'   , 'api\JobController@show');
 
         Route::get('product/{product_id}/update/get'   , 'api\ProductController@update_product_get');
+        Route::get('branch/{id}/details'   , 'api\BranchesController@show');
 
 // Auth Routes Sign Up || Log in || Log out || Resset Password
 Route::group(['middleware' => 'auth:api'], function() {
@@ -171,7 +172,6 @@ Route::group(['middleware' => 'auth:api'], function() {
         Route::get('my-favorite/products' , 'api\FavoritesController@get_favorite_products');
 
         Route::post('branch/new'   , 'api\BranchesController@post');
-        Route::get('branch/{id}/details'   , 'api\BranchesController@show');
         Route::post('branch/{id}/update'   , 'api\BranchesController@update');
         Route::post('branch/{id}/delete'   , 'api\BranchesController@destroy');
 
