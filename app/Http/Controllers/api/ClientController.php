@@ -7,6 +7,7 @@ use App\Http\Controllers\Controller;
 use App\Http\Requests\Auth\RegisterUsersRequest;
 use App\Http\Resources\ClentsResource;
 use App\Http\Requests\ClientRequest;
+use App\Http\Resources\collections\ClentsCollection;
 use App\Models\Client;
 
 
@@ -37,15 +38,19 @@ class ClientController extends BaseController
 
 
         public function supplier_Clients($id){
-            return ClentsResource::collection(Client::where('user_id',$id)->get());
+            return new ClentsCollection(Client::where('user_id',$id)->get());
         }
 
         public function my_Clients(){
-            return ClentsResource::collection(request()->user()->clients);
+            return new ClentsCollection(request()->user()->clients);
         }
 
         public function show($id){
-            return new ClentsResource(Client::find($id));
+             return response()->json([
+                'status' => true,
+                'code' => 200,
+                 "data" => new ClentsResource(Client::find($id))
+                ]) ;
         }
 
 
