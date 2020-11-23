@@ -25,6 +25,7 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 use App\Http\Requests\imageRequest;
 use App\Http\Requests\EditRequest;
+use App\Http\Resources\collections\TagsCollection;
 
 class ProductController extends Controller
 {
@@ -133,10 +134,10 @@ class ProductController extends Controller
 
     public function factory_tags($id)
     {
-       return $tags =  TagsResource::collection(Tag::whereHas('products' , function($q) use($id){
+       return   new TagsCollection(Tag::whereHas('products' , function($q) use($id){
             $q->where('user_id', $id);
         })
-        ->get())
+        ->get())  ;
             //     ->concat([
             // 'data' => [
             //     'id' => 0 ,
@@ -145,7 +146,7 @@ class ProductController extends Controller
 
             //     ]
             // ])
-        ;
+
 
         // return response()->json([
         //     'data' => [
