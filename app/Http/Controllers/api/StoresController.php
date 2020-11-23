@@ -10,6 +10,7 @@ use App\Http\Resources\SupplierIndexResource;
 use App\Http\Resources\JobsResource;
 use App\Http\Requests\Auth\UpdateUserPasswordRequest;
 use App\Http\Resources\collections\JobCollection;
+use App\Http\Resources\collections\ServicesIndexCollection;
 
 class StoresController extends Controller
 {
@@ -28,7 +29,7 @@ class StoresController extends Controller
 
     public function store_services($id)
     {
-        return  new ServicesIndexResource(\App\Models\Service::where('user_id',$id)->paginate(10));
+        return  new ServicesIndexCollection(\App\Models\Service::where('user_id',$id)->paginate(10));
     }
 
 
