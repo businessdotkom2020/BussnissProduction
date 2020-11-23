@@ -12,6 +12,15 @@ class UserResource extends JsonResource
      * @param  \Illuminate\Http\Request  $request
      * @return array
      */
+
+
+    public function with($request){
+        return [
+          'status'=>'success',
+          'code'=> 200,
+        ];
+    }
+
     public function toArray($request)
     {
         return [
@@ -30,11 +39,7 @@ class UserResource extends JsonResource
         ];
 
 
- 
+
     }
-    public function with($request){
-        return [
-          'status'=>'success'
-        ];
-    }
+
 }
