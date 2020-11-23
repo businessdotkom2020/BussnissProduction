@@ -25,6 +25,7 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 use App\Http\Requests\imageRequest;
 use App\Http\Requests\EditRequest;
+use App\Http\Resources\collections\ProductIndexCollection;
 use App\Http\Resources\collections\TagsCollection;
 
 class ProductController extends Controller
@@ -163,7 +164,7 @@ class ProductController extends Controller
     }
     public function factory_tag($id,$tag_id)
     {
-        return new ProductIndexResource(Product::where([['tag_id',$tag_id],['user_id',$id]])->paginate(10));
+        return new ProductIndexCollection(Product::where([['tag_id',$tag_id],['user_id',$id]])->paginate(10));
     }
     public function factory_used($id)
     {
