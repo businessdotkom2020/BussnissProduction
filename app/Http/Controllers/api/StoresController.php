@@ -48,7 +48,7 @@ class StoresController extends Controller
     {
         $supplier = \App\Models\User::find($supplier_id);
         if(!\App\Models\User::find($supplier_id))
-                                return response()->json(['status' => 'failed', 'message' => 'not fond']);
+                                return response()->json(['status' => false,'code'=> 422, 'message' => 'not fond'],422);
 
 
         return response()->json([
@@ -60,7 +60,7 @@ class StoresController extends Controller
 
     public function suppliers_services()
     {
-        return  ServicesIndexResource::collection(\App\Models\Service::where('user_id',Request()->user()->id)->paginate(10));
+        return  new ServicesIndexCollection(\App\Models\Service::where('user_id',Request()->user()->id)->paginate(10));
     }
 
 
