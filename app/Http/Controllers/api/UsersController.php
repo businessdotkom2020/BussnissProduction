@@ -21,7 +21,6 @@ class UsersController extends Controller
         return response()->json([ "status" => false,'code' => 422, "message" => "User not found" ],422);
 
 
-        return (new UserResource(Request()->user()))->response('X-Value', 'True');
 
         return response()->json([
             "status" => true,
@@ -105,8 +104,7 @@ class UsersController extends Controller
        $user->password = bcrypt(Request()->password);
        $user->update();
 
- return new UserResource($user);
-       return response()->json([
+        return response()->json([
         "status" => true,
         'code' => 200,
         "data" => new UserResource($user)
