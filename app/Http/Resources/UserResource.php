@@ -28,9 +28,13 @@ class UserResource extends JsonResource
 
             // 'last_login'      =>$this->last_login ? $this->last_login->format('Y-m-d H:i:s') : null,
         ];
-        
-        
-        
+
+
+
     }
-    
+    public function with($request){
+        return [
+          'status'=>'success'
+        ];
+    }
 }
