@@ -158,7 +158,7 @@ public function tag($tag_id){
         }
 
 
-       return   $q =  Request()->keyword ;
+         $q =  Request()->keyword ;
 
 
 
