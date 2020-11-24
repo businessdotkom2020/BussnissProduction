@@ -231,7 +231,7 @@ class ReviewController extends Controller
               $review =  Review::find($id) ;
 
                  if(!$review)
-                        return response()->json(['status' => 'failed', 'message' => 'not fond']);
+                        return response()->json(['status' => 'failed','code' => 422, 'message' => 'not fond']);
             $review->delete();
 
         return response()->json([
