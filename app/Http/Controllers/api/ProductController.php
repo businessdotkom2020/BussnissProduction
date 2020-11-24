@@ -128,9 +128,11 @@ class ProductController extends Controller
     public function show($id)
     {
 
-        return new ProductResource(
-            Product::find($id)
-        );
+        return response()->json([
+            'status' => true,
+            'code' => 200,
+            'data' => new ProductResource(Product::find($id)),
+            ]);
     }
 
     public function factory_tags($id)
@@ -233,7 +235,8 @@ class ProductController extends Controller
         $product->save();
 
 return response()->json([
-    "status" => "success",
+    "status" => true,
+    "code" => 200,
     "message" => "Product Created",
 
 
@@ -290,7 +293,8 @@ if(!$images)
         $product->update();
 
 return response()->json([
-    "status" => "success",
+    "status" => true,
+    "code" => 200,
     "message" => "Product Images Updated",
 
 
@@ -318,12 +322,8 @@ return response()->json([
          $product->tag_id = $request->tag_id;
          $product->category_id = $request->category_id;
          $product->brand_id = $request->brand_id;
-
          $product->product_condition = $request->product_condition;
-
-
-
-        $product->save();
+         $product->save();
 
      $product->categories()->attach(Request()->category_ids);
      $price_list = [];
@@ -372,7 +372,7 @@ return response()->json([
        }
 return response()->json([
     "status" => "success",
-        "product_id" => $product->id
+    "product_id" => $product->id
 
     ]);
     }
@@ -473,10 +473,6 @@ return response()->json([
 
                 $lang = \Config::get('voyager.multilingual')['locales'];
          $lang = array_values(array_diff($lang, array(\Config::get('voyager.multilingual')['default'])));
-
-
-
-
 
           return new ProductupdateResource(
             Product::withTranslations($lang)->find($product_id)
