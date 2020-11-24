@@ -58,7 +58,7 @@ class FollowController extends Controller
     {
          $user = $request->user();
         // return $user->following()->get();
-        return  new SupplierFollowCollection($user->following()->get()) ;
+        return  new SupplierFollowCollection ($user->following()->get()) ;
     }
 
             public function following_count(Request $request)
