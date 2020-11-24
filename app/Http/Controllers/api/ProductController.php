@@ -25,6 +25,8 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 use App\Http\Requests\imageRequest;
 use App\Http\Requests\EditRequest;
+use App\Http\Resources\collections\attributesCollection;
+use App\Http\Resources\collections\attributesValuesCollection;
 use App\Http\Resources\collections\ProductIndexCollection;
 use App\Http\Resources\collections\TagsCollection;
 
@@ -375,7 +377,7 @@ return response()->json([
             "code" => 200,
             "message" => 'product created successfully'
         ]);
-        
+
     }
     public function update_product(Request $request,$product_id)
     {
@@ -484,13 +486,13 @@ return response()->json([
 
     protected function attributes()
     {
-                return  attributesResource::collection(
+                return  new attributesCollection(
             Attribute::get()
         );
     }
     protected function attributes_by_category($id)
     {
-                return  attributesResource::collection(
+                return  new attributesCollection(
             Attribute::whereHas('categories', function ($query) use($id) {
     $query->where('id', $id);
 })->get()
@@ -498,7 +500,7 @@ return response()->json([
     }
     protected function attribute_values($id)
     {
-                return  attributesValuesResource::collection(
+                return  new attributesValuesCollection(
             AttributeValue::where('attribute_id',$id)->get()
         );
     }
