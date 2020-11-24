@@ -197,8 +197,13 @@ class ProductController extends Controller
 
     public function available_languages(){
          $lang = \Config::get('voyager.multilingual')['locales'];
-        return $lang = array_values(array_diff($lang, array(\Config::get('voyager.multilingual')['default'])));
+         $lang = array_values(array_diff($lang, array(\Config::get('voyager.multilingual')['default'])));
+         return response()->json([
+           'status' => true,
+           'code' => 200,
+           'data' => $lang,
 
+         ]);
     }
 
 
