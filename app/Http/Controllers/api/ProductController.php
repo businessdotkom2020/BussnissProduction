@@ -370,14 +370,12 @@ return response()->json([
 
        $this->update_images($product->id);
 
-return response()->json([
-    "status" => true,
-    "code" => 200,
-    "data" =>[
-        "product_id" => $product->id
-        ]
-
-    ]);
+        return response()->json([
+            "status" => true,
+            "code" => 200,
+            "message" => 'product created successfully'
+        ]);
+        
     }
     public function update_product(Request $request,$product_id)
     {
