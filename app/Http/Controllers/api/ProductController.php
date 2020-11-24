@@ -464,8 +464,11 @@ return response()->json([
            }
        }
 return response()->json([
-    "status" => "success",
+    "status" => true,
+    "code" =>  200,
+    'data' =>[
         "product_id" => $product->id
+    ]
 
     ]);
 
@@ -517,11 +520,12 @@ return response()->json([
                  $product =  Product::find($id) ;
 
                  if(!$product)
-                        return response()->json(['status' => 'failed', 'message' => 'not fond']);
+                        return response()->json(['status' =>  false,'code' => 200, 'message' => 'not fond']);
             $product->delete();
 
         return response()->json([
-            'status' => "success",
+            'status' => true,
+            'code' => 200,
              "message" => "product Deleted successfully"
 
             ]) ;
