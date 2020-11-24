@@ -201,17 +201,17 @@ class ProductController extends Controller
 
 
 
-            public function store_images( imageRequest $request){
+            public function store_images($product_id){
 
-        $product= Product::find(Request()->product_id);
+        $product= Product::find($product_id);
 
 
 
                   		$images = array();
 
-			if (is_array($request->file('images'))) {
+			if (is_array(Request()->file('images'))) {
 
-				foreach ($request->file('images') as $image) {
+				foreach (Request()->file('images') as $image) {
                     $file_name     = 'product_image'.   rand(1, 15). rand(155, 200) . rand(25, 55). '.png';
                     $image->storeAs('public/products',$file_name);
                     $img_url = 'products/'. $file_name;
@@ -225,7 +225,7 @@ class ProductController extends Controller
 
 
 
-			if (($request->file('image'))) {
+			if ((Request()->file('image'))) {
 
                     $file_name     = 'product_image'.   rand(1, 15). rand(155, 200) . rand(25, 55). '.png';
                     $image->storeAs('public/products',$file_name);
@@ -242,7 +242,7 @@ return response()->json([
 
     ]);
     }
-    public function update_images($product_id,Request $request){
+      function update_images($product_id){
 
         $product= Product::find($product_id);
 
@@ -304,13 +304,10 @@ return response()->json([
 
     public function store(Request $request)
     {
-
-        // return request()->all();
          $lang = \Config::get('voyager.multilingual')['locales'];
          $lang = array_values(array_diff($lang, array(\Config::get('voyager.multilingual')['default'])));
 
         $langs = [];
-
 
          $product = new Product;
 
@@ -370,6 +367,9 @@ return response()->json([
 );
            }
        }
+
+       $this->update_images($product->id);
+
 return response()->json([
     "status" => true,
     "code" => 200,
