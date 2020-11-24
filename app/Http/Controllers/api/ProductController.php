@@ -371,8 +371,11 @@ return response()->json([
            }
        }
 return response()->json([
-    "status" => "success",
-    "product_id" => $product->id
+    "status" => true,
+    "code" => 200,
+    "data" =>[
+        "product_id" => $product->id
+        ]
 
     ]);
     }
