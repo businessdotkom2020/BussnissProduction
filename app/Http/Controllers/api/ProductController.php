@@ -266,9 +266,9 @@ $images =  $new_images;
 if(!$images)
     $images = [];
 
-			if (is_array($request->file('images'))) {
+			if (is_array(Request()->file('images'))) {
 
-				foreach ($request->file('images') as $image) {
+				foreach (Request()->file('images') as $image) {
                     $file_name     = 'product_image'.   rand(1, 15). rand(155, 200) . rand(25, 55). '.png';
                     $image->storeAs('public/products',$file_name);
                     $img_url = 'products/'. $file_name;
@@ -281,7 +281,7 @@ if(!$images)
 
 
 
-			if ($image = ($request->file('image'))) {
+			if ($image = (Request()->file('image'))) {
 
                     $file_name     = 'product_image'.   rand(1, 15). rand(155, 200) . rand(25, 55). '.png';
                     $image->storeAs('public/products',$file_name);
