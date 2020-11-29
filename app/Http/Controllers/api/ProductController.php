@@ -29,6 +29,7 @@ use App\Http\Resources\collections\attributesCollection;
 use App\Http\Resources\collections\attributesValuesCollection;
 use App\Http\Resources\collections\ProductIndexCollection;
 use App\Http\Resources\collections\TagsCollection;
+use App\Http\Resources\collections\AuthCategoriesCollection;
 
 class ProductController extends Controller
 {
@@ -187,7 +188,7 @@ class ProductController extends Controller
         $sub_categories_ids = Category::whereIn('parent_id',$main_categories_ids)->get()->pluck('id');
         $sub_sub_categories_ids = Category::whereIn('parent_id',$sub_categories_ids)->whereHas('products')->get();
 
-        return AuthCategoriesResource::collection($sub_sub_categories_ids);
+        return new AuthCategoriesCollection($sub_sub_categories_ids);
     }
 
     public function factory_categories_products($factory_id,$category_id)
