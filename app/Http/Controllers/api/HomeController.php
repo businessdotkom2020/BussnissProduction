@@ -41,7 +41,7 @@ class HomeController extends Controller
    }
 
 public function tag($tag_id){
-            return  ProductIndexResource::collection(Product::where('tag_id',$tag_id)->paginate(10));
+            return  new ProductIndexCollection(Product::where('tag_id',$tag_id)->paginate(10));
 
 }
 
