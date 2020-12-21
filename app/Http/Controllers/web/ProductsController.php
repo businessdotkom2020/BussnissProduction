@@ -14,7 +14,7 @@ use DB;
 class ProductsController extends Controller
 {
     public function show($product_id)
-    {
+    { 
 
         $product =  Product::with('options')->find($product_id);
 

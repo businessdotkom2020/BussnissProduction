@@ -13,7 +13,7 @@ class UserResource extends JsonResource
      * @return array
      */
 
-
+ 
     public function toArray($request)
     {
         return [
