@@ -36,9 +36,9 @@ trait Favoritable
     {
         $attributes = ['user_id' => auth()->id()];
 
-        if (! $this->favorites()->where($attributes)->exists()) {
+        if (!$this->favorites()->where($attributes)->exists()) {
             return $this->favorites()->create($attributes);
-        }else{
+        } else {
             $this->unfavorite();
         }
     }
@@ -60,17 +60,15 @@ trait Favoritable
      */
     public function isFavorited()
     {
-        
-        if( auth()->guard('api')->user()){
-                        return  ! !  $this->favorites->where('user_id', auth()->guard('api')->user()->id)->count();
 
+        if (auth()->guard('api')->user()) {
+            return  !!$this->favorites->where('user_id', auth()->guard('api')->user()->id)->count();
         }
-        if(Auth::check() ){
+        if (Auth::check()) {
 
-            return ! ! $this->favorites->where('user_id', auth()->id())->count();
+            return !!$this->favorites->where('user_id', auth()->id())->count();
         }
         return false;
-        
     }
 
     /**

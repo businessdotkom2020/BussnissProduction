@@ -20,19 +20,15 @@ class UserResource extends JsonResource
             'id'          => $this->id,
             'name'        => $this->name,
             'email'       => $this->email,
-            'image'      => url('storage/'.$this->avatar),
+            'image'      => url('storage/' . $this->avatar),
             'mobile'      => $this->mobile,
             'whatsapp_mobile'      => $this->whatsapp_mobile,
             'country'      => $this->country ?  $this->country->name : null,
             'address'      => $this->address,
-            'favorites_count'      => \App\Models\Favorite::where('user_id',$this->id)->count(),
-                                    'following_count'      => $this->following()->count(),
+            'favorites_count'      => \App\Models\Favorite::where('user_id', $this->id)->count(),
+            'following_count'      => $this->following()->count(),
 
             // 'last_login'      =>$this->last_login ? $this->last_login->format('Y-m-d H:i:s') : null,
         ];
-
-
-
     }
-
 }
