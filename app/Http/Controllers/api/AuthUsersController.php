@@ -74,7 +74,16 @@ class AuthUsersController extends BaseController
             'status' => true,
             'code' => 200,
             'message' => 'Registered  Successfully',
-            'data' => new UserResource($user),
+            'data' => [
+                'id' => $user->id,
+                'name' => $user->name,
+                'email' => $user->email,
+                'mobile' => $user->mobile,
+
+                'token'     =>  $tokenResult->accessToken,
+                'token_type' => 'Bearer',
+                'expires_at' => Carbon::parse($tokenResult->token->expires_at)->toDateTimeString()
+            ],
 
 
         ], 200);
@@ -152,8 +161,16 @@ class AuthUsersController extends BaseController
         return response()->json([
             'status' => true,
             'code' => 200,
-            'data' => new UserResource($user),
+            'data' => [
+                'id' => $user->id,
+                'name' => $user->name,
+                'email' => $user->email,
+                'mobile' => $user->mobile,
 
+                'token'     =>  $tokenResult->accessToken,
+                'token_type' => 'Bearer',
+                'expires_at' => Carbon::parse($tokenResult->token->expires_at)->toDateTimeString()
+            ],
 
         ], 200);
     }
@@ -200,8 +217,16 @@ class AuthUsersController extends BaseController
             'status' => true,
             'code' => 200,
             'message' => 'Logged in Successfully',
-            'data' => new UserResource($user),
-
+            'data' => [
+                'id' => $user->id,
+                'name' => $user->name,
+                'email' => $user->email,
+                'mobile' => $user->mobile,
+                'type'     => $user->type ? "Supplier" : "user",
+                'token'     =>  $tokenResult->accessToken,
+                'token_type' => 'Bearer',
+                'expires_at' => Carbon::parse($tokenResult->token->expires_at)->toDateTimeString()
+            ],
 
 
         ], 200);
