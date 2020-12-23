@@ -22,36 +22,36 @@ class ServicesIndexResource extends ProductIndexResource
         //     )
         // ]);
         // return parent::toArray($request);
-                $lang = (request('lang')) ? request('lang') : \App::getLocale();
+        $lang = (request('lang')) ? request('lang') : \App::getLocale();
 
         return [
             'id'           => $this->id,
             'name'           => $this->name,
             'description'           => $this->description,
-            'category'       =>  $this->category ? $this->category->name :   null ,
+            'category'       =>  $this->category ? $this->category->name :   null,
             'images'       => $this->images(),
-            'default_image'        => ($this->images ) ? url('storage/'.(json_decode($this->images))[0]) : "https://i.imgur.com/mFI2maG.jpg",
+            'default_image'        => ($this->images) ? url('storage/' . (json_decode($this->images))[0]) : "https://i.imgur.com/mFI2maG.jpg",
             'share_url'  => "https://www.facebook.com/",
-            'store_id'  => $this->user_id ,
-            'rating'       => 5 ,
-            'youtube_url'=>       $this->youtube_url ,
+            'store_id'  => $this->user_id,
+            'rating'       => 5,
+            'is_favorite'  => $this->isFavorited(),
+
+            'youtube_url' =>       $this->youtube_url,
             'created_at'   => $this->created_at,
             'updated_at'   => $this->updated_at,
         ];
-
     }
-               public function images(){
-          $images = [];
-          $all_images = [];
-          $images = json_decode($this->images);
-      	if(is_array($images)){
-          foreach($images as $image){
-            $all_images [] = url('storage/'.$image);
-          }
-                    return $all_images;
-
+    public function images()
+    {
+        $images = [];
+        $all_images = [];
+        $images = json_decode($this->images);
+        if (is_array($images)) {
+            foreach ($images as $image) {
+                $all_images[] = url('storage/' . $image);
+            }
+            return $all_images;
         }
-      return [];
-          }
-
+        return [];
+    }
 }
