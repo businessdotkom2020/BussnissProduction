@@ -115,11 +115,12 @@ class AuthUsersController extends BaseController
 
             'data' => [
                 'user' => new UserResource($user),
-                'meta' => [
-                    'token'     =>  $tokenResult->accessToken,
-                    'token_type' => 'Bearer',
-                    'expires_at' => Carbon::parse($tokenResult->token->expires_at)->toDateTimeString()
-                ]
+                'token' => $tokenResult->accessToken
+                // 'meta' => [
+                //     'token'     =>  $tokenResult->accessToken,
+                //     'token_type' => 'Bearer',
+                //     'expires_at' => Carbon::parse($tokenResult->token->expires_at)->toDateTimeString()
+                // ]
             ]
 
         ], 200);
