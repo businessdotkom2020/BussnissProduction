@@ -74,16 +74,7 @@ class AuthUsersController extends BaseController
             'status' => true,
             'code' => 200,
             'message' => 'Registered  Successfully',
-            'data' => [
-                'id' => $user->id,
-                'name' => $user->name,
-                'email' => $user->email,
-                'mobile' => $user->mobile,
-
-                'token'     =>  $tokenResult->accessToken,
-                'token_type' => 'Bearer',
-                'expires_at' => Carbon::parse($tokenResult->token->expires_at)->toDateTimeString()
-            ],
+            'data' => new UserResource($user),
 
 
         ], 200);
@@ -113,16 +104,8 @@ class AuthUsersController extends BaseController
             'message' => 'Registered  Successfully',
 
 
-            'data' => [
-                'id' => $user->id,
-                'name' => $user->name,
-                'email' => $user->email,
-                'mobile' => $user->mobile,
+            'data' => new UserResource($user),
 
-                'token'     =>  $tokenResult->accessToken,
-                'token_type' => 'Bearer',
-                'expires_at' => Carbon::parse($tokenResult->token->expires_at)->toDateTimeString()
-            ],
 
 
         ], 200);
@@ -169,16 +152,8 @@ class AuthUsersController extends BaseController
         return response()->json([
             'status' => true,
             'code' => 200,
-            'data' => [
-                'id' => $user->id,
-                'name' => $user->name,
-                'email' => $user->email,
-                'mobile' => $user->mobile,
+            'data' => new UserResource($user),
 
-                'token'     =>  $tokenResult->accessToken,
-                'token_type' => 'Bearer',
-                'expires_at' => Carbon::parse($tokenResult->token->expires_at)->toDateTimeString()
-            ],
 
         ], 200);
     }
@@ -225,16 +200,8 @@ class AuthUsersController extends BaseController
             'status' => true,
             'code' => 200,
             'message' => 'Logged in Successfully',
-            'data' => [
-                'id' => $user->id,
-                'name' => $user->name,
-                'email' => $user->email,
-                'mobile' => $user->mobile,
-                'type'     => $user->type ? "Supplier" : "user",
-                'token'     =>  $tokenResult->accessToken,
-                'token_type' => 'Bearer',
-                'expires_at' => Carbon::parse($tokenResult->token->expires_at)->toDateTimeString()
-            ],
+            'data' => new UserResource($user),
+
 
 
         ], 200);
