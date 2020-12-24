@@ -8,16 +8,13 @@ $menu = false ;
 @push('styles')
 <!-- <link rel="stylesheet" href="{{ asset('/web/css/custom.css')}}">
 <link rel="stylesheet" href="{{ asset('/web/css/custom-register.css')}}"> -->
+<link rel="stylesheet" href="{{ asset('/web/css/custom-register-supplier.css')}}">  
 
 @endpush
 
 
 
 @section('content')
-
-
-
-
 
 <div class="overlay-s"></div>
 <div class="jumpo col-xs-12" style="background-image: url({{ asset('/web/images/cover.jpg')}})">
@@ -137,7 +134,7 @@ $menu = false ;
                     <div class="form-group col-md-12 col-xs-12">
 
                     </div>
-                    <div class="form-group col-md-6 col-xs-12">
+                    <div class="form-group col-md-12 col-xs-12">
                         <button type="submit" class="btn">@lang('general.register')</button>
                     </div>
 
