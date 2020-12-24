@@ -3,6 +3,15 @@
 $menu = false ;
 @endphp
 
+
+
+@push('styles')
+<link rel="stylesheet" href="{{ asset('/web/css/custom.css')}}">
+
+@endpush
+
+
+
 @section('content')
 
 
@@ -29,137 +38,137 @@ $menu = false ;
                 @csrf
                 <div class="ito-h col-xs-12">
                     <h4>@lang('general.background_image')</h4>
-                     <div class="form-group col-xs-12">
+                    <div class="form-group col-xs-12">
 
-                                <div class="prof-img">
+                        <div class="prof-img">
                             <label>
                                 <i class="fa fa-camera"></i>
                                 <span> @lang('general.cheange')</span>
                                 <input name="store_background" type="file" onchange="document.getElementById('blah').src = window.URL.createObjectURL(this.files[0])">
                                 <img src="{{ asset('/web/images/cover.jpg')}}" id="blah" alt="your image">
-                    </label>
+                            </label>
+                        </div>
+                        <div class="prof-img pic">
+                            <label>
+                                <i class="fa fa-camera"></i>
+                                <span>@lang('general.cheange_profile_image')</span>
+                                <input name="store_image" type="file" onchange="document.getElementById('blah1').src = window.URL.createObjectURL(this.files[0])">
+                                <img src="{{ asset('/web/images/marks/1.png')}}" id="blah1" alt="your image">
+                            </label>
+                        </div>
+                    </div>
+
+                    <div class="s-item col-md-6 col-sm-6 col-xs-12">
+
+
+
+                        <div class="prof-img">
+                            <label>
+                                <i class="fa fa-camera"></i>
+                                <input name="image" type="file" onchange="document.getElementById('blah').src = window.URL.createObjectURL(this.files[0])">
+                                <img src="{{ asset('/web/images/marks/1.png')}}" id="blah" alt="your image">
+                            </label>
+                        </div>
+
+                    </div>
+                    <div class="s-item col-md-6 col-sm-6 col-xs-12">
+
+
+
+                        <div class="prof-img">
+                            <label>
+                                <i class="fa fa-camera"></i>
+                                <input name="image" type="file" onchange="document.getElementById('blah1').src = window.URL.createObjectURL(this.files[0])">
+                                <img src="{{ asset('/web/images/cover.jpg')}}" id="blah1" alt="your image">
+                            </label>
+                        </div>
+
+                    </div>
                 </div>
-                <div class="prof-img pic">
-                    <label>
-                        <i class="fa fa-camera"></i>
-                        <span>@lang('general.cheange_profile_image')</span>
-                        <input name="store_image" type="file" onchange="document.getElementById('blah1').src = window.URL.createObjectURL(this.files[0])">
-                        <img src="{{ asset('/web/images/marks/1.png')}}" id="blah1" alt="your image">
-                    </label>
+                <div class="ito-h col-xs-12">
+                    <h4>@lang('general.main_information')</h4>
+                    <div class="form-group col-md-6 col-xs-12">
+                        <input type="text" required name="supplier_name" placeholder="@lang('general.supplier_name')" class="form-control">
+                    </div>
+                    <div class="form-group col-md-6 col-xs-12">
+                        <select required name="category_ids[]" class="form-control select-nosearch" multiple>
+                            <!--<option selected disabled>@lang('general.categories')</option>-->
+                            @foreach(\App\Models\Category::whereNull('parent_id')->get() as $category)
+
+                            <option value="{{$category->id}}">{{$category->getTranslatedAttribute('name',\App::getLocale())}}</option>
+
+
+                            @endforeach
+                        </select>
+                    </div>
+                    <div class="form-group col-md-6 col-xs-12">
+                        <input type="email" required name="email" placeholder="@lang('general.email')" class="form-control">
+                    </div>
+                    <div class="form-group col-md-6 col-xs-12">
+                        <input type="text" required name="mobile" placeholder="@lang('general.mobile')" class="form-control">
+                    </div>
+                    <div class="form-group col-md-12 col-xs-12">
+                        <input type="text" required name="hot_number" placeholder="@lang('general.hot_line')" class="form-control">
+                    </div>
+                    <div class="form-group col-md-6 col-xs-12">
+                        <input type="password" required name="password" placeholder="@lang('general.password')" class="form-control">
+                    </div>
+                    <div class="form-group col-md-6 col-xs-12">
+                        <input type="password" required name="password_confirmation" placeholder="@lang('general.password_confirmation')" class="form-control">
+                    </div>
                 </div>
-        </div> 
 
-        <div class="s-item col-md-6 col-sm-6 col-xs-12">
+                <div class="ito-h col-xs-12">
+                    <h4>@lang('general.localization_info')</h4>
+                    </h4>
+                    <div class="form-group col-md-4 col-xs-12">
+                        <select required id="country" name="country_id" class="form-control">
+                            <option selected disabled>@lang('general.country')</option>
+
+                            @foreach (\App\Models\Country::get() as $country)
+                            <option value="{{$country->id}}">{{$country->name}}</option>
+                            @endforeach
+
+                        </select>
+                    </div>
+                    <div class="form-group col-md-4 col-xs-12">
+                        <select required name="state_id" id="state" class="form-control">
+                            <option selected disabled>@lang('general.state')</option>
 
 
+                        </select>
+                    </div>
+                    <div class="form-group col-md-4 col-xs-12">
+                        <select required name="city_id" id="city" class="form-control">
+                            <option selected disabled>@lang('general.city')</option>
 
-            <div class="prof-img">
-                <label>
-                    <i class="fa fa-camera"></i>
-                    <input name="image" type="file" onchange="document.getElementById('blah').src = window.URL.createObjectURL(this.files[0])">
-                    <img src="{{ asset('/web/images/marks/1.png')}}" id="blah" alt="your image">
-                </label>
-            </div>
+                        </select>
+                    </div>
+                    <div class="form-group col-md-12 col-xs-12">
+                        <input required type="text" name="street_nom" placeholder="@lang('general.street_num')" class="form-control">
+                    </div>
+                    <div class="form-group col-md-6 col-xs-12">
+                        <input required type="text" name="zip_code" placeholder="@lang('general.zip_code')" class="form-control">
+                    </div>
+                    <div class="form-group col-md-6 col-xs-12">
+                        <!--<input type="text" placeholder="@lang('general.map_location')" class="form-control">-->
+                        <a href="#" class="btn btn-review" data-toggle="modal" onclick="initMap()" data-target="#review-pop">@lang('general.map_location')</a>
 
+                    </div>
+                    <div class="form-group col-md-6 col-xs-12">
+                        <input required type="text" name="address" placeholder="@lang('general.address_spec')" class="form-control">
+                    </div>
+
+                    <div class="form-group col-md-12 col-xs-12">
+
+                    </div>
+                    <div class="form-group col-md-6 col-xs-12">
+                        <button type="submit" class="btn">@lang('general.register')</button>
+                    </div>
+
+                </div>
+            </form>
         </div>
-        <div class="s-item col-md-6 col-sm-6 col-xs-12">
-
-
-
-            <div class="prof-img">
-                <label>
-                    <i class="fa fa-camera"></i>
-                    <input name="image" type="file" onchange="document.getElementById('blah1').src = window.URL.createObjectURL(this.files[0])">
-                    <img src="{{ asset('/web/images/cover.jpg')}}" id="blah1" alt="your image">
-                </label>
-            </div>
-
-        </div>
-    </div>
-    <div class="ito-h col-xs-12">
-        <h4>@lang('general.main_information')</h4>
-        <div class="form-group col-md-6 col-xs-12">
-            <input type="text" required name="supplier_name" placeholder="@lang('general.supplier_name')" class="form-control">
-        </div>
-        <div class="form-group col-md-6 col-xs-12">
-            <select required name="category_ids[]" class="form-control select-nosearch" multiple>
-                <!--<option selected disabled>@lang('general.categories')</option>-->
-                @foreach(\App\Models\Category::whereNull('parent_id')->get() as $category)
-
-                <option value="{{$category->id}}">{{$category->getTranslatedAttribute('name',\App::getLocale())}}</option>
-
-
-                @endforeach
-            </select>
-        </div>
-        <div class="form-group col-md-6 col-xs-12">
-            <input type="email" required name="email" placeholder="@lang('general.email')" class="form-control">
-        </div>
-        <div class="form-group col-md-6 col-xs-12">
-            <input type="text" required name="mobile" placeholder="@lang('general.mobile')" class="form-control">
-        </div>
-        <div class="form-group col-md-12 col-xs-12">
-            <input type="text" required name="hot_number" placeholder="@lang('general.hot_line')" class="form-control">
-        </div>
-        <div class="form-group col-md-6 col-xs-12">
-            <input type="password" required name="password" placeholder="@lang('general.password')" class="form-control">
-        </div>
-        <div class="form-group col-md-6 col-xs-12">
-            <input type="password" required name="password_confirmation" placeholder="@lang('general.password_confirmation')" class="form-control">
-        </div>
-    </div>
-
-    <div class="ito-h col-xs-12">
-        <h4>@lang('general.localization_info')</h4>
-        </h4>
-        <div class="form-group col-md-4 col-xs-12">
-            <select required id="country" name="country_id" class="form-control">
-                <option selected disabled>@lang('general.country')</option>
-
-                @foreach (\App\Models\Country::get() as $country)
-                <option value="{{$country->id}}">{{$country->name}}</option>
-                @endforeach
-
-            </select>
-        </div>
-        <div class="form-group col-md-4 col-xs-12">
-            <select required name="state_id" id="state" class="form-control">
-                <option selected disabled>@lang('general.state')</option>
-
-
-            </select>
-        </div>
-        <div class="form-group col-md-4 col-xs-12">
-            <select required name="city_id" id="city" class="form-control">
-                <option selected disabled>@lang('general.city')</option>
-
-            </select>
-        </div>
-        <div class="form-group col-md-12 col-xs-12">
-            <input required type="text" name="street_nom" placeholder="@lang('general.street_num')" class="form-control">
-        </div>
-        <div class="form-group col-md-6 col-xs-12">
-            <input required type="text" name="zip_code" placeholder="@lang('general.zip_code')" class="form-control">
-        </div>
-        <div class="form-group col-md-6 col-xs-12">
-            <!--<input type="text" placeholder="@lang('general.map_location')" class="form-control">-->
-            <a href="#" class="btn btn-review" data-toggle="modal" onclick="initMap()" data-target="#review-pop">@lang('general.map_location')</a>
-
-        </div>
-        <div class="form-group col-md-6 col-xs-12">
-            <input required type="text" name="address" placeholder="@lang('general.address_spec')" class="form-control">
-        </div>
-
-        <div class="form-group col-md-12 col-xs-12">
-
-        </div>
-        <div class="form-group col-md-6 col-xs-12">
-            <button type="submit" class="btn">@lang('general.register')</button>
-        </div>
-
-    </div>
-    </form>
-    </div>
     </div>
 </main>
 
