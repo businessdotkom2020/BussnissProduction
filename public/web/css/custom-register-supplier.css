@@ -55,3 +55,26 @@ input, select, textarea {
     padding: 0;
     outline: 0;
 }
+
+.modal .form-group label {
+    margin: 10px 0;
+}
+
+
+.form-control {
+    height: 45px;
+    line-height: 38px;
+    padding-left: 10px;
+    font-size: 13px;
+    box-sizing: border-box;
+    border-radius: 4px;
+    box-shadow: none;
+    text-transform: none;
+    border: 1px solid #dfdfdf;
+    margin-bottom: 0;
+    padding: 0 16px;
+}
+
+.form-group, .form-control {
+    margin-bottom: 0;
+}
