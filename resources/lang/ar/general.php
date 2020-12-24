@@ -5,7 +5,7 @@ return [
     'select_category' => 'إختر القسم',
     'search_products' => 'إبحث عن المنتجات',
     'search' => 'البحث',
-    'current_location ' => 'المكان الحالى',
+    'current_location' => 'المكان الحالى',
     'search_here' => 'إبدأ البحث ...',
     'login' => 'تسجيل الدخول',
     'login_text' => ' لديك حساب بالفعل',
