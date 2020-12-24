@@ -2,7 +2,7 @@
 @php
 $menu = false ;
 @endphp
-
+@section('title', trans('general.supplier_new_account'))
 
 
 @push('styles')

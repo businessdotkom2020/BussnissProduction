@@ -2,7 +2,7 @@
 <html lang="en" dir="ltr">
 
 <head>
-    <title>BusinessDotKom</title>
+    <title>BusinessDotKom  @yield('title')</title>
     <meta name="description" content="">
     <meta name="keywords" content="">
     <meta charset="utf-8">
