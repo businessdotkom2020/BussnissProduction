@@ -6,7 +6,7 @@ $menu = false ;
 
 
 @push('styles')
-<link rel="stylesheet" href="{{ asset('/web/css/custom.css')}}">
+<!-- <link rel="stylesheet" href="{{ asset('/web/css/custom.css')}}"> -->
 <link rel="stylesheet" href="{{ asset('/web/css/custom-register.css')}}">
 
 @endpush
