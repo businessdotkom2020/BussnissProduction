@@ -165,7 +165,7 @@ $menu = false ;
                     </div>
                     <div class="col-md-4 col-xs-12">
 
-                        <button id="current_location" onclick="getLocation()"> Current Location <i class="fa fa-location-arrow" aria-hidden="true"></i></button>
+                        <button id="current_location" onclick="getLocation()"> @lang('general.current_location')<i class="fa fa-location-arrow" aria-hidden="true"></i></button>
                     </div>
 
                     <div class="col-md-6 col-xs-12">

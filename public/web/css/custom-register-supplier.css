@@ -44,7 +44,16 @@
     padding-bottom: 12px;
     margin-right: 12px;
 } 
+.rate-stars {
+    text-align: center;
+    direction: rtl;
+    margin-bottom: 10px;
+}
 
+.rate-title {
+    text-align: center;
+    margin-bottom: 10px;
+}
 
 #pac-container {
     padding: 0;
@@ -58,6 +67,15 @@ input, select, textarea {
 
 .modal .form-group label {
     margin: 10px 0;
+}
+
+* {
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    text-transform: capitalize;
+    font-family: pop-regular;
+    color: #181818;
+    font-size: 14px;
 }
 
 
@@ -75,6 +93,21 @@ input, select, textarea {
     padding: 0 16px;
 }
 
+#current_location:hover {
+    background-color: #4169e1;
+}
+
+
+#current_location {
+    background-color: #1e90ff;
+    border: none;
+    color: #fff;
+    border-radius: 10px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+ 
 .form-group, .form-control {
     margin-bottom: 0;
 }
