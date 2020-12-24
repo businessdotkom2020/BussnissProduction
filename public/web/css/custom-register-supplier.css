@@ -55,6 +55,10 @@
     margin-bottom: 10px;
 }
 
+.modal .form-group {
+    margin-bottom: 20px;
+}
+
 #pac-container {
     padding: 0;
 }
