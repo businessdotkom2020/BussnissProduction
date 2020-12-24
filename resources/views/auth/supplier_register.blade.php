@@ -58,19 +58,7 @@ $menu = false ;
                         </div>
                     </div>
 
-                    <div class="s-item col-md-6 col-sm-6 col-xs-12">
-
-
-
-                        <div class="prof-img">
-                            <label>
-                                <i class="fa fa-camera"></i>
-                                <input name="image" type="file" onchange="document.getElementById('blah').src = window.URL.createObjectURL(this.files[0])">
-                                <img src="{{ asset('/web/images/marks/1.png')}}" id="blah" alt="your image">
-                            </label>
-                        </div>
-
-                    </div>
+               
                     <div class="s-item col-md-6 col-sm-6 col-xs-12">
 
 
