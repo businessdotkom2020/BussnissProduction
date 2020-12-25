@@ -25,7 +25,7 @@ $menu = false ;
             <form action="{{route('do.resset_password')}}" method="post">
                 @csrf
                 <div class="form-group">
-                    <input type="text" name="email" value="{{$user->email}}" disabled placeholder="@lang('general.email')" class="form-control">
+                    <input type="hidden" name="email" value="{{$user->email}}" disabled placeholder="@lang('general.email')" class="form-control">
                 </div>
 
                 <div class="form-group">
