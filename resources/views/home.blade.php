@@ -55,7 +55,7 @@
             </div>
             <div class="g-body col-xs-12">
 
-@foreach (\App\Models\Product::limit(10)->latest()->get() as $product)
+@foreach (\App\Models\Product::limit(12)->latest()->get() as $product)
                 <div class="block b-product col-md-2 col-sm-6 col-xs-12">
                     <div class="inner">
                         <div class="i-img">
@@ -140,7 +140,7 @@
             </div>
             <div class="g-body col-xs-12">
 
-                @foreach (\App\Models\Product::limit(10)->orderBy('name','asc')->get() as $product)
+                @foreach (\App\Models\Product::limit(12)->orderBy('name','asc')->get() as $product)
                 <div class="block b-product col-md-2 col-sm-6 col-xs-12">
                     <div class="inner">
                         <div class="i-img">
