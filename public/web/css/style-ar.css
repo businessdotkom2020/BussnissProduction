@@ -2,7 +2,7 @@
 * {
     direction: rtl;
     font-family: "Tajawal", sans-serif;
-    font-weight: 500;
+    font-weight: 600;
 }
 .top-head .tp-links {
     float: right;
@@ -504,11 +504,11 @@
 .supp-data .supp-l span,
 .supp-prof-inner .g-head h3 {
     font-family: "Tajawal", sans-serif;
-    font-weight: 500;
+    font-weight: 600;
 }
 .about-wrap .ab-data p {
     font-family: "Tajawal", sans-serif;
-    font-weight: 500;
+    font-weight: 600;
 }
 .add-req-wrap .form-group .form-control span {
     display: block;
@@ -527,7 +527,7 @@
 }
 .cat-sidebar .cat-head h3 {
     font-family: "Tajawal", sans-serif;
-    font-weight: 500;
+    font-weight: 600;
 }
 .box-filter .nav-tabs li {
     margin: 0 15px 0 0;
@@ -594,7 +594,7 @@
 .rev-item .r-data a,
 .supp-prof-about .pr-item h3 {
     font-family: "Tajawal", sans-serif;
-    font-weight: 500;
+    font-weight: 600;
 }
 .rev-item .r-img {
     float: right;
@@ -616,7 +616,7 @@
 .hero-s .item .i-data h3,
 .s-block .s-data .title {
     font-family: "Tajawal", sans-serif;
-    font-weight: 500;
+    font-weight: 600;
 }
 .cats ul li a img {
     margin: 0 0 0 10px;
@@ -653,11 +653,11 @@
 .product-middle .tab-pane ul li span,
 .product-top .prod-data .price span {
     font-family: "Tajawal", sans-serif;
-    font-weight: 500;
+    font-weight: 600;
 }
 .product-top .prod-data .price .old {
     font-family: "Tajawal", sans-serif;
-    font-weight: 500;
+    font-weight: 600;
 }
 .product-middle .nav-tabs li {
     margin: 0 0 0 10px;
@@ -681,7 +681,7 @@
 .reqs-wrap .block .inner .title a,
 .reqs-wrap.reqs-single .req-comments .req-head h3 {
     font-family: "Tajawal", sans-serif;
-    font-weight: 500;
+    font-weight: 600;
 }
 .reqs-wrap.reqs-single .block .inner .extra .social {
     left: 0;
@@ -693,7 +693,7 @@
 .branch-o h4,
 .supp-prof-about .g-head h3 {
     font-family: "Tajawal", sans-serif;
-    font-weight: 500;
+    font-weight: 600;
 }
 .branch-o h4 .btn {
     float: left;
@@ -706,7 +706,7 @@
 }
 .tab-pane .form-group h4 {
     font-family: "Tajawal", sans-serif;
-    font-weight: 500;
+    font-weight: 600;
 }
 .sign-wrap .form-group label span:before {
     margin: 0 0 0 10px;
@@ -716,7 +716,7 @@
 }
 .sign-wrap .form-group p a {
     font-family: "Tajawal", sans-serif;
-    font-weight: 500;
+    font-weight: 600;
 }
 .select2-container--default .select2-selection--multiple .select2-selection__rendered li {
     float: right;
@@ -727,7 +727,7 @@
 }
 .sign-wrap.sup-wrap form .ito-h h4 {
     font-family: "Tajawal", sans-serif;
-    font-weight: 500;
+    font-weight: 600;
 }
 .sign-wrap .form-group .form-control:after {
     left: 25px;
@@ -739,5 +739,5 @@
 }
 .dashb .block .inner h3 {
     font-family: "Tajawal", sans-serif;
-    font-weight: 500;
+    font-weight: 600;
 }
