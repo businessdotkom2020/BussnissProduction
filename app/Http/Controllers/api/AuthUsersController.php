@@ -317,8 +317,8 @@ class AuthUsersController extends BaseController
             ['email' => $user->email],
             [
                 'email' => $user->email,
-                // 'code' => rand(1,9).rand(6,9).rand(1,9).rand(4,9).rand(11,99)
-                'code' => 999999
+                'code' => rand(1,9).rand(6,9).rand(1,9).rand(4,9).rand(11,99)
+                // 'code' => 999999
             ]
         );
         $user->notify(new PasswordResetRequest($passwordReset->code));
