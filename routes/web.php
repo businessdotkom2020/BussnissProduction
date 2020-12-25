@@ -108,7 +108,7 @@ Route::middleware('guest')->group(function () {
     Route::get('forget/password', 'web\AuthController@show_forget_password_form');
     Route::post('forget/password', 'web\AuthController@do_forget_password_supplier')->name('do.forget_password');
     // Register Suppliers
-    Route::get('resset/password', 'web\AuthController@show_resset_password_form');
+    Route::get('resset/password/{user_id}', 'web\AuthController@show_resset_password_form')->name('form.resset_password');
     Route::post('resset/password', 'web\AuthController@do_resset_password_supplier')->name('do.resset_password');
 });
 
