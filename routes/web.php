@@ -14,10 +14,9 @@ URL::forceScheme('https');
 | contains the "web" middleware group. Now create something great!
 |
 */
+Route::get('/', 'web\HomeController@home');
 
-Route::get('/', function () {
-    return view('home');
-});
+ 
 Route::get('/test_image_1', function () {
     return \App\Models\Product::find(1123);
 
