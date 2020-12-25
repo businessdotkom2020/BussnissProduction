@@ -9,6 +9,7 @@ $menu = false ;
 <!-- <link rel="stylesheet" href="{{ asset('/web/css/custom.css')}}">
 <link rel="stylesheet" href="{{ asset('/web/css/custom-register.css')}}"> -->
 <link rel="stylesheet" href="{{ asset('/web/css/custom-register-supplier.css')}}">  
+<link rel="stylesheet" href="{{ asset('/web/css/custom-register.css')}}">  
 
 @endpush
 
@@ -156,26 +157,26 @@ $menu = false ;
                 </div>
                 <div class="rate-stars">
 
-                    <div class="col-md-8 col-xs-12">
+                    <div class="col-md-8 col-xs-12 m10_b">
 
                         <div id="pac-container">
                             <input id="pac-input" type="text" placeholder="Enter a location">
                         </div>
 
                     </div>
-                    <div class="col-md-4 col-xs-12">
+                    <div class="col-md-4 col-xs-12 m10_b">
 
                         <button id="current_location" onclick="getLocation()"> @lang('general.current_location')<i class="fa fa-location-arrow" aria-hidden="true"></i></button>
                     </div>
 
-                    <div class="col-md-6 col-xs-12">
+                    <div class="col-md-6 col-xs-12 ">
 
                         <div class="form-group">
                             <label for="">Lat</label>
                             <input type="text" oninput="initMap()" value="31.3540494" class="form-control input-sm" name="lat" id="lat">
                         </div>
                     </div>
-                    <div class="col-md-6 col-xs-12">
+                    <div class="col-md-6 col-xs-12 ">
 
                         <div class="form-group">
                             <label for="">Lng</label>
