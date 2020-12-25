@@ -54,6 +54,7 @@ return [
     'old_password' => 'كلمة المرور القديمة' ,
     'password_confirmation' => 'تأكيد كلمة المرور' ,
     'resset_code' => ' الكود المستلم' ,
+    'resset_password' => 'إعاده تعيين كلمة السر' ,
     'submit' => '  تأكيد ' ,
     'dashboard' => '  لوحة التحكم' ,
     'remember_me' => 'تذكرنى' ,
