@@ -10,19 +10,19 @@ $menu = false ;
 <div class="overlay-s"></div>
 <div class="jumpo col-xs-12" style="background-image: url({{ asset('/web/images/cover.jpg')}})">
     <div class="container">
-        <h3>@lang('general.login')</h3>
+        <h3>@lang('general.resset_password')</h3>
         <ul>
             <li>
                 <a href="{{url('/')}}">@lang('general.home')</a>
             </li>
-            <li>@lang('general.login')</li>
+            <li>@lang('general.resset_password')</li>
         </ul>
     </div>
 </div>
 <main class="main-content col-xs-12">
     <div class="sign-wrap col-xs-12">
         <div class="container">
-            <form action="{{route('do_login')}}" method="post">
+            <form action="{{route('do.resset_password')}}" method="post">
                 @csrf
                 <div class="form-group">
                     <input type="text" name="email" value="{{$user->email}}" disabled placeholder="@lang('general.email')" class="form-control">
