@@ -302,8 +302,7 @@ $menu = false ;
                             </div>
                             <div class="i-data">
                                 <a href="{{url('product/'.$product->id)}}" class="title">{{$product->getTranslatedAttribute('name',\App::getLocale())}}</a>
-                                <p>{{$product->getTranslatedAttribute('description',\App::getLocale())}}</p>
-                                <span>{{$product->price}} $</span>
+                                 <span>{{$product->price}} $</span>
                                 <a class="btn" href="{{url('supplier/'.$product->user_id)}}" data-toggle="modal" data-target="#contact_pop">contact supplier</a>
                             </div>
                         </div>
