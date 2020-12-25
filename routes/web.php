@@ -1,7 +1,7 @@
 <?php
 
 // if (App::environment('production')) {
-    URL::forceScheme('https');
+URL::forceScheme('https');
 // }
 
 /*
@@ -67,8 +67,8 @@ Route::get('/dashboard/clients', function () {
 });
 
 //////////////////// Search && Category ///////////////
-Route::get('/search','web\CategoriesController@search');
-Route::get('category/{category_id}','web\CategoriesController@show');
+Route::get('/search', 'web\CategoriesController@search');
+Route::get('category/{category_id}', 'web\CategoriesController@show');
 
 
 
@@ -77,14 +77,14 @@ Route::get('service/new', 'web\ServiceController@create')->middleware('auth');
 Route::post('service/new', 'web\ServiceController@post')->name('ServiceSave')->middleware('auth');
 Route::get('/service/{service_id}', 'web\ServiceController@show');
 Route::post('/service_favorite', 'web\ServiceController@favorite')->name('service.favorite');
-Route::get('services','web\ServiceController@index');
+Route::get('services', 'web\ServiceController@index');
 
- //////////////////// Job ///////////////
+//////////////////// Job ///////////////
 Route::get('job/new', 'web\JobsController@create')->middleware('auth');
 Route::post('job/new', 'web\JobsController@post')->name('JobSave')->middleware('auth');
 Route::get('job/{job_id}', 'web\JobsController@show');
 
- //////////////////// Client ///////////////
+//////////////////// Client ///////////////
 Route::get('client/new', 'web\ClientsController@create')->middleware('auth');
 Route::post('client/new', 'web\ClientsController@post')->name('ClientSave')->middleware('auth');
 Route::get('client/{job_id}', 'web\ClientsController@show');
@@ -104,51 +104,56 @@ Route::middleware('guest')->group(function () {
     // Register Suppliers
     Route::get('register/supplier', 'web\AuthController@show_register_supplier_form');
     Route::post('register/supplier', 'web\AuthController@do_register_supplier')->name('do.supplier.register');
+    // Register Suppliers
+    Route::get('forget/password', 'web\AuthController@show_forget_password_form');
+    Route::post('forget/password', 'web\AuthController@do_forget_password_supplier')->name('do.supplier.register');
+    // Register Suppliers
+    Route::get('resset/password', 'web\AuthController@show_resset_password_form');
+    Route::post('resset/password', 'web\AuthController@do_resset_password_supplier')->name('do.supplier.register');
 });
 
-    Route::post('/user_follow', 'web\SuppliersController@togglefollow')->name('user_follow');
-    Route::post('review/{type}/{id}/addReview', 'web\ReviewsController@add_Review')->name('add_product_review');
+Route::post('/user_follow', 'web\SuppliersController@togglefollow')->name('user_follow');
+Route::post('review/{type}/{id}/addReview', 'web\ReviewsController@add_Review')->name('add_product_review');
 
-    Route::get('log', function(){
-        \Auth::loginUsingId(216);
+Route::get('log', function () {
+    \Auth::loginUsingId(216);
+});
 
-    });
-
-Route::get('/getStates/{id}','web\AuthController@getStates')->name('findstate');
-Route::get('/getCities/{id}','web\AuthController@getCities')->name('findcity');
-
+Route::get('/getStates/{id}', 'web\AuthController@getStates')->name('findstate');
+Route::get('/getCities/{id}', 'web\AuthController@getCities')->name('findcity');
 
 
 
-    Route::get('logout', 'web\AuthController@logout')->name('logout')->middleware('auth');
 
-    Route::get('review/{review_id}/delete', 'web\ReviewsController@destroy');
+Route::get('logout', 'web\AuthController@logout')->name('logout')->middleware('auth');
+
+Route::get('review/{review_id}/delete', 'web\ReviewsController@destroy');
 
 ///////////////// Suppliers ////////////////////
 
- Route::get('/supplier/{supplier_id}', 'web\SuppliersController@show');
- Route::get('/supplier/{supplier_id}/info', 'web\SuppliersController@info');
- Route::get('/suppliers', 'web\SuppliersController@index');
+Route::get('/supplier/{supplier_id}', 'web\SuppliersController@show');
+Route::get('/supplier/{supplier_id}/info', 'web\SuppliersController@info');
+Route::get('/suppliers', 'web\SuppliersController@index');
 
 
 
 /////////////////////       Requests ////////////////////
-    Route::get('requests', 'web\RequestController@index');
-    Route::get('request/new', 'web\RequestController@create')->middleware('auth');
-    Route::post('request/new', 'web\RequestController@post')->name('RequestSave')->middleware('auth');
-    Route::post('/request_favorite', 'web\RequestController@favorite')->name('request.favorite');
-    Route::get('request/{request_id}', 'web\RequestController@show');
+Route::get('requests', 'web\RequestController@index');
+Route::get('request/new', 'web\RequestController@create')->middleware('auth');
+Route::post('request/new', 'web\RequestController@post')->name('RequestSave')->middleware('auth');
+Route::post('/request_favorite', 'web\RequestController@favorite')->name('request.favorite');
+Route::get('request/{request_id}', 'web\RequestController@show');
 
 
 /////////////////////       Products ////////////////////
-Route::get('product/{product_id}/delete','web\ProductsController@delete' );
-Route::get('product/{product_id}/edit','web\ProductsController@edit' );
+Route::get('product/{product_id}/delete', 'web\ProductsController@delete');
+Route::get('product/{product_id}/edit', 'web\ProductsController@edit');
 Route::get('/products/new', 'web\ProductsController@create')->middleware('auth');
 Route::post('/products/save', 'web\ProductsController@store')->name('ProductSave')->middleware('auth');
 Route::post('/product/{product_id}/update', 'web\ProductsController@update_product')->name('ProductUpdate')->middleware('auth');
-Route::get('/getValues/{id}','web\ProductsController@getValues');
-Route::get('/getSub/{id}','web\ProductsController@getSubCategory')->name('findstate');
-Route::get('/getSubSub/{id}','web\ProductsController@getSubSubCategory')->name('findcity');
+Route::get('/getValues/{id}', 'web\ProductsController@getValues');
+Route::get('/getSub/{id}', 'web\ProductsController@getSubCategory')->name('findstate');
+Route::get('/getSubSub/{id}', 'web\ProductsController@getSubSubCategory')->name('findcity');
 Route::get('/products/latest', 'web\ProductsController@latest_products');
 Route::get('/products/most-common', 'web\ProductsController@most_common');
 Route::get('/products/best-selling', 'web\ProductsController@best_selling');
@@ -160,11 +165,11 @@ Route::post('/product_favorite', 'web\ProductsController@favorite')->name('produ
 
 
 ///////////// Website Settings ////////////////
-Route::get('about','web\SettingsController@about');
-Route::get('terms','web\SettingsController@terms');
-Route::get('privacy','web\SettingsController@privacy');
-Route::get('contact','web\SettingsController@contact');
-Route::get('contact','web\SettingsController@do_contact');
+Route::get('about', 'web\SettingsController@about');
+Route::get('terms', 'web\SettingsController@terms');
+Route::get('privacy', 'web\SettingsController@privacy');
+Route::get('contact', 'web\SettingsController@contact');
+Route::get('contact', 'web\SettingsController@do_contact');
 
 
 
@@ -180,50 +185,47 @@ Route::get('contact','web\SettingsController@do_contact');
 
 
 
-Route::get('/msg', function() {
-$url = "http://api.unifonic.com/wrapper/sendSMS.php?userid=naeefm@hotmail.com&password=Ngf1234567&msg=messge009988&sender=MAYRUD&to=966548215160";
+Route::get('/msg', function () {
+    $url = "http://api.unifonic.com/wrapper/sendSMS.php?userid=naeefm@hotmail.com&password=Ngf1234567&msg=messge009988&sender=MAYRUD&to=966548215160";
 
     $ch = curl_init();
     curl_setopt($ch, CURLOPT_URL, $url);
     curl_setopt($ch, CURLOPT_POST, 0);
     curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
 
-    $response = curl_exec ($ch);
+    $response = curl_exec($ch);
     $err = curl_error($ch);  //if you need
-    curl_close ($ch);
+    curl_close($ch);
     dd($response);
 });
 
 
 
 Route::group(['prefix' => 'admin'], function () {
-    Route::get('categories/sub'   , 'VoyagerCategoriesController@sub_categories');
-    Route::get('categories/sub/sub'   , 'VoyagerCategoriesController@sub_sub_categories');
-
-
+    Route::get('categories/sub', 'VoyagerCategoriesController@sub_categories');
+    Route::get('categories/sub/sub', 'VoyagerCategoriesController@sub_sub_categories');
 });
-Route::get('/config-cache', function() {
+Route::get('/config-cache', function () {
     $exitCode = Artisan::call('config:cache');
     return '<h1>Clear Config cleared</h1>';
 });
 
 
-Route::get('cat/{id}', function($id) {
+Route::get('cat/{id}', function ($id) {
 
 
-        $cat = \App\Models\Category::find($id);
-        return [
-            'parent_id' => (string) $cat->parent->id,
-            'category' => (string) $cat->parent->parent->id,
-            ];
-
+    $cat = \App\Models\Category::find($id);
+    return [
+        'parent_id' => (string) $cat->parent->id,
+        'category' => (string) $cat->parent->parent->id,
+    ];
 });
 
 
-    Route::get('locale/{locale}', function ($locale){
-        Session::put('locale', $locale);
-        return redirect()->back();
-    });
+Route::get('locale/{locale}', function ($locale) {
+    Session::put('locale', $locale);
+    return redirect()->back();
+});
 
 
 
@@ -232,8 +234,8 @@ Route::get('cat/{id}', function($id) {
 
 
 
-    Route::get('/profile/update', 'web\SuppliersController@edit');
+Route::get('/profile/update', 'web\SuppliersController@edit');
 
 
-    Route::get('/update/supplier/profile', 'web\SuppliersController@update')->name('update_supplier');
-    Route::get('/update/password', 'web\SuppliersController@update_password')->name('update_password');
+Route::get('/update/supplier/profile', 'web\SuppliersController@update')->name('update_supplier');
+Route::get('/update/password', 'web\SuppliersController@update_password')->name('update_password');
