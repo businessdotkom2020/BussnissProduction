@@ -1278,11 +1278,11 @@ footer.main-footer.col-xs-12 {
     font-size: 19px;
     text-overflow: ellipsis;
     white-space: nowrap;
-    overflow: hidden;
     vertical-align: middle;
     max-width: 100%;
     display: inline-block;
-    transition: all .3s
+    transition: all .3s;
+    white-space: initial;
 }
 
 .b-product .inner .title:hover {
