@@ -49,7 +49,7 @@ $menu = false ;
                     <input type="email" name="email" required placeholder="@lang('general.email')" class="form-control">
                 </div>
 
-                <div class="form-group col-md-4 col-xs-12">
+                <div class="form-group col-lg-12 col-xs-12">
                     <select class="form-control" name="country_id" required>
                         <option disabled>@lang('general.country')</option>
                         @foreach (\App\Models\Country::get() as $country)
