@@ -141,4 +141,24 @@ class AuthController extends Controller
             ->pluck("name", "id");
         return response()->json($cities);
     }
+
+
+public function show_forget_password_form(){
+    return view('auth.send_resset_password');
+
+}
+public function do_forget_password_supplier(){
+
+}
+
+public function show_resset_password_form(){
+    return view('auth.send_resset_password');
+
+}
+public function do_resset_password_supplier(){
+
+}
+
+
+
 }
