@@ -1402,7 +1402,7 @@ footer.main-footer.col-xs-12 {
     color: #fff;
 }
 .cardo .c-inner:hover .c-img {
-    transform: scale(1.05);
+    /* transform: scale(1.05); */
     transition: all 0.3s;
     /* background-color: #282828; */
 }
@@ -1742,9 +1742,9 @@ footer.main-footer.col-xs-12 {
 }
 .sup-v .cardo .c-inner .c-img {
     float: left;
-    width: 80px;
-    height: 80px;
-    padding: 10px;
+    width: 100%;
+    height: 100%;
+    padding: 5px;
     margin: 0 20px 0 0;
 }
 .sup-v .cardo .c-inner .c-data {
