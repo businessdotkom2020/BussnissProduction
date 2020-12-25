@@ -13,6 +13,7 @@ use Illuminate\Validation\ValidationException;
 use App\Http\Requests\Auth\RegisterSuppliersRequestFirstStep;
 use App\Http\Requests\Auth\RegisterSuppliersRequestSecondStep;
 use App\Http\Requests\WebRegisterSupplierRequest;
+use App\Http\Requests\SendRessetEmail;
 
 class AuthController extends Controller
 {
@@ -145,9 +146,32 @@ class AuthController extends Controller
 
 public function show_forget_password_form(){
     return view('auth.send_resset_password');
-
 }
-public function do_forget_password_supplier(){
+public function do_forget_password_supplier(SendRessetEmail $request){
+
+    $user = User::where('email', Request()->email)->first();
+
+
+    $passwordReset = PasswordReset::updateOrCreate(
+        ['email' => $user->email],
+        [
+            'email' => $user->email,
+            // 'code' => rand(1,9).rand(6,9).rand(1,9).rand(4,9).rand(11,99)
+            'code' => 999999
+        ]
+    );
+    $user->notify(new PasswordResetRequest($passwordReset->code));
+
+    return response()->json([
+
+        'status' => true,
+        'code' => 200,
+        'data'    => [
+            'email' => $user->email,
+        ],
+        'message' => 'message sent successfuly',
+
+    ], 200);
 
 }
 

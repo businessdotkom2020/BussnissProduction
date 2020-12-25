@@ -321,7 +321,7 @@ class AuthUsersController extends BaseController
                 'code' => 999999
             ]
         );
-        // $user->notify(new PasswordResetRequest($passwordReset->code));
+        $user->notify(new PasswordResetRequest($passwordReset->code));
 
         return response()->json([
 
