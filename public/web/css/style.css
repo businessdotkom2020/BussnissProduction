@@ -1407,8 +1407,7 @@ footer.main-footer.col-xs-12 {
     background-color: #282828;
 }
 .cardo .c-inner:hover .c-img img {
-    filter: brightness(0) invert(1);
-    transition: all 0.3s;
+     transition: all 0.3s;
 }
 .sticky-sidebar {
     position: fixed;

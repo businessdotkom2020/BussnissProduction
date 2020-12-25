@@ -28,6 +28,14 @@ class User extends \TCG\Voyager\Models\User
 
     public function getAvatarAttribute($image)
     {
+        if(Storage::disk('public')->exists($this->avatar)){
+            return $this->avatar;
+        }elseif(!Storage::disk('public')->exists($this->avatar) && $this->type == 'supplier'){
+            return 'users/default_user.png' ;
+        }
+        return 'users/default_company.png' ;
+
+        return url('assets/images/users/user-3.jpg');
 
                 $isExists = Storage::exists('public/'.$image);
 
