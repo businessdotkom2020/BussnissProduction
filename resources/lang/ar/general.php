@@ -47,6 +47,7 @@ return [
     'full_name' => 'الإسم بالكامل' ,
     'country' => 'الدولة' ,
     'email' => 'البريد' ,
+    'password_resseted_successfully' => 'تم إسترجاع كلمة السر بنجاح' ,
     'mobile' => 'رقم الهاتف' ,
     'new_user' => 'إنشاء حساب جديد' ,
     'password' => 'كلمة المرور' ,
