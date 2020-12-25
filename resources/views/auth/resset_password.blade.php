@@ -29,7 +29,7 @@
                         </div>
                         
                         <div class="form-group">
-                        <input type="text" name="code" disabled   required placeholder="@lang('general.resset_code')" class="form-control">
+                        <input type="text" name="code"     required placeholder="@lang('general.resset_code')" class="form-control">
                         </div>
 
                         <div class="form-group">
