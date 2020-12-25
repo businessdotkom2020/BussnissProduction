@@ -174,7 +174,7 @@ public function show_resset_password_form($user_id){
 
 }
 public function do_resset_password_supplier(RessetPassword $request){
-
+return request()->all();
     $password_resset = PasswordReset::where([['code', Request()->code], ['email', Request()->email]])->first();
 
     if(!$password_resset){
