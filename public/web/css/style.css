@@ -4005,3 +4005,11 @@ button.close:hover {
     transform: translateY(-10px);
     transition: all 0.3s;
 }
+
+
+.i-data a.title {
+    overflow: hidden;
+    display: -webkit-box !important;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+}
