@@ -64,7 +64,7 @@ $menu = false ;
                         <input type="text" required name="supplier_name" placeholder="@lang('general.supplier_name')" class="form-control">
                     </div>
                     <div class="form-group col-md-6 col-xs-12">
-                        <select required name="category_ids[]" class="form-control select-nosearch" multiple>
+                        <select required name="category_ids[]" class="form-control select-nosearch" placeholde="@lang('general.categories')" multiple>
                             <!--<option selected disabled>@lang('general.categories')</option>-->
                             @foreach(\App\Models\Category::whereNull('parent_id')->get() as $category)
 

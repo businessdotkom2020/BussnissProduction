@@ -12,6 +12,7 @@ use Auth;
 use Illuminate\Validation\ValidationException;
 use App\Http\Requests\Auth\RegisterSuppliersRequestFirstStep;
 use App\Http\Requests\Auth\RegisterSuppliersRequestSecondStep;
+use App\Http\Requests\WebRegisterSupplierRequest;
 class AuthController extends Controller
 {
     public function show_register_form(){
@@ -57,13 +58,13 @@ return redirect()->back();
 
 
         Alert::toast(trans('general.registered_user_successfully'), 'success');
-Auth::login($user);
+        Auth::login($user);
 
       return redirect('/');
     }
-    public function do_register_supplier (RegisterSuppliersRequestSecondStep $request){
+    public function do_register_supplier (WebRegisterSupplierRequest $request){
 
-
+        return request()->all();
 
         $user = new User();
         $user->name       = Request()->supplier_name;
