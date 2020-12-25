@@ -115,3 +115,15 @@ input, select, textarea {
 .form-group, .form-control {
     margin-bottom: 0;
 }
+.m10_b {
+    margin-bottom: 10px;
+}
+
+
+nav ul {
+    list-style: none;
+}
+
+ul {
+    list-style: none;
+}
