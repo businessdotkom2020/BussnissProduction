@@ -25,7 +25,7 @@ class HomeController extends Controller
   
     $result = array_merge($home_services_id, $latest_requests_ids ,$common_products_ids ,$latest_products_ids);
 
-    return $result;
+    return array_unique($result);
 
         return view('home',compact(
             'latest_products',
