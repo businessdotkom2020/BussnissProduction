@@ -23,8 +23,8 @@ $menu = false ;
             <form action="{{route('do.user.register')}}" method="Post" enctype="multipart/form-data">
                 @csrf
 
-                <div class="col-4"></div>
-                <div class="ito-h col-4 col-xs-12">
+                <div class="col-lg-4"></div>
+                <div class="ito-h col-lg-4 col-xs-12">
                     <h4>@lang('general.profile_picture')</h4>
                     <div class="form-group col-xs-12">
                         <div class="prof-img pic">
@@ -37,7 +37,7 @@ $menu = false ;
                         </div>
                     </div>
                 </div>
-                <div class="col-4"></div>
+                <div class="col-lg-4"></div>
 
                 <div class="form-group">
                     <input type="text" name="name" required placeholder="@lang('general.full_name')" class="form-control">
