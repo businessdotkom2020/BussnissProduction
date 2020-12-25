@@ -376,8 +376,7 @@ $menu = true ;
 
 @foreach($owners as $owner)
 
-<h1>contact_test{{$owner->id}}</h1>
-<div class="modal fade" id="contact_{{$owner->id}}">
+ <div class="modal fade" id="contact_{{$owner->id}}">
     <div class="modal-dialog">
         <div class="modal-content">
             <button type="button" class="close" data-dismiss="modal" aria-label="Close">
@@ -388,16 +387,25 @@ $menu = true ;
                 <div class="supp-card">
                     <h3>@lang('general.contact_supplier')</h3>
                     <div class="c-img">
-                        <img src="{{$owner->store_image ? url('storage/'.$owner->store_image) : asset('/web/images/marks/1.png')}}" alt="">
+                        <img src="{{$owner->store_image ? url('storage/'.$owner->avatar) : asset('/web/images/marks/1.png')}}" alt="">
                     </div>
                     <h4>{{$owner->name}}</h4>
                     <p>
-                        <i class="fa fa-star active"></i>
-                        <i class="fa fa-star active"></i>
-                        <i class="fa fa-star active"></i>
-                        <i class="fa fa-star active"></i>
-                        <i class="fa fa-star active"></i>
-                    </p>
+                            @php $rating = $owner->average_rating ; @endphp
+                            @foreach(range(1,5) as $i)
+                            @if($rating >0)
+                            @if($rating > 0.5)
+                            <i class="fa fa-star active"></i>
+                            @elseif($rating < 0.5 && $rating> 0)
+                                <i class="fas fa-star-half"></i>
+                                @endif
+                                @else
+                                <i class="fa fa-star"></i>
+                                @endif
+                                @php $rating--; @endphp
+
+                                @endforeach
+                        </p>
                     <div class="c-info">
                         <a href="tel:{{$owner->mobile}}" class="btn">
                             <i class="fa fa-phone"></i>
