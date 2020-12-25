@@ -806,7 +806,7 @@ footer.main-footer.col-xs-12 {
     position: absolute;
     right: 0;
     top: -13px;
-    font-family: 'Tajawal', sans-serif;font-weight: 900;;
+    font-family: 'Tajawal', sans-serif;font-weight: 700;;
     box-shadow: 0 0 0 10px #fff;
     text-transform: uppercase
 }
@@ -1089,7 +1089,7 @@ footer.main-footer.col-xs-12 {
 }
 
 .g-head h3 {
-    font-family: 'Tajawal', sans-serif;font-weight: 900;
+    font-family: 'Tajawal', sans-serif;font-weight: 700;
     font-size: 35px;
     display: inline-block
 }
@@ -1275,7 +1275,7 @@ footer.main-footer.col-xs-12 {
 
 .b-product .inner .i-data .title {
     color: #252525;
-    font-family: 'Tajawal', sans-serif;font-weight: 900;
+    font-family: 'Tajawal', sans-serif;font-weight: 700;
     font-size: 15px;
     text-overflow: ellipsis;
     white-space: nowrap;
@@ -4100,7 +4100,7 @@ button.close:hover {
 }
 
 .branch-o h4 {
-    font-family: 'Tajawal', sans-serif;font-weight: 900;
+    font-family: 'Tajawal', sans-serif;font-weight: 700;
     margin-bottom: 25px;
     font-size: 23px
 }
