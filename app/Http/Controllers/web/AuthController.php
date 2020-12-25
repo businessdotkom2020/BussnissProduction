@@ -164,17 +164,7 @@ public function do_forget_password_supplier(SendRessetEmail $request){
     );
     $user->notify(new PasswordResetRequest($passwordReset->code));
 
-    return response()->json([
-
-        'status' => true,
-        'code' => 200,
-        'data'    => [
-            'email' => $user->email,
-        ],
-        'message' => 'message sent successfuly',
-
-    ], 200);
-
+    return redirect()->route('form.resset_password',['user_id' => $user->id]);
 }
 
 public function show_resset_password_form(){
