@@ -13,7 +13,7 @@
                 <h3>@lang('general.login')</h3>
                 <ul>
                     <li>
-                        <a href="#">@lang('general.home')</a>
+                        <a href="{{url('/')}}">@lang('general.home')</a>
                     </li>
                     <li>@lang('general.login')</li>
                 </ul>
@@ -35,7 +35,7 @@
                                 <input type="checkbox">
                                 <span>@lang('general.remember_me')</span>
                             </label>
-                            <a href="#">@lang('general.forget_password')</a>
+                            <a href="{{route('do.forget_password')}}">@lang('general.forget_password')</a>
                         </div>
                         <div class="form-group">
                             <button type="submit" class="btn">@lang('login')</button>
@@ -47,6 +47,3 @@
         </main>
 
 @endsection
-
-
-
