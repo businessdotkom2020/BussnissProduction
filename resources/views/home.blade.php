@@ -375,6 +375,8 @@ $menu = true ;
 
 
 @foreach($owners as $owner)
+
+<h1>contact_test{{$owner->id}}</h1>
 <div class="modal fade" id="contact_{{$owner->id}}">
     <div class="modal-dialog">
         <div class="modal-content">
