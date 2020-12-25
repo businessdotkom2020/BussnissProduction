@@ -2,3 +2,8 @@
     margin: 1em auto;
     display: none;
 }
+
+
+.wrapper {
+    overflow:hidden;
+}
