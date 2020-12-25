@@ -221,7 +221,7 @@
 
                 @foreach (\App\Models\Request::limit(4)->orderBy('name','desc')->get() as $product)
 
-                <div class="block b-product col-md-3 col-sm-6 col-xs-12">
+                <div class="block b-product col-md-2 col-sm-6 col-xs-12">
                     <div class="inner">
                         <div class="i-img">
                             <a href="javascript:void(0)" id="fav-req-{{$product->id}}" title="add to favourite" data-placement="top" class="fav-req-{{$product->id}} {{$product->isFavorited() ? 'fav-active' : null  }} fav-pro "  onclick="favtoggle({{$product->id }},{{Auth::user() ? Auth::user()->id : null}})">
@@ -258,7 +258,7 @@
                 </div>
                 <div class="g-body col-xs-12">
 @foreach(\App\Models\User::where('type','supplier')->get() as $supplier)
-                    <div class="cardo col-md-3 col-sm-6 col-xs-12">
+                    <div class="cardo col-md-2 col-sm-6 col-xs-12">
                         <div class="c-inner">
                             <div class="c-img">
                                 <a href="{{url('supplier/'.$supplier->id)}}">
@@ -336,7 +336,7 @@
 
                 @foreach (\App\Models\Service::limit(4)->get() as $service)
 
-                    <div class="s-block col-md-3 col-sm-6 col-xs-12">
+                    <div class="s-block col-md-2 col-sm-6 col-xs-12">
                         <div class="s-img">
                             <a href="{{url('service/'.$service->id)}}">
                                 <img src="{{ url('storage/'.json_decode($product->images)[0])}}" alt="">
