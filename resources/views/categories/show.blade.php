@@ -1,3 +1,6 @@
+
+
+
 @extends('layouts.main')
 @php
 $menu = false ;
@@ -274,7 +277,7 @@ $menu = false ;
                    
                  
                 @foreach($products as $product)
-                    <div class="block b-product col-md-4 col-sm-6 col-xs-12">
+                    <div class="block b-product col-md-2 col-sm-6 col-xs-12">
                         <div class="inner">
                             <div class="i-img">
                                 @if($product->product_condition == "new")
