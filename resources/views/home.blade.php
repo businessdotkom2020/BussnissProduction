@@ -118,7 +118,7 @@ $menu = true ;
                             <span>{{$product->sale_price ? $product->sale_price : $product->price}}$</span>
 
 
-                            <a class="btn" href="#" data-toggle="modal" data-target="#contact-pop"target="_blank">@lang('general.contact_supplier')</a>
+                            <a class="btn" href="#" data-toggle="modal" data-target="#contact_{{$product->user_id}}" target="_blank">@lang('general.contact_supplier')</a>
                         </div>
 
                     </div>
@@ -201,7 +201,7 @@ $menu = true ;
                             <span>{{$product->sale_price ? $product->sale_price : $product->price}}$</span>
 
 
-                            <a class="btn" href="#" data-toggle="modal" data-target="#contact-pop"target="_blank">@lang('general.contact_supplier')</a>
+                            <a class="btn" href="#" data-toggle="modal" data-target="#contact_{{$product->user_id}}" target="_blank">@lang('general.contact_supplier')</a>
                         </div>
 
                     </div>
@@ -238,7 +238,7 @@ $menu = true ;
                             <a href="{{url('product/'.$product->id)}}" class="title">{{$product->getTranslatedAttribute('name',\App::getLocale())}}</a>
                             <p>{{ Str::limit($product->getTranslatedAttribute('description',\App::getLocale()),50 )}}</p>
 
-                            <a class="btn" href="#" data-toggle="modal" data-target="#contact-pop"target="_blank">@lang('general.contact_supplier')</a>
+                            <a class="btn" href="#" data-toggle="modal" data-target="#contact_{{$product->user_id}}" target="_blank">@lang('general.contact_supplier')</a>
                         </div>
                     </div>
                 </div>
@@ -360,7 +360,7 @@ $menu = true ;
 
                                 @endforeach
                         </p>
-                        <a class="btn" href="#" data-toggle="modal" data-target="#contact-pop"target="_blank">@lang('general.contact_supplier')</a>
+                        <a class="btn" href="#" data-toggle="modal" data-target="#contact_{{$service->user_id}}" target="_blank">@lang('general.contact_supplier')</a>
                     </div>
                 </div>
 
@@ -374,61 +374,86 @@ $menu = true ;
 </main>
 
 
+@foreach($owners as $owner)
 <div class="modal fade" id="contact-pop">
-  <div class="modal-dialog">
-    <div class="modal-content">
-<button type="button" class="close" data-dismiss="modal" aria-label="Close">
-          <i class="fa fa-close"></i>
-          </button>
-      <div class="modal-body">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <i class="fa fa-close"></i>
+            </button>
+            <div class="modal-body">
 
-          <div class="supp-card">
-              <h3>@lang('general.contact_supplier')</h3>
-            <div class="c-img">
-                <img src="{{$supplier->store_image ? url('storage/'.$supplier->store_image) : asset('/web/images/marks/1.png')}}" alt="">
-              </div>
-              <h4>{{$supplier->name}}</h4>
-              <p>
-                <i class="fa fa-star active"></i>
-                  <i class="fa fa-star active"></i>
-                  <i class="fa fa-star active"></i>
-                  <i class="fa fa-star active"></i>
-                  <i class="fa fa-star active"></i>
-              </p>
-              <div class="c-info">
-                <a href="tel:mobile" class="btn">
-                    <i class="fa fa-phone"></i>
-                    {{$supplier->mobile}}
-                  </a>
-                  <a href="mailto:email" class="btn">
-                    <i class="fa fa-envelope"></i>
-                    {{$supplier->email}}
-                  </a>
-              </div>
-              <div class="c-social">
-                <!--<span>social:</span>-->
-                  <a href="facebook_url">
-                    <i class="fa fa-facebook"></i>
-                    </a>
-                  <a href=" https://api.whatsapp.com/send?phone=whatsapp_mobile">
-                    <i class="fa fa-whatsapp"></i>
-                    </a>
-                  <a href="linkedin_url">
-                    <i class="fa fa-linkedin"></i>
-                    </a>
-                  <a href="instagram_url">
-                    <i class="fa fa-instagram"></i>
-                    </a>
-                  <a href=" youtube_url">
-                    <i class="fa fa-youtube-play"></i>
-                    </a>
-              </div>
-          </div>
-        </div>
-    </div><!-- /.modal-content -->
-  </div><!-- /.modal-dialog -->
-</div>
+                <div class="supp-card">
+                    <h3>@lang('general.contact_supplier')</h3>
+                    <div class="c-img">
+                        <img src="{{$owner->store_image ? url('storage/'.$owner->store_image) : asset('/web/images/marks/1.png')}}" alt="">
+                    </div>
+                    <h4>{{$owner->name}}</h4>
+                    <p>
+                        <i class="fa fa-star active"></i>
+                        <i class="fa fa-star active"></i>
+                        <i class="fa fa-star active"></i>
+                        <i class="fa fa-star active"></i>
+                        <i class="fa fa-star active"></i>
+                    </p>
+                    <div class="c-info">
+                        <a href="tel:{{$owner->mobile}}" class="btn">
+                            <i class="fa fa-phone"></i>
+                            {{$owner->mobile}}
+                        </a>
+                        <a href="mailto:{{$owner->email}}" class="btn">
+                            <i class="fa fa-envelope"></i>
+                            {{$owner->email}}
+                        </a>
+                    </div>
+                    <div class="c-social">
+                        <!--<span>social:</span>-->
+                        @if($owner->facebook_url)
+                        <a href="{{$owner->facebook_url}}">
+                            <i class="fa fa-facebook"></i>
+                        </a>
 
+                        @endif
+
+                        @if($owner->whatsapp_mobile)
+
+                        <a href=" https://api.whatsapp.com/send?phone={{$owner->whatsapp_mobile}}">
+                            <i class="fa fa-whatsapp"></i>
+                        </a>
+
+                        @endif
+
+                        @if($owner->linkedin_url)
+
+                        <a href="{{$owner->linkedin_url}}">
+                            <i class="fa fa-linkedin"></i>
+                        </a>
+                        @endif
+
+                        @if($owner->instagram_url)
+
+                        <a href="{{$owner->instagram_url}}">
+                            <i class="fa fa-instagram"></i>
+                        </a>
+
+                        @endif
+
+                        @if($owner->youtube_url)
+
+                        <a href="{{$owner->youtube_url}}">
+                            <i class="fa fa-youtube-play"></i>
+                        </a>
+
+                        @endif
+
+                    </div>
+                </div>
+            </div>
+        </div><!-- /.modal-content -->
+    </div><!-- /.modal-dialog -->
+</div><!-- /.modal -->
+
+@endforeach
 
 
 
@@ -446,7 +471,8 @@ $menu = true ;
 
             type: 'POST',
 
-            url: '{!!URL::to('product_favorite')!!}',
+            url: '{!!URL::to('
+            product_favorite ')!!}',
 
             data: {
                 product_id: product_id,
