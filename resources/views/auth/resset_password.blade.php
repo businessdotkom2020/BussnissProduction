@@ -13,7 +13,7 @@
                 <h3>@lang('general.login')</h3>
                 <ul>
                     <li>
-                        <a href="#">@lang('general.home')</a>
+                        <a href="{{url('/')}}">@lang('general.home')</a>
                     </li>
                     <li>@lang('general.login')</li>
                 </ul>
@@ -25,18 +25,21 @@
                     <form action="{{route('do_login')}}" method="post">
                         @csrf
                         <div class="form-group">
-                        <input type="text" name="email" required placeholder="@lang('general.email')" class="form-control">
+                        <input type="text" name="email" disabled value="{{$user->email}}" required placeholder="@lang('general.email')" class="form-control">
                         </div>
+                        
+                        <div class="form-group">
+                        <input type="text" name="code" disabled   required placeholder="@lang('general.resset_code')" class="form-control">
+                        </div>
+
                         <div class="form-group">
                             <input type="password" name="password" required placeholder="@lang('general.password')" class="form-control">
                         </div>
                         <div class="form-group">
-                            <label>
-                                <input type="checkbox">
-                                <span>@lang('general.remember_me')</span>
-                            </label>
-                            <a href="#">@lang('general.forget_password')</a>
+                            <input type="password" name="password_confirmation" required placeholder="@lang('general.password_confirmation')" class="form-control">
                         </div>
+
+                        
                         <div class="form-group">
                             <button type="submit" class="btn">@lang('login')</button>
                             <p>@lang('general.register_text') <a href="#">@lang('general.register')</a></p>
@@ -47,6 +50,3 @@
         </main>
 
 @endsection
-
-
-
