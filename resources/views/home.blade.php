@@ -55,8 +55,8 @@
             </div>
             <div class="g-body col-xs-12">
 
-@foreach (\App\Models\Product::limit(8)->latest()->get() as $product)
-                <div class="block b-product col-md-3 col-sm-6 col-xs-12">
+@foreach (\App\Models\Product::limit(10)->latest()->get() as $product)
+                <div class="block b-product col-md-2 col-sm-6 col-xs-12">
                     <div class="inner">
                         <div class="i-img">
                             @if($product->product_condition == 'new')
@@ -140,8 +140,8 @@
             </div>
             <div class="g-body col-xs-12">
 
-                @foreach (\App\Models\Product::limit(4)->orderBy('name','asc')->get() as $product)
-                <div class="block b-product col-md-3 col-sm-6 col-xs-12">
+                @foreach (\App\Models\Product::limit(10)->orderBy('name','asc')->get() as $product)
+                <div class="block b-product col-md-2 col-sm-6 col-xs-12">
                     <div class="inner">
                         <div class="i-img">
                             @if($product->product_condition == 'new')
@@ -527,4 +527,3 @@ Toast.fire({
 </script>
 
 @endpush
-
