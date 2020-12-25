@@ -28,10 +28,7 @@
                         <input type="text" name="email" required placeholder="@lang('general.email')" class="form-control">
                         </div>
  
-                        <div class="form-group">
- 
-                            <a href="{{route('do.forget_password')}}">@lang('general.forget_password')</a>
-                        </div>
+       
                         <div class="form-group">
                             <button type="submit" class="btn">@lang('general.send')</button>
                             <p>@lang('general.register_text') <a href="#">@lang('general.register')</a></p>
