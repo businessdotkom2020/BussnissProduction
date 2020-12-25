@@ -123,3 +123,7 @@ input, select, textarea {
 #type-selector{
     display : none;
 }
+
+#pac-card{
+    display : none;
+}
