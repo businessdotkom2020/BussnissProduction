@@ -7,6 +7,8 @@
     font-size: 14px
 }
 
+@import url('https://fonts.googleapis.com/css2?family=Tajawal:wght@300;400;500;700&display=swap');
+
 .owl-carousel {
     direction: ltr
 }
@@ -805,7 +807,7 @@ footer.main-footer.col-xs-12 {
     position: absolute;
     right: 0;
     top: -13px;
-    font-family: taj-bold;
+    font-family: 'Tajawal', sans-serif;;
     box-shadow: 0 0 0 10px #fff;
     text-transform: uppercase
 }
@@ -1088,7 +1090,7 @@ footer.main-footer.col-xs-12 {
 }
 
 .g-head h3 {
-    font-family: pop-bold;
+    font-family: 'Tajawal', sans-serif;
     font-size: 35px;
     display: inline-block
 }
@@ -1274,7 +1276,7 @@ footer.main-footer.col-xs-12 {
 
 .b-product .inner .i-data .title {
     color: #252525;
-    font-family: pop-bold;
+    font-family: 'Tajawal', sans-serif;
     font-size: 15px;
     text-overflow: ellipsis;
     white-space: nowrap;
@@ -4099,7 +4101,7 @@ button.close:hover {
 }
 
 .branch-o h4 {
-    font-family: pop-bold;
+    font-family: 'Tajawal', sans-serif;
     margin-bottom: 25px;
     font-size: 23px
 }
