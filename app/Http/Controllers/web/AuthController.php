@@ -16,8 +16,9 @@ use App\Http\Requests\WebRegisterSupplierRequest;
 use App\Http\Requests\SendRessetEmail;
 use App\Notifications\PasswordResetRequest;
 use App\Models\PasswordReset;
+use App\Http\Requests\RessetPassword;
 
-class AuthController extends Controller
+ class AuthController extends Controller
 {
     public function show_register_form()
     {
@@ -172,8 +173,25 @@ public function show_resset_password_form($user_id){
     return view('auth.resset_password',compact('user'));
 
 }
-public function do_resset_password_supplier(){
+public function do_resset_password_supplier(RessetPassword $request){
 
+    $password_resset = PasswordReset::where([['code', Request()->code], ['email', Request()->email]])->first();
+
+    if(!$password_resset){
+        throw ValidationException::withMessages(['field_name' => 'Wrong Resset Code ']);
+    }
+
+
+    $user = User::where('email', $password_resset->email)->first();
+    $user->password = bcrypt(Request()->password);
+    $user->save();
+    $password_resset->forceDelete();
+
+    Auth::login($user);
+
+    Alert::toast(trans('general.password_resseted_successfully'), 'success');
+ 
+    return redirect('/');
 }
 
 
