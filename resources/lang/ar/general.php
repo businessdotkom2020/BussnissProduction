@@ -52,6 +52,7 @@ return [
     'password' => 'كلمة المرور' ,
     'old_password' => 'كلمة المرور القديمة' ,
     'password_confirmation' => 'تأكيد كلمة المرور' ,
+    'resset_code' => ' الكود المستلم' ,
     'dashboard' => '  لوحة التحكم' ,
     'remember_me' => 'تذكرنى' ,
     'forget_password' => ' نسيت كلمة المرور' ,

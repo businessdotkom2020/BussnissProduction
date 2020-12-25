@@ -167,8 +167,9 @@ public function do_forget_password_supplier(SendRessetEmail $request){
     return redirect()->route('form.resset_password',['user_id' => $user->id]);
 }
 
-public function show_resset_password_form(){
-    return view('auth.send_resset_password');
+public function show_resset_password_form($user_id){
+    $user = User::find($user_id);
+    return view('auth.send_resset_password',compact('user'));
 
 }
 public function do_resset_password_supplier(){
