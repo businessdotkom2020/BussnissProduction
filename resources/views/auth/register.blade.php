@@ -1,6 +1,6 @@
 @extends('layouts.main')
 @php
-    $menu = false ;
+$menu = false ;
 @endphp
 
 @section('content')
@@ -11,7 +11,7 @@
         <h3>@lang('general.new_user')</h3>
         <ul>
             <li>
-                <a href="#">@lang('general.home')</a>
+                <a href="{{url('/')}}">@lang('general.home')</a>
             </li>
             <li>@lang('general.new_user')</li>
         </ul>
@@ -20,13 +20,14 @@
 <main class="main-content col-xs-12">
     <div class="sign-wrap col-xs-12">
         <div class="container">
-        <form action="{{route('do.user.register')}}" method="Post"  enctype="multipart/form-data">
-            @csrf
-            
-                                    <div class="ito-h col-xs-12">
-                            <h4>@lang('general.profile_picture')</h4>
-                            <div class="form-group col-xs-12">
-                                <div class="prof-img pic">
+            <form action="{{route('do.user.register')}}" method="Post" enctype="multipart/form-data">
+                @csrf
+
+                <div class="col-4"></div>
+                <div class="ito-h col-4 col-xs-12">
+                    <h4>@lang('general.profile_picture')</h4>
+                    <div class="form-group col-xs-12">
+                        <div class="prof-img pic">
                             <label>
                                 <i class="fa fa-camera"></i>
                                 <span>@lang('general.cheange')</span>
@@ -34,9 +35,10 @@
                                 <img src="{{ asset('/web/images/default-avatar.png')}}" id="blah1" alt="your image">
                             </label>
                         </div>
-                            </div>
-                        </div>
-            
+                    </div>
+                </div>
+                <div class="col-4"></div>
+
                 <div class="form-group">
                     <input type="text" name="name" required placeholder="@lang('general.full_name')" class="form-control">
                 </div>
@@ -48,10 +50,10 @@
                 </div>
 
                 <div class="form-group col-md-4 col-xs-12">
-                    <select class="form-control" name="country_id" required >
-                        <option  disabled>@lang('general.country')</option>
+                    <select class="form-control" name="country_id" required>
+                        <option disabled>@lang('general.country')</option>
                         @foreach (\App\Models\Country::get() as $country)
-                            <option value="{{$country->id}}">{{$country->name}}</option>
+                        <option value="{{$country->id}}">{{$country->name}}</option>
                         @endforeach
 
                     </select>
@@ -76,6 +78,3 @@
 
 
 @endsection
-
-
-
