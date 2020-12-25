@@ -14,6 +14,8 @@ use App\Http\Requests\Auth\RegisterSuppliersRequestFirstStep;
 use App\Http\Requests\Auth\RegisterSuppliersRequestSecondStep;
 use App\Http\Requests\WebRegisterSupplierRequest;
 use App\Http\Requests\SendRessetEmail;
+use App\Notifications\PasswordResetRequest;
+use App\Models\PasswordReset;
 
 class AuthController extends Controller
 {
