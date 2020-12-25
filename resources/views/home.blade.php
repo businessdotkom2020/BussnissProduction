@@ -219,7 +219,7 @@ $menu = true ;
             </div>
             <div class="g-body col-xs-12">
 
-                @foreach (\App\Models\Request::limit(4)->orderBy('name','desc')->get() as $product)
+                @foreach (\App\Models\Request::limit(12)->orderBy('name','desc')->get() as $product)
 
                 <div class="block b-product col-md-2 col-sm-6 col-xs-12">
                     <div class="inner">
@@ -334,7 +334,7 @@ $menu = true ;
             <div class="g-body col-xs-12">
 
 
-                @foreach (\App\Models\Service::limit(4)->get() as $service)
+                @foreach (\App\Models\Service::limit(12)->get() as $service)
 
                 <div class="s-block col-md-2 col-sm-6 col-xs-12">
                     <div class="s-img">
