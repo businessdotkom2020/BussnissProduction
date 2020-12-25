@@ -1232,7 +1232,7 @@ footer.main-footer.col-xs-12 {
     width: 70px;
     height: 70px;
     z-index: 1;
-    position: relative
+    position: absolute
 }
 
 .offer-badge:before {
