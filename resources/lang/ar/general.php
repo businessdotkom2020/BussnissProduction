@@ -53,6 +53,7 @@ return [
     'old_password' => 'كلمة المرور القديمة' ,
     'password_confirmation' => 'تأكيد كلمة المرور' ,
     'resset_code' => ' الكود المستلم' ,
+    'submit' => '  تأكيد ' ,
     'dashboard' => '  لوحة التحكم' ,
     'remember_me' => 'تذكرنى' ,
     'forget_password' => ' نسيت كلمة المرور' ,

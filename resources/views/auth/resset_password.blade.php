@@ -25,7 +25,7 @@
                     <form action="{{route('do_login')}}" method="post">
                         @csrf
                         <div class="form-group">
-                        <input type="text" name="email" disabled value="{{$user->email}}" required placeholder="@lang('general.email')" class="form-control">
+                        <input type="text" name="email" disabled   required placeholder="@lang('general.email')" class="form-control">
                         </div>
                         
                         <div class="form-group">
@@ -41,7 +41,7 @@
 
                         
                         <div class="form-group">
-                            <button type="submit" class="btn">@lang('login')</button>
+                            <button type="submit" class="btn">@lang('general.submit')</button>
                             <p>@lang('general.register_text') <a href="#">@lang('general.register')</a></p>
                         </div>
                     </form>
