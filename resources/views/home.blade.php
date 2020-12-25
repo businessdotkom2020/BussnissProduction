@@ -55,7 +55,7 @@ $menu = true ;
             </div>
             <div class="g-body col-xs-12">
 
-                @foreach (\App\Models\Product::limit(12)->latest()->get() as $product)
+                @foreach ($latest_products as $product)
                 <div class="block b-product col-md-2 col-sm-6 col-xs-12">
                     <div class="inner">
                         <div class="i-img">
@@ -140,7 +140,7 @@ $menu = true ;
             </div>
             <div class="g-body col-xs-12">
 
-                @foreach (\App\Models\Product::limit(12)->orderBy('name','asc')->get() as $product)
+                @foreach ($common_products as $product)
                 <div class="block b-product col-md-2 col-sm-6 col-xs-12">
                     <div class="inner">
                         <div class="i-img">
@@ -219,7 +219,7 @@ $menu = true ;
             </div>
             <div class="g-body col-xs-12">
 
-                @foreach (\App\Models\Request::limit(12)->orderBy('name','desc')->get() as $product)
+                @foreach ($latest_requests as $product)
 
                 <div class="block b-product col-md-2 col-sm-6 col-xs-12">
                     <div class="inner">
@@ -257,7 +257,7 @@ $menu = true ;
                 <a href="{{url('suppliers')}}" class="more">@lang('general.view_all')</a>
             </div>
             <div class="g-body col-xs-12">
-                @foreach(\App\Models\User::where('type','supplier')->get() as $supplier)
+                @foreach($home_suppliers as $supplier)
                 <div class="cardo col-md-2 col-sm-6 col-xs-12">
                     <div class="c-inner">
                         <div class="c-img">
@@ -334,7 +334,7 @@ $menu = true ;
             <div class="g-body col-xs-12">
 
 
-                @foreach (\App\Models\Service::limit(12)->get() as $service)
+                @foreach ($home_services as $service)
 
                 <div class="s-block col-md-2 col-sm-6 col-xs-12">
                     <div class="s-img">
