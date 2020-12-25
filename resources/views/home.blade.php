@@ -471,8 +471,7 @@ $menu = true ;
 
             type: 'POST',
 
-            url: '{!!URL::to('
-            product_favorite ')!!}',
+            url: '{!!URL::to('product_favorite')!!}',
 
             data: {
                 product_id: product_id,
@@ -556,8 +555,7 @@ $menu = true ;
 
             type: 'POST',
 
-            url: '{!!URL::to('
-            user_follow ')!!}',
+            url: '{!!URL::to('user_follow')!!}',
 
             data: {
                 follower_id: follower_id,
