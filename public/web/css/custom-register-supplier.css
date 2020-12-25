@@ -120,10 +120,6 @@ input, select, textarea {
 }
 
 
-nav ul {
-    list-style: none;
-}
-
-ul {
-    list-style: none;
+#type-selector{
+    display : none;
 }
