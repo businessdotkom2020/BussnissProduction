@@ -321,7 +321,7 @@ $menu = false ;
                             <div class="c-inner col-md-6 col-xs-12">
                                 <div class="c-img">
                                     <a href="#">
-                                        <img src="images/marks/1.png" alt="">
+                                        <img src="https://businessdotcom.net/storage/products/default.jpg" alt="">
                                     </a>
                                 </div>
                                 <div class="c-data">
