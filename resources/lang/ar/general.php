@@ -27,6 +27,7 @@ return [
     'send' => 'إرسال',
     'newly' => 'حديثا',
     'new' => 'جديد',
+    'filter' => 'بحث',
     'filter_result_type' => 'نتائج البحث',
     'arrival' => 'وصل',
     'view_all' => 'عرض الجميع',

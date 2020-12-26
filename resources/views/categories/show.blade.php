@@ -261,7 +261,7 @@ $menu = false ;
                     </div>
                     <div class="cat-box col-md-9 col-xs-12">
                         <div class="box-filter col-xs-12">
-                            <h4>@lang('general.view_options') :</h4>
+                            <h4>@lang('general.filter_result_type') :</h4>
                             <ul class="nav-tabs">
                                 <li class="active">
                                     <a href="#" data-toggle="tab" data-target="#product_view">@lang('general.products')</a>
