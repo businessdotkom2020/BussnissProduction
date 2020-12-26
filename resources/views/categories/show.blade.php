@@ -367,56 +367,10 @@ $menu = false ;
                             </div>
                         </div>
                     </div>
-                                    <div class="block b-product col-md-4 col-sm-6 col-xs-12">
-                        <div class="inner">
-                            <div class="i-img">
-                                <div class="ribbon">
-                                    <span>new</span>
-                                </div>
-                                <div class="offer-badge">
-                                    <span>50%</span>
-                                </div>
-                                <a href="javascript:void(0)" class="fav-pro">
-                                    <i class="fa fa-heart"></i>
-                                </a>
-                                <a href="#" class="img-hold">
-                                    <img src="images/stocks/2.png" alt="">
-                                    <img src="images/stocks/22.png" alt="" class="sec-img">
-                                </a>
-                            </div>
-                            <div class="i-data">
-                                <a href="#" class="title">men t-shirt</a>
-                                <p>men shirts</p>
-                                <span>250 l.e</span>
-                                <a class="btn" href="#" data-toggle="modal" data-target="#contact_pop">@lang('contact_supplier')</a>
-                            </div>
-                        </div>
-                    </div>
-                                    <div class="block b-product col-md-4 col-sm-6 col-xs-12">
-                        <div class="inner">
-                            <div class="i-img">
-                                <div class="ribbon">
-                                    <span>new</span>
-                                </div>
-                                <div class="offer-badge">
-                                    <span>50%</span>
-                                </div>
-                                <a href="javascript:void(0)" class="fav-pro">
-                                    <i class="fa fa-heart"></i>
-                                </a>
-                                <a href="#" class="img-hold">
-                                    <img src="images/stocks/3.png" alt="">
-                                    <img src="images/stocks/33.png" alt="" class="sec-img">
-                                </a>
-                            </div>
-                            <div class="i-data">
-                                <a href="#" class="title">men t-shirt</a>
-                                <p>men shirts</p>
-                                <span>250 l.e</span>
-                                <a class="btn" href="#" data-toggle="modal" data-target="#contact_pop">@lang('general.contact_suppier')</a>
-                            </div>
-                        </div>
-                    </div>
+                                  
+                                  
+                                     
+                                        
                                 </div>
 
 @endforeach
