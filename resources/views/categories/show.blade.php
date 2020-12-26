@@ -121,7 +121,7 @@ $menu = false ;
                         </button>
                         <div class="widget col-xs-12">
                             <div class="cat-head col-xs-12">
-                            <h3>@lang('general.filter_options')</h3>
+                            <h3>@lang('general.filter_result_type')</h3>
                         </div>
                         <form method="GET"  action="{{url('search')}}">
                             
@@ -303,7 +303,7 @@ $menu = false ;
                             <div class="i-data">
                                 <a href="{{url('product/'.$product->id)}}" class="title">{{$product->getTranslatedAttribute('name',\App::getLocale())}}</a>
                                  <span>{{$product->price}} $</span>
-                                <a class="btn" href="{{url('supplier/'.$product->user_id)}}" data-toggle="modal" data-target="#contact_pop">contact supplier</a>
+                                <a class="btn" href="{{url('supplier/'.$product->user_id)}}" data-toggle="modal" data-target="#contact_pop">@lang('contact_supplier')</a>
                             </div>
                         </div>
                     </div>
@@ -388,7 +388,7 @@ $menu = false ;
                                 <a href="#" class="title">men t-shirt</a>
                                 <p>men shirts</p>
                                 <span>250 l.e</span>
-                                <a class="btn" href="#" data-toggle="modal" data-target="#contact_pop">contact supplier</a>
+                                <a class="btn" href="#" data-toggle="modal" data-target="#contact_pop">@lang('contact_supplier')</a>
                             </div>
                         </div>
                     </div>
@@ -413,7 +413,7 @@ $menu = false ;
                                 <a href="#" class="title">men t-shirt</a>
                                 <p>men shirts</p>
                                 <span>250 l.e</span>
-                                <a class="btn" href="#" data-toggle="modal" data-target="#contact_pop">contact supplier</a>
+                                <a class="btn" href="#" data-toggle="modal" data-target="#contact_pop">@lang('contact_supplier')</a>
                             </div>
                         </div>
                     </div>
@@ -438,7 +438,7 @@ $menu = false ;
                                 <a href="#" class="title">men t-shirt</a>
                                 <p>men shirts</p>
                                 <span>250 l.e</span>
-                                <a class="btn" href="#" data-toggle="modal" data-target="#contact_pop">contact supplier</a>
+                                <a class="btn" href="#" data-toggle="modal" data-target="#contact_pop">@lang('general.contact_suppier')</a>
                             </div>
                         </div>
                     </div>
@@ -447,32 +447,7 @@ $menu = false ;
 @endforeach
 
                                 
-                                <div class="pagination-i col-xs-12">
-                                    <ul>
-                                        <li>
-                                            <a href="#">
-                                                <i class="fa fa-angle-left"></i>
-                                            </a>
-                                        </li>
-                                        <li>
-                                            <a href="#">1</a>
-                                        </li>
-                                        <li>
-                                            <a href="#">2</a>
-                                        </li> 
-                                        <li>
-                                            <a href="#">3</a>
-                                        </li>
-                                        <li>
-                                            <a href="#">4</a>
-                                        </li>
-                                        <li>
-                                            <a href="#">
-                                                <i class="fa fa-angle-right"></i>
-                                            </a>
-                                        </li>
-                                    </ul>
-                                </div>
+                                 
                             </div>
                         </div>
                     </div>
