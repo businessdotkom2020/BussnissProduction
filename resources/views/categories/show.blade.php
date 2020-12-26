@@ -319,7 +319,7 @@ $menu = false ;
                                 <div class="sup-v col-xs-12">
                                     <div class="cardo col-xs-12">
                             <div class="c-inner col-md-6 col-xs-12">
-                                <div class="c-img">
+                                <div class="c-img" style="width: 90px; height: 90px;">
                                     <a href="#">
                                         <img src="https://businessdotcom.net/storage/users/default_company.png" alt="">
                                     </a>
