@@ -56,6 +56,7 @@ return [
     'resset_code' => ' الكود المستلم' ,
     'resset_password' => 'إعاده تعيين كلمة السر' ,
     'submit' => '  تأكيد ' ,
+    'filter_options' => '  إعدادات البحث ' ,
     'dashboard' => '  لوحة التحكم' ,
     'remember_me' => 'تذكرنى' ,
     'forget_password' => ' نسيت كلمة المرور' ,
