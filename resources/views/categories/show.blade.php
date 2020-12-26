@@ -1,6 +1,3 @@
-
-
-
 @extends('layouts.main')
 @php
 $menu = false ;
@@ -91,6 +88,15 @@ $menu = false ;
 
 .select2-container--default .select2-selection--single{
     display: none;
+}
+
+
+.sup-v .cardo .c-inner .c-img {
+    float: left;
+    width: 80px;
+    height: 80px;
+    padding: 10px;
+    margin: 0 20px 0 0;
 }
 </style>
 
