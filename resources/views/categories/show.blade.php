@@ -121,17 +121,17 @@ $menu = false ;
                         </button>
                         <div class="widget col-xs-12">
                             <div class="cat-head col-xs-12">
-                            <h3>filter by</h3>
+                            <h3>@lang('general.filter_options')</h3>
                         </div>
                         <form method="GET"  action="{{url('search')}}">
                             
                         <div class="form-group">
-                            <h4>Search</h4>
+                            <h4>@lang('general.search')</h4>
                             <input type="text" value="{{request()->keyword}}" name="keyword"  class="form-control">
                         </div>
 
                         <div class="form-group ">
-                        <h4>Categories</h4>
+                        <h4>@lang('general.categories')</h4>
 
                             <select  name="category_ids[]" class="form-control select-nosearch" multiple>
                                 <!--<option selected disabled>@lang('general.categories')</option>-->
@@ -142,7 +142,7 @@ $menu = false ;
                         </div>
 
                         <div class="form-group ">
-                        <h4>Brands</h4>
+                        <h4>@lang('general.brands')</h4>
 
                             <select  name="brand_ids[]" class="form-control select-nosearch" multiple>
                                 <!--<option selected disabled>@lang('general.categories')</option>-->
@@ -153,34 +153,34 @@ $menu = false ;
                         </div>
                       
                         <div class="form-group">
-                            <h4>pricing</h4>
+                            <h4>@lang('general.prices')</h4>
                                 <input type="text" class="js-range-slider" name="my_range" value="" />
                         </div>
                             
                         <div class="cat-head col-xs-12">
-                            <h3>sort by</h3>
+                            <h3>@lang('general.sort_by')</h3>
                         </div>
 
                         <div class="form-group">
-                            <h4>Order Condition</h4>
+                            <h4>@lang('general.condition')</h4>
                             <ul>
                                 <li>
                                     <label>
                                         <input type="radio" name="product_condition">
-                                        <span>new</span>
+                                        <span>@lang('general.new')</span>
                                     </label>
                                     </li>
                                 <li>
                                     <label>
                                         <input type="radio" name="product_condition">
-                                        <span>Used</span>
+                                        <span>@lang('general.used')</span>
                                     </label>
                                 </li>
                             </ul>
                         </div>
 
                         <div class="form-group">
-                            <h1>Rating </h1>
+                            <h1>@lang('general.rating') </h1>
                             <fieldset class="rating">
                                 <input type="radio" id="star5" name="rating" value="5" /><label class = "full" for="star5" title="Awesome - 5 stars"></label>
                                 <input type="radio" id="star4half" name="rating" value="4 and a half" /><label class="half" for="star4half" title="Pretty good - 4.5 stars"></label>
@@ -196,7 +196,7 @@ $menu = false ;
                         </div>
                             
                         <div class="form-group">
-                            <h1> Store Rating </h1>
+                            <h1> @lang('general.supplier_rating') </h1>
                             <fieldset class="rating-supplier">
                                 <input type="radio" id="star10" name="saller_rating" value="5" /><label class = "full" for="star10" title="Awesome - 5 stars"></label>
                                 <input type="radio" id="star9half" name="saller_rating" value="4 and a half" /><label class="half" for="star9half" title="Pretty good - 4.5 stars"></label>
@@ -213,7 +213,7 @@ $menu = false ;
                             
                          <div class="form-check">
                             <input type="checkbox" name="has_discount" class="form-check-input" id="exampleCheck1">
-                            <label class="form-check-label" for="exampleCheck1">Has Discount Only</label>
+                            <label class="form-check-label" for="exampleCheck1">@lang('general.only_with_discount')</label>
                          </div>
                             
                             <hr>
@@ -261,13 +261,13 @@ $menu = false ;
                     </div>
                     <div class="cat-box col-md-9 col-xs-12">
                         <div class="box-filter col-xs-12">
-                            <h4>view by :</h4>
+                            <h4>@lang('general.view_options') :</h4>
                             <ul class="nav-tabs">
                                 <li class="active">
-                                    <a href="#" data-toggle="tab" data-target="#product_view">product</a>
+                                    <a href="#" data-toggle="tab" data-target="#product_view">@lang('general.products')</a>
                                 </li>
                                 <li>
-                                    <a href="#" data-toggle="tab" data-target="#suppliers_view">suppliers</a>
+                                    <a href="#" data-toggle="tab" data-target="#suppliers_view">@lang('general.suppliers')</a>
                                 </li>
                             </ul>
                         </div>
