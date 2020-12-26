@@ -153,7 +153,7 @@ $menu = false ;
                         </div>
                       
                         <div class="form-group">
-                            <h4>@lang('general.prices')</h4>
+                            <h4>@lang('general.prices_range')</h4>
                                 <input type="text" class="js-range-slider" name="my_range" value="" />
                         </div>
                             
