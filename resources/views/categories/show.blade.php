@@ -8,7 +8,8 @@ $menu = false ;
 <style>
     
    @import url(//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css);
-
+  
+    
 
 
 /****** Style Star Rating Widget *****/
