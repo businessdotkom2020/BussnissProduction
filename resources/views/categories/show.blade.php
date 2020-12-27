@@ -347,7 +347,7 @@ $menu = false ;
                                     </p>
                                 </div>
                             </div>
-                                        <a href="#" class="btn btn-border">view all supplier products</a>
+                                        <a href="#" class="btn btn-border">@lang('general.view_all_supplier_products')</a>
                         </div>
                                     <div class="block b-product col-md-4 col-sm-6 col-xs-12">
                         <div class="inner">

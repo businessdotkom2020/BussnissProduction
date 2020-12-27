@@ -23,6 +23,7 @@ return [
     'add_rquest' => 'أضف طلب',
     'contact_us' => 'إتصل بنا',
     'menu' => 'القائمة',
+    'view_all_supplier_products' => 'عرض كل منتجات هذا التاجر',
     'categories' => 'الأقسام',
     'send' => 'إرسال',
     'newly' => 'حديثا',
