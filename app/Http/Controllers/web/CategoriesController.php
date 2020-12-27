@@ -104,11 +104,12 @@ class CategoriesController extends Controller
         $category_id =  request()->category_id ? request()->category_id : Category::first()->id;
         $category_ids = $request->category_ids ? $request->category_ids : Category::whereNull('parent_id')->get()->pluck('id');
 
-        $suppliers = User::where('name', 'like', '%' . $q . '%')->where('type','supplier')->whereHas('categories', function ($query) use ($category_id) {
-            $query->where('id', $category_id);
-        })->orwhereHas('categories', function ($query) use ($category_ids) {
-            $query->whereIn('id', $category_ids);
-        })->get();
+        // $suppliers = User::where([['name', 'like', '%' . $q . '%'],['type','supplier']])->whereHas('categories', function ($query) use ($category_id) {
+        //     $query->where('id', $category_id);
+        // })->orwhereHas('categories', function ($query) use ($category_ids) {
+        //     $query->whereIn('id', $category_ids);
+        // })->get();
+        $suppliers = User::where([['name', 'like', '%' . $q . '%'],['type','supplier']])->get();
         $category = null;
         $keyword = request()->keyword;
         return view('categories.show', compact('products', 'suppliers', 'category', 'keyword'));
