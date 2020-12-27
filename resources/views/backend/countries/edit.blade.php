@@ -6,7 +6,7 @@
         <div class="col-xl-12">
             <div class="card">
                 <div class="card-body">
-                    <h4 class="card-title">Edit Country " {{ $country->name }} "</h4>
+                    <h4 class="card-title">@lang('dashboard.edit') @lang('dashboard.country') " {{ $country->name }} "</h4>
                     <p class="card-title-desc"></p>
                     <form method="post" action="{{ route('countries.update' , $country->id) }}" class="needs-validation" novalidate
                           enctype="multipart/form-data">

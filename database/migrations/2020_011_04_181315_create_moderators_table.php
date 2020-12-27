@@ -19,6 +19,7 @@ class CreateModeratorsTable extends Migration
             $table->string('email')->unique();
             $table->string('password');
             $table->tinyInteger('status')->default(0);
+            $table->tinyInteger('try')->default(0);
             $table->rememberToken();
             $table->timestamps();
         });

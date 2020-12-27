@@ -11,14 +11,15 @@
         <div class="col-12">
             <div class="card">
                 <div class="card-body">
-                    <h4 class="card-title">Attribute Values</h4>
+                    <h4 class="card-title">@lang('dashboard.attr_val')</h4>
                     <div style="display: flex;justify-content: space-between;">
                         <a href="{{ route('attr_values.create') }}" class="btn btn-success mb-2">
                             <i class="mdi mdi-plus mr-2"></i>
-                            Add New</a>
+                            @lang('dashboard.add_new')
+                        </a>
                         <a class="btn btn-danger mb-2  delete-all text-white" onclick="return false;"
                            delete_url="/delete_attr_values/"><i class="mdi mdi-trash-can-outline mr-2"></i>
-                            Delete All
+                            @lang('dashboard.delete_all')
                         </a>
                     </div>
                     <hr>
@@ -27,9 +28,9 @@
                         <thead>
                         <tr>
                             <th>#</th>
-                            <th>Value</th>
-                            <th>Attribute</th>
-                            <th>Options</th>
+                            <th>@lang('dashboard.value')</th>
+                            <th>@lang('dashboard.att')</th>
+                            <th>@lang('dashboard.options')</th>
                         </tr>
                         </thead>
                         <tbody>

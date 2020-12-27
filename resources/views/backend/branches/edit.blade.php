@@ -25,7 +25,7 @@
         <div class="col-xl-12">
             <div class="card">
                 <div class="card-body">
-                    <h4 class="card-title">Edit Supplier " {{ $branch->name }} "</h4>
+                    <h4 class="card-title">@lang('dashboard.edit') @lang('dashboard.branch') " {{ $branch->name }} "</h4>
                     <p class="card-title-desc"></p>
                     <form method="post" action="{{ route('branches.update' , $branch->id) }}" class="needs-validation">
                         @csrf
@@ -33,9 +33,8 @@
                         <div class="row">
                             <div class="col-md-12">
                                 <div class="form-group">
-                                    <label for="user_id">Supplier</label>
+                                    <label for="user_id">@lang('dashboard.supplier')</label>
                                     <select name="user_id" class="form-control select2" id="user_id" required>
-                                        <option selected disabled hidden value="">---- Select Supplier ----</option>
                                         @foreach($users as $user)
                                             <option
                                                     @if($user->id == $branch->user_id) selected @endif
@@ -51,8 +50,8 @@
                         <div class="row">
                             <div class="col-md-6">
                                 <div class="form-group">
-                                    <label for="name">Name</label>
-                                    <input type="text" name="name" class="form-control" id="name" placeholder="Name" value="{{ $branch->name }}" required>
+                                    <label for="name">@lang('dashboard.name')</label>
+                                    <input type="text" name="name" class="form-control" id="name" placeholder="@lang('dashboard.name')" value="{{ $branch->name }}" required>
                                     @error('name')
                                     <span class="text-danger">{{ $message }}</span>
                                     @enderror
@@ -60,8 +59,8 @@
                             </div>
                             <div class="col-md-6">
                                 <div class="form-group">
-                                    <label for="email">EMAIL</label>
-                                    <input type="email" name="email" class="form-control" id="email" placeholder="EMAIL" value="{{ $branch->email }}" required>
+                                    <label for="email">@lang('dashboard.email')</label>
+                                    <input type="email" name="email" class="form-control" id="email" placeholder="@lang('dashboard.email')" value="{{ $branch->email }}" required>
                                     @error('email')
                                     <span class="text-danger">{{ $message }}</span>
                                     @enderror
@@ -71,8 +70,8 @@
                         <div class="row">
                             <div class="col-md-12">
                                 <div class="form-group">
-                                    <label for="mobile">Mobile Number</label>
-                                    <input type="text" name="mobile" class="form-control" id="mobile" placeholder="Mobile" value="{{ $branch->mobile }}" required>
+                                    <label for="mobile">@lang('dashboard.mobile')</label>
+                                    <input type="text" name="mobile" class="form-control" id="mobile" placeholder="@lang('dashboard.mobile')" value="{{ $branch->mobile }}" required>
                                     @error('mobile')
                                     <span class="text-danger">{{ $message }}</span>
                                     @enderror
@@ -82,8 +81,8 @@
                         <div class="row">
                             <div class="col-md-12">
                                 <div class="form-group">
-                                    <label for="hotline">Hotline</label>
-                                    <input type="text" name="hotline" class="form-control" id="hotline" placeholder="Hotline" value="{{ $branch->land_line }}" required>
+                                    <label for="hotline">@lang('dashboard.hotline')</label>
+                                    <input type="text" name="hotline" class="form-control" id="hotline" placeholder="@lang('dashboard.hotline')" value="{{ $branch->land_line }}" required>
                                     @error('hotline')
                                     <span class="text-danger">{{ $message }}</span>
                                     @enderror
@@ -93,8 +92,8 @@
                         <div class="row">
                             <div class="col-md-12">
                                 <div class="form-group">
-                                    <label for="address">Address</label>
-                                    <input type="text" name="address" class="form-control" id="address" placeholder="Address" value="{{ $branch->address }}" required>
+                                    <label for="address">@lang('dashboard.address')</label>
+                                    <input type="text" name="address" class="form-control" id="address" placeholder="@lang('dashboard.address')" value="{{ $branch->address }}" required>
                                     @error('address')
                                     <span class="text-danger">{{ $message }}</span>
                                     @enderror
@@ -104,8 +103,8 @@
                         <div class="row">
                             <div class="col-md-6">
                                 <div class="form-group">
-                                    <label for="working_from">Working From ( Time )</label>
-                                    <input type="time" name="working_from" class="form-control" id="working_from" placeholder="Working From" value="{{ $branch->work_from }}">
+                                    <label for="working_from">@lang('dashboard.work_from')</label>
+                                    <input type="time" name="working_from" class="form-control" id="working_from" placeholder="@lang('dashboard.work_from')" value="{{ $branch->work_from }}">
                                     @error('working_from')
                                     <span class="text-danger">{{ $message }}</span>
                                     @enderror
@@ -113,8 +112,8 @@
                             </div>
                             <div class="col-md-6">
                                 <div class="form-group">
-                                    <label for="working_to">Working To ( Time )</label>
-                                    <input type="time" name="working_to" class="form-control" id="working_to" placeholder="Working To" value="{{ $branch->work_to }}">
+                                    <label for="working_to">@lang('dashboard.work_to')</label>
+                                    <input type="time" name="working_to" class="form-control" id="working_to" placeholder="@lang('dashboard.work_to')" value="{{ $branch->work_to }}">
                                     @error('working_to')
                                     <span class="text-danger">{{ $message }}</span>
                                     @enderror
@@ -124,8 +123,8 @@
                         <div class="row">
                             <div class="col-md-4">
                                 <div class="form-group">
-                                    <label for="delivery_from">Delivery From ( Time )</label>
-                                    <input type="time" name="delivery_from" class="form-control" id="delivery_from" placeholder="Delivery From Time" value="{{ $branch->delivery_from }}">
+                                    <label for="delivery_from">@lang('dashboard.work_delivery_from')</label>
+                                    <input type="time" name="delivery_from" class="form-control" id="delivery_from" placeholder="@lang('dashboard.work_delivery_from')" value="{{ $branch->delivery_from }}">
                                     @error('delivery_time')
                                     <span class="text-danger">{{ $message }}</span>
                                     @enderror
@@ -133,8 +132,8 @@
                             </div>
                             <div class="col-md-4">
                                 <div class="form-group">
-                                    <label for="delivery_to">Delivery To ( Time )</label>
-                                    <input type="time" name="delivery_to" class="form-control" id="delivery_to" placeholder="Delivery To Time" value="{{ $branch->delivery_to }}">
+                                    <label for="delivery_to">@lang('dashboard.work_delivery_to')</label>
+                                    <input type="time" name="delivery_to" class="form-control" id="delivery_to" placeholder="@lang('dashboard.work_delivery_to')" value="{{ $branch->delivery_to }}">
                                     @error('delivery_to')
                                     <span class="text-danger">{{ $message }}</span>
                                     @enderror
@@ -142,8 +141,8 @@
                             </div>
                             <div class="col-md-4">
                                 <div class="form-group">
-                                    <label for="delivery_fee">Delivery Fee</label>
-                                    <input type="number" name="delivery_fee" class="form-control" id="delivery_fee" placeholder="Delivery Fee" value="{{ $branch->delivery_fee }}">
+                                    <label for="delivery_fee">@lang('dashboard.delivery_fee')</label>
+                                    <input type="number" name="delivery_fee" class="form-control" id="delivery_fee" placeholder="@lang('dashboard.delivery_fee')" value="{{ $branch->delivery_fee }}">
                                     @error('delivery_fee')
                                     <span class="text-danger">{{ $message }}</span>
                                     @enderror
@@ -155,13 +154,13 @@
                                 <div class="form-group">
                                     <div class="panel panel-default">
                                         <div class="panel-heading">
-                                            <h3 class="panel-title">location</h3>
+                                            <h3 class="panel-title">@lang('dashboard.location')</h3>
                                         </div>
                                         <div class="panel-body">
                                             <div class="row">
                                                 <div class="col-md-12">
                                                     <div id="map-canvas"></div>
-                                                    <input id="pac-input"  type="text" placeholder="search...">
+                                                    <input id="pac-input"  type="text" placeholder="@lang('dashboard.search')">
                                                     <input type="hidden" id="lat" name="lat" value="{{ $branch->lat }}" required>
                                                     <input type="hidden" id="lng" name="lng" value="{{ $branch->lng }}" required>
                                                 </div>
@@ -178,7 +177,7 @@
                             </div>
                         </div>
                         <hr>
-                        <button class="btn btn-primary" type="submit">Submit</button>
+                        <button class="btn btn-primary" type="submit">@lang('dashboard.submit')</button>
                     </form>
                 </div>
             </div>

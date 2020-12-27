@@ -11,12 +11,11 @@
         <div class="col-12">
             <div class="card">
                 <div class="card-body">
-                    <h4 class="card-title">Attributes</h4>
+                    <h4 class="card-title">@lang('dashboard.attr')</h4>
                     <div style="display: flex;justify-content: space-between;">
-                        <a href="{{ route('attributes.create') }}" class="btn btn-success mb-2"><i class="mdi mdi-plus mr-2"></i> Add
-                            New</a>
+                        <a href="{{ route('attributes.create') }}" class="btn btn-success mb-2"><i class="mdi mdi-plus mr-2"></i>@lang('dashboard.add_new')</a>
                         <a class="btn btn-danger mb-2  delete-all text-white" onclick="return false;"
-                           delete_url="/delete_attributes/"><i class="mdi mdi-trash-can-outline mr-2"></i>Delete All</a>
+                           delete_url="/delete_attributes/"><i class="mdi mdi-trash-can-outline mr-2"></i>@lang('dashboard.delete_all')</a>
                     </div>
                     <hr>
                     <table id="datatable-buttons" class="table table-striped table-bordered dt-responsive nowrap"
@@ -24,9 +23,9 @@
                         <thead>
                         <tr>
                             <th>#</th>
-                            <th>Name</th>
-                            <th>Categories</th>
-                            <th>Options</th>
+                            <th>@lang('dashboard.name')</th>
+                            <th>@lang('dashboard.categories')</th>
+                            <th>@lang('dashboard.options')</th>
                         </tr>
                         </thead>
                         <tbody>
@@ -61,7 +60,7 @@
             <div class="modal-content">
                 <div class="modal-header">
                     <h5 class="modal-title" id="exampleModalLabel{{ $attribute->id }}">{{$attribute->getTranslatedAttribute('name','ar')}} / {{ $attribute->name }}
-                        <small class="text-danger">Categories</small>
+                        <small class="text-danger">@lang('dashboard.categories')</small>
                     </h5>
                     <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                         <span aria-hidden="true">&times;</span>
