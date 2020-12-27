@@ -9,7 +9,7 @@ $menu = false ;
     
    @import url(//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css);
   
-    
+
 
 
 /****** Style Star Rating Widget *****/
@@ -321,14 +321,13 @@ $menu = false ;
                             <div class="tab-pane fade" id="suppliers_view">
                           
                         @foreach($suppliers as $supplier)
-                        @endforeach
 
                                 <div class="sup-v col-xs-12">
                                     <div class="cardo col-xs-12">
                             <div class="c-inner col-md-6 col-xs-12">
                                 <div class="c-img">
                                     <a href="#">
-                                        <img src="https://businessdotcom.net/web/images/marks/1.png" alt="">
+                                        <img src="{{$supplier->avatar}}" alt="">
                                     </a>
                                 </div>
                                 <div class="c-data">
@@ -337,7 +336,7 @@ $menu = false ;
                                         follow
                                     </a>
                                     <h3>
-                                        <a href="#" class="title">addidas</a>
+                                        <a href="#" class="title">{{$supplier->name}}</a>
                                     </h3>
                                     <p>
                                         <i class="fa fa-star active"></i>
@@ -376,10 +375,11 @@ $menu = false ;
                         </div>
                     </div>
                                   
+                </div>
                                   
-                                     
+                    @endforeach
+         
                                         
-                                </div>
 
 
                                 
