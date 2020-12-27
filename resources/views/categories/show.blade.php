@@ -327,7 +327,7 @@ $menu = false ;
                             <div class="c-inner col-md-6 col-xs-12">
                                 <div class="c-img">
                                     <a href="#">
-                                        <img src="{{$supplier->avatar}}" alt="">
+                                        <img src="{{url('storage/'.$supplier->avatar)}}" alt="">
                                     </a>
                                 </div>
                                 <div class="c-data">
