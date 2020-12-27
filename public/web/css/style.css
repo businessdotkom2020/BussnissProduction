@@ -1402,12 +1402,9 @@ footer.main-footer.col-xs-12 {
     color: #fff;
 }
 .cardo .c-inner:hover .c-img {
-    /* transform: scale(1.05); */
     transition: all 0.3s;
-    /* background-color: #282828; */
 }
 .cardo .c-inner:hover .c-img img {
-    /* filter: brightness(0) invert(1); */
     transition: all 0.3s;
 }
 .sticky-sidebar {
@@ -1749,6 +1746,7 @@ footer.main-footer.col-xs-12 {
 }
 .sup-v .cardo .c-inner .c-data {
     display: inline-block;
+    float: left;
 }
 .sup-v .cardo .c-inner .c-data .btn {
     position: absolute;
@@ -4005,11 +4003,10 @@ button.close:hover {
     transform: translateY(-10px);
     transition: all 0.3s;
 }
-
-
 .i-data a.title {
     overflow: hidden;
     display: -webkit-box !important;
     -webkit-line-clamp: 3;
     -webkit-box-orient: vertical;
 }
+
