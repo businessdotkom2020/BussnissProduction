@@ -321,9 +321,12 @@ $menu = false ;
                                     <div class="offer-badge">
                                         <span>{{number_format((($product->sale_price/$product->price) * 100) ,2) }} %</span>
                                     </div>
-                                    <a href="javascript:void(0)" class="fav-pro">
-                                        <i class="fa fa-heart"></i>
-                                    </a>
+                                    <div class="prod-extra" style="position: inherit">
+
+<a href="javascript:void(0)" id="fav-{{$product->id}}" title="add to favourite" data-placement="top" class="fav-{{$product->id}} {{$product->isFavorited() ? 'fav-active' : null  }} fav-pro " onclick="favtoggle({{$product->id }},{{Auth::user() ? Auth::user()->id : null}})">
+    <i class="fa fa-heart"></i>
+</a>
+</div>
                                     <a href="{{url('product/'.$product->id)}}" class="img-hold">
 
                                         <img src="{{ $product->image ? url('storage/'.$product->image) : "https://i.imgur.com/mFI2maG.jpg" }}" alt="">
