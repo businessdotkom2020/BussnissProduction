@@ -351,31 +351,73 @@ $menu = false ;
                         </div>
 
                         @foreach(\App\Models\Product::where('user_id',$supplier->id)->limit(3)->get() as $product)
-                        <div class="block b-product col-md-4 col-sm-6 col-xs-12">
-                        <div class="inner">
-                            <div class="i-img">
-                                <div class="ribbon">
-                                    <span>new</span>
-                                </div>
-                                <div class="offer-badge">
-                                    <span>50%</span>
-                                </div>
-                                <a href="javascript:void(0)" class="fav-pro">
+                        <div class="block b-product col-md-2 col-sm-6 col-xs-12">
+                    <div class="inner">
+                        <div class="i-img">
+                            @if($product->product_condition == 'new')
+                            <div class="ribbon">
+                                <span>@lang('general.new')</span>
+                            </div>
+                            @endif
+                            <div class="offer-badge">
+                                <span>{{number_format((($product->sale_price/$product->price) * 100) ,2) }} %</span>
+                            </div>
+
+                            <div class="prod-extra" style="position: inherit">
+
+                                <a href="javascript:void(0)" id="fav-{{$product->id}}" title="add to favourite" data-placement="top" class="fav-{{$product->id}} {{$product->isFavorited() ? 'fav-active' : null  }} fav-pro " onclick="favtoggle({{$product->id }},{{Auth::user() ? Auth::user()->id : null}})">
                                     <i class="fa fa-heart"></i>
                                 </a>
-                                <a href="#" class="img-hold">
-                                    <img src="images/stocks/1.png" alt="">
-                                    <img src="images/stocks/11.png" alt="" class="sec-img">
-                                </a>
                             </div>
-                            <div class="i-data">
-                                <a href="#" class="title">men t-shirt</a>
-                                <p>men shirts</p>
-                                <span>250 l.e</span>
-                                <a class="btn" href="#" data-toggle="modal" data-target="#contact_pop">@lang('contact_supplier')</a>
-                            </div>
+
+
+
+                            <a href="{{url('product/'.$product->id)}}" class="img-hold">
+                                <img src="{{url('storage/'.$product->image)}}" alt="">
+                                <img src="{{ json_decode($product->images ) ? url('storage/'.(json_decode($product->images))[0]) : "https://i.imgur.com/mFI2maG.jpg" }}" class="sec-img">
+
+                            </a>
                         </div>
+                        <div class="i-data">
+
+                            <a href="{{url('product/'.$product->id)}}" class="title">{{$product->getTranslatedAttribute('name',\App::getLocale())}}</a>
+
+
+
+                            <!-- <p>{{ Str::limit($product->getTranslatedAttribute('description',\App::getLocale()),50 )}}</p> -->
+
+                            <div class="cardo" style="flex-grow: 1;padding:0px">
+                                <div class="c-inner" style="text-align: right;">
+                                    <div class="c-data">
+                                        <p style="text-align: center;">
+                                            @php $rating = $product->average_rating ; @endphp
+                                            @foreach(range(1,5) as $i)
+                                            @if($rating >0)
+                                            @if($rating > 0.5)
+                                            <i class="fa fa-star active"></i>
+                                            @elseif($rating < 0.5 && $rating> 0)
+                                                <i class="fas fa-star-half"></i>
+                                                @endif
+                                                @else
+                                                <i class="fa fa-star"></i>
+                                                @endif
+                                                @php $rating--; @endphp
+
+                                                @endforeach
+
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <span>{{$product->sale_price ? $product->sale_price : $product->price}}$</span>
+
+
+                            <a class="btn" href="#" data-toggle="modal" data-target="#contact_{{$product->user_id}}" target="_blank">@lang('general.contact_supplier')</a>
+                        </div>
+
                     </div>
+                </div>
                 @endforeach         
                 </div>
                                   
@@ -480,6 +522,158 @@ $menu = false ;
    });
    }
    }); 
+</script>
+
+ 
+<script>
+    function favtoggle(product_id, user_id) {
+
+        var token = '{{ Session::token() }}';
+
+        $.ajax({
+
+            type: 'POST',
+
+            url: '{!!URL::to('product_favorite')!!}',
+
+            data: {
+                product_id: product_id,
+                _token: token,
+                user_id: user_id
+            },
+
+            success: function(result) {
+
+
+                if (result.class) {
+                    $(".fav-" + product_id).toggleClass(result.class);
+                }
+
+
+                const Toast = Swal.mixin({
+
+                    toast: true,
+
+                    position: 'top-end',
+
+                    showConfirmButton: false,
+
+                    timer: 6000,
+
+                    timerProgressBar: true,
+
+                    onOpen: (toast) => {
+
+                        toast.addEventListener('mouseenter', Swal.stopTimer)
+
+                        toast.addEventListener('mouseleave', Swal.resumeTimer)
+
+                    }
+
+                })
+
+
+
+                Toast.fire({
+
+                    icon: 'success',
+
+                    title: result.message
+
+                })
+
+            }
+
+        });
+
+    }
+</script>
+
+
+<script>
+    //see docs on: http://ionden.com/a/plugins/ion.rangeSlider/index.html
+    $(".js-range-slider").ionRangeSlider({
+        type: "double",
+        min: 0,
+        max: 1000,
+        to: 500,
+        skin: "round"
+    });
+
+    $('.op-filter').click(function() {
+        $('.cat-sidebar .widget').slideToggle();
+    });
+
+
+
+    function followtoggle(follower_id) {
+
+        var token = '{{ Session::token() }}';
+
+
+
+        $.ajax({
+
+
+
+            type: 'POST',
+
+            url: '{!!URL::to('user_follow')!!}',
+
+            data: {
+                follower_id: follower_id,
+                _token: token
+            },
+
+            success: function(result) {
+
+                if (result.class) {
+                    $("#followtoggle_" + follower_id).toggleClass(result.class);
+                    $("#followicon_" + follower_id).toggleClass(result.icon);
+                    $("#followicon_" + follower_id).addClass(result.icon).removeClass(result.old_icon)
+                    $("#followtoggle_" + follower_id + " span").text(result.but_status);
+
+                }
+
+
+
+                const Toast = Swal.mixin({
+
+                    toast: true,
+
+                    position: 'top-end',
+
+                    showConfirmButton: false,
+
+                    timer: 6000,
+
+                    timerProgressBar: true,
+
+                    onOpen: (toast) => {
+
+                        toast.addEventListener('mouseenter', Swal.stopTimer)
+
+                        toast.addEventListener('mouseleave', Swal.resumeTimer)
+
+                    }
+
+                })
+
+
+
+                Toast.fire({
+
+                    icon: 'success',
+
+                    title: result.message
+
+                })
+
+            }
+
+        });
+
+    }
 </script>
 
 @endpush
