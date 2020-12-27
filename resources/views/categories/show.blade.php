@@ -431,7 +431,7 @@ $menu = false ;
                                         <a href="{{url('product/'.$product->id)}}" class="title">{{$product->getTranslatedAttribute('name',\App::getLocale())}}</a>
 
                                         <div class="cardo" style="flex-grow: 1;padding:0px">
-                                            <div   style="text-align: right;">
+                                            <div   class="c-inner" style="text-align: right;">
                                                 <div class="c-data">
                                                     <p style="text-align: center;">
                                                         @php $rating = $product->average_rating ; @endphp
