@@ -348,7 +348,7 @@ $menu = false ;
 
                         @foreach($suppliers as $supplier)
 
-                        <div class="supv col-xs-12">
+                        <div class="sup-v col-xs-12">
                             <div class="cardo col-xs-12">
                                 <div class="c-inner col-md-6 col-xs-12">
                                     <div class="c-img">
