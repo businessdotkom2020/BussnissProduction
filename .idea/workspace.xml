@@ -1,61 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="21263555-02d4-46a2-a5f5-5c9b29bbe14a" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Models/Slider.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/Slider.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/auth.php" beforeDir="false" afterPath="$PROJECT_DIR$/config/auth.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/lang/ar/dashboard.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/lang/ar/dashboard.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/lang/en/dashboard.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/lang/en/dashboard.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/backend/attr_values/edit.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/backend/attr_values/edit.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/backend/countries/edit.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/backend/countries/edit.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/backend/countries/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/backend/countries/index.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/backend/home.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/backend/home.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/backend/jobs/create.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/backend/jobs/create.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/backend/jobs/edit.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/backend/jobs/edit.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/backend/jobs/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/backend/jobs/index.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/backend/layout/head.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/backend/layout/head.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/backend/moderators/create.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/backend/moderators/create.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/backend/moderators/edit.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/backend/moderators/edit.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/backend/moderators/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/backend/moderators/index.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/backend/options/edit.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/backend/options/edit.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/backend/orders/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/backend/orders/index.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/backend/products/create.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/backend/products/create.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/backend/products/edit.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/backend/products/edit.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/backend/products/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/backend/products/index.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/backend/requests/create.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/backend/requests/create.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/backend/requests/edit.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/backend/requests/edit.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/backend/requests/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/backend/requests/index.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/backend/roles/create.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/backend/roles/create.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/backend/roles/edit.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/backend/roles/edit.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/backend/roles/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/backend/roles/index.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/backend/sellers/blocked.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/backend/sellers/blocked.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/backend/sellers/create.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/backend/sellers/create.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/backend/sellers/edit.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/backend/sellers/edit.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/backend/sellers/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/backend/sellers/index.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/backend/services/create.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/backend/services/create.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/backend/services/edit.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/backend/services/edit.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/backend/services/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/backend/services/index.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/backend/sliders/create.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/backend/sliders/create.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/backend/sliders/edit.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/backend/sliders/edit.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/backend/sliders/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/backend/sliders/index.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/backend/states/create.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/backend/states/create.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/backend/states/edit.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/backend/states/edit.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/backend/states/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/backend/states/index.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/backend/subcategories/create.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/backend/subcategories/create.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/backend/subcategories/edit.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/backend/subcategories/edit.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/backend/subcategories/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/backend/subcategories/index.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/backend/tags/create.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/backend/tags/create.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/backend/tags/edit.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/backend/tags/edit.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/backend/tags/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/backend/tags/index.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/backend/users/blocked.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/backend/users/blocked.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/backend/users/create.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/backend/users/create.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/backend/users/edit.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/backend/users/edit.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/backend/users/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/backend/users/index.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/backend/zones/create.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/backend/zones/create.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/backend/zones/edit.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/backend/zones/edit.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/backend/zones/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/backend/zones/index.blade.php" afterDir="false" />
-    </list>
+    <list default="true" id="21263555-02d4-46a2-a5f5-5c9b29bbe14a" name="Default" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -85,8 +31,8 @@
       <file leaf-file-name="dashboard.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/resources/lang/ar/dashboard.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="207">
-              <caret line="9" column="25" selection-start-line="9" selection-start-column="25" selection-end-line="9" selection-end-column="25" />
+            <state relative-caret-position="212">
+              <caret line="162" column="12" selection-start-line="162" selection-start-column="5" selection-end-line="162" selection-end-column="12" />
             </state>
           </provider>
         </entry>
@@ -94,8 +40,8 @@
       <file leaf-file-name="dashboard.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/resources/lang/en/dashboard.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="230">
-              <caret line="10" column="14" selection-start-line="10" selection-start-column="5" selection-end-line="10" selection-end-column="14" />
+            <state relative-caret-position="166">
+              <caret line="20" column="10" selection-start-line="20" selection-start-column="5" selection-end-line="20" selection-end-column="10" />
             </state>
           </provider>
         </entry>
@@ -103,8 +49,8 @@
       <file leaf-file-name="home.blade.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/resources/views/backend/home.blade.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-414">
-              <caret line="390" column="93" selection-start-line="390" selection-start-column="93" selection-end-line="390" selection-end-column="93" />
+            <state relative-caret-position="166">
+              <caret line="85" column="101" selection-start-line="85" selection-start-column="101" selection-end-line="85" selection-end-column="101" />
             </state>
           </provider>
         </entry>
@@ -113,12 +59,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>service</find>
-      <find>background</find>
-      <find>Advertising banner</find>
-      <find>عارض</find>
-      <find>for</find>
-      <find>ad</find>
       <find>can</find>
       <find>canFollow(</find>
       <find>kind</find>
@@ -143,6 +83,12 @@
       <find>Followers</find>
       <find>blocked</find>
       <find>more</find>
+      <find>subcategor</find>
+      <find>selle</find>
+      <find>suppl</find>
+      <find>countires</find>
+      <find>branch</find>
+      <find>bran</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -199,8 +145,8 @@
         <option value="$PROJECT_DIR$/resources/views/backend/zones/create.blade.php" />
         <option value="$PROJECT_DIR$/resources/views/backend/zones/edit.blade.php" />
         <option value="$PROJECT_DIR$/resources/views/backend/zones/index.blade.php" />
-        <option value="$PROJECT_DIR$/resources/lang/ar/dashboard.php" />
         <option value="$PROJECT_DIR$/resources/lang/en/dashboard.php" />
+        <option value="$PROJECT_DIR$/resources/lang/ar/dashboard.php" />
         <option value="$PROJECT_DIR$/resources/views/backend/home.blade.php" />
       </list>
     </option>
@@ -343,7 +289,7 @@
       <path value="$PROJECT_DIR$/vendor/spatie/laravel-permission" />
     </include_path>
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
+  <component name="ProjectFrameBounds" extendedState="7">
     <option name="x" value="2" />
     <option name="y" value="16" />
     <option name="width" value="1026" />
@@ -364,28 +310,28 @@
             <path>
               <item name="new BussnissProduction" type="b2602c69:ProjectViewProjectNode" />
               <item name="new BussnissProduction" type="462c0819:PsiDirectoryNode" />
-              <item name="resources" type="462c0819:PsiDirectoryNode" />
+              <item name="storage" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="new BussnissProduction" type="b2602c69:ProjectViewProjectNode" />
               <item name="new BussnissProduction" type="462c0819:PsiDirectoryNode" />
-              <item name="resources" type="462c0819:PsiDirectoryNode" />
-              <item name="views" type="462c0819:PsiDirectoryNode" />
+              <item name="storage" type="462c0819:PsiDirectoryNode" />
+              <item name="app" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="new BussnissProduction" type="b2602c69:ProjectViewProjectNode" />
               <item name="new BussnissProduction" type="462c0819:PsiDirectoryNode" />
-              <item name="resources" type="462c0819:PsiDirectoryNode" />
-              <item name="views" type="462c0819:PsiDirectoryNode" />
-              <item name="backend" type="462c0819:PsiDirectoryNode" />
+              <item name="storage" type="462c0819:PsiDirectoryNode" />
+              <item name="app" type="462c0819:PsiDirectoryNode" />
+              <item name="public" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="new BussnissProduction" type="b2602c69:ProjectViewProjectNode" />
               <item name="new BussnissProduction" type="462c0819:PsiDirectoryNode" />
-              <item name="resources" type="462c0819:PsiDirectoryNode" />
-              <item name="views" type="462c0819:PsiDirectoryNode" />
-              <item name="backend" type="462c0819:PsiDirectoryNode" />
-              <item name="zones" type="462c0819:PsiDirectoryNode" />
+              <item name="storage" type="462c0819:PsiDirectoryNode" />
+              <item name="app" type="462c0819:PsiDirectoryNode" />
+              <item name="public" type="462c0819:PsiDirectoryNode" />
+              <item name="pages" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -448,15 +394,15 @@
       <workItem from="1605627264822" duration="6707000" />
       <workItem from="1605639508511" duration="2030000" />
       <workItem from="1609095719528" duration="1132000" />
-      <workItem from="1609098829205" duration="20650000" />
+      <workItem from="1609098829205" duration="20926000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="187852000" />
+    <option name="totallyTimeSpent" value="188128000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
+    <frame x="-8" y="-8" width="1382" height="744" extended-state="7" />
     <editor active="true" />
     <layout>
       <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.1762481" />
@@ -468,7 +414,7 @@
       <window_info anchor="bottom" id="Version Control" order="10" weight="0.32994923" />
       <window_info anchor="bottom" id="Run" order="2" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
-      <window_info anchor="bottom" id="Terminal" order="9" weight="0.4179357" />
+      <window_info anchor="bottom" id="Terminal" order="9" visible="true" weight="0.4179357" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -824,22 +770,22 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/resources/lang/ar/dashboard.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="207">
-          <caret line="9" column="25" selection-start-line="9" selection-start-column="25" selection-end-line="9" selection-end-column="25" />
+        <state relative-caret-position="212">
+          <caret line="162" column="12" selection-start-line="162" selection-start-column="5" selection-end-line="162" selection-end-column="12" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/resources/lang/en/dashboard.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="230">
-          <caret line="10" column="14" selection-start-line="10" selection-start-column="5" selection-end-line="10" selection-end-column="14" />
+        <state relative-caret-position="166">
+          <caret line="20" column="10" selection-start-line="20" selection-start-column="5" selection-end-line="20" selection-end-column="10" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/resources/views/backend/home.blade.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-414">
-          <caret line="390" column="93" selection-start-line="390" selection-start-column="93" selection-end-line="390" selection-end-column="93" />
+        <state relative-caret-position="166">
+          <caret line="85" column="101" selection-start-line="85" selection-start-column="101" selection-end-line="85" selection-end-column="101" />
         </state>
       </provider>
     </entry>
