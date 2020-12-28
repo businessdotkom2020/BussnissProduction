@@ -11,12 +11,9 @@
         <div class="col-12">
             <div class="card">
                 <div class="card-body">
-                    <h4 class="card-title">States</h4>
+                    <h4 class="card-title">{{ __('dashboard.states') }}</h4>
                     <div style="display: flex;justify-content: space-between;">
-                        <a href="{{ route('states.create') }}" class="btn btn-success mb-2"><i class="mdi mdi-plus mr-2"></i> Add
-                            New</a>
-                        <a class="btn btn-danger mb-2  delete-all text-white" onclick="return false;"
-                           delete_url="/delete_states/"><i class="mdi mdi-trash-can-outline mr-2"></i>Delete All</a>
+                        <a href="{{ route('states.create') }}" class="btn btn-success mb-2"><i class="mdi mdi-plus mr-2"></i> {{ __('dashboard.add_new') }}</a>
                     </div>
                     <hr>
                     <table id="datatable-buttons" class="table table-striped table-bordered dt-responsive nowrap"
@@ -24,9 +21,9 @@
                         <thead>
                         <tr>
                             <th>#</th>
-                            <th>Name</th>
-                            <th>Country</th>
-                            <th>Options</th>
+                            <th>{{ __('dashboard.name') }}</th>
+                            <th>{{ __('dashboard.country') }}</th>
+                            <th>{{ __('dashboard.options') }}</th>
                         </tr>
                         </thead>
                         <tbody>
@@ -34,7 +31,7 @@
                             <tr>
                                 <td>{{ $loop->index + 1 }}</td>
                                 <td>{{$state->getTranslatedAttribute('name','ar')}} / {{ $state->name}}</td>
-                                <td>{{ $state->country->name }}</td>
+                                <td>{{$state->country->getTranslatedAttribute('name',app()->getLocale())}}</td>
                                 <td>
                                     <a href="{{ route('states.edit' , $state->id) }}"
                                        class="mr-3 text-primary"><i class="mdi mdi-pencil font-size-18"></i></a>

@@ -13,8 +13,8 @@
                         <div class="row">
                             <div class="col-md-6">
                                 <div class="form-group">
-                                    <label for="validationCustom01">Full Name</label>
-                                    <input type="text" name="name" class="form-control" id="validationCustom01" placeholder="Name" value="{{ old('name') }}" required>
+                                    <label for="validationCustom01">{{ __('dashboard.name') }}</label>
+                                    <input type="text" name="name" class="form-control" id="validationCustom01" placeholder="{{ __('dashboard.name') }}" value="{{ old('name') }}" required>
                                     @error('name')
                                     <span class="text-danger">{{ $message }}</span>
                                     @enderror
@@ -22,8 +22,8 @@
                             </div>
                             <div class="col-md-6">
                                 <div class="form-group">
-                                    <label for="validationCustom02">EMAIL</label>
-                                    <input type="email" name="email" class="form-control" id="validationCustom02" placeholder="EMAIL" value="{{ old('email') }}" required>
+                                    <label for="validationCustom02">{{ __('dashboard.email') }}</label>
+                                    <input type="email" name="email" class="form-control" id="validationCustom02" placeholder="{{ __('dashboard.email') }}" value="{{ old('email') }}" required>
                                     @error('email')
                                     <span class="text-danger">{{ $message }}</span>
                                     @enderror
@@ -33,8 +33,8 @@
                         <div class="row">
                             <div class="col-md-12">
                                 <div class="form-group">
-                                    <label for="validationCustom03">PASSWORD</label>
-                                    <input type="password" name="password" class="form-control" id="validationCustom03" placeholder="password" required>
+                                    <label for="validationCustom03">{{ __('dashboard.password') }}</label>
+                                    <input type="password" name="password" class="form-control" id="validationCustom03" placeholder="{{ __('dashboard.password') }}" required>
                                     @error('password')
                                     <span class="text-danger">{{ $message }}</span>
                                     @enderror
@@ -44,8 +44,8 @@
                         <div class="row">
                             <div class="col-md-12">
                                 <div class="form-group">
-                                    <label for="validationCustom04">Mobile Number</label>
-                                    <input type="text" name="mobile" class="form-control" id="validationCustom04" placeholder="Mobile" value="{{ old('mobile') }}" required>
+                                    <label for="validationCustom04">{{ __('dashboard.phone') }}</label>
+                                    <input type="text" name="mobile" class="form-control" id="validationCustom04" placeholder="{{ __('dashboard.phone') }}" value="{{ old('mobile') }}" required>
                                     @error('mobile')
                                     <span class="text-danger">{{ $message }}</span>
                                     @enderror
@@ -55,9 +55,9 @@
                         <div class="row">
                             <div class="col-md-12">
                                 <div class="form-group">
-                                    <label for="validationCustom03">Country</label>
+                                    <label for="validationCustom03">{{ __('dashboard.country') }}</label>
                                     <select name="country_id" class="form-control" id="validationCustom03" required>
-                                        <option selected disabled hidden value="">---- Select Country ----</option>
+                                        <option selected disabled hidden value="">---- {{ __('dashboard.select') }} {{ __('dashboard.country') }} ----</option>
                                         @foreach($countries as $country)
                                             <option value="{{ $country->id }}">{{ $country->name }}</option>
                                         @endforeach
@@ -68,7 +68,7 @@
                                 </div>
                             </div>
                         </div>
-                        <button class="btn btn-primary" type="submit">Submit</button>
+                        <button class="btn btn-primary" type="submit">{{ __('dashboard.submit') }}</button>
                     </form>
                 </div>
             </div>

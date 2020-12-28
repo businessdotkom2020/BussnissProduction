@@ -7,7 +7,7 @@
         <div class="col-xl-12">
             <div class="card">
                 <div class="card-body">
-                    <h4 class="card-title">@lang('dashboard.edit') @lang('dashboard.value') " {{$attribute->getTranslatedAttribute('value',\App::getLocale())}} "</h4>
+                    <h4 class="card-title">@lang('dashboard.edit') @lang('dashboard.value') " {{$value->getTranslatedAttribute('value',\App::getLocale())}} "</h4>
                     <p class="card-title-desc"></p>
                     <form method="post" action="{{ route('attr_values.update' , $value->id) }}" class="needs-validation"
                           novalidate>

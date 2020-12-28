@@ -11,10 +11,10 @@
         <div class="col-12">
             <div class="card">
                 <div class="card-body">
-                    <h4 class="card-title">Moderators</h4>
+                    <h4 class="card-title">@lang('dashboard.moderators')</h4>
                     <div style="display: flex;justify-content: space-between;">
-                        <a href="{{ route('moderators.create') }}" class="btn btn-success mb-2"><i class="mdi mdi-plus mr-2"></i> Add
-                            New</a>
+                        <a href="{{ route('moderators.create') }}" class="btn btn-success mb-2"><i class="mdi mdi-plus mr-2"></i> @lang('dashboard.add')
+                            @lang('dashboard.moderator')</a>
                     </div>
                     <hr>
                     <table id="datatable-buttons" class="table table-striped table-bordered dt-responsive nowrap"
@@ -22,11 +22,11 @@
                         <thead>
                         <tr>
                             <th>#</th>
-                            <th>Name</th>
-                            <th>Email</th>
-                            <th>Role Group</th>
-                            <th>Active</th>
-                            <th>Options</th>
+                            <th>@lang('dashboard.name')</th>
+                            <th>@lang('dashboard.email')</th>
+                            <th>@lang('dashboard.role_group')</th>
+                            <th>@lang('dashboard.active')</th>
+                            <th>@lang('dashboard.options')</th>
                         </tr>
                         </thead>
                         <tbody>
@@ -44,9 +44,9 @@
                                 </td>
                                 <td>
                                     @if($mo->status == 1)
-                                        <span class="text-success">Active</span>
+                                        <span class="text-success">@lang('dashboard.active')</span>
                                     @else
-                                        <span class="text-danger">Unactive</span>
+                                        <span class="text-danger">@lang('dashboard.unactive')</span>
                                     @endif
                                 </td>
                                 <td>

@@ -9,7 +9,7 @@
         <div class="col-xl-12">
             <div class="card">
                 <div class="card-body">
-                    <h4 class="card-title">Add New Request</h4>
+                    <h4 class="card-title">{{ __('dashboard.add') }} {{ __('dashboard.request') }}</h4>
                     <p class="card-title-desc"></p>
                     <form method="post" action="{{ route('requestss.store') }}" class="needs-validation" novalidate
                           enctype="multipart/form-data">
@@ -17,9 +17,9 @@
                         <div class="row">
                             <div class="col-lg-12">
                                 <div class="form-group">
-                                    <label class="control-label">Select Supplier</label>
+                                    <label class="control-label">{{ __('dashboard.select') }} {{ __('dashboard.supplier') }}</label>
                                     <select name="user_id" class="form-control select2" required>
-                                        <option hidden selected disabled value="">Select Supplier</option>
+                                        <option hidden selected disabled value="">{{ __('dashboard.select') }} {{ __('dashboard.supplier') }}</option>
                                         @foreach($users as $user)
                                             <option value="{{ $user->id }}">{{ $user->name }}</option>
                                         @endforeach
@@ -30,9 +30,9 @@
                         <div class="row">
                             <div class="col-md-12">
                                 <div class="form-group">
-                                    <label for="validationCustom02">Title</label>
+                                    <label for="validationCustom02">{{ __('dashboard.title') }}</label>
                                     <input type="text" name="name" class="form-control" id="validationCustom02"
-                                           placeholder="Title of Service" value="{{ old('name') }}" required>
+                                           placeholder="{{ __('dashboard.title') }}" value="{{ old('name') }}" required>
                                     @error('name')
                                     <span class="text-danger">{{ $message }}</span>
                                     @enderror
@@ -42,10 +42,10 @@
                         <div class="row">
                             <div class="col-md-12">
                                 <div class="form-group">
-                                    <label for="description">Descreption</label>
+                                    <label for="description">{{ __('dashboard.desc') }}</label>
                                     <textarea rows="10" type="text" name="description"
                                               class="form-control summernote"
-                                              id="description" placeholder="Descreption of Service"
+                                              id="description" placeholder="{{ __('dashboard.desc') }}"
                                               required>{{ old('description') }}</textarea>
                                     @error('description')
                                     <span class="text-danger">{{ $message }}</span>
@@ -56,9 +56,9 @@
                         <div class="row">
                             <div class="col-lg-12">
                                 <div class="form-group">
-                                    <label class="control-label">Select Category</label>
+                                    <label class="control-label">{{ __('dashboard.select') }} {{ __('dashboard.category') }}</label>
                                     <select name="category_id" class="form-control select2" id="category_id" required>
-                                        <option hidden selected disabled value="">Select</option>
+                                        <option hidden selected disabled value="">{{ __('dashboard.select') }} {{ __('dashboard.category') }}</option>
                                         @foreach($categories as $category)
                                             <option value="{{ $category->id }}">{{ $category->name }}
                                                 / {{$category->getTranslatedAttribute('name','ar')}}</option>
@@ -71,11 +71,11 @@
                         <div class="row">
                             <div class="col-lg-12 col-md-12 images mt-3">
                                 <div class="form-group">
-                                    <label class="control-label">Images
+                                    <label class="control-label">{{ __('dashboard.images') }}
                                         <small>( max 6 images )</small>
                                     </label>
                                     <span class="btn btn-success fileinput-button">
-                                <span>Select Images</span>
+                                <span>{{ __('dashboard.select') }} {{ __('dashboard.images') }}</span>
                                 <input type="file" name="images[]" id="files" multiple
                                        accept="image/jpeg, image/png, image/gif,"><br/>
                                 </span>
@@ -88,7 +88,7 @@
                             </div>
                         </div>
                         <hr>
-                        <button class="btn btn-primary" type="submit">Submit</button>
+                        <button class="btn btn-primary" type="submit">{{ __('dashboard.submit') }}</button>
                     </form>
                 </div>
             </div>

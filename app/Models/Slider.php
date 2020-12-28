@@ -35,4 +35,9 @@ class Slider extends Model
     {
         return $this->belongsTo(Product::class);
     }
+
+    public function industrial_zone()
+    {
+        return $this->belongsTo(IndustrialZones::class , 'industrial_id');
+    }
 }

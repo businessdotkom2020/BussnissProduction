@@ -11,12 +11,9 @@
         <div class="col-12">
             <div class="card">
                 <div class="card-body">
-                    <h4 class="card-title">Slider Images</h4>
+                    <h4 class="card-title">{{ __('dashboard.slis') }}</h4>
                     <div style="display: flex;justify-content: space-between;">
-                        <a href="{{ route('sliders.create') }}" class="btn btn-success mb-2"><i class="mdi mdi-plus mr-2"></i> Add
-                            New</a>
-                        <a class="btn btn-danger mb-2  delete-all text-white" onclick="return false;"
-                           delete_url="/delete_sliders/"><i class="mdi mdi-trash-can-outline mr-2"></i>Delete All</a>
+                        <a href="{{ route('sliders.create') }}" class="btn btn-success mb-2"><i class="mdi mdi-plus mr-2"></i>{{ __('dashboard.add_new') }}</a>
                     </div>
                     <hr>
                     <table id="datatable-buttons" class="table table-striped table-bordered dt-responsive nowrap"
@@ -24,10 +21,10 @@
                         <thead>
                         <tr>
                             <th>#</th>
-                            <th>Image</th>
-                            <th>Type</th>
-                            <th>Kind</th>
-                            <th>Options</th>
+                            <th>{{ __('dashboard.image') }}</th>
+                            <th>{{ __('dashboard.where_appear') }}</th>
+                            <th>{{ __('dashboard.silider_kind') }}</th>
+                            <th>{{ __('dashboard.options') }}</th>
                         </tr>
                         </thead>
                         <tbody>
