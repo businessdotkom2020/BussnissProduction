@@ -7,13 +7,14 @@ use App\Http\Controllers\Controller;
 use App\Http\Requests\Auth\RegisterUsersRequest;
 use App\Http\Resources\ClentsResource;
 use App\Http\Requests\ClientRequest;
+use App\Http\Resources\collections\ClentsCollection;
 use App\Models\Client;
 
 
 class ClientController extends BaseController
 {
 
-    
+
       public function post(ClientRequest $request){
             $client = new Client;
             $client->user_id            = $request->user()->id;
@@ -27,35 +28,40 @@ class ClientController extends BaseController
             $client->image = '/clients/'. $file_name;
         }
             $client->save();
-                
+
         return response()->json([
-            'status' => "success",
+            'status' => true,
+            'code' => 200,
              "message" => "Client Created successfully"
             ]) ;
         }
 
 
         public function supplier_Clients($id){
-            return ClentsResource::collection(Client::where('user_id',$id)->get());
+            return new ClentsCollection(Client::where('user_id',$id)->get());
         }
 
         public function my_Clients(){
-            return ClentsResource::collection(request()->user()->clients);
+            return new ClentsCollection(request()->user()->clients);
         }
 
         public function show($id){
-            return new ClentsResource(Client::find($id));
+             return response()->json([
+                'status' => true,
+                'code' => 200,
+                 "data" => new ClentsResource(Client::find($id))
+                ]) ;
         }
-        
-        
+
+
 public function update($id  , ClientRequest $request){
     $client = Client::find($id);
            if(!$client)
-                return response()->json(['status' => 'failed', 'message' => 'not fond']);
+           return response()->json(['status' => false,'code' => 422, 'message' => 'not fond'],422);
 
             $client->name              = $request->name;
-       
-       
+
+
        if (Request()->file('image'))
         {
             $file_name     = 'image'.   rand(1, 15). rand(155, 200) . rand(25, 55). '.png';
@@ -64,11 +70,12 @@ public function update($id  , ClientRequest $request){
         }
 
             $client->update();
-            
-                
+
+
         return response()->json([
-            'status' => "success",
-             "message" => "Bransh  Updated successfully"
+            'status' => true,
+            'code' => 200,
+             "message" => "Client Updated successfully"
             ]) ;
 }
 
@@ -76,11 +83,12 @@ public function destroy($id){
               $client =  Client::find($id) ;
 
                  if(!$client)
-                        return response()->json(['status' => 'failed', 'message' => 'not fond']);
+                        return response()->json(['status' => false,'code' => 422, 'message' => 'not fond'],422);
             $client->delete();
 
         return response()->json([
-            'status' => "success",
+            'status' => true,
+            'code' => 200,
              "message" => "Client Deleted successfully"
 
             ]) ;

@@ -2,7 +2,7 @@
 <html lang="en" dir="ltr">
 
 <head>
-    <title>BusinessDotKom</title>
+    <title>BusinessDotKom @yield('title')</title>
     <meta name="description" content="">
     <meta name="keywords" content="">
     <meta charset="utf-8">
@@ -10,51 +10,53 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <!-- Css Files -->
-    @if(Request::path() === 'register/supplier')
-     <link rel="stylesheet" href="{{ asset('/web/css/custom.css')}}">
-    @endif
-    <link  rel="stylesheet" href="{{ asset('/web/css/style.css')}}">
+
+    <link rel="stylesheet" href="{{ asset('/web/css/style.css')}}">
 
     @if (\App::getLocale() == 'ar')
 
-   <link  rel="stylesheet" href="{{ asset('/web/css/bootstrap-rtl.min.css')}}">
-   <link  rel="stylesheet" href="{{ asset('/web/css/style-ar.css')}}">
+    <link rel="stylesheet" href="{{ asset('/web/css/bootstrap-rtl.min.css')}}">
+    <link rel="stylesheet" href="{{ asset('/web/css/style-ar.css')}}">
 
-   @endif
-<link  rel="stylesheet" href="{{ asset('/web/css/style-res.css')}}" >
+    @endif
+    <link rel="stylesheet" href="{{ asset('/web/css/style-res.css')}}">
+    <link rel="stylesheet" href="{{ asset('/web/css/custom-general.css')}}">
 
     <!-- Favicons -->
-    <link  rel="shortcut icon" href="{{ asset('/web/images/faveicon.png')}}">
-    @if(Request::path() != 'register/supplier')
+    <link rel="shortcut icon" href="{{ asset('/web/images/faveicon.png')}}">
 
-    <link  rel="stylesheet" href="{{ asset('/web/css/custom.css')}}">
-    @endif
-     @stack('styles')
+
+
+
+    @stack('styles')
+
+
+
 
 </head>
 
 <body>
-@include('sweetalert::alert')
+    @include('sweetalert::alert')
 
     <div id="loading">
         <div class="loading">
-<div class="loader">
-  <span></span>
-  <span></span>
-  <span></span>
-  <span></span>
-  <span></span>
-  <span></span>
-  <span></span>
-  <span></span>
-  <span></span>
-  <span></span>
-  <span></span>
-  <span></span>
-  <span></span>
-  <span></span>
-  <span></span>
-</div>
+            <div class="loader">
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
 
         </div>
     </div>
@@ -93,5 +95,3 @@
 </body>
 
 </html>
-
-

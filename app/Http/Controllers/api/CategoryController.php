@@ -16,6 +16,10 @@ use App\Http\Resources\StoreResource;
 use App\Http\Resources\CategoryProductsResource;
 use App\Http\Resources\ProductIndexResource;
 use App\Http\Resources\AuthCategoriesResource;
+use App\Http\Resources\collections\AuthCategoriesCollection;
+use App\Http\Resources\collections\ParentCategoryCollection;
+use App\Http\Resources\collections\ProductIndexCollection;
+use App\Http\Resources\collections\StoreCollection;
 use App\Http\Resources\CompaniesResource;
 
 class CategoryController extends Controller
@@ -49,36 +53,36 @@ return CategoryProductsResource::collection(Category::whereNull('parent_id')->ge
 
 
     public function auth_categories(){
-        		return AuthCategoriesResource::collection(Category::whereNull('parent_id')->get());
+        		return new AuthCategoriesCollection(Category::whereNull('parent_id')->get());
 
     }
     public function brands_list(){
-        		return AuthCategoriesResource::collection(\App\Models\Brand::get());
+        		return new AuthCategoriesCollection(\App\Models\Brand::get());
 
     }
     public function tags_list(){
-        		return AuthCategoriesResource::collection(\App\Models\Tag::get());
+        		return new AuthCategoriesCollection(\App\Models\Tag::get());
 
     }
 
     public function sub_add_categories($id){
-        		return AuthCategoriesResource::collection(Category::where('parent_id',$id)->get());
+        		return new AuthCategoriesCollection(Category::where('parent_id',$id)->get());
 
     }
 
     public function sub_sub_add_categories($id){
-        		return AuthCategoriesResource::collection(Category::where('parent_id',$id)->get());
+        		return new AuthCategoriesCollection(Category::where('parent_id',$id)->get());
 
     }
 
 
 
 	public function list_categories() {
-         response()->json([
-            'data' => Category::with(['childs.childs.childs','sliders'])->whereNull('parent_id')->get()
-        ]);
+        //  response()->json([
+        //     'data' => Category::with(['childs.childs.childs','sliders'])->whereNull('parent_id')->get()
+        // ]);
 
-		return ParentCategoryResource::collection(Category::with(['childs.childs.childs','sliders'])->whereNull('parent_id')->get());
+		return new ParentCategoryCollection(Category::with(['childs.childs.childs','sliders'])->whereNull('parent_id')->get());
 	}
 
     public function index()
@@ -95,7 +99,7 @@ return CategoryProductsResource::collection(Category::whereNull('parent_id')->ge
     public function category_stores($id)
     {
        $stores_ids =  CategoryUser::where('category_id',$id)->get()->pluck('user_id');
-        return  StoreResource::collection(user::whereIn('id',$stores_ids)->paginate(10));
+        return  new StoreCollection(user::whereIn('id',$stores_ids)->paginate(10));
 
     }
     public function category_companies($id)
@@ -107,7 +111,7 @@ return CategoryProductsResource::collection(Category::whereNull('parent_id')->ge
     {
         $sortprice = request()->sortprice == "highest" ? "DESC": "ASC"  ;
         $sortdate = request()->sortdate == "latest" ? "DESC": "ASC"  ;
-        return  ProductIndexResource::collection(Product::where('category_id',$id)->orderBy('price', $sortprice)->orderBy('created_at', $sortdate)->paginate(10));
+        return new ProductIndexCollection(Product::where('category_id',$id)->orderBy('price', $sortprice)->orderBy('created_at', $sortdate)->paginate(10));
     }
     public function category_used_products($id)
     {

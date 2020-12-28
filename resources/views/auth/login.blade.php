@@ -13,7 +13,7 @@
                 <h3>@lang('general.login')</h3>
                 <ul>
                     <li>
-                        <a href="#">@lang('general.home')</a>
+                        <a href="{{url('/')}}">@lang('general.home')</a>
                     </li>
                     <li>@lang('general.login')</li>
                 </ul>
@@ -38,7 +38,7 @@
                             <a href="#">@lang('general.forget_password')</a>
                         </div>
                         <div class="form-group">
-                            <button type="submit" class="btn">@lang('login')</button>
+                        <button type="submit" class="btn">@lang('general.login')</button>
                             <p>@lang('general.register_text') <a href="#">@lang('general.register')</a></p>
                         </div>
                     </form>
@@ -47,6 +47,3 @@
         </main>
 
 @endsection
-
-
-

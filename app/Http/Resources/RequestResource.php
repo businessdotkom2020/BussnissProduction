@@ -22,44 +22,43 @@ class RequestResource extends ProductIndexResource
         //     )
         // ]);
         // return parent::toArray($request);
-                $lang = (request('lang')) ? request('lang') : \App::getLocale();
+        $lang = (request('lang')) ? request('lang') : \App::getLocale();
 
         return [
             'id'           => $this->id,
             'category'  => $this->category ? $this->category->name : null,
             'mobile'  => $this->user ? $this->user->mobile : null,
             'email'  => $this->user ? $this->user->email : null,
-            'avatar'  => $this->user ? url('storage',$this->user->avatar) : null,
+            'avatar'  => $this->user ? url('storage', $this->user->avatar) : null,
             'whatsapp'  => $this->user ? $this->user->whatsapp : null,
-            'name' => $this->getTranslatedAttribute('name',$lang),
-            'description' => $this->getTranslatedAttribute('description',$lang),
-                           'images' =>  $this->images(),
-            'default_image'        => json_decode($this->images ) ? url('storage/'.(json_decode($this->images))[0]) : "https://i.imgur.com/mFI2maG.jpg",
+            'name' => $this->getTranslatedAttribute('name', $lang),
+            'description' => $this->getTranslatedAttribute('description', $lang),
+            'images' =>  $this->images(),
+            'default_image'        => json_decode($this->images) ? url('storage/' . (json_decode($this->images))[0]) : "https://i.imgur.com/mFI2maG.jpg",
 
             'is_favorite'  => $this->isFavorited(),
-                        'user_name' => $this->user ? $this->user->name: null ,
-            'added_by_supplier' =>       true ,
-                                    'share_url'  => "https://www.facebook.com/",
+            'user_name' => $this->user ? $this->user->name : null,
+            'added_by_supplier' =>       true,
+            'share_url'  => "https://www.facebook.com/",
 
-            'user_image'  => $this->user ? url('storage/'.$this->user->avatar) : null,
-            'store_id'  => $this->user_id ,
+            'user_image'  => $this->user ? url('storage/' . $this->user->avatar) : null,
+            'store_id'  => $this->user_id,
             'created_at'   => $this->created_at,
             'updated_at'   => $this->updated_at,
         ];
-
     }
-    
-             public function images(){
-          $images = [];
-          $all_images = [];
-          $images = json_decode($this->images);
-      	if(is_array($images)){
-          foreach($images as $image){
-            $all_images [] = url('storage/'.$image);
-          }
-                    return $all_images;
 
+    public function images()
+    {
+        $images = [];
+        $all_images = [];
+        $images = json_decode($this->images);
+        if (is_array($images)) {
+            foreach ($images as $image) {
+                $all_images[] = url('storage/' . $image);
+            }
+            return $all_images;
         }
-      return [];
-          }
+        return [];
+    }
 }

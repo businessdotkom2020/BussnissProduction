@@ -9,6 +9,8 @@ use App\Http\Resources\ServicesIndexResource;
 use App\Http\Resources\SupplierIndexResource;
 use App\Http\Resources\JobsResource;
 use App\Http\Requests\Auth\UpdateUserPasswordRequest;
+use App\Http\Resources\collections\JobCollection;
+use App\Http\Resources\collections\ServicesIndexCollection;
 
 class StoresController extends Controller
 {
@@ -16,37 +18,49 @@ class StoresController extends Controller
 
     public function store_jobs($id)
     {
-        return  JobsResource::collection(\App\Models\Job::where('user_id',$id)->paginate(10));
+        return new JobCollection(\App\Models\Job::where('user_id',$id)->paginate(10));
     }
 
     public function my_jobs()
     {
-        return  JobsResource::collection(\App\Models\Job::where('user_id',Request()->user()->id)->paginate(10));
+        return  new JobCollection(\App\Models\Job::where('user_id',Request()->user()->id)->paginate(10));
     }
 
 
     public function store_services($id)
     {
-        return  ServicesIndexResource::collection(\App\Models\Service::where('user_id',$id)->paginate(10));
+        return  new ServicesIndexCollection(\App\Models\Service::where('user_id',$id)->paginate(10));
     }
 
 
     public function profile()
     {
-        return new SupplierIndexResource(Request()->user());
+
+        return response()->json([
+            "status" => true,
+            "code" => 200,
+            "data" => new SupplierIndexResource(Request()->user())
+            ]);
+
+
     }
     public function show_factory($supplier_id)
     {
         $supplier = \App\Models\User::find($supplier_id);
         if(!\App\Models\User::find($supplier_id))
-                                return response()->json(['status' => 'failed', 'message' => 'not fond']);
+                                return response()->json(['status' => false,'code'=> 422, 'message' => 'not fond'],422);
 
-        return new SupplierIndexResource($supplier);
+
+        return response()->json([
+            "status" => true,
+            "code" => 200,
+            "data" => new SupplierIndexResource($supplier)
+            ]);
     }
 
     public function suppliers_services()
     {
-        return  ServicesIndexResource::collection(\App\Models\Service::where('user_id',Request()->user()->id)->paginate(10));
+        return  new ServicesIndexCollection(\App\Models\Service::where('user_id',Request()->user()->id)->paginate(10));
     }
 
 
@@ -98,7 +112,11 @@ class StoresController extends Controller
           $user->categories()->sync(Request()->category_ids);
         }
 
-       return new SupplierIndexResource(Request()->user());
+        return response()->json([
+        "status" => true,
+        "code" => 200,
+        "data" => new SupplierIndexResource(Request()->user())
+        ]);
     }
 
 
@@ -110,6 +128,11 @@ class StoresController extends Controller
         $user->password = bcrypt(Request()->password);
         $user->update();
 
-        return new SupplierIndexResource(Request()->user());
+        return response()->json([
+            "status" => true,
+            "code" => 200,
+            "data" => new SupplierIndexResource(Request()->user())
+        ]);
+
     }
 }

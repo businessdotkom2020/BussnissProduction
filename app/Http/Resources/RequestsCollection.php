@@ -12,8 +12,8 @@ class RequestsCollection extends ResourceCollection
      * @var string
      */
     public $collects = RequestIndexResource::class;
-    
+
     public function toArray($request) {
-          return ['value'=>true  ,'data' => $this->collection ,'code' => 200];
+          return ['status'=>true  ,'code' => 200,'data' => $this->collection ];
     }
 }

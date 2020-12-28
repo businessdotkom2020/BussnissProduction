@@ -21,6 +21,7 @@ use App\Http\Requests\EditBranshRequest;
 use App\Http\Requests\AddBranshRequest;
 use App\Http\Resources\CountryResource;
 use App\Http\Resources\BranshesResource;
+use App\Http\Resources\collections\BranshesCollection;
 use App\Models\Country;
 use App\Models\City;
 use App\Models\State;
@@ -28,6 +29,10 @@ use App\Models\Branch;
 
 class BranchesController extends BaseController
 {
+    public function my_branches()
+    {
+        return  new BranshesCollection(Branch::where('user_id',Request()->user()->id)->paginate(10));
+    }
 
         public function post(AddBranshRequest $request){
             $branch = new Branch;
@@ -45,25 +50,30 @@ class BranchesController extends BaseController
             $branch->lat           = $request->lat;
             $branch->lang          = $request->lang;
             $branch->save();
-                
+
         return response()->json([
-            'status' => "success",
+            'status' => true,
+            'code' => 200,
              "message" => "Bransh  Created successfully"
             ]) ;
         }
 
 
 public function store_branches($id){
-    return BranshesResource::collection(Branch::where('user_id',$id)->paginate(10));
+    return new BranshesCollection(Branch::where('user_id',$id)->paginate(10));
 }
 
 public function show($id){
-    return new BranshesResource(Branch::find($id));
-}
+    return response()->json([
+        'status' => true,
+        'code' => 200,
+         "data" => new BranshesResource(Branch::find($id))
+        ]) ;
+ }
 public function update($id  , EditBranshRequest $request){
     $branch = Branch::find($id);
            if(!$branch)
-                return response()->json(['status' => 'failed', 'message' => 'not fond']);
+                return response()->json(['status' => false,'code' => 422, 'message' => 'not fond'],422);
             $branch->name           = $request->name           ? $request->name           : $branch->name;
             $branch->email          = $request->email          ? $request->email          : $branch->email;
             $branch->mobile         = $request->mobile         ? $request->mobile         : $branch->mobile;
@@ -76,12 +86,14 @@ public function update($id  , EditBranshRequest $request){
             $branch->delivery_fee   = $request->delivery_fee   ? $request->delivery_fee   : $branch->delivery_fee;
             $branch->lat            = $request->lat            ? $request->lat            : $branch->lat;
             $branch->lang           = $request->lang           ? $request->lang           : $branch->lang;
-            
+
                       $branch->update();
-            
-                
+
+
         return response()->json([
-            'status' => "success",
+            'status' => true,
+                        'code' => 200,
+
              "message" => "Bransh  Updated successfully"
             ]) ;
 }
@@ -90,11 +102,12 @@ public function destroy($id){
               $bransh =  Branch::find($id) ;
 
                  if(!$bransh)
-                        return response()->json(['status' => 'failed', 'message' => 'not fond']);
-            $bransh->delete();
+                 return response()->json(['status' => false,'code' => 422, 'message' => 'not fond'],422);
+                 $bransh->delete();
 
         return response()->json([
-            'status' => "success",
+            'status' => true,
+            'code' => 200,
              "message" => "Bransh Deleted successfully"
 
             ]) ;

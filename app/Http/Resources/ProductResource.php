@@ -33,8 +33,7 @@ class ProductResource extends ProductIndexResource
             'gallery'      => $this->images(),
             'is_favorite'  => $this->isFavorited(),
             'price'        => $this->price,
-                        'store_id'        => $this->owner ? $this->owner->id :null,
-
+            'store_id'        => $this->owner ? $this->owner->id :null,
             'sale_price'   => $this->sale_price,
             // 'sale_value'   =>  ((float)$this->sale_price* (float)$this->price / 100 ) .'%',
             'sale_value'   => (($this->sale_price/$this->price) * 100) .'%',

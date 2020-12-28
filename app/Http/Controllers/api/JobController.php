@@ -7,12 +7,14 @@ use App\Http\Controllers\Controller;
 use App\Http\Requests\Auth\RegisterUsersRequest;
 use App\Http\Resources\JobsResource;
 use App\Http\Requests\JobRequest;
+use App\Http\Resources\collections\JobCollection;
 use App\Models\Job;
 
 
 class JobController extends BaseController
 {
 
+    
         public function post(JobRequest $request){
             $job = new Job;
             $job->user_id            = $request->user()->id;
@@ -26,27 +28,33 @@ class JobController extends BaseController
             $job->salary             = $request->salary;
 
             $job->save();
-                
+
         return response()->json([
-            'status' => "success",
+            'status' => true,
+            'code' => 200,
              "message" => "Job  Created successfully"
             ]) ;
         }
 
 
         public function supplier_jobs($id){
-            return JobsResource::collection(Job::where('user_id',$id)->paginate(10));
+
+            return new JobCollection(Job::where('user_id',$id)->paginate(10));
         }
 
         public function show($id){
-            return new JobsResource(Job::find($id));
-        }
-        
-        
+            return response()->json([
+                'status' => true,
+                'code' => 200,
+                 "data" => new JobsResource(Job::find($id))
+                ]) ;
+         }
+
+
 public function update($id  , JobRequest $request){
     $job = Job::find($id);
            if(!$job)
-                return response()->json(['status' => 'failed', 'message' => 'not fond']);
+                return response()->json(['status' => false,'code' => 200, 'message' => 'not fond']);
 
             $job->user_id            = $request->user()->id;
             $job->title              = $request->title;
@@ -59,10 +67,11 @@ public function update($id  , JobRequest $request){
             $job->salary             = $request->salary;
 
             $job->update();
-            
-                
+
+
         return response()->json([
-            'status' => "success",
+            'status' => true,
+            'code' => 200,
              "message" => "Bransh  Updated successfully"
             ]) ;
 }
@@ -71,11 +80,12 @@ public function destroy($id){
               $job =  Job::find($id) ;
 
                  if(!$job)
-                        return response()->json(['status' => 'failed', 'message' => 'not fond']);
-            $job->delete();
+                 return response()->json(['status' => false,'code' => 200, 'message' => 'not fond']);
+                 $job->delete();
 
         return response()->json([
-            'status' => "success",
+            'status' => true,
+            'code' => 200,
              "message" => "Job Deleted successfully"
 
             ]) ;

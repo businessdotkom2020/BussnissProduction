@@ -18,6 +18,7 @@ use App\Http\Resources\RequestResource;
 use App\Http\Resources\StoreResource;
 use App\Http\Requests\EditRequest;
 use App\Http\Requests\AddResquest;
+use App\Http\Resources\collections\RequestIndexCollection;
 use Illuminate\Support\Facades\DB;
 
 
@@ -27,10 +28,15 @@ class RequestsController extends Controller
         return new RequestsCollection(Request::paginate(10));
     }
     public function my_requests(){
-        return RequestIndexResource::collection(Request::where('user_id',Request()->user()->id)->paginate(10));
+        return new RequestIndexCollection(Request::where('user_id',Request()->user()->id)->paginate(10));
     }
     public function show($id){
-        return new RequestResource(Request::find($id));
+
+        return response()->json([
+            'status' => true,
+            'code' => 200,
+        'data' => new RequestResource(Request::find($id))
+        ]);
     }
 
     public function store (){
@@ -64,7 +70,8 @@ class RequestsController extends Controller
 
 
         return response()->json([
-            'status' => "success",
+            'status' => true,
+            'code' => 200,
             "message" => "Request created successfully"
 
             ]) ;
@@ -118,7 +125,8 @@ $images =  $new_images;
 
 
         return response()->json([
-            'status' => "success",
+            'status' => true,
+            'code' => 200,
              "message" => "Request Updated successfully"
             ]) ;
 
@@ -132,7 +140,8 @@ $images =  $new_images;
             $req->delete();
 
         return response()->json([
-            'status' => "success",
+            'status' => true,
+            'code' => 200,
              "message" => "Request Deleted successfully"
 
             ]) ;

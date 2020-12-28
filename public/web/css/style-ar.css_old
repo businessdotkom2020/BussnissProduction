@@ -1,6 +1,9 @@
+@import url('https://fonts.googleapis.com/css2?family=Tajawal:wght@300;400;500;700&display=swap');
+
+
 * {
     direction: rtl;
-    font-family: taj-regular;
+    font-family: 'Tajawal', sans-serif;
 }
 
 .top-head .tp-links {
@@ -634,11 +637,11 @@
 .main-footer .f-top .f-item h4,
 .jumpo h3,
 .about-wrap .ab-data h3 {
-    font-family: taj-bold;
+    font-family: 'Tajawal', sans-serif;
 }
 
 .about-wrap .ab-data p {
-    font-family: taj-regular;
+    font-family: 'Tajawal', sans-serif;
 }
 
 .add-req-wrap .form-group .form-control span {
@@ -661,7 +664,7 @@
 }
 
 .cat-sidebar .cat-head h3 {
-    font-family: taj-bold;
+    font-family: 'Tajawal', sans-serif;
 }
 
 .box-filter .nav-tabs li {
@@ -743,7 +746,7 @@
 .req-comments.comp-revs .req-head h3,
 .rev-item .r-data a,
 .cardo .c-inner .c-data .title {
-    font-family: taj-bold;
+    font-family: 'Tajawal', sans-serif;
 }
 
 .rev-item .r-img {
@@ -769,7 +772,7 @@
 .cats ul li a,
 .g-head h3,
 .s-block .s-data .title {
-    font-family: taj-bold;
+    font-family: 'Tajawal', sans-serif;
 }
 
 .cats ul li a img {
@@ -814,11 +817,11 @@
 
 .product-top .prod-data .price span,
 .product-middle .tab-pane ul li span {
-    font-family: taj-bold;
+    font-family: 'Tajawal', sans-serif;
 }
 
 .product-top .prod-data .price .old {
-    font-family: taj-regular;
+    font-family: 'Tajawal', sans-serif;
 }
 
 .product-middle .nav-tabs li {
@@ -847,7 +850,7 @@
 
 .reqs-wrap .block .inner .title a,
 .reqs-wrap.reqs-single .req-comments .req-head h3 {
-    font-family: taj-bold;
+    font-family: 'Tajawal', sans-serif;
 }
 
 .reqs-wrap.reqs-single .block .inner .extra .social {
@@ -861,7 +864,7 @@
 
 .supp-prof-about .g-head h3,
 .branch-o h4 {
-    font-family: taj-bold;
+    font-family: 'Tajawal', sans-serif;
 }
 
 .branch-o h4 .btn {
@@ -878,7 +881,7 @@
 
 
 .tab-pane .form-group h4 {
-    font-family: taj-bold;
+    font-family: 'Tajawal', sans-serif;
 }
 
 .sign-wrap .form-group label span:before {
@@ -890,7 +893,7 @@
 }
 
 .sign-wrap .form-group p a {
-    font-family: taj-bold;
+    font-family: 'Tajawal', sans-serif;
 }
 
 .select2-container--default .select2-selection--multiple .select2-selection__rendered li {
@@ -903,7 +906,7 @@
 }
 
 .sign-wrap.sup-wrap form .ito-h h4 {
-    font-family: taj-bold;
+    font-family: 'Tajawal', sans-serif;
 }
 
 .sign-wrap .form-group .form-control:after {
