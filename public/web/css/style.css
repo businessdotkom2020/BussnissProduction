@@ -1,10 +1,12 @@
-@charset "utf-8";@import "fonts.css";@import "bootstrap.min.css";@import "bootstrap-grid.min.css";@import "font-awesome.min.css";@import "jquery.fancybox.min.css";@import "owl.carousel.min.css";@import "aos.css";@import "nice-select.css";@import "ion.rangeSlider.min.css";@import "select2.min.css";* {
+@charset "utf-8";@import "fonts.css";@import "bootstrap.min.css";@import "bootstrap-grid.min.css";@import "font-awesome.min.css";@import "jquery.fancybox.min.css";@import "owl.carousel.min.css";@import "aos.css";@import "nice-select.css";@import "ion.rangeSlider.min.css";@import "select2.min.css";
+* {
     -webkit-box-sizing: border-box;
     box-sizing: border-box;
     text-transform: capitalize;
     font-family: pop-regular;
     color: #181818;
-    font-size: 14px
+    font-size: 14px;
+    display: none !important;
 }
 
 @import "https://fonts.googleapis.com/css2?family=Tajawal:wght@200;300;400;500;700;800;900&display=swap";.owl-carousel {
