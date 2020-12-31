@@ -11,13 +11,12 @@
         <div class="col-12">
             <div class="card">
                 <div class="card-body">
-                    <h4 class="card-title">Requests</h4>
+                    <h4 class="card-title">{{ __('dashboard.requests') }}</h4>
                     <div style="display: flex;justify-content: space-between;">
                         <a href="{{ route('requestss.create') }}" class="btn btn-success mb-2"><i
-                                    class="mdi mdi-plus mr-2"></i> Add
-                            New</a>
+                                    class="mdi mdi-plus mr-2"></i> {{ __('dashboard.add_new') }}</a>
                         <a class="btn btn-danger mb-2  delete-all text-white" onclick="return false;"
-                           delete_url="/delete_requestss/"><i class="mdi mdi-trash-can-outline mr-2"></i>Delete All</a>
+                           delete_url="/delete_requestss/"><i class="mdi mdi-trash-can-outline mr-2"></i>{{ __('dashboard.delete_all') }}</a>
                     </div>
                     <hr>
                     <table id="datatable-buttons" class="table table-striped table-bordered dt-responsive nowrap"
@@ -25,10 +24,10 @@
                         <thead>
                         <tr>
                             <th>#</th>
-                            <th>Image</th>
-                            <th>Name</th>
-                            <th>Supplier</th>
-                            <th>Options</th>
+                            <th>{{ __('dashboard.image') }}</th>
+                            <th>{{ __('dashboard.title') }}</th>
+                            <th>{{ __('dashboard.supplier') }}</th>
+                            <th>{{ __('dashboard.options') }}</th>
                         </tr>
                         </thead>
                         <tbody>

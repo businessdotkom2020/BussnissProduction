@@ -11,10 +11,9 @@
         <div class="col-12">
             <div class="card">
                 <div class="card-body">
-                    <h4 class="card-title">Roles</h4>
+                    <h4 class="card-title">{{ __('dashboard.roles') }}</h4>
                     <div style="display: flex;justify-content: space-between;">
-                        <a href="{{ route('roles.create') }}" class="btn btn-success mb-2"><i class="mdi mdi-plus mr-2"></i> Add
-                            New</a>
+                        <a href="{{ route('roles.create') }}" class="btn btn-success mb-2"><i class="mdi mdi-plus mr-2"></i>{{ __('dashboard.add_new') }}</a>
                     </div>
                     <hr>
                     <table id="datatable-buttons" class="table table-striped table-bordered dt-responsive nowrap"
@@ -22,8 +21,8 @@
                         <thead>
                         <tr>
                             <th>#</th>
-                            <th>Name</th>
-                            <th>Options</th>
+                            <th>{{ __('dashboard.name') }}</th>
+                            <th>{{ __('dashboard.options') }}</th>
                         </tr>
                         </thead>
                         <tbody>

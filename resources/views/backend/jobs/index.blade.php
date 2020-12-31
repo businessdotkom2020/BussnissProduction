@@ -11,13 +11,13 @@
         <div class="col-12">
             <div class="card">
                 <div class="card-body">
-                    <h4 class="card-title">Jobs</h4>
+                    <h4 class="card-title">@lang('dashboard.jobs')</h4>
                     <div style="display: flex;justify-content: space-between;">
                         <a href="{{ route('jobss.create') }}" class="btn btn-success mb-2"><i
-                                    class="mdi mdi-plus mr-2"></i> Add
-                            New</a>
+                                    class="mdi mdi-plus mr-2"></i> @lang('dashboard.add')
+                            @lang('dashboard.job')</a>
                         <a class="btn btn-danger mb-2  delete-all text-white" onclick="return false;"
-                           delete_url="/delete_jobss/"><i class="mdi mdi-trash-can-outline mr-2"></i>Delete All</a>
+                           delete_url="/delete_jobss/"><i class="mdi mdi-trash-can-outline mr-2"></i>@lang('dashboard.delete_all')</a>
                     </div>
                     <hr>
                     <table id="datatable-buttons" class="table table-striped table-bordered dt-responsive nowrap"
@@ -25,11 +25,11 @@
                         <thead>
                         <tr>
                             <th>#</th>
-                            <th>Title</th>
-                            <th>Supplier</th>
-                            <th>Date Announced</th>
-                            <th>Salary</th>
-                            <th>Options</th>
+                            <th>@lang('dashboard.title')</th>
+                            <th>@lang('dashboard.supplier')</th>
+                            <th>@lang('dashboard.date_announced')</th>
+                            <th>@lang('dashboard.salary')</th>
+                            <th>@lang('dashboard.options')</th>
                         </tr>
                         </thead>
                         <tbody>
@@ -41,10 +41,10 @@
                                 </td>
                                 <td>{{ $job->user->name ?? '' }}</td>
                                 <td>
-                                    {{  $job->date_announced }}
+                                    {{  $job->date_announced ?? '' }}
                                 </td>
                                 <td>
-                                    {{  $job->salary }}
+                                    {{  $job->salary ?? ''}}
                                 </td>
                                 <td>
                                     <a title="edit" href="{{ route('jobss.edit' , $job->id) }}"

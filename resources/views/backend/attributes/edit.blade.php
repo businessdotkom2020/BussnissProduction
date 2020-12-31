@@ -7,7 +7,7 @@
         <div class="col-xl-12">
             <div class="card">
                 <div class="card-body">
-                    <h4 class="card-title">Edit Attribute "{{ $attribute->name }}"</h4>
+                    <h4 class="card-title">@lang('dashboard.edit') @lang('dashboard.att') "{{$attribute->getTranslatedAttribute('name',\App::getLocale())}}"</h4>
                     <p class="card-title-desc"></p>
                     <form method="post" action="{{ route('attributes.update' , $attribute->id) }}" class="needs-validation" novalidate>
                         @csrf
@@ -15,8 +15,8 @@
                         <div class="row">
                             <div class="col-md-6">
                                 <div class="form-group">
-                                    <label for="validationCustom01">Name in Arabic</label>
-                                    <input type="text" name="name_ar" class="form-control" id="validationCustom01" placeholder="Name in Arabic" value="{{$attribute->getTranslatedAttribute('name','ar')}}" required>
+                                    <label for="validationCustom01">@lang('dashboard.value_arabic')</label>
+                                    <input type="text" name="name_ar" class="form-control" id="validationCustom01" placeholder="@lang('dashboard.value_arabic')" value="{{$attribute->getTranslatedAttribute('name','ar')}}" required>
                                     @error('name_ar')
                                     <span class="text-danger">{{ $message }}</span>
                                     @enderror
@@ -24,8 +24,8 @@
                             </div>
                             <div class="col-md-6">
                                 <div class="form-group">
-                                    <label for="validationCustom02">Name in English</label>
-                                    <input type="text" name="name_en" class="form-control" id="validationCustom02" placeholder="Name in English" value="{{ $attribute->name }}" required>
+                                    <label for="validationCustom02">@lang('dashboard.value_english')</label>
+                                    <input type="text" name="name_en" class="form-control" id="validationCustom02" placeholder="@lang('dashboard.value_english')" value="{{ $attribute->name }}" required>
                                     @error('name_en')
                                     <span class="text-danger">{{ $message }}</span>
                                     @enderror
@@ -35,8 +35,8 @@
                         <div class="row">
                             <div class="col-lg-12">
                                 <div class="form-group mb-0">
-                                    <label class="control-label">Select Attribute Categories</label>
-                                    <select name="category_ids[]" class="select2 form-control select2-multiple" multiple="multiple" data-placeholder="Choose Categories ...">
+                                    <label class="control-label">@lang('dashboard.select') @lang('dashboard.categories')</label>
+                                    <select name="category_ids[]" class="select2 form-control select2-multiple" multiple="multiple" data-placeholder="@lang('dashboard.select') ...">
                                         @foreach($categories as $category)
                                             <option
                                                     @foreach($select_categories as $select_category)
@@ -54,7 +54,7 @@
                             </div>
                         </div>
                         <hr>
-                        <button class="btn btn-primary" type="submit">Submit</button>
+                        <button class="btn btn-primary" type="submit">@lang('dashboard.submit')</button>
                     </form>
                 </div>
             </div>

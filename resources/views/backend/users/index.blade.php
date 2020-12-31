@@ -11,14 +11,11 @@
         <div class="col-12">
             <div class="card">
                 <div class="card-body">
-                    <h4 class="card-title">Normal Users</h4>
+                    <h4 class="card-title">{{ __('dashboard.n_users') }}</h4>
                     <div style="display: flex;justify-content: space-between;">
                         <a href="{{ route('users.create') }}" class="btn btn-success mb-2">
                             <i class="mdi mdi-plus mr-2"></i>
-                            Add New</a>
-                        <a class="btn btn-danger mb-2  delete-all text-white" onclick="return false;"
-                           delete_url="/delete_users/"><i class="mdi mdi-trash-can-outline mr-2"></i>
-                            Delete All
+                            {{ __('dashboard.add_new') }}</a>
                         </a>
                     </div>
                     <hr>
@@ -27,10 +24,10 @@
                         <thead>
                         <tr>
                             <th>#</th>
-                            <th>Name</th>
-                            <th>Email</th>
-                            <th>Mobile</th>
-                            <th>Options</th>
+                            <th>{{ __('dashboard.name') }}</th>
+                            <th>{{ __('dashboard.email') }}</th>
+                            <th>{{ __('dashboard.phone') }}</th>
+                            <th>{{ __('dashboard.options') }}</th>
                         </tr>
                         </thead>
                         <tbody>

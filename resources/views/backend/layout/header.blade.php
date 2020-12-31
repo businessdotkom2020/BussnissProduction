@@ -129,6 +129,26 @@
                     </a>
                 </button>
             </div>
+
+            @if(\App::getLocale() == 'ar')
+                <div class="dropdown d-none d-lg-inline-block ml-1">
+                    <button class="btn header-item noti-icon waves-effect">
+                        <a href="{{url('locale/en')}}">
+                            EN
+                        </a>
+                    </button>
+                </div>
+            @elseif(\App::getLocale() == 'en')
+                <div class="dropdown d-none d-lg-inline-block ml-1">
+                    <button class="btn header-item noti-icon waves-effect">
+                        <a href="{{url('locale/ar')}}">
+                            عربي
+                        </a>
+                    </button>
+                </div>
+            @endif
+
+
             <div class="dropdown d-none d-lg-inline-block ml-1">
                 <button class="btn header-item noti-icon waves-effect">
                     <a href="{{ route('settings_page') }}">

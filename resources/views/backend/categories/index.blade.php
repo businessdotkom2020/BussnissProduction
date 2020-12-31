@@ -11,12 +11,11 @@
         <div class="col-12">
             <div class="card">
                 <div class="card-body">
-                    <h4 class="card-title">Categories</h4>
+                    <h4 class="card-title">@lang('dashboard.categories')</h4>
                     <div style="display: flex;justify-content: space-between;">
-                        <a href="{{ route('categories.create') }}" class="btn btn-success mb-2"><i class="mdi mdi-plus mr-2"></i> Add
-                            New</a>
+                        <a href="{{ route('categories.create') }}" class="btn btn-success mb-2"><i class="mdi mdi-plus mr-2"></i> @lang('dashboard.add_new')</a>
                         <a class="btn btn-danger mb-2  delete-all text-white" onclick="return false;"
-                           delete_url="/delete_categories/"><i class="mdi mdi-trash-can-outline mr-2"></i>Delete All</a>
+                           delete_url="/delete_categories/"><i class="mdi mdi-trash-can-outline mr-2"></i>@lang('dashboard.delete_all')</a>
                     </div>
                     <hr>
                     <table id="datatable-buttons" class="table table-striped table-bordered dt-responsive nowrap"
@@ -24,13 +23,13 @@
                         <thead>
                         <tr>
                             <th>#</th>
-                            <th>Image</th>
-                            <th>Name</th>
-                            <th>Sub Categories</th>
-                            <th>Products</th>
-                            <th>Services</th>
-                            <th>Requests</th>
-                            <th>Options</th>
+                            <th>@lang('dashboard.image')</th>
+                            <th>@lang('dashboard.name')</th>
+                            <th>@lang('dashboard.sub_cats')</th>
+                            <th>@lang('dashboard.products')</th>
+                            <th>@lang('dashboard.services')</th>
+                            <th>@lang('dashboard.requests')</th>
+                            <th>@lang('dashboard.options')</th>
                         </tr>
                         </thead>
                         <tbody>

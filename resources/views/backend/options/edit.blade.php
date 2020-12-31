@@ -6,7 +6,7 @@
         <div class="col-xl-12">
             <div class="card">
                 <div class="card-body">
-                    <h4 class="card-title">Edit App Settings</h4>
+                    <h4 class="card-title">@lang('dashboard.edit_settings')</h4>
                     <p class="card-title-desc"></p>
                     <form method="post" action="{{ route('settings_form') }}" class="needs-validation" novalidate>
                         @csrf
@@ -50,8 +50,8 @@
                             </div>
                             <div class="col-md-6">
                                 <div class="form-group">
-                                    <label for="whats">Whatsapp number</label>
-                                    <input type="text" name="whats" class="form-control" id="whats" placeholder="whatsapp number" value="{{ $option->whatsapp }}" required>
+                                    <label for="whats">Whatsapp</label>
+                                    <input type="text" name="whats" class="form-control" id="whats" placeholder="whatsapp" value="{{ $option->whatsapp }}" required>
                                     @error('whats')
                                     <span class="text-danger">{{ $message }}</span>
                                     @enderror
@@ -62,8 +62,8 @@
                         <div>
                             <div class="col-md-12">
                                 <div class="form-group">
-                                    <label for="about_ar">About Us In Arabic</label>
-                                    <textarea rows="10" type="text" name="about_ar" class="form-control" id="about_ar" placeholder="About Us In Arabic" required>{{$option->getTranslatedAttribute('about_us','ar')}}</textarea>
+                                    <label for="about_ar">@lang('dashboard.about_us_ar')</label>
+                                    <textarea rows="10" type="text" name="about_ar" class="form-control" id="about_ar" placeholder="@lang('dashboard.about_us_ar')" required>{{$option->getTranslatedAttribute('about_us','ar')}}</textarea>
                                     @error('about_ar')
                                     <span class="text-danger">{{ $message }}</span>
                                     @enderror
@@ -73,8 +73,8 @@
                         <div>
                             <div class="col-md-12">
                                 <div class="form-group">
-                                    <label for="about_en">About Us In English</label>
-                                    <textarea rows="10" type="text" name="about_en" class="form-control" id="about_en" placeholder="About Us In English" required>{{$option->about_us}}</textarea>
+                                    <label for="about_en">@lang('dashboard.about_us_en')</label>
+                                    <textarea rows="10" type="text" name="about_en" class="form-control" id="about_en" placeholder="@lang('dashboard.about_us_en')" required>{{$option->about_us}}</textarea>
                                     @error('about_ar')
                                     <span class="text-danger">{{ $message }}</span>
                                     @enderror
@@ -85,8 +85,8 @@
                         <div>
                             <div class="col-md-12">
                                 <div class="form-group">
-                                    <label for="terms_ar">Terms Conditions In Arabic</label>
-                                    <textarea rows="10" type="text" name="terms_ar" class="form-control" id="terms_ar" placeholder="Terms Conditions In Arabic" required>{{$option->getTranslatedAttribute('terms_conditions','ar')}}</textarea>
+                                    <label for="terms_ar">@lang('dashboard.terms_ar')</label>
+                                    <textarea rows="10" type="text" name="terms_ar" class="form-control" id="terms_ar" placeholder="@lang('dashboard.terms_ar')" required>{{$option->getTranslatedAttribute('terms_conditions','ar')}}</textarea>
                                     @error('terms_ar')
                                     <span class="text-danger">{{ $message }}</span>
                                     @enderror
@@ -96,8 +96,8 @@
                         <div>
                             <div class="col-md-12">
                                 <div class="form-group">
-                                    <label for="terms_en">Terms Conditions In English</label>
-                                    <textarea rows="10" type="text" name="terms_en" class="form-control" id="terms_en" placeholder="About Us In English" required>{{$option->terms_conditions}}</textarea>
+                                    <label for="terms_en">@lang('dashboard.terms_en')</label>
+                                    <textarea rows="10" type="text" name="terms_en" class="form-control" id="terms_en" placeholder="@lang('dashboard.terms_en')" required>{{$option->terms_conditions}}</textarea>
 
                                     @error('terms_en')
                                     <span class="text-danger">{{ $message }}</span>
@@ -109,8 +109,8 @@
                         <div>
                             <div class="col-md-12">
                                 <div class="form-group">
-                                    <label for="privacy_ar">Privacy Policy In Arabic</label>
-                                    <textarea rows="10" type="text" name="privacy_ar" class="form-control" id="privacy_ar" placeholder="Privacy Policy In Arabic" required>{{$option->getTranslatedAttribute('privacy_policy','ar')}}</textarea>
+                                    <label for="privacy_ar">@lang('dashboard.privacy_ar')</label>
+                                    <textarea rows="10" type="text" name="privacy_ar" class="form-control" id="privacy_ar" placeholder="@lang('dashboard.privacy_ar')" required>{{$option->getTranslatedAttribute('privacy_policy','ar')}}</textarea>
                                     @error('privacy_ar')
                                     <span class="text-danger">{{ $message }}</span>
                                     @enderror
@@ -120,8 +120,8 @@
                         <div>
                             <div class="col-md-12">
                                 <div class="form-group">
-                                    <label for="privacy_en">Privacy Policy In English</label>
-                                    <textarea rows="10" type="text" name="privacy_en" class="form-control" id="privacy_en" placeholder="Privacy Policy In English" required>{{$option->privacy_policy}}</textarea>
+                                    <label for="privacy_en">@lang('dashboard.privacy_en')</label>
+                                    <textarea rows="10" type="text" name="privacy_en" class="form-control" id="privacy_en" placeholder="@lang('dashboard.privacy_en')" required>{{$option->privacy_policy}}</textarea>
                                     @error('privacy_en')
                                     <span class="text-danger">{{ $message }}</span>
                                     @enderror
@@ -129,7 +129,7 @@
                             </div>
                         </div>
                         <hr>
-                        <button class="btn btn-primary" type="submit">Submit</button>
+                        <button class="btn btn-primary" type="submit">@lang('dashboard.submit')</button>
                     </form>
                 </div>
             </div>

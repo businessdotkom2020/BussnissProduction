@@ -1,5 +1,11 @@
 <meta charset="utf-8" />
-<title>BusinessDotKom | Dashboard</title>
+<title>
+    @if(app()->getLocale() == 'ar')
+        لوحة التحكم  | بيزنيس . كوم
+    @else
+        BusinessDotKom | Dashboard
+    @endif
+</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta content="Premium Multipurpose Admin & Dashboard Template" name="description" />
 <meta content="Themesdesign" name="author" />
@@ -20,7 +26,11 @@
 <!-- Icons Css -->
 <link href="{{ asset('backend') }}/assets/css/icons.min.css" rel="stylesheet" type="text/css" />
 <!-- App Css-->
-<link href="{{ asset('backend') }}/assets/css/app.min.css" rel="stylesheet" type="text/css" />
+@if(\App::getLocale() == 'en')
+    <link href="{{ asset('backend') }}/assets/css/app.min.css" rel="stylesheet" type="text/css" />
+@else
+    <link href="{{ asset('backend') }}/assets/css/app-rtl.min.css" rel="stylesheet" type="text/css" />
+@endif
 <link href="{{ asset('backend') }}/mine.css" rel="stylesheet" type="text/css" />
 @section('backend-head')
 @show

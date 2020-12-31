@@ -7,7 +7,7 @@
         <div class="col-xl-12">
             <div class="card">
                 <div class="card-body">
-                    <h4 class="card-title">Edit Role " {{ $role->name }} "</h4>
+                    <h4 class="card-title">@lang('dashboard.edit') @lang('dashboard.role') " {{ $role->name }} "</h4>
                     <p class="card-title-desc"></p>
                     <form method="post" action="{{ route('roles.update' , $role->id) }}" class="needs-validation" novalidate
                           enctype="multipart/form-data">
@@ -15,28 +15,37 @@
                         {{ method_field('PATCH') }}
                         <div class="row">
                             <div class="col-md-12 col-12 mb-3">
-                                <label class="mb-1" for="name">Group Name ( English )</label>
-                                <input type="text" name="name" class="form-control" id="name" placeholder="Group Name ( English characters without spaces )" value="{{ $role->name }}" required>
+                                <label class="mb-1" for="name">{{ __('dashboard.role_group_name') }}</label>
+                                <input type="text" name="name" class="form-control" id="name" placeholder="{{ __('dashboard.role_group_name') }}" value="{{ $role->name }}" required>
                                 @error('name')
                                 <span class="text-danger">{{ $message }}</span>
                                 @enderror
                             </div>
                             <div class="col-md-12 col-12 mb-3">
-                                <label>Group permissions</label>
+                                <hr>
+                            </div>
+                            <div class="col-md-12 col-12 mb-3">
+                                <label>{{ __('dashboard.permissions') }}</label>
+                                <br>
                                 <div class="form-group" data-select2-id="126">
-                                    <select style="width: 100%" name="permission[]" class="select2 form-control select2-hidden-accessible" multiple="" placeholder="choose...." data-select2-id="7" tabindex="-1" aria-hidden="true">
+                                    <div class="row">
                                         @foreach($permission  as $value)
-                                            <option
-                                                    @foreach($rolePermissions as $roleper)
-                                                    @if($roleper == $value->id) selected @endif
-                                                    @endforeach
-                                                    value="{{ $value->id }}">{{ $value->name_en }}</option>
+                                            <div class="col-md-4">
+                                                <div class="custom-control custom-checkbox mb-3">
+                                                    <input
+                                                            @foreach($rolePermissions as $roleper)
+                                                            @if($roleper == $value->id) checked @endif
+                                                            @endforeach
+                                                    type="checkbox" name="permission[]" class="custom-control-input" value="{{ $value->id }}" id="customCheck{{ $value->id }}">
+                                                    <label class="custom-control-label" for="customCheck{{ $value->id }}">{{ $value['name_'.app()->getLocale()] }}</label>
+                                                </div>
+                                            </div>
                                         @endforeach
-                                    </select>
+                                    </div>
                                 </div>
                             </div>
                         </div>
-                        <button class="btn btn-primary" type="submit">Submit</button>
+                        <button class="btn btn-primary" type="submit">{{ __('dashboard.submit') }}</button>
                     </form>
                 </div>
             </div>

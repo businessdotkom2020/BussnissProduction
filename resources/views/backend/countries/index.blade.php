@@ -11,12 +11,12 @@
         <div class="col-12">
             <div class="card">
                 <div class="card-body">
-                    <h4 class="card-title">Countries</h4>
+                    <h4 class="card-title">@lang('dashboard.countries')</h4>
                     <div style="display: flex;justify-content: space-between;">
-                        <a href="{{ route('countries.create') }}" class="btn btn-success mb-2"><i class="mdi mdi-plus mr-2"></i> Add
-                            New</a>
+                        <a href="{{ route('countries.create') }}" class="btn btn-success mb-2"><i class="mdi mdi-plus mr-2"></i> @lang('dashboard.add')
+                            @lang('dashboard.country')</a>
                         <a class="btn btn-danger mb-2  delete-all text-white" onclick="return false;"
-                           delete_url="/delete_countries/"><i class="mdi mdi-trash-can-outline mr-2"></i>Delete All</a>
+                           delete_url="/delete_countries/"><i class="mdi mdi-trash-can-outline mr-2">@lang('dashboard.delete_all')</i></a>
                     </div>
                     <hr>
                     <table id="datatable-buttons" class="table table-striped table-bordered dt-responsive nowrap"
@@ -24,9 +24,9 @@
                         <thead>
                         <tr>
                             <th>#</th>
-                            <th>Name</th>
-                            <th>States Count</th>
-                            <th>Options</th>
+                            <th>@lang('dashboard.name')</th>
+                            <th>@lang('dashboard.states_count')</th>
+                            <th>@lang('dashboard.options')</th>
                         </tr>
                         </thead>
                         <tbody>

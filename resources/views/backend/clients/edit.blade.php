@@ -6,7 +6,7 @@
         <div class="col-xl-12">
             <div class="card">
                 <div class="card-body">
-                    <h4 class="card-title">Edit Client " {{ $client->name }} "</h4>
+                    <h4 class="card-title">@lang('dashboard.edit') @lang('dashboard.client') " {{ $client->name }} "</h4>
                     <p class="card-title-desc"></p>
                     <form method="post" action="{{ route('clients.update' , $client->id) }}"
                           class="needs-validation" novalidate
@@ -16,9 +16,9 @@
                         <div class="row">
                             <div class="col-md-12">
                                 <div class="form-group">
-                                    <label for="validationCustom01">Name</label>
+                                    <label for="validationCustom01">@lang('dashboard.name')</label>
                                     <input type="text" name="name" class="form-control" id="validationCustom01"
-                                           placeholder="Name" value="{{ $client->name }}" required>
+                                           placeholder="@lang('dashboard.name')" value="{{ $client->name }}" required>
                                     @error('name')
                                     <span class="text-danger">{{ $message }}</span>
                                     @enderror
@@ -28,7 +28,7 @@
                         <div class="row">
                             <div class="col-md-12">
                                 <div class="form-group">
-                                    <label for="validationCustom02">Supplier</label>
+                                    <label for="validationCustom02">@lang('dashboard.supplier')</label>
                                     <select name="user_id" class="form-control" required>
                                         @foreach($suppliers as $supplier)
                                             <option
@@ -44,10 +44,10 @@
                         </div>
                         <div class="row">
                             <div class="col-md-12">
-                                <label>Image</label>
+                                <label>@lang('dashboard.image')</label>
                                 <div class="custom-file">
                                     <input type="file" name="image" class="custom-file-input" id="customFile" onchange="readURL(this);" >
-                                    <label class="custom-file-label" for="customFile">Choose file</label>
+                                    <label class="custom-file-label" for="customFile">@lang('dashboard.select') @lang('dashboard.image')</label>
                                     @error('image')
                                     <span class="text-danger">{{ $message }}</span>
                                     @enderror
@@ -62,7 +62,7 @@
                             </div>
                         </div>
                         <br>
-                        <button class="btn btn-primary" type="submit">Submit</button>
+                        <button class="btn btn-primary" type="submit">@lang('dashboard.submit')</button>
                     </form>
                 </div>
             </div>

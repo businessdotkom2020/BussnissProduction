@@ -6,7 +6,7 @@
         <div class="col-xl-12">
             <div class="card">
                 <div class="card-body">
-                    <h4 class="card-title">Edit Sub Category " {{ $subcategory->name }} "</h4>
+                    <h4 class="card-title">{{ __('dashboard.edit') }} {{ __('dashboard.subcategory') }} " {{$category->getTranslatedAttribute('name',app()->getLocale())}} "</h4>
                     <p class="card-title-desc"></p>
                     <form method="post" action="{{ route('subcategories.update' , $category->id) }}"
                           class="needs-validation" novalidate
@@ -16,9 +16,9 @@
                         <div class="row">
                             <div class="col-md-6">
                                 <div class="form-group">
-                                    <label for="validationCustom01">Name in Arabic</label>
+                                    <label for="validationCustom01">{{ __('dashboard.name_arabic') }}</label>
                                     <input type="text" name="name_ar" class="form-control" id="validationCustom01"
-                                           placeholder="Name in Arabic" value="{{$category->getTranslatedAttribute('name','ar')}}" required>
+                                           placeholder="{{ __('dashboard.name_arabic') }}" value="{{$category->getTranslatedAttribute('name','ar')}}" required>
                                     @error('name_ar')
                                     <span class="text-danger">{{ $message }}</span>
                                     @enderror
@@ -26,9 +26,9 @@
                             </div>
                             <div class="col-md-6">
                                 <div class="form-group">
-                                    <label for="validationCustom02">Name in English</label>
+                                    <label for="validationCustom02">{{ __('dashboard.name_english') }}</label>
                                     <input type="text" name="name_en" class="form-control" id="validationCustom02"
-                                           placeholder="Name in English" value="{{ $category->name_en }}" required>
+                                           placeholder="{{ __('dashboard.name_english') }}" value="{{ $category->name_en }}" required>
                                     @error('name_en')
                                     <span class="text-danger">{{ $message }}</span>
                                     @enderror
@@ -38,7 +38,7 @@
                         <div class="row">
                             <div class="col-md-12">
                                 <div class="form-group">
-                                    <label for="validationCustom02">Parent Category</label>
+                                    <label for="validationCustom02">{{ __('dashboard.parent_cat') }}</label>
                                     <select name="parent_id" class="form-control" required>
                                         @foreach($parents as $parent)
                                             <option
@@ -54,10 +54,10 @@
                         </div>
                         <div class="row">
                             <div class="col-md-12">
-                                <label>Image</label>
+                                <label>{{ __('dashboard.image') }}</label>
                                 <div class="custom-file">
                                     <input type="file" name="image" class="custom-file-input" id="customFile" onchange="readURL(this);" >
-                                    <label class="custom-file-label" for="customFile">Choose file</label>
+                                    <label class="custom-file-label" for="customFile">{{ __('dashboard.select') }} {{ __('dashboard.image') }}</label>
                                     @error('image')
                                     <span class="text-danger">{{ $message }}</span>
                                     @enderror
@@ -72,7 +72,7 @@
                             </div>
                         </div>
                         <br>
-                        <button class="btn btn-primary" type="submit">Submit</button>
+                        <button class="btn btn-primary" type="submit">{{ __('dashboard.submit') }}/button>
                     </form>
                 </div>
             </div>

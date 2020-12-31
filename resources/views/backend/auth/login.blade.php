@@ -16,7 +16,11 @@
     <!-- Icons Css -->
     <link href="{{ asset('backend') }}/assets/css/icons.min.css" id="icons-style" rel="stylesheet" type="text/css"/>
     <!-- App Css-->
-    <link href="{{ asset('backend') }}/assets/css/app.min.css" id="app-style" rel="stylesheet" type="text/css"/>
+    @if(\App::getLocale() == 'en')
+        <link href="{{ asset('backend') }}/assets/css/app.min.css" rel="stylesheet" type="text/css" />
+    @else
+        <link href="{{ asset('backend') }}/assets/css/app-rtl.min.css" rel="stylesheet" type="text/css" />
+    @endif
 </head>
 <body class="auth-body-bg">
 {{--<div class="home-btn d-none d-sm-block">--}}
@@ -37,32 +41,30 @@
                                                 <img style="width: 80%;border: 2px solid #149eeb;border-radius: 10px 0;padding: 5px;background: rgba(20,158,235,0.08)" src="{{ asset('backend') }}/assets/images/logo.png" alt="logo"></a>
                                         </div>
 
-                                        <h4 class="font-size-18 mt-4">Welcome Back !</h4>
-                                        <p class="text-muted">Sign in to continue to BusinessDotKom.</p>
+                                        <h4 class="font-size-18 mt-4">@lang('dashboard.wlc_back') !</h4>
+                                        <p class="text-muted">@lang('dashboard.sign_in_to')</p>
                                     </div>
-
                                     <div class="p-2 mt-5">
                                         @include('common.done')
                                         <form method="POST" action="{{ route('backendLogin') }}">
                                             {{ csrf_field() }}
                                             <div class="form-group auth-form-group-custom mb-4">
                                                 <i class="ri-user-2-line auti-custom-input-icon"></i>
-                                                <label for="email">E-Mail Address</label>
+                                                <label for="email">@lang('dashboard.email')</label>
                                                 <input id="email" type="email" class="form-control" name="email"
                                                         required autocomplete="email"
-                                                       placeholder="Enter Email">
+                                                       placeholder="@lang('dashboard.email')">
                                             </div>
-
                                             <div class="form-group auth-form-group-custom mb-4">
                                                 <i class="ri-lock-2-line auti-custom-input-icon"></i>
-                                                <label for="password">Password</label>
+                                                <label for="password">@lang('dashboard.password')</label>
                                                 <input type="password" class="form-control" name="password" required
                                                        autocomplete="current-password" id="password"
-                                                       placeholder="Enter password">
+                                                       placeholder="@lang('dashboard.password')">
                                             </div>
                                             <div class="mt-4 text-center">
                                                 <button class="btn btn-primary w-md waves-effect waves-light"
-                                                        type="submit">Log In
+                                                        type="submit">@lang('dashboard.login')
                                                 </button>
                                             </div>
                                         </form>
