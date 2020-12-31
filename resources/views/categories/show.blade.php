@@ -323,10 +323,17 @@ $menu = false ;
                                     </div>
                                     <div class="prod-extra" style="position: inherit">
 
+<<<<<<< HEAD
                                         <a href="javascript:void(0)" id="fav-{{$product->id}}" title="add to favourite" data-placement="top" class="fav-{{$product->id}} {{$product->isFavorited() ? 'fav-active' : null  }} fav-pro " onclick="favtoggle({{$product->id }},{{Auth::user() ? Auth::user()->id : null}})">
                                             <i class="fa fa-heart"></i>
                                         </a>
                                     </div>
+=======
+<a href="javascript:void(0)" id="fav-{{$product->id}}" title="add to favourite" data-placement="top" class="fav-{{$product->id}} {{$product->isFavorited() ? 'fav-active' : null  }} fav-pro " onclick="favtoggle({{$product->id }},{{Auth::user() ? Auth::user()->id : null}})">
+    <i class="fa fa-heart"></i>
+</a>
+</div>
+>>>>>>> 3e831a1407b4483df18992c2ee8f4e0f4f78fe80
                                     <a href="{{url('product/'.$product->id)}}" class="img-hold">
 
                                         <img src="{{ $product->image ? url('storage/'.$product->image) : "https://i.imgur.com/mFI2maG.jpg" }}" alt="">
@@ -433,7 +440,11 @@ $menu = false ;
                                     <div class="i-data">
                                         <a href="{{url('product/'.$product->id)}}" class="title">{{$product->getTranslatedAttribute('name',\App::getLocale())}}</a>
 
+<<<<<<< HEAD
 
+=======
+                                      
+>>>>>>> 3e831a1407b4483df18992c2ee8f4e0f4f78fe80
 
                                         <span>{{$product->sale_price ? $product->sale_price : $product->price}}$</span>
 
