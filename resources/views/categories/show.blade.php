@@ -321,9 +321,12 @@ $menu = false ;
                                     <div class="offer-badge">
                                         <span>{{number_format((($product->sale_price/$product->price) * 100) ,2) }} %</span>
                                     </div>
-                                    <a href="javascript:void(0)" class="fav-pro">
-                                        <i class="fa fa-heart"></i>
-                                    </a>
+                                    <div class="prod-extra" style="position: inherit">
+
+                                        <a href="javascript:void(0)" id="fav-{{$product->id}}" title="add to favourite" data-placement="top" class="fav-{{$product->id}} {{$product->isFavorited() ? 'fav-active' : null  }} fav-pro " onclick="favtoggle({{$product->id }},{{Auth::user() ? Auth::user()->id : null}})">
+                                            <i class="fa fa-heart"></i>
+                                        </a>
+                                    </div>
                                     <a href="{{url('product/'.$product->id)}}" class="img-hold">
 
                                         <img src="{{ $product->image ? url('storage/'.$product->image) : "https://i.imgur.com/mFI2maG.jpg" }}" alt="">
@@ -348,7 +351,7 @@ $menu = false ;
 
                         @foreach($suppliers as $supplier)
 
-                        <div class="supv col-xs-12">
+                        <div class="sup-v col-xs-12">
                             <div class="cardo col-xs-12">
                                 <div class="c-inner col-md-6 col-xs-12">
                                     <div class="c-img">
@@ -430,29 +433,7 @@ $menu = false ;
                                     <div class="i-data">
                                         <a href="{{url('product/'.$product->id)}}" class="title">{{$product->getTranslatedAttribute('name',\App::getLocale())}}</a>
 
-                                        <div class="cardo" style="flex-grow: 1;padding:0px">
-                                            <div   class="c-inner" style="text-align: right;">
-                                                <div class="c-data">
-                                                    <p style="text-align: center;">
-                                                        @php $rating = $product->average_rating ; @endphp
-                                                        @foreach(range(1,5) as $i)
-                                                        @if($rating >0)
-                                                        @if($rating > 0.5)
-                                                        <i class="fa fa-star active"></i>
-                                                        @elseif($rating < 0.5 && $rating> 0)
-                                                            <i class="fas fa-star-half"></i>
-                                                            @endif
-                                                            @else
-                                                            <i class="fa fa-star"></i>
-                                                            @endif
-                                                            @php $rating--; @endphp
 
-                                                            @endforeach
-
-                                                    </p>
-                                                </div>
-                                            </div>
-                                        </div>
 
                                         <span>{{$product->sale_price ? $product->sale_price : $product->price}}$</span>
 
@@ -568,7 +549,8 @@ $menu = false ;
 
             type: 'POST',
 
-            url: '{!!URL::to('product_favorite ')!!}',
+            url: '{!!URL::to('
+            product_favorite ')!!}',
 
             data: {
                 product_id: product_id,
@@ -652,7 +634,8 @@ $menu = false ;
 
             type: 'POST',
 
-            url: '{!!URL::to('user_follow ')!!}',
+            url: '{!!URL::to('
+            user_follow ')!!}',
 
             data: {
                 follower_id: follower_id,

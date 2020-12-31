@@ -7,7 +7,7 @@
         <div class="col-xl-12">
             <div class="card">
                 <div class="card-body">
-                    <h4 class="card-title">Edit Industrial Zone " {{ $zone->name }} "</h4>
+                    <h4 class="card-title">{{ __('dashboard.edit') }} {{ __('dashboard.zone') }} " {{$zone->getTranslatedAttribute('name',app()->getLocale())}} "</h4>
                     <p class="card-title-desc"></p>
                     <form method="post" action="{{ route('zones.update' , $zone->id) }}" class="needs-validation"
                           novalidate enctype="multipart/form-data">
@@ -16,9 +16,9 @@
                         <div class="row">
                             <div class="col-md-6">
                                 <div class="form-group">
-                                    <label for="validationCustom01">Name in Arabic</label>
+                                    <label for="validationCustom01">{{ __('dashboard.name_arabic') }}</label>
                                     <input type="text" name="name_ar" class="form-control" id="validationCustom01"
-                                           placeholder="Name in Arabic" value="{{$zone->getTranslatedAttribute('name','ar')}}" required>
+                                           placeholder="{{ __('dashboard.name_arabic') }}" value="{{$zone->getTranslatedAttribute('name','ar')}}" required>
                                     @error('name_ar')
                                     <span class="text-danger">{{ $message }}</span>
                                     @enderror
@@ -26,9 +26,9 @@
                             </div>
                             <div class="col-md-6">
                                 <div class="form-group">
-                                    <label for="validationCustom02">Name in English</label>
+                                    <label for="validationCustom02">{{ __('dashboard.name_english') }}</label>
                                     <input type="text" name="name_en" class="form-control" id="validationCustom02"
-                                           placeholder="Name in English" value="{{ $zone->name }}" required>
+                                           placeholder="{{ __('dashboard.name_english') }}" value="{{ $zone->name }}" required>
                                     @error('name_en')
                                     <span class="text-danger">{{ $message }}</span>
                                     @enderror
@@ -38,7 +38,7 @@
                         <div class="row">
                             <div class="col-md-12">
                                 <div class="form-group">
-                                    <label for="validationCustom03">Country</label>
+                                    <label for="validationCustom03">{{ __('dashboard.country') }}</label>
                                     <select class="form-control select2" id="validationCustom03"
                                             required>
                                         @foreach($countries as $country)
@@ -57,7 +57,7 @@
                         <div class="row">
                             <div class="col-md-12">
                                 <div class="form-group">
-                                    <label for="state_id">State</label>
+                                    <label for="state_id">{{ __('dashboard.state') }}</label>
                                     <select name="state_id" class="form-control select2" id="state_id" required>
                                         @foreach($states as $state)
                                             <option
@@ -74,10 +74,10 @@
                         <hr>
                         <div class="row">
                             <div class="col-md-12 col-md-12 images mb-3">
-                                <label for="image">Image</label>
+                                <label for="image">{{ __('dashboard.image') }}</label>
                                 <div class="custom-file">
                                     <input type="file" name="image" class="custom-file-input" id="image" onchange="readURL(this);">
-                                    <label class="custom-file-label" for="image">Choose Image</label>
+                                    <label class="custom-file-label" for="image">{{ __('dashboard.select') }} {{ __('dashboard.image') }}</label>
                                     @error('image')
                                     <span class="text-danger">{{ $message }}</span>
                                     @enderror
@@ -92,7 +92,7 @@
                             </div>
                         </div>
                         <hr>
-                        <button class="btn btn-primary" type="submit">Submit</button>
+                        <button class="btn btn-primary" type="submit">{{ __('dashboard.submit') }}</button>
                     </form>
                 </div>
             </div>

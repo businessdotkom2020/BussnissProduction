@@ -7,7 +7,7 @@
         <div class="col-xl-12">
             <div class="card">
                 <div class="card-body">
-                    <h4 class="card-title">Edit Moderator " {{ $moderator->name }} "</h4>
+                    <h4 class="card-title">@lang('dashboard.edit') @lang('dashboard.moderator') " {{ $moderator->name }} "</h4>
                     <p class="card-title-desc"></p>
                     <form method="post" action="{{ route('moderators.update' , $moderator->id) }}" class="needs-validation" novalidate>
                         @csrf
@@ -15,8 +15,8 @@
                         <div class="row">
                             <div class="col-md-6">
                                 <div class="form-group">
-                                    <label for="name">Name</label>
-                                    <input type="text" name="name" class="form-control" id="name" placeholder="Name" value="{{ $moderator->name }}" required>
+                                    <label for="name">@lang('dashboard.name')</label>
+                                    <input type="text" name="name" class="form-control" id="name" placeholder="@lang('dashboard.name')" value="{{ $moderator->name }}" required>
                                     @error('name')
                                     <span class="text-danger">{{ $message }}</span>
                                     @enderror
@@ -24,8 +24,8 @@
                             </div>
                             <div class="col-md-6">
                                 <div class="form-group">
-                                    <label for="email">Email</label>
-                                    <input type="email" name="email" class="form-control" id="email" placeholder="Email" value="{{ $moderator->email }}" required>
+                                    <label for="email">@lang('dashboard.email')</label>
+                                    <input type="email" name="email" class="form-control" id="email" placeholder="@lang('dashboard.email')" value="{{ $moderator->email }}" required>
                                     @error('email')
                                     <span class="text-danger">{{ $message }}</span>
                                     @enderror
@@ -35,8 +35,8 @@
                         <div class="row">
                             <div class="col-md-12">
                                 <div class="form-group">
-                                    <label for="password">Password <small class="text-danger">In case of change</small></label>
-                                    <input type="password" name="password" class="form-control" id="password ( In case of change )" placeholder="Password">
+                                    <label for="password">@lang('dashboard.password') <small class="text-danger">@lang('dashboard.in_case_of')</small></label>
+                                    <input type="password" name="password" class="form-control" id="password ( In case of change )" placeholder="@lang('dashboard.password')">
                                     @error('password')
                                     <span class="text-danger">{{ $message }}</span>
                                     @enderror
@@ -46,7 +46,7 @@
                         <div class="row">
                             <div class="col-md-12 col-12 mb-3">
                                 <label>
-                                    Permissions
+                                    @lang('dashboard.roles')
                                 </label>
                                 <div class="form-group" data-select2-id="126">
                                     <select style="width: 100%" name="roles[]" class="select2 form-control select2-hidden-accessible" multiple="" data-select2-id="7" tabindex="-1" aria-hidden="true">
@@ -67,12 +67,12 @@
                             <div class="col-md-4">
                                 <div class="custom-control custom-checkbox mb-3">
                                     <input type="checkbox" name="status" class="custom-control-input" value="1" id="customCheck2" @if($moderator->status == 1) checked @endif>
-                                    <label class="custom-control-label" for="customCheck2">Active</label>
+                                    <label class="custom-control-label" for="customCheck2">@lang('dashboard.active')</label>
                                 </div>
                             </div>
                         </div>
                         <hr>
-                        <button class="btn btn-primary" type="submit">Submit</button>
+                        <button class="btn btn-primary" type="submit">@lang('dashboard.submit')</button>
                     </form>
                 </div>
             </div>

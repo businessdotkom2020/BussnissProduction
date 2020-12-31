@@ -12,12 +12,17 @@
     <div class="row">
         <div class="col-12">
             <div class="page-title-box d-flex align-items-center justify-content-between">
-                <h4 class="mb-0">Dashboard</h4>
+                <h4 class="mb-0">{{ __('dashboard.dashboard') }}</h4>
 
                 <div class="page-title-right">
                     <ol class="breadcrumb m-0">
-                        <li class="breadcrumb-item"><a href="/">Business</a></li>
-                        <li class="breadcrumb-item active">Dashboard</li>
+                        @if(app()->getLocale() =='en')
+                        <li class="breadcrumb-item"><a href="/">{{ __('dashboard.business_com') }}</a></li>
+                        <li class="breadcrumb-item active">{{ __('dashboard.dashboard') }}</li>
+                        @else
+                            <li class="breadcrumb-item active">{{ __('dashboard.dashboard') }}</li>
+                            <li class="breadcrumb-item"><a href="/">{{ __('dashboard.business_com') }}</a></li>
+                        @endif
                     </ol>
                 </div>
 
@@ -33,7 +38,7 @@
                         <div class="card-body">
                             <div class="media">
                                 <div class="media-body overflow-hidden">
-                                    <p class="text-truncate font-size-14 mb-2">Admins</p>
+                                    <p class="text-truncate font-size-14 mb-2">{{ __('dashboard.moderators') }}</p>
                                     <h4 class="mb-0">{{ count(\App\Models\Moderator::all()) }}</h4>
                                 </div>
                                 <div class="text-primary">
@@ -48,7 +53,7 @@
                         <div class="card-body">
                             <div class="media">
                                 <div class="media-body overflow-hidden">
-                                    <p class="text-truncate font-size-14 mb-2">Suppliers</p>
+                                    <p class="text-truncate font-size-14 mb-2">{{ __('dashboard.sellers') }}</p>
                                     <h4 class="mb-0">{{ count(\App\Models\User::whereNotNull('state_id')->get()) }}</h4>
                                 </div>
                                 <div class="text-primary">
@@ -63,7 +68,7 @@
                         <div class="card-body">
                             <div class="media">
                                 <div class="media-body overflow-hidden">
-                                    <p class="text-truncate font-size-14 mb-2">Suppliers Clients</p>
+                                    <p class="text-truncate font-size-14 mb-2">{{ __('dashboard.clients') }}</p>
                                     <h4 class="mb-0">{{ count(\App\Models\Client::all()) }}</h4>
                                 </div>
                                 <div class="text-primary">
@@ -78,7 +83,7 @@
                         <div class="card-body">
                             <div class="media">
                                 <div class="media-body overflow-hidden">
-                                    <p class="text-truncate font-size-14 mb-2">Suppliers Branches</p>
+                                    <p class="text-truncate font-size-14 mb-2">{{ __('dashboard.brans') }}</p>
                                     <h4 class="mb-0">{{ count(\App\Models\Branch::all()) }}</h4>
                                 </div>
                                 <div class="text-primary">
@@ -93,7 +98,7 @@
                         <div class="card-body">
                             <div class="media">
                                 <div class="media-body overflow-hidden">
-                                    <p class="text-truncate font-size-14 mb-2">Normal Users</p>
+                                    <p class="text-truncate font-size-14 mb-2">{{ __('dashboard.n_users') }}</p>
                                     <h4 class="mb-0">{{ count(\App\Models\User::whereNull('state_id')->get()) }}</h4>
                                 </div>
                                 <div class="text-primary">
@@ -108,7 +113,7 @@
                         <div class="card-body">
                             <div class="media">
                                 <div class="media-body overflow-hidden">
-                                    <p class="text-truncate font-size-14 mb-2">Products</p>
+                                    <p class="text-truncate font-size-14 mb-2">{{ __('dashboard.products') }}</p>
                                     <h4 class="mb-0">{{ count(\App\Models\Product::get()) }}</h4>
                                 </div>
                                 <div class="text-primary">
@@ -123,7 +128,7 @@
                         <div class="card-body">
                             <div class="media">
                                 <div class="media-body overflow-hidden">
-                                    <p class="text-truncate font-size-14 mb-2">Requests</p>
+                                    <p class="text-truncate font-size-14 mb-2">{{ __('dashboard.requests') }}</p>
                                     <h4 class="mb-0">{{ count(\App\Models\Request::get()) }}</h4>
                                 </div>
                                 <div class="text-primary">
@@ -138,7 +143,7 @@
                         <div class="card-body">
                             <div class="media">
                                 <div class="media-body overflow-hidden">
-                                    <p class="text-truncate font-size-14 mb-2">Jobs</p>
+                                    <p class="text-truncate font-size-14 mb-2">{{ __('dashboard.jobs') }}</p>
                                     <h4 class="mb-0">{{ count(\App\Models\Request::get()) }}</h4>
                                 </div>
                                 <div class="text-primary">
@@ -153,7 +158,7 @@
                         <div class="card-body">
                             <div class="media">
                                 <div class="media-body overflow-hidden">
-                                    <p class="text-truncate font-size-14 mb-2">Services</p>
+                                    <p class="text-truncate font-size-14 mb-2">{{ __('dashboard.services') }}</p>
                                     <h4 class="mb-0">{{ count(\App\Models\Service::get()) }}</h4>
                                 </div>
                                 <div class="text-primary">
@@ -168,7 +173,7 @@
                         <div class="card-body">
                             <div class="media">
                                 <div class="media-body overflow-hidden">
-                                    <p class="text-truncate font-size-14 mb-2">Tags</p>
+                                    <p class="text-truncate font-size-14 mb-2">{{ __('dashboard.tag') }}</p>
                                     <h4 class="mb-0">{{ count(\App\Models\Tag::get()) }}</h4>
                                 </div>
                                 <div class="text-primary">
@@ -183,7 +188,7 @@
                         <div class="card-body">
                             <div class="media">
                                 <div class="media-body overflow-hidden">
-                                    <p class="text-truncate font-size-14 mb-2">Brands</p>
+                                    <p class="text-truncate font-size-14 mb-2">{{ __('dashboard.brands') }}</p>
                                     <h4 class="mb-0">{{ count(\App\Models\Brand::get()) }}</h4>
                                 </div>
                                 <div class="text-primary">
@@ -198,7 +203,7 @@
                         <div class="card-body">
                             <div class="media">
                                 <div class="media-body overflow-hidden">
-                                    <p class="text-truncate font-size-14 mb-2">Slider Web Images</p>
+                                    <p class="text-truncate font-size-14 mb-2">{{ __('dashboard.web_slider') }}</p>
                                     <h4 class="mb-0">{{ count(\App\Models\Slider::where('type' , 'web')->get()) }}</h4>
                                 </div>
                                 <div class="text-primary">
@@ -213,7 +218,7 @@
                         <div class="card-body">
                             <div class="media">
                                 <div class="media-body overflow-hidden">
-                                    <p class="text-truncate font-size-14 mb-2">Slider App Images</p>
+                                    <p class="text-truncate font-size-14 mb-2">{{ __('dashboard.app_slider') }}</p>
                                     <h4 class="mb-0">{{ count(\App\Models\Slider::where('type' , 'app')->get()) }}</h4>
                                 </div>
                                 <div class="text-primary">
@@ -228,7 +233,7 @@
                         <div class="card-body">
                             <div class="media">
                                 <div class="media-body overflow-hidden">
-                                    <p class="text-truncate font-size-14 mb-2">Counties</p>
+                                    <p class="text-truncate font-size-14 mb-2">{{ __('dashboard.countries') }}</p>
                                     <h4 class="mb-0">{{ count(\App\Models\Country::get()) }}</h4>
                                 </div>
                                 <div class="text-primary">
@@ -243,7 +248,7 @@
                         <div class="card-body">
                             <div class="media">
                                 <div class="media-body overflow-hidden">
-                                    <p class="text-truncate font-size-14 mb-2">States</p>
+                                    <p class="text-truncate font-size-14 mb-2">{{ __('dashboard.states') }}</p>
                                     <h4 class="mb-0">{{ count(\App\Models\State::get()) }}</h4>
                                 </div>
                                 <div class="text-primary">
@@ -258,7 +263,7 @@
                         <div class="card-body">
                             <div class="media">
                                 <div class="media-body overflow-hidden">
-                                    <p class="text-truncate font-size-14 mb-2">Cities</p>
+                                    <p class="text-truncate font-size-14 mb-2">{{ __('dashboard.cities') }}</p>
                                     <h4 class="mb-0">{{ count(\App\Models\City::get()) }}</h4>
                                 </div>
                                 <div class="text-primary">
@@ -273,7 +278,7 @@
                         <div class="card-body">
                             <div class="media">
                                 <div class="media-body overflow-hidden">
-                                    <p class="text-truncate font-size-14 mb-2">Industrial Zones</p>
+                                    <p class="text-truncate font-size-14 mb-2">{{ __('dashboard.zones') }}</p>
                                     <h4 class="mb-0">{{ count(\App\Models\IndustrialZones::get()) }}</h4>
                                 </div>
                                 <div class="text-primary">
@@ -288,7 +293,7 @@
                         <div class="card-body">
                             <div class="media">
                                 <div class="media-body overflow-hidden">
-                                    <p class="text-truncate font-size-14 mb-2">Attributes</p>
+                                    <p class="text-truncate font-size-14 mb-2">{{ __('dashboard.attributes') }}</p>
                                     <h4 class="mb-0">{{ count(\App\Models\Attribute::get()) }}</h4>
                                 </div>
                                 <div class="text-primary">
@@ -307,10 +312,10 @@
         <div class="col-lg-6">
             <div class="card">
                 <div class="card-body">
-                    <h4 class="card-title mb-3">Last Suppliers</h4>
+                    <h4 class="card-title mb-3">{{ __('dashboard.last') }} {{ __('dashboard.sellers') }}</h4>
                     <div>
                         <div class="text-center">
-                            <p class="mb-2">Total Suppliers</p>
+                            <p class="mb-2">{{ __('dashboard.total') }} {{ __('dashboard.sellers') }}</p>
                             <h4>{{ count(\App\Models\User::whereNotNull('state_id')->get()) }}</h4>
                         </div>
 
@@ -319,14 +324,14 @@
                                 <tbody>
                                 <tr style="background: rgba(3,3,3,0.1)">
                                     <td>
-                                        Image
+                                        {{ __('dashboard.image') }}
                                     </td>
                                     <td>
-                                        <h5 class="font-size-14 mb-0">Name</h5>
+                                        <h5 class="font-size-14 mb-0">{{ __('dashboard.name') }}</h5>
                                     </td>
-                                    <td><div id="spak-chart3">Followers</div></td>
+                                    <td><div id="spak-chart3"></div></td>
                                     <td>
-                                        <p class="text-muted mb-0">Join Date</p>
+                                        <p class="text-muted mb-0">{{ __('dashboard.join_date') }}</p>
                                     </td>
                                 </tr>
                                 @foreach(\App\Models\User::whereNotNull('state_id')->orderBy('id' , 'desc')->paginate(5) as $supplier)
@@ -355,7 +360,7 @@
                             </table>
                         </div>
                         <div class="text-center mt-4">
-                            <a href="{{ route('sellerss.index') }}" class="btn btn-primary btn-sm">View more</a>
+                            <a href="{{ route('sellerss.index') }}" class="btn btn-primary btn-sm">{{ __('dashboard.more') }}</a>
                         </div>
                     </div>
                 </div>
@@ -364,10 +369,10 @@
         <div class="col-lg-6">
             <div class="card">
                 <div class="card-body">
-                    <h4 class="card-title mb-3">Last Normal Users</h4>
+                    <h4 class="card-title mb-3">{{ __('dashboard.last') }} {{ __('dashboard.n_users') }}</h4>
                     <div>
                         <div class="text-center">
-                            <p class="mb-2">Total Normal User</p>
+                            <p class="mb-2">{{ __('dashboard.total') }} {{ __('dashboard.n_users') }}</p>
                             <h4>{{ count(\App\Models\User::whereNull('state_id')->get()) }}</h4>
                         </div>
 
@@ -376,14 +381,14 @@
                                 <tbody>
                                 <tr style="background: rgba(3,3,3,0.1)">
                                     <td>
-                                        Image
+                                        {{ __('dashboard.image') }}
                                     </td>
                                     <td>
-                                        <h5 class="font-size-14 mb-0">Name</h5>
+                                        <h5 class="font-size-14 mb-0">{{ __('dashboard.name') }}</h5>
                                     </td>
                                     <td><div id="spak-chart3"></div></td>
                                     <td>
-                                        <p class="text-muted mb-0">Join Date</p>
+                                        <p class="text-muted mb-0">{{ __('dashboard.join_date') }}</p>
                                     </td>
                                 </tr>
                                 @foreach(\App\Models\User::whereNull('state_id')->orderBy('id' , 'desc')->paginate(5) as $user)
@@ -410,7 +415,7 @@
                             </table>
                         </div>
                         <div class="text-center mt-4">
-                            <a href="{{ route('users.index') }}" class="btn btn-primary btn-sm">View more</a>
+                            <a href="{{ route('users.index') }}" class="btn btn-primary btn-sm">{{ __('dashboard.more') }}</a>
                         </div>
                     </div>
                 </div>

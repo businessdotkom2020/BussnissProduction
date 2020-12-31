@@ -17,9 +17,7 @@ $menu = true ;
                     <img src="{{ asset('/web/images/stocks/3.png')}}" alt="">
                 </div>
                 <div class="i-data col-md-6 col-xs-12">
-                    <h3>{{$slider->product->getTranslatedAttribute('name',\App::getLocale())}} </h3>
-                    <p>{{$slider->product->getTranslatedAttribute('description',\App::getLocale())}}</p>
-                    <span>{{$slider->product->sale_price ? $slider->product->sale_price : $slider->product->price}}$</span>
+ 
                 </div>
             </div>
             @endforeach
