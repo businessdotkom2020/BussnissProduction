@@ -130,91 +130,83 @@ $menu = true ;
                 <a href="{{url('products/latest')}}" class="more">@lang('general.view_all')</a>
             </div>
             <div class="g-body col-xs-12">
+                <div class="slick-wrapper">
+                    <div id="slick1">
+                    @foreach ($latest_products as $product)
+                        <div class="slide-item">
+                            <div class="flex-container-row">
+                                <div class="block b-product">
+                                    <div class="inner">
+                                        <div class="i-img">
+                                            @if($product->product_condition == 'new')
+                                            <div class="ribbon">
+                                                <span>@lang('general.new')</span>
+                                            </div>
+                                            @endif
+                                            <div class="offer-badge">
+                                                <span>{{number_format((($product->sale_price/$product->price) * 100) ,2) }} %</span>
+                                            </div>
+
+                                            <div class="prod-extra" style="position: inherit">
+
+                                                <a href="javascript:void(0)" id="fav-{{$product->id}}" title="add to favourite" data-placement="top" class="fav-{{$product->id}} {{$product->isFavorited() ? 'fav-active' : null  }} fav-pro " onclick="favtoggle({{$product->id }},{{Auth::user() ? Auth::user()->id : null}})">
+                                                    <i class="fa fa-heart"></i>
+                                                </a>
+                                            </div>
 
 
-                <div class="owl-carousel products-slider-2-row">
-                @foreach ($latest_products as $product)
-                    <div class="item">
-                        <div class="flex-container-row">
-                            <div class="block b-product">
-                                <div class="inner">
-                                    <div class="i-img">
-                                        @if($product->product_condition == 'new')
-                                        <div class="ribbon">
-                                            <span>@lang('general.new')</span>
-                                        </div>
-                                        @endif
-                                        <div class="offer-badge">
-                                            <span>{{number_format((($product->sale_price/$product->price) * 100) ,2) }} %</span>
-                                        </div>
 
-                                        <div class="prod-extra" style="position: inherit">
+                                            <a href="{{url('product/'.$product->id)}}" class="img-hold">
+                                                <img src="{{url('storage/'.$product->image)}}" alt="">
+                                                <img src="{{ json_decode($product->images ) ? url('storage/'.(json_decode($product->images))[0]) : "https://i.imgur.com/mFI2maG.jpg" }}" class="sec-img">
 
-                                            <a href="javascript:void(0)" id="fav-{{$product->id}}" title="add to favourite" data-placement="top" class="fav-{{$product->id}} {{$product->isFavorited() ? 'fav-active' : null  }} fav-pro " onclick="favtoggle({{$product->id }},{{Auth::user() ? Auth::user()->id : null}})">
-                                                <i class="fa fa-heart"></i>
                                             </a>
                                         </div>
+                                        <div class="i-data">
+
+                                            <a href="{{url('product/'.$product->id)}}" class="title">{{$product->getTranslatedAttribute('name',\App::getLocale())}}</a>
 
 
 
-                                        <a href="{{url('product/'.$product->id)}}" class="img-hold">
-                                            <img src="{{url('storage/'.$product->image)}}" alt="">
-                                            <img src="{{ json_decode($product->images ) ? url('storage/'.(json_decode($product->images))[0]) : "https://i.imgur.com/mFI2maG.jpg" }}" class="sec-img">
+                                            <!-- <p>{{ Str::limit($product->getTranslatedAttribute('description',\App::getLocale()),50 )}}</p> -->
 
-                                        </a>
-                                    </div>
-                                    <div class="i-data">
+                                            <div class="cardo" style="flex-grow: 1;padding:0px">
+                                                <div class="c-inner" style="text-align: right;">
+                                                    <div class="c-data">
+                                                        <p style="text-align: center;">
+                                                            @php $rating = $product->average_rating ; @endphp
+                                                            @foreach(range(1,5) as $i)
+                                                            @if($rating >0)
+                                                            @if($rating > 0.5)
+                                                            <i class="fa fa-star active"></i>
+                                                            @elseif($rating < 0.5 && $rating> 0)
+                                                                <i class="fas fa-star-half"></i>
+                                                                @endif
+                                                                @else
+                                                                <i class="fa fa-star"></i>
+                                                                @endif
+                                                                @php $rating--; @endphp
 
-                                        <a href="{{url('product/'.$product->id)}}" class="title">{{$product->getTranslatedAttribute('name',\App::getLocale())}}</a>
+                                                                @endforeach
 
-
-
-                                        <!-- <p>{{ Str::limit($product->getTranslatedAttribute('description',\App::getLocale()),50 )}}</p> -->
-
-                                        <div class="cardo" style="flex-grow: 1;padding:0px">
-                                            <div class="c-inner" style="text-align: right;">
-                                                <div class="c-data">
-                                                    <p style="text-align: center;">
-                                                        @php $rating = $product->average_rating ; @endphp
-                                                        @foreach(range(1,5) as $i)
-                                                        @if($rating >0)
-                                                        @if($rating > 0.5)
-                                                        <i class="fa fa-star active"></i>
-                                                        @elseif($rating < 0.5 && $rating> 0)
-                                                            <i class="fas fa-star-half"></i>
-                                                            @endif
-                                                            @else
-                                                            <i class="fa fa-star"></i>
-                                                            @endif
-                                                            @php $rating--; @endphp
-
-                                                            @endforeach
-
-                                                    </p>
+                                                        </p>
+                                                    </div>
                                                 </div>
                                             </div>
+
+                                            <span>{{$product->sale_price ? $product->sale_price : $product->price}}$</span>
+
+
+                                            <a class="btn" href="#" data-toggle="modal" data-target="#contact_{{$product->user_id}}" target="_blank">@lang('general.contact_supplier')</a>
                                         </div>
 
-                                        <span>{{$product->sale_price ? $product->sale_price : $product->price}}$</span>
-
-
-                                        <a class="btn" href="#" data-toggle="modal" data-target="#contact_{{$product->user_id}}" target="_blank">@lang('general.contact_supplier')</a>
                                     </div>
-
                                 </div>
                             </div>
                         </div>
+                    @endforeach
                     </div>
-                @endforeach
                 </div>
-                @foreach ($latest_products as $product)
-                
-                @endforeach
-
-
-
-
-
             </div>
         </div>
     </div>
