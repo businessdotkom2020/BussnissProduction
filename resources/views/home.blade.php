@@ -70,12 +70,14 @@ $menu = true ;
                             <div class="block-product">
                                 <div class="img-block">
                                     <a href="{{url('product/'.$product->id)}}" class="img-hold">
-                                        <img src="{{url('storage/'.$product->image)}}" alt="">
+                                        <!-- <img src="{{url('storage/'.$product->image)}}" alt=""> -->
+                                        <img src="https://i.ibb.co/2cbfP9p/20961-20965-20969iphone12promaxblueproductimage1000x1000png.png" border="0">
                                         <!-- <img src="{{ json_decode($product->images ) ? url('storage/'.(json_decode($product->images))[0]) : "https://i.imgur.com/mFI2maG.jpg" }}" class="sec-img"> -->
                                     </a>
                                 </div>
                                 <div class="details-block">
-                                    <a href="#" class="name">name product name product</a>
+                                    <a href="#" class="name">name product</a>
+                                    <span>81$</span>
                                     <a href="#" class="btn">shop now</a>
                                 </div>
                             </div>
