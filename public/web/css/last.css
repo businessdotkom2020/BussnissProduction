@@ -27,4 +27,36 @@
   }
   
   .hero-sl .owl-controls{position:absolute; margin-top:300px;}
-  
+  .search-g select.form-control, .search-g .nice-select {
+    border-right-color: transparent !important;
+}
+
+.search-g .nice-select:before {content: '';position: absolute;top: 50%;transform: translateY(-50%);width: 1px;height: 70%;background: #e4e4e4;right: 0;}
+
+.mid-head .search-g .form-group .nice-select span {
+    color: #565454;
+}
+
+.mid-head .search-g .form-group .nice-select:after {
+    border-color: #565454;
+}
+
+.mid-head .search-g .form-group .form-control::placeholder {
+    color : #565454;
+}
+
+.nice-select.open .list {
+    max-height: 290px;
+    overflow-y: scroll;
+}
+.nice-select.open .list::-webkit-scrollbar {width: 5px;}
+
+.nice-select.open .list::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+    box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.13);
+}
+
+.nice-select.open .list::-webkit-scrollbar-thumb {
+    background-color: #dadada;
+    outline: 1px solid white;
+}
