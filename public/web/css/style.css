@@ -719,6 +719,8 @@ footer.main-footer.col-xs-12 {
     border-top-left-radius: 0;
     border-bottom-left-radius: 0;
     background: var(--main-color);
+    color: #fff;
+    border: none;
 }
 
 .mid-head .search-g .form-group .btn i {
