@@ -12,6 +12,7 @@
     <!-- Css Files -->
 
     <link rel="stylesheet" href="{{ asset('/web/css/style.css')}}">
+    <link rel="stylesheet" href="{{ asset('/web/css/last.css')}}">
 
     @if (\App::getLocale() == 'ar')
 
