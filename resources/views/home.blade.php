@@ -21,7 +21,7 @@ $menu = true ;
                                         <a href="#" class="btn">shop now</a>
                                     </div>
                                     <div class="img-item">
-                                        <div class="img" style="background-image: url(images/Vella.jpg)"></div>
+                                        <div class="img" style="background-image: url(https://i.imgur.com/mFI2maG.jpg)"></div>
                                     </div>
                                 </div>
                             </div>
@@ -37,7 +37,7 @@ $menu = true ;
                                         <a href="#" class="btn">shop now</a>
                                     </div>
                                     <div class="img-item">
-                                        <div class="img" style="background-image: url(images/car.jpg)"></div>
+                                        <div class="img" style="background-image: url(https://i.imgur.com/mFI2maG.jpg)"></div>
                                     </div>
                                 </div>
                             </div>
@@ -53,7 +53,7 @@ $menu = true ;
                                         <a href="#" class="btn">shop now</a>
                                     </div>
                                     <div class="img-item">
-                                        <div class="img" style="background-image: url(images/Vella.jpg)"></div>
+                                        <div class="img" style="background-image: url(https://i.imgur.com/mFI2maG.jpg)"></div>
                                     </div>
                                 </div>
                             </div>
@@ -71,7 +71,7 @@ $menu = true ;
                                 <div class="img-block">
                                     <a href="{{url('product/'.$product->id)}}" class="img-hold">
                                         <img src="{{url('storage/'.$product->image)}}" alt="">
-                                        <img src="{{ json_decode($product->images ) ? url('storage/'.(json_decode($product->images))[0]) : "https://i.imgur.com/mFI2maG.jpg" }}" class="sec-img">
+                                        <!-- <img src="{{ json_decode($product->images ) ? url('storage/'.(json_decode($product->images))[0]) : "https://i.imgur.com/mFI2maG.jpg" }}" class="sec-img"> -->
                                     </a>
                                 </div>
                                 <div class="details-block">
