@@ -482,6 +482,9 @@
 :root {
   --background: #121621;
 }
+#loading {
+  background-color: var(--background) !important;
+}
 .loader {
   --duration: 3s;
   --primary: rgba(39, 94, 254, 1);
@@ -491,7 +494,6 @@
   top: 50%;
   left: 50%;
   transform: translate(-50%,-50%);
-  background-color: var(--background);
   width: 200px;
   height: 320px;
   position: relative;
