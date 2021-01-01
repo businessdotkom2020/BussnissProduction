@@ -335,3 +335,31 @@
   padding: 12px 0;
 }
 /* End Slider */
+
+.bottom-head .categories li > ul > li > a {padding: 15px 25px !important;background: #f9f9f9 !important;position: relative;}
+
+.bottom-head .categories li.active>a {
+    padding: 15px 60px;
+}
+
+.bottom-head .categories .menu-item-has-children 
+ > .sub-menu > li a {border: none !important;border-bottom: 1px #e8e8e8 solid !important;}
+
+.bottom-head .categories li > ul > li > a:hover img {
+    filter: invert(53%) sepia(24%) saturate(5094%) hue-rotate(172deg) brightness(96%) contrast(92%);
+}
+
+.bottom-head .categories li > ul > li > a img {
+    transition: all .3s linear;
+}
+
+.bottom-head .categories li > ul > li > a:hover {
+    color: #fff !important;
+}
+
+.bottom-head .categories .menu-item-has-children > .sub-menu > li > a:hover {
+    color: #139feb !important;
+    background: transparent;
+}
+
+a {}

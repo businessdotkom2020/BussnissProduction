@@ -389,9 +389,9 @@ i {
 }
 
 .menu-item-has-children .sub-menu li a:hover {
-    background-color: #139feb;
+    background-color: #13A024;
     color: #fff!important;
-    transition: all .3s
+    transition: all .3s;
 }
 
 .menu-item-has-children>a:after {
@@ -759,10 +759,10 @@ footer.main-footer.col-xs-12 {
 }
 
 .bottom-head .categories li>a {
-    padding: 15px 30px;
+    padding: 15px 60px;
     font-family: pop-semibold;
     color: #fff;
-    background-color: #139feb
+    background-color: #139feb;
 }
 
 .bottom-head .categories li>a i {
@@ -845,10 +845,10 @@ footer.main-footer.col-xs-12 {
 .bottom-head .categories .menu-item-has-children .sub-menu li a {
     background-color: transparent;
     color: #252525!important;
-    border: 1px solid #ececec!important;
+    border: 1px solid #ececec;
     border-top: 0!important;
     padding: 10px 15px;
-    text-align: initial
+    text-align: initial;
 }
 
 .bottom-head .categories .menu-item-has-children .sub-menu li a img {
