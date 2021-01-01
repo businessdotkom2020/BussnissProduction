@@ -1,19 +1,32 @@
-@charset "utf-8";@import "fonts.css";@import "bootstrap.min.css";@import "bootstrap-grid.min.css";@import "font-awesome.min.css";@import "jquery.fancybox.min.css";@import "owl.carousel.min.css";@import "aos.css";@import "nice-select.css";@import "ion.rangeSlider.min.css";@import "select2.min.css";
+@charset "utf-8";
+@import "fonts.css";
+@import "bootstrap.min.css";
+@import "bootstrap-grid.min.css";
+@import "font-awesome.min.css";
+@import "jquery.fancybox.min.css";
+@import "owl.carousel.min.css";
+@import "aos.css";
+@import "nice-select.css";
+@import "ion.rangeSlider.min.css";
+@import "select2.min.css";
+
 * {
     -webkit-box-sizing: border-box;
     box-sizing: border-box;
     text-transform: capitalize;
     font-family: pop-regular;
     color: #181818;
-    font-size: 14px;
+    font-size: 14px
 }
 
-@import "https://fonts.googleapis.com/css2?family=Tajawal:wght@200;300;400;500;700;800;900&display=swap";.owl-carousel {
+@import "https://fonts.googleapis.com/css2?family=Tajawal:wght@200;300;400;500;700;800;900&display=swap";
+
+.owl-carousel {
     direction: ltr
 }
 
 .tooltip {
-    z-index: 1100!important
+    z-index: 1100 !important
 }
 
 .tooltip-inner {
@@ -45,7 +58,13 @@ select {
     display: inline-block
 }
 
-h1,h2,h3,h4,h5,h6,ul {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+ul {
     margin: 0;
     padding: 0;
     border: 0;
@@ -54,7 +73,17 @@ h1,h2,h3,h4,h5,h6,ul {
     background: 0 0
 }
 
-article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section {
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
     display: block
 }
 
@@ -67,9 +96,9 @@ ul {
 }
 
 iframe {
-    width: 100%!important;
-    border: 0!important;
-    height: 100%!important
+    width: 100% !important;
+    border: 0 !important;
+    height: 100% !important
 }
 
 ::-moz-selection {
@@ -82,7 +111,10 @@ iframe {
     color: #fff
 }
 
-a,a:hover,a:link,a:visited {
+a,
+a:hover,
+a:link,
+a:visited {
     text-decoration: none;
     outline: 0;
     cursor: pointer
@@ -115,14 +147,16 @@ z {
 }
 
 .modal-open {
-    overflow: hidden!important
+    overflow: hidden !important
 }
 
 .modal-backdrop.in {
     opacity: .9
 }
 
-input,select,textarea {
+input,
+select,
+textarea {
     vertical-align: middle;
     margin: 0;
     padding: 0;
@@ -153,12 +187,13 @@ textarea {
 }
 
 textarea.form-control {
-    height: 170px!important;
+    height: 170px !important;
     line-height: normal;
-    padding-top: 8px!important
+    padding-top: 8px !important
 }
 
-.form-control,.form-group {
+.form-control,
+.form-group {
     margin-bottom: 0
 }
 
@@ -350,9 +385,9 @@ i {
     min-width: 160px;
     background-color: #fff;
     z-index: 11;
-    box-shadow: 0 0 15px rgba(0,0,0,.1);
+    box-shadow: 0 0 15px rgba(0, 0, 0, .1);
     padding: 7px 0;
-    box-shadow: 0 0 3px rgba(0,0,0,.15);
+    box-shadow: 0 0 3px rgba(0, 0, 0, .15);
     width: 100%
 }
 
@@ -364,8 +399,8 @@ i {
 }
 
 .menu-item-has-children .sub-menu li {
-    display: block!important;
-    margin: 0!important
+    display: block !important;
+    margin: 0 !important
 }
 
 .menu-item-has-children .sub-menu li:after {
@@ -379,8 +414,8 @@ i {
     font-size: 12px;
     color: #333;
     border-radius: 0;
-    border: 0!important;
-    color: #333!important;
+    border: 0 !important;
+    color: #333 !important;
     transition: all .3s
 }
 
@@ -389,9 +424,9 @@ i {
 }
 
 .menu-item-has-children .sub-menu li a:hover {
-    background-color: #13A024;
-    color: #fff!important;
-    transition: all .3s;
+    background-color: #13a024;
+    color: #fff !important;
+    transition: all .3s
 }
 
 .menu-item-has-children>a:after {
@@ -421,16 +456,17 @@ i {
     transition: all .3s;
     text-transform: uppercase;
     background-color: #139feb;
-    outline: 0!important
+    outline: 0 !important
 }
 
 .btn i {
     margin-right: 20px
 }
 
-.btn:focus,.btn:hover {
+.btn:focus,
+.btn:hover {
     color: #fff;
-    background-color: #252525!important;
+    background-color: #252525 !important;
     transition: all .3s
 }
 
@@ -438,7 +474,8 @@ i {
     fill: #fff
 }
 
-.owl-carousel .owl-nav button.owl-next,.owl-carousel .owl-nav button.owl-prev {
+.owl-carousel .owl-nav button.owl-next,
+.owl-carousel .owl-nav button.owl-prev {
     position: absolute;
     top: 50%;
     transform: translateY(-50%) rotate(-45deg);
@@ -462,7 +499,8 @@ i {
     transform: translateY(-50%) rotate(130deg)
 }
 
-.owl-carousel .owl-nav button.owl-next:hover,.owl-carousel .owl-nav button.owl-prev:hover {
+.owl-carousel .owl-nav button.owl-next:hover,
+.owl-carousel .owl-nav button.owl-prev:hover {
     border-color: #00a0a8;
     color: #fff;
     transition: all .3s
@@ -488,16 +526,16 @@ footer.main-footer.col-xs-12 {
     top: 57%;
     width: 6400px;
     height: 100%;
-    -webkit-animation: wave 7s cubic-bezier(.36,.45,.63,.53) infinite;
-    animation: wave 7s cubic-bezier(.36,.45,.63,.53) infinite;
-    -webkit-transform: translate3d(0,0,0);
-    transform: translate3d(0,0,0)
+    -webkit-animation: wave 7s cubic-bezier(.36, .45, .63, .53) infinite;
+    animation: wave 7s cubic-bezier(.36, .45, .63, .53) infinite;
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0)
 }
 
 .wave:nth-of-type(2) {
     top: 65%;
-    -webkit-animation: wave 7s cubic-bezier(.36,.45,.63,.53) -125ms infinite,swell 7s ease -1.25s infinite;
-    animation: wave 7s cubic-bezier(.36,.45,.63,.53) -125ms infinite,swell 7s ease -1.25s infinite;
+    -webkit-animation: wave 7s cubic-bezier(.36, .45, .63, .53) -125ms infinite, swell 7s ease -1.25s infinite;
+    animation: wave 7s cubic-bezier(.36, .45, .63, .53) -125ms infinite, swell 7s ease -1.25s infinite;
     opacity: 1
 }
 
@@ -522,26 +560,30 @@ footer.main-footer.col-xs-12 {
 }
 
 @-webkit-keyframes swell {
-    0%,100% {
-        -webkit-transform: translate3d(0,-10px,0);
-        transform: translate3d(0,-10px,0)
+
+    0%,
+    100% {
+        -webkit-transform: translate3d(0, -10px, 0);
+        transform: translate3d(0, -10px, 0)
     }
 
     50% {
-        -webkit-transform: translate3d(0,5px,0);
-        transform: translate3d(0,5px,0)
+        -webkit-transform: translate3d(0, 5px, 0);
+        transform: translate3d(0, 5px, 0)
     }
 }
 
 @keyframes swell {
-    0%,100% {
-        -webkit-transform: translate3d(0,-10px,0);
-        transform: translate3d(0,-10px,0)
+
+    0%,
+    100% {
+        -webkit-transform: translate3d(0, -10px, 0);
+        transform: translate3d(0, -10px, 0)
     }
 
     50% {
-        -webkit-transform: translate3d(0,5px,0);
-        transform: translate3d(0,5px,0)
+        -webkit-transform: translate3d(0, 5px, 0);
+        transform: translate3d(0, 5px, 0)
     }
 }
 
@@ -578,7 +620,7 @@ footer.main-footer.col-xs-12 {
     border-width: 0 1px;
     border-style: solid;
     padding: 7px 15px;
-    border-color: rgba(255,255,255,.23);
+    border-color: rgba(255, 255, 255, .23);
     font-size: 13px
 }
 
@@ -590,7 +632,7 @@ footer.main-footer.col-xs-12 {
     display: inline-block;
     padding: 6px 15px;
     border-width: 0 1px 0 0;
-    border-color: rgba(255,255,255,.2);
+    border-color: rgba(255, 255, 255, .2);
     border-style: solid;
     color: #fff;
     margin: 0 -2px
@@ -603,7 +645,7 @@ footer.main-footer.col-xs-12 {
 .top-head .right-un .h-links a {
     color: #fff;
     font-size: 13px;
-    border-color: rgba(255,255,255,.2);
+    border-color: rgba(255, 255, 255, .2);
     padding: 6px 15px;
     border-width: 0 1px;
     border-style: solid;
@@ -615,7 +657,7 @@ footer.main-footer.col-xs-12 {
 }
 
 .top-head a:hover {
-    background-color: rgba(255,255,255,.12)
+    background-color: rgba(255, 255, 255, .12)
 }
 
 .mid-head {
@@ -653,7 +695,7 @@ footer.main-footer.col-xs-12 {
     height: 55px;
     line-height: 55px;
     box-shadow: none;
-    padding-right: 230px;
+    padding-right: 230px
 }
 
 .mid-head .search-g .form-group .nice-select {
@@ -663,7 +705,7 @@ footer.main-footer.col-xs-12 {
     right: 49px;
     border-radius: 0;
     min-width: 170px;
-    padding: 0 15px;
+    padding: 0 15px
 }
 
 .mid-head .search-g .form-group .btn {
@@ -676,12 +718,13 @@ footer.main-footer.col-xs-12 {
     width: 55px;
     border-top-left-radius: 0;
     border-bottom-left-radius: 0;
+    background: var(--main-color);
 }
 
 .mid-head .search-g .form-group .btn i {
     margin: 0;
     font-size: 17px;
-    line-height: 55px;
+    line-height: 55px
 }
 
 .mid-head .search-g .form-group .nice-select span {
@@ -696,7 +739,7 @@ footer.main-footer.col-xs-12 {
 .mid-head .search-g .form-group .nice-select .list {
     border: 0;
     border-radius: 0;
-    box-shadow: 0 0 3px rgba(0,0,0,.15);
+    box-shadow: 0 0 3px rgba(0, 0, 0, .15);
     width: 100%;
     padding: 7px 0;
     margin: 2px 0 0
@@ -762,7 +805,7 @@ footer.main-footer.col-xs-12 {
     padding: 15px 60px;
     font-family: pop-semibold;
     color: #fff;
-    background-color: #139feb;
+    background-color: #139feb
 }
 
 .bottom-head .categories li>a i {
@@ -811,7 +854,7 @@ footer.main-footer.col-xs-12 {
     position: absolute;
     right: 0;
     top: -13px;
-    font-family: tajawal,sans-serif;
+    font-family: tajawal, sans-serif;
     font-weight: 500;
     box-shadow: 0 0 0 10px #fff;
     text-transform: uppercase
@@ -833,7 +876,8 @@ footer.main-footer.col-xs-12 {
     color: #139feb
 }
 
-.bottom-head .categories .menu-item-has-children.active .sub-menu,.bottom-head .categories .menu-item-has-children:hover .sub-menu {
+.bottom-head .categories .menu-item-has-children.active .sub-menu,
+.bottom-head .categories .menu-item-has-children:hover .sub-menu {
     opacity: 1;
     visibility: visible;
     top: 100%;
@@ -844,11 +888,11 @@ footer.main-footer.col-xs-12 {
 
 .bottom-head .categories .menu-item-has-children .sub-menu li a {
     background-color: transparent;
-    color: #252525!important;
+    color: #252525 !important;
     border: 1px solid #ececec;
-    border-top: 0!important;
+    border-top: 0 !important;
     padding: 10px 15px;
-    text-align: initial;
+    text-align: initial
 }
 
 .bottom-head .categories .menu-item-has-children .sub-menu li a img {
@@ -864,7 +908,7 @@ footer.main-footer.col-xs-12 {
     left: 120%;
     top: 1px;
     background-color: #fff;
-    box-shadow: 0 0 3px rgba(0,0,0,.15);
+    box-shadow: 0 0 3px rgba(0, 0, 0, .15);
     width: 700px;
     opacity: 0;
     transition: all .3s;
@@ -881,7 +925,7 @@ footer.main-footer.col-xs-12 {
 
 .bottom-head .categories .menu-item-has-children .sub-menu li a:hover {
     background-color: #f9f9f9;
-    color: #252525!important
+    color: #252525 !important
 }
 
 .has-mega-sub:hover .mega-sub {
@@ -892,7 +936,7 @@ footer.main-footer.col-xs-12 {
 }
 
 .bottom-head .categories .menu-item-has-children .sub-menu li .mega-sub a {
-    border: 0!important;
+    border: 0 !important;
     padding: 0
 }
 
@@ -907,14 +951,14 @@ footer.main-footer.col-xs-12 {
 }
 
 .bottom-head .categories .menu-item-has-children .sub-menu li .mega-sub .s-item ul li {
-    margin-bottom: 10px!important
+    margin-bottom: 10px !important
 }
 
 .bottom-head .categories .menu-item-has-children .sub-menu li .mega-sub .s-item ul li a {
-    color: #777!important;
+    color: #777 !important;
     font-family: inherit;
     font-size: 14px;
-    background-color: transparent!important;
+    background-color: transparent !important;
     transition: all .3s
 }
 
@@ -925,7 +969,7 @@ footer.main-footer.col-xs-12 {
 }
 
 .bottom-head .categories .menu-item-has-children .sub-menu li .mega-sub .s-item ul li a:hover {
-    color: #139feb!important;
+    color: #139feb !important;
     transition: all .3s;
     padding-left: 7px
 }
@@ -1013,7 +1057,7 @@ footer.main-footer.col-xs-12 {
 }
 
 .cats ul li a {
-    background: -webkit-linear-gradient(left,#149eeb,#0962e3);
+    background: -webkit-linear-gradient(left, #149eeb, #0962e3);
     padding: 15px 20px;
     border-radius: 10px;
     color: #fff;
@@ -1050,31 +1094,31 @@ footer.main-footer.col-xs-12 {
 }
 
 .cats ul li:nth-of-type(2) a {
-    background: -webkit-linear-gradient(left,#f72888,#f72867)
+    background: -webkit-linear-gradient(left, #f72888, #f72867)
 }
 
 .cats ul li:nth-of-type(3) a {
-    background: -webkit-linear-gradient(left,#ffa724,#ec5315)
+    background: -webkit-linear-gradient(left, #ffa724, #ec5315)
 }
 
 .cats ul li:nth-of-type(4) a {
-    background: -webkit-linear-gradient(left,#39f999,#13dc69)
+    background: -webkit-linear-gradient(left, #39f999, #13dc69)
 }
 
 .cats ul li:nth-of-type(5) a {
-    background: -webkit-linear-gradient(left,#999,#767676)
+    background: -webkit-linear-gradient(left, #999, #767676)
 }
 
 .cats ul li:nth-of-type(6) a {
-    background: -webkit-linear-gradient(left,#f72888,#f72867)
+    background: -webkit-linear-gradient(left, #f72888, #f72867)
 }
 
 .cats ul li:nth-of-type(7) a {
-    background: -webkit-linear-gradient(left,#f72888,#f72867)
+    background: -webkit-linear-gradient(left, #f72888, #f72867)
 }
 
 .cats ul li:nth-of-type(8) a {
-    background: -webkit-linear-gradient(left,#f72888,#f72867)
+    background: -webkit-linear-gradient(left, #f72888, #f72867)
 }
 
 .cats ul li a:hover {
@@ -1095,7 +1139,7 @@ footer.main-footer.col-xs-12 {
 }
 
 .g-head h3 {
-    font-family: tajawal,sans-serif;
+    font-family: tajawal, sans-serif;
     font-weight: 500;
     font-size: 35px;
     display: inline-block
@@ -1199,7 +1243,7 @@ footer.main-footer.col-xs-12 {
     width: 100px;
     display: block;
     background-color: #139feb;
-    box-shadow: 0 3px 10px -5px rgba(0,0,0,.12);
+    box-shadow: 0 3px 10px -5px rgba(0, 0, 0, .12);
     position: absolute;
     top: 19px;
     right: -21px
@@ -1286,7 +1330,7 @@ footer.main-footer.col-xs-12 {
 
 .b-product .inner .i-data .title {
     color: #252525;
-    font-family: tajawal,sans-serif;
+    font-family: tajawal, sans-serif;
     font-weight: 500;
     font-size: 15px;
     text-overflow: ellipsis;
@@ -1327,7 +1371,7 @@ footer.main-footer.col-xs-12 {
 .b-product .inner:hover {
     border-color: #fff;
     transition: all .3s;
-    box-shadow: 0 0 25px rgba(0,0,0,.05);
+    box-shadow: 0 0 25px rgba(0, 0, 0, .05);
     transform: translateY(-10px)
 }
 
@@ -1373,7 +1417,7 @@ footer.main-footer.col-xs-12 {
     padding: 30px;
     margin: 0 auto 20px;
     border-radius: 100%;
-    box-shadow: 0 0 25px rgba(0,0,0,.07);
+    box-shadow: 0 0 25px rgba(0, 0, 0, .07);
     width: 150px;
     transition: all .3s
 }
@@ -1435,7 +1479,7 @@ footer.main-footer.col-xs-12 {
 }
 
 .cardo .c-inner .c-data .btn.following:hover {
-    background-color: #f55a5a!important;
+    background-color: #f55a5a !important;
     transition: all .3s
 }
 
@@ -1520,7 +1564,7 @@ footer.main-footer.col-xs-12 {
 }
 
 .s-block:hover .s-img {
-    box-shadow: 0 5px 15px rgba(0,0,0,.07);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, .07);
     transition: all .3s;
     transform: scale(1.05)
 }
@@ -1637,7 +1681,7 @@ footer.main-footer.col-xs-12 {
     width: 300px;
     background-color: #fff;
     z-index: 999;
-    box-shadow: -3px 0 15px rgba(0,0,0,.08);
+    box-shadow: -3px 0 15px rgba(0, 0, 0, .08);
     transition: all .3s;
     height: 100%;
     transform: translateX(150%)
@@ -1692,7 +1736,7 @@ footer.main-footer.col-xs-12 {
     object-fit: scale-down;
     border-radius: 100%;
     background-color: #fff;
-    box-shadow: 0 0 15px rgba(0,0,0,.05);
+    box-shadow: 0 0 15px rgba(0, 0, 0, .05);
     border: 1px solid #f7f7f7;
     float: left;
     margin-right: 10px;
@@ -1744,7 +1788,7 @@ footer.main-footer.col-xs-12 {
     position: fixed;
     width: 100%;
     height: 100%;
-    background-color: rgba(0,0,0,.65);
+    background-color: rgba(0, 0, 0, .65);
     top: 0;
     left: 0;
     z-index: 99;
@@ -1784,7 +1828,7 @@ footer.main-footer.col-xs-12 {
 .main-sidebar .nav-tabs li a {
     background-color: #fcfcfc;
     display: block;
-    border: 0!important;
+    border: 0 !important;
     border-radius: 0;
     padding: 15px;
     font-family: pop-semibold;
@@ -1832,14 +1876,15 @@ footer.main-footer.col-xs-12 {
 
 .main-sidebar ul li .sub-menu li a {
     padding: 12px 40px;
-    border-bottom: 1px solid #f9f9f9!important
+    border-bottom: 1px solid #f9f9f9 !important
 }
 
 .main-sidebar ul li .sub-menu li:last-child a {
-    border-bottom: 0!important
+    border-bottom: 0 !important
 }
 
-.main-sidebar .st-body,.user-area .st-body {
+.main-sidebar .st-body,
+.user-area .st-body {
     max-height: calc(100% - 60px);
     height: 100%
 }
@@ -1886,7 +1931,7 @@ footer.main-footer.col-xs-12 {
     width: 100%;
     background-color: #fff;
     z-index: 98;
-    box-shadow: 0 3px 15px rgba(0,0,0,.08);
+    box-shadow: 0 3px 15px rgba(0, 0, 0, .08);
     padding: 10px 20px;
     display: none
 }
@@ -1903,7 +1948,8 @@ footer.main-footer.col-xs-12 {
     float: right
 }
 
-.mob-header .mob-btns .op-menu,.mob-header .mob-btns .op-search {
+.mob-header .mob-btns .op-menu,
+.mob-header .mob-btns .op-search {
     outline: 0;
     border: 1px solid #dfdfdf;
     width: 40px;
@@ -1918,7 +1964,7 @@ footer.main-footer.col-xs-12 {
     bottom: 0;
     left: 0;
     width: 100%;
-    box-shadow: 0 -3px 15px rgba(0,0,0,.08);
+    box-shadow: 0 -3px 15px rgba(0, 0, 0, .08);
     z-index: 98;
     background-color: #fff;
     display: none
@@ -1955,13 +2001,17 @@ footer.main-footer.col-xs-12 {
     top: 8px
 }
 
-.sticky-menu a:focus,.sticky-menu a:hover {
+.sticky-menu a:focus,
+.sticky-menu a:hover {
     background-color: #139feb;
     color: #fff;
     transition: all .3s
 }
 
-.sticky-menu a:focus i,.sticky-menu a:focus span,.sticky-menu a:hover i,.sticky-menu a:hover span {
+.sticky-menu a:focus i,
+.sticky-menu a:focus span,
+.sticky-menu a:hover i,
+.sticky-menu a:hover span {
     color: #fff;
     transition: all .3s
 }
@@ -1995,7 +2045,7 @@ footer.main-footer.col-xs-12 {
 }
 
 .sup-v .cardo .c-inner {
-    box-shadow: 0 0 25px rgba(0,0,0,.07);
+    box-shadow: 0 0 25px rgba(0, 0, 0, .07);
     float: left;
     text-align: inherit;
     border-radius: 10px;
@@ -2070,7 +2120,7 @@ footer.main-footer.col-xs-12 {
     line-height: 35px;
     color: #333;
     display: inline-block;
-    box-shadow: 0 0 15px rgba(0,0,0,.06);
+    box-shadow: 0 0 15px rgba(0, 0, 0, .06);
     background-color: #fff;
     font-size: 15px;
     transition: all .3s
@@ -2126,7 +2176,7 @@ footer.main-footer.col-xs-12 {
     left: 0;
     top: 0;
     width: 100%;
-    background-color: rgba(0,0,0,.5);
+    background-color: rgba(0, 0, 0, .5);
     height: 100%
 }
 
@@ -2151,7 +2201,7 @@ footer.main-footer.col-xs-12 {
 }
 
 .box-filter .nav-tabs li a {
-    border: 0!important;
+    border: 0 !important;
     margin: 0;
     position: relative;
     color: #333;
@@ -2301,16 +2351,21 @@ footer.main-footer.col-xs-12 {
     padding-left: 20px
 }
 
-.irs--round .irs-from,.irs--round .irs-single,.irs--round .irs-to {
+.irs--round .irs-from,
+.irs--round .irs-single,
+.irs--round .irs-to {
     background-color: #139feb;
     font-size: 12px
 }
 
-.irs--round .irs-from:before,.irs--round .irs-single:before,.irs--round .irs-to:before {
+.irs--round .irs-from:before,
+.irs--round .irs-single:before,
+.irs--round .irs-to:before {
     border-top-color: #139feb
 }
 
-.irs--round .irs-max,.irs--round .irs-min {
+.irs--round .irs-max,
+.irs--round .irs-min {
     font-size: 12px
 }
 
@@ -2320,7 +2375,7 @@ footer.main-footer.col-xs-12 {
 
 .irs--round .irs-handle {
     border-color: #139feb;
-    box-shadow: 0 1px 3px rgba(19,159,235,.35)
+    box-shadow: 0 1px 3px rgba(19, 159, 235, .35)
 }
 
 .op-filter {
@@ -2356,7 +2411,8 @@ footer.main-footer.col-xs-12 {
     position: relative
 }
 
-.all .slider .owl-dots,.all .slider .owl-nav {
+.all .slider .owl-dots,
+.all .slider .owl-nav {
     display: none
 }
 
@@ -2468,7 +2524,8 @@ footer.main-footer.col-xs-12 {
     border-bottom-right-radius: 5px
 }
 
-.all .slider-two .owl-dots,.all .slider-two .owl-nav {
+.all .slider-two .owl-dots,
+.all .slider-two .owl-nav {
     display: none
 }
 
@@ -2751,7 +2808,7 @@ footer.main-footer.col-xs-12 {
 
 .product-middle .nav-tabs li a {
     margin: 0;
-    border: 0!important;
+    border: 0 !important;
     display: block;
     background-color: transparent;
     background-color: #f2f2f2;
@@ -2760,7 +2817,8 @@ footer.main-footer.col-xs-12 {
     padding: 7px 20px
 }
 
-.product-middle .nav-tabs li a:focus,.product-middle .nav-tabs li.active a {
+.product-middle .nav-tabs li a:focus,
+.product-middle .nav-tabs li.active a {
     background-color: #139feb;
     color: #fff
 }
@@ -2778,7 +2836,7 @@ footer.main-footer.col-xs-12 {
 }
 
 .rev-item {
-    box-shadow: 0 0 15px rgba(0,0,0,.12);
+    box-shadow: 0 0 15px rgba(0, 0, 0, .12);
     margin-bottom: 20px;
     border-radius: 5px;
     padding: 20px
@@ -3050,7 +3108,7 @@ button.close:hover {
     position: absolute;
     border-bottom-left-radius: 10px;
     border-bottom-right-radius: 10px;
-    box-shadow: 0 11px 15px rgba(0,0,0,.1);
+    box-shadow: 0 11px 15px rgba(0, 0, 0, .1);
     z-index: 9;
     bottom: -84px
 }
@@ -3059,7 +3117,8 @@ button.close:hover {
     padding: 8px 11px
 }
 
-.reqs-wrap .block .inner .author a:hover,.reqs-wrap .block .inner .title a:hover {
+.reqs-wrap .block .inner .author a:hover,
+.reqs-wrap .block .inner .title a:hover {
     color: #139feb;
     transition: all .3s
 }
@@ -3152,13 +3211,14 @@ button.close:hover {
     color: #ccc
 }
 
-.file-upload-wrapper .card.card-body.has-error .file-upload-message .file-upload-error,.file-upload-wrapper .card.card-body.has-preview .btn.btn-sm.btn-danger {
+.file-upload-wrapper .card.card-body.has-error .file-upload-message .file-upload-error,
+.file-upload-wrapper .card.card-body.has-preview .btn.btn-sm.btn-danger {
     display: block
 }
 
 .file-upload i {
     font-size: 63px;
-    margin: 0 7px 0 0!important;
+    margin: 0 7px 0 0 !important;
     position: relative;
     top: -1px;
     opacity: .15
@@ -3289,9 +3349,9 @@ button.close:hover {
     font-size: 80px;
     top: 50%;
     left: 50%;
-    -webkit-transform: translate(-50%,-50%);
-    -ms-transform: translate(-50%,-50%);
-    transform: translate(-50%,-50%);
+    -webkit-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
     position: absolute;
     color: #777
 }
@@ -3300,9 +3360,9 @@ button.close:hover {
     position: absolute;
     top: 50%;
     left: 50%;
-    -webkit-transform: translate(-50%,-50%);
-    -ms-transform: translate(-50%,-50%);
-    transform: translate(-50%,-50%);
+    -webkit-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
     margin-top: 10px;
     text-transform: uppercase;
     font-weight: 900;
@@ -3323,7 +3383,7 @@ button.close:hover {
     right: 0;
     bottom: 0;
     z-index: 3;
-    background: rgba(0,0,0,.7);
+    background: rgba(0, 0, 0, .7);
     opacity: 0;
     -webkit-transition: opacity .15s linear;
     -o-transition: opacity .15s linear;
@@ -3333,9 +3393,9 @@ button.close:hover {
 .file-upload-wrapper .card.card-body .file-upload-preview .file-upload-infos .file-upload-infos-inner {
     position: absolute;
     top: 50%;
-    -webkit-transform: translate(0,-40%);
-    -ms-transform: translate(0,-40%);
-    transform: translate(0,-40%);
+    -webkit-transform: translate(0, -40%);
+    -ms-transform: translate(0, -40%);
+    transform: translate(0, -40%);
     -webkit-backface-visibility: hidden;
     backface-visibility: hidden;
     width: 100%;
@@ -3354,7 +3414,7 @@ button.close:hover {
     overflow: hidden;
     -o-text-overflow: ellipsis;
     text-overflow: ellipsis;
-    color: #fff!important;
+    color: #fff !important;
     text-align: center;
     line-height: 25px;
     font-weight: 700
@@ -3373,15 +3433,16 @@ button.close:hover {
     position: absolute;
     top: 0;
     left: 50%;
-    -webkit-transform: translate(-50%,0);
-    -ms-transform: translate(-50%,0);
-    transform: translate(-50%,0);
+    -webkit-transform: translate(-50%, 0);
+    -ms-transform: translate(-50%, 0);
+    transform: translate(-50%, 0);
     background: #fff;
     width: 30px;
     height: 2px
 }
 
-.file-upload-wrapper .card.card-body:hover .btn.btn-sm.btn-danger,.file-upload-wrapper .card.card-body:hover .file-upload-preview .file-upload-infos {
+.file-upload-wrapper .card.card-body:hover .btn.btn-sm.btn-danger,
+.file-upload-wrapper .card.card-body:hover .file-upload-preview .file-upload-infos {
     opacity: 1
 }
 
@@ -3390,7 +3451,7 @@ button.close:hover {
 }
 
 .file-upload-wrapper .card.card-body.touch-fallback {
-    height: auto!important
+    height: auto !important
 }
 
 .file-upload-wrapper .card.card-body.touch-fallback:hover {
@@ -3409,15 +3470,16 @@ button.close:hover {
     position: relative
 }
 
-.file-upload-wrapper .card.card-body.touch-fallback .file-upload-preview .file-upload-infos .file-upload-infos-inner p.file-upload-infos-message::before,.file-upload-wrapper .card.card-body.touch-fallback.has-preview .file-upload-message {
+.file-upload-wrapper .card.card-body.touch-fallback .file-upload-preview .file-upload-infos .file-upload-infos-inner p.file-upload-infos-message::before,
+.file-upload-wrapper .card.card-body.touch-fallback.has-preview .file-upload-message {
     display: none
 }
 
 .file-upload-wrapper .card.card-body.touch-fallback .file-upload-preview .file-upload-render .file-upload-font-file {
     position: relative;
-    -webkit-transform: translate(0,0);
-    -ms-transform: translate(0,0);
-    transform: translate(0,0);
+    -webkit-transform: translate(0, 0);
+    -ms-transform: translate(0, 0);
+    transform: translate(0, 0);
     top: 0;
     left: 0
 }
@@ -3429,9 +3491,9 @@ button.close:hover {
 
 .file-upload-wrapper .card.card-body.touch-fallback .file-upload-preview .file-upload-render img {
     position: relative;
-    -webkit-transform: translate(0,0);
-    -ms-transform: translate(0,0);
-    transform: translate(0,0)
+    -webkit-transform: translate(0, 0);
+    -ms-transform: translate(0, 0);
+    transform: translate(0, 0)
 }
 
 .file-upload-wrapper .card.card-body.touch-fallback .file-upload-preview .file-upload-infos {
@@ -3443,9 +3505,9 @@ button.close:hover {
 .file-upload-wrapper .card.card-body.touch-fallback .file-upload-preview .file-upload-infos .file-upload-infos-inner {
     position: relative;
     top: 0;
-    -webkit-transform: translate(0,0);
-    -ms-transform: translate(0,0);
-    transform: translate(0,0);
+    -webkit-transform: translate(0, 0);
+    -ms-transform: translate(0, 0);
+    transform: translate(0, 0);
     padding: 5px 90px 5px 0
 }
 
@@ -3472,9 +3534,9 @@ button.close:hover {
 }
 
 .file-upload-wrapper .card.card-body.touch-fallback .file-upload-message {
-    -webkit-transform: translate(0,0);
-    -ms-transform: translate(0,0);
-    transform: translate(0,0);
+    -webkit-transform: translate(0, 0);
+    -ms-transform: translate(0, 0);
+    transform: translate(0, 0);
     padding: 40px 0
 }
 
@@ -3519,13 +3581,13 @@ button.close:hover {
     right: 0;
     bottom: 0;
     z-index: 3;
-    background: rgba(243,65,65,.8);
+    background: rgba(243, 65, 65, .8);
     text-align: left;
     visibility: hidden;
     opacity: 0;
-    -webkit-transition: visibility 0s linear .15s,opacity .15s linear;
-    -o-transition: visibility 0s linear .15s,opacity .15s linear;
-    transition: visibility 0s linear .15s,opacity .15s linear
+    -webkit-transition: visibility 0s linear .15s, opacity .15s linear;
+    -o-transition: visibility 0s linear .15s, opacity .15s linear;
+    transition: visibility 0s linear .15s, opacity .15s linear
 }
 
 .file-upload-wrapper .card.card-body .file-upload-errors-container ul {
@@ -3684,14 +3746,15 @@ button.close:hover {
 
 .fav-wrap .nav-tabs li a {
     display: block;
-    border: 0!important;
+    border: 0 !important;
     background-color: #777;
     border-radius: 50px;
     color: #fff;
     transition: all .3s
 }
 
-.fav-wrap .nav-tabs li a:focus,.fav-wrap .nav-tabs li.active a {
+.fav-wrap .nav-tabs li a:focus,
+.fav-wrap .nav-tabs li.active a {
     background-color: #139feb;
     color: #fff;
     transition: all .3s
@@ -3803,7 +3866,7 @@ button.close:hover {
 
 .service-wrap .nav-tabs li a {
     display: block;
-    border: 0!important;
+    border: 0 !important;
     background-color: #f4f4f4;
     color: #333;
     padding: 10px 20px;
@@ -3811,13 +3874,15 @@ button.close:hover {
     transition: all .3s
 }
 
-.service-wrap .nav-tabs li a:focus,.service-wrap .nav-tabs li.active a {
+.service-wrap .nav-tabs li a:focus,
+.service-wrap .nav-tabs li.active a {
     background-color: #139feb;
     color: #fff;
     transition: all .3s
 }
 
-.service-wrap .tab-pane .nav-tabs li a:focus,.service-wrap .tab-pane .nav-tabs li.active a {
+.service-wrap .tab-pane .nav-tabs li a:focus,
+.service-wrap .tab-pane .nav-tabs li.active a {
     background-color: #14e798
 }
 
@@ -3868,7 +3933,7 @@ button.close:hover {
 }
 
 .supp-data .supp-img {
-    box-shadow: 0 0 3px 0 rgba(0,0,0,.27);
+    box-shadow: 0 0 3px 0 rgba(0, 0, 0, .27);
     background-position: center;
     background-size: 100% 100%;
     height: 200px;
@@ -3978,7 +4043,7 @@ button.close:hover {
 
 .supp-prof-inner .nav-tabs li a {
     display: block;
-    border: 0!important;
+    border: 0 !important;
     background-color: #f4f4f4;
     color: #333;
     padding: 10px 20px;
@@ -3986,7 +4051,8 @@ button.close:hover {
     transition: all .3s
 }
 
-.supp-prof-inner .nav-tabs li a:focus,.supp-prof-inner .nav-tabs li.active a {
+.supp-prof-inner .nav-tabs li a:focus,
+.supp-prof-inner .nav-tabs li.active a {
     background-color: #139feb;
     color: #fff;
     transition: all .3s
@@ -4008,7 +4074,7 @@ button.close:hover {
 }
 
 .supp-btns .following:hover {
-    background-color: #f55a5a!important;
+    background-color: #f55a5a !important;
     transition: all .3s
 }
 
@@ -4036,7 +4102,7 @@ button.close:hover {
 .supp-prof-about .nav-tabs {
     border: 0;
     background-color: #fff;
-    box-shadow: 0 0 15px rgba(0,0,0,.09);
+    box-shadow: 0 0 15px rgba(0, 0, 0, .09);
     border-radius: 15px;
     overflow: hidden
 }
@@ -4048,11 +4114,11 @@ button.close:hover {
 
 .supp-prof-about .nav-tabs li a {
     display: block;
-    border: 0!important;
+    border: 0 !important;
     margin: 0;
     padding: 14px 20px;
     color: #333;
-    border-bottom: 1px solid #f5f5f5!important;
+    border-bottom: 1px solid #f5f5f5 !important;
     transition: all .3s
 }
 
@@ -4103,14 +4169,14 @@ button.close:hover {
 .branch-o {
     background-color: #fff;
     padding: 20px;
-    box-shadow: 0 0 15px rgba(0,0,0,.09);
+    box-shadow: 0 0 15px rgba(0, 0, 0, .09);
     border-radius: 15px;
     overflow: hidden;
     margin-bottom: 20px
 }
 
 .branch-o h4 {
-    font-family: tajawal,sans-serif;
+    font-family: tajawal, sans-serif;
     font-weight: 500;
     margin-bottom: 25px;
     font-size: 23px
@@ -4121,7 +4187,7 @@ button.close:hover {
 }
 
 .branch-o .pr-item {
-    padding: 0!important
+    padding: 0 !important
 }
 
 .branch-o h4 .btn {
@@ -4195,7 +4261,8 @@ button.close:hover {
     color: #25d366
 }
 
-.tab-pane .fav-wrap,.tab-pane .following-wrap {
+.tab-pane .fav-wrap,
+.tab-pane .following-wrap {
     padding: 0;
     background-color: transparent
 }
@@ -4269,7 +4336,7 @@ button.close:hover {
 }
 
 .supp-card .c-img {
-    box-shadow: 0 0 3px 0 rgba(0,0,0,.27);
+    box-shadow: 0 0 3px 0 rgba(0, 0, 0, .27);
     background-position: center;
     background-size: 100% 100%;
     height: 120px;
@@ -4375,7 +4442,7 @@ button.close:hover {
     font-size: 15px;
     border-radius: 50px;
     padding: 0 25px;
-    box-shadow: 0 0 15px rgba(0,0,0,.07)
+    box-shadow: 0 0 15px rgba(0, 0, 0, .07)
 }
 
 .sign-wrap .form-group .btn {
@@ -4460,7 +4527,7 @@ button.close:hover {
 
 .sign-wrap.sup-wrap form .ito-h .select-nosearch:not(.nice-select)+.select2-container {
     display: block;
-    width: 100%!important
+    width: 100% !important
 }
 
 .select2-container--default.select2-container .select2-selection--multiple {
@@ -4476,7 +4543,7 @@ button.close:hover {
 .select2-container--default .select2-selection--multiple .select2-selection__choice {
     background-color: #fff;
     border: 0;
-    box-shadow: 0 0 15px rgba(0,0,0,.09);
+    box-shadow: 0 0 15px rgba(0, 0, 0, .09);
     border-radius: 50px;
     padding: 5px 10px;
     position: relative;
@@ -4575,7 +4642,7 @@ button.close:hover {
     z-index: 1;
     color: #fff;
     font-size: 17px;
-    transform: translate(-50%,-50%)
+    transform: translate(-50%, -50%)
 }
 
 .sign-wrap form .ito-h .prof-img label i {
@@ -4584,7 +4651,7 @@ button.close:hover {
     top: 50%;
     z-index: 1;
     color: #fff;
-    transform: translate(-50%,-50%);
+    transform: translate(-50%, -50%);
     font-size: 30px
 }
 
@@ -4601,7 +4668,7 @@ button.close:hover {
     top: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(0,0,0,.7);
+    background-color: rgba(0, 0, 0, .7);
     transition: all .3s
 }
 
@@ -4694,8 +4761,7 @@ button.close:hover {
 
 .i-data a.title {
     overflow: hidden;
-    display: -webkit-box!important;
+    display: -webkit-box !important;
     -webkit-line-clamp: 3;
     -webkit-box-orient: vertical
 }
-
