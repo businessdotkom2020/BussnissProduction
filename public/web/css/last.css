@@ -482,12 +482,16 @@
 :root {
   --background: #121621;
 }
-
 .loader {
   --duration: 3s;
   --primary: rgba(39, 94, 254, 1);
   --primary-light: #2f71ff;
   --primary-rgba: rgba(39, 94, 254, 0);
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  background-color: var(--background);
   width: 200px;
   height: 320px;
   position: relative;
