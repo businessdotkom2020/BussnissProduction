@@ -41,7 +41,7 @@
 
     <div id="loading">
 
-    </div>
+   
     <div class="loader">
         <div class="box box0">
             <div></div>
