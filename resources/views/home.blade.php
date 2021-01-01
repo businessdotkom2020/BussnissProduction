@@ -132,7 +132,7 @@ $menu = true ;
             <div class="g-body col-xs-12">
 
                 @foreach ($latest_products as $product)
-                <div class="block b-product col-md-2 col-sm-6 col-xs-12">
+                <div class="block b-product col-md-5s col-sm-6 col-xs-12">
                     <div class="inner">
                         <div class="i-img">
                             @if($product->product_condition == 'new')
