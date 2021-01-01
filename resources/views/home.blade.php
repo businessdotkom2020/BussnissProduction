@@ -9,7 +9,57 @@ $menu = true ;
 
 <main class="main-content col-xs-12">
     <div class="hero-s col-xs-12">
-        <div class="h-slider owl-carousel owl-theme">
+    <div class="hero-sl owl-carousel">
+        <div class="item">
+        <a href="#">
+        <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/43033/slider_bags.jpg" alt="" />
+        <div class="inner">
+            <a href="#">The Erling Bag</a>
+        </div>
+        </a>
+    </div>
+        <div class="item black">
+        <a href="#">
+        <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/43033/slider_book_cover.jpg" alt="" />
+        <div class="inner">
+            <a href="#">Summer Book Series</a>
+        </div>
+        </a>
+    </div>
+        <div class="item">
+        <a href="#">
+        <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/43033/slider_bags.jpg" alt="" />
+        <div class="inner">
+            <a href="#">The Erling Bag</a>
+        </div>
+        </a>
+    </div>
+        <div class="item black">
+        <a href="#">
+        <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/43033/slider_book_cover.jpg" alt="" />
+        <div class="inner">
+            <a href="#">Summer Book Series</a>
+        </div>
+        </a>
+    </div>
+        <div class="item">
+        <a href="#">
+        <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/43033/slider_bags.jpg" alt="" />
+        <div class="inner">
+            <a href="#">The Erling Bag</a>
+        </div>
+        </a>
+    </div>
+    <div class="item black">
+        <a href="#">
+        <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/43033/slider_book_cover.jpg" alt="" />
+        <div class="inner">
+            <a href="#">Summer Book Series</a>
+        </div>
+        </a>
+    </div>
+    </div>
+        <!-- <div class="h-slider owl-carousel owl-theme">
 
             @foreach (App\Models\Slider::whereType('web')->get() as $slider)
             <div class="item">
@@ -22,7 +72,7 @@ $menu = true ;
             </div>
             @endforeach
 
-        </div>
+        </div> -->
     </div>
     <div class="cats col-xs-12">
         <div class="container">
@@ -471,6 +521,48 @@ $menu = true ;
 @push('scripts')
 
 <script>
+
+$('.hero-sl').owlCarousel({
+    stagePadding: 200,
+    loop:true,
+    margin:10,
+    nav:false,
+    items:1,
+    lazyLoad: true,
+    nav:true,
+    responsive:{
+            0:{
+                items:1,
+                stagePadding: 60
+            },
+            600:{
+                items:1,
+                stagePadding: 100
+            },
+            1000:{
+                items:1,
+                stagePadding: 200
+            },
+            1200:{
+                items:1,
+                stagePadding: 250
+            },
+            1400:{
+                items:1,
+                stagePadding: 300
+            },
+            1600:{
+                items:1,
+                stagePadding: 350
+            },
+            1800:{
+                items:1,
+                stagePadding: 400
+            }
+        }
+    })
+
+
     function favtoggle(product_id, user_id) {
 
         var token = '{{ Session::token() }}';
