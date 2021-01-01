@@ -8,7 +8,7 @@ $menu = true ;
 
 
 <main class="main-content col-xs-12">
-<div class="col-md-8 col-xs-12">
+<div class="col-md-7 col-md-offset-3 col-xs-12">
                     <div class="top-slider owl-carousel owl-theme">
                         <div class="item">
                             <div class="slider-inner">
@@ -66,51 +66,20 @@ $menu = true ;
                             <h3>new deals just arrived</h3>
                         </div>
                         <div class="priducts-side">
+                            @foreach ($latest_products as $product)
                             <div class="block-product">
                                 <div class="img-block">
-                                    <img src="images/product.png" />
+                                    <a href="{{url('product/'.$product->id)}}" class="img-hold">
+                                        <img src="{{url('storage/'.$product->image)}}" alt="">
+                                        <img src="{{ json_decode($product->images ) ? url('storage/'.(json_decode($product->images))[0]) : "https://i.imgur.com/mFI2maG.jpg" }}" class="sec-img">
+                                    </a>
                                 </div>
                                 <div class="details-block">
                                     <a href="#" class="name">name product name product</a>
                                     <a href="#" class="btn">shop now</a>
                                 </div>
                             </div>
-                            <div class="block-product">
-                                <div class="img-block">
-                                    <img src="images/product.png" />
-                                </div>
-                                <div class="details-block">
-                                    <a href="#" class="name">name product name product</a>
-                                    <a href="#" class="btn">shop now</a>
-                                </div>
-                            </div>
-                            <div class="block-product">
-                                <div class="img-block">
-                                    <img src="images/product.png" />
-                                </div>
-                                <div class="details-block">
-                                    <a href="#" class="name">name product name product</a>
-                                    <a href="#" class="btn">shop now</a>
-                                </div>
-                            </div>
-                            <div class="block-product">
-                                <div class="img-block">
-                                    <img src="images/product.png" />
-                                </div>
-                                <div class="details-block">
-                                    <a href="#" class="name">name product name product</a>
-                                    <a href="#" class="btn">shop now</a>
-                                </div>
-                            </div>
-                            <div class="block-product">
-                                <div class="img-block">
-                                    <img src="images/product.png" />
-                                </div>
-                                <div class="details-block">
-                                    <a href="#" class="name">name product name product</a>
-                                    <a href="#" class="btn">shop now</a>
-                                </div>
-                            </div>
+                            @endforeach
                         </div>
                         <div class="see-more">
                             <a href="#">see more</a>
@@ -579,45 +548,19 @@ $menu = true ;
 
 <script>
 
-$('.hero-sl').owlCarousel({
-    stagePadding: 200,
-    loop:true,
-    margin:10,
-    nav:false,
-    items:1,
-    lazyLoad: true,
-    nav:true,
-    responsive:{
-            0:{
-                items:1,
-                stagePadding: 60
-            },
-            600:{
-                items:1,
-                stagePadding: 100
-            },
-            1000:{
-                items:1,
-                stagePadding: 200
-            },
-            1200:{
-                items:1,
-                stagePadding: 250
-            },
-            1400:{
-                items:1,
-                stagePadding: 300
-            },
-            1600:{
-                items:1,
-                stagePadding: 350
-            },
-            1800:{
-                items:1,
-                stagePadding: 400
-            }
-        }
-    })
+$(".top-slider").owlCarousel({
+        nav: true,
+        loop: true,
+        navText: ["<i class='fa fa-angle-left'></i>", "<i class='fa fa-angle-right'></i>"],
+        dots: false,
+        autoplay: 4000,
+        items: 1,
+        animateOut: 'fadeOut',
+        animateIn: 'fadeIn',
+        autoplayHoverPause: true,
+        center: false,
+        responsiveClass: true
+    });
 
 
     function favtoggle(product_id, user_id) {
