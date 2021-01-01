@@ -8,57 +8,114 @@ $menu = true ;
 
 
 <main class="main-content col-xs-12">
-    <div class="hero-s col-xs-12">
-    <div class="hero-sl owl-carousel">
-        <div class="item">
-        <a href="#">
-        <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/43033/slider_bags.jpg" alt="" />
-        <div class="inner">
-            <a href="#">The Erling Bag</a>
-        </div>
-        </a>
-    </div>
-        <div class="item black">
-        <a href="#">
-        <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/43033/slider_book_cover.jpg" alt="" />
-        <div class="inner">
-            <a href="#">Summer Book Series</a>
-        </div>
-        </a>
-    </div>
-        <div class="item">
-        <a href="#">
-        <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/43033/slider_bags.jpg" alt="" />
-        <div class="inner">
-            <a href="#">The Erling Bag</a>
-        </div>
-        </a>
-    </div>
-        <div class="item black">
-        <a href="#">
-        <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/43033/slider_book_cover.jpg" alt="" />
-        <div class="inner">
-            <a href="#">Summer Book Series</a>
-        </div>
-        </a>
-    </div>
-        <div class="item">
-        <a href="#">
-        <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/43033/slider_bags.jpg" alt="" />
-        <div class="inner">
-            <a href="#">The Erling Bag</a>
-        </div>
-        </a>
-    </div>
-    <div class="item black">
-        <a href="#">
-        <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/43033/slider_book_cover.jpg" alt="" />
-        <div class="inner">
-            <a href="#">Summer Book Series</a>
-        </div>
-        </a>
-    </div>
-    </div>
+<div class="col-md-8 col-xs-12">
+                    <div class="top-slider owl-carousel owl-theme">
+                        <div class="item">
+                            <div class="slider-inner">
+                                <div class="slider-item">
+                                    <div class="details-item">
+                                        <h1>badil spare parts</h1>
+                                        <p>
+                                            Lorem Ipsum is simply dummy text of the printing and typesetting industry
+                                        </p>
+                                        <a href="#" class="btn">shop now</a>
+                                    </div>
+                                    <div class="img-item">
+                                        <div class="img" style="background-image: url(images/Vella.jpg)"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <div class="slider-inner">
+                                <div class="slider-item">
+                                    <div class="details-item">
+                                        <h1>badil spare parts</h1>
+                                        <p>
+                                            Lorem Ipsum is simply dummy text of the printing and typesetting industry
+                                        </p>
+                                        <a href="#" class="btn">shop now</a>
+                                    </div>
+                                    <div class="img-item">
+                                        <div class="img" style="background-image: url(images/car.jpg)"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <div class="slider-inner">
+                                <div class="slider-item">
+                                    <div class="details-item">
+                                        <h1>badil spare parts</h1>
+                                        <p>
+                                            Lorem Ipsum is simply dummy text of the printing and typesetting industry
+                                        </p>
+                                        <a href="#" class="btn">shop now</a>
+                                    </div>
+                                    <div class="img-item">
+                                        <div class="img" style="background-image: url(images/Vella.jpg)"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-2 col-xs-12 padding">
+                    <div class="colum-right">
+                        <div class="title-side">
+                            <h3>new deals just arrived</h3>
+                        </div>
+                        <div class="priducts-side">
+                            <div class="block-product">
+                                <div class="img-block">
+                                    <img src="images/product.png" />
+                                </div>
+                                <div class="details-block">
+                                    <a href="#" class="name">name product name product</a>
+                                    <a href="#" class="btn">shop now</a>
+                                </div>
+                            </div>
+                            <div class="block-product">
+                                <div class="img-block">
+                                    <img src="images/product.png" />
+                                </div>
+                                <div class="details-block">
+                                    <a href="#" class="name">name product name product</a>
+                                    <a href="#" class="btn">shop now</a>
+                                </div>
+                            </div>
+                            <div class="block-product">
+                                <div class="img-block">
+                                    <img src="images/product.png" />
+                                </div>
+                                <div class="details-block">
+                                    <a href="#" class="name">name product name product</a>
+                                    <a href="#" class="btn">shop now</a>
+                                </div>
+                            </div>
+                            <div class="block-product">
+                                <div class="img-block">
+                                    <img src="images/product.png" />
+                                </div>
+                                <div class="details-block">
+                                    <a href="#" class="name">name product name product</a>
+                                    <a href="#" class="btn">shop now</a>
+                                </div>
+                            </div>
+                            <div class="block-product">
+                                <div class="img-block">
+                                    <img src="images/product.png" />
+                                </div>
+                                <div class="details-block">
+                                    <a href="#" class="name">name product name product</a>
+                                    <a href="#" class="btn">shop now</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="see-more">
+                            <a href="#">see more</a>
+                        </div>
+                    </div>
         <!-- <div class="h-slider owl-carousel owl-theme">
 
             @foreach (App\Models\Slider::whereType('web')->get() as $slider)
