@@ -27,7 +27,7 @@ Route::group(['prefix' => 'admin', 'namespace' => 'Admin', 'middleware' => 'auth
     /****************** auth routes ****************/
     Route::get('/', 'AdminController@index')->name('backend-home');
     /***********  normal-users route ***********/
-    Route::resource('users', 'UserController', ['except' => ['show']]);
+    Route::resource('users', 'UserController');
     Route::delete('delete_users', 'UserController@delete_users')->name('delete_users');
     /***********  sellers route ***********/
     Route::resource('sellerss', 'SellerController', ['except' => ['show']]);

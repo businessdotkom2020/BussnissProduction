@@ -124,3 +124,12 @@ input[type=checkbox].css-checkbox:checked + label.css-label {
 #field1 , #field2{
     display: none;
 }
+.btn-toolbar{
+    justify-content: space-between;
+}
+.btn-default{
+    border: 1px solid lightgrey;
+}
+.table-responsive .dt-buttons .btn-group{
+    display: none;
+}

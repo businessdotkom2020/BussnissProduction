@@ -72,7 +72,12 @@ class UserController extends Controller
      */
     public function show($id)
     {
-        //
+        try {
+            $user = User::find($id);
+            return view('backend.users.show' , compact('user'));
+        } catch (\Exception $e) {
+            return redirect()->back()->with('error', 'Error Try Again !!');
+        }
     }
 
     /**
