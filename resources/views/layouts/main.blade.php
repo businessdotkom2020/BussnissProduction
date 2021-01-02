@@ -13,6 +13,7 @@
 
     <link rel="stylesheet" href="{{ asset('/web/css/style.css')}}">
     <link rel="stylesheet" href="{{ asset('/web/css/last.css')}}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.css">
 
     @if (\App::getLocale() == 'ar')
 
@@ -40,28 +41,14 @@
     @include('sweetalert::alert')
 
     <div id="loading">
-        <div class="loading">
-            <div class="loader">
-                <span></span>
-                <span></span>
-                <span></span>
-                <span></span>
-                <span></span>
-                <span></span>
-                <span></span>
-                <span></span>
-                <span></span>
-                <span></span>
-                <span></span>
-                <span></span>
-                <span></span>
-                <span></span>
-                <span></span>
-            </div>
-
-        </div>
+    <div class="loader">
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
     </div>
-
+</div>
 
 
     <div class="wrapper col-xs-12">
