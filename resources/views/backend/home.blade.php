@@ -307,7 +307,571 @@
             <!-- end row -->
         </div>
     </div>
+    {{----}}
+    <div class="row">
+        <div class="col-lg-6">
+            <div class="card">
+                <div class="card-body">
+                    <div>
+                        <div class="text-center">
+                            <h4 class="mb-2">{{ __('dashboard.top_products') }}</h4>
+                        </div>
+                        <ul class="nav nav-tabs" id="myTab" role="tablist">
+                            <li class="nav-item">
+                                <a class="nav-link active" id="home-tab" data-toggle="tab" href="#pro_fav" role="tab" aria-controls="home" aria-selected="true">{{ __('dashboard.fav') }}</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" id="profile-tab" data-toggle="tab" href="#pro_comm" role="tab" aria-controls="profile" aria-selected="false">{{ __('dashboard.comm') }}</a>
+                            </li>
+                        </ul>
+                        <div class="tab-content" id="myTabContent">
+                            <div class="tab-pane fade show active" id="pro_fav" role="tabpanel" aria-labelledby="pro_fav-tab">
+                                <div class="table-responsive mt-4">
+                                    <table class="table table-hover mb-0 table-centered table-nowrap">
+                                        <tbody>
+                                        <tr style="background: rgba(3,3,3,0.1)">
+                                            <td>
+                                                {{ __('dashboard.image') }}
+                                            </td>
+                                            <td>
+                                                <h5 class="font-size-14 mb-0">{{ __('dashboard.name') }}</h5>
+                                            </td>
+                                            <td><div id="spak-chart3">{{ __('dashboard.fav') }}</div></td>
+                                        </tr>
+                                        @foreach(\App\Models\Product::withCount('favorites')->orderBy('favorites_count','desc')->paginate(5) as $product)
+                                            <tr>
+                                                <td>
+                                                    <div class="avatar-xs">
+                                                        <div class="avatar-title rounded-circle bg-light">
+                                                            @if(isset($product->image))
+                                                                <img height="20" src="{{ url('storage/' . $product->image) }}"/>
+                                                            @endif
+                                                        </div>
+                                                    </div>
+                                                </td>
+                                                <td>
+                                                    <h5 class="font-size-14 mb-0">
+                                                        <a href="{{ route('productss.show' , $product->id) }}">
+                                                            {{ implode(' ', array_slice(explode(' ', $product->getTranslatedAttribute('name',\App::getLocale())), 0, 5)) }}
+                                                        </a>
+                                                    </h5>
+                                                </td>
+                                                <td><div id="spak-chart3">
+                                                        {{ $product->favorites->count() }}
+                                                    </div></td>
+                                            </tr>
+                                        @endforeach
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                            <div class="tab-pane fade" id="pro_comm" role="tabpanel" aria-labelledby="pro_comm-tab">
+                                <div class="table-responsive mt-4">
+                                    <table class="table table-hover mb-0 table-centered table-nowrap">
+                                        <tbody>
+                                        <tr style="background: rgba(3,3,3,0.1)">
+                                            <td>
+                                                {{ __('dashboard.image') }}
+                                            </td>
+                                            <td>
+                                                <h5 class="font-size-14 mb-0">{{ __('dashboard.name') }}</h5>
+                                            </td>
+                                            <td><div id="spak-chart3">{{ __('dashboard.comm') }}</div></td>
+                                        </tr>
+                                        @foreach(\App\Models\Product::withCount('reviews')->orderBy('reviews_count','desc')->paginate(5) as $product)
+                                            <tr>
+                                                <td>
+                                                    <div class="avatar-xs">
+                                                        <div class="avatar-title rounded-circle bg-light">
+                                                            @if(isset($product->image))
+                                                                <img height="20" src="{{ url('storage/' . $product->image) }}"/>
+                                                            @endif
+                                                        </div>
+                                                    </div>
+                                                </td>
+                                                <td>
+                                                    <h5 class="font-size-14 mb-0">
+                                                        <a href="{{ route('productss.show' , $product->id) }}">
+                                                            {{ implode(' ', array_slice(explode(' ', $product->getTranslatedAttribute('name',\App::getLocale())), 0, 5)) }}
+                                                        </a>
+                                                    </h5>
+                                                </td>
+                                                <td><div id="spak-chart3">
+                                                        {{ $product->reviews->count() }}
+                                                    </div></td>
+                                            </tr>
+                                        @endforeach
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="text-center mt-4">
+                            <a href="{{ route('productss.index') }}" class="btn btn-primary btn-sm">{{ __('dashboard.more') }}</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-6">
+            <div class="card">
+                <div class="card-body">
+                    <div>
+                        <div class="text-center">
+                            <h4 class="mb-2">{{ __('dashboard.top_requests') }}</h4>
+                        </div>
+                        <ul class="nav nav-tabs" id="myTab" role="tablist">
+                            <li class="nav-item">
+                                <a class="nav-link active" id="home-tab" data-toggle="tab" href="#req_fav" role="tab" aria-controls="home" aria-selected="true">{{ __('dashboard.fav') }}</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" id="profile-tab" data-toggle="tab" href="#req_comm" role="tab" aria-controls="profile" aria-selected="false">{{ __('dashboard.comm') }}</a>
+                            </li>
+                        </ul>
+                        <div class="tab-content" id="myTabContent">
+                            <div class="tab-pane fade show active" id="req_fav" role="tabpanel" aria-labelledby="pro_fav-tab">
+                                <div class="table-responsive mt-4">
+                                    <table class="table table-hover mb-0 table-centered table-nowrap">
+                                        <tbody>
+                                        <tr style="background: rgba(3,3,3,0.1)">
+                                            <td>
+                                                {{ __('dashboard.image') }}
+                                            </td>
+                                            <td>
+                                                <h5 class="font-size-14 mb-0">{{ __('dashboard.name') }}</h5>
+                                            </td>
+                                            <td><div id="spak-chart3">{{ __('dashboard.fav') }}</div></td>
+                                        </tr>
+                                        @foreach(\App\Models\Request::withCount('favorites')->orderBy('favorites_count','desc')->paginate(5) as $product)
+                                            <tr>
+                                                <td>
+                                                    <div class="avatar-xs">
+                                                        <div class="avatar-title rounded-circle bg-light">
+                                                            @foreach(json_decode($product->images) as $key => $image)
+                                                                @if($key == 0)
+                                                                    <img height="20" src="{{ url('storage/' . $image) }}"/>
+                                                                @endif
+                                                            @endforeach
+                                                        </div>
+                                                    </div>
+                                                </td>
+                                                <td>
+                                                    <h5 class="font-size-14 mb-0">
+                                                        <a href="{{ route('requestss.show' , $product->id) }}">
+                                                            {{ implode(' ', array_slice(explode(' ', $product->getTranslatedAttribute('name','en')), 0, 5)) }}
+                                                        </a>
+                                                    </h5>
+                                                </td>
+                                                <td><div id="spak-chart3">
+                                                        {{ $product->favorites->count() }}
+                                                    </div></td>
+                                            </tr>
+                                        @endforeach
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                            <div class="tab-pane fade" id="req_comm" role="tabpanel" aria-labelledby="pro_comm-tab">
+                                <div class="table-responsive mt-4">
+                                    <table class="table table-hover mb-0 table-centered table-nowrap">
+                                        <tbody>
+                                        <tr style="background: rgba(3,3,3,0.1)">
+                                            <td>
+                                                {{ __('dashboard.image') }}
+                                            </td>
+                                            <td>
+                                                <h5 class="font-size-14 mb-0">{{ __('dashboard.name') }}</h5>
+                                            </td>
+                                            <td><div id="spak-chart3">{{ __('dashboard.comm') }}</div></td>
+                                        </tr>
+                                        @foreach(\App\Models\Request::withCount('reviews')->orderBy('reviews_count','desc')->paginate(5) as $product)
+                                            <tr>
+                                                <td>
+                                                    <div class="avatar-xs">
+                                                        <div class="avatar-title rounded-circle bg-light">
+                                                            @foreach(json_decode($product->images) as $key => $image)
+                                                                @if($key == 0)
+                                                                    <img height="20" src="{{ url('storage/' . $image) }}"/>
+                                                                @endif
+                                                            @endforeach
+                                                        </div>
+                                                    </div>
+                                                </td>
+                                                <td>
+                                                    <h5 class="font-size-14 mb-0">
+                                                        <a href="{{ route('requestss.show' , $product->id) }}">
+                                                            {{ implode(' ', array_slice(explode(' ', $product->getTranslatedAttribute('name','en')), 0, 5)) }}
+                                                        </a>
+                                                    </h5>
+                                                </td>
+                                                <td><div id="spak-chart3">
+                                                        {{ $product->reviews->count() }}
+                                                    </div></td>
+                                            </tr>
+                                        @endforeach
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="text-center mt-4">
+                            <a href="{{ route('requestss.index') }}" class="btn btn-primary btn-sm">{{ __('dashboard.more') }}</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-6">
+            <div class="card">
+                <div class="card-body">
+                    <div>
+                        <div class="text-center">
+                            <h4 class="mb-2">{{ __('dashboard.top_services') }}</h4>
+                        </div>
+                        <ul class="nav nav-tabs" id="myTab" role="tablist">
+                            <li class="nav-item">
+                                <a class="nav-link active" id="home-tab" data-toggle="tab" href="#ser_fav" role="tab" aria-controls="home" aria-selected="true">{{ __('dashboard.fav') }}</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" id="profile-tab" data-toggle="tab" href="#ser_comm" role="tab" aria-controls="profile" aria-selected="false">{{ __('dashboard.comm') }}</a>
+                            </li>
+                        </ul>
+                        <div class="tab-content" id="myTabContent">
+                            <div class="tab-pane fade show active" id="ser_fav" role="tabpanel" aria-labelledby="pro_fav-tab">
+                                <div class="table-responsive mt-4">
+                                    <table class="table table-hover mb-0 table-centered table-nowrap">
+                                        <tbody>
+                                        <tr style="background: rgba(3,3,3,0.1)">
+                                            <td>
+                                                {{ __('dashboard.image') }}
+                                            </td>
+                                            <td>
+                                                <h5 class="font-size-14 mb-0">{{ __('dashboard.name') }}</h5>
+                                            </td>
+                                            <td><div id="spak-chart3">{{ __('dashboard.fav') }}</div></td>
+                                        </tr>
+                                        @foreach(\App\Models\Service::withCount('favorites')->orderBy('favorites_count','desc')->paginate(5) as $product)
+                                            <tr>
+                                                <td>
+                                                    <div class="avatar-xs">
+                                                        <div class="avatar-title rounded-circle bg-light">
+                                                            @foreach(json_decode($product->images) as $key => $image)
+                                                                @if($key == 0)
+                                                                    <img height="20" src="{{ url('storage/' . $image) }}"/>
+                                                                @endif
+                                                            @endforeach
+                                                        </div>
+                                                    </div>
+                                                </td>
+                                                <td>
+                                                    <h5 class="font-size-14 mb-0">
+                                                        <a href="{{ route('servicess.show' , $product->id) }}">
+                                                            {{ implode(' ', array_slice(explode(' ', $product->name), 0, 5)) }}
+                                                        </a>
+                                                    </h5>
+                                                </td>
+                                                <td><div id="spak-chart3">
+                                                        {{ $product->favorites->count() }}
+                                                    </div></td>
+                                            </tr>
+                                        @endforeach
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                            <div class="tab-pane fade" id="ser_comm" role="tabpanel" aria-labelledby="pro_comm-tab">
+                                <div class="table-responsive mt-4">
+                                    <table class="table table-hover mb-0 table-centered table-nowrap">
+                                        <tbody>
+                                        <tr style="background: rgba(3,3,3,0.1)">
+                                            <td>
+                                                {{ __('dashboard.image') }}
+                                            </td>
+                                            <td>
+                                                <h5 class="font-size-14 mb-0">{{ __('dashboard.name') }}</h5>
+                                            </td>
+                                            <td><div id="spak-chart3">{{ __('dashboard.comm') }}</div></td>
+                                        </tr>
+                                        @foreach(\App\Models\Service::withCount('reviews')->orderBy('reviews_count','desc')->paginate(5) as $product)
+                                            <tr>
+                                                <td>
+                                                    <div class="avatar-xs">
+                                                        <div class="avatar-title rounded-circle bg-light">
+                                                            @foreach(json_decode($product->images) as $key => $image)
+                                                                @if($key == 0)
+                                                                    <img height="20" src="{{ url('storage/' . $image) }}"/>
+                                                                @endif
+                                                            @endforeach
+                                                        </div>
+                                                    </div>
+                                                </td>
+                                                <td>
+                                                    <h5 class="font-size-14 mb-0">
+                                                        <a href="{{ route('servicess.show' , $product->id) }}">
+                                                            {{ implode(' ', array_slice(explode(' ', $product->name), 0, 5)) }}
+                                                        </a>
+                                                    </h5>
+                                                </td>
+                                                <td><div id="spak-chart3">
+                                                        {{ $product->reviews->count() }}
+                                                    </div></td>
+                                            </tr>
+                                        @endforeach
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="text-center mt-4">
+                            <a href="{{ route('requestss.index') }}" class="btn btn-primary btn-sm">{{ __('dashboard.more') }}</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-6">
+            <div class="card">
+                <div class="card-body">
+                    <div>
+                        <div class="text-center">
+                            <h4 class="mb-2">{{ __('dashboard.top_suppliers') }}</h4>
+                        </div>
+                        <ul class="nav nav-tabs" id="myTab" role="tablist">
+                            <li class="nav-item">
+                                <a class="nav-link active" id="profile-tab" data-toggle="tab" href="#sup_comm" role="tab" aria-controls="profile" aria-selected="false">{{ __('dashboard.comm') }}</a>
+                            </li>
+                        </ul>
+                        <div class="tab-content" id="myTabContent">
+                            <div class="tab-pane fade show active" id="sup_fav" role="tabpanel" aria-labelledby="pro_fav-tab">
+                                <div class="table-responsive mt-4">
+                                    <table class="table table-hover mb-0 table-centered table-nowrap">
+                                        <tbody>
+                                        <tr style="background: rgba(3,3,3,0.1)">
+                                            <td>
+                                                {{ __('dashboard.image') }}
+                                            </td>
+                                            <td>
+                                                <h5 class="font-size-14 mb-0">{{ __('dashboard.name') }}</h5>
+                                            </td>
+                                            <td><div id="spak-chart3">{{ __('dashboard.all_rating') }}</div></td>
+                                            <td><div id="spak-chart3">{{ __('dashboard.comm') }}</div></td>
+                                        </tr>
+                                        <?php
+                                        $suppliers = \App\Models\User::with('reviews')
+                                            ->get()
+                                            ->sortByDesc(function($bk, $key) {
+                                                if($bk->getAverageRatingAttribute()) {
+                                                    return $bk->getAverageRatingAttribute();
+                                                }
+                                                return null;
+                                            });
+                                        ?>
+                                        @foreach($suppliers->slice(0,5) as $supplier)
+                                            <tr>
+                                                <td>
+                                                    <div class="avatar-xs">
+                                                        <div class="avatar-title rounded-circle bg-light">
+                                                            @if(isset($supplier->avatar))
+                                                                <img height="20" src="{{ url('storage/' . $supplier->avatar) }}"/>
+                                                            @endif
+                                                        </div>
+                                                    </div>
+                                                </td>
+                                                <td>
+                                                    <h5 class="font-size-14 mb-0">
+                                                        <a href="{{ route('sellerss.show' , $supplier->id) }}">
+                                                            {{ implode(' ', array_slice(explode(' ', $supplier->name), 0, 5)) }}
+                                                        </a>
+                                                    </h5>
+                                                </td>
+                                                <td>
+                                                    <div id="spak-chart3">
+                                                        @for ($i = 0; $i < $supplier->getAverageRatingAttribute(); $i++)
+                                                            <i class="fas fa-star text-warning"></i>
+                                                        @endfor
+                                                        <small style="font-size: 8px">( {{ $supplier->getAverageRatingAttribute() }} )</small>
+                                                    </div>
+                                                </td>
+                                                <td>
+                                                    <div id="spak-chart3">
+                                                        {{ $supplier->reviews->count() }}
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                        @endforeach
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="text-center mt-4">
+                            <a href="{{ route('sellerss.index') }}" class="btn btn-primary btn-sm">{{ __('dashboard.more') }}</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
     <!-- end row -->
+    <div class="row">
+        <div class="col-lg-6">
+            <div class="card">
+                <div class="card-body">
+                    <div>
+                        <div class="text-center">
+                            <h4 class="mb-2">{{ __('dashboard.most_active_suppliers') }}</h4>
+                        </div>
+                        <ul class="nav nav-tabs" id="myTab" role="tablist">
+                            <li class="nav-item">
+                                <a class="nav-link active" id="home-tab" data-toggle="tab" href="#home" role="tab" aria-controls="home" aria-selected="true">{{ __('dashboard.products') }}</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" id="profile-tab" data-toggle="tab" href="#profile" role="tab" aria-controls="profile" aria-selected="false">{{ __('dashboard.requests') }}</a>
+                            </li>
+                        </ul>
+                        <div class="tab-content" id="myTabContent">
+                            <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
+                                <div class="table-responsive mt-4">
+                                    <table class="table table-hover mb-0 table-centered table-nowrap">
+                                        <tbody>
+                                        <tr style="background: rgba(3,3,3,0.1)">
+                                            <td>
+                                                {{ __('dashboard.image') }}
+                                            </td>
+                                            <td>
+                                                <h5 class="font-size-14 mb-0">{{ __('dashboard.name') }}</h5>
+                                            </td>
+                                            <td><div id="spak-chart3">{{ __('dashboard.products') }}</div></td>
+                                        </tr>
+                                        @foreach(\App\Models\User::whereNotNull('state_id')->withCount('products')->orderBy('products_count','desc')->paginate(5) as $supplier)
+                                            <tr>
+                                                <td>
+                                                    <div class="avatar-xs">
+                                                        <div class="avatar-title rounded-circle bg-light">
+                                                            @if(isset($supplier->avatar))
+                                                                <img height="20" src="{{ url('storage/' . $supplier->avatar) }}"/>
+                                                            @endif
+                                                        </div>
+                                                    </div>
+                                                </td>
+                                                <td>
+                                                    <h5 class="font-size-14 mb-0">{{ $supplier->name }}
+                                                    </h5>
+                                                </td>
+                                                <td><div id="spak-chart3">
+                                                        {{ $supplier->products->count() }}
+                                                    </div></td>
+                                            </tr>
+                                        @endforeach
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                            <div class="tab-pane fade" id="profile" role="tabpanel" aria-labelledby="profile-tab">
+                                <div class="table-responsive mt-4">
+                                    <table class="table table-hover mb-0 table-centered table-nowrap">
+                                        <tbody>
+                                        <tr style="background: rgba(3,3,3,0.1)">
+                                            <td>
+                                                {{ __('dashboard.image') }}
+                                            </td>
+                                            <td>
+                                                <h5 class="font-size-14 mb-0">{{ __('dashboard.name') }}</h5>
+                                            </td>
+                                            <td><div id="spak-chart3">{{ __('dashboard.requests') }}</div></td>
+                                        </tr>
+                                        @foreach(\App\Models\User::whereNotNull('state_id')->withCount('requests')->orderBy('requests_count','desc')->paginate(5) as $supplier)
+                                            <tr>
+                                                <td>
+                                                    <div class="avatar-xs">
+                                                        <div class="avatar-title rounded-circle bg-light">
+                                                            @if(isset($supplier->avatar))
+                                                                <img height="20" src="{{ url('storage/' . $supplier->avatar) }}"/>
+                                                            @endif
+                                                        </div>
+                                                    </div>
+                                                </td>
+                                                <td>
+                                                    <h5 class="font-size-14 mb-0">{{ $supplier->name }}
+                                                    </h5>
+                                                </td>
+                                                <td><div id="spak-chart3">
+                                                        {{ $supplier->requests->count() }}
+                                                    </div></td>
+                                            </tr>
+                                        @endforeach
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="text-center mt-4">
+                            <a href="{{ route('sellerss.index') }}" class="btn btn-primary btn-sm">{{ __('dashboard.more') }}</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-6">
+            <div class="card">
+                <div class="card-body">
+                    <div>
+                        <div class="text-center">
+                            <h4 class="mb-2">{{ __('dashboard.most_active_users') }}</h4>
+                        </div>
+
+                        <div class="table-responsive mt-4">
+                            <table class="table table-hover mb-0 table-centered table-nowrap">
+                                <tbody>
+                                <tr style="background: rgba(3,3,3,0.1)">
+                                    <td>
+                                        {{ __('dashboard.image') }}
+                                    </td>
+                                    <td>
+                                        <h5 class="font-size-14 mb-0">{{ __('dashboard.name') }}</h5>
+                                    </td>
+                                    <td><div id="spak-chart3">{{ __('dashboard.requests') }}</div></td>
+                                </tr>
+                                @foreach(\App\Models\User::whereNotNull('state_id')->withCount('requests')->orderBy('requests_count','desc')->paginate(6) as $user)
+                                    <tr>
+                                        <td>
+                                            <div class="avatar-xs">
+                                                <div class="avatar-title rounded-circle bg-light">
+                                                    @if(isset($user->avatar))
+                                                        <img height="20" src="{{ url('storage/' . $user->avatar) }}"/>
+                                                    @endif
+                                                </div>
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <h5 class="font-size-14 mb-0">{{ $user->name }}
+                                            </h5>
+                                        </td>
+                                        <td>
+                                            <div id="spak-chart3">
+                                                {{ $user->requests->count() }}
+                                            </div>
+                                        </td>
+                                    </tr>
+                                @endforeach
+                                </tbody>
+                            </table>
+                        </div>
+                        <div class="text-center mt-4">
+                            <a href="{{ route('users.index') }}" class="btn btn-primary btn-sm">{{ __('dashboard.more') }}</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- end row -->
+    {{--         --}}
     <div class="row">
         <div class="col-lg-6">
             <div class="card">
@@ -329,10 +893,14 @@
                                     <td>
                                         <h5 class="font-size-14 mb-0">{{ __('dashboard.name') }}</h5>
                                     </td>
-                                    <td><div id="spak-chart3"></div></td>
+                                    <td><div id="spak-chart3">{{ __('dashboard.followers') }}</div></td>
+                                    <td>
+                                        <p class="text-muted mb-0">{{ __('dashboard.city') }}</p>
+                                    </td>
                                     <td>
                                         <p class="text-muted mb-0">{{ __('dashboard.join_date') }}</p>
                                     </td>
+
                                 </tr>
                                 @foreach(\App\Models\User::whereNotNull('state_id')->orderBy('id' , 'desc')->paginate(5) as $supplier)
                                 <tr>
@@ -346,11 +914,15 @@
                                         </div>
                                     </td>
                                     <td>
-                                        <h5 class="font-size-14 mb-0">{{ $supplier->name }}</h5>
+                                        <h5 class="font-size-14 mb-0">{{ $supplier->name }}
+                                        </h5>
                                     </td>
                                     <td><div id="spak-chart3">
                                             {{ $supplier->followers->count() }}
                                         </div></td>
+
+                                    <td><div id="spak-chart3">{{ $supplier->city->getTranslatedAttribute('name',\App::getLocale()) ?? '' }}</div></td>
+
                                     <td>
                                         <p class="text-muted mb-0">{{ $supplier->created_at->toDateString() }}</p>
                                     </td>
@@ -386,7 +958,7 @@
                                     <td>
                                         <h5 class="font-size-14 mb-0">{{ __('dashboard.name') }}</h5>
                                     </td>
-                                    <td><div id="spak-chart3"></div></td>
+                                    <td><div id="spak-chart3">{{ __('dashboard.country') }}</div></td>
                                     <td>
                                         <p class="text-muted mb-0">{{ __('dashboard.join_date') }}</p>
                                     </td>
@@ -403,9 +975,14 @@
                                             </div>
                                         </td>
                                         <td>
-                                            <h5 class="font-size-14 mb-0">{{ $user->name }}</h5>
+                                            <h5 class="font-size-14 mb-0">{{ $user->name }}
+                                            </h5>
                                         </td>
-                                        <td><div id="spak-chart3"></div></td>
+                                        <td>
+                                            <div id="spak-chart3">
+                                                {{ $user->country->getTranslatedAttribute('name',\App::getLocale()) ?? '' }}
+                                            </div>
+                                        </td>
                                         <td>
                                             <p class="text-muted mb-0">{{ $user->created_at->toDateString() }}</p>
                                         </td>
@@ -422,7 +999,136 @@
             </div>
         </div>
     </div>
+    {{--         --}}
     <!-- end row -->
+    <div class="row">
+        <div class="col-md-12">
+            <div class="card">
+                <div class="card-body">
+                    <div class="text-center">
+                        <p class="mb-2 text-success">{{ __('dashboard.active_users') }}</p>
+                        <?php
+                        $user = new \App\Models\User();
+                        ?>
+                        <h4 class="text-success">{{ $user->allOnline()->count() }}</h4>
+                    </div>
+                    <div class="row">
+                        <div class="col-lg-6">
+                            <div class="card">
+                                <div class="card-body">
+                                    <h4 class="card-title mb-3">{{ __('dashboard.sellers') }}</h4>
+                                    <div>
+                                        <div class="table-responsive mt-4">
+                                            <table class="table table-hover mb-0 table-centered table-nowrap">
+                                                <tbody>
+                                                <tr style="background: rgba(3,3,3,0.1)">
+                                                    <td>
+                                                        {{ __('dashboard.image') }}
+                                                    </td>
+                                                    <td>
+                                                        <h5 class="font-size-14 mb-0">{{ __('dashboard.name') }}</h5>
+                                                    </td>
+                                                    <td><div id="spak-chart3">{{ __('dashboard.followers') }}</div></td>
+                                                    <td>
+                                                        <p class="text-muted mb-0">{{ __('dashboard.join_date') }}</p>
+                                                    </td>
+                                                </tr>
+                                                @foreach(\App\Models\User::whereNotNull('state_id')->orderBy('id' , 'desc')->get() as $supplier)
+                                                    @if($supplier->isOnline() == 'true')
+                                                        <tr>
+                                                            <td>
+                                                                <div class="avatar-xs">
+                                                                    <div class="avatar-title rounded-circle bg-light">
+                                                                        @if(isset($supplier->avatar))
+                                                                            <img height="20" src="{{ url('storage/' . $supplier->avatar) }}"/>
+                                                                        @endif
+                                                                    </div>
+                                                                </div>
+                                                            </td>
+                                                            <td>
+                                                                <h5 class="font-size-14 mb-0">{{ $supplier->name }}
+                                                                </h5>
+                                                            </td>
+                                                            <td>
+                                                                <div id="spak-chart3">
+                                                                    {{ $supplier->followers->count() }}
+                                                                </div>
+                                                            </td>
+                                                            <td>
+                                                                <p class="text-muted mb-0">{{ $supplier->created_at->toDateString() }}</p>
+                                                            </td>
+                                                        </tr>
+                                                    @endif
+                                                @endforeach
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-6">
+                            <div class="card">
+                                <div class="card-body">
+                                    <h4 class="card-title mb-3">{{ __('dashboard.n_users') }}</h4>
+                                    <div>
+                                        <div class="table-responsive mt-4">
+                                            <table class="table table-hover mb-0 table-centered table-nowrap">
+                                                <tbody>
+                                                <tr style="background: rgba(3,3,3,0.1)">
+                                                    <td>
+                                                        {{ __('dashboard.image') }}
+                                                    </td>
+                                                    <td>
+                                                        <h5 class="font-size-14 mb-0">{{ __('dashboard.name') }}</h5>
+                                                    </td>
+                                                    <td><div id="spak-chart3"></div></td>
+                                                    <td>
+                                                        <p class="text-muted mb-0">{{ __('dashboard.join_date') }}</p>
+                                                    </td>
+                                                </tr>
+                                                @foreach(\App\Models\User::whereNull('state_id')->orderBy('id' , 'desc')->get() as $user)
+                                                    @if($user->isOnline() == 'true')
+                                                        <tr>
+                                                            <td>
+                                                                <div class="avatar-xs">
+                                                                    <div class="avatar-title rounded-circle bg-light">
+                                                                        @if(isset($user->avatar))
+                                                                            <img height="20" src="{{ url('storage/' . $user->avatar) }}"/>
+                                                                        @endif
+                                                                    </div>
+                                                                </div>
+                                                            </td>
+                                                            <td>
+                                                                <h5 class="font-size-14 mb-0">{{ $user->name }}
+                                                                    <?php
+                                                                    if($user->isOnline() == 'true'){
+                                                                        echo 'online';
+                                                                    }else{
+                                                                        echo 'offline';
+                                                                    }
+                                                                    ?>
+                                                                </h5>
+                                                            </td>
+                                                            <td><div id="spak-chart3"></div></td>
+                                                            <td>
+                                                                <p class="text-muted mb-0">{{ $user->created_at->toDateString() }}</p>
+                                                            </td>
+                                                        </tr>
+                                                    @endif
+                                                @endforeach
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 @endsection
 @section('backend-footer')
 

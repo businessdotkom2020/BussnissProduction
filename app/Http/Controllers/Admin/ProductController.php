@@ -146,7 +146,17 @@ class ProductController extends Controller
      */
     public function show($id)
     {
-        //
+        try {
+            $product = Product::find($id);
+            if(isset($product)){
+                return view('backend.products.show' , compact('product'));
+            }else{
+                return redirect()->back()->with('error', 'Error Try Again !!');
+            }
+
+        } catch (\Exception $e) {
+            return redirect()->back()->with('error', 'Error Try Again !!');
+        }
     }
 
     /**

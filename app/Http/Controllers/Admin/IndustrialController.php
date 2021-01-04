@@ -89,7 +89,17 @@ class IndustrialController extends Controller
      */
     public function show($id)
     {
-        //
+        try {
+            $zone = IndustrialZones::find($id);
+            if(isset($zone)){
+                return view('backend.zones.show' , compact('zone'));
+            }else{
+                return redirect()->back()->with('error', 'Error Try Again !!');
+            }
+
+        } catch (\Exception $e) {
+            return redirect()->back()->with('error', 'Error Try Again !!');
+        }
     }
 
     /**

@@ -74,6 +74,11 @@ class Category extends Model
             return $this->hasOne(Slider::class,'category_id');
     }
 
+    public function childrenRecursive()
+    {
+        return $this->children()->with('childrenRecursive');
+    }
+
 
     public function sub_children()
     {

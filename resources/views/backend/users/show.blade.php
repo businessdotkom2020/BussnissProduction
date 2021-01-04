@@ -11,12 +11,26 @@
                         $comments_ids = \App\Models\Review::where([['user_id',$user->id]])->get();
                     @endphp
                     <h4 class="card-title">{{ $user->name }}</h4>
+                    <table class="table table-striped table-bordered dt-responsive nowrap">
+                        <tr>
+                            <th>{{ __('dashboard.name') }}</th>
+                            <td>{{ $user->name }}</td>
+                        </tr>
+                        <tr>
+                            <th>{{ __('dashboard.phone') }}</th>
+                            <td>{{ $user->mobile }}</td>
+                        </tr>
+                        <tr>
+                            <th>{{ __('dashboard.country') }}</th>
+                            <td>{{ $user->country->getTranslatedAttribute('name',\App::getLocale()) }}</td>
+                        </tr>
+                    </table>
                     <br>
                     <!-- Nav tabs -->
                     <ul class="nav nav-pills nav-justified" role="tablist">
                         <li class="nav-item waves-effect waves-light">
                             <a class="nav-link active" data-toggle="tab" href="#fav" role="tab" aria-selected="true">
-                                <span class="d-block d-sm-none"><i class="fas fa-heart"></i></span>
+                                <span class="d-block d-sm-block"><i class="fas fa-heart"></i></span>
                                 <span class="d-none d-sm-block">
                                    {{ __('dashboard.fav') }}
                                     <span class="badge badge-pill badge-danger float-right">{{ $favourites_ids->count() }}</span>
@@ -25,7 +39,7 @@
                         </li>
                         <li class="nav-item waves-effect waves-light">
                             <a class="nav-link" data-toggle="tab" href="#req" role="tab" aria-selected="false">
-                                <span class="d-block d-sm-none"><i class="far fa-user"></i></span>
+                                <span class="d-block d-sm-block"><i class="far fa-user"></i></span>
                                 <span class="d-none d-sm-block">
                                      {{ __('dashboard.req') }}
                                     <span class="badge badge-pill badge-danger float-right">{{ $user->requests->count() }}</span>
@@ -34,10 +48,19 @@
                         </li>
                         <li class="nav-item waves-effect waves-light">
                             <a class="nav-link" data-toggle="tab" href="#comm" role="tab" aria-selected="false">
-                                <span class="d-block d-sm-none"><i class="far fa-user"></i></span>
+                                <span class="d-block d-sm-block"><i class="far fa-grin-stars"></i></span>
                                 <span class="d-none d-sm-block">
                                      {{ __('dashboard.comm') }}
                                     <span class="badge badge-pill badge-danger float-right">{{ $comments_ids->count() }}</span>
+                                </span>
+                            </a>
+                        </li>
+                        <li class="nav-item waves-effect waves-light">
+                            <a class="nav-link" data-toggle="tab" href="#follow" role="tab" aria-selected="false">
+                                <span class="d-block d-sm-block"><i class="far fa-handshake"></i></span>
+                                <span class="d-none d-sm-block">
+                                     {{ __('dashboard.following') }}
+                                    <span class="badge badge-pill badge-danger float-right">{{ $user->following->count() }}</span>
                                 </span>
                             </a>
                         </li>
@@ -56,17 +79,23 @@
                                             <?php
                                             $product = \App\Models\Product::find($fav->favorited_id);
                                             ?>
-                                                <img class="card-img-top img-fluid" src="{{ url('storage/'.$product->image)}}" alt="image">
+                                                @isset($request->image)
+                                                    <img class="card-img-top img-fluid" src="{{ url('storage/'.$product->image)}}" alt="image">
+                                                @endisset
                                         @elseif($fav->favorited_type == 'App\Models\Request')
                                             <?php
                                             $product = \App\Models\Request::find($fav->favorited_id);
                                             ?>
-                                                <img class="card-img-top img-fluid" src="{{ url('storage/'.$product->image)}}" alt="image">
+                                                @isset($request->image)
+                                                    <img class="card-img-top img-fluid" src="{{ url('storage/'.$product->image)}}" alt="image">
+                                                @endisset
                                         @elseif($fav->favorited_type == 'App\Models\Service')
                                             <?php
                                             $product = \App\Models\Service::find($fav->favorited_id);
                                             ?>
-                                                <img class="card-img-top img-fluid" src="{{ url('storage/'.$product->image)}}" alt="image">
+                                                @isset($request->image)
+                                                    <img class="card-img-top img-fluid" src="{{ url('storage/'.$product->image)}}" alt="image">
+                                                @endisset
                                         @endif
                                         <div class="card-body">
                                             <h4 class="card-title mt-0">
@@ -83,7 +112,7 @@
                                                 @elseif($fav->favorited_type == 'App\Models\Service')
                                                     <?php
                                                     $product = \App\Models\Service::find($fav->favorited_id);
-                                                    echo $product->getTranslatedAttribute('name',\App::getLocale());
+                                                    echo $product->name;
                                                     ?>
                                                 @endif
                                             </h4>
@@ -110,7 +139,7 @@
                                                 @elseif($fav->favorited_type == 'App\Models\Service')
                                                     <?php
                                                     $product = \App\Models\Service::find($fav->favorited_id);
-                                                    echo str_limit($product->getTranslatedAttribute('description',\App::getLocale()), 110);
+                                                    echo str_limit($product->description, 110);
                                                     ?>
                                                 @endif
                                             </p>
@@ -118,17 +147,17 @@
                                                 <?php
                                                 $product = \App\Models\Product::find($fav->favorited_id);
                                                 ?>
-                                                    <a href="#" class="btn btn-primary waves-effect waves-light">Visit Product</a>
+                                                    <a href="{{ route('productss.show' , $product->id) }}" class="btn btn-primary waves-effect waves-light">{{ __('dashboard.visit') }}</a>
                                             @elseif($fav->favorited_type == 'App\Models\Request')
                                                 <?php
                                                 $product = \App\Models\Request::find($fav->favorited_id);
                                                 ?>
-                                                    <a href="#" class="btn btn-primary waves-effect waves-light">Visit Request</a>
+                                                    <a href="{{ route('requestss.show' , $product->id) }}" class="btn btn-primary waves-effect waves-light">{{ __('dashboard.visit') }}</a>
                                             @elseif($fav->favorited_type == 'App\Models\Service')
                                                 <?php
                                                 $product = \App\Models\Service::find($fav->favorited_id);
                                                 ?>
-                                                    <a href="#" class="btn btn-primary waves-effect waves-light">Visit Service</a>
+                                                    <a href="{{ route('servicess.show' , $product->id) }}" class="btn btn-primary waves-effect waves-light">{{ __('dashboard.visit') }}</a>
                                             @endif
                                         </div>
                                     </div>
@@ -148,22 +177,30 @@
                                                 <?php
                                                 $product = \App\Models\Product::find($fav->reviewed_id);
                                                 ?>
-                                                <img class="card-img-top img-fluid" src="{{ url('storage/'.$product->image)}}" alt="image">
+                                                @isset($request->image)
+                                                    <img class="card-img-top img-fluid" src="{{ url('storage/'.$product->image)}}" alt="image">
+                                                @endisset
                                             @elseif($fav->reviewed_type == 'App\Models\Request')
                                                 <?php
                                                 $product = \App\Models\Request::find($fav->reviewed_id);
                                                 ?>
-                                                <img class="card-img-top img-fluid" src="{{ url('storage/'.$product->image)}}" alt="image">
+                                                    @isset($request->image)
+                                                        <img class="card-img-top img-fluid" src="{{ url('storage/'.$product->image)}}" alt="image">
+                                                    @endisset
                                             @elseif($fav->reviewed_type == 'App\Models\Service')
                                                 <?php
                                                 $product = \App\Models\Service::find($fav->reviewed_id);
                                                 ?>
-                                                <img class="card-img-top img-fluid" src="{{ url('storage/'.$product->image)}}" alt="image">
+                                                    @isset($request->image)
+                                                        <img class="card-img-top img-fluid" src="{{ url('storage/'.$product->image)}}" alt="image">
+                                                    @endisset
                                             @elseif($fav->reviewed_type == 'App\Models\User')
                                                 <?php
                                                 $product = \App\Models\User::find($fav->reviewed_id);
                                                 ?>
-                                                <img class="card-img-top img-fluid" src="{{ url('storage/'.$product->image)}}" alt="image">
+                                                    @isset($request->image)
+                                                        <img class="card-img-top img-fluid" src="{{ url('storage/'.$product->image)}}" alt="image">
+                                                    @endisset
                                             @endif
                                             <div class="card-body">
                                                 <h4 class="card-title mt-0">
@@ -202,7 +239,7 @@
                                                 </small>
                                                 <br>
                                                 <br>
-                                                <a href="#" class="btn btn-primary waves-effect waves-light">Visit Review</a>
+                                                <a href="{{ route('reviews.show' , $fav->id) }}" class="btn btn-primary waves-effect waves-light">{{ __('dashboard.visit') }}</a>
                                             </div>
                                         </div>
                                     </div>
@@ -210,20 +247,58 @@
                             </div>
                         </div>
                         <div class="tab-pane" id="req" role="tabpanel">
-                            <p class="mb-0">
-                                Food truck fixie locavore, accusamus mcsweeney's marfa nulla
-                                single-origin coffee squid. Exercitation +1 labore velit, blog
-                                sartorial PBR leggings next level wes anderson artisan four loko
-                                farm-to-table craft beer twee. Qui photo booth letterpress,
-                                commodo enim craft beer mlkshk aliquip jean shorts ullamco ad
-                                vinyl cillum PBR. Homo nostrud organic, assumenda labore
-                                aesthetic magna 8-bit.
-                            </p>
+                            <div class="row">
+                                @foreach(\App\Models\Request::where('user_id' , $user->id)->orderBy('id', 'desc')->get() as $request)
+                                    <div class="col-md-6 col-xl-3">
+                                        <div class="card">
+                                            @isset($request->image)
+                                                <img class="card-img-top img-fluid" src="{{ url('storage/'.$request->image)}}" alt="image">
+                                            @endisset
+                                            <div class="card-body">
+                                                <h4 class="card-title mt-0">
+                                                    {{ $request->getTranslatedAttribute('name',\App::getLocale()) }}
+                                                </h4>
+                                                <small class="text-info">
+                                                    {{ __('dashboard.request') }}
+                                                </small>
+                                                <br>
+                                                <br>
+                                                <a href="{{ route('requestss.show' , $request->id) }}" class="btn btn-primary waves-effect waves-light">{{ __('dashboard.visit') }}</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                @endforeach
+                            </div>
+                        </div>
+                        <div class="tab-pane" id="follow" role="tabpanel">
+                            <div class="row">
+                                @foreach($user->following()->get() as $follower)
+                                    <div class="col-md-6 col-xl-3">
+                                        <div class="card">
+                                            @isset($request->image)
+                                                <img class="card-img-top img-fluid" src="{{ url('storage/'.$follower->avatar)}}" alt="image">
+                                            @endisset
+                                            <div class="card-body">
+                                                <h4 class="card-title mt-0">
+                                                    {{ $follower->name }}
+                                                </h4>
+                                                <small class="text-info">
+                                                    {{ __('dashboard.user') }}
+                                                </small>
+                                                <br>
+                                                <br>
+                                                <a href="{{ route('sellerss.show' , $follower->id) }}" class="btn btn-primary waves-effect waves-light">{{ __('dashboard.visit') }}</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                @endforeach
+                            </div>
                         </div>
                     </div>
-
+                    <a href="{{ route('users.index') }}" style="width: 100%" class="btn btn-success">{{ __('dashboard.back') }}</a>
                 </div>
             </div>
+
         </div> <!-- end col -->
     </div> <!-- end row -->
 @endsection

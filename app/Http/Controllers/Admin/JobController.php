@@ -64,7 +64,17 @@ class JobController extends Controller
      */
     public function show($id)
     {
-        //
+        try {
+            $job = Job::find($id);
+            if(isset($job)){
+                return view('backend.jobs.show' , compact('job'));
+            }else{
+                return redirect()->back()->with('error', 'Error Try Again !!');
+            }
+
+        } catch (\Exception $e) {
+            return redirect()->back()->with('error', 'Error Try Again !!');
+        }
     }
 
     /**

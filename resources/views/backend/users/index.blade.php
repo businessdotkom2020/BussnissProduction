@@ -32,6 +32,7 @@
                                 <th data-priority="0">{{ __('dashboard.phone') }}</th>
                                 <th data-priority="0">{{ __('dashboard.country') }}</th>
                                 <th data-priority="0">{{ __('dashboard.requests') }}</th>
+                                <th data-priority="0">{{ __('dashboard.reviews') }}</th>
 
                                 <th data-priority="1">{{ __('dashboard.options') }}</th>
                             </tr>
@@ -52,10 +53,16 @@
                                     <td>{{ $user->mobile }}</td>
                                     <td>{{ $user->country->name ?? '' }}</td>
                                     <td>{{ $user->requests->count() }}</td>
+                                    <?php
+                                        $reviws = \App\Models\Review::where('user_id' , $user->id)->get();
+                                    ?>
+                                    <td>{{ $reviws->count() }}</td>
 
                                     <td>
                                         <a href="{{ route('users.edit' , $user->id) }}"
                                            class="mr-3 text-primary"><i class="mdi mdi-pencil font-size-18"></i></a>
+                                        <a href="{{ route('users.show' , $user->id) }}"
+                                           class="mr-3 text-success"><i class="mdi mdi-eye font-size-18"></i></a>
                                         <a title="" onclick="return false;" object_id="{{ $user->id }}"
                                            delete_url="/users/" class="text-danger remove-alert" href="#"><i
                                                     class="mdi mdi-trash-can font-size-18"></i></a>
@@ -74,6 +81,7 @@
 @section('backend-footer')
     <script src="{{ asset('backend') }}/assets/libs/admin-resources/rwd-table/rwd-table.min.js"></script>
     <script src="{{ asset('backend') }}/assets/js/pages/table-responsive.init.js"></script>
+
     <script src="{{ asset('backend') }}/assets/libs/sweetalert2/sweetalert2.min.js"></script>
     <script src="{{ asset('backend') }}/assets/js/pages/sweet-alerts.init.js"></script>
     <script src="{{ asset('backend') }}/assets/libs/datatables.net-buttons/js/dataTables.buttons.min.js"></script>
@@ -89,6 +97,4 @@
     <script src="{{ asset('backend') }}/assets/js/pages/datatables.init.js"></script>
     <script src="{{ asset('backend') }}/custom-sweetalert.js"></script>
     <script src="{{ asset('backend') }}/mine.js"></script>
-
-
 @endsection

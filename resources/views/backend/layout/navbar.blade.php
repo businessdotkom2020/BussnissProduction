@@ -100,15 +100,43 @@
                     </a>
                     <ul class="sub-menu" aria-expanded="false">
                         <li class="{{ Request::is('admin/categories*')? 'mm-active': '' }}">
-                            <a href="{{ route('categories.index') }}">
+                            <a class="{{ Request::is('admin/categories*')? 'active': '' }}" href="{{ route('categories.index') }}">
                                 @lang('dashboard.m_cats')
                                 <span class="badge badge-pill badge-info float-right">{{ \App\Models\Category::whereNull('parent_id')->orWhere('parent_id', '=', 0)->count() }}</span>
                             </a>
                         </li>
+                        <?php
+                        $cats = \App\Models\Category::whereNull('parent_id')->get();
+                        $subcategories_ids =[];
+                        foreach($cats as $cat){
+                            foreach ($cat->children as $child){
+                                array_push($subcategories_ids , $child->id);
+                            }
+                        }
+                        $categories = \App\Models\Category::whereIn('id' , $subcategories_ids)->orderBy('id' , 'desc')->get();
+                        $subsubcategories_ids = [];
+                        foreach ($categories as $subcat){
+                           foreach ($subcat->children as $subsub){
+                               array_push($subsubcategories_ids , $subsub->id);
+                           }
+                        }
+                        $subsubcategories = \App\Models\Category::whereIn('id' , $subsubcategories_ids)->get();
+                        ?>
                         <li class="{{ Request::is('admin/subcategories*')? 'mm-active': '' }}">
-                            <a href="{{ route('subcategories.index') }}">
+                            <a class="{{ Request::is('admin/subcategories*')? 'active': '' }}" href="{{ route('subcategories.index') }}">
                                 @lang('dashboard.sub_cats')
-                                <span class="badge badge-pill badge-soft-info float-right">{{ \App\Models\Category::whereNotNull('parent_id')->orWhere('parent_id', '!=', 0)->count() }}</span>
+                                <span class="badge badge-pill badge-soft-info float-right">{{ $categories->count() }}</span>
+                            </a>
+                        </li>
+                        <li class="{{ Request::is('admin/subsubcategories*')? 'mm-active': '' }}">
+                            <a class="{{ Request::is('admin/subsubcategories*')? 'active': '' }}" href="{{ route('subsubcategories.index') }}">
+                                @lang('dashboard.subsubcategory')
+                                <span class="badge badge-pill badge-soft-primary float-right">{{ $subsubcategories->count() }}</span>
+                            </a>
+                        </li>
+                        <li class="{{ Request::is('admin/category_tree')? 'mm-active': '' }}">
+                            <a class="{{ Request::is('admin/category_tree')? 'active': '' }}" href="{{ route('tree') }}">
+                                @lang('dashboard.categories_tree')
                             </a>
                         </li>
                     </ul>
@@ -184,6 +212,13 @@
                         <i class="far fa-images"></i>
                         <span class="badge badge-pill badge-secondary float-right">{{ \App\Models\Slider::count() }}</span>
                         <span>@lang('dashboard.slider')</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="{{ route('reviews.index') }}" class="waves-effect">
+                        <i class="far fa-comments"></i>
+                        <span class="badge badge-pill badge-danger float-right">{{ \App\Models\Review::count() }}</span>
+                        <span>@lang('dashboard.reviews')</span>
                     </a>
                 </li>
             </ul>

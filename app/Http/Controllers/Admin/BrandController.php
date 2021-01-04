@@ -56,6 +56,11 @@ class BrandController extends Controller
         try {
             $brand = new Brand();
             $brand->name = $request->name;
+            if (($request->file('image'))) {
+                $file_name     = 'brand_image'.   rand(1, 15). rand(155, 200) . rand(25, 55). '.png';
+                $request->image->storeAs('public/brands',$file_name);
+                $brand->image = 'brands/'. $file_name;
+            }
             $brand->save();
             return redirect()->route('brands.index')->with('done', 'Added Successfully ....');
         } catch (\Exception $e) {
@@ -71,7 +76,17 @@ class BrandController extends Controller
      */
     public function show($id)
     {
-        //
+        try {
+            $brand = Brand::find($id);
+            if(isset($brand)){
+                return view('backend.brands.show' , compact('brand'));
+            }else{
+                return redirect()->back()->with('error', 'Error Try Again !!');
+            }
+
+        } catch (\Exception $e) {
+            return redirect()->back()->with('error', 'Error Try Again !!');
+        }
     }
 
     /**
@@ -102,6 +117,12 @@ class BrandController extends Controller
         try {
             $brand = Brand::find($id);
             $brand->name = $request->name;
+            if (($request->file('image'))) {
+                @unlink('storage/' . $brand->image);
+                $file_name     = 'brand_image'.   rand(1, 15). rand(155, 200) . rand(25, 55). '.png';
+                $request->image->storeAs('public/brands',$file_name);
+                $brand->image = 'brands/'. $file_name;
+            }
             $brand->save();
             return redirect()->route('brands.index')->with('done', 'Edited Successfully ....');
         } catch (\Exception $e) {
@@ -119,6 +140,7 @@ class BrandController extends Controller
     {
         try {
             $brand = Brand::find($id);
+            @unlink('storage/' . $brand->image);
             $brand->delete();
             return response()->json([
                 'success' => 'Record deleted successfully!'
@@ -133,6 +155,7 @@ class BrandController extends Controller
             $brands = Brand::all();
             if (count($brands) > 0) {
                 foreach ($brands as $brand) {
+                    @unlink('storage/' . $brand->image);
                     $brand->delete();
                 }
                 return response()->json([
