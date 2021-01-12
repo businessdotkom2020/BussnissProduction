@@ -871,8 +871,6 @@
             </div>
         </div>
     </div>
-=======
->>>>>>> 3d1cc741ab2c968dbd0e26dad9366250be4ce8b5
     <!-- end row -->
     {{--         --}}
     <div class="row">
