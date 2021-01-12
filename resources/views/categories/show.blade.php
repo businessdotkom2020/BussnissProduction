@@ -433,11 +433,6 @@ $menu = false ;
                                     <div class="i-data">
                                         <a href="{{url('product/'.$product->id)}}" class="title">{{$product->getTranslatedAttribute('name',\App::getLocale())}}</a>
 
-<<<<<<< HEAD
-
-=======
-
->>>>>>> 3e831a1407b4483df18992c2ee8f4e0f4f78fe80
 
                                         <span>{{$product->sale_price ? $product->sale_price : $product->price}}$</span>
 
