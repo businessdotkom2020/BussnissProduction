@@ -108,6 +108,18 @@ class Product extends Model
     {
         return $this->belongsTo(User::class,'user_id');
     }
+    public function zone()
+    {
+        return $this->belongsTo(IndustrialZones::class,'zone_id');
+    }
+    public function brand()
+    {
+        return $this->belongsTo(Brand::class,'brand_id');
+    }
+    public function tag()
+    {
+        return $this->belongsTo(Tag::class,'tag_id');
+    }
 
 	public function category() {
 		return $this->belongsTo('App\Models\Category','category_id');

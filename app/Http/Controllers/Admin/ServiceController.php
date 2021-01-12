@@ -87,7 +87,16 @@ class ServiceController extends Controller
      */
     public function show($id)
     {
-        //
+        try {
+            $service = Service::find($id);
+            if(isset($service)){
+                return view('backend.services.show' , compact('service'));
+            }else{
+                return redirect()->back()->with('error', 'Error Try Again !!');
+            }
+        } catch (\Exception $e) {
+            return redirect()->back()->with('error', 'Error Try Again !!');
+        }
     }
 
     /**

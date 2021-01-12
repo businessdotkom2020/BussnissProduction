@@ -86,7 +86,16 @@ class RequestController extends Controller
      */
     public function show($id)
     {
-        //
+        try {
+            $request= Req::find($id);
+            if(isset($request)){
+                return view('backend.requests.show' , compact('request'));
+            }else{
+                return redirect()->back()->with('error', 'Error Try Again !!');
+            }
+        } catch (\Exception $e) {
+            return redirect()->back()->with('error', 'Error Try Again !!');
+        }
     }
 
     /**

@@ -27,40 +27,44 @@ Route::group(['prefix' => 'admin', 'namespace' => 'Admin', 'middleware' => 'auth
     /****************** auth routes ****************/
     Route::get('/', 'AdminController@index')->name('backend-home');
     /***********  normal-users route ***********/
-    Route::resource('users', 'UserController', ['except' => ['show']]);
+    Route::resource('users', 'UserController');
     Route::delete('delete_users', 'UserController@delete_users')->name('delete_users');
     /***********  sellers route ***********/
-    Route::resource('sellerss', 'SellerController', ['except' => ['show']]);
+    Route::resource('sellerss', 'SellerController');
     Route::delete('delete_sellerss', 'SellerController@delete_sellerss')->name('delete_sellerss');
     /***********  clients route ***********/
     Route::resource('clients', 'ClientController', ['except' => ['show']]);
     Route::delete('delete_clients', 'ClientController@delete_clients')->name('delete_clients');
     /***********  branches route ***********/
-    Route::resource('branches', 'BranchController', ['except' => ['show']]);
+    Route::resource('branches', 'BranchController');
     Route::delete('delete_branches', 'BranchController@delete_branches')->name('delete_branches');
     /***********  products route ***********/
-    Route::resource('productss', 'ProductController', ['except' => ['show']]);
+    Route::resource('productss', 'ProductController');
     Route::delete('delete_prodectss', 'ProductController@delete_prodectss')->name('delete_prodectss');
     /***********  service route ***********/
-    Route::resource('servicess', 'ServiceController', ['except' => ['show']]);
+    Route::resource('servicess', 'ServiceController');
     Route::delete('delete_servicess', 'ServiceController@delete_servicess')->name('delete_servicess');
     /***********  request route ***********/
-    Route::resource('requestss', 'RequestController', ['except' => ['show']]);
+    Route::resource('requestss', 'RequestController');
     Route::delete('delete_requestss', 'RequestController@delete_requestss')->name('delete_requestss');
     /***********  job route ***********/
-    Route::resource('jobss', 'JobController', ['except' => ['show']]);
+    Route::resource('jobss', 'JobController');
     Route::delete('delete_jobss', 'JobController@delete_jobss')->name('delete_jobss');
     /***********  categry route ***********/
     Route::resource('categories', 'CategoryController', ['except' => ['show']]);
+    Route::get('category_tree', 'CategoryController@tree')->name('tree');
     Route::delete('delete_categories', 'CategoryController@delete_categories')->name('delete_categories');
     /***********  subcategry route ***********/
     Route::resource('subcategories', 'SubcategoryController', ['except' => ['show']]);
     Route::delete('delete_subcategories', 'SubcategoryController@delete_categories')->name('delete_subcategories');
+    /***********  subsubcategry route ***********/
+    Route::resource('subsubcategories', 'SubsubcategoryController', ['except' => ['show']]);
+    Route::delete('delete_subsubcategories', 'SubsubcategoryController@delete_categories')->name('delete_subsubcategories');
     /***********  brands route ***********/
-    Route::resource('brands', 'BrandController', ['except' => ['show']]);
+    Route::resource('brands', 'BrandController');
     Route::delete('delete_brands', 'BrandController@delete_brands')->name('delete_brands');
     /***********  brands route ***********/
-    Route::resource('tags', 'TagController', ['except' => ['show']]);
+    Route::resource('tags', 'TagController');
     Route::delete('delete_tags', 'TagController@delete_tags')->name('delete_tags');
     /***********  countries route ***********/
     Route::resource('countries', 'CountryController', ['except' => ['show']]);
@@ -75,7 +79,7 @@ Route::group(['prefix' => 'admin', 'namespace' => 'Admin', 'middleware' => 'auth
     Route::resource('sliders', 'SliderController', ['except' => ['show']]);
     Route::delete('delete_sliders', 'SliderController@delete_sliders')->name('delete_sliders');
     /***********  zones route ***********/
-    Route::resource('zones', 'IndustrialController', ['except' => ['show']]);
+    Route::resource('zones', 'IndustrialController');
     Route::delete('delete_zones', 'IndustrialController@delete_zones')->name('delete_zones');
     /***********  attributes route ***********/
     Route::resource('attributes', 'AttributeController', ['except' => ['show']]);
@@ -89,6 +93,8 @@ Route::group(['prefix' => 'admin', 'namespace' => 'Admin', 'middleware' => 'auth
     /********** amoderators***********/
     Route::resource('moderators', 'ModeratorController', ['except' => ['show']]);
     Route::resource('roles','RoleController');
+    /***********  reviews route ***********/
+    Route::resource('reviews', 'ReviewController', ['only' => ['index','show','destroy']]);
 });
 /************* ajax select routes ******************/
 Route::get('/ajax-states', 'Admin\AdminController@getStates');

@@ -81,7 +81,17 @@ class TagController extends Controller
      */
     public function show($id)
     {
-        //
+        try {
+            $tag = Tag::find($id);
+            if(isset($tag)){
+                return view('backend.tags.show' , compact('tag'));
+            }else{
+                return redirect()->back()->with('error', 'Error Try Again !!');
+            }
+
+        } catch (\Exception $e) {
+            return redirect()->back()->with('error', 'Error Try Again !!');
+        }
     }
 
     /**
