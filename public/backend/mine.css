@@ -1,0 +1,139 @@
+.blah_create{
+    display: none;
+}
+#blah , #blah2{
+    width: 200px;
+    border-radius: 10px;
+}
+
+
+.images .btn {
+    width: 100%;
+    padding: 6px 12px;
+    margin-bottom: 0;
+    font-size: 14px;
+    font-weight: normal;
+    line-height: 1.42857143;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: middle;
+    cursor: pointer;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    background-image: none;
+    border: 1px solid transparent;
+    border-radius: 4px;
+}
+/*Also */
+.images .btn-success {
+    border: 1px solid #c5dbec;
+    background: #d0e5f5;
+    font-weight: bold;
+    color: #2e6e9e;
+}
+/* This is copied from https://github.com/blueimp/jQuery-File-Upload/blob/master/css/jquery.fileupload.css */
+.images .fileinput-button {
+    position: relative;
+    overflow: hidden;
+}
+
+.images .fileinput-button input {
+    position: absolute;
+    top: 0;
+    right: 0;
+    margin: 0;
+    opacity: 0;
+    -ms-filter: "alpha(opacity=0)";
+    font-size: 200px;
+    direction: ltr;
+    cursor: pointer;
+}
+
+.images .thumb {
+    height: 80px;
+    width: 100px;
+    border: 1px solid #000;
+}
+
+.images ul.thumb-Images li {
+    width: 120px;
+    float: left;
+    display: inline-block;
+    vertical-align: top;
+    height: 120px;
+}
+
+.images .img-wrap {
+    position: relative;
+    display: inline-block;
+    font-size: 0;
+}
+
+.images .img-wrap .close {
+    position: absolute;
+    top: 2px;
+    right: 2px;
+    z-index: 100;
+    background-color: #d0e5f5;
+    padding: 5px 5px 5px 5px;
+    color: #000;
+    font-weight: bolder;
+    cursor: pointer;
+    font-size: 23px;
+    line-height: 10px;
+    border-radius: 50%;
+    opacity: 1;
+    background-color: #c30000;
+}
+.images .FileNameCaptionStyle {
+    font-size: 12px;
+}
+
+
+input[type=checkbox].css-checkbox{ display: none; }
+.css-label{
+    padding-left: 20px;
+    display: inline-block;
+    width: 5em;
+    height: 5em;
+    border-radius: 50%;
+    background-repeat: no-repeat;
+    background-color: #E9EEF4;
+    background-size: contain;
+    cursor: pointer;
+}
+input[type=checkbox].css-checkbox:checked + label.css-label {
+    background-position: 0 0;
+    border: 5px solid #2FBCDF;
+}
+.color .css-label{
+    width: auto;
+    height: auto;
+    padding-left: 0;
+    border: 5px solid transparent;
+}
+.color .css-label h4{
+    font-weight: bolder;
+    font-size: 20px;
+    margin: auto 0;
+    padding: 20px 23px;
+}
+/********* slider page */
+#field1 , #field2{
+    display: none;
+}
+.btn-toolbar{
+    justify-content: space-between;
+}
+.btn-default{
+    border: 1px solid lightgrey;
+}
+.table-responsive .dt-buttons .btn-group{
+    display: none;
+}
+.nav.nav-pills{
+    border: 1px solid grey;
+    border-radius: 5px;
+}

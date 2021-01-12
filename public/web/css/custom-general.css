@@ -1,0 +1,9 @@
+.swal2-checkbox, .swal2-file, .swal2-input, .swal2-radio, .swal2-select, .swal2-textarea {
+    margin: 1em auto;
+    display: none;
+}
+
+
+.wrapper {
+    overflow:hidden;
+}

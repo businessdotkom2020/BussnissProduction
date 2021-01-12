@@ -1,0 +1,426 @@
+* {
+    direction: rtl;
+}
+
+.top-head .tp-links {
+    float: right;
+}
+
+.top-head .tp-extra {
+    float: left;
+}
+
+.menu-item-has-children > a:after {
+    margin: 0 7px 0 0;
+}
+
+.middle-head .logo {
+    float: right;
+}
+
+.middle-head .user-srea {
+    float: left;
+}
+
+.middle-head .main-search img {
+    right: 20px;
+    left: auto;
+}
+
+.middle-head .main-search .btn {
+    border-radius: 10px;
+    left: 0;
+    right: auto;
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+}
+
+.middle-head .main-search .form-control:focus {
+    padding: 0 55px 0 0;
+}
+
+.middle-head .user-srea a {
+    margin: 0 0 0 20px;
+}
+
+.bottom-head h3 {
+    float: right;
+    padding: 0 0 0 30px;
+    margin: 0 0 0 30px;
+}
+
+.bottom-head h3:after {
+    left: 0;
+    right: auto;
+}
+
+.bottom-head ul li {
+    margin: 0 0 0 13px;
+}
+
+.product-layout .prod-top .prod-data .extra .avail {
+    float: left;
+}
+
+.owl-carousel .owl-stage-outer,
+.owl-carousel {
+    direction: ltr;
+}
+
+.product-layout .prod-top .prod-data .feat-list li {
+    padding: 0 20px 0 0;
+}
+
+.product-layout .prod-top .prod-data .feat-list li:before {
+    right: 0;
+    left: auto;
+}
+
+.product-layout .prod-top .prod-data .space > span {
+    margin: 0 0 0 30px;
+}
+
+.product-layout .prod-top .prod-data .space {
+    direction: ltr;
+}
+
+.product-layout .prod-top .prod-data .space .form-control {
+    float: left;
+}
+
+.product-layout .prod-top .prod-data .colors .colors-list {
+    margin: 0 30px 0 0;
+}
+
+.product-layout .prod-top .prod-data .colors .colors-list label {
+    margin: 0 0 0 10px;
+}
+
+.product-layout .prod-top .prod-data .addition .form-control {
+    margin: 0 10px 0 0;
+}
+
+.product-layout .prod-top .prod-data .conts a {
+    margin: 0 0 0 5px;
+}
+
+.prod-bottom .revs-items {
+    padding: 0 15px 0 20px;
+    border-left: 1px solid #eaeaea;
+    border-right: 0;
+}
+
+.prod-bottom .rev-item span {
+    margin: 0 50px 0 0;
+}
+
+.prod-bottom .revs-form {
+    padding: 0 20px 0 15px;
+}
+
+.prod-bottom .revs-form .form-group ul li label span:before {
+    right: 0;
+    left: auto;
+    margin: 0 0 0 10px;
+}
+
+.prod-bottom .revs-form .form-group ul li label span {
+    padding: 0 30px 0 0;
+}
+
+.prod-bottom .com-items {
+    border-left: 1px solid #dfdfdf;
+    padding: 0 0 0 20px;
+    border-right: 0;
+}
+
+.prod-bottom .com-item .com-top .rev-img {
+    float: right;
+    margin: 0 0 0 15px;
+}
+
+.prod-bottom .com-item .com-top .rev-data .reply {
+    left: 0;
+    right: auto;
+}
+
+.prod-bottom .com-form {
+    padding: 0 20px 0 0;
+}
+
+.maskk .f-item ul li a:after {
+    right: 0;
+    left: auto;
+}
+
+.maskk .f-item .social a {
+    margin: 0 0 0 20px;
+}
+
+.maskk .f-item .form-group .btn {
+    border-radius: 25px;
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+    left: 0;
+    right: auto;
+}
+
+.toTop {
+    left: 20px;
+    right: auto;
+}
+
+.toTop span {
+    left: -16px;
+    right: auto;
+}
+
+.toTop:before {
+    right: 15px;
+    left: auto;
+    transform: rotate(45deg);
+}
+
+.toTop:after {
+    left: auto;
+    right: 29px;
+    transform: rotate(-45deg);
+}
+
+.s-search .inner .rights p {
+    text-align: center;
+}
+
+.cart-sidebar .inner .c-item img {
+    float: right;
+    margin: 0 0 0 10px;
+}
+
+.cart-sidebar .inner .c-item .del-prod {
+    left: 0;
+    right: auto;
+}
+
+.cart-sidebar .inner .c-item .data span {
+    float: right;
+}
+
+.sidebar h4 i {
+    margin: 0 0 0 5px;
+}
+
+.sidebar ul li a:after {
+    float: left;
+}
+
+.g-head a {
+    float: left;
+    padding: 0 0 0 50px;
+}
+
+.g-head a:before {
+    left: 0;
+    right: auto;
+}
+
+.g-head a:after {
+    left: 1px;
+    right: auto;
+    border-bottom: 1px solid #00a0a8;
+    border-left: 1px solid #00a0a8;
+    border-right: 0;
+    border-top: 0;
+}
+
+.g-head a:hover:before {
+    left: -10px;
+    right: auto;
+}
+
+.g-head a:hover:after {
+    left: -20px;
+    right: auto;
+}
+
+.latest .block .inner .i-data .d-bottom .rate {
+    float: left;
+}
+
+.lt-banners .block:last-of-type .inner .i-img {
+    float: right;
+}
+
+.lt-banners .block .inner .i-img {
+    float: left;
+}
+
+.b-label {
+    left: 50px;
+    right: auto;
+}
+
+.offer-s .block .it-img {
+    float: left;
+}
+
+.of-banner .inner .i-data h3 {
+    font-size: 59px;
+}
+
+.f-top .top-details .block .inner img {
+    float: right;
+    margin: 0 0 0 20px;
+}
+
+.f-top .top-details .block {
+    border: 0;
+    border-right: 1px solid #fff;
+}
+
+.panel-group .panel-heading a span {
+    margin: 0 0 0 10px;
+}
+
+.check-form ul li label span {
+    padding: 0 35px 0 0;
+}
+
+.check-form ul li label span:before {
+    right: 0;
+    left: auto;
+    margin: 0 0 0 10px;
+}
+
+.widget .w-body .p-item .p-img {
+    float: right;
+    margin: 0 0 0 20px;
+}
+
+.widget .w-body .p-total ul li span {
+    float: left;
+}
+
+.widget .w-body .p-order span {
+    float: left;
+}
+
+.check-form .ex-form .form-group .form-control span {
+    text-align: right;
+}
+
+.check-form .ex-form .form-group .form-control:after {
+    left: 30px;
+    right: auto;
+}
+
+.check-form .ex-form .form-group .form-control .list li {
+    text-align: right;
+}
+
+.jumbo .j-img {
+    float: left;
+}
+
+.sing-sidebar .panel .panel-heading a:before,
+.sing-sidebar .panel .panel-heading a:after {
+    left: 20px;
+    right: auto;
+}
+
+.sing-sidebar .panel .panel-body .form-group ul li label span {
+    padding: 0 30px 0 0;
+}
+
+.sing-sidebar .panel .panel-body .form-group ul li label span:before {
+    right: 0;
+    left: auto;
+    margin: 0 0 0 10px;
+}
+
+.sing-sidebar .panel .panel-body .form-group.price .form-control {
+    padding: 0 10px 0 0;
+    width: 55px;
+}
+
+.sing-sidebar .panel .panel-body .form-group.price .btn {
+    margin: 0 10px 0 0;
+}
+
+.sing-content .cont-head .h-extra .extra-filter .filt-select {
+    float: left;
+}
+
+.sing-content .cont-head .h-extra .extra-filter {
+    float: left;
+}
+
+.sing-content .cont-head .h-extra .extra-filter .filt-select .f-select {
+    margin: 0 8px 0 0;
+}
+
+.sing-content .cont-head .h-extra .extra-filter .filt-select .f-select span {
+    text-align: right;
+}
+
+.sing-content .cont-head .h-extra .extra-filter .filt-select .f-select:after {
+    left: 10px;
+    right: auto;
+}
+
+.latest .block .inner .i-controls {
+    left: -55px;
+    right: auto;
+    border-width: 5px 5px 5px 0;
+}
+
+.latest .block .inner:hover .i-controls {
+    left: 0;
+    right: auto;
+}
+
+.sing-banner .inner {
+    text-align: left;
+}
+
+.i-pagintaion ul li .nxt:after {
+    left: 10px;
+    right: auto;
+    border-width: 0 0 2px 2px;
+}
+
+.sing-content .latest .block .inner-list .list-img {
+    float: right;
+}
+
+.sing-content .latest .block .inner-list .list-r {
+    float: left;
+}
+
+.sing-content .latest .block .inner-list .list-r .l-controls ul li img {
+    margin: 0 0 0 10px;
+}
+
+.cart-layout .table td img {
+    float: right;
+    margin: 0 0 0 20px;
+}
+
+.coupon .form-group .btn {
+    float: left;
+}
+
+.cart-total .c-body .bb-item h3 {
+    float: left;
+}
+
+.cart-total .c-footer .f-left h4 {
+    float: left;
+}
+
+.cart-total .c-footer .f-right {
+    float: left;
+}
+
+.cart-total .c-footer .f-right .btn {
+    margin: 0 5px 0 0;
+}

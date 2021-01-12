@@ -1,0 +1,66 @@
+@extends('backend.layout.master')
+@section('backend-head')
+    <link href="{{ asset('backend') }}/assets/libs/select2/css/select2.min.css" rel="stylesheet" type="text/css"/>
+@endsection
+@section('backend-main')
+    <div class="row">
+        <div class="col-xl-12">
+            <div class="card">
+                <div class="card-body">
+                    <h4 class="card-title">@lang('dashboard.add') @lang('dashboard.val') </h4>
+                    <p class="card-title-desc"></p>
+                    <form method="post" action="{{ route('attr_values.store') }}" class="needs-validation" novalidate>
+                        @csrf
+                        <div class="row">
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <label for="value_ar">@lang('dashboard.value_arabic')</label>
+                                    <input type="text" name="value_ar" class="form-control" id="value_ar" placeholder="@lang('dashboard.value_arabic')" value="{{ old('value_ar') }}" required>
+                                    @error('value_ar')
+                                    <span class="text-danger">{{ $message }}</span>
+                                    @enderror
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <label for="value_en">@lang('dashboard.value_english')</label>
+                                    <input type="text" name="value_en" class="form-control" id="value_en" placeholder="@lang('dashboard.value_english')" value="{{ old('value_en') }}" required>
+                                    @error('value_en')
+                                    <span class="text-danger">{{ $message }}</span>
+                                    @enderror
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-12">
+                                <div class="form-group">
+                                    <label for="attribute_id">@lang('dashboard.att')</label>
+                                    <select name="attribute_id" class="form-control select2" id="attribute_id" required>
+                                        <option selected disabled hidden value="">---- @lang('dashboard.select') @lang('dashboard.att') ----</option>
+                                        @foreach($attrs as $attr)
+                                            <option value="{{ $attr->id }}">{{$attr->getTranslatedAttribute('name','ar')}} / {{ $attr->name }}</option>
+                                        @endforeach
+                                    </select>
+                                    @error('attribute_id')
+                                    <span class="text-danger">{{ $message }}</span>
+                                    @enderror
+                                </div>
+                            </div>
+                        </div>
+                        <hr>
+                        <button class="btn btn-primary" type="submit">@lang('dashboard.submit')</button>
+                    </form>
+                </div>
+            </div>
+            <!-- end card -->
+        </div> <!-- end col -->
+    </div>
+    <!-- end row -->
+@endsection
+@section('backend-footer')
+    <script src="{{ asset('backend') }}/assets/libs/parsleyjs/parsley.min.js"></script>
+    <script src="{{ asset('backend') }}/assets/js/pages/form-validation.init.js"></script>
+    <script src="{{ asset('backend') }}/mine.js"></script>
+    <script src="{{ asset('backend') }}/assets/libs/select2/js/select2.min.js"></script>
+    <script src="{{ asset('backend') }}/assets/js/pages/form-advanced.init.js"></script>
+@endsection
