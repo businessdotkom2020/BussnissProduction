@@ -716,7 +716,165 @@
             </div>
         </div>
     </div>
+<<<<<<< HEAD
     <!-- end row -->
+    <div class="row">
+        <div class="col-lg-6">
+            <div class="card">
+                <div class="card-body">
+                    <div>
+                        <div class="text-center">
+                            <h4 class="mb-2">{{ __('dashboard.most_active_suppliers') }}</h4>
+                        </div>
+                        <ul class="nav nav-tabs" id="myTab" role="tablist">
+                            <li class="nav-item">
+                                <a class="nav-link active" id="home-tab" data-toggle="tab" href="#home" role="tab" aria-controls="home" aria-selected="true">{{ __('dashboard.products') }}</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" id="profile-tab" data-toggle="tab" href="#profile" role="tab" aria-controls="profile" aria-selected="false">{{ __('dashboard.requests') }}</a>
+                            </li>
+                        </ul>
+                        <div class="tab-content" id="myTabContent">
+                            <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
+                                <div class="table-responsive mt-4">
+                                    <table class="table table-hover mb-0 table-centered table-nowrap">
+                                        <tbody>
+                                        <tr style="background: rgba(3,3,3,0.1)">
+                                            <td>
+                                                {{ __('dashboard.image') }}
+                                            </td>
+                                            <td>
+                                                <h5 class="font-size-14 mb-0">{{ __('dashboard.name') }}</h5>
+                                            </td>
+                                            <td><div id="spak-chart3">{{ __('dashboard.products') }}</div></td>
+                                        </tr>
+                                        @foreach(\App\Models\User::whereNotNull('state_id')->withCount('products')->orderBy('products_count','desc')->paginate(5) as $supplier)
+                                            <tr>
+                                                <td>
+                                                    <div class="avatar-xs">
+                                                        <div class="avatar-title rounded-circle bg-light">
+                                                            @if(isset($supplier->avatar))
+                                                                <img height="20" src="{{ url('storage/' . $supplier->avatar) }}"/>
+                                                            @endif
+                                                        </div>
+                                                    </div>
+                                                </td>
+                                                <td>
+                                                    <h5 class="font-size-14 mb-0">{{ $supplier->name }}
+                                                    </h5>
+                                                </td>
+                                                <td><div id="spak-chart3">
+                                                        {{ $supplier->products->count() }}
+                                                    </div></td>
+                                            </tr>
+                                        @endforeach
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                            <div class="tab-pane fade" id="profile" role="tabpanel" aria-labelledby="profile-tab">
+                                <div class="table-responsive mt-4">
+                                    <table class="table table-hover mb-0 table-centered table-nowrap">
+                                        <tbody>
+                                        <tr style="background: rgba(3,3,3,0.1)">
+                                            <td>
+                                                {{ __('dashboard.image') }}
+                                            </td>
+                                            <td>
+                                                <h5 class="font-size-14 mb-0">{{ __('dashboard.name') }}</h5>
+                                            </td>
+                                            <td><div id="spak-chart3">{{ __('dashboard.requests') }}</div></td>
+                                        </tr>
+                                        @foreach(\App\Models\User::whereNotNull('state_id')->withCount('requests')->orderBy('requests_count','desc')->paginate(5) as $supplier)
+                                            <tr>
+                                                <td>
+                                                    <div class="avatar-xs">
+                                                        <div class="avatar-title rounded-circle bg-light">
+                                                            @if(isset($supplier->avatar))
+                                                                <img height="20" src="{{ url('storage/' . $supplier->avatar) }}"/>
+                                                            @endif
+                                                        </div>
+                                                    </div>
+                                                </td>
+                                                <td>
+                                                    <h5 class="font-size-14 mb-0">{{ $supplier->name }}
+                                                    </h5>
+                                                </td>
+                                                <td><div id="spak-chart3">
+                                                        {{ $supplier->requests->count() }}
+                                                    </div></td>
+                                            </tr>
+                                        @endforeach
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="text-center mt-4">
+                            <a href="{{ route('sellerss.index') }}" class="btn btn-primary btn-sm">{{ __('dashboard.more') }}</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-6">
+            <div class="card">
+                <div class="card-body">
+                    <div>
+                        <div class="text-center">
+                            <h4 class="mb-2">{{ __('dashboard.most_active_users') }}</h4>
+                        </div>
+
+                        <div class="table-responsive mt-4">
+                            <table class="table table-hover mb-0 table-centered table-nowrap">
+                                <tbody>
+                                <tr style="background: rgba(3,3,3,0.1)">
+                                    <td>
+                                        {{ __('dashboard.image') }}
+                                    </td>
+                                    <td>
+                                        <h5 class="font-size-14 mb-0">{{ __('dashboard.name') }}</h5>
+                                    </td>
+                                    <td><div id="spak-chart3">{{ __('dashboard.requests') }}</div></td>
+                                </tr>
+                                @foreach(\App\Models\User::whereNotNull('state_id')->withCount('requests')->orderBy('requests_count','desc')->paginate(6) as $user)
+                                    <tr>
+                                        <td>
+                                            <div class="avatar-xs">
+                                                <div class="avatar-title rounded-circle bg-light">
+                                                    @if(isset($user->avatar))
+                                                        <img height="20" src="{{ url('storage/' . $user->avatar) }}"/>
+                                                    @endif
+                                                </div>
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <h5 class="font-size-14 mb-0">{{ $user->name }}
+                                            </h5>
+                                        </td>
+                                        <td>
+                                            <div id="spak-chart3">
+                                                {{ $user->requests->count() }}
+                                            </div>
+                                        </td>
+                                    </tr>
+                                @endforeach
+                                </tbody>
+                            </table>
+                        </div>
+                        <div class="text-center mt-4">
+                            <a href="{{ route('users.index') }}" class="btn btn-primary btn-sm">{{ __('dashboard.more') }}</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+=======
+>>>>>>> 3d1cc741ab2c968dbd0e26dad9366250be4ce8b5
+    <!-- end row -->
+    {{--         --}}
     <div class="row">
         <div class="col-lg-6">
             <div class="card">
@@ -1001,6 +1159,134 @@
     </div>
     {{--         --}}
     <!-- end row -->
+    <div class="row">
+        <div class="col-md-12">
+            <div class="card">
+                <div class="card-body">
+                    <div class="text-center">
+                        <p class="mb-2 text-success">{{ __('dashboard.active_users') }}</p>
+                        <?php
+                        $user = new \App\Models\User();
+                        ?>
+                        <h4 class="text-success">{{ $user->allOnline()->count() }}</h4>
+                    </div>
+                    <div class="row">
+                        <div class="col-lg-6">
+                            <div class="card">
+                                <div class="card-body">
+                                    <h4 class="card-title mb-3">{{ __('dashboard.sellers') }}</h4>
+                                    <div>
+                                        <div class="table-responsive mt-4">
+                                            <table class="table table-hover mb-0 table-centered table-nowrap">
+                                                <tbody>
+                                                <tr style="background: rgba(3,3,3,0.1)">
+                                                    <td>
+                                                        {{ __('dashboard.image') }}
+                                                    </td>
+                                                    <td>
+                                                        <h5 class="font-size-14 mb-0">{{ __('dashboard.name') }}</h5>
+                                                    </td>
+                                                    <td><div id="spak-chart3">{{ __('dashboard.followers') }}</div></td>
+                                                    <td>
+                                                        <p class="text-muted mb-0">{{ __('dashboard.join_date') }}</p>
+                                                    </td>
+                                                </tr>
+                                                @foreach(\App\Models\User::whereNotNull('state_id')->orderBy('id' , 'desc')->get() as $supplier)
+                                                    @if($supplier->isOnline() == 'true')
+                                                        <tr>
+                                                            <td>
+                                                                <div class="avatar-xs">
+                                                                    <div class="avatar-title rounded-circle bg-light">
+                                                                        @if(isset($supplier->avatar))
+                                                                            <img height="20" src="{{ url('storage/' . $supplier->avatar) }}"/>
+                                                                        @endif
+                                                                    </div>
+                                                                </div>
+                                                            </td>
+                                                            <td>
+                                                                <h5 class="font-size-14 mb-0">{{ $supplier->name }}
+                                                                </h5>
+                                                            </td>
+                                                            <td>
+                                                                <div id="spak-chart3">
+                                                                    {{ $supplier->followers->count() }}
+                                                                </div>
+                                                            </td>
+                                                            <td>
+                                                                <p class="text-muted mb-0">{{ $supplier->created_at->toDateString() }}</p>
+                                                            </td>
+                                                        </tr>
+                                                    @endif
+                                                @endforeach
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-6">
+                            <div class="card">
+                                <div class="card-body">
+                                    <h4 class="card-title mb-3">{{ __('dashboard.n_users') }}</h4>
+                                    <div>
+                                        <div class="table-responsive mt-4">
+                                            <table class="table table-hover mb-0 table-centered table-nowrap">
+                                                <tbody>
+                                                <tr style="background: rgba(3,3,3,0.1)">
+                                                    <td>
+                                                        {{ __('dashboard.image') }}
+                                                    </td>
+                                                    <td>
+                                                        <h5 class="font-size-14 mb-0">{{ __('dashboard.name') }}</h5>
+                                                    </td>
+                                                    <td><div id="spak-chart3"></div></td>
+                                                    <td>
+                                                        <p class="text-muted mb-0">{{ __('dashboard.join_date') }}</p>
+                                                    </td>
+                                                </tr>
+                                                @foreach(\App\Models\User::whereNull('state_id')->orderBy('id' , 'desc')->get() as $user)
+                                                    @if($user->isOnline() == 'true')
+                                                        <tr>
+                                                            <td>
+                                                                <div class="avatar-xs">
+                                                                    <div class="avatar-title rounded-circle bg-light">
+                                                                        @if(isset($user->avatar))
+                                                                            <img height="20" src="{{ url('storage/' . $user->avatar) }}"/>
+                                                                        @endif
+                                                                    </div>
+                                                                </div>
+                                                            </td>
+                                                            <td>
+                                                                <h5 class="font-size-14 mb-0">{{ $user->name }}
+                                                                    <?php
+                                                                    if($user->isOnline() == 'true'){
+                                                                        echo 'online';
+                                                                    }else{
+                                                                        echo 'offline';
+                                                                    }
+                                                                    ?>
+                                                                </h5>
+                                                            </td>
+                                                            <td><div id="spak-chart3"></div></td>
+                                                            <td>
+                                                                <p class="text-muted mb-0">{{ $user->created_at->toDateString() }}</p>
+                                                            </td>
+                                                        </tr>
+                                                    @endif
+                                                @endforeach
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 @endsection
 @section('backend-footer')
 
