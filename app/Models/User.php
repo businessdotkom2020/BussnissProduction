@@ -10,7 +10,7 @@ use Illuminate\Support\Facades\Storage;
 
 class User extends \TCG\Voyager\Models\User
 {
-	use Notifiable,Reviewable, HasApiTokens , \HighIdeas\UsersOnline\Traits\UsersOnlineTrait;
+	use Notifiable,Reviewable, HasApiTokens ;
 
     /**
      * The attributes that are mass assignable.
