@@ -118,7 +118,16 @@ class SellerController extends Controller
      */
     public function show($id)
     {
-        //
+        try {
+            $user = User::whereNotNull('state_id')->where('id',$id)->first();
+            if(isset($user)){
+                return view('backend.sellers.show' , compact('user'));
+            }else{
+                return redirect()->back()->with('error', 'Error Try Again !!');
+            }
+        } catch (\Exception $e) {
+            return redirect()->back()->with('error', 'Error Try Again !!');
+        }
     }
 
     /**

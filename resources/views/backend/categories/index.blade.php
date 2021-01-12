@@ -29,6 +29,7 @@
                             <th>@lang('dashboard.products')</th>
                             <th>@lang('dashboard.services')</th>
                             <th>@lang('dashboard.requests')</th>
+                            <th>@lang('dashboard.categories')</th>
                             <th>@lang('dashboard.options')</th>
                         </tr>
                         </thead>
@@ -43,11 +44,12 @@
                                         <img style="width: 100%;border-radius: 10px" src="{{ asset('backend/assets/images/empty.jpg') }}"/>
                                     @endif
                                 </td>
-                                <td>{{$category->getTranslatedAttribute('name','ar')}} / {{ $category->name }}</td>
+                                <td>{{$category->getTranslatedAttribute('name',app()->getLocale())}}</td>
                                 <td>{{ count($category->children) }}</td>
                                 <td>{{ count($category->products) }}</td>
                                 <td>{{ count($category->services) }}</td>
                                 <td>{{ count($category->requests) }}</td>
+                                <td>{{ count($category->children) }}</td>
                                 <td>
                                     <a href="{{ route('categories.edit' , $category->id) }}"
                                        class="mr-3 text-primary"><i class="mdi mdi-pencil font-size-18"></i></a>

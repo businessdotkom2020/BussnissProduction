@@ -49,6 +49,8 @@
                                 <td>
                                     <a title="edit" href="{{ route('jobss.edit' , $job->id) }}"
                                        class="mr-3 text-primary"><i class="mdi mdi-pencil font-size-18"></i></a>
+                                    <a title="show" href="{{ route('jobss.show' , $job->id) }}"
+                                       class="mr-3 text-success"><i class="mdi mdi-eye font-size-18"></i></a>
                                     <a title="delete" onclick="return false;" object_id="{{ $job->id }}"
                                        delete_url="/jobss/" class="text-danger remove-alert" href="#"><i
                                                 class="mdi mdi-trash-can font-size-18"></i></a>

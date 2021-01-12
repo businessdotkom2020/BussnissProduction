@@ -1,9 +1,13 @@
 <?php
 
 // if (App::environment('production')) {
-URL::forceScheme('https');
+//URL::forceScheme('https');
 // }
-
+if (app()->isLocal()) {
+    URL::forceScheme('http');
+} else {
+    URL::forceScheme('https');
+}
 /*
 |--------------------------------------------------------------------------
 | Web Routes

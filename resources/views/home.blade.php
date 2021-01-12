@@ -8,8 +8,86 @@ $menu = true ;
 
 
 <main class="main-content col-xs-12">
-    <div class="hero-s col-xs-12">
-        <div class="h-slider owl-carousel owl-theme">
+<div class="col-md-7 col-md-offset-3 col-xs-12">
+                    <div class="top-slider owl-carousel owl-theme">
+                        <div class="item">
+                            <div class="slider-inner">
+                                <div class="slider-item">
+                                    <div class="details-item">
+                                        <h1>badil spare parts</h1>
+                                        <p>
+                                            Lorem Ipsum is simply dummy text of the printing and typesetting industry
+                                        </p>
+                                        <a href="#" class="btn">shop now</a>
+                                    </div>
+                                    <div class="img-item">
+                                        <div class="img" style="background-image: url(https://i.imgur.com/mFI2maG.jpg)"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <div class="slider-inner">
+                                <div class="slider-item">
+                                    <div class="details-item">
+                                        <h1>badil spare parts</h1>
+                                        <p>
+                                            Lorem Ipsum is simply dummy text of the printing and typesetting industry
+                                        </p>
+                                        <a href="#" class="btn">shop now</a>
+                                    </div>
+                                    <div class="img-item">
+                                        <div class="img" style="background-image: url(https://i.imgur.com/mFI2maG.jpg)"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <div class="slider-inner">
+                                <div class="slider-item">
+                                    <div class="details-item">
+                                        <h1>badil spare parts</h1>
+                                        <p>
+                                            Lorem Ipsum is simply dummy text of the printing and typesetting industry
+                                        </p>
+                                        <a href="#" class="btn">shop now</a>
+                                    </div>
+                                    <div class="img-item">
+                                        <div class="img" style="background-image: url(https://i.imgur.com/mFI2maG.jpg)"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-2 col-xs-12 padding">
+                    <div class="colum-right">
+                        <div class="title-side">
+                            <h3>new deals just arrived</h3>
+                        </div>
+                        <div class="priducts-side">
+                            @foreach ($latest_products as $product)
+                            <div class="block-product">
+                                <div class="img-block">
+                                    <a href="{{url('product/'.$product->id)}}" class="img-hold">
+                                        <!-- <img src="{{url('storage/'.$product->image)}}" alt=""> -->
+                                        <img src="https://i.ibb.co/2cbfP9p/20961-20965-20969iphone12promaxblueproductimage1000x1000png.png" border="0">
+                                        <!-- <img src="{{ json_decode($product->images ) ? url('storage/'.(json_decode($product->images))[0]) : "https://i.imgur.com/mFI2maG.jpg" }}" class="sec-img"> -->
+                                    </a>
+                                </div>
+                                <div class="details-block">
+                                    <a href="#" class="name">name product</a>
+                                    <span>81$</span>
+                                    <a href="#" class="btn">shop now</a>
+                                </div>
+                            </div>
+                            @endforeach
+                        </div>
+                        <div class="see-more">
+                            <a href="#">see more</a>
+                        </div>
+                    </div>
+        <!-- <div class="h-slider owl-carousel owl-theme">
 
             @foreach (App\Models\Slider::whereType('web')->get() as $slider)
             <div class="item">
@@ -17,14 +95,12 @@ $menu = true ;
                     <img src="{{ asset('/web/images/stocks/3.png')}}" alt="">
                 </div>
                 <div class="i-data col-md-6 col-xs-12">
-                    <h3>{{$slider->product->getTranslatedAttribute('name',\App::getLocale())}} </h3>
-                    <p>{{$slider->product->getTranslatedAttribute('description',\App::getLocale())}}</p>
-                    <span>{{$slider->product->sale_price ? $slider->product->sale_price : $slider->product->price}}$</span>
+ 
                 </div>
             </div>
             @endforeach
 
-        </div>
+        </div> -->
     </div>
     <div class="cats col-xs-12">
         <div class="container">
@@ -47,90 +123,95 @@ $menu = true ;
             </ul>
         </div>
     </div>
-    <div class="n-products col-xs-12">
+    <div class="n-products col-xs-12 col-md-12 col-lg-8">
         <div class="container">
             <div class="g-head col-xs-12">
                 <h3>@lang('general.newly') <span class="f-r"> @lang('general.arrival')</span></h3>
                 <a href="{{url('products/latest')}}" class="more">@lang('general.view_all')</a>
             </div>
             <div class="g-body col-xs-12">
+                <div class="slick-wrapper">
+                    <div id="slick1">
+                    @foreach ($latest_products as $product)
+                        <div class="slide-item">
+                            <div class="flex-container-row">
+                                <div class="block b-product">
+                                    <div class="inner">
+                                        <div class="i-img">
+                                            @if($product->product_condition == 'new')
+                                            <div class="ribbon">
+                                                <span>@lang('general.new')</span>
+                                            </div>
+                                            @endif
+                                            <div class="offer-badge">
+                                                <span>{{number_format((($product->sale_price/$product->price) * 100) ,2) }} %</span>
+                                            </div>
 
-                @foreach ($latest_products as $product)
-                <div class="block b-product col-md-2 col-sm-6 col-xs-12">
-                    <div class="inner">
-                        <div class="i-img">
-                            @if($product->product_condition == 'new')
-                            <div class="ribbon">
-                                <span>@lang('general.new')</span>
-                            </div>
-                            @endif
-                            <div class="offer-badge">
-                                <span>{{number_format((($product->sale_price/$product->price) * 100) ,2) }} %</span>
-                            </div>
+                                            <div class="prod-extra" style="position: inherit">
 
-                            <div class="prod-extra" style="position: inherit">
-
-                                <a href="javascript:void(0)" id="fav-{{$product->id}}" title="add to favourite" data-placement="top" class="fav-{{$product->id}} {{$product->isFavorited() ? 'fav-active' : null  }} fav-pro " onclick="favtoggle({{$product->id }},{{Auth::user() ? Auth::user()->id : null}})">
-                                    <i class="fa fa-heart"></i>
-                                </a>
-                            </div>
-
-
-
-                            <a href="{{url('product/'.$product->id)}}" class="img-hold">
-                                <img src="{{url('storage/'.$product->image)}}" alt="">
-                                <img src="{{ json_decode($product->images ) ? url('storage/'.(json_decode($product->images))[0]) : "https://i.imgur.com/mFI2maG.jpg" }}" class="sec-img">
-
-                            </a>
-                        </div>
-                        <div class="i-data">
-
-                            <a href="{{url('product/'.$product->id)}}" class="title">{{$product->getTranslatedAttribute('name',\App::getLocale())}}</a>
+                                                <a href="javascript:void(0)" id="fav-{{$product->id}}" title="add to favourite" data-placement="top" class="fav-{{$product->id}} {{$product->isFavorited() ? 'fav-active' : null  }} fav-pro " onclick="favtoggle({{$product->id }},{{Auth::user() ? Auth::user()->id : null}})">
+                                                    <i class="fa fa-heart"></i>
+                                                </a>
+                                            </div>
 
 
 
-                            <!-- <p>{{ Str::limit($product->getTranslatedAttribute('description',\App::getLocale()),50 )}}</p> -->
+                                            <a href="{{url('product/'.$product->id)}}" class="img-hold">
+                                                <img src="{{url('storage/'.$product->image)}}" alt="">
+                                                <img src="{{ json_decode($product->images ) ? url('storage/'.(json_decode($product->images))[0]) : "https://i.imgur.com/mFI2maG.jpg" }}" class="sec-img">
 
-                            <div class="cardo" style="flex-grow: 1;padding:0px">
-                                <div class="c-inner" style="text-align: right;">
-                                    <div class="c-data">
-                                        <p style="text-align: center;">
-                                            @php $rating = $product->average_rating ; @endphp
-                                            @foreach(range(1,5) as $i)
-                                            @if($rating >0)
-                                            @if($rating > 0.5)
-                                            <i class="fa fa-star active"></i>
-                                            @elseif($rating < 0.5 && $rating> 0)
-                                                <i class="fas fa-star-half"></i>
-                                                @endif
-                                                @else
-                                                <i class="fa fa-star"></i>
-                                                @endif
-                                                @php $rating--; @endphp
+                                            </a>
+                                        </div>
+                                        <div class="i-data">
 
-                                                @endforeach
+                                            <a href="{{url('product/'.$product->id)}}" class="title">{{$product->getTranslatedAttribute('name',\App::getLocale())}}</a>
 
-                                        </p>
+
+
+                                            <!-- <p>{{ Str::limit($product->getTranslatedAttribute('description',\App::getLocale()),50 )}}</p> -->
+
+                                            <div class="cardo" style="flex-grow: 1;padding:0px">
+                                                <div class="c-inner" style="text-align: right;">
+                                                    <div class="c-data">
+                                                        <p style="text-align: center;">
+                                                            @php $rating = $product->average_rating ; @endphp
+                                                            @foreach(range(1,5) as $i)
+                                                            @if($rating >0)
+                                                            @if($rating > 0.5)
+                                                            <i class="fa fa-star active"></i>
+                                                            @elseif($rating < 0.5 && $rating> 0)
+                                                                <i class="fas fa-star-half"></i>
+                                                                @endif
+                                                                @else
+                                                                <i class="fa fa-star"></i>
+                                                                @endif
+                                                                @php $rating--; @endphp
+
+                                                                @endforeach
+
+                                                        </p>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <span>{{$product->sale_price ? $product->sale_price : $product->price}}$</span>
+
+
+                                            <a class="btn" href="#" data-toggle="modal" data-target="#contact_{{$product->user_id}}" target="_blank">@lang('general.contact_supplier')</a>
+                                        </div>
+
                                     </div>
                                 </div>
                             </div>
-
-                            <span>{{$product->sale_price ? $product->sale_price : $product->price}}$</span>
-
-
-                            <a class="btn" href="#" data-toggle="modal" data-target="#contact_{{$product->user_id}}" target="_blank">@lang('general.contact_supplier')</a>
                         </div>
-
+                    @endforeach
                     </div>
                 </div>
-                @endforeach
-
-
-
-
-
             </div>
         </div>
+    </div>
+    <div class="n-left col-xs-12 col-lg-4">
+        asdasdasdasd
     </div>
     <div class="h-offers col-xs-12">
         <div class="container">
@@ -472,7 +553,36 @@ $menu = true ;
 
 @push('scripts')
 
+<script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.js"></script>
+
 <script>
+
+$(".top-slider").owlCarousel({
+        nav: true,
+        loop: true,
+        navText: ["<i class='fa fa-angle-left'></i>", "<i class='fa fa-angle-right'></i>"],
+        dots: false,
+        autoplay: 4000,
+        items: 1,
+        animateOut: 'fadeOut',
+        animateIn: 'fadeIn',
+        autoplayHoverPause: true,
+        center: false,
+        responsiveClass: true
+    });
+
+    $('#slick1').slick({
+		rows: 2,
+		dots: false,
+		arrows: true,
+		infinite: true,
+		speed: 300,
+		slidesToShow: 5,
+		slidesToScroll: 5
+});
+
+
+
     function favtoggle(product_id, user_id) {
 
         var token = '{{ Session::token() }}';

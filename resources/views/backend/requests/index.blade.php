@@ -50,6 +50,8 @@
                                 <td>
                                     <a title="edit" href="{{ route('requestss.edit' , $req->id) }}"
                                        class="mr-3 text-primary"><i class="mdi mdi-pencil font-size-18"></i></a>
+                                    <a title="show" href="{{ route('requestss.show' , $req->id) }}"
+                                       class="mr-3 text-success"><i class="mdi mdi-eye font-size-18"></i></a>
                                     <a title="delete" onclick="return false;" object_id="{{ $req->id }}"
                                        delete_url="/requestss/" class="text-danger remove-alert" href="#"><i
                                                 class="mdi mdi-trash-can font-size-18"></i></a>

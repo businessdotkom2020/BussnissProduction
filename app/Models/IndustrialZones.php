@@ -20,7 +20,7 @@ class IndustrialZones extends Model
 
     public function products()
     {
-        return $this->hasMany(Product::class);
+        return $this->hasMany(Product::class , 'zone_id');
     }
 
     public function factories()

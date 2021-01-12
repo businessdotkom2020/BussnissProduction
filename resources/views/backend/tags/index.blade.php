@@ -35,6 +35,8 @@
                                 <td>
                                     <a href="{{ route('tags.edit' , $tag->id) }}"
                                        class="mr-3 text-primary"><i class="mdi mdi-pencil font-size-18"></i></a>
+                                    <a href="{{ route('tags.show' , $tag->id) }}"
+                                       class="mr-3 text-success"><i class="mdi mdi-eye font-size-18"></i></a>
                                     <a title="" onclick="return false;" object_id="{{ $tag->id }}"
                                        delete_url="/tags/" class="text-danger remove-alert" href="#"><i
                                                 class="mdi mdi-trash-can font-size-18"></i></a>
