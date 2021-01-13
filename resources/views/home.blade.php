@@ -145,7 +145,6 @@ $menu = true ;
                                             @endif
 
 
-
                                             @if($product->sale_price )
                                             <div class="offer-badge">
                                                 <span>{{number_format((($product->sale_price/$product->price) * 100) ,2) }} %</span>
