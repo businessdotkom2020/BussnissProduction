@@ -95,7 +95,7 @@ $menu = true ;
                     <img src="{{ asset('/web/images/stocks/3.png')}}" alt="">
                 </div>
                 <div class="i-data col-md-6 col-xs-12">
- 
+
                 </div>
             </div>
             @endforeach
@@ -715,6 +715,7 @@ $(".top-slider").owlCarousel({
                     }
 
                 })
+
 
 
 
