@@ -139,11 +139,11 @@ $menu = true ;
                                     <div class="inner">
                                         <div class="i-img">
                                             @if($product->product_condition == 'new')
-
-                                            <div class="ribbon">
-                                                <span>@lang('general.new')</span>
-                                            </div>
+                                                <div class="ribbon">
+                                                    <span>@lang('general.new')</span>
+                                                </div>
                                             @endif
+
 
 
                                             @if($product->sale_price )
