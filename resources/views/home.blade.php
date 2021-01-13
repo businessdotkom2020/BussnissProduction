@@ -34,7 +34,7 @@ $menu = true ;
                                         <p>
                                             Lorem Ipsum is simply dummy text of the printing and typesetting industrs
                                         </p>
-                                        <a href="#" class="btn">shop now</a>
+                                        <a href="#" class="btn">shop nows</a>
                                     </div>
                                     <div class="img-item">
                                         <div class="img" style="background-image: url(https://i.imgur.com/mFI2maG.jpg)"></div>
