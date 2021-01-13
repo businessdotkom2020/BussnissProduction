@@ -95,7 +95,7 @@ $menu = true ;
                     <img src="{{ asset('/web/images/stocks/3.png')}}" alt="">
                 </div>
                 <div class="i-data col-md-6 col-xs-12">
- 
+
                 </div>
             </div>
             @endforeach
@@ -139,13 +139,18 @@ $menu = true ;
                                     <div class="inner">
                                         <div class="i-img">
                                             @if($product->product_condition == 'new')
+
                                             <div class="ribbon">
                                                 <span>@lang('general.new')</span>
                                             </div>
                                             @endif
+
+
+                                            @if($product->sale_price )
                                             <div class="offer-badge">
                                                 <span>{{number_format((($product->sale_price/$product->price) * 100) ,2) }} %</span>
                                             </div>
+                                            @endif
 
                                             <div class="prod-extra" style="position: inherit">
 
