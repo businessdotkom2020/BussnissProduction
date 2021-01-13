@@ -32,7 +32,7 @@ $menu = true ;
                                     <div class="details-item">
                                         <h1>badil spare parts</h1>
                                         <p>
-                                            Lorem Ipsum is simply dummy text of the printing and typesetting industry
+                                            Lorem Ipsum is simply dummy text of the printing and typesetting industrs
                                         </p>
                                         <a href="#" class="btn">shop now</a>
                                     </div>
@@ -144,7 +144,6 @@ $menu = true ;
                                                 </div>
                                             @endif
 
-
                                             @if($product->sale_price )
                                             <div class="offer-badge">
                                                 <span>{{number_format((($product->sale_price/$product->price) * 100) ,2) }} %</span>
@@ -190,9 +189,7 @@ $menu = true ;
                                                                 <i class="fa fa-star"></i>
                                                                 @endif
                                                                 @php $rating--; @endphp
-
                                                                 @endforeach
-
                                                         </p>
                                                     </div>
                                                 </div>
