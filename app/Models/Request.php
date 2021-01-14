@@ -10,7 +10,13 @@ use Illuminate\Support\Facades\Storage;
 class Request extends Model
 {
       use Favoritable, Translatable,Reviewable;
-      
+
+
+
+      public function getCreatedAtAttribute($date)
+      {
+          return  $date ? \Carbon\Carbon::parse($date)->format('H:i Y/m/d') : '19:17 2021/01/25';
+      }
 
 
     protected $appends = ['average_rating'];
@@ -31,7 +37,7 @@ class Request extends Model
                 }
             }
             $avalible_images = array_unique($avalible_images);
-            
+
             return json_encode($avalible_images);
         }
 
@@ -44,7 +50,7 @@ class Request extends Model
     {
         return (int)$this->reviews()->average('stars');
     }
-    
+
     protected $translatable = ['name', 'description'];
     	public function category() {
 		return $this->belongsTo('App\Models\Category','category_id');

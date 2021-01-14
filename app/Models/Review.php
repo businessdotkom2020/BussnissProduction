@@ -9,7 +9,7 @@ use Illuminate\Database\Eloquent\Model;
 
 class Review extends Model
 {
-    
+
 
     /**
      * Don't auto-apply mass assignment protection.
@@ -27,11 +27,19 @@ class Review extends Model
     {
         return $this->morphTo();
     }
-    
-    
+
+
+
+    public function getCreatedAtAttribute($date)
+    {
+        return  $date ? \Carbon\Carbon::parse($date)->format('H:i Y/m/d') : '19:17 2021/01/25';
+    }
+
+
+
         public function owner()
     {
         return $this->belongsTo(User::class,'user_id');
     }
-    
+
 }
