@@ -11,4 +11,12 @@ class Branch extends Model
     {
         return $this->belongsTo(User::class);
     }
+
+
+
+    public function getCreatedAtAttribute($date)
+    {
+        return  $date ? \Carbon\Carbon::parse($date)->format('H:i Y/m/d') : '19:17 2021/01/25';
+    }
+
 }

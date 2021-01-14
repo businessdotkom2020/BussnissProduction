@@ -8,7 +8,7 @@ use Illuminate\Database\Eloquent\Model;
 class Address extends Model
 {
     use CanBeDefault;
-    
+
     protected $fillable = [
         'name',
         'address_1',
@@ -17,6 +17,14 @@ class Address extends Model
         'country_id',
         'default'
     ];
+
+
+
+    public function getCreatedAtAttribute($date)
+    {
+        return  $date ? \Carbon\Carbon::parse($date)->format('H:i Y/m/d') : '19:17 2021/01/25';
+    }
+
 
     public function user()
     {
