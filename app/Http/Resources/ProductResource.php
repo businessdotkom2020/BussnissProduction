@@ -41,14 +41,16 @@ class ProductResource extends ProductIndexResource
             'options'      => attributesIndexResource::collection($this->options),
             'supplier'     => $this->owner ? $this->owner->name: null ,
             'rating'       => 4.5 ,
+            'brand'       => $this->brand ? $this->brand->name : '' ,
+            'tag'       => $this->tag ? $this->tag->name : '' ,
             'product_condition'   => $this->product_condition,
             'created_at'   => $this->created_at,
             'updated_at'   => $this->updated_at,
         ];
 
     }
-    
-    
+
+
                  public function images(){
           $images = [];
           $all_images = [];
@@ -62,7 +64,7 @@ class ProductResource extends ProductIndexResource
         }
       return [];
           }
-    
-    
+
+
 
 }
