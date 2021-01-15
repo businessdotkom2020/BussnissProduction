@@ -19,7 +19,7 @@ class ProductIndexResource extends JsonResource
         return [
             'id'          => $this->id,
             'name' => $this->getTranslatedAttribute('name',$lang),
-            'image'        => (json_decode($this->images )) ? url('storage/'.(json_decode($this->images))[0]) : null,
+            'image'        => url('storage/'.($this->image)),
             'price'       => $this->price,
             'is_favorite'  => $this->isFavorited(),
             // 'sale_value'     => (($this->sale_price/$this->price) * 100) .'%',
@@ -30,9 +30,9 @@ class ProductIndexResource extends JsonResource
 
         ];
     }
-    
-    
-    
-    
-    
+
+
+
+
+
 }

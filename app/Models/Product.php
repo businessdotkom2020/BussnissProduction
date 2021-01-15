@@ -46,6 +46,7 @@ class Product extends Model
 
         $isExists = Storage::exists('public/'.$value);
         $status_list = array(
+
             '/products/product_image819748.jpg',
             '/products/product_image819952.png',
             '/products/product_image1017553.png',
