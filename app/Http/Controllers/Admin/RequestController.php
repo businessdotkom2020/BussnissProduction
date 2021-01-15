@@ -175,10 +175,12 @@ class RequestController extends Controller
             return redirect()->back()->with('error', 'Error Try Again !!');
         }
     }
-    public function delete_requestss()
+    public function delete_requestss(Request $request)
     {
         try {
-            $reqs = Req::all();
+            $ids = $request->ids;
+            $reqs = Req::whereIn('id',explode(",",$ids))->get();
+
             if (count($reqs) > 0) {
                 foreach ($reqs as $req) {
                     foreach (json_decode($req->images) as $img){

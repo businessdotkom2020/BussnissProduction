@@ -168,10 +168,11 @@ class SliderController extends Controller
             return redirect()->back()->with('error', 'Error Try Again !!');
         }
     }
-    public function delete_sliders()
+    public function delete_sliders(Request $request)
     {
         try {
-            $sliders = Slider::all();
+            $ids = $request->ids;
+            $sliders = Slider::whereIn('id',explode(",",$ids))->get();
             if (count($sliders) > 0) {
                 foreach ($sliders as $slider) {
                     @unlink('storage/' . $slider->images);

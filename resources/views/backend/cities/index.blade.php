@@ -17,17 +17,14 @@
                             <i class="mdi mdi-plus mr-2"></i>
                             @lang('dashboard.add_new')
                         </a>
-                        <a class="btn btn-danger mb-2  delete-all text-white" onclick="return false;"
-                           delete_url="/delete_cities/"><i class="mdi mdi-trash-can-outline mr-2"></i>
-                            @lang('dashboard.delete_all')
-                        </a>
+                        <button style="margin-bottom: 10px" class="btn btn-danger delete_all" data-url="{{ url('admin/delete_cities') }}">{{ __('dashboard.delete_all') }}</button>
                     </div>
                     <hr>
                     <table id="datatable-buttons" class="table table-striped table-bordered dt-responsive nowrap"
                            style="border-collapse: collapse; border-spacing: 0; width: 100%;">
                         <thead>
                         <tr>
-                            <th>#</th>
+                            <th style="width: 28px;" ><input type="checkbox" id="master"></th>
                             <th>@lang('dashboard.name')</th>
                             <th>@lang('dashboard.state')</th>
                             <th>@lang('dashboard.options')</th>
@@ -35,8 +32,8 @@
                         </thead>
                         <tbody>
                         @foreach($cities as $city)
-                            <tr>
-                                <td>{{ $loop->index + 1 }}</td>
+                            <tr id="tr_{{$city->id}}">
+                                <td><input type="checkbox" class="sub_chk" data-id="{{$city->id}}"></td>
                                 <td>{{$city->getTranslatedAttribute('name','ar')}} / {{ $city->name }}</td>
                                 <td>{{$city->state->getTranslatedAttribute('name','ar')}} / {{ $city->state->name }}</td>
                                 <td>
@@ -71,4 +68,9 @@
     <script src="{{ asset('backend') }}/assets/js/pages/datatables.init.js"></script>
     <script src="{{ asset('backend') }}/custom-sweetalert.js"></script>
     <script src="{{ asset('backend') }}/mine.js"></script>
+    @if(app()->getLocale() == 'en')
+        <script src="{{ asset('backend') }}/endelete_all.js"></script>
+    @else
+        <script src="{{ asset('backend') }}/ardelete_all.js"></script>
+    @endif
 @endsection

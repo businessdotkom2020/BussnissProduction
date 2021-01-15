@@ -150,10 +150,11 @@ class AttributeValueController extends Controller
         }
     }
 
-    public function delete_attr_values()
+    public function delete_attr_values(Request $request)
     {
         try{
-            $values = AttributeValue::all();
+            $ids = $request->ids;
+            $values = AttributeValue::whereIn('id',explode(",",$ids))->get();
             if(count($values) > 0){
                 foreach ($values as $value){
                     Translation::where('table_name' , 'attribute_values')->where('column_name' , 'value')->

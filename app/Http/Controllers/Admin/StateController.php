@@ -149,10 +149,11 @@ class StateController extends Controller
             return redirect()->back()->with('error', 'Error Try Again !!');
         }
     }
-    public function delete_states()
+    public function delete_states(Request $request)
     {
         try {
-            $states = State::all();
+            $ids = $request->ids;
+            $states = State::whereIn('id',explode(",",$ids))->get();
             if (count($states) > 0) {
                 foreach ($states as $state) {
                     Translation::where('table_name' , 'states')->where('column_name' , 'name')->

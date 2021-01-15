@@ -145,10 +145,11 @@ class CountryController extends Controller
             return redirect()->back()->with('error', 'Error Try Again !!');
         }
     }
-    public function delete_countries()
+    public function delete_countries(Request $request)
     {
         try {
-            $countries = Country::all();
+            $ids = $request->ids;
+            $countries = Country::whereIn('id',explode(",",$ids))->get();
             if (count($countries) > 0) {
                 foreach ($countries as $country) {
                     Translation::where('table_name' , 'countries')->where('column_name' , 'name')->

@@ -153,10 +153,11 @@ class CityController extends Controller
         }
     }
 
-    public function delete_cities()
+    public function delete_cities(Request $request)
     {
         try{
-            $cities = City::all();
+            $ids = $request->ids;
+            $cities = City::whereIn('id',explode(",",$ids))->get();
             if(count($cities) > 0){
                 foreach ($cities as $city){
                     Translation::where('table_name' , 'cities')->where('column_name' , 'name')->
