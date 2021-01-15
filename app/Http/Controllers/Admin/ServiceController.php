@@ -176,10 +176,11 @@ class ServiceController extends Controller
             return redirect()->back()->with('error', 'Error Try Again !!');
         }
     }
-    public function delete_servicess()
+    public function delete_servicess(Request $request)
     {
         try {
-            $services = Service::all();
+            $ids = $request->ids;
+            $services = Service::whereIn('id',explode(",",$ids))->get();
             if (count($services) > 0) {
                 foreach ($services as $service) {
                     foreach (json_decode($service->images) as $img){

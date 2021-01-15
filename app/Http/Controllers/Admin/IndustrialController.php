@@ -174,10 +174,11 @@ class IndustrialController extends Controller
         }
     }
 
-    public function delete_zones()
+    public function delete_zones(Request $request)
     {
         try{
-            $zones = IndustrialZones::all();
+            $ids = $request->ids;
+            $zones = IndustrialZones::whereIn('id',explode(",",$ids))->get();
             if(count($zones) > 0){
                 foreach ($zones as $zone){
                     @unlink('storage/' . $zone->image);

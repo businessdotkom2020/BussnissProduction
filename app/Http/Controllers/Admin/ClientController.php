@@ -6,6 +6,7 @@ use App\Http\Controllers\Controller;
 use App\Models\Client;
 use App\Models\User;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
 
 class ClientController extends Controller
 {
@@ -143,25 +144,14 @@ class ClientController extends Controller
             return redirect()->back()->with('error' , 'Error Try Again....');
         }
     }
-    public function delete_clients()
+    public function delete_clients(Request $request)
     {
-        try{
-            $clients = Client::all();
-            if(count($clients) > 0){
-                foreach ($clients as $client) {
-                    @unlink('storage/' . $client->image);
-                    $client->delete();
-                }
-                return response()->json([
-                    'success' => 'Record deleted successfully!'
-                ]);
-            }else{
-                return response()->json([
-                    'error' => 'NO Record TO DELETE'
-                ]);
-            }
-        }catch(\Exception $e){
-            return redirect()->back()->with('error' , 'Error Try Again....');
+        $ids = $request->ids;
+        $clients = Client::whereIn('id',explode(",",$ids))->get();
+        foreach ($clients as $client){
+            @unlink('storage/' . $client->image);
+            $client->delete();
         }
+        return response()->json(['success'=>"Records Deleted successfully."]);
     }
 }

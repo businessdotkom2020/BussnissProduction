@@ -61,7 +61,7 @@ return [
     /**********************/
     'add_new' => 'ADD New',
     'delete' => 'Delete',
-    'delete_all' => 'Delete All',
+    'delete_all' => 'Delete All Selected',
     'name' => 'Name',
     'phone' => 'phone',
     'wa' => 'WhatsApp',

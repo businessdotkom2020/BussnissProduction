@@ -11,6 +11,7 @@ use App\Models\Country;
 use App\Models\State;
 use App\Models\User;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Hash;
 
 class SellerController extends Controller
@@ -245,29 +246,17 @@ class SellerController extends Controller
             return redirect()->back()->with('error', 'Error Try Again !!');
         }
     }
-    public function delete_sellerss()
+    public function delete_sellerss(Request $request)
     {
-        try {
-            $users = User::whereNotNull('state_id')->get();
-            if (count($users) > 0) {
-                foreach ($users as $user) {
-                    if($user->avatar != 'users/default.png'){
-                        @unlink('storage/' . $user->avatar);
-                    }
-                    @unlink('storage/' . $user->store_background);
-                    CategoryUser::where('user_id' , $user->id)->delete();
-                    $user->delete();
-                }
-                return response()->json([
-                    'success' => 'Record deleted successfully!'
-                ]);
-            } else {
-                return response()->json([
-                    'error' => 'NO Records TO DELETE'
-                ]);
+        $ids = $request->ids;
+        $users = User::whereIn('id',explode(",",$ids))->get();
+        foreach ($users as $user){
+            if($user->avatar != 'users/default.png'){
+                @unlink('storage/' . $user->avatar);
             }
-        } catch (\Exception $e) {
-            return redirect()->back()->with('error', 'Error Try Again !!');
+            @unlink('storage/' . $user->store_background);
+            $user->delete();
         }
+        return response()->json(['success'=>"Records Deleted successfully."]);
     }
 }
