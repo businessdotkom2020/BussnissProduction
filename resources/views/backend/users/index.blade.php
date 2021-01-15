@@ -18,6 +18,7 @@
                             <i class="mdi mdi-plus mr-2"></i>
                             {{ __('dashboard.add_new') }}</a>
                         </a>
+                        <button style="margin-bottom: 10px" class="btn btn-danger delete_all" data-url="{{ url('admin/delete_users') }}">{{ __('dashboard.delete_all') }}</button>
                     </div>
                     <hr>
                     <div class="table-responsive">
@@ -25,6 +26,7 @@
                                style="border-collapse: collapse; border-spacing: 0; width: 100%;">
                             <thead>
                             <tr>
+                                <th style="width: 28px;" ><input type="checkbox" id="master"></th>
                                 <th data-priority="1">{{ __('dashboard.image') }}</th>
                                 <th data-priority="1">{{ __('dashboard.name') }}</th>
                                 <th data-priority="1">{{ __('dashboard.email') }}</th>
@@ -39,7 +41,8 @@
                             </thead>
                             <tbody>
                             @foreach($users as $user)
-                                <tr>
+                                <tr id="tr_{{$user->id}}">
+                                    <td><input type="checkbox" class="sub_chk" data-id="{{$user->id}}"></td>
                                     <td width="50" height="50" data-priority="1">
                                         @if(isset($category->image))
                                             <img style="width: 100%;border-radius: 10px" src="{{ asset('storage/' . $user->image) }}"/>
@@ -81,7 +84,6 @@
 @section('backend-footer')
     <script src="{{ asset('backend') }}/assets/libs/admin-resources/rwd-table/rwd-table.min.js"></script>
     <script src="{{ asset('backend') }}/assets/js/pages/table-responsive.init.js"></script>
-
     <script src="{{ asset('backend') }}/assets/libs/sweetalert2/sweetalert2.min.js"></script>
     <script src="{{ asset('backend') }}/assets/js/pages/sweet-alerts.init.js"></script>
     <script src="{{ asset('backend') }}/assets/libs/datatables.net-buttons/js/dataTables.buttons.min.js"></script>
@@ -97,4 +99,9 @@
     <script src="{{ asset('backend') }}/assets/js/pages/datatables.init.js"></script>
     <script src="{{ asset('backend') }}/custom-sweetalert.js"></script>
     <script src="{{ asset('backend') }}/mine.js"></script>
+    @if(app()->getLocale() == 'en')
+        <script src="{{ asset('backend') }}/endelete_all.js"></script>
+    @else
+        <script src="{{ asset('backend') }}/ardelete_all.js"></script>
+    @endif
 @endsection

@@ -310,10 +310,11 @@ class ProductController extends Controller
             return redirect()->back()->with('error', 'Error Try Again !!');
         }
     }
-    public function delete_prodectss()
+    public function delete_prodectss(Request $request)
     {
         try {
-            $products = Product::all();
+            $ids = $request->ids;
+            $products = Product::whereIn('id',explode(",",$ids))->get();
             if (count($products) > 0) {
                 foreach ($products as $product) {
 

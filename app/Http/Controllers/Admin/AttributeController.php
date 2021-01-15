@@ -174,10 +174,11 @@ class AttributeController extends Controller
         }
     }
 
-    public function delete_attributes()
+    public function delete_attributes(Request $request)
     {
         try {
-            $attributes = Attribute::all();
+            $ids = $request->ids;
+            $attributes = Attribute::whereIn('id',explode(",",$ids))->get();
             if (count($attributes) > 0) {
                 foreach ($attributes as $attribute) {
                     DB::table('attribute_categories')->delete();

@@ -149,10 +149,11 @@ class BrandController extends Controller
             return redirect()->back()->with('error', 'Error Try Again !!');
         }
     }
-    public function delete_brands()
+    public function delete_brands(Request $request)
     {
         try {
-            $brands = Brand::all();
+            $ids = $request->ids;
+            $brands = Brand::whereIn('id',explode(",",$ids))->get();
             if (count($brands) > 0) {
                 foreach ($brands as $brand) {
                     @unlink('storage/' . $brand->image);

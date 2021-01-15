@@ -50,6 +50,16 @@ $(document).ready(function() {
     $('.alert-success').fadeIn('fast').delay(1200).fadeOut('slow');
 });
 $(document).ready(function() {
+
+    $('#master').on('click', function(e) {
+        if($(this).is(':checked',true))
+        {
+            $(".sub_chk").prop('checked', true);
+        } else {
+            $(".sub_chk").prop('checked',false);
+        }
+    });
+
     var base_url = $('#base_url').val();
     $('.delete_event_image').click(function () {
         const swalWithBootstrapButtons = Swal.mixin({

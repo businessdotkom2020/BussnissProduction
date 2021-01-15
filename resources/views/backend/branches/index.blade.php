@@ -16,17 +16,14 @@
                         <a href="{{ route('branches.create') }}" class="btn btn-success mb-2">
                             <i class="mdi mdi-plus mr-2"></i>
                             @lang('dashboard.add_new')</a>
-                        <a class="btn btn-danger mb-2  delete-all text-white" onclick="return false;"
-                           delete_url="/delete_branches/"><i class="mdi mdi-trash-can-outline mr-2"></i>
-                            @lang('dashboard.delete_all')
-                        </a>
+                        <button style="margin-bottom: 10px" class="btn btn-danger delete_all" data-url="{{ url('admin/delete_branches') }}">{{ __('dashboard.delete_all') }}</button>
                     </div>
                     <hr>
                     <table id="datatable-buttons" class="table table-striped table-bordered dt-responsive nowrap"
                            style="border-collapse: collapse; border-spacing: 0; width: 100%;">
                         <thead>
                         <tr>
-                            <th>#</th>
+                            <th style="width: 28px;" ><input type="checkbox" id="master"></th>
                             <th>@lang('dashboard.supplier')</th>
                             <th>@lang('dashboard.name')</th>
                             <th>@lang('dashboard.email')</th>
@@ -36,8 +33,8 @@
                         </thead>
                         <tbody>
                         @foreach($branches as $branch)
-                            <tr>
-                                <td>{{ $loop->index + 1 }}</td>
+                            <tr id="tr_{{$branch->id}}">
+                                <td><input type="checkbox" class="sub_chk" data-id="{{$branch->id}}"></td>
                                 <td>{{ $branch->user->name }}</td>
                                 <td>{{ $branch->name }}</td>
                                 <td>{{ $branch->email }}</td>
@@ -76,4 +73,9 @@
     <script src="{{ asset('backend') }}/assets/js/pages/datatables.init.js"></script>
     <script src="{{ asset('backend') }}/custom-sweetalert.js"></script>
     <script src="{{ asset('backend') }}/mine.js"></script>
+    @if(app()->getLocale() == 'en')
+        <script src="{{ asset('backend') }}/endelete_all.js"></script>
+    @else
+        <script src="{{ asset('backend') }}/ardelete_all.js"></script>
+    @endif
 @endsection

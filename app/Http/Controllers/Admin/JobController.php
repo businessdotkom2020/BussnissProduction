@@ -130,10 +130,11 @@ class JobController extends Controller
             return redirect()->back()->with('error', 'Error Try Again !!');
         }
     }
-    public function delete_jobss()
+    public function delete_jobss(Request $request)
     {
         try {
-            $jobs = Job::all();
+            $ids = $request->ids;
+            $jobs = Job::whereIn('id',explode(",",$ids))->get();
             if (count($jobs) > 0) {
                 foreach ($jobs as $job) {
                     $job->delete();

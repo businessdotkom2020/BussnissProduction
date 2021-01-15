@@ -172,10 +172,11 @@ class SubcategoryController extends Controller
 
     }
 
-    public function delete_categories()
+    public function delete_categories(Request $request)
     {
         try{
-            $categories = Category::whereNotNull('parent_id')->get();
+            $ids = $request->ids;
+            $categories = Category::whereNotNull('parent_id')->whereIn('id',explode(",",$ids))->get();
             if(count($categories) > 0){
                 foreach ($categories as $category) {
                     @unlink('storage/' . $category->image);

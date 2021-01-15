@@ -17,13 +17,14 @@
                             <i class="mdi mdi-plus mr-2"></i>
                             {{ __('dashboard.add_new') }}</a>
                         </a>
+                        <button style="margin-bottom: 10px" class="btn btn-danger delete_all" data-url="{{ url('admin/delete_zones') }}">{{ __('dashboard.delete_all') }}</button>
                     </div>
                     <hr>
                     <table id="datatable-buttons" class="table table-striped table-bordered dt-responsive nowrap"
                            style="border-collapse: collapse; border-spacing: 0; width: 100%;">
                         <thead>
                         <tr>
-                            <th>#</th>
+                            <th style="width: 28px;" ><input type="checkbox" id="master"></th>
                             <th>{{ __('dashboard.image') }}</th>
                             <th>{{ __('dashboard.name') }}</th>
                             <th>{{ __('dashboard.state') }}</th>
@@ -32,8 +33,8 @@
                         </thead>
                         <tbody>
                         @foreach($zones as $zone)
-                            <tr>
-                                <td>{{ $loop->index + 1 }}</td>
+                            <tr id="tr_{{$zone->id}}">
+                                <td><input type="checkbox" class="sub_chk" data-id="{{$zone->id}}"></td>
                                 <td width="100" height="100">
                                     @if(isset($zone->image))
                                         <img style="width: 100%;border-radius: 10px" src="{{url('storage/'.$zone->image)}}" alt="">
@@ -77,4 +78,9 @@
     <script src="{{ asset('backend') }}/assets/js/pages/datatables.init.js"></script>
     <script src="{{ asset('backend') }}/custom-sweetalert.js"></script>
     <script src="{{ asset('backend') }}/mine.js"></script>
+    @if(app()->getLocale() == 'en')
+        <script src="{{ asset('backend') }}/endelete_all.js"></script>
+    @else
+        <script src="{{ asset('backend') }}/ardelete_all.js"></script>
+    @endif
 @endsection

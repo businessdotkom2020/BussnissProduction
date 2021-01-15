@@ -170,24 +170,13 @@ class BranchController extends Controller
             return redirect()->back()->with('error', 'Error Try Again !!');
         }
     }
-    public function delete_branches()
+    public function delete_branches(Request $request)
     {
-        try {
-            $branches = Branch::all();
-            if (count($branches) > 0) {
-                foreach ($branches as $branche) {
-                    $branche->delete();
-                }
-                return response()->json([
-                    'success' => 'Record deleted successfully!'
-                ]);
-            } else {
-                return response()->json([
-                    'error' => 'NO Records TO DELETE'
-                ]);
-            }
-        } catch (\Exception $e) {
-            return redirect()->back()->with('error', 'Error Try Again !!');
+        $ids = $request->ids;
+        $branches = Branch::whereIn('id',explode(",",$ids))->get();
+        foreach ($branches as $branch){
+            $branch->delete();
         }
+        return response()->json(['success'=>"Records Deleted successfully."]);
     }
 }

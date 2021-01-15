@@ -7,6 +7,7 @@ use App\Http\Requests\Admin\UserRequest;
 use App\Models\Country;
 use App\Models\User;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
 
 class UserController extends Controller
 {
@@ -137,24 +138,10 @@ class UserController extends Controller
             return redirect()->back()->with('error', 'Error Try Again !!');
         }
     }
-    public function delete_users()
+    public function delete_users(Request $request)
     {
-        try {
-            $users = User::whereNull('state_id')->get();
-            if (count($users) > 0) {
-                foreach ($users as $user) {
-                    $user->delete();
-                }
-                return response()->json([
-                    'success' => 'Record deleted successfully!'
-                ]);
-            } else {
-                return response()->json([
-                    'error' => 'NO EVENTS TO DELETE'
-                ]);
-            }
-        } catch (\Exception $e) {
-            return redirect()->back()->with('error', 'Error Try Again !!');
-        }
+        $ids = $request->ids;
+        DB::table("users")->whereIn('id',explode(",",$ids))->delete();
+        return response()->json(['success'=>"Records Deleted successfully."]);
     }
 }
