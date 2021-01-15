@@ -883,14 +883,14 @@
                         </div>
                         <ul class="nav nav-tabs" id="myTab" role="tablist">
                             <li class="nav-item">
-                                <a class="nav-link active" id="home-tab" data-toggle="tab" href="#home" role="tab" aria-controls="home" aria-selected="true">{{ __('dashboard.products') }}</a>
+                                <a class="nav-link active" id="home-tab" data-toggle="tab" href="#home0" role="tab" aria-controls="home" aria-selected="true">{{ __('dashboard.products') }}</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" id="profile-tab" data-toggle="tab" href="#profile" role="tab" aria-controls="profile" aria-selected="false">{{ __('dashboard.requests') }}</a>
+                                <a class="nav-link" id="profile-tab" data-toggle="tab" href="#profile0" role="tab" aria-controls="profile" aria-selected="false">{{ __('dashboard.requests') }}</a>
                             </li>
                         </ul>
                         <div class="tab-content" id="myTabContent">
-                            <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
+                            <div class="tab-pane fade show active" id="home0" role="tabpanel" aria-labelledby="home-tab">
                                 <div class="table-responsive mt-4">
                                     <table class="table table-hover mb-0 table-centered table-nowrap">
                                         <tbody>
@@ -927,7 +927,7 @@
                                     </table>
                                 </div>
                             </div>
-                            <div class="tab-pane fade" id="profile" role="tabpanel" aria-labelledby="profile-tab">
+                            <div class="tab-pane fade" id="profile0" role="tabpanel" aria-labelledby="profile-tab">
                                 <div class="table-responsive mt-4">
                                     <table class="table table-hover mb-0 table-centered table-nowrap">
                                         <tbody>
@@ -1080,7 +1080,9 @@
                                     <td><div id="spak-chart3">{{ $supplier->city->getTranslatedAttribute('name',\App::getLocale()) ?? '' }}</div></td>
 
                                     <td>
-                                        <p class="text-muted mb-0">{{ $supplier->created_at->toDateString() }}</p>
+                                        @if(!empty($supplier->created_at))
+                                            <p class="text-muted mb-0">{{ $supplier->created_at ?? '' }}</p>
+                                        @endif
                                     </td>
                                 </tr>
                                 @endforeach
@@ -1140,7 +1142,9 @@
                                             </div>
                                         </td>
                                         <td>
-                                            <p class="text-muted mb-0">{{ $user->created_at->toDateString() }}</p>
+                                            @if(!empty($user->created_at))
+                                                <p class="text-muted mb-0">{{ $user->created_at ?? '' }}</p>
+                                            @endif
                                         </td>
                                     </tr>
                                 @endforeach
