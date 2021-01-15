@@ -574,7 +574,8 @@ $(".top-slider").owlCarousel({
     $('#slick1').slick({
 		rows: 2,
 		dots: false,
-		arrows: true,
+        arrows: true,
+        rtl: true,
 		infinite: true,
 		speed: 300,
 		slidesToShow: 5,

@@ -561,3 +561,6 @@ animation: jump 1.5s ease-in-out infinite;
   transform: translate(-120px, 0);
 }
 }
+.slick-wrapper * {
+  direction: ltr;
+}
