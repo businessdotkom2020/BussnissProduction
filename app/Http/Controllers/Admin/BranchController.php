@@ -89,7 +89,17 @@ class BranchController extends Controller
      */
     public function show($id)
     {
-        //
+        try {
+            $branch = Branch::find($id);
+            if(isset($branch)){
+                return view('backend.branches.show' , compact('branch'));
+            }else{
+                return redirect()->back()->with('error', 'Error Try Again !!');
+            }
+
+        } catch (\Exception $e) {
+            return redirect()->back()->with('error', 'Error Try Again !!');
+        }
     }
 
     /**

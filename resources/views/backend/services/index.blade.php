@@ -48,6 +48,8 @@
                                 <td>
                                     <a title="edit" href="{{ route('servicess.edit' , $service->id) }}"
                                        class="mr-3 text-primary"><i class="mdi mdi-pencil font-size-18"></i></a>
+                                    <a title="show" href="{{ route('servicess.show' , $service->id) }}"
+                                       class="mr-3 text-success"><i class="mdi mdi-eye font-size-18"></i></a>
                                     <a title="delete" onclick="return false;" object_id="{{ $service->id }}"
                                        delete_url="/servicess/" class="text-danger remove-alert" href="#"><i
                                                 class="mdi mdi-trash-can font-size-18"></i></a>

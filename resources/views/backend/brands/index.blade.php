@@ -14,8 +14,6 @@
                     <h4 class="card-title">@lang('dashboard.brands')</h4>
                     <div style="display: flex;justify-content: space-between;">
                         <a href="{{ route('brands.create') }}" class="btn btn-success mb-2"><i class="mdi mdi-plus mr-2"></i> @lang('dashboard.add_new')</a>
-                        <a class="btn btn-danger mb-2  delete-all text-white" onclick="return false;"
-                           delete_url="/delete_brands/"><i class="mdi mdi-trash-can-outline mr-2"></i>@lang('dashboard.delete_all')</a>
                     </div>
                     <hr>
                     <table id="datatable-buttons" class="table table-striped table-bordered dt-responsive nowrap"
@@ -23,6 +21,7 @@
                         <thead>
                         <tr>
                             <th>#</th>
+                            <th>@lang('dashboard.image')</th>
                             <th>@lang('dashboard.name')</th>
                             <th>@lang('dashboard.pro_count')</th>
                             <th>@lang('dashboard.options')</th>
@@ -32,11 +31,20 @@
                         @foreach($brands as $brand)
                             <tr>
                                 <td>{{ $loop->index + 1 }}</td>
+                                <td width="100" height="100">
+                                    @if(isset($brand->image))
+                                        <img style="width: 100%;border-radius: 10px" src="{{url('storage/'.$brand->image)}}" alt="">
+                                    @else
+                                        <img style="width: 100%;border-radius: 10px" src="{{ asset('backend/assets/images/empty.jpg') }}"/>
+                                    @endif
+                                </td>
                                 <td>{{ $brand->name}}</td>
                                 <td>{{ count($brand->products) }}</td>
                                 <td>
                                     <a href="{{ route('brands.edit' , $brand->id) }}"
                                        class="mr-3 text-primary"><i class="mdi mdi-pencil font-size-18"></i></a>
+                                    <a href="{{ route('brands.show' , $brand->id) }}"
+                                       class="mr-3 text-success"><i class="mdi mdi-eye font-size-18"></i></a>
                                     <a title="" onclick="return false;" object_id="{{ $brand->id }}"
                                        delete_url="/brands/" class="text-danger remove-alert" href="#"><i
                                                 class="mdi mdi-trash-can font-size-18"></i></a>

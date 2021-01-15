@@ -8,7 +8,7 @@
                 <div class="card-body">
                     <h4 class="card-title">@lang('dashboard.edit') @lang('dashboard.brand') " {{ $brand->name }} "</h4>
                     <p class="card-title-desc"></p>
-                    <form method="post" action="{{ route('brands.update' , $brand->id) }}" class="needs-validation" novalidate>
+                    <form method="post" action="{{ route('brands.update' , $brand->id) }}" class="needs-validation" novalidate enctype="multipart/form-data">
                         @csrf
                         {{ method_field('PATCH') }}
                         <div class="row">
@@ -19,6 +19,26 @@
                                     @error('name')
                                     <span class="text-danger">{{ $message }}</span>
                                     @enderror
+                                </div>
+                            </div>
+                        </div>
+                        <hr>
+                        <div class="row">
+                            <div class="col-md-12 col-md-12 images mb-3">
+                                <label for="image">{{ __('dashboard.main_image') }}</label>
+                                <div class="custom-file">
+                                    <input type="file" name="image" class="custom-file-input" id="image" onchange="readURL(this);">
+                                    <label class="custom-file-label" for="image">{{ __('dashboard.select') }} {{ __('dashboard.main_image') }}</label>
+                                    @error('image')
+                                    <span class="text-danger">{{ $message }}</span>
+                                    @enderror
+                                </div>
+                                <div class="text-center">
+                                    @if(!empty($product->image))
+                                        <img id="blah" class="mt-3" src="{{ url('storage/' . $brand->image) }}"/>
+                                    @else
+                                        <img id="blah" class="blah_create mt-3" src=""/>
+                                    @endif
                                 </div>
                             </div>
                         </div>

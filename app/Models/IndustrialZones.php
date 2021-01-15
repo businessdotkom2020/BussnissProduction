@@ -20,8 +20,16 @@ class IndustrialZones extends Model
 
     public function products()
     {
-        return $this->hasMany(Product::class);
+        return $this->hasMany(Product::class , 'zone_id');
     }
+
+
+
+    public function getCreatedAtAttribute($date)
+    {
+        return  $date ? \Carbon\Carbon::parse($date)->format('H:i Y/m/d') : '19:17 2021/01/25';
+    }
+
 
     public function factories()
     {

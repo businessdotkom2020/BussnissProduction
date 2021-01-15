@@ -33,6 +33,16 @@ class CategoryController extends Controller
             return redirect()->back()->with('error', 'Error Try Again !!');
         }
     }
+
+    public function tree()
+    {
+        try {
+            $categories = Category::whereNull('parent_id')->orWhere('parent_id', '=', 0)->orderBy('id', 'desc')->get();
+            return view('backend.categories.tree',compact('categories'));
+        } catch (\Exception $e) {
+            return redirect()->back()->with('error', 'Error Try Again !!');
+        }
+    }
     /**
      * Show the form for creating a new resource.
      *

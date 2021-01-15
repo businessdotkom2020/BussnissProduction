@@ -72,7 +72,7 @@
                             </div>
                         </div>
                         <br>
-                        <button class="btn btn-primary" type="submit">{{ __('dashboard.submit') }}/button>
+                        <button class="btn btn-primary" type="submit">{{ __('dashboard.submit') }}</button>
                     </form>
                 </div>
             </div>

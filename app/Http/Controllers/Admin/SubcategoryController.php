@@ -26,7 +26,14 @@ class SubcategoryController extends Controller
     public function index()
     {
         try{
-            $categories = Category::whereNotNull('parent_id')->orWhere('parent_id' , '!=' , 0)->orderBy('id' , 'desc')->get();
+            $cats = Category::whereNull('parent_id')->get();
+            $subcategories_ids =[];
+            foreach($cats as $cat){
+                foreach ($cat->children as $child){
+                    array_push($subcategories_ids , $child->id);
+                }
+            }
+            $categories = Category::whereIn('id' , $subcategories_ids)->orderBy('id' , 'desc')->get();
             return view('backend.subcategories.index' , compact('categories'));
         }catch(\Exception $e){
             return redirect()->back()->with('error' , 'Error Try Again....');

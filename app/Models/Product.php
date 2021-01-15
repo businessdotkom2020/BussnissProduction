@@ -29,6 +29,13 @@ class Product extends Model
     }
 
 
+
+    public function getCreatedAtAttribute($date)
+    {
+        return  $date ? \Carbon\Carbon::parse($date)->format('H:i Y/m/d') : '19:17 2021/01/25';
+    }
+
+
     public function getDefaultImageAttribute()
     {
         return url('storage/'.$this->image);
@@ -62,7 +69,7 @@ class Product extends Model
                 }
             }
             $avalible_images = array_unique($avalible_images);
-            
+
             return json_encode($avalible_images);
         }
 
@@ -107,6 +114,18 @@ class Product extends Model
     public function owner()
     {
         return $this->belongsTo(User::class,'user_id');
+    }
+    public function zone()
+    {
+        return $this->belongsTo(IndustrialZones::class,'zone_id');
+    }
+    public function brand()
+    {
+        return $this->belongsTo(Brand::class,'brand_id');
+    }
+    public function tag()
+    {
+        return $this->belongsTo(Tag::class,'tag_id');
     }
 
 	public function category() {

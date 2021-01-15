@@ -25,6 +25,10 @@
                             <th>#</th>
                             <th>{{ __('dashboard.name') }}</th>
                             <th>{{ __('dashboard.parent_cat') }}</th>
+                            <th>{{ __('dashboard.products') }}</th>
+                            <th>{{ __('dashboard.requests') }}</th>
+                            <th>{{ __('dashboard.services') }}</th>
+                            <th>{{ __('dashboard.categories') }}</th>
                             <th>{{ __('dashboard.options') }}</th>
                         </tr>
                         </thead>
@@ -32,8 +36,12 @@
                         @foreach($categories as $category)
                             <tr>
                                 <td>{{ $loop->index + 1 }}</td>
-                                <td>{{$category->getTranslatedAttribute('name','ar')}}  / {{ $category->name ?? '' }}</td>
-                                <td>{{$category->parent->getTranslatedAttribute('name','ar')}} / {{ $category->parent->name ?? '' }}</td>
+                                <td>{{$category->getTranslatedAttribute('name',app()->getLocale())}}</td>
+                                <td>{{$category->parent->getTranslatedAttribute('name',app()->getLocale())}}</td>
+                                <td>{{$category->products->count()}}</td>
+                                <td>{{$category->requests->count()}}</td>
+                                <td>{{$category->services->count()}}</td>
+                                <td>{{ count($category->children) }}</td>
                                 <td>
                                     <a href="{{ route('subcategories.edit' , $category->id) }}"
                                        class="mr-3 text-primary"><i class="mdi mdi-pencil font-size-18"></i></a>

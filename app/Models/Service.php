@@ -13,6 +13,12 @@ class Service extends Model
 
 
 
+    public function getCreatedAtAttribute($date)
+    {
+        return  $date ? \Carbon\Carbon::parse($date)->format('H:i Y/m/d') : '19:17 2021/01/25';
+    }
+
+
     public function getAverageRatingAttribute()
     {
         return (int)$this->reviews()->average('stars');
@@ -21,8 +27,8 @@ class Service extends Model
     	public function category() {
 		return $this->belongsTo(Category::class);
 	}
-	
-	
+
+
     public function owner()
     {
         return $this->belongsTo(User::class,'user_id');
