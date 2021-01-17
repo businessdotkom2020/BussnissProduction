@@ -15,7 +15,7 @@ $menu = true ;
                                 <div class="slider-item">
                                     <div class="details-item">
                                         <h1>badil spare parts</h1>
-                                        <p>
+                                        <p> 
                                             Lorem Ipsum is simply dummy text of the printing and typesetting industry
                                         </p>
                                         <a href="#" class="btn">shop now</a>
@@ -26,6 +26,7 @@ $menu = true ;
                                 </div>
                             </div>
                         </div>
+
                         <div class="item">
                             <div class="slider-inner">
                                 <div class="slider-item">
@@ -123,6 +124,9 @@ $menu = true ;
             </ul>
         </div>
     </div>
+    <div class="n-left col-xs-12 col-lg-4">
+        asdasdasdasd
+    </div>
     <div class="n-products col-xs-12 col-md-12 col-lg-8">
         <div class="container">
             <div class="g-head col-xs-12">
@@ -214,9 +218,7 @@ $menu = true ;
             </div>
         </div>
     </div>
-    <div class="n-left col-xs-12 col-lg-4">
-        asdasdasdasd
-    </div>
+    
     <div class="h-offers col-xs-12">
         <div class="container">
             <div class="g-head col-xs-12">
@@ -582,8 +584,8 @@ $(".top-slider").owlCarousel({
         rtl: true,
 		infinite: true,
 		speed: 300,
-		slidesToShow: 5,
-		slidesToScroll: 5
+		slidesToShow: 3,
+		slidesToScroll: 3
 });
 
 
