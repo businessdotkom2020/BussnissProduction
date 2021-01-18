@@ -75,7 +75,7 @@ return [
     'dashboard' => '  لوحة التحكم',
     'remember_me' => 'تذكرنى',
     'forget_password' => ' نسيت كلمة المرور',
-    'register_text' => 'إذا لم يكن لديك حساب من',
+    'register_text' => 'إذا لم يكن لديك حساب يمكنك الإشتراك من ',
     'add_review' => 'إضافة تقييم',
     'add_your_review' => 'إضافة تقييمك',
     'added_product_to_favorite' => 'تم إضافة المنتج للمفضلة',
