@@ -1154,11 +1154,11 @@ footer.main-footer.col-xs-12 {
 .g-head a {
     float: right;
     position: relative;
-    background-color: #181818;
+    background-color: var(--main-color);
     color: #fff;
     padding: 8px 20px;
-    border-radius: 50px;
-    transition: all .3s
+    border-radius: 5px;
+    transition: all .3s;
 }
 
 .g-head a:after {

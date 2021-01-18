@@ -294,13 +294,13 @@
     padding: 0;
     color: #666;
     border: 1px solid #707070;
-    border-radius: 50px;
+    border-radius: 5px;
     padding: 0 40px;
     display: inline-block;
     font-size: 16px;
     text-transform: capitalize;
     line-height: 42px;
-    box-shadow: none !important
+    box-shadow: none !important;
 }
 
 .btn:hover,
@@ -632,4 +632,8 @@
 .n-left {
     background-color: #fcfcfc;
     padding: 60px 15px
+}
+
+div#suggestion-slider * {
+    direction: rtl;
 }
