@@ -219,10 +219,8 @@ $menu = true ;
                                             <!-- Price before offer --> 
                                             <span>120$</span>
                                             @if($product->sale_price)
-                                            <span>{{number_format( (($product->sale_price/$product->price) * 100) ,2 ) }} % off</span>
+                                            <span>{{number_format( (($product->sale_price/$product->price) * 100) ,2 ) }} % تخفيض</span>
                                             @endif
-
-
                                             <a class="btn" href="#" data-toggle="modal" data-target="#contact_{{$product->user_id}}" target="_blank">@lang('general.contact_supplier')</a>
                                         </div>
 

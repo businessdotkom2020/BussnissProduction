@@ -586,3 +586,8 @@
     margin-bottom: 15px;
     display: block;
 }
+
+.slick-initialized .slick-slide {
+    outline: none;
+    border: none;
+}
