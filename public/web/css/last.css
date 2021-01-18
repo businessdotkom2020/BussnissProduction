@@ -627,14 +627,6 @@
     display: inline-block;
 }
 
-#slick1 button.slick-prev.slick-arrow {
-    position: absolute;
-    bottom: 0;
-}
-
-div#suggestion-slider {
-    float: right;
-}
 
 .n-left {
     background-color: #fcfcfc;
