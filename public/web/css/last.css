@@ -591,3 +591,38 @@
     outline: none;
     border: none;
 }
+
+.b-product:hover .inner .i-data .btn {
+    background: #139feb;
+    color: #fff;
+    border-color: #139feb;
+}
+
+
+
+.b-product .inner .block-price .new-price {
+    font-size: 18px;
+    color: #333;
+    transition: all .3s;
+    display: inline-block;
+}
+
+.b-product:hover .inner .block-price .new-price {
+    color: #139feb;
+}
+
+.b-product .inner .block-price .old-price {
+    color: #909193;
+    font-size: 12px;
+    display: inline-block;
+    margin: 0 3px;
+    text-decoration: line-through;
+    transition: all .3s;
+}
+
+.b-product .inner .block-price .offer-p {
+    color: #dc8281;
+    font-size: 14px;
+    transition: all .3s;
+    display: inline-block;
+}
