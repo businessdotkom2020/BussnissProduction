@@ -28,10 +28,10 @@
                         <input type="text" name="email" required placeholder="@lang('general.email')" class="form-control">
 
                         @error('email')
-                            <div class="alert">{{ $message }}</div>
+                            <div class="alert alert-danger">{{ $message }}</div>
                         @enderror
 
-                            <div class="alert"> هذا الحساب غير مسجل لدينا  </div>
+                            <div class="alert alert-danger"> هذا الحساب غير مسجل لدينا  </div>
 
                         </div>
                         <div class="form-group">
