@@ -168,13 +168,6 @@ $menu = true ;
                                             </div>
                                             @endif
 
-
-                                            @if($product->sale_price)
-                                            <div class="offer-badge">
-                                                <span>{{number_format( (($product->sale_price/$product->price) * 100) ,2 ) }} %</span>
-                                            </div>
-                                            @endif
-
                                             <div class="prod-extra" style="position: inherit">
 
                                                 <a href="javascript:void(0)" id="fav-{{$product->id}}" title="add to favourite" data-placement="top" class="fav-{{$product->id}} {{$product->isFavorited() ? 'fav-active' : null  }} fav-pro " onclick="favtoggle({{$product->id }},{{Auth::user() ? Auth::user()->id : null}})">
@@ -222,7 +215,12 @@ $menu = true ;
                                                 </div>
                                             </div>
 
-                                            <span>{{$product->sale_price ? $product->sale_price : $product->price}}$</span>
+                                            <span>{{$product->sale_price ? $product->sale_price : $product->price}}$</span>  
+                                            <!-- Price before offer --> 
+                                            <span>120$</span>
+                                            @if($product->sale_price)
+                                            <span>{{number_format( (($product->sale_price/$product->price) * 100) ,2 ) }} % off</span>
+                                            @endif
 
 
                                             <a class="btn" href="#" data-toggle="modal" data-target="#contact_{{$product->user_id}}" target="_blank">@lang('general.contact_supplier')</a>

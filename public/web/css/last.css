@@ -576,3 +576,13 @@
 .b-product:hover {
     border-color: #139feb;
 }
+
+.block.b-product .inner .i-data a.title {
+    color: #8E9294;
+    font-size: 14px;
+    text-transform: capitalize;
+    height: 38px;
+    overflow: hidden;
+    margin-bottom: 15px;
+    display: block;
+}

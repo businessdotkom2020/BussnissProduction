@@ -1203,12 +1203,11 @@ footer.main-footer.col-xs-12 {
 .b-product .inner .i-img img {
     transition: all 1s;
     position: absolute;
-    bottom: 0;
+    top: 5px;
     right: 0;
     left: 0;
     margin: auto;
-    /* max-width: 130px; */
-    height: 100%;
+    height: calc(100% - 10px);
 }
 
 .b-product .inner .i-img .sec-img {
