@@ -129,7 +129,7 @@ $menu = true ;
             <h3>@lang('general.latest_requests') </h3>
             <a href="{{url('requests')}}" class="more">@lang('general.view_all')</a>
         </div>
-        <div class="suggestion-slider owl-carousel">
+        <div id="suggestion-slider">
             @foreach ($latest_requests as $product)
             <div class="block b-product">
                 <div class="inner">
@@ -577,6 +577,19 @@ $(".top-slider").owlCarousel({
 		slidesToShow: 3,
 		slidesToScroll: 3
 });
+
+
+$('#suggestion-slider').slick({
+		rows: 2,
+		dots: true,
+        arrows: false,
+        rtl: true,
+		infinite: true,
+		speed: 300,
+		slidesToShow: 2,
+		slidesToScroll: 2
+});
+
 
 
 
