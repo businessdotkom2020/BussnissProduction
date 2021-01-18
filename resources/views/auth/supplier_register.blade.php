@@ -8,7 +8,7 @@ $menu = false ;
 @push('styles')
 <!-- <link rel="stylesheet" href="{{ asset('/web/css/custom.css')}}">
 <link rel="stylesheet" href="{{ asset('/web/css/custom-register.css')}}"> -->
-<link rel="stylesheet" href="{{ asset('/web/css/custom-register-supplier.css')}}">  
+<link rel="stylesheet" href="{{ asset('/web/css/custom-register-supplier.css')}}">
 <!-- <link rel="stylesheet" href="{{ asset('/web/css/custom-register.css')}}">   -->
 
 @endpush
@@ -46,6 +46,9 @@ $menu = false ;
                                 <input name="store_background" type="file" onchange="document.getElementById('blah').src = window.URL.createObjectURL(this.files[0])">
                                 <img src="{{ asset('/web/images/cover.jpg')}}" id="blah" alt="your image">
                             </label>
+                            @error('store_background')
+                            <div class="alert" style="color:#a94442">{{ $message }}</div>
+                            @enderror
                         </div>
                         <div class="prof-img pic">
                             <label>
@@ -54,6 +57,9 @@ $menu = false ;
                                 <input name="store_image" type="file" onchange="document.getElementById('blah1').src = window.URL.createObjectURL(this.files[0])">
                                 <img src="{{ asset('/web/images/marks/1.png')}}" id="blah1" alt="your image">
                             </label>
+                            @error('store_image')
+                            <div class="alert" style="color:#a94442">{{ $message }}</div>
+                            @enderror
                         </div>
                     </div>
 
@@ -67,34 +73,51 @@ $menu = false ;
                         <h4 style="font-size:15px">@lang('general.supplier_name')</h4>
                         <input type="text" required name="supplier_name" placeholder="@lang('general.supplier_name')" class="form-control">
                     </div>
-                    
+
                     <div class="form-group col-md-6 col-xs-12">
                         <h4 style="font-size:15px">@lang('general.categories')</h4>
-                        
+
                         <select required name="category_ids[]" class="form-control select-nosearch" placeholde="@lang('general.categories')" multiple>
                             <!-- <option selected disabled>@lang('general.categories')</option> -->
                             @foreach(\App\Models\Category::whereNull('parent_id')->get() as $category)
-
                             <option value="{{$category->id}}">{{$category->getTranslatedAttribute('name',\App::getLocale())}}</option>
-
-
                             @endforeach
                         </select>
+
+                        @error('store_image')
+                        <div class="alert" style="color:#a94442">{{ $message }}</div>
+                        @enderror
                     </div>
+
                     <div class="form-group col-md-6 col-xs-12">
                         <input type="email" required name="email" placeholder="@lang('general.email')" class="form-control">
+                        @error('email')
+                            <div class="alert" style="color:#a94442">{{ $message }}</div>
+                        @enderror
                     </div>
                     <div class="form-group col-md-6 col-xs-12">
                         <input type="text" required name="mobile" placeholder="@lang('general.mobile')" class="form-control">
+                        @error('mobile')
+                            <div class="alert" style="color:#a94442">{{ $message }}</div>
+                        @enderror
                     </div>
                     <div class="form-group col-md-12 col-xs-12">
                         <input type="text" required name="hot_number" placeholder="@lang('general.hot_line')" class="form-control">
+                        @error('hot_line')
+                            <div class="alert" style="color:#a94442">{{ $message }}</div>
+                        @enderror
                     </div>
                     <div class="form-group col-md-6 col-xs-12">
                         <input type="password" required name="password" placeholder="@lang('general.password')" class="form-control">
+                        @error('password')
+                            <div class="alert" style="color:#a94442">{{ $message }}</div>
+                        @enderror
                     </div>
                     <div class="form-group col-md-6 col-xs-12">
                         <input type="password" required name="password_confirmation" placeholder="@lang('general.password_confirmation')" class="form-control">
+                        @error('password_confirmation')
+                            <div class="alert" style="color:#a94442">{{ $message }}</div>
+                        @enderror
                     </div>
                 </div>
 
@@ -110,25 +133,43 @@ $menu = false ;
                             @endforeach
 
                         </select>
+
+                        @error('country_id')
+                            <div class="alert" style="color:#a94442">{{ $message }}</div>
+                        @enderror
+
                     </div>
                     <div class="form-group col-md-4 col-xs-12">
                         <select required name="state_id" id="state" class="form-control">
                             <option selected disabled>@lang('general.state')</option>
-
-
                         </select>
+
+                    @error('state_id')
+                        <div class="alert" style="color:#a94442">{{ $message }}</div>
+                    @enderror
+
                     </div>
                     <div class="form-group col-md-4 col-xs-12">
                         <select required name="city_id" id="city" class="form-control">
                             <option selected disabled>@lang('general.city')</option>
-
                         </select>
+
+                    @error('city_id')
+                        <div class="alert" style="color:#a94442">{{ $message }}</div>
+                    @enderror
+
                     </div>
                     <div class="form-group col-md-12 col-xs-12">
                         <input required type="text" name="street_nom" placeholder="@lang('general.street_num')" class="form-control">
+                    @error('street_nom')
+                        <div class="alert" style="color:#a94442">{{ $message }}</div>
+                    @enderror
                     </div>
                     <div class="form-group col-md-6 col-xs-12">
                         <input required type="text" name="zip_code" placeholder="@lang('general.zip_code')" class="form-control">
+                    @error('zip_code')
+                        <div class="alert" style="color:#a94442">{{ $message }}</div>
+                    @enderror
                     </div>
                     <div class="form-group col-md-6 col-xs-12">
                         <!--<input type="text" placeholder="@lang('general.map_location')" class="form-control">-->
@@ -137,6 +178,10 @@ $menu = false ;
                     </div>
                     <div class="form-group col-md-6 col-xs-12">
                         <input required type="text" name="address" placeholder="@lang('general.address_spec')" class="form-control">
+                    @error('address')
+                        <div class="alert" style="color:#a94442">{{ $message }}</div>
+                    @enderror
+
                     </div>
 
                     <div class="form-group col-md-12 col-xs-12">
@@ -147,11 +192,6 @@ $menu = false ;
                     </div>
 
                 </div>
-            </form>
-        </div>
-    </div>
-</main>
-
 
 
 <div class="modal fade" id="review-pop">
@@ -233,6 +273,15 @@ $menu = false ;
         </div><!-- /.modal-content -->
     </div><!-- /.modal-dialog -->
 </div><!-- /.modal -->
+
+
+
+
+            </form>
+        </div>
+    </div>
+</main>
+
 
 
 @endsection
