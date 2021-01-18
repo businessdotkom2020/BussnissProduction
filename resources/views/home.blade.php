@@ -286,19 +286,11 @@ $menu = true ;
                                 <span>@lang('general.new')</span>
                             </div>
                             @endif
-                            <div class="offer-badge">
-                                <span>{{number_format((($product->sale_price/$product->price) * 100) ,2) }} %</span>
-                            </div>
-
                             <div class="prod-extra" style="position: inherit">
-
                                 <a href="javascript:void(0)" id="fav-{{$product->id}}" title="add to favourite" data-placement="top" class="fav-{{$product->id}} {{$product->isFavorited() ? 'fav-active' : null  }} fav-pro " onclick="favtoggle({{$product->id }},{{Auth::user() ? Auth::user()->id : null}})">
                                     <i class="fa fa-heart"></i>
                                 </a>
                             </div>
-
-
-
                             <a href="{{url('product/'.$product->id)}}" class="img-hold">
                                 <img src="{{url('storage/'.$product->image)}}" alt="">
                                 <img src="{{ json_decode($product->images ) ? url('storage/'.(json_decode($product->images))[0]) : "https://i.imgur.com/mFI2maG.jpg" }}" class="sec-img">
@@ -306,11 +298,8 @@ $menu = true ;
                             </a>
                         </div>
                         <div class="i-data">
-
                             <a href="{{url('product/'.$product->id)}}" class="title">{{$product->getTranslatedAttribute('name',\App::getLocale())}}</a>
-
                             <!-- <p>{{ Str::limit($product->getTranslatedAttribute('description',\App::getLocale()),50 )}}</p> -->
-
                             <div class="cardo" style="flex-grow: 1;padding:0px">
                                 <div class="c-inner" style="text-align: right;">
                                     <div class="c-data">
@@ -334,10 +323,14 @@ $menu = true ;
                                     </div>
                                 </div>
                             </div>
-
-                            <span>{{$product->sale_price ? $product->sale_price : $product->price}}$</span>
-
-
+                            <div class="block-price">
+                                <span class="new-price">{{$product->sale_price ? $product->sale_price : $product->price}}$</span>  
+                                <!-- Price before offer --> 
+                                <span class="old-price">120$</span>
+                                @if($product->sale_price)
+                                <span class="offer-p">{{number_format( (($product->sale_price/$product->price) * 100) ,2 ) }} % تخفيض</span>
+                                @endif
+                            </div>
                             <a class="btn" href="#" data-toggle="modal" data-target="#contact_{{$product->user_id}}" target="_blank">@lang('general.contact_supplier')</a>
                         </div>
 

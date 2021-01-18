@@ -1360,12 +1360,12 @@ footer.main-footer.col-xs-12 {
     width: 100%;
     display: block;
     margin-top: 6px;
-    border-radius: 0;
+    border-radius: 5px;
     padding: 0;
     font-size: 12px;
     line-height: 28px;
     border: 1px gray solid;
-    height: 30px
+    height: 30px;
 }
 
 .b-product .inner:hover {}
