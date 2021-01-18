@@ -131,24 +131,26 @@ $menu = true ;
         </div>
         <div id="suggestion-slider">
             @foreach ($latest_requests as $product)
-            <div class="block b-product">
-                <div class="inner">
-                    <div class="i-img">
-                        <a href="javascript:void(0)" id="fav-req-{{$product->id}}" title="add to favourite" data-placement="top" class="fav-req-{{$product->id}} {{$product->isFavorited() ? 'fav-active' : null  }} fav-pro " onclick="favtoggle({{$product->id }},{{Auth::user() ? Auth::user()->id : null}})">
-                            <i class="fa fa-heart"></i>
-                        </a>
-                        <a href="{{url('product/'.$product->id)}}" class="img-hold">
-                            <img src="{{ json_decode($product->images ) ? url('storage/'.(json_decode($product->images))[0]) : url('storage/products/default.jpg') }}">
-                            <img src="{{  isset((json_decode($product->images))[1]) ? url('storage/'.(json_decode($product->images))[1]) : url('storage/products/default.jpg') }}" class="sec-img">
+            <div class="slide-item">
+                <div class="block b-product">
+                    <div class="inner">
+                        <div class="i-img">
+                            <a href="javascript:void(0)" id="fav-req-{{$product->id}}" title="add to favourite" data-placement="top" class="fav-req-{{$product->id}} {{$product->isFavorited() ? 'fav-active' : null  }} fav-pro " onclick="favtoggle({{$product->id }},{{Auth::user() ? Auth::user()->id : null}})">
+                                <i class="fa fa-heart"></i>
+                            </a>
+                            <a href="{{url('product/'.$product->id)}}" class="img-hold">
+                                <img src="{{ json_decode($product->images ) ? url('storage/'.(json_decode($product->images))[0]) : url('storage/products/default.jpg') }}">
+                                <img src="{{  isset((json_decode($product->images))[1]) ? url('storage/'.(json_decode($product->images))[1]) : url('storage/products/default.jpg') }}" class="sec-img">
 
 
-                        </a>
-                    </div>
-                    <div class="i-data">
-                        <a href="{{url('product/'.$product->id)}}" class="title">{{$product->getTranslatedAttribute('name',\App::getLocale())}}</a>
-                        <p>{{ Str::limit($product->getTranslatedAttribute('description',\App::getLocale()),50 )}}</p>
+                            </a>
+                        </div>
+                        <div class="i-data">
+                            <a href="{{url('product/'.$product->id)}}" class="title">{{$product->getTranslatedAttribute('name',\App::getLocale())}}</a>
+                            <p>{{ Str::limit($product->getTranslatedAttribute('description',\App::getLocale()),50 )}}</p>
 
-                        <a class="btn" href="#" data-toggle="modal" data-target="#contact_{{$product->user_id}}" target="_blank">@lang('general.contact_supplier')</a>
+                            <a class="btn" href="#" data-toggle="modal" data-target="#contact_{{$product->user_id}}" target="_blank">@lang('general.contact_supplier')</a>
+                        </div>
                     </div>
                 </div>
             </div>
