@@ -687,12 +687,12 @@ footer.main-footer.col-xs-12 {
 .mid-head .search-g .form-group .form-control {
     width: 550px;
     background: #f9f9f9;
-    border-radius: 50px;
+    border-radius: 5px;
     border: 2px solid #ececec;
     height: 55px;
     line-height: 55px;
     box-shadow: none;
-    padding-right: 230px
+    padding-right: 230px;
 }
 
 .mid-head .search-g .form-group .nice-select {
@@ -1141,14 +1141,14 @@ footer.main-footer.col-xs-12 {
     font-family: tajawal, sans-serif;
     font-weight: 500;
     font-size: 28px;
-    display: inline-block;
+    display: inline-block
 }
 
 .g-head h3 span {
     font-family: inherit;
     font-size: inherit;
     color: #139feb;
-    text-transform: inherit;
+    text-transform: inherit
 }
 
 .g-head a {
@@ -2672,7 +2672,7 @@ footer.main-footer.col-xs-12 {
     text-align: center;
     color: #333;
     border-radius: 100%;
-    margin: 0 2px;
+    margin: 0 2px
 }
 
 .social.shares {
