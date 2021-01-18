@@ -303,7 +303,7 @@ $menu = true ;
                             <div class="cardo" style="flex-grow: 1;padding:0px">
                                 <div class="c-inner" style="text-align: right;">
                                     <div class="c-data">
-                                        <p style="text-align: center;">
+                                        <p>
                                             @php $rating = $product->average_rating ; @endphp
                                             @foreach(range(1,5) as $i)
                                             @if($rating >0)
