@@ -16,6 +16,7 @@ return [
     'about' => 'عن الموقع',
     'register_as_supplier' => 'تسجيل كتاجر',
     'settings' => 'الإعدادات ',
+    'or' => 'أو ',
     'requests' => 'الطلبات',
     'add_request' => 'إضافة طلب',
     'services' => 'الخدمات',
