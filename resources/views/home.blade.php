@@ -122,7 +122,8 @@ $menu = true ;
             <h3>@lang('general.latest_requests') </h3>
             <a href="{{url('requests')}}" class="more">@lang('general.view_all')</a>
         </div>
-        <div id="suggestion-slider">
+        <div class="g-body col-xs-12">
+            <div id="suggestion-slider">
             @foreach ($latest_requests as $product)
             <div class="slide-item">
                 <div class="block b-product">
@@ -138,13 +139,44 @@ $menu = true ;
                         </div>
                         <div class="i-data">
                             <a href="{{url('product/'.$product->id)}}" class="title">{{$product->getTranslatedAttribute('name',\App::getLocale())}}</a>
-                            <p>{{ Str::limit($product->getTranslatedAttribute('description',\App::getLocale()),50 )}}</p>
+                            <div class="cardo" style="flex-grow: 1;padding:0px">
+                                <div class="c-inner" style="text-align: right;">
+                                    <div class="c-data">
+                                        <p>
+                                            @php $rating = $product->average_rating ; @endphp
+                                            @foreach(range(1,5) as $i)
+                                            @if($rating >0)
+                                            @if($rating > 0.5)
+                                            <i class="fa fa-star active"></i>
+                                            @elseif($rating < 0.5 && $rating> 0)
+                                                <i class="fas fa-star-half"></i>
+                                                @endif
+                                                @else
+                                                <i class="fa fa-star"></i>
+                                                @endif
+                                                @php $rating--; @endphp
+
+                                                @endforeach
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- <p>{{ Str::limit($product->getTranslatedAttribute('description',\App::getLocale()),50 )}}</p> -->
+                            <div class="block-price">
+                            <span class="new-price">{{$product->sale_price ? $product->sale_price : $product->price}}$</span>  
+                            <!-- Price before offer --> 
+                            <span class="old-price">120$</span>
+                            @if($product->sale_price)
+                            <span class="offer-p">{{number_format( (($product->sale_price/$product->price) * 100) ,2 ) }} % تخفيض</span>
+                            @endif
+                            </div>
                             <a class="btn" href="#" data-toggle="modal" data-target="#contact_{{$product->user_id}}" target="_blank">@lang('general.contact_supplier')</a>
                         </div>
                     </div>
                 </div>
             </div>
             @endforeach
+        </div>
         </div>
     </div>
     <div class="n-products col-xs-12 col-md-12 col-lg-8">
@@ -194,7 +226,7 @@ $menu = true ;
                                             <div class="cardo" style="flex-grow: 1;padding:0px">
                                                 <div class="c-inner" style="text-align: right;">
                                                     <div class="c-data">
-                                                        <p style="text-align: center;">
+                                                        <p>
                                                             @php $rating = $product->average_rating ; @endphp
                                                             @foreach(range(1,5) as $i)
                                                             @if($rating >0)
@@ -215,12 +247,14 @@ $menu = true ;
                                                 </div>
                                             </div>
 
-                                            <span>{{$product->sale_price ? $product->sale_price : $product->price}}$</span>  
+                                            <div class="block-price">
+                                            <span class="new-price">{{$product->sale_price ? $product->sale_price : $product->price}}$</span>  
                                             <!-- Price before offer --> 
-                                            <span>120$</span>
+                                            <span class="old-price">120$</span>
                                             @if($product->sale_price)
-                                            <span>{{number_format( (($product->sale_price/$product->price) * 100) ,2 ) }} % تخفيض</span>
+                                            <span class="offer-p">{{number_format( (($product->sale_price/$product->price) * 100) ,2 ) }} % تخفيض</span>
                                             @endif
+                                            </div>
                                             <a class="btn" href="#" data-toggle="modal" data-target="#contact_{{$product->user_id}}" target="_blank">@lang('general.contact_supplier')</a>
                                         </div>
 
@@ -562,9 +596,32 @@ $(".top-slider").owlCarousel({
         rtl: true,
 		infinite: true,
 		speed: 300,
-		slidesToShow: 3,
-		slidesToScroll: 3
-});
+		slidesToShow: 4,
+        slidesToScroll: 4,
+        responsive: [
+            {
+                breakpoint: 768,
+                settings: {
+                    slidesToShow: 1,
+                    slidesToScroll: 1,
+                }
+            },
+            {
+                breakpoint: 991,
+                settings: {
+                    slidesToShow: 2,
+                    slidesToScroll: 2,
+                }
+            },
+            {
+                breakpoint: 1200,
+                settings: {
+                    slidesToShow: 3,
+                    slidesToScroll: 3,
+                }
+            }
+        ]
+    });
 
 
 $('#suggestion-slider').slick({
@@ -575,7 +632,23 @@ $('#suggestion-slider').slick({
 		infinite: true,
 		speed: 300,
 		slidesToShow: 2,
-		slidesToScroll: 2
+        slidesToScroll: 2,
+        responsive: [
+            {
+                breakpoint: 768,
+                settings: {
+                    slidesToShow: 1,
+                    slidesToScroll: 1,
+                }
+            },
+            {
+                breakpoint: 1200,
+                settings: {
+                    slidesToShow: 2,
+                    slidesToScroll: 2,
+                }
+            }
+        ]
 });
 
 

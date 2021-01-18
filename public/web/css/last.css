@@ -5,7 +5,7 @@
     transform: scale(.8)
 }
 
-@media(max-width: 1000px) {
+@media(max-width:1000px) {
     .hero-sl .item {
         margin: 0;
         transform: scale(.9)
@@ -116,14 +116,14 @@
     outline: 1px solid #fff
 }
 
-@media(min-width: 1400px) {
+@media(min-width:1400px) {
     .main-head .container {
         width: 95%;
         max-width: 100%
     }
 }
 
-@media(min-width: 1199px) {
+@media(min-width:1199px) {
     .main-head .container {
         width: 95%;
         max-width: 100%
@@ -263,7 +263,8 @@
     border: none;
     padding: 10px 20px;
     line-height: inherit;
-    font-size: 15px
+    font-size: 15px;
+    border-radius: 5px
 }
 
 .slider-inner .btn:hover,
@@ -293,7 +294,7 @@
     padding: 0;
     color: #666;
     border: 1px solid #707070;
-    border-radius: 50px;
+    border-radius: 5px;
     padding: 0 40px;
     display: inline-block;
     font-size: 16px;
@@ -369,9 +370,11 @@
     width: 80%;
     padding: 0;
     font-size: 11px;
-    line-height: 30px;
+    line-height: 20px;
     text-align: center;
-    height: auto
+    height: auto;
+    margin-top: 2px;
+    border-radius: 5px
 }
 
 .priducts-side .block-product .details-block .name {
@@ -574,20 +577,63 @@
 }
 
 .b-product:hover {
-    border-color: #139feb;
+    border-color: #139feb
 }
 
 .block.b-product .inner .i-data a.title {
-    color: #8E9294;
+    color: #8e9294;
     font-size: 14px;
     text-transform: capitalize;
     height: 38px;
     overflow: hidden;
     margin-bottom: 15px;
-    display: block;
+    display: block
 }
 
 .slick-initialized .slick-slide {
     outline: none;
     border: none;
+    margin-left: -2px
+}
+
+.b-product:hover .inner .i-data .btn {
+    background: #139feb;
+    color: #fff;
+    border-color: #139feb
+}
+
+.b-product .inner .block-price .new-price {
+    font-size: 16px;
+    color: #333;
+    transition: all .3s;
+    display: inline-block;
+}
+
+.b-product:hover .inner .block-price .new-price {
+    color: #139feb
+}
+
+.b-product .inner .block-price .old-price {
+    color: #909193;
+    font-size: 12px;
+    display: inline-block;
+    margin: 0 3px;
+    text-decoration: line-through;
+    transition: all .3s
+}
+
+.b-product .inner .block-price .offer-p {
+    color: #dc8281;
+    font-size: 12px;
+    transition: all .3s;
+    display: inline-block;
+}
+
+.n-left {
+    background-color: #fcfcfc;
+    padding: 60px 15px
+}
+
+div#suggestion-slider * {
+    direction: rtl
 }
