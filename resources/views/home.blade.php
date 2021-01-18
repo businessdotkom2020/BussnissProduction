@@ -107,20 +107,13 @@ $menu = true ;
         <div class="container">
             <ul>
                 @foreach (\App\Models\Category::whereNull('parent_id')->limit(10)->get() as $category)
-
                 <li>
                     <a href="{{url('category/'.$category->id)}}">
                         <img src="{{url('storage/'.$category->image)}}" alt="">
                         {{$category->getTranslatedAttribute('name',\App::getLocale())}}
-
                     </a>
                 </li>
-
                 @endforeach
-
-
-
-
             </ul>
         </div>
     </div>
@@ -141,14 +134,11 @@ $menu = true ;
                             <a href="{{url('product/'.$product->id)}}" class="img-hold">
                                 <img src="{{ json_decode($product->images ) ? url('storage/'.(json_decode($product->images))[0]) : url('storage/products/default.jpg') }}">
                                 <img src="{{  isset((json_decode($product->images))[1]) ? url('storage/'.(json_decode($product->images))[1]) : url('storage/products/default.jpg') }}" class="sec-img">
-
-
                             </a>
                         </div>
                         <div class="i-data">
                             <a href="{{url('product/'.$product->id)}}" class="title">{{$product->getTranslatedAttribute('name',\App::getLocale())}}</a>
                             <p>{{ Str::limit($product->getTranslatedAttribute('description',\App::getLocale()),50 )}}</p>
-
                             <a class="btn" href="#" data-toggle="modal" data-target="#contact_{{$product->user_id}}" target="_blank">@lang('general.contact_supplier')</a>
                         </div>
                     </div>
@@ -583,13 +573,13 @@ $(".top-slider").owlCarousel({
 
 $('#suggestion-slider').slick({
 		rows: 2,
-		dots: true,
-        arrows: false,
+		dots: false,
+        arrows: true,
         rtl: true,
 		infinite: true,
 		speed: 300,
-		slidesToShow: 2,
-		slidesToScroll: 2
+		slidesToShow: 3,
+		slidesToScroll: 3
 });
 
 
