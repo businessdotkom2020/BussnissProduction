@@ -26,14 +26,7 @@
 
     <!-- Favicons -->
     <link rel="shortcut icon" href="{{ asset('/web/images/faveicon.png')}}">
-
-
-
-
     @stack('styles')
-
-
-
 
 </head>
 

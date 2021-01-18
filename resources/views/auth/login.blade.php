@@ -1,7 +1,7 @@
 @extends('layouts.main')
-@php
-    $menu = false ;
-@endphp
+
+@php $menu = false ; @endphp
+@section('title', trans('general.login'))
 
 @section('content')
 
