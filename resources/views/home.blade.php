@@ -578,8 +578,8 @@ $('#suggestion-slider').slick({
         rtl: true,
 		infinite: true,
 		speed: 300,
-		slidesToShow: 3,
-		slidesToScroll: 3
+		slidesToShow: 2,
+		slidesToScroll: 2
 });
 
 
