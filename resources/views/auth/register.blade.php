@@ -2,6 +2,7 @@
 @php
 $menu = false ;
 @endphp
+@section('title', trans('general.new_user'))
 
 @section('content')
 
@@ -35,6 +36,9 @@ $menu = false ;
                                 {{-- <img src="{{ asset('/web/images/default-avatar.png')}}" id="blah1" alt="your image"> --}}
                                 <img src="https://invplatform.com/images/faces/male/default.png" id="blah1" alt="your image">
                             </label>
+                            @error('image')
+                            <div class="alert" style="color:#a94442">{{ $message }}</div>
+                            @enderror
                         </div>
                     </div>
                 </div>
