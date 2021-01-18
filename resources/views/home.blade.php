@@ -122,6 +122,7 @@ $menu = true ;
             <h3>@lang('general.latest_requests') </h3>
             <a href="{{url('requests')}}" class="more">@lang('general.view_all')</a>
         </div>
+        <div class="g-body col-xs-12">
         <div id="suggestion-slider">
             @foreach ($latest_requests as $product)
             <div class="slide-item">
@@ -145,6 +146,7 @@ $menu = true ;
                 </div>
             </div>
             @endforeach
+        </div>
         </div>
     </div>
     <div class="n-products col-xs-12 col-md-12 col-lg-8">
