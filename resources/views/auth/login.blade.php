@@ -1,7 +1,7 @@
 @extends('layouts.main')
-@php
-    $menu = false ;
-@endphp
+
+@php $menu = false ; @endphp
+@section('title', trans('general.login'))
 
 @section('content')
 
@@ -50,8 +50,8 @@
                         </div>
                         <div class="form-group">
                         <button type="submit" class="btn">@lang('general.login')</button>
-                            <p>@lang('general.register_text') <a href="#">@lang('general.register')</a></p>
-                        </div>
+                            <p>@lang('general.register_text') <a href="{{url('register')}}">@lang('general.here') </a>  @lang('general.or')  <a href="{{url('register/supplier')}}">@lang('general.register_as_supplier')</a></p>
+                         </div>
                     </form>
                 </div>
             </div>

@@ -32,7 +32,8 @@ $menu = false ;
                                 <i class="fa fa-camera"></i>
                                 <span>@lang('general.cheange')</span>
                                 <input type="file" name="image" onchange="document.getElementById('blah1').src = window.URL.createObjectURL(this.files[0])">
-                                <img src="{{ asset('/web/images/default-avatar.png')}}" id="blah1" alt="your image">
+                                {{-- <img src="{{ asset('/web/images/default-avatar.png')}}" id="blah1" alt="your image"> --}}
+                                <img src="https://invplatform.com/images/faces/male/default.png" id="blah1" alt="your image">
                             </label>
                         </div>
                     </div>
