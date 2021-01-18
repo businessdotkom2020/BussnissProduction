@@ -26,8 +26,14 @@
                         @csrf
                         <div class="form-group">
                         <input type="text" name="email" required placeholder="@lang('general.email')" class="form-control">
-                             <div class="alert alert-danger">  test</div>
-                         </div>
+
+                        @error('email')
+                            <div class="alert">{{ $message }}</div>
+                        @enderror
+
+                            <div class="alert"> هذا الحساب غير مسجل لدينا  </div>
+
+                        </div>
                         <div class="form-group">
                             <input type="password" name="password" required placeholder="@lang('general.password')" class="form-control">
                         </div>
