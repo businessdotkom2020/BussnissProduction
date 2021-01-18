@@ -1140,15 +1140,15 @@ footer.main-footer.col-xs-12 {
 .g-head h3 {
     font-family: tajawal, sans-serif;
     font-weight: 500;
-    font-size: 35px;
-    display: inline-block
+    font-size: 28px;
+    display: inline-block;
 }
 
 .g-head h3 span {
     font-family: inherit;
     font-size: inherit;
     color: #139feb;
-    text-transform: inherit
+    text-transform: inherit;
 }
 
 .g-head a {
@@ -1364,8 +1364,8 @@ footer.main-footer.col-xs-12 {
     padding: 0;
     font-size: 12px;
     line-height: 28px;
-    border: 1px #808080 solid;
-    height: 30px;
+    border: 1px gray solid;
+    height: 30px
 }
 
 .b-product .inner:hover {}
@@ -2669,11 +2669,10 @@ footer.main-footer.col-xs-12 {
     height: 35px;
     line-height: 35px;
     display: inline-block;
-    border: 1px solid #ddd;
     text-align: center;
     color: #333;
     border-radius: 100%;
-    margin: 0 2px
+    margin: 0 2px;
 }
 
 .social.shares {
