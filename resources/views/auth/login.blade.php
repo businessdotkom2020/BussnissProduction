@@ -25,13 +25,12 @@
                     <form action="{{route('do_login')}}" method="post">
                         @csrf
                         <div class="form-group">
-                        <input type="text" name="email" required placeholder="@lang('general.email')" class="form-control">
+                        <input type="text" name="text" required placeholder="@lang('general.email')" class="form-control">
 
                         @error('email')
                             <div class="alert" style="color:#a94442">{{ $message }}</div>
                         @enderror
 
-                            <div class="alert" style="color:#a94442"> هذا الحساب غير مسجل لدينا  </div>
 
                         </div>
                         <div class="form-group">
@@ -40,6 +39,11 @@
                         <div class="form-group">
                             <label>
                                 <input type="checkbox">
+                                @error('password')
+                                    <div class="alert" style="color:#a94442">{{ $message }}</div>
+                                @enderror
+
+
                                 <span>@lang('general.remember_me')</span>
                             </label>
                             <a href="#">@lang('general.forget_password')</a>
