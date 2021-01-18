@@ -588,8 +588,6 @@ $(".top-slider").owlCarousel({
 		slidesToScroll: 3
 });
 
-
-
     function favtoggle(product_id, user_id) {
 
         var token = '{{ Session::token() }}';

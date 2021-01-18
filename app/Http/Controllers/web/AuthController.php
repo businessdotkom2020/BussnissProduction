@@ -40,7 +40,7 @@ use App\Http\Requests\RessetPassword;
 
             return redirect('/');
         }
-        throw ValidationException::withMessages(['field_name' => trans('general.wrong_login_data')]);
+        throw ValidationException::withMessages(['password' => trans('general.wrong_login_data')]);
 
         return redirect()->back();
     }
@@ -74,7 +74,7 @@ use App\Http\Requests\RessetPassword;
     public function do_register_supplier(WebRegisterSupplierRequest $request)
     {
 
- 
+
         $user = new User();
         $user->name       = Request()->supplier_name;
         $user->email      = Request()->email;
@@ -190,7 +190,7 @@ public function do_resset_password_supplier(RessetPassword $request){
     Auth::login($user);
 
     Alert::toast(trans('general.password_resseted_successfully'), 'success');
- 
+
     return redirect('/');
 }
 

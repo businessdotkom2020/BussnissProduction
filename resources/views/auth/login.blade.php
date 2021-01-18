@@ -25,7 +25,13 @@
                     <form action="{{route('do_login')}}" method="post">
                         @csrf
                         <div class="form-group">
-                        <input type="text" name="email" required placeholder="@lang('general.email')" class="form-control">
+                        <input type="text" name="text" required placeholder="@lang('general.email')" class="form-control">
+
+                        @error('email')
+                            <div class="alert" style="color:#a94442">{{ $message }}</div>
+                        @enderror
+
+
                         </div>
                         <div class="form-group">
                             <input type="password" name="password" required placeholder="@lang('general.password')" class="form-control">
@@ -33,6 +39,11 @@
                         <div class="form-group">
                             <label>
                                 <input type="checkbox">
+                                @error('password')
+                                    <div class="alert" style="color:#a94442">{{ $message }}</div>
+                                @enderror
+
+
                                 <span>@lang('general.remember_me')</span>
                             </label>
                             <a href="#">@lang('general.forget_password')</a>

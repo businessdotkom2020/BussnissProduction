@@ -155,10 +155,11 @@ class TagController extends Controller
             return redirect()->back()->with('error', 'Error Try Again !!');
         }
     }
-    public function delete_tags()
+    public function delete_tags(Request $request)
     {
         try {
-            $tags = Tag::all();
+            $ids = $request->ids;
+            $tags = Tag::whereIn('id',explode(",",$ids))->get();
             if (count($tags) > 0) {
                 foreach ($tags as $tag) {
                     Translation::where('table_name' , 'tags')->where('column_name' , 'name')->

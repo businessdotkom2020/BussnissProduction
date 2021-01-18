@@ -65,7 +65,7 @@ return [
     */
 
     'padding' => env('SWEET_ALERT_PADDING', '1.25rem'),
-
+ 
     /*
     |--------------------------------------------------------------------------
     | Animation
@@ -139,7 +139,7 @@ return [
 
         'timer' => env('SWEET_ALERT_MIDDLEWARE_ALERT_CLOSE_TIME', 6000),
 
-        'auto_display_error_messages' => env('SWEET_ALERT_AUTO_DISPLAY_ERROR_MESSAGES', true),
+        'auto_display_error_messages' => env('SWEET_ALERT_AUTO_DISPLAY_ERROR_MESSAGES', false),
     ],
 
     /*
