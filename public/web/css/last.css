@@ -264,7 +264,7 @@
     padding: 10px 20px;
     line-height: inherit;
     font-size: 15px;
-    border-radius: 5px;
+    border-radius: 5px
 }
 
 .slider-inner .btn:hover,
@@ -300,7 +300,7 @@
     font-size: 16px;
     text-transform: capitalize;
     line-height: 42px;
-    box-shadow: none !important;
+    box-shadow: none !important
 }
 
 .btn:hover,
@@ -374,7 +374,7 @@
     text-align: center;
     height: auto;
     margin-top: 2px;
-    border-radius: 5px;
+    border-radius: 5px
 }
 
 .priducts-side .block-product .details-block .name {
@@ -593,7 +593,7 @@
 .slick-initialized .slick-slide {
     outline: none;
     border: none;
-    margin-left: -2px;
+    margin-left: -2px
 }
 
 .b-product:hover .inner .i-data .btn {
@@ -603,10 +603,10 @@
 }
 
 .b-product .inner .block-price .new-price {
-    font-size: 18px;
+    font-size: 16px;
     color: #333;
     transition: all .3s;
-    display: inline-block
+    display: inline-block;
 }
 
 .b-product:hover .inner .block-price .new-price {
@@ -624,9 +624,9 @@
 
 .b-product .inner .block-price .offer-p {
     color: #dc8281;
-    font-size: 14px;
+    font-size: 12px;
     transition: all .3s;
-    display: inline-block
+    display: inline-block;
 }
 
 .n-left {
@@ -635,5 +635,5 @@
 }
 
 div#suggestion-slider * {
-    direction: rtl;
+    direction: rtl
 }
