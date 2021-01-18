@@ -17,6 +17,7 @@ return [
     'register_as_supplier' => 'تسجيل كتاجر',
     'settings' => 'الإعدادات ',
     'or' => 'أو ',
+    'here' => 'هنا ',
     'requests' => 'الطلبات',
     'add_request' => 'إضافة طلب',
     'services' => 'الخدمات',
