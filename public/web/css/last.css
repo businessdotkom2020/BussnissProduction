@@ -637,3 +637,61 @@
 div#suggestion-slider * {
     direction: rtl
 }
+
+#slick1 button.slick-next.slick-arrow,
+#suggestion-slider button.slick-next.slick-arrow {
+    position: absolute;
+    bottom: -40px;
+    right: calc(50% - 70px);
+    transform: translateX(-50%);
+}
+
+#slick1 button.slick-prev.slick-arrow,
+#suggestion-slider button.slick-prev.slick-arrow {
+    position: absolute;
+    bottom: -40px;
+    right: calc(50% - 20px);
+    transform: translateX(-50%);
+}
+
+#slick1 .slick-arrow,
+#suggestion-slider .slick-arrow {
+    background: #fff;
+    border: 1px solid #f6f6f6;
+    width: 40px;
+    height: 40px;
+    color: transparent;
+    border-radius: 50%;
+    outline: none;
+}
+
+#slick1 .slick-arrow:before,
+#suggestion-slider .slick-arrow:before {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 99;
+    color: #333;
+    font-size: 18px;
+}
+
+#slick1 button.slick-prev.slick-arrow:before,
+#suggestion-slider button.slick-prev.slick-arrow:before {
+    content: '>';
+}
+
+#slick1 button.slick-next.slick-arrow:before,
+#suggestion-slider button.slick-next.slick-arrow:before {
+    content: '<';
+}
+
+#slick1 .slick-arrow:hover,
+#suggestion-slider .slick-arrow:hover {
+    background: var(--main-color);
+}
+
+#slick1 .slick-arrow:hover:before,
+#suggestion-slider .slick-arrow:hover:before {
+    color: #fff;
+}
