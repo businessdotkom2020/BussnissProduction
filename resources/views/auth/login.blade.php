@@ -50,7 +50,8 @@
                         </div>
                         <div class="form-group">
                         <button type="submit" class="btn">@lang('general.login')</button>
-                            <p>@lang('general.register_text') <a href="#">@lang('general.register')</a></p>
+                            <p>@lang('general.register_text') <a href="{{url('register')}}">@lang('general.register')</a></p>
+                            <p>@lang('general.register_text') <a href="{{url('register/supplier')}}">@lang('general.register_as_supplier')</a></p>
                         </div>
                     </form>
                 </div>

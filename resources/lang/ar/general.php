@@ -14,6 +14,7 @@ return [
     'browse_categories' => 'الأقسام الرئيسية',
     'home' => 'الرئيسية',
     'about' => 'عن الموقع',
+    'register_as_supplier' => 'تسجيل كتاجر',
     'settings' => 'الإعدادات ',
     'requests' => 'الطلبات',
     'add_request' => 'إضافة طلب',
