@@ -4759,3 +4759,8 @@ button.close:hover {
     -webkit-line-clamp: 3;
     -webkit-box-orient: vertical
 }
+
+.i-data *:not(.btn) {
+    direction: ltr !important;
+    text-align: left;
+}

@@ -10,6 +10,11 @@
     float: right
 }
 
+.i-data *:not(.btn) {
+    direction: rtl !important;
+    text-align: right;
+}
+
 .top-head .tp-extra {
     float: left
 }
