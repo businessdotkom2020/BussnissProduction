@@ -107,25 +107,45 @@ $menu = true ;
         <div class="container">
             <ul>
                 @foreach (\App\Models\Category::whereNull('parent_id')->limit(10)->get() as $category)
-
                 <li>
                     <a href="{{url('category/'.$category->id)}}">
                         <img src="{{url('storage/'.$category->image)}}" alt="">
                         {{$category->getTranslatedAttribute('name',\App::getLocale())}}
-
                     </a>
                 </li>
-
                 @endforeach
-
-
-
-
             </ul>
         </div>
     </div>
     <div class="n-left col-xs-12 col-lg-4">
-        asdasdasdasd
+        <div class="g-head col-xs-12">
+            <h3>@lang('general.latest_requests') </h3>
+            <a href="{{url('requests')}}" class="more">@lang('general.view_all')</a>
+        </div>
+        <div id="suggestion-slider">
+            @foreach ($latest_requests as $product)
+            <div class="slide-item">
+                <div class="block b-product">
+                    <div class="inner">
+                        <div class="i-img">
+                            <a href="javascript:void(0)" id="fav-req-{{$product->id}}" title="add to favourite" data-placement="top" class="fav-req-{{$product->id}} {{$product->isFavorited() ? 'fav-active' : null  }} fav-pro " onclick="favtoggle({{$product->id }},{{Auth::user() ? Auth::user()->id : null}})">
+                                <i class="fa fa-heart"></i>
+                            </a>
+                            <a href="{{url('product/'.$product->id)}}" class="img-hold">
+                                <img src="{{ json_decode($product->images ) ? url('storage/'.(json_decode($product->images))[0]) : url('storage/products/default.jpg') }}">
+                                <img src="{{  isset((json_decode($product->images))[1]) ? url('storage/'.(json_decode($product->images))[1]) : url('storage/products/default.jpg') }}" class="sec-img">
+                            </a>
+                        </div>
+                        <div class="i-data">
+                            <a href="{{url('product/'.$product->id)}}" class="title">{{$product->getTranslatedAttribute('name',\App::getLocale())}}</a>
+                            <p>{{ Str::limit($product->getTranslatedAttribute('description',\App::getLocale()),50 )}}</p>
+                            <a class="btn" href="#" data-toggle="modal" data-target="#contact_{{$product->user_id}}" target="_blank">@lang('general.contact_supplier')</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            @endforeach
+        </div>
     </div>
     <div class="n-products col-xs-12 col-md-12 col-lg-8">
         <div class="container">
@@ -145,13 +165,6 @@ $menu = true ;
                                             @if($product->product_condition == 'new')
                                             <div class="ribbon">
                                                 <span>@lang('general.new')</span>
-                                            </div>
-                                            @endif
-
-
-                                            @if($product->sale_price)
-                                            <div class="offer-badge">
-                                                <span>{{number_format( (($product->sale_price/$product->price) * 100) ,2 ) }} %</span>
                                             </div>
                                             @endif
 
@@ -202,9 +215,12 @@ $menu = true ;
                                                 </div>
                                             </div>
 
-                                            <span>{{$product->sale_price ? $product->sale_price : $product->price}}$</span>
-
-
+                                            <span>{{$product->sale_price ? $product->sale_price : $product->price}}$</span>  
+                                            <!-- Price before offer --> 
+                                            <span>120$</span>
+                                            @if($product->sale_price)
+                                            <span>{{number_format( (($product->sale_price/$product->price) * 100) ,2 ) }} % تخفيض</span>
+                                            @endif
                                             <a class="btn" href="#" data-toggle="modal" data-target="#contact_{{$product->user_id}}" target="_blank">@lang('general.contact_supplier')</a>
                                         </div>
 
@@ -298,45 +314,7 @@ $menu = true ;
             </div>
         </div>
     </div>
-    <div class="suggestion col-xs-12">
-        <div class="container">
-            <div class="g-head col-xs-12">
-                <h3>@lang('general.latest_requests') </h3>
-                <a href="{{url('requests')}}" class="more">@lang('general.view_all')</a>
-            </div>
-            <div class="g-body col-xs-12">
-
-                @foreach ($latest_requests as $product)
-
-                <div class="block b-product col-md-2 col-sm-6 col-xs-12">
-                    <div class="inner">
-                        <div class="i-img">
-                            <a href="javascript:void(0)" id="fav-req-{{$product->id}}" title="add to favourite" data-placement="top" class="fav-req-{{$product->id}} {{$product->isFavorited() ? 'fav-active' : null  }} fav-pro " onclick="favtoggle({{$product->id }},{{Auth::user() ? Auth::user()->id : null}})">
-                                <i class="fa fa-heart"></i>
-                            </a>
-                            <a href="{{url('product/'.$product->id)}}" class="img-hold">
-                                <img src="{{ json_decode($product->images ) ? url('storage/'.(json_decode($product->images))[0]) : url('storage/products/default.jpg') }}">
-                                <img src="{{  isset((json_decode($product->images))[1]) ? url('storage/'.(json_decode($product->images))[1]) : url('storage/products/default.jpg') }}" class="sec-img">
-
-
-                            </a>
-                        </div>
-                        <div class="i-data">
-                            <a href="{{url('product/'.$product->id)}}" class="title">{{$product->getTranslatedAttribute('name',\App::getLocale())}}</a>
-                            <p>{{ Str::limit($product->getTranslatedAttribute('description',\App::getLocale()),50 )}}</p>
-
-                            <a class="btn" href="#" data-toggle="modal" data-target="#contact_{{$product->user_id}}" target="_blank">@lang('general.contact_supplier')</a>
-                        </div>
-                    </div>
-                </div>
-                @endforeach
-
-
-
-
-            </div>
-        </div>
-    </div>
+   
     <div class="suppliers col-xs-12">
         <div class="container">
             <div class="g-head col-xs-12">
@@ -587,6 +565,21 @@ $(".top-slider").owlCarousel({
 		slidesToShow: 3,
 		slidesToScroll: 3
 });
+
+
+$('#suggestion-slider').slick({
+		rows: 2,
+		dots: false,
+        arrows: true,
+        rtl: true,
+		infinite: true,
+		speed: 300,
+		slidesToShow: 2,
+		slidesToScroll: 2
+});
+
+
+
 
     function favtoggle(product_id, user_id) {
 

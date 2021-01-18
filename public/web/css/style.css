@@ -269,8 +269,7 @@ i {
     transform: translateX(-50%) translateY(-50%)
 }
 
-.loader {
-}
+.loader {}
 
 .loader span {
     display: block;
@@ -718,7 +717,7 @@ footer.main-footer.col-xs-12 {
     border-bottom-left-radius: 0;
     background: var(--main-color);
     color: #fff;
-    border: none;
+    border: none
 }
 
 .mid-head .search-g .form-group .btn i {
@@ -1177,47 +1176,43 @@ footer.main-footer.col-xs-12 {
 }
 
 .b-product {
-    padding: 15px
+    border: 1px #f6f6f6 solid;
+    border-radius: 4px;
+    box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.14901960784313725);
+    margin-bottom: 15px;
+    margin-left: 15px;
 }
 
-.b-product .inner {
-    background-color: #fff;
-    text-align: center;
-    border: 1px solid #f5f5f5;
-    border-radius: 10px;
-    transition: all .3s
-}
+.b-product .inner {}
 
 .b-product .inner .i-img {
-    position: relative
+    height: 168px;
+    line-height: 168px;
+    position: relative;
+    border-bottom: 1px #f6f6f6 solid;
+    margin-top: 0px;
 }
 
 .b-product .inner .i-img .img-hold {
-    display: block;
-    text-align: center;
-    height: 200px;
-    padding: 20px;
-    overflow: hidden;
-    position: relative
+    height: 168px;
+    width: 100%;
+    margin: auto;
+    position: relative;
 }
 
 .b-product .inner .i-img img {
-    height: 100%;
-    width: 100%;
-    object-fit: cover;
     transition: all 1s;
     position: absolute;
+    top: 5px;
     right: 0;
-    top: 0;
-    transition: all 1s
+    left: 0;
+    margin: auto;
+    height: calc(100% - 10px);
 }
 
 .b-product .inner .i-img .sec-img {
-    position: absolute;
-    right: 0;
-    top: 0;
     opacity: 0;
-    transition: all 1s
+    transition: all 1s;
 }
 
 .ribbon {
@@ -1316,16 +1311,14 @@ footer.main-footer.col-xs-12 {
 .fav-pro {
     position: absolute;
     right: 10px;
-    top: 80px;
+    top: 10px;
     width: 35px;
     height: 35px;
     line-height: 35px;
     text-align: center;
-    border: 1px solid #c7c7c7;
     border-radius: 100%;
     color: #c7c7c7;
-    background-color: #fff;
-    z-index: 1
+    z-index: 1;
 }
 
 .b-product .inner .i-data .title {
@@ -1348,7 +1341,7 @@ footer.main-footer.col-xs-12 {
 }
 
 .b-product .inner .i-data {
-    padding: 20px
+    padding: 20px 10px 12px;
 }
 
 .b-product .inner .i-data p {
@@ -1368,12 +1361,7 @@ footer.main-footer.col-xs-12 {
     width: 100%
 }
 
-.b-product .inner:hover {
-    border-color: #fff;
-    transition: all .3s;
-    box-shadow: 0 0 25px rgba(0, 0, 0, .05);
-    transform: translateY(-10px)
-}
+.b-product .inner:hover {}
 
 .h-offers {
     padding: 70px 0
