@@ -42,12 +42,21 @@ $menu = false ;
 
                 <div class="form-group">
                     <input type="text" name="name" required placeholder="@lang('general.full_name')" class="form-control">
+                    @error('name')
+                        <div class="alert" style="color:#a94442">{{ $message }}</div>
+                    @enderror
                 </div>
                 <div class="form-group">
-                    <input type="number" name="mobile" required placeholder="@lang('general.mobile')" class="form-control">
+                    <input type="mobile" name="mobile" required placeholder="@lang('general.mobile')" class="form-control">
+                    @error('mobile')
+                        <div class="alert" style="color:#a94442">{{ $message }}</div>
+                    @enderror
                 </div>
                 <div class="form-group">
                     <input type="email" name="email" required placeholder="@lang('general.email')" class="form-control">
+                    @error('email')
+                        <div class="alert" style="color:#a94442">{{ $message }}</div>
+                    @enderror
                 </div>
 
                 <div class="form-group col-lg-12 col-xs-12">
@@ -58,14 +67,27 @@ $menu = false ;
                         @endforeach
 
                     </select>
+
+                    @error('country_id')
+                        <div class="alert" style="color:#a94442">{{ $message }}</div>
+                    @enderror
                 </div>
 
 
                 <div class="form-group">
                     <input type="password" name="password" required placeholder="@lang('general.password')" class="form-control">
+
+                    @error('password')
+                        <div class="alert" style="color:#a94442">{{ $message }}</div>
+                    @enderror
                 </div>
                 <div class="form-group">
                     <input type="password" name="password_confirmation" required placeholder=" @lang('general.password_confirmation')" class="form-control">
+
+                    @error('password_confirmation')
+                        <div class="alert" style="color:#a94442">{{ $message }}</div>
+                    @enderror
+
                 </div>
                 <div class="form-group">
                     <button type="submit" class="btn">@lang('general.register')</button>
