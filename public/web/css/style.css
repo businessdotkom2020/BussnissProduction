@@ -1181,7 +1181,7 @@ footer.main-footer.col-xs-12 {
     box-shadow: 0 1px 2px rgba(0, 0, 0, .14901960784313725);
     margin-bottom: 15px;
     margin-left: 15px;
-    padding: 0 !important;
+    padding: 0 !important
 }
 
 .b-product .inner {}
@@ -1311,7 +1311,7 @@ footer.main-footer.col-xs-12 {
 
 .fav-pro {
     position: absolute;
-    right: 10px;
+    left: 10px;
     top: 10px;
     width: 35px;
     height: 35px;
@@ -1319,7 +1319,7 @@ footer.main-footer.col-xs-12 {
     text-align: center;
     border-radius: 100%;
     color: #c7c7c7;
-    z-index: 1
+    z-index: 1;
 }
 
 .b-product .inner .i-data .title {
@@ -1366,13 +1366,14 @@ footer.main-footer.col-xs-12 {
     font-size: 12px;
     line-height: 28px;
     border: 1px gray solid;
-    height: 30px;
+    height: 30px
 }
 
 .b-product .inner:hover {}
 
 .h-offers {
-    padding: 70px 0
+    padding: 70px 0;
+    background: #fcfcfc;
 }
 
 .b-product .inner .i-data .old {
@@ -4763,5 +4764,5 @@ button.close:hover {
 
 .i-data *:not(.btn) {
     direction: ltr !important;
-    text-align: left;
+    text-align: left
 }
