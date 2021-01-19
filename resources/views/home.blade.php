@@ -286,21 +286,7 @@ $menu = true ;
                                 </a>
                             </div>
                             <div class="c-data">
-                                @if(!Auth::check() || \Auth::user()->canFollow($supplier) && \Auth::user()->id != $supplier->id)
-                                <a href="javascript:void(0)" id="followtoggle_{{$supplier->id}}" onclick="followtoggle({{$supplier->id }})" class="btn ">
-                                    <i id="followicon_{{$supplier->id}}" class="fa fa-plus"></i>
-                                    <span style="color:white">
-                                        Follow
-                                    </span>
-                                </a>
-                                @elseif(Auth::check() && !\Auth::user()->canFollow($supplier) && \Auth::user()->id != $supplier->id)
-                                <a href="javascript:void(0)" id="followtoggle_{{$supplier->id}}" onclick="followtoggle({{$supplier->id }})" class="btn following">
-                                    <i id="followicon_{{$supplier->id}}" class="fa fa-check"></i>
-                                    <span style="color:white">
-                                        following
-                                    </span>
-                                </a>
-                                @endif
+                                
                                 <h3>
                                     <a href="{{url('supplier/'.$supplier->id)}}" class="title">{{$supplier->name}}</a>
                                 </h3>
@@ -319,6 +305,21 @@ $menu = true ;
                                         @php $rating--; @endphp
                                         @endforeach
                                 </p>
+                                @if(!Auth::check() || \Auth::user()->canFollow($supplier) && \Auth::user()->id != $supplier->id)
+                                <a href="javascript:void(0)" id="followtoggle_{{$supplier->id}}" onclick="followtoggle({{$supplier->id }})" class="btn ">
+                                    <i id="followicon_{{$supplier->id}}" class="fa fa-plus"></i>
+                                    <span style="color:white">
+                                        Follow
+                                    </span>
+                                </a>
+                                @elseif(Auth::check() && !\Auth::user()->canFollow($supplier) && \Auth::user()->id != $supplier->id)
+                                <a href="javascript:void(0)" id="followtoggle_{{$supplier->id}}" onclick="followtoggle({{$supplier->id }})" class="btn following">
+                                    <i id="followicon_{{$supplier->id}}" class="fa fa-check"></i>
+                                    <span style="color:white">
+                                        following
+                                    </span>
+                                </a>
+                                @endif
                             </div>
                         </div>
                     </div>
