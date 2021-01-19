@@ -1319,7 +1319,7 @@ footer.main-footer.col-xs-12 {
     text-align: center;
     border-radius: 100%;
     color: #c7c7c7;
-    z-index: 1;
+    z-index: 1
 }
 
 .b-product .inner .i-data .title {
@@ -1373,7 +1373,7 @@ footer.main-footer.col-xs-12 {
 
 .h-offers {
     padding: 70px 0;
-    background: #fcfcfc;
+    background: #fcfcfc
 }
 
 .b-product .inner .i-data .old {
@@ -1490,8 +1490,8 @@ footer.main-footer.col-xs-12 {
 }
 
 .services {
-    background-color: #fcfcfc;
-    padding: 70px 0
+    /* background-color:#fcfcfc; */
+    padding: 70px 0;
 }
 
 .s-block {
