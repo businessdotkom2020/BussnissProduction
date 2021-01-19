@@ -700,3 +700,60 @@ button.slick-next.slick-arrow:before {
 .slick-arrow:hover:before {
     color: #fff
 }
+
+.slick-slider * {
+    direction: rtl;
+}
+
+#supplier_slider .cardo .c-inner {
+    display: flex;
+    align-items: center;
+    direction: ltr;
+}
+
+#supplier_slider .cardo .c-inner .c-img {
+    width: 100px;
+    height: 100px;
+    padding: 10px;
+    margin: 0;
+    margin-right: 15px;
+}
+
+#supplier_slider .cardo .c-inner .c-data {
+    text-align: left;
+}
+
+#supplier_slider .cardo .c-inner .c-data a span {
+    color: #222 !important;
+}
+
+#supplier_slider .cardo .c-inner .c-data a.btn:hover {
+    background: var(--main-color) !important;
+}
+
+#supplier_slider .cardo .c-inner .c-data a.btn:hover span {
+    color: #fff !important;
+}
+
+#supplier_slider .cardo .c-inner .c-img img {
+    border-radius: 50%;
+}
+
+#supplier_slider .cardo .c-inner .c-data h3 a {
+    font-size: 16px;
+}
+
+#supplier_slider .cardo .c-inner .c-data h3 {
+    margin-top: 0;
+    margin-bottom: 5px;
+}
+
+#supplier_slider .cardo .c-inner .c-data p {
+    margin-bottom: 5px;
+}
+
+#supplier_slider .cardo .c-inner .c-data .btn {
+    height: 25px;
+    line-height: 25px;
+    font-size: 12px;
+}
