@@ -268,6 +268,65 @@ $menu = true ;
             </div>
         </div>
     </div>
+
+    <div class="suppliers col-xs-12">
+        <div class="container">
+            <div class="g-head col-xs-12">
+                <h3>@lang('general.suppliers')</h3>
+                <a href="{{url('suppliers')}}" class="more">@lang('general.view_all')</a>
+            </div>
+            <div class="g-body col-xs-12">
+               <div id="supplier_slider">
+                @foreach($home_suppliers as $supplier)
+                    <div class="cardo">
+                        <div class="c-inner">
+                            <div class="c-img">
+                                <a href="{{url('supplier/'.$supplier->id)}}">
+                                    <img src="{{ url('storage/'.$supplier->avatar)}}" alt="">
+                                </a>
+                            </div>
+                            <div class="c-data">
+                                @if(!Auth::check() || \Auth::user()->canFollow($supplier) && \Auth::user()->id != $supplier->id)
+                                <a href="javascript:void(0)" id="followtoggle_{{$supplier->id}}" onclick="followtoggle({{$supplier->id }})" class="btn ">
+                                    <i id="followicon_{{$supplier->id}}" class="fa fa-plus"></i>
+                                    <span style="color:white">
+                                        Follow
+                                    </span>
+                                </a>
+                                @elseif(Auth::check() && !\Auth::user()->canFollow($supplier) && \Auth::user()->id != $supplier->id)
+                                <a href="javascript:void(0)" id="followtoggle_{{$supplier->id}}" onclick="followtoggle({{$supplier->id }})" class="btn following">
+                                    <i id="followicon_{{$supplier->id}}" class="fa fa-check"></i>
+                                    <span style="color:white">
+                                        following
+                                    </span>
+                                </a>
+                                @endif
+                                <h3>
+                                    <a href="{{url('supplier/'.$supplier->id)}}" class="title">{{$supplier->name}}</a>
+                                </h3>
+                                <p>
+                                    @php $rating = $supplier->average_rating ; @endphp
+                                    @foreach(range(1,5) as $i)
+                                    @if($rating >0)
+                                    @if($rating > 0.5)
+                                    <i class="fa fa-star active"></i>
+                                    @elseif($rating < 0.5 && $rating> 0)
+                                        <i class="fas fa-star-half"></i>
+                                        @endif
+                                        @else
+                                        <i class="fa fa-star"></i>
+                                        @endif
+                                        @php $rating--; @endphp
+                                        @endforeach
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    @endforeach
+                    </div>
+            </div>
+        </div>
+    </div>
     
     <div class="h-offers col-xs-12">
         <div class="container">
@@ -342,80 +401,7 @@ $menu = true ;
         </div>
     </div>
    
-    <div class="suppliers col-xs-12">
-        <div class="container">
-            <div class="g-head col-xs-12">
-                <h3>@lang('general.suppliers')</h3>
-                <a href="{{url('suppliers')}}" class="more">@lang('general.view_all')</a>
-            </div>
-            <div class="g-body col-xs-12">
-                @foreach($home_suppliers as $supplier)
-                <div class="cardo col-md-2 col-sm-6 col-xs-12">
-                    <div class="c-inner">
-                        <div class="c-img">
-                            <a href="{{url('supplier/'.$supplier->id)}}">
-                                <img src="{{ url('storage/'.$supplier->avatar)}}" alt="">
-                            </a>
-                        </div>
-                        <div class="c-data">
-                            @if(!Auth::check() || \Auth::user()->canFollow($supplier) && \Auth::user()->id != $supplier->id)
-                            <a href="javascript:void(0)" id="followtoggle_{{$supplier->id}}" onclick="followtoggle({{$supplier->id }})" class="btn ">
-                                <i id="followicon_{{$supplier->id}}" class="fa fa-plus"></i>
-                                <span style="color:white">
-                                    Follow
-                                </span>
-                            </a>
-
-                            @elseif(Auth::check() && !\Auth::user()->canFollow($supplier) && \Auth::user()->id != $supplier->id)
-                            <a href="javascript:void(0)" id="followtoggle_{{$supplier->id}}" onclick="followtoggle({{$supplier->id }})" class="btn following">
-                                <i id="followicon_{{$supplier->id}}" class="fa fa-check"></i>
-                                <span style="color:white">
-                                    following
-                                </span>
-                            </a>
-
-
-                            @endif
-
-
-
-                            <h3>
-                                <a href="{{url('supplier/'.$supplier->id)}}" class="title">{{$supplier->name}}</a>
-                            </h3>
-
-                            <p>
-                                @php $rating = $supplier->average_rating ; @endphp
-                                @foreach(range(1,5) as $i)
-                                @if($rating >0)
-                                @if($rating > 0.5)
-                                <i class="fa fa-star active"></i>
-                                @elseif($rating < 0.5 && $rating> 0)
-                                    <i class="fas fa-star-half"></i>
-
-
-                                    @endif
-                                    @else
-                                    <i class="fa fa-star"></i>
-
-                                    @endif
-                                    @php $rating--; @endphp
-
-                                    @endforeach
-
-                            </p>
-                        </div>
-                    </div>
-                </div>
-                @endforeach
-
-
-
-
-
-
-            </div>
-        </div>
-    </div>
+    
 
     <div class="services col-xs-12">
         <div class="container">
@@ -644,6 +630,33 @@ $('#suggestion-slider').slick({
         ]
 });
 
+
+$('#supplier_slider').slick({
+		rows: 2,
+		dots: false,
+        arrows: true,
+        rtl: true,
+		infinite: true,
+		speed: 300,
+		slidesToShow: 6,
+        slidesToScroll: 6,
+        responsive: [
+            {
+                breakpoint: 768,
+                settings: {
+                    slidesToShow: 2,
+                    slidesToScroll: 2,
+                }
+            },
+            {
+                breakpoint: 1200,
+                settings: {
+                    slidesToShow: 4,
+                    slidesToScroll: 4,
+                }
+            }
+        ]
+});
 
 
 
