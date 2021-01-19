@@ -278,6 +278,7 @@ $menu = true ;
             <div class="g-body col-xs-12">
                <div id="supplier_slider">
                 @foreach($home_suppliers as $supplier)
+                    <div class="slide-item">
                     <div class="cardo">
                         <div class="c-inner">
                             <div class="c-img">
@@ -322,6 +323,7 @@ $menu = true ;
                                 @endif
                             </div>
                         </div>
+                    </div>
                     </div>
                     @endforeach
                     </div>
