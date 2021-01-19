@@ -761,3 +761,8 @@ button.slick-next.slick-arrow:before {
     line-height: 25px;
     font-size: 12px
 }
+
+main.main-content .col-md-2.col-xs-12.padding {
+    padding-left: 15px;
+    padding-right: 15px;
+}
