@@ -678,12 +678,24 @@ div#suggestion-slider * {
 
 #slick1 button.slick-prev.slick-arrow:before,
 #suggestion-slider button.slick-prev.slick-arrow:before {
-    content: '>';
+    content: '\f053';
+    display: inline-block;
+    font: normal normal normal 14px/1 FontAwesome;
+    font-size: inherit;
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
 }
 
 #slick1 button.slick-next.slick-arrow:before,
 #suggestion-slider button.slick-next.slick-arrow:before {
-    content: '<';
+    content: '\f054';
+    display: inline-block;
+    font: normal normal normal 14px/1 FontAwesome;
+    font-size: inherit;
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
 }
 
 #slick1 .slick-arrow:hover,
