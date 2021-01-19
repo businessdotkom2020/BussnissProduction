@@ -606,7 +606,7 @@
     font-size: 16px;
     color: #333;
     transition: all .3s;
-    display: inline-block;
+    display: inline-block
 }
 
 .b-product:hover .inner .block-price .new-price {
@@ -626,7 +626,7 @@
     color: #dc8281;
     font-size: 12px;
     transition: all .3s;
-    display: inline-block;
+    display: inline-block
 }
 
 .n-left {
@@ -638,72 +638,65 @@ div#suggestion-slider * {
     direction: rtl
 }
 
-#slick1 button.slick-next.slick-arrow,
-#suggestion-slider button.slick-next.slick-arrow {
+button.slick-next.slick-arrow {
     position: absolute;
     bottom: -40px;
     right: calc(50% - 70px);
-    transform: translateX(-50%);
+    transform: translateX(-50%)
 }
 
-#slick1 button.slick-prev.slick-arrow,
-#suggestion-slider button.slick-prev.slick-arrow {
+button.slick-prev.slick-arrow {
     position: absolute;
     bottom: -40px;
     right: calc(50% - 20px);
-    transform: translateX(-50%);
+    transform: translateX(-50%)
 }
 
-#slick1 .slick-arrow,
-#suggestion-slider .slick-arrow {
+slick-arrow,
+.slick-arrow {
     background: #fff;
     border: 1px solid #f6f6f6;
     width: 40px;
     height: 40px;
     color: transparent;
     border-radius: 50%;
-    outline: none;
+    outline: none
 }
 
-#slick1 .slick-arrow:before,
-#suggestion-slider .slick-arrow:before {
+.slick-arrow:before {
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
     z-index: 99;
     color: #333;
-    font-size: 18px;
+    font-size: 18px
 }
 
-#slick1 button.slick-prev.slick-arrow:before,
-#suggestion-slider button.slick-prev.slick-arrow:before {
+button.slick-prev.slick-arrow:before {
     content: '\f053';
     display: inline-block;
     font: normal normal normal 14px/1 FontAwesome;
     font-size: inherit;
     text-rendering: auto;
     -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
+    -moz-osx-font-smoothing: grayscale
 }
 
-#slick1 button.slick-next.slick-arrow:before,
-#suggestion-slider button.slick-next.slick-arrow:before {
+button.slick-next.slick-arrow:before {
     content: '\f054';
     display: inline-block;
     font: normal normal normal 14px/1 FontAwesome;
     font-size: inherit;
     text-rendering: auto;
     -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
+    -moz-osx-font-smoothing: grayscale
 }
 
-#slick1 .slick-arrow:hover,
-#suggestion-slider .slick-arrow:hover {
-    background: var(--main-color);
+.slick-arrow:hover {
+    background: var(--main-color)
 }
 
-#slick1 .slick-arrow:hover:before,
-#suggestion-slider .slick-arrow:hover:before {
-    color: #fff;
+.slick-arrow:hover:before {
+    color: #fff
 }

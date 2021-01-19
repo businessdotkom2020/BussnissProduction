@@ -638,8 +638,8 @@ $('#supplier_slider').slick({
         rtl: true,
 		infinite: true,
 		speed: 300,
-		slidesToShow: 6,
-        slidesToScroll: 6,
+		slidesToShow: 4,
+        slidesToScroll: 4,
         responsive: [
             {
                 breakpoint: 768,
@@ -651,8 +651,8 @@ $('#supplier_slider').slick({
             {
                 breakpoint: 1200,
                 settings: {
-                    slidesToShow: 4,
-                    slidesToScroll: 4,
+                    slidesToShow: 3,
+                    slidesToScroll: 3,
                 }
             }
         ]
