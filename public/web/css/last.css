@@ -752,6 +752,10 @@ button.slick-next.slick-arrow:before {
     margin-bottom: 5px;
 }
 
+.slick-slider .block.b-product {
+    width: auto !important;
+}
+
 #supplier_slider .cardo .c-inner .c-data .btn {
     height: 25px;
     line-height: 25px;
