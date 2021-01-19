@@ -279,54 +279,54 @@ $menu = true ;
                <div id="supplier_slider">
                 @foreach($home_suppliers as $supplier)
                     <div class="slide-item">
-                    <div class="cardo">
-                        <div class="c-inner">
-                            <div class="c-img">
-                                <a href="{{url('supplier/'.$supplier->id)}}">
-                                    <img src="{{ url('storage/'.$supplier->avatar)}}" alt="">
-                                </a>
-                            </div>
-                            <div class="c-data">
-                                
-                                <h3>
-                                    <a href="{{url('supplier/'.$supplier->id)}}" class="title">{{$supplier->name}}</a>
-                                </h3>
-                                <p>
-                                    @php $rating = $supplier->average_rating ; @endphp
-                                    @foreach(range(1,5) as $i)
-                                    @if($rating >0)
-                                    @if($rating > 0.5)
-                                    <i class="fa fa-star active"></i>
-                                    @elseif($rating < 0.5 && $rating> 0)
-                                        <i class="fas fa-star-half"></i>
-                                        @endif
-                                        @else
-                                        <i class="fa fa-star"></i>
-                                        @endif
-                                        @php $rating--; @endphp
-                                        @endforeach
-                                </p>
-                                @if(!Auth::check() || \Auth::user()->canFollow($supplier) && \Auth::user()->id != $supplier->id)
-                                <a href="javascript:void(0)" id="followtoggle_{{$supplier->id}}" onclick="followtoggle({{$supplier->id }})" class="btn ">
-                                    <i id="followicon_{{$supplier->id}}" class="fa fa-plus"></i>
-                                    <span style="color:white">
-                                        Follow
-                                    </span>
-                                </a>
-                                @elseif(Auth::check() && !\Auth::user()->canFollow($supplier) && \Auth::user()->id != $supplier->id)
-                                <a href="javascript:void(0)" id="followtoggle_{{$supplier->id}}" onclick="followtoggle({{$supplier->id }})" class="btn following">
-                                    <i id="followicon_{{$supplier->id}}" class="fa fa-check"></i>
-                                    <span style="color:white">
-                                        following
-                                    </span>
-                                </a>
-                                @endif
+                        <div class="cardo">
+                            <div class="c-inner">
+                                <div class="c-img">
+                                    <a href="{{url('supplier/'.$supplier->id)}}">
+                                        <img src="{{ url('storage/'.$supplier->avatar)}}" alt="">
+                                    </a>
+                                </div>
+                                <div class="c-data">
+                                    
+                                    <h3>
+                                        <a href="{{url('supplier/'.$supplier->id)}}" class="title">{{$supplier->name}}</a>
+                                    </h3>
+                                    <p>
+                                        @php $rating = $supplier->average_rating ; @endphp
+                                        @foreach(range(1,5) as $i)
+                                        @if($rating >0)
+                                        @if($rating > 0.5)
+                                        <i class="fa fa-star active"></i>
+                                        @elseif($rating < 0.5 && $rating> 0)
+                                            <i class="fas fa-star-half"></i>
+                                            @endif
+                                            @else
+                                            <i class="fa fa-star"></i>
+                                            @endif
+                                            @php $rating--; @endphp
+                                            @endforeach
+                                    </p>
+                                    @if(!Auth::check() || \Auth::user()->canFollow($supplier) && \Auth::user()->id != $supplier->id)
+                                    <a href="javascript:void(0)" id="followtoggle_{{$supplier->id}}" onclick="followtoggle({{$supplier->id }})" class="btn ">
+                                        <i id="followicon_{{$supplier->id}}" class="fa fa-plus"></i>
+                                        <span style="color:white">
+                                            Follow
+                                        </span>
+                                    </a>
+                                    @elseif(Auth::check() && !\Auth::user()->canFollow($supplier) && \Auth::user()->id != $supplier->id)
+                                    <a href="javascript:void(0)" id="followtoggle_{{$supplier->id}}" onclick="followtoggle({{$supplier->id }})" class="btn following">
+                                        <i id="followicon_{{$supplier->id}}" class="fa fa-check"></i>
+                                        <span style="color:white">
+                                            following
+                                        </span>
+                                    </a>
+                                    @endif
+                                </div>
                             </div>
                         </div>
                     </div>
-                    </div>
-                    @endforeach
-                    </div>
+                @endforeach
+                </div>
             </div>
         </div>
     </div>
