@@ -669,8 +669,8 @@ $('#h-offers').slick({
         rtl: true,
 		infinite: true,
 		speed: 300,
-		slidesToShow: 6,
-        slidesToScroll: 6,
+		slidesToShow: 5,
+        slidesToScroll: 5,
         responsive: [
             {
                 breakpoint: 768,
