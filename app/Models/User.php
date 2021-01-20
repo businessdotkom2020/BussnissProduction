@@ -61,7 +61,7 @@ class User extends \TCG\Voyager\Models\User
         $isExists = Storage::exists('public/' . $store_background);
 
         if (is_null($store_background) || empty($store_background)  || !$isExists) {
-            $store_background = 'web/images/cover.jpg';
+            $store_background = 'users/cover.jpg';
         } else {
             $store_background = $store_background;
         }
