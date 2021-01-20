@@ -295,8 +295,7 @@ $menu = false ;
 
 
 
-<script  src="https://maps.googleapis.com/maps/api/js?sensor=SET_TO_TRUE_OR_FALSE"> async defer></script>
-{{-- <script src="https://maps.googleapis.com/maps/api/js?key={{ env('GOOGLE_MAPS_API_KEY') }}&libraries=places&callback=initMap" async defer></script> --}}
+ <script src="https://maps.googleapis.com/maps/api/js?key={{ env('GOOGLE_MAPS_API_KEY') }}&libraries=places&callback=initMap" async defer></script>
 <!--<script src="https://maps.googleapis.com/maps/api/js?key={{ env('GOOGLE_MAPS_API_KEY') }}&libraries=places&callback=initialize" async defer></script>-->
 <!--<script src="https://maps.googleapis.com/maps/api/js?key=&callback=initMap" async defer></script>-->
 

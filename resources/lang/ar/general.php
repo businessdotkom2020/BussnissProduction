@@ -126,6 +126,10 @@ return [
     'product_price_list' =>  ' قائمة أسعار المنتج  ',
     'product_condition' =>  ' حالة المنتج',
     'product_attributes' =>  ' سمات المنتج',
-    'latest_requests' =>  'أخر الطلبات',
+
+
+
+    'product_name_en' =>  '(عربي) إسم المنتج ',
+    'product_name_en' =>  '(إنجليزي) إسم المنتج ',
 
 ];
