@@ -12,9 +12,9 @@ use Illuminate\Support\Facades\Storage;
 
 class Product extends Model
 {
-       use Favoritable,Reviewable, CanBeScoped, Translatable;
+    use Favoritable, Reviewable, CanBeScoped, Translatable;
     protected $translatable = ['name', 'description'];
-    protected $appends = ['average_rating','MainCategoryId','supplier_average_rating','DefaultImage'];
+    protected $appends = ['average_rating', 'MainCategoryId', 'supplier_average_rating', 'DefaultImage'];
     protected $fillable = [
         'user_id',
         'category_id',
@@ -38,13 +38,13 @@ class Product extends Model
 
     public function getDefaultImageAttribute()
     {
-        return url('storage/'.$this->image);
+        return url('storage/' . $this->image);
     }
 
     public function getImageAttribute($value)
     {
 
-        $isExists = Storage::exists('public/'.$value);
+        $isExists = Storage::exists('public/' . $value);
         $status_list = array(
 
             '/products/product_image819748.jpg',
@@ -57,7 +57,7 @@ class Product extends Model
         if (is_null($value) || empty($value)  || !$isExists) {
             return $status_list[rand(0, 4)];
         }
-        return $value ;
+        return $value;
     }
 
 
@@ -65,15 +65,18 @@ class Product extends Model
     {
         $images =  json_decode($value);
 
-        if(is_Array($images) && count($images)){
-            foreach($images as $image){
-                $isExists = Storage::exists('public/'.$image);
+        if (is_Array($images) && count($images)) {
+            foreach ($images as $image) {
+                $isExists = Storage::exists('public/' . $image);
 
                 if (is_null($image) || empty($image)  || !$isExists) {
-                    $avalible_images[] = 'products/default.jpg' ;
-                }else{
-                    $avalible_images[] = $image ;
-
+                    $avalible_images[] = 'products/product_image819748.jpg';
+                    $avalible_images[] = 'products/product_image819952.png';
+                    $avalible_images[] = 'products/product_image1017553.png';
+                    $avalible_images[] = 'products/product_image1116640.png';
+                    $avalible_images[] = 'products/product_image1318544.jpg';
+                } else {
+                    $avalible_images[] = $image;
                 }
             }
             $avalible_images = array_unique($avalible_images);
@@ -82,7 +85,6 @@ class Product extends Model
         }
 
         return json_encode(['products/default.jpg']);
-
     }
 
 
@@ -98,52 +100,50 @@ class Product extends Model
 
     public function getMainCategoryIdAttribute()
     {
-        if($category = Category::find($this->id) ){
-            if(!$category->parent_id){
+        if ($category = Category::find($this->id)) {
+            if (!$category->parent_id) {
                 return $category->id;
             }
 
-            if($parent_category = Category::find($category->parent_id) ){
-                  if(!$parent_category->parent_id){
+            if ($parent_category = Category::find($category->parent_id)) {
+                if (!$parent_category->parent_id) {
                     return $parent_category->id;
                 }
 
 
-            if($main_category = Category::find($parent_category->parent_id) ){
+                if ($main_category = Category::find($parent_category->parent_id)) {
                     return $main_category->id;
+                }
             }
-
-
-        }
-
         }
     }
 
     public function owner()
     {
-        return $this->belongsTo(User::class,'user_id');
+        return $this->belongsTo(User::class, 'user_id');
     }
     public function zone()
     {
-        return $this->belongsTo(IndustrialZones::class,'zone_id');
+        return $this->belongsTo(IndustrialZones::class, 'zone_id');
     }
     public function brand()
     {
-        return $this->belongsTo(Brand::class,'brand_id');
+        return $this->belongsTo(Brand::class, 'brand_id');
     }
     public function tag()
     {
-        return $this->belongsTo(Tag::class,'tag_id');
+        return $this->belongsTo(Tag::class, 'tag_id');
     }
 
-	public function category() {
-		return $this->belongsTo('App\Models\Category','category_id');
-	}
+    public function category()
+    {
+        return $this->belongsTo('App\Models\Category', 'category_id');
+    }
     public static function boot()
     {
         parent::boot();
 
-        static::creating(function ($product){
+        static::creating(function ($product) {
             $product->user_id = Request()->user()->id;
         });
     }
@@ -155,7 +155,7 @@ class Product extends Model
 
     public function prices()
     {
-        return $this->hasMany(ProductPrice::class)->select(['id', 'price', 'quantity_from','quantity_to']);
+        return $this->hasMany(ProductPrice::class)->select(['id', 'price', 'quantity_from', 'quantity_to']);
     }
 
     public function options()
@@ -165,7 +165,7 @@ class Product extends Model
 
     public function like($user = null)
     {
-        $user = $user ?:Request()->user();
+        $user = $user ?: Request()->user();
         return $this->likes()->attach($user);
     }
 
@@ -175,15 +175,15 @@ class Product extends Model
         return $this->morphTo(User::class, 'favouriteable');
     }
 
-	public static function categoryIdRelationship($id) {
+    public static function categoryIdRelationship($id)
+    {
 
-		// return
-		// 	self::where('products.id', '=', $id)
-		// 		->select('products.category_id', 'sub_categories.id as sub_category_id', 'main_categories.id as main_category_id')
-		// 			->join('categories', 'products.category_id', '=', 'categories.id')
-		// 				->join('sub_categories', 'categories.sub_category_id', '=', 'sub_categories.id')
-		// 					->join('main_categories', 'sub_categories.main_category_id', '=', 'main_categories.id')
-		// 						->first();
-	}
-
+        // return
+        // 	self::where('products.id', '=', $id)
+        // 		->select('products.category_id', 'sub_categories.id as sub_category_id', 'main_categories.id as main_category_id')
+        // 			->join('categories', 'products.category_id', '=', 'categories.id')
+        // 				->join('sub_categories', 'categories.sub_category_id', '=', 'sub_categories.id')
+        // 					->join('main_categories', 'sub_categories.main_category_id', '=', 'main_categories.id')
+        // 						->first();
+    }
 }
