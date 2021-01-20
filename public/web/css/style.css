@@ -692,7 +692,7 @@ footer.main-footer.col-xs-12 {
     height: 55px;
     line-height: 55px;
     box-shadow: none;
-    padding-right: 230px;
+    padding-right: 230px
 }
 
 .mid-head .search-g .form-group .nice-select {
@@ -1158,7 +1158,7 @@ footer.main-footer.col-xs-12 {
     color: #fff;
     padding: 8px 20px;
     border-radius: 5px;
-    transition: all .3s;
+    transition: all .3s
 }
 
 .g-head a:after {
@@ -1180,7 +1180,8 @@ footer.main-footer.col-xs-12 {
     border-radius: 4px;
     box-shadow: 0 1px 2px rgba(0, 0, 0, .14901960784313725);
     margin-bottom: 15px;
-    margin-left: 15px
+    margin-left: 15px;
+    padding: 0 !important
 }
 
 .b-product .inner {}
@@ -1310,7 +1311,7 @@ footer.main-footer.col-xs-12 {
 
 .fav-pro {
     position: absolute;
-    right: 10px;
+    left: 10px;
     top: 10px;
     width: 35px;
     height: 35px;
@@ -1360,7 +1361,7 @@ footer.main-footer.col-xs-12 {
     width: 100%;
     display: block;
     margin-top: 6px;
-    border-radius: 0;
+    border-radius: 5px;
     padding: 0;
     font-size: 12px;
     line-height: 28px;
@@ -1371,7 +1372,8 @@ footer.main-footer.col-xs-12 {
 .b-product .inner:hover {}
 
 .h-offers {
-    padding: 70px 0
+    padding: 70px 0;
+    background: #fcfcfc
 }
 
 .b-product .inner .i-data .old {
@@ -1488,8 +1490,8 @@ footer.main-footer.col-xs-12 {
 }
 
 .services {
-    background-color: #fcfcfc;
-    padding: 70px 0
+    /* background-color:#fcfcfc; */
+    padding: 70px 0;
 }
 
 .s-block {
@@ -4758,4 +4760,9 @@ button.close:hover {
     display: -webkit-box !important;
     -webkit-line-clamp: 3;
     -webkit-box-orient: vertical
+}
+
+.i-data *:not(.btn) {
+    direction: ltr !important;
+    text-align: left
 }

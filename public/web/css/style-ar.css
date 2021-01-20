@@ -10,6 +10,11 @@
     float: right
 }
 
+.i-data *:not(.btn) {
+    direction: rtl !important;
+    text-align: right;
+}
+
 .top-head .tp-extra {
     float: left
 }
@@ -736,8 +741,8 @@
 }
 
 .fav-pro {
-    left: 10px;
-    right: auto
+    left: a;
+    right: 10px;
 }
 
 .pagination-i li:first-child,
@@ -935,4 +940,17 @@
 .dashb .block .inner h3 {
     font-family: tajawal, sans-serif;
     font-weight: 600
+}
+
+#supplier_slider .cardo .c-inner {
+    direction: rtl;
+}
+
+#supplier_slider .cardo .c-inner .c-data {
+    text-align: right;
+}
+
+#supplier_slider .cardo .c-inner .c-img {
+    margin-right: 0;
+    margin-left: 15px;
 }

@@ -268,6 +268,68 @@ $menu = true ;
             </div>
         </div>
     </div>
+
+    <div class="suppliers col-xs-12">
+        <div class="container">
+            <div class="g-head col-xs-12">
+                <h3>@lang('general.suppliers')</h3>
+                <a href="{{url('suppliers')}}" class="more">@lang('general.view_all')</a>
+            </div>
+            <div class="g-body col-xs-12">
+               <div id="supplier_slider">
+                @foreach($home_suppliers as $supplier)
+                    <div class="slide-item">
+                        <div class="cardo">
+                            <div class="c-inner">
+                                <div class="c-img">
+                                    <a href="{{url('supplier/'.$supplier->id)}}">
+                                        <img src="{{ url('storage/'.$supplier->avatar)}}" alt="">
+                                    </a>
+                                </div>
+                                <div class="c-data">
+                                    
+                                    <h3>
+                                        <a href="{{url('supplier/'.$supplier->id)}}" class="title">{{$supplier->name}}</a>
+                                    </h3>
+                                    <p>
+                                        @php $rating = $supplier->average_rating ; @endphp
+                                        @foreach(range(1,5) as $i)
+                                        @if($rating >0)
+                                        @if($rating > 0.5)
+                                        <i class="fa fa-star active"></i>
+                                        @elseif($rating < 0.5 && $rating> 0)
+                                            <i class="fas fa-star-half"></i>
+                                            @endif
+                                            @else
+                                            <i class="fa fa-star"></i>
+                                            @endif
+                                            @php $rating--; @endphp
+                                            @endforeach
+                                    </p>
+                                    @if(!Auth::check() || \Auth::user()->canFollow($supplier) && \Auth::user()->id != $supplier->id)
+                                    <a href="javascript:void(0)" id="followtoggle_{{$supplier->id}}" onclick="followtoggle({{$supplier->id }})" class="btn ">
+                                        <i id="followicon_{{$supplier->id}}" class="fa fa-plus"></i>
+                                        <span style="color:white">
+                                            Follow
+                                        </span>
+                                    </a>
+                                    @elseif(Auth::check() && !\Auth::user()->canFollow($supplier) && \Auth::user()->id != $supplier->id)
+                                    <a href="javascript:void(0)" id="followtoggle_{{$supplier->id}}" onclick="followtoggle({{$supplier->id }})" class="btn following">
+                                        <i id="followicon_{{$supplier->id}}" class="fa fa-check"></i>
+                                        <span style="color:white">
+                                            following
+                                        </span>
+                                    </a>
+                                    @endif
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                @endforeach
+                </div>
+            </div>
+        </div>
+    </div>
     
     <div class="h-offers col-xs-12">
         <div class="container">
@@ -277,152 +339,74 @@ $menu = true ;
             </div>
             <div class="g-body col-xs-12">
 
-                @foreach ($common_products as $product)
-                <div class="block b-product col-md-2 col-sm-6 col-xs-12">
-                    <div class="inner">
-                        <div class="i-img">
-                            @if($product->product_condition == 'new')
-                            <div class="ribbon">
-                                <span>@lang('general.new')</span>
-                            </div>
-                            @endif
-                            <div class="offer-badge">
-                                <span>{{number_format((($product->sale_price/$product->price) * 100) ,2) }} %</span>
-                            </div>
+                <div id="h-offers">
+                    @foreach ($common_products as $product)
+                    <div class="block b-product">
+                        <div class="inner">
+                            <div class="i-img">
+                                @if($product->product_condition == 'new')
+                                <div class="ribbon">
+                                    <span>@lang('general.new')</span>
+                                </div>
+                                @endif
+                                <div class="prod-extra" style="position: inherit">
+                                    <a href="javascript:void(0)" id="fav-{{$product->id}}" title="add to favourite" data-placement="top" class="fav-{{$product->id}} {{$product->isFavorited() ? 'fav-active' : null  }} fav-pro " onclick="favtoggle({{$product->id }},{{Auth::user() ? Auth::user()->id : null}})">
+                                        <i class="fa fa-heart"></i>
+                                    </a>
+                                </div>
+                                <a href="{{url('product/'.$product->id)}}" class="img-hold">
+                                    <img src="{{url('storage/'.$product->image)}}" alt="">
+                                    <img src="{{ json_decode($product->images ) ? url('storage/'.(json_decode($product->images))[0]) : "https://i.imgur.com/mFI2maG.jpg" }}" class="sec-img">
 
-                            <div class="prod-extra" style="position: inherit">
-
-                                <a href="javascript:void(0)" id="fav-{{$product->id}}" title="add to favourite" data-placement="top" class="fav-{{$product->id}} {{$product->isFavorited() ? 'fav-active' : null  }} fav-pro " onclick="favtoggle({{$product->id }},{{Auth::user() ? Auth::user()->id : null}})">
-                                    <i class="fa fa-heart"></i>
                                 </a>
                             </div>
+                            <div class="i-data">
+                                <a href="{{url('product/'.$product->id)}}" class="title">{{$product->getTranslatedAttribute('name',\App::getLocale())}}</a>
+                                <!-- <p>{{ Str::limit($product->getTranslatedAttribute('description',\App::getLocale()),50 )}}</p> -->
+                                <div class="cardo" style="flex-grow: 1;padding:0px">
+                                    <div class="c-inner" style="text-align: right;">
+                                        <div class="c-data">
+                                            <p>
+                                                @php $rating = $product->average_rating ; @endphp
+                                                @foreach(range(1,5) as $i)
+                                                @if($rating >0)
+                                                @if($rating > 0.5)
+                                                <i class="fa fa-star active"></i>
+                                                @elseif($rating < 0.5 && $rating> 0)
+                                                    <i class="fas fa-star-half"></i>
+                                                    @endif
+                                                    @else
+                                                    <i class="fa fa-star"></i>
+                                                    @endif
+                                                    @php $rating--; @endphp
 
+                                                    @endforeach
 
-
-                            <a href="{{url('product/'.$product->id)}}" class="img-hold">
-                                <img src="{{url('storage/'.$product->image)}}" alt="">
-                                <img src="{{ json_decode($product->images ) ? url('storage/'.(json_decode($product->images))[0]) : "https://i.imgur.com/mFI2maG.jpg" }}" class="sec-img">
-
-                            </a>
-                        </div>
-                        <div class="i-data">
-
-                            <a href="{{url('product/'.$product->id)}}" class="title">{{$product->getTranslatedAttribute('name',\App::getLocale())}}</a>
-
-                            <!-- <p>{{ Str::limit($product->getTranslatedAttribute('description',\App::getLocale()),50 )}}</p> -->
-
-                            <div class="cardo" style="flex-grow: 1;padding:0px">
-                                <div class="c-inner" style="text-align: right;">
-                                    <div class="c-data">
-                                        <p style="text-align: center;">
-                                            @php $rating = $product->average_rating ; @endphp
-                                            @foreach(range(1,5) as $i)
-                                            @if($rating >0)
-                                            @if($rating > 0.5)
-                                            <i class="fa fa-star active"></i>
-                                            @elseif($rating < 0.5 && $rating> 0)
-                                                <i class="fas fa-star-half"></i>
-                                                @endif
-                                                @else
-                                                <i class="fa fa-star"></i>
-                                                @endif
-                                                @php $rating--; @endphp
-
-                                                @endforeach
-
-                                        </p>
+                                            </p>
+                                        </div>
                                     </div>
                                 </div>
+                                <div class="block-price">
+                                    <span class="new-price">{{$product->sale_price ? $product->sale_price : $product->price}}$</span>  
+                                    <!-- Price before offer --> 
+                                    <span class="old-price">120$</span>
+                                    @if($product->sale_price)
+                                    <span class="offer-p">{{number_format( (($product->sale_price/$product->price) * 100) ,2 ) }} % تخفيض</span>
+                                    @endif
+                                </div>
+                                <a class="btn" href="#" data-toggle="modal" data-target="#contact_{{$product->user_id}}" target="_blank">@lang('general.contact_supplier')</a>
                             </div>
 
-                            <span>{{$product->sale_price ? $product->sale_price : $product->price}}$</span>
-
-
-                            <a class="btn" href="#" data-toggle="modal" data-target="#contact_{{$product->user_id}}" target="_blank">@lang('general.contact_supplier')</a>
                         </div>
-
                     </div>
+                    @endforeach
                 </div>
-                @endforeach
 
             </div>
         </div>
     </div>
    
-    <div class="suppliers col-xs-12">
-        <div class="container">
-            <div class="g-head col-xs-12">
-                <h3>@lang('general.suppliers')</h3>
-                <a href="{{url('suppliers')}}" class="more">@lang('general.view_all')</a>
-            </div>
-            <div class="g-body col-xs-12">
-                @foreach($home_suppliers as $supplier)
-                <div class="cardo col-md-2 col-sm-6 col-xs-12">
-                    <div class="c-inner">
-                        <div class="c-img">
-                            <a href="{{url('supplier/'.$supplier->id)}}">
-                                <img src="{{ url('storage/'.$supplier->avatar)}}" alt="">
-                            </a>
-                        </div>
-                        <div class="c-data">
-                            @if(!Auth::check() || \Auth::user()->canFollow($supplier) && \Auth::user()->id != $supplier->id)
-                            <a href="javascript:void(0)" id="followtoggle_{{$supplier->id}}" onclick="followtoggle({{$supplier->id }})" class="btn ">
-                                <i id="followicon_{{$supplier->id}}" class="fa fa-plus"></i>
-                                <span style="color:white">
-                                    Follow
-                                </span>
-                            </a>
-
-                            @elseif(Auth::check() && !\Auth::user()->canFollow($supplier) && \Auth::user()->id != $supplier->id)
-                            <a href="javascript:void(0)" id="followtoggle_{{$supplier->id}}" onclick="followtoggle({{$supplier->id }})" class="btn following">
-                                <i id="followicon_{{$supplier->id}}" class="fa fa-check"></i>
-                                <span style="color:white">
-                                    following
-                                </span>
-                            </a>
-
-
-                            @endif
-
-
-
-                            <h3>
-                                <a href="{{url('supplier/'.$supplier->id)}}" class="title">{{$supplier->name}}</a>
-                            </h3>
-
-                            <p>
-                                @php $rating = $supplier->average_rating ; @endphp
-                                @foreach(range(1,5) as $i)
-                                @if($rating >0)
-                                @if($rating > 0.5)
-                                <i class="fa fa-star active"></i>
-                                @elseif($rating < 0.5 && $rating> 0)
-                                    <i class="fas fa-star-half"></i>
-
-
-                                    @endif
-                                    @else
-                                    <i class="fa fa-star"></i>
-
-                                    @endif
-                                    @php $rating--; @endphp
-
-                                    @endforeach
-
-                            </p>
-                        </div>
-                    </div>
-                </div>
-                @endforeach
-
-
-
-
-
-
-            </div>
-        </div>
-    </div>
+    
 
     <div class="services col-xs-12">
         <div class="container">
@@ -652,6 +636,67 @@ $('#suggestion-slider').slick({
 });
 
 
+$('#supplier_slider').slick({
+		rows: 2,
+		dots: false,
+        arrows: true,
+        rtl: true,
+		infinite: true,
+		speed: 300,
+		slidesToShow: 4,
+        slidesToScroll: 4,
+        responsive: [
+            {
+                breakpoint: 768,
+                settings: {
+                    slidesToShow: 2,
+                    slidesToScroll: 2,
+                }
+            },
+            {
+                breakpoint: 1200,
+                settings: {
+                    slidesToShow: 3,
+                    slidesToScroll: 3,
+                }
+            }
+        ]
+});
+
+
+$('#h-offers').slick({
+		rows: 1,
+		dots: false,
+        arrows: true,
+        rtl: true,
+		infinite: true,
+		speed: 300,
+		slidesToShow: 5,
+        slidesToScroll: 5,
+        responsive: [
+            {
+                breakpoint: 768,
+                settings: {
+                    slidesToShow: 1,
+                    slidesToScroll: 1,
+                }
+            },
+            {
+                breakpoint: 991,
+                settings: {
+                    slidesToShow: 2,
+                    slidesToScroll: 2,
+                }
+            },
+            {
+                breakpoint: 1200,
+                settings: {
+                    slidesToShow: 4,
+                    slidesToScroll: 4,
+                }
+            }
+        ]
+});
 
 
     function favtoggle(product_id, user_id) {

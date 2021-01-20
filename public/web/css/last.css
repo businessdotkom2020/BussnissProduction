@@ -606,7 +606,7 @@
     font-size: 16px;
     color: #333;
     transition: all .3s;
-    display: inline-block;
+    display: inline-block
 }
 
 .b-product:hover .inner .block-price .new-price {
@@ -626,7 +626,7 @@
     color: #dc8281;
     font-size: 12px;
     transition: all .3s;
-    display: inline-block;
+    display: inline-block
 }
 
 .n-left {
@@ -636,4 +636,133 @@
 
 div#suggestion-slider * {
     direction: rtl
+}
+
+button.slick-next.slick-arrow {
+    position: absolute;
+    bottom: -40px;
+    right: calc(50% - 70px);
+    transform: translateX(-50%)
+}
+
+button.slick-prev.slick-arrow {
+    position: absolute;
+    bottom: -40px;
+    right: calc(50% - 20px);
+    transform: translateX(-50%)
+}
+
+slick-arrow,
+.slick-arrow {
+    background: #fff;
+    border: 1px solid #f6f6f6;
+    width: 40px;
+    height: 40px;
+    color: transparent;
+    border-radius: 50%;
+    outline: none
+}
+
+.slick-arrow:before {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 99;
+    color: #333;
+    font-size: 18px
+}
+
+button.slick-prev.slick-arrow:before {
+    content: '\f053';
+    display: inline-block;
+    font: normal normal normal 14px/1 FontAwesome;
+    font-size: inherit;
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale
+}
+
+button.slick-next.slick-arrow:before {
+    content: '\f054';
+    display: inline-block;
+    font: normal normal normal 14px/1 FontAwesome;
+    font-size: inherit;
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale
+}
+
+.slick-arrow:hover {
+    background: var(--main-color)
+}
+
+.slick-arrow:hover:before {
+    color: #fff
+}
+
+.slick-slider * {
+    direction: rtl
+}
+
+#supplier_slider .cardo .c-inner {
+    display: flex;
+    align-items: center;
+    direction: ltr
+}
+
+#supplier_slider .cardo .c-inner .c-img {
+    width: 100px;
+    height: 100px;
+    padding: 10px;
+    margin: 0;
+    margin-right: 15px
+}
+
+#supplier_slider .cardo .c-inner .c-data {
+    text-align: left
+}
+
+#supplier_slider .cardo .c-inner .c-data a span {
+    color: #222 !important
+}
+
+#supplier_slider .cardo .c-inner .c-data a.btn:hover {
+    background: var(--main-color) !important
+}
+
+#supplier_slider .cardo .c-inner .c-data a.btn:hover span {
+    color: #fff !important
+}
+
+#supplier_slider .cardo .c-inner .c-img img {
+    border-radius: 50%
+}
+
+#supplier_slider .cardo .c-inner .c-data h3 a {
+    font-size: 16px
+}
+
+#supplier_slider .cardo .c-inner .c-data h3 {
+    margin-top: 0;
+    margin-bottom: 5px
+}
+
+#supplier_slider .cardo .c-inner .c-data p {
+    margin-bottom: 5px
+}
+
+.slick-slider .block.b-product {
+    width: calc(100% - 15px) !important;
+}
+
+#supplier_slider .cardo .c-inner .c-data .btn {
+    height: 25px;
+    line-height: 25px;
+    font-size: 12px
+}
+
+main.main-content .col-md-2.col-xs-12.padding {
+    padding-left: 15px;
+    padding-right: 15px;
 }
