@@ -9,12 +9,12 @@ $menu = false ;
 <div class="overlay-s"></div>
 <div class="jumpo col-xs-12" style="background-image: url({{url('/web/images/cover.jpg')}} )">
     <div class="container">
-        <h3>Products</h3>
+        <h3>@lang('general.products')</h3>
         <ul>
             <li>
                 <a href="{{url('/')}}">الرئيسية</a>
             </li>
-            <li>Products</li>
+            <li>@lang('general.products')</li>
         </ul>
     </div>
 </div>
