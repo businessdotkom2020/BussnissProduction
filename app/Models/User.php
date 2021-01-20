@@ -10,7 +10,7 @@ use Illuminate\Support\Facades\Storage;
 
 class User extends \TCG\Voyager\Models\User
 {
-	use Notifiable,Reviewable, HasApiTokens ;
+    use Notifiable, Reviewable, HasApiTokens;
 
     /**
      * The attributes that are mass assignable.
@@ -27,52 +27,46 @@ class User extends \TCG\Voyager\Models\User
 
 
     protected $fillable = [
-        'name', 'email', 'password','type','mobile','country_id','social_auth_type','social_id'
+        'name', 'email', 'password', 'type', 'mobile', 'country_id', 'social_auth_type', 'social_id'
     ];
-    protected $appends = ['average_rating','followers_count','is_followed'];
+    protected $appends = ['average_rating', 'followers_count', 'is_followed'];
 
 
     public function getAvatarAttribute($image)
     {
-        if(Storage::disk('public')->exists($image)){
+        if (Storage::disk('public')->exists($image)) {
             return $image;
-        }elseif(!Storage::disk('public')->exists($image) && $this->type == 'supplier'){
-            return 'users/default_company.png' ;
+        } elseif (!Storage::disk('public')->exists($image) && $this->type == 'supplier') {
+            return 'users/default_company.png';
         }
-        return 'users/default_user.png' ;
+        return 'users/default_user.png';
 
         return url('assets/images/users/user-3.jpg');
 
-                $isExists = Storage::exists('public/'.$image);
+        $isExists = Storage::exists('public/' . $image);
 
-                if (is_null($image) || empty($image)  || !$isExists) {
-                    $image = 'users/default.png' ;
-                }else{
-                    $image = $image ;
-
-                }
+        if (is_null($image) || empty($image)  || !$isExists) {
+            $image = 'users/default.png';
+        } else {
+            $image = $image;
+        }
 
         return $image;
-
     }
 
 
     public function getStoreBackgroundAttribute($store_background)
     {
 
+        $isExists = Storage::exists('public/' . $store_background);
 
-
-                $isExists = Storage::exists('public/'.$store_background);
-
-                if (is_null($store_background) || empty($store_background)  || !$isExists) {
-                    $store_background = 'web/images/cover.jpg' ;
-                }else{
-                    $store_background = $store_background ;
-
-                }
+        if (is_null($store_background) || empty($store_background)  || !$isExists) {
+            $store_background = 'web/images/cover.jpg';
+        } else {
+            $store_background = $store_background;
+        }
 
         return $store_background;
-
     }
 
 
@@ -82,33 +76,29 @@ class User extends \TCG\Voyager\Models\User
     }
     public function getIsFollowedAttribute()
     {
-       if($user = auth()->user()){
-          	 $is_following = \App\Models\Follow::where([
-                  ['user_id',  auth()->user()->id],
-                  ['follower_id',$this->id]
-        ])->first();
+        if ($user = auth()->user()) {
+            $is_following = \App\Models\Follow::where([
+                ['user_id',  auth()->user()->id],
+                ['follower_id', $this->id]
+            ])->first();
 
-      if($is_following){
-        return true;
-      }
-      else{
-              return false;
-      }
-    }
+            if ($is_following) {
+                return true;
+            } else {
+                return false;
+            }
+        } elseif (auth()->guard('api')->user() && $user = auth()->guard('api')->user()->id) {
+            $is_following = \App\Models\Follow::where([
+                ['user_id', auth()->guard('api')->user()->id],
+                ['follower_id', $this->id]
+            ])->first();
 
-       elseif(auth()->guard('api')->user() && $user = auth()->guard('api')->user()->id){
-          	 $is_following = \App\Models\Follow::where([
-                  ['user_id', auth()->guard('api')->user()->id],
-                  ['follower_id',$this->id]
-        ])->first();
-
-      if($is_following){
-        return true;
-      }
-      else{
-              return false;
-      }
-    }
+            if ($is_following) {
+                return true;
+            } else {
+                return false;
+            }
+        }
 
 
 
@@ -128,10 +118,10 @@ class User extends \TCG\Voyager\Models\User
     {
         parent::boot();
 
-        static::creating(function ($user){
-            if(request()->password)
-            $user->password = bcrypt($user->password);
-            $user->verify_code = rand(1, 9).rand(11, 99).rand(33, 77).rand(6, 9);
+        static::creating(function ($user) {
+            if (request()->password)
+                $user->password = bcrypt($user->password);
+            $user->verify_code = rand(1, 9) . rand(11, 99) . rand(33, 77) . rand(6, 9);
         });
     }
 
@@ -196,42 +186,46 @@ class User extends \TCG\Voyager\Models\User
 
     /**
      * Get all of the video's comments.
-    */
+     */
     public function FavoritProducts()
     {
         return $this->morphedByMany(Product::class, 'favorite');
     }
 
 
-     public function isNot($user){
+    public function isNot($user)
+    {
         return $this->id !== $user->id;
     }
 
-    public function isFollowing($user){
-        return (bool) $this->following->where('id',$user->id)->count();
+    public function isFollowing($user)
+    {
+        return (bool) $this->following->where('id', $user->id)->count();
     }
 
-    public function canFollow($user){
-        if(!$this->isNot($user)){
+    public function canFollow($user)
+    {
+        if (!$this->isNot($user)) {
             return false;
         }
         return !$this->isFollowing($user);
     }
 
-    public function canUnfollow($user){
+    public function canUnfollow($user)
+    {
         return $this->isFollowing($user);
     }
 
-    public function following(){
-        return $this->belongsToMany('App\Models\User','follows','user_id','follower_id');
+    public function following()
+    {
+        return $this->belongsToMany('App\Models\User', 'follows', 'user_id', 'follower_id');
     }
-    public function followers(){
-        return $this->belongsToMany('App\Models\User','follows','follower_id','user_id');
+    public function followers()
+    {
+        return $this->belongsToMany('App\Models\User', 'follows', 'follower_id', 'user_id');
     }
     public function getFollowersCountAttribute()
     {
         return $this->followers()->count();
     }
-
-
 }
