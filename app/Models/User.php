@@ -57,6 +57,25 @@ class User extends \TCG\Voyager\Models\User
     }
 
 
+    public function getStoreBackgroundAttribute($store_background)
+    {
+
+
+
+                $isExists = Storage::exists('public/'.$store_background);
+
+                if (is_null($store_background) || empty($store_background)  || !$isExists) {
+                    $store_background = 'web/images/cover.jpg' ;
+                }else{
+                    $store_background = $store_background ;
+
+                }
+
+        return $store_background;
+
+    }
+
+
     public function getAverageRatingAttribute()
     {
         return (int)$this->reviews()->average('stars');
