@@ -4,249 +4,251 @@ $menu = false ;
 @endphp
 @section('content')
 <main class="main-content col-xs-12">
-   <div class="add-req-wrap col-xs-12">
-      <div class="container">
-         <form action="{{route('ProductSave')}}" method="POST" enctype="multipart/form-data">
-            @csrf
-            <h3 class="update-header">@lang('general.product_main_details')</h3>
-            <br>
+    <div class="add-req-wrap col-xs-12">
+        <div class="container">
+            <form action="{{route('ProductSave')}}" method="POST" enctype="multipart/form-data">
+                @csrf
+                <h3 class="update-header">@lang('general.product_main_details')</h3>
+                <br>
 
-            <div class="form-group col-md-6 col-xs-12">
-               <h4> @lang('product_name_en')Product Name (en)</h4>
-               <input name="name_en" required type="text" class="form-control">
-            </div>
-            <div class="form-group col-md-6 col-xs-12">
-               <h4>@lang('product_name_ar')</h4>
-               <input name="name_ar" required type="text" class="form-control">
-            </div>
-            <div class="form-group col-md-6 col-xs-12">
-               <h4>@lang('general.categories')</h4>
-               <select id="category" name="category_ids" class="form-control">
-                  @foreach(\App\Models\Category::whereNull('parent_id')->get() as $category)
-                  <option value="{{$category->id}}">{{$category->getTranslatedAttribute('name',\App::getLocale())}}
-                  </option>
-                  @endforeach
-               </select>
-            </div>
-            <div class="form-group col-md-6 col-xs-12">
-               <h4>@lang('general.categories')</h4>
+                <div class="form-group col-md-6 col-xs-12">
+                    <h4> @lang('product_name_en') </h4>
+                    <input name="name_en" required type="text" class="form-control">
+                </div>
+                <div class="form-group col-md-6 col-xs-12">
+                    <h4>@lang('product_name_ar')</h4>
+                    <input name="name_ar" required type="text" class="form-control">
+                </div>
+                <div class="form-group col-md-6 col-xs-12">
+                    <h4>@lang('general.categories')</h4>
+                    <select id="category" name="category_ids" class="form-control">
+                        @foreach(\App\Models\Category::whereNull('parent_id')->get() as $category)
+                        <option value="{{$category->id}}">
+                            {{$category->getTranslatedAttribute('name',\App::getLocale())}}
+                        </option>
+                        @endforeach
+                    </select>
+                </div>
+                <div class="form-group col-md-6 col-xs-12">
+                    <h4>@lang('general.categories')</h4>
 
-               <select id="subcategory" required name="state_id" id="state" class="form-control">
-                  <option selected disabled>Sub Category</option>
-               </select>
-            </div>
-            <div class="form-group col-md-6 col-xs-12">
-               <h4>@lang('general.categories')</h4>
+                    <select id="subcategory" required name="state_id" id="state" class="form-control">
+                        <option selected disabled>Sub Category</option>
+                    </select>
+                </div>
+                <div class="form-group col-md-6 col-xs-12">
+                    <h4>@lang('general.categories')</h4>
 
-               <select id="subsubcategory" required name="category_id" id="city" class="form-control">
-                  <option selected disabled>Sub Sub Category</option>
-               </select>
-            </div>
+                    <select id="subsubcategory" required name="category_id" id="city" class="form-control">
+                        <option selected disabled>Sub Sub Category</option>
+                    </select>
+                </div>
 
-            <div class="form-group col-md-6 col-xs-12">
-               <h4>@lang('general.categories')</h4>
+                <div class="form-group col-md-6 col-xs-12">
+                    <h4>@lang('general.categories')</h4>
 
-               <select id="subsubcategory" required name="brand_id" id="city" class="form-control">
-                  <option selected disabled>Brand</option>
+                    <select id="subsubcategory" required name="brand_id" id="city" class="form-control">
+                        <option selected disabled>Brand</option>
 
-                  @foreach(\App\Models\Brand::get() as $brand)
-                  <option value="{{$brand->id}}">{{$brand->name}}</option>
-                  @endforeach
+                        @foreach(\App\Models\Brand::get() as $brand)
+                        <option value="{{$brand->id}}">{{$brand->name}}</option>
+                        @endforeach
 
-               </select>
-            </div>
+                    </select>
+                </div>
 
-            <div class="form-group col-md-12 col-xs-12">
-               <select id="subsubcategory" required name="tag_id" id="city" class="form-control">
-                  <option selected disabled>Tag</option>
+                <div class="form-group col-md-12 col-xs-12">
+                    <select id="subsubcategory" required name="tag_id" id="city" class="form-control">
+                        <option selected disabled>Tag</option>
 
-                  @foreach(\App\Models\Tag::get() as $tag)
-                  <option value="{{$tag->id}}">{{$tag->name}}</option>
-                  @endforeach
+                        @foreach(\App\Models\Tag::get() as $tag)
+                        <option value="{{$tag->id}}">{{$tag->name}}</option>
+                        @endforeach
 
-               </select>
-            </div>
-
-
-
-            <div class="form-group col-md-12 col-xs-12">
-               <h4>@lang('general.description') (ar)</h4>
-               <textarea name="description_ar" class="form-control"></textarea>
-            </div>
-            <div class="form-group col-md-12 col-xs-12">
-               <h4>@lang('general.description') (en)</h4>
-               <textarea name="description_en" class="form-control"></textarea>
-            </div>
-
-            <div class="form-group col-md-12 col-xs-12">
-            </div>
-            <div class="form-group col-md-12 col-xs-12">
-            </div>
-            <h3 class="update-header">@lang('general.product_Images')</h3>
-            <br>
-            <br>
-
-
-            <div class="form-group col-md-12 col-xs-12">
-               <h4>Product Main Image</h4>
-               <div class="s-item col-md-4 col-sm-6 col-xs-12">
-
-
-               </div>
-               <div class="s-item col-md-4 col-sm-6 col-xs-12">
-                  <div class="file-upload-wrapper">
-                     <input type="file" name="image" id="input-file-max-fs" class="file-upload"
-                        data-max-file-size="5M" />
-                  </div>
-               </div>
-               <div class="s-item col-md-4 col-sm-6 col-xs-12">
-               </div>
-            </div>
-
-            <div class="form-group col-md-12 col-xs-12">
-               <h4>Product Images</h4>
-               <div class="s-item col-md-4 col-sm-6 col-xs-12">
-                  <div class="file-upload-wrapper">
-                     <input type="file" name="images[]" id="input-file-max-fs" class="file-upload"
-                        data-max-file-size="5M" />
-                  </div>
-               </div>
-               <div class="s-item col-md-4 col-sm-6 col-xs-12">
-                  <div class="file-upload-wrapper">
-                     <input type="file" name="images[]" id="input-file-max-fs" class="file-upload"
-                        data-max-file-size="5M" />
-                  </div>
-               </div>
-               <div class="s-item col-md-4 col-sm-6 col-xs-12">
-                  <div class="file-upload-wrapper">
-                     <input type="file" name="images[]" id="input-file-max-fs" class="file-upload"
-                        data-max-file-size="5M" />
-                  </div>
-               </div>
-               <div class="s-item col-md-4 col-sm-6 col-xs-12">
-                  <div class="file-upload-wrapper">
-                     <input type="file" name="images[]" id="input-file-max-fs" class="file-upload"
-                        data-max-file-size="5M" />
-                  </div>
-               </div>
-               <div class="s-item col-md-4 col-sm-6 col-xs-12">
-                  <div class="file-upload-wrapper">
-                     <input type="file" name="images[]" id="input-file-max-fs" class="file-upload"
-                        data-max-file-size="5M" />
-                  </div>
-               </div>
-               <div class="s-item col-md-4 col-sm-6 col-xs-12">
-                  <div class="file-upload-wrapper">
-                     <input type="file" name="images[]" id="input-file-max-fs" class="file-upload"
-                        data-max-file-size="5M" />
-                  </div>
-               </div>
-            </div>
-
-            <div class="form-group col-md-12 col-xs-12">
-            </div>
-            <div class="form-group col-md-12 col-xs-12">
-            </div>
-            <h3 class="update-header">@lang('general.product_price')</h3>
-            <br>
-
-            <div class="form-group col-md-6 col-xs-12">
-               <h4>@lang('general.price')</h4>
-               <input name="price" type="text" class="form-control">
-            </div>
-            <div class="form-group col-md-6 col-xs-12">
-               <h4>@lang('general.sale_price')</h4>
-               <input name="sale_price" type="text" class="form-control">
-            </div>
-
-
-            <div class="form-group col-md-12 col-xs-12">
-            </div>
-            <div class="form-group col-md-12 col-xs-12">
-            </div>
-            <h3 class="update-header">@lang('general.product_price_list')</h3>
-            <br>
-
-            <div id="prices">
-               <div class="form-group col-md-6 col-xs-12">
-                  <h4>Price</h4>
-                  <input name="prices[0][price]" type="text" class="form-control">
-               </div>
-               <div class="form-group col-md-3 col-xs-12">
-                  <h4>Quantity From</h4>
-                  <input name="prices[0][quantity_from]" type="text" class="form-control">
-               </div>
-               <div class="form-group col-md-3 col-xs-12">
-                  <h4>Quantity To)</h4>
-                  <input name="prices[0][quantity_to]" type="text" class="form-control">
-               </div>
-            </div>
-            <div style="text-align: center;" class="form-group col-md-12 col-xs-12">
-               <button type="submit" onclick="addPrice();" class="btn">@lang('general.add_rquest')</button>
-            </div>
-
-            <div class="form-group col-md-12 col-xs-12">
-            </div>
-            <div class="form-group col-md-12 col-xs-12">
-            </div>
-            <h3 class="update-header">@lang('general.product_attributes')</h3>
-            <br>
-
-
-            <div id="parent">
-               <div class="form-group col-md-6 col-xs-12">
-                  <select id="optselect1" onchange="selectoption(1,this)" name="options[0][attribute_id]"
-                     class="form-control">
-                     @foreach(\App\Models\Attribute::get() as $category)
-                     <option value="{{$category->id}}">{{$category->getTranslatedAttribute('name',\App::getLocale())}}
-                     </option>
-                     @endforeach
-                  </select>
-               </div>
-               <div class="form-group col-md-6 col-xs-12">
-                  <select id="valueselect1" required name="options[0][values_id]" class="form-control"></select>
-               </div>
-            </div>
-            <div style="text-align: center;" class="form-group col-md-12 col-xs-12">
-               <button type="submit" onclick="addChild();" class="btn">@lang('general.add_rquest')</button>
-            </div>
-
-            <div class="form-group col-md-12 col-xs-12">
-            </div>
-            <div class="form-group col-md-12 col-xs-12">
-            </div>
-            <h3 class="update-header">@lang('general.product_condition')</h3>
+                    </select>
+                </div>
 
 
 
-            <div class="form-group col-md-12 col-xs-12">
-               <h4>Order Condition</h4>
-               <ul>
-                  <li>
-                     <label>
-                        <input type="radio" value="1" name="product_condition">
-                        <span>new</span>
-                     </label>
-                  </li>
+                <div class="form-group col-md-12 col-xs-12">
+                    <h4>@lang('general.description') (ar)</h4>
+                    <textarea name="description_ar" class="form-control"></textarea>
+                </div>
+                <div class="form-group col-md-12 col-xs-12">
+                    <h4>@lang('general.description') (en)</h4>
+                    <textarea name="description_en" class="form-control"></textarea>
+                </div>
 
-                  <li>
-                     <label>
-                        <input type="radio" value="0" name="product_condition">
-                        <span>Used</span>
-                     </label>
-                  </li>
-               </ul>
-            </div>
+                <div class="form-group col-md-12 col-xs-12">
+                </div>
+                <div class="form-group col-md-12 col-xs-12">
+                </div>
+                <h3 class="update-header">@lang('general.product_Images')</h3>
+                <br>
+                <br>
 
 
-            <div style="text-align: center;" class="form-group col-md-12 col-xs-12">
-               <button type="submit" class="btn">Add Product</button>
-            </div>
+                <div class="form-group col-md-12 col-xs-12">
+                    <h4>Product Main Image</h4>
+                    <div class="s-item col-md-4 col-sm-6 col-xs-12">
 
 
-         </form>
-      </div>
-   </div>
+                    </div>
+                    <div class="s-item col-md-4 col-sm-6 col-xs-12">
+                        <div class="file-upload-wrapper">
+                            <input type="file" name="image" id="input-file-max-fs" class="file-upload"
+                                data-max-file-size="5M" />
+                        </div>
+                    </div>
+                    <div class="s-item col-md-4 col-sm-6 col-xs-12">
+                    </div>
+                </div>
+
+                <div class="form-group col-md-12 col-xs-12">
+                    <h4>Product Images</h4>
+                    <div class="s-item col-md-4 col-sm-6 col-xs-12">
+                        <div class="file-upload-wrapper">
+                            <input type="file" name="images[]" id="input-file-max-fs" class="file-upload"
+                                data-max-file-size="5M" />
+                        </div>
+                    </div>
+                    <div class="s-item col-md-4 col-sm-6 col-xs-12">
+                        <div class="file-upload-wrapper">
+                            <input type="file" name="images[]" id="input-file-max-fs" class="file-upload"
+                                data-max-file-size="5M" />
+                        </div>
+                    </div>
+                    <div class="s-item col-md-4 col-sm-6 col-xs-12">
+                        <div class="file-upload-wrapper">
+                            <input type="file" name="images[]" id="input-file-max-fs" class="file-upload"
+                                data-max-file-size="5M" />
+                        </div>
+                    </div>
+                    <div class="s-item col-md-4 col-sm-6 col-xs-12">
+                        <div class="file-upload-wrapper">
+                            <input type="file" name="images[]" id="input-file-max-fs" class="file-upload"
+                                data-max-file-size="5M" />
+                        </div>
+                    </div>
+                    <div class="s-item col-md-4 col-sm-6 col-xs-12">
+                        <div class="file-upload-wrapper">
+                            <input type="file" name="images[]" id="input-file-max-fs" class="file-upload"
+                                data-max-file-size="5M" />
+                        </div>
+                    </div>
+                    <div class="s-item col-md-4 col-sm-6 col-xs-12">
+                        <div class="file-upload-wrapper">
+                            <input type="file" name="images[]" id="input-file-max-fs" class="file-upload"
+                                data-max-file-size="5M" />
+                        </div>
+                    </div>
+                </div>
+
+                <div class="form-group col-md-12 col-xs-12">
+                </div>
+                <div class="form-group col-md-12 col-xs-12">
+                </div>
+                <h3 class="update-header">@lang('general.product_price')</h3>
+                <br>
+
+                <div class="form-group col-md-6 col-xs-12">
+                    <h4>@lang('general.price')</h4>
+                    <input name="price" type="text" class="form-control">
+                </div>
+                <div class="form-group col-md-6 col-xs-12">
+                    <h4>@lang('general.sale_price')</h4>
+                    <input name="sale_price" type="text" class="form-control">
+                </div>
+
+
+                <div class="form-group col-md-12 col-xs-12">
+                </div>
+                <div class="form-group col-md-12 col-xs-12">
+                </div>
+                <h3 class="update-header">@lang('general.product_price_list')</h3>
+                <br>
+
+                <div id="prices">
+                    <div class="form-group col-md-6 col-xs-12">
+                        <h4>Price</h4>
+                        <input name="prices[0][price]" type="text" class="form-control">
+                    </div>
+                    <div class="form-group col-md-3 col-xs-12">
+                        <h4>Quantity From</h4>
+                        <input name="prices[0][quantity_from]" type="text" class="form-control">
+                    </div>
+                    <div class="form-group col-md-3 col-xs-12">
+                        <h4>Quantity To)</h4>
+                        <input name="prices[0][quantity_to]" type="text" class="form-control">
+                    </div>
+                </div>
+                <div style="text-align: center;" class="form-group col-md-12 col-xs-12">
+                    <button type="submit" onclick="addPrice();" class="btn">@lang('general.add_rquest')</button>
+                </div>
+
+                <div class="form-group col-md-12 col-xs-12">
+                </div>
+                <div class="form-group col-md-12 col-xs-12">
+                </div>
+                <h3 class="update-header">@lang('general.product_attributes')</h3>
+                <br>
+
+
+                <div id="parent">
+                    <div class="form-group col-md-6 col-xs-12">
+                        <select id="optselect1" onchange="selectoption(1,this)" name="options[0][attribute_id]"
+                            class="form-control">
+                            @foreach(\App\Models\Attribute::get() as $category)
+                            <option value="{{$category->id}}">
+                                {{$category->getTranslatedAttribute('name',\App::getLocale())}}
+                            </option>
+                            @endforeach
+                        </select>
+                    </div>
+                    <div class="form-group col-md-6 col-xs-12">
+                        <select id="valueselect1" required name="options[0][values_id]" class="form-control"></select>
+                    </div>
+                </div>
+                <div style="text-align: center;" class="form-group col-md-12 col-xs-12">
+                    <button type="submit" onclick="addChild();" class="btn">@lang('general.add_rquest')</button>
+                </div>
+
+                <div class="form-group col-md-12 col-xs-12">
+                </div>
+                <div class="form-group col-md-12 col-xs-12">
+                </div>
+                <h3 class="update-header">@lang('general.product_condition')</h3>
+
+
+
+                <div class="form-group col-md-12 col-xs-12">
+                    <h4>Order Condition</h4>
+                    <ul>
+                        <li>
+                            <label>
+                                <input type="radio" value="1" name="product_condition">
+                                <span>new</span>
+                            </label>
+                        </li>
+
+                        <li>
+                            <label>
+                                <input type="radio" value="0" name="product_condition">
+                                <span>Used</span>
+                            </label>
+                        </li>
+                    </ul>
+                </div>
+
+
+                <div style="text-align: center;" class="form-group col-md-12 col-xs-12">
+                    <button type="submit" class="btn">Add Product</button>
+                </div>
+
+
+            </form>
+        </div>
+    </div>
 </main>
 
 
@@ -264,7 +266,7 @@ $menu = false ;
 
 
 <script>
-   var childNumber = 2;
+    var childNumber = 2;
  var childNumberprice = 2;
 
 function selectoption(select_id,selectObject) {
@@ -363,7 +365,7 @@ function addPrice() {
 
 
 <script>
-   $('#category').change(function(){
+    $('#category').change(function(){
 
    var cid = $(this).val();
    if(cid){
@@ -413,4 +415,3 @@ function addPrice() {
    });
 </script>
 @endpush
-

@@ -43,7 +43,8 @@ $menu = false ;
                             <label>
                                 <i class="fa fa-camera"></i>
                                 <span> @lang('general.cheange')</span>
-                                <input name="store_background" type="file" onchange="document.getElementById('blah').src = window.URL.createObjectURL(this.files[0])">
+                                <input name="store_background" type="file"
+                                    onchange="document.getElementById('blah').src = window.URL.createObjectURL(this.files[0])">
                                 <img src="{{ asset('/web/images/cover.jpg')}}" id="blah" alt="your image">
                             </label>
                             @error('store_background')
@@ -54,7 +55,8 @@ $menu = false ;
                             <label>
                                 <i class="fa fa-camera"></i>
                                 <span>@lang('general.cheange_profile_image')</span>
-                                <input name="store_image" type="file" onchange="document.getElementById('blah1').src = window.URL.createObjectURL(this.files[0])">
+                                <input name="store_image" type="file"
+                                    onchange="document.getElementById('blah1').src = window.URL.createObjectURL(this.files[0])">
                                 <img src="{{ url('storage/users/default_company.png')}}" id="blah1" alt="your image">
                             </label>
                             @error('store_image')
@@ -68,55 +70,63 @@ $menu = false ;
                 <br>
                 <div class="ito-h col-xs-12">
 
-                <h4 style="text-align: center;">@lang('general.main_information')</h4>
-                <div class="form-group col-md-6 col-xs-12">
+                    <h4 style="text-align: center;">@lang('general.main_information')</h4>
+                    <div class="form-group col-md-6 col-xs-12">
                         <h4 style="font-size:15px">@lang('general.supplier_name')</h4>
-                        <input type="text" required name="supplier_name" placeholder="@lang('general.supplier_name')" class="form-control">
+                        <input type="text" required name="supplier_name" placeholder="@lang('general.supplier_name')"
+                            class="form-control">
                     </div>
 
                     <div class="form-group col-md-6 col-xs-12">
                         <h4 style="font-size:15px">@lang('general.categories')</h4>
 
-                        <select required name="category_ids[]" class="form-control select-nosearch" placeholde="@lang('general.categories')" multiple>
+                        <select required name="category_ids[]" class="form-control select-nosearch"
+                            placeholde="@lang('general.categories')" multiple>
                             <!-- <option selected disabled>@lang('general.categories')</option> -->
                             @foreach(\App\Models\Category::whereNull('parent_id')->get() as $category)
-                            <option value="{{$category->id}}">{{$category->getTranslatedAttribute('name',\App::getLocale())}}</option>
+                            <option value="{{$category->id}}">
+                                {{$category->getTranslatedAttribute('name',\App::getLocale())}}</option>
                             @endforeach
                         </select>
 
-                        @error('store_image')
+                        @error('category_ids')
                         <div class="alert" style="color:#a94442">{{ $message }}</div>
                         @enderror
                     </div>
 
                     <div class="form-group col-md-6 col-xs-12">
-                        <input type="email" required name="email" placeholder="@lang('general.email')" class="form-control">
+                        <input type="email" required name="email" placeholder="@lang('general.email')"
+                            class="form-control">
                         @error('email')
-                            <div class="alert" style="color:#a94442">{{ $message }}</div>
+                        <div class="alert" style="color:#a94442">{{ $message }}</div>
                         @enderror
                     </div>
                     <div class="form-group col-md-6 col-xs-12">
-                        <input type="text" required name="mobile" placeholder="@lang('general.mobile')" class="form-control">
+                        <input type="text" required name="mobile" placeholder="@lang('general.mobile')"
+                            class="form-control">
                         @error('mobile')
-                            <div class="alert" style="color:#a94442">{{ $message }}</div>
+                        <div class="alert" style="color:#a94442">{{ $message }}</div>
                         @enderror
                     </div>
                     <div class="form-group col-md-12 col-xs-12">
-                        <input type="text" required name="hot_number" placeholder="@lang('general.hot_line')" class="form-control">
+                        <input type="text" required name="hot_number" placeholder="@lang('general.hot_line')"
+                            class="form-control">
                         @error('hot_line')
-                            <div class="alert" style="color:#a94442">{{ $message }}</div>
+                        <div class="alert" style="color:#a94442">{{ $message }}</div>
                         @enderror
                     </div>
                     <div class="form-group col-md-6 col-xs-12">
-                        <input type="password" required name="password" placeholder="@lang('general.password')" class="form-control">
+                        <input type="password" required name="password" placeholder="@lang('general.password')"
+                            class="form-control">
                         @error('password')
-                            <div class="alert" style="color:#a94442">{{ $message }}</div>
+                        <div class="alert" style="color:#a94442">{{ $message }}</div>
                         @enderror
                     </div>
                     <div class="form-group col-md-6 col-xs-12">
-                        <input type="password" required name="password_confirmation" placeholder="@lang('general.password_confirmation')" class="form-control">
+                        <input type="password" required name="password_confirmation"
+                            placeholder="@lang('general.password_confirmation')" class="form-control">
                         @error('password_confirmation')
-                            <div class="alert" style="color:#a94442">{{ $message }}</div>
+                        <div class="alert" style="color:#a94442">{{ $message }}</div>
                         @enderror
                     </div>
                 </div>
@@ -135,7 +145,7 @@ $menu = false ;
                         </select>
 
                         @error('country_id')
-                            <div class="alert" style="color:#a94442">{{ $message }}</div>
+                        <div class="alert" style="color:#a94442">{{ $message }}</div>
                         @enderror
 
                     </div>
@@ -144,9 +154,9 @@ $menu = false ;
                             <option selected disabled>@lang('general.state')</option>
                         </select>
 
-                    @error('state_id')
+                        @error('state_id')
                         <div class="alert" style="color:#a94442">{{ $message }}</div>
-                    @enderror
+                        @enderror
 
                     </div>
                     <div class="form-group col-md-4 col-xs-12">
@@ -154,33 +164,37 @@ $menu = false ;
                             <option selected disabled>@lang('general.city')</option>
                         </select>
 
-                    @error('city_id')
+                        @error('city_id')
                         <div class="alert" style="color:#a94442">{{ $message }}</div>
-                    @enderror
+                        @enderror
 
                     </div>
                     <div class="form-group col-md-12 col-xs-12">
-                        <input required type="text" name="street_nom" placeholder="@lang('general.street_num')" class="form-control">
-                    @error('street_nom')
+                        <input required type="text" name="street_nom" placeholder="@lang('general.street_num')"
+                            class="form-control">
+                        @error('street_nom')
                         <div class="alert" style="color:#a94442">{{ $message }}</div>
-                    @enderror
+                        @enderror
                     </div>
                     <div class="form-group col-md-6 col-xs-12">
-                        <input required type="text" name="zip_code" placeholder="@lang('general.zip_code')" class="form-control">
-                    @error('zip_code')
+                        <input required type="text" name="zip_code" placeholder="@lang('general.zip_code')"
+                            class="form-control">
+                        @error('zip_code')
                         <div class="alert" style="color:#a94442">{{ $message }}</div>
-                    @enderror
+                        @enderror
                     </div>
                     <div class="form-group col-md-6 col-xs-12">
                         <!--<input type="text" placeholder="@lang('general.map_location')" class="form-control">-->
-                        <a href="#" class="btn btn-review" data-toggle="modal" onclick="initMap()" data-target="#review-pop">@lang('general.map_location')</a>
+                        <a href="#" class="btn btn-review" data-toggle="modal" onclick="initMap()"
+                            data-target="#review-pop">@lang('general.map_location')</a>
 
                     </div>
                     <div class="form-group col-md-6 col-xs-12">
-                        <input required type="text" name="address" placeholder="@lang('general.address_spec')" class="form-control">
-                    @error('address')
+                        <input required type="text" name="address" placeholder="@lang('general.address_spec')"
+                            class="form-control">
+                        @error('address_spec')
                         <div class="alert" style="color:#a94442">{{ $message }}</div>
-                    @enderror
+                        @enderror
 
                     </div>
 
@@ -194,85 +208,89 @@ $menu = false ;
                 </div>
 
 
-<div class="modal fade" id="review-pop">
-    <div class="modal-dialog">
-        <div class="modal-content">
-            <button type="button" class="close" data-dismiss="modal">&times;</button>
-            <div class="modal-body">
-                <div class="rate-title">
-                    <h3>@lang('general.map_location')</h3>
-                </div>
-                <div class="rate-stars">
+                <div class="modal fade" id="review-pop">
+                    <div class="modal-dialog">
+                        <div class="modal-content">
+                            <button type="button" class="close" data-dismiss="modal">&times;</button>
+                            <div class="modal-body">
+                                <div class="rate-title">
+                                    <h3>@lang('general.map_location')</h3>
+                                </div>
+                                <div class="rate-stars">
 
-                    <div class="col-md-8 col-xs-12 m10_b">
+                                    <div class="col-md-8 col-xs-12 m10_b">
 
-                        <div id="pac-container">
-                            <input id="pac-input" type="text" placeholder="Enter a location">
-                        </div>
+                                        <div id="pac-container">
+                                            <input id="pac-input" type="text" placeholder="Enter a location">
+                                        </div>
 
-                    </div>
-                    <div class="col-md-4 col-xs-12 m10_b">
+                                    </div>
+                                    <div class="col-md-4 col-xs-12 m10_b">
 
-                        <button id="current_location" onclick="getLocation()"> @lang('general.current_location')<i class="fa fa-location-arrow" aria-hidden="true"></i></button>
-                    </div>
+                                        <button id="current_location" onclick="getLocation()">
+                                            @lang('general.current_location')<i class="fa fa-location-arrow"
+                                                aria-hidden="true"></i></button>
+                                    </div>
 
-                    <div class="col-md-6 col-xs-12 ">
+                                    <div class="col-md-6 col-xs-12 ">
 
-                        <div class="form-group">
-                            <label for="">Lat</label>
-                            <input type="text" oninput="initMap()" value="31.3540494" class="form-control input-sm" name="lat" id="lat">
-                        </div>
-                    </div>
-                    <div class="col-md-6 col-xs-12 ">
+                                        <div class="form-group">
+                                            <label for="">Lat</label>
+                                            <input type="text" oninput="initMap()" value="31.3540494"
+                                                class="form-control input-sm" name="lat" id="lat">
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6 col-xs-12 ">
 
-                        <div class="form-group">
-                            <label for="">Lng</label>
-                            <input type="text" oninput="initMap()" value="31.6841419" class="form-control input-sm" name="lng" id="lng">
-                        </div>
-                    </div>
-
-
-                </div>
-                <div class="rate-form">
+                                        <div class="form-group">
+                                            <label for="">Lng</label>
+                                            <input type="text" oninput="initMap()" value="31.6841419"
+                                                class="form-control input-sm" name="lng" id="lng">
+                                        </div>
+                                    </div>
 
 
-                    <div class="pac-card" id="pac-card">
-                        <div>
-                            <div id="title">
-                                Autocomplete search
+                                </div>
+                                <div class="rate-form">
+
+
+                                    <div class="pac-card" id="pac-card">
+                                        <div>
+                                            <div id="title">
+                                                Autocomplete search
+                                            </div>
+                                            <div id="type-selector" class="pac-controls">
+                                                <input type="radio" name="type" id="changetype-all" checked="checked">
+                                                <label for="changetype-all">All</label>
+
+                                                <input type="radio" name="type" id="changetype-establishment">
+                                                <label for="changetype-establishment">Establishments</label>
+
+                                                <input type="radio" name="type" id="changetype-address">
+                                                <label for="changetype-address">Addresses</label>
+
+                                                <input type="radio" name="type" id="changetype-geocode">
+                                                <label for="changetype-geocode">Geocodes</label>
+                                            </div>
+                                            <div id="strict-bounds-selector" class="pac-controls">
+                                                <input type="checkbox" id="use-strict-bounds" value="">
+                                                <label for="use-strict-bounds">Strict Bounds</label>
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                    <div id="map" style="width:100%;height:400px; "></div>
+                                    <div id="infowindow-content">
+                                        <img src="" width="16" height="16" id="place-icon">
+                                        <span id="place-name" class="title"></span><br>
+                                        <span id="place-address"></span>
+                                    </div>
+
+                                </div>
                             </div>
-                            <div id="type-selector" class="pac-controls">
-                                <input type="radio" name="type" id="changetype-all" checked="checked">
-                                <label for="changetype-all">All</label>
-
-                                <input type="radio" name="type" id="changetype-establishment">
-                                <label for="changetype-establishment">Establishments</label>
-
-                                <input type="radio" name="type" id="changetype-address">
-                                <label for="changetype-address">Addresses</label>
-
-                                <input type="radio" name="type" id="changetype-geocode">
-                                <label for="changetype-geocode">Geocodes</label>
-                            </div>
-                            <div id="strict-bounds-selector" class="pac-controls">
-                                <input type="checkbox" id="use-strict-bounds" value="">
-                                <label for="use-strict-bounds">Strict Bounds</label>
-                            </div>
-                        </div>
-
-                    </div>
-                    <div id="map" style="width:100%;height:400px; "></div>
-                    <div id="infowindow-content">
-                        <img src="" width="16" height="16" id="place-icon">
-                        <span id="place-name" class="title"></span><br>
-                        <span id="place-address"></span>
-                    </div>
-
-                </div>
-            </div>
-        </div><!-- /.modal-content -->
-    </div><!-- /.modal-dialog -->
-</div><!-- /.modal -->
+                        </div><!-- /.modal-content -->
+                    </div><!-- /.modal-dialog -->
+                </div><!-- /.modal -->
 
 
 
@@ -295,7 +313,9 @@ $menu = false ;
 
 
 
- <script src="https://maps.googleapis.com/maps/api/js?key={{ env('GOOGLE_MAPS_API_KEY') }}&libraries=places&callback=initMap" async defer></script>
+<script
+    src="https://maps.googleapis.com/maps/api/js?key={{ env('GOOGLE_MAPS_API_KEY') }}&libraries=places&callback=initMap"
+    async defer></script>
 <!--<script src="https://maps.googleapis.com/maps/api/js?key={{ env('GOOGLE_MAPS_API_KEY') }}&libraries=places&callback=initialize" async defer></script>-->
 <!--<script src="https://maps.googleapis.com/maps/api/js?key=&callback=initMap" async defer></script>-->
 
