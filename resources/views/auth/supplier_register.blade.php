@@ -176,6 +176,7 @@ $menu = false ;
                         <div class="alert" style="color:#a94442">{{ $message }}</div>
                         @enderror
                     </div>
+
                     <div class="form-group col-md-6 col-xs-12">
                         <input required type="text" name="zip_code" placeholder="@lang('general.zip_code')"
                             class="form-control">
