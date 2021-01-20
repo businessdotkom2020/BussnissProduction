@@ -12,11 +12,11 @@ $menu = false ;
                 <br>
 
                 <div class="form-group col-md-6 col-xs-12">
-                    <h4> @lang('product_name_en') </h4>
+                    <h4> @lang('general.product_name_en') </h4>
                     <input name="name_en" required type="text" class="form-control">
                 </div>
                 <div class="form-group col-md-6 col-xs-12">
-                    <h4>@lang('product_name_ar')</h4>
+                    <h4>@lang('general.product_name_ar')</h4>
                     <input name="name_ar" required type="text" class="form-control">
                 </div>
                 <div class="form-group col-md-6 col-xs-12">
