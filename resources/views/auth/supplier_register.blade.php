@@ -55,7 +55,7 @@ $menu = false ;
                                 <i class="fa fa-camera"></i>
                                 <span>@lang('general.cheange_profile_image')</span>
                                 <input name="store_image" type="file" onchange="document.getElementById('blah1').src = window.URL.createObjectURL(this.files[0])">
-                                <img src="{{ url('public/users/default_company.png')}}" id="blah1" alt="your image">
+                                <img src="{{ url('storage/users/default_company.png')}}" id="blah1" alt="your image">
                             </label>
                             @error('store_image')
                             <div class="alert" style="color:#a94442">{{ $message }}</div>
