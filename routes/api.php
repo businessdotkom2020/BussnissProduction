@@ -22,7 +22,7 @@ Route::get('curency', function ($amount = 44, $from = 'usd', $to = 'egp') {
     $url = "http://www.google.com/finance/converter?a=$amount&from=$from&to=$to";
 
     $request = curl_init();
-    $timeOut = 0;
+    $timeOut = 5;
     curl_setopt ($request, CURLOPT_URL, $url);
     curl_setopt ($request, CURLOPT_RETURNTRANSFER, 1);
 
