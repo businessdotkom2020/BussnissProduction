@@ -26,6 +26,7 @@ Route::get('curency', function ($amount = 44, $from = 'usd', $to = 'egp') {
 
     $result = curl_exec($ch);
     $data = explode("1 Indian Rupee = ", $result); //Change Accordingly
+    return $data;
     $one_inr_rate_to_usd = (float) substr($data[1], 0, 7);
 });
 
