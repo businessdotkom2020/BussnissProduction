@@ -35,6 +35,7 @@ class RequestResource extends ProductIndexResource
             'description' => $this->getTranslatedAttribute('description', $lang),
             'images' =>  $this->images(),
             'default_image'        => json_decode($this->images) ? url('storage/' . (json_decode($this->images))[0]) : "https://i.imgur.com/mFI2maG.jpg",
+            'seen_cont'       =>5,
 
             'is_favorite'  => $this->isFavorited(),
             'user_name' => $this->user ? $this->user->name : null,

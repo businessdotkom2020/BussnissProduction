@@ -29,6 +29,8 @@ class ProductResource extends ProductIndexResource
             'is_favorite'  => $this->isFavorited(),
             'price'        => $this->price,
             'price_currency_type'        => 'usd',
+            'seen_cont'       =>5,
+
             'store_id'        => $this->owner ? $this->owner->id : null,
             'sale_price'   => $this->sale_price,
             // 'sale_value'   =>  ((float)$this->sale_price* (float)$this->price / 100 ) .'%',
