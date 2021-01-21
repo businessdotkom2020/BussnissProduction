@@ -18,30 +18,7 @@ Route::get('supplier/{supplier_id}/sub-sub-categories', 'api\ProductController@f
 Route::get('supplier/{supplier_id}/sub-sub-categories/{sub_sub_category_id}', 'api\ProductController@factory_categories_products');
 
 Route::post('search', 'api\HomeController@filter');
-Route::get('curency', function ($amount = 44, $from = 'usd', $to = 'egp') {
-    $amounts = array(10, 20, 30, 40, 50, 60, 70, 80, 90, 100);
-
-    $from_Curr = 'USD';
-    $to_Curr = 'THB';
-    
-  
-    
-         $convertedCurrency = array();
-        $amount = 1;
-    
-        $url = "https://finance.google.com/finance/converter?a=$amount&from=$from&to=$to";
-        $data = file_get_contents($url);
-        preg_match("/<span class=bld>(.*?)<\/span>/", $data, $converted);
-        $converted = preg_replace("/[^0-9.]/", "", $converted[1]);
-    
-        foreach ($amounts as $amount) {
-            $convertedCurrency[] = $amount * $converted;
-        }
-    
-        return $convertedCurrency;
  
-});
-
 
 Route::get('home/all-industrial-areas', 'api\ZoneController@index');
 Route::get('home/industrial-areas/{state_id}', 'api\ZoneController@show');

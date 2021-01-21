@@ -28,6 +28,7 @@ class ProductResource extends ProductIndexResource
             'gallery'      => $this->images(),
             'is_favorite'  => $this->isFavorited(),
             'price'        => $this->price,
+            'price_currency_type'        => 'usd',
             'store_id'        => $this->owner ? $this->owner->id : null,
             'sale_price'   => $this->sale_price,
             // 'sale_value'   =>  ((float)$this->sale_price* (float)$this->price / 100 ) .'%',
@@ -44,14 +45,6 @@ class ProductResource extends ProductIndexResource
         ];
     }
 
-
-    function convertCurrency($amount, $from, $to)
-    {
-        $url = "http://www.google.com/finance/converter?a=$amount&from=$from&to=$to";
-        $data = file_get_contents($url);
-        preg_match("/<span class=bld>(.*)<\/span>/", $data, $converted);
-        return $converted[1];
-    }
 
     public function images()
     {

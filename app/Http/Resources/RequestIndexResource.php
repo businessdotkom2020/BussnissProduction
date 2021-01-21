@@ -33,15 +33,13 @@ class RequestIndexResource extends ProductIndexResource
             'whatsapp'  => $this->user ? $this->user->whatsapp : null,
             'name' => $this->getTranslatedAttribute('name',$lang),
             'description' => $this->getTranslatedAttribute('description',$lang),
-                           'images' =>  $this->images(),
+            'images' =>  $this->images(),
             'is_favorite'  => $this->isFavorited(),
-                        'user_name' => $this->user ? $this->user->name: null ,
+            'user_name' => $this->user ? $this->user->name: null ,
             'default_image'        => json_decode($this->images ) ? url('storage/'.(json_decode($this->images))[0]) : "https://i.imgur.com/mFI2maG.jpg",
-
             'added_by_supplier' =>       true ,
-                                    'share_url'  => "https://www.facebook.com/",
+            'share_url'  => "https://www.facebook.com/",
             'store_id'  => $this->user_id ,
-
             'user_image'  => $this->user ? url('storage/'.$this->user->avatar) : null,
             'created_at'   => $this->created_at,
             'updated_at'   => $this->updated_at,

@@ -21,6 +21,8 @@ class ProductIndexResource extends JsonResource
             'name' => $this->getTranslatedAttribute('name',$lang),
             'image'        => url('storage/'.($this->image)),
             'price'       => $this->price,
+            'price_currency_type'        => 'usd',
+
             'is_favorite'  => $this->isFavorited(),
             // 'sale_value'     => (($this->sale_price/$this->price) * 100) .'%',
             'sale_value'     => number_format((($this->sale_price/$this->price) * 100) ,2)  .'%',
