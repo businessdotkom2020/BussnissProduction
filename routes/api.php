@@ -19,15 +19,13 @@ Route::get('supplier/{supplier_id}/sub-sub-categories/{sub_sub_category_id}', 'a
 
 Route::post('search', 'api\HomeController@filter');
 Route::get('curency', function ($amount = 44, $from = 'usd', $to = 'egp') {
-    $url = "https://www.google.com/search?q=INR+to+USD"; //Change Accordingly
-    $ch = curl_init();
-    curl_setopt($ch, CURLOPT_URL, $url);
-    curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
-
-    $result = curl_exec($ch);
-    $data = explode("1 Indian Rupee = ", $result); //Change Accordingly
-    return $data;
-    $one_inr_rate_to_usd = (float) substr($data[1], 0, 7);
+    $from    = 'JPY';
+    $to    = 'USD';
+    $amount  = 1;
+    $data = file_get_contents("https://finance.google.com/finance/converter?a=$amount&from=$from&to=$to");
+    preg_match("/<span class=bld>(.*)<\/span>/", $data, $converted);
+    $converted = preg_replace("/[^0-9.]/", "", $converted[1][0]);
+    return number_format(round($converted, 3), 2);
 });
 
 
