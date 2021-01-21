@@ -24,12 +24,9 @@ Route::get('curency', function ($amount = 44, $from = 'usd', $to = 'egp') {
     $from_Curr = 'USD';
     $to_Curr = 'THB';
     
-    $convertedCurrency = convertCurrency($amounts, $from_Curr, $to_Curr);
-    print_r($amounts);
-    print_r($convertedCurrency);
+  
     
-    function convertCurrency($amounts = array(), $from, $to) {
-        $convertedCurrency = array();
+         $convertedCurrency = array();
         $amount = 1;
     
         $url = "https://finance.google.com/finance/converter?a=$amount&from=$from&to=$to";
@@ -42,7 +39,7 @@ Route::get('curency', function ($amount = 44, $from = 'usd', $to = 'egp') {
         }
     
         return $convertedCurrency;
-    }
+ 
 });
 
 
