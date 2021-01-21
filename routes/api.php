@@ -32,20 +32,8 @@ Route::get('curency', function ($amount = 44, $from = 'usd', $to = 'egp') {
     curl_close($request);
 
     return $response;
-   }
-
-   if(isset($_POST['convert_currency']))
-   {
-    $amount=$_POST['amount'];
-    $from=$_POST['convert_from'];
-    $to=$_POST['convert_to'];
-
-    $rawData = currency_converter($from,$to,$amount);
-    $regex = '#\<span class=bld\>(.+?)\<\/span\>#s';
-    preg_match($regex, $rawData, $converted);
-    $result = $converted[0];
-    echo $result;
-   }
+   
+ 
 });
 
 
