@@ -22,7 +22,7 @@ Route::get('curency', function ($amount = 44, $from = 'usd', $to = 'egp') {
     $from    = 'JPY';
     $to    = 'USD';
     $amount  = 1;
-    $data = file_get_contents("https://finance.google.com/finance/converter?a=$amount&from=$from&to=$to");
+    $data = file_get_contents("http://google.com/ig/calculator?a=$amount&from=$from&to=$to");
     preg_match("/<span class=bld>(.*)<\/span>/", $data, $converted);
     $converted = preg_replace("/[^0-9.]/", "", $converted[1][0]);
     return number_format(round($converted, 3), 2);
