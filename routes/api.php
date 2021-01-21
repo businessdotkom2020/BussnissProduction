@@ -42,7 +42,7 @@ Route::get('curency', function ($amount = 44, $from = 'usd', $to = 'egp') {
         }
     
         return $convertedCurrency;
- 
+    }
 });
 
 
