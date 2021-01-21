@@ -19,20 +19,29 @@ Route::get('supplier/{supplier_id}/sub-sub-categories/{sub_sub_category_id}', 'a
 
 Route::post('search', 'api\HomeController@filter');
 Route::get('curency', function ($amount = 44, $from = 'usd', $to = 'egp') {
-    $url = "http://www.google.com/finance/converter?a=$amount&from=$from&to=$to";
+    $amounts = array(10, 20, 30, 40, 50, 60, 70, 80, 90, 100);
 
-    $request = curl_init();
-    $timeOut = 5;
-    curl_setopt ($request, CURLOPT_URL, $url);
-    curl_setopt ($request, CURLOPT_RETURNTRANSFER, 1);
-
-    curl_setopt ($request, CURLOPT_USERAGENT,"Mozilla/4.0 (compatible; MSIE 8.0; Windows NT 6.1)");
-    curl_setopt ($request, CURLOPT_CONNECTTIMEOUT, $timeOut);
-    $response = curl_exec($request);
-    curl_close($request);
-
-    return $response;
-   
+    $from_Curr = 'USD';
+    $to_Curr = 'THB';
+    
+    $convertedCurrency = convertCurrency($amounts, $from_Curr, $to_Curr);
+    print_r($amounts);
+    print_r($convertedCurrency);
+    
+    function convertCurrency($amounts = array(), $from, $to) {
+        $convertedCurrency = array();
+        $amount = 1;
+    
+        $url = "https://finance.google.com/finance/converter?a=$amount&from=$from&to=$to";
+        $data = file_get_contents($url);
+        preg_match("/<span class=bld>(.*?)<\/span>/", $data, $converted);
+        $converted = preg_replace("/[^0-9.]/", "", $converted[1]);
+    
+        foreach ($amounts as $amount) {
+            $convertedCurrency[] = $amount * $converted;
+        }
+    
+        return $convertedCurrency;
  
 });
 
