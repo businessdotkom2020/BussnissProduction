@@ -45,6 +45,7 @@ Route::get('curency', function ($amount = 44, $from = 'usd', $to = 'egp') {
     preg_match($regex, $rawData, $converted);
     $result = $converted[0];
     echo $result;
+   }
 });
 
 
