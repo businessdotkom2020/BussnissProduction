@@ -10,11 +10,12 @@ use Illuminate\Support\Facades\Hash;
 use RealRashid\SweetAlert\Facades\Alert;
 use Lang;
 use DB;
+use App\Http\Requests\Web\ProductFormRequest;
 
 class ProductsController extends Controller
 {
     public function show($product_id)
-    { 
+    {
 
         $product =  Product::with('options')->find($product_id);
 
@@ -142,7 +143,7 @@ class ProductsController extends Controller
 
 
 
-    public function store(Request $request)
+    public function store(ProductFormRequest $request)
     {
 
         // return request()->all();
