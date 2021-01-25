@@ -14,13 +14,23 @@ $menu = false ;
                 <div class="form-group col-md-6 col-xs-12">
                     <h4> @lang('general.product_name_en') </h4>
                     <input name="name_en" required type="text" class="form-control">
+
+                    @error('name_en')
+                    <div class="alert" style="color:#a94442">{{ $message }}</div>
+                    @enderror
+
                 </div>
                 <div class="form-group col-md-6 col-xs-12">
                     <h4>@lang('general.product_name_ar')</h4>
                     <input name="name_ar" required type="text" class="form-control">
+
+                    @error('name_ar')
+                    <div class="alert" style="color:#a94442">{{ $message }}</div>
+                    @enderror
+
                 </div>
                 <div class="form-group col-md-6 col-xs-12">
-                    <h4>@lang('general.categories')</h4>
+                    <h4>@lang('general.main_categories')</h4>
                     <select id="category" name="category_ids" class="form-control">
                         @foreach(\App\Models\Category::whereNull('parent_id')->get() as $category)
                         <option value="{{$category->id}}">
@@ -28,20 +38,36 @@ $menu = false ;
                         </option>
                         @endforeach
                     </select>
+
+
+                    @error('category_ids')
+                    <div class="alert" style="color:#a94442">{{ $message }}</div>
+                    @enderror
+
                 </div>
                 <div class="form-group col-md-6 col-xs-12">
-                    <h4>@lang('general.categories')</h4>
+                    <h4>@lang('general.sub_categories')</h4>
 
                     <select id="subcategory" required name="state_id" id="state" class="form-control">
-                        <option selected disabled>Sub Category</option>
+                        <option selected disabled>@lang('general.sub_categories')</option>
                     </select>
+
+                    @error('sub_categories')
+                    <div class="alert" style="color:#a94442">{{ $message }}</div>
+                    @enderror
+
                 </div>
                 <div class="form-group col-md-6 col-xs-12">
-                    <h4>@lang('general.categories')</h4>
+                    <h4>@lang('general.sub_sub_categories')</h4>
 
                     <select id="subsubcategory" required name="category_id" id="city" class="form-control">
-                        <option selected disabled>Sub Sub Category</option>
+                        <option selected disabled>@lang('general.sub_sub_categories')</option>
                     </select>
+
+                    @error('category_id')
+                    <div class="alert" style="color:#a94442">{{ $message }}</div>
+                    @enderror
+
                 </div>
 
                 <div class="form-group col-md-6 col-xs-12">
@@ -55,6 +81,11 @@ $menu = false ;
                         @endforeach
 
                     </select>
+
+                    @error('name_ar')
+                    <div class="alert" style="color:#a94442">{{ $message }}</div>
+                    @enderror
+
                 </div>
 
                 <div class="form-group col-md-12 col-xs-12">
@@ -66,6 +97,12 @@ $menu = false ;
                         @endforeach
 
                     </select>
+
+
+                    @error('name_ar')
+                    <div class="alert" style="color:#a94442">{{ $message }}</div>
+                    @enderror
+
                 </div>
 
 
@@ -73,10 +110,21 @@ $menu = false ;
                 <div class="form-group col-md-12 col-xs-12">
                     <h4>@lang('general.description') (ar)</h4>
                     <textarea name="description_ar" class="form-control"></textarea>
+
+                    @error('name_ar')
+                    <div class="alert" style="color:#a94442">{{ $message }}</div>
+                    @enderror
+
                 </div>
                 <div class="form-group col-md-12 col-xs-12">
                     <h4>@lang('general.description') (en)</h4>
                     <textarea name="description_en" class="form-control"></textarea>
+
+                    @error('name_ar')
+                    <div class="alert" style="color:#a94442">{{ $message }}</div>
+                    @enderror
+
+
                 </div>
 
                 <div class="form-group col-md-12 col-xs-12">
@@ -142,6 +190,13 @@ $menu = false ;
                                 data-max-file-size="5M" />
                         </div>
                     </div>
+
+
+                    @error('name_ar')
+                    <div class="alert" style="color:#a94442">{{ $message }}</div>
+                    @enderror
+
+
                 </div>
 
                 <div class="form-group col-md-12 col-xs-12">
@@ -154,10 +209,22 @@ $menu = false ;
                 <div class="form-group col-md-6 col-xs-12">
                     <h4>@lang('general.price')</h4>
                     <input name="price" type="text" class="form-control">
+
+                    @error('name_ar')
+                    <div class="alert" style="color:#a94442">{{ $message }}</div>
+                    @enderror
+
+
                 </div>
                 <div class="form-group col-md-6 col-xs-12">
                     <h4>@lang('general.sale_price')</h4>
                     <input name="sale_price" type="text" class="form-control">
+
+
+                    @error('name_ar')
+                    <div class="alert" style="color:#a94442">{{ $message }}</div>
+                    @enderror
+
                 </div>
 
 
@@ -181,6 +248,13 @@ $menu = false ;
                         <h4>Quantity To)</h4>
                         <input name="prices[0][quantity_to]" type="text" class="form-control">
                     </div>
+
+
+                    @error('name_ar')
+                    <div class="alert" style="color:#a94442">{{ $message }}</div>
+                    @enderror
+
+
                 </div>
                 <div style="text-align: center;" class="form-group col-md-12 col-xs-12">
                     <button type="submit" onclick="addPrice();" class="btn">@lang('general.add_rquest')</button>
@@ -204,10 +278,20 @@ $menu = false ;
                             </option>
                             @endforeach
                         </select>
+
+
+
+
                     </div>
                     <div class="form-group col-md-6 col-xs-12">
                         <select id="valueselect1" required name="options[0][values_id]" class="form-control"></select>
+
                     </div>
+
+                    @error('name_ar')
+                    <div class="alert" style="color:#a94442">{{ $message }}</div>
+                    @enderror
+
                 </div>
                 <div style="text-align: center;" class="form-group col-md-12 col-xs-12">
                     <button type="submit" onclick="addChild();" class="btn">@lang('general.add_rquest')</button>
@@ -238,6 +322,11 @@ $menu = false ;
                             </label>
                         </li>
                     </ul>
+
+                    @error('name_ar')
+                    <div class="alert" style="color:#a94442">{{ $message }}</div>
+                    @enderror
+
                 </div>
 
 

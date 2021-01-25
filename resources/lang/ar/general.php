@@ -129,7 +129,10 @@ return [
 
 
 
-    'product_name_en' =>  '(عربي) إسم المنتج ',
+    'product_name_ar' =>  '(عربي) إسم المنتج ',
     'product_name_en' =>  '(إنجليزي) إسم المنتج ',
 
+    'main_categories' =>  ' الأقسام الرئيسية',
+    'sub_categories' =>  ' الأقسام الفرعية',
+    'sub_sub_categories' =>  '2 الأقسام الفرعية',
 ];
