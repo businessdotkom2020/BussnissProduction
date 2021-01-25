@@ -134,5 +134,9 @@ return [
 
     'main_categories' =>  ' الأقسام الرئيسية',
     'sub_categories' =>  ' الأقسام الفرعية',
-    'sub_sub_categories' =>  '2 الأقسام الفرعية',
+    'sub_sub_categories' =>  '  الأقسام الثانوية',
+
+
+
+    'brand' =>  'العلامة التجارية',
 ];

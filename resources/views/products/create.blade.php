@@ -48,7 +48,7 @@ $menu = false ;
                 <div class="form-group col-md-6 col-xs-12">
                     <h4>@lang('general.sub_categories')</h4>
 
-                    <select id="subcategory" required name="state_id" id="state" class="form-control">
+                    <select id="subcategory" required name="sub_category_id" class="form-control">
                         <option selected disabled>@lang('general.sub_categories')</option>
                     </select>
 
@@ -60,7 +60,7 @@ $menu = false ;
                 <div class="form-group col-md-6 col-xs-12">
                     <h4>@lang('general.sub_sub_categories')</h4>
 
-                    <select id="subsubcategory" required name="category_id" id="city" class="form-control">
+                    <select id="subsubcategory" required name="category_id" class="form-control">
                         <option selected disabled>@lang('general.sub_sub_categories')</option>
                     </select>
 
@@ -71,10 +71,10 @@ $menu = false ;
                 </div>
 
                 <div class="form-group col-md-6 col-xs-12">
-                    <h4>@lang('general.categories')</h4>
+                    <h4>@lang('general.brand')</h4>
 
                     <select id="subsubcategory" required name="brand_id" id="city" class="form-control">
-                        <option selected disabled>Brand</option>
+                        <option selected disabled>@lang('general.brand')</option>
 
                         @foreach(\App\Models\Brand::get() as $brand)
                         <option value="{{$brand->id}}">{{$brand->name}}</option>
@@ -467,7 +467,7 @@ function addPrice() {
           {
               $("#subcategory").empty();
               $("#subsubcategory").empty();
-              $("#subcategory").append('<option>Select State</option>');
+              $("#subcategory").append("<option>@lang('general.sub_categories')</option>");
               $.each(res,function(key,value){
                   $("#subcategory").append('<option value="'+key+'">'+value+'</option>');
               });
@@ -490,11 +490,11 @@ function addPrice() {
           if(res)
           {
               $("#subsubcategory").empty();
-              $("#subsubcategory").append('<option>Select City</option>');
+              $("#subsubcategory").append("<option>@lang('general.sub_sub_categories')</option>");
               $.each(res,function(key,value){
                   $("#subsubcategory").append('<option value="'+key+'">'+value+'</option>');
               });
-                                          $('#subsubcategory').niceSelect('update');
+            $('#subsubcategory').niceSelect('update');
 
           }
      }
