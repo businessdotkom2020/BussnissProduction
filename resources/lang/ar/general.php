@@ -152,6 +152,7 @@ return [
     'sale_price' =>  'السعر بعد الخصم  ',
     'quantity_from' =>  'السعر  من ',
     'quantity_to' =>  'السعر بعد الخصم  ',
+    'add_price_list' =>  'إضافة قائمة أسعار جديدة',
 
 
 

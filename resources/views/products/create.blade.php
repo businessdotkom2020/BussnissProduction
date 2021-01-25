@@ -211,18 +211,18 @@ $menu = false ;
                     </div>
                     <div class="form-group col-md-3 col-xs-12">
                         <h4>@lang('general.quantity_from')</h4>
-                        <input name="prices[0][quantity_from]" type="text" class="form-control">
+                        <input name="prices[0][quantity_from]" type="number" class="form-control">
                     </div>
                     <div class="form-group col-md-3 col-xs-12">
                         <h4>@lang('general.quantity_to')</h4>
-                        <input name="prices[0][quantity_to]"  type="text" class="form-control">
+                        <input name="prices[0][quantity_to]" type="number" class="form-control">
                     </div>
                     @error('product_price_list')
                     <div class="alert" style="color:#a94442">{{ $message }}</div>
                     @enderror
                 </div>
                 <div style="text-align: center;" class="form-group col-md-12 col-xs-12">
-                    <button type="submit" onclick="addPrice();" class="btn">@lang('general.add_rquest')</button>
+                    <button type="button" onclick="addPrice();" class="btn">@lang('general.add_price_list')</button>
                 </div>
                 <div class="form-group col-md-12 col-xs-12">
                 </div>
@@ -343,11 +343,11 @@ $menu = false ;
            </div>
            <div class="form-group col-md-3 col-xs-12">
               <h4>@lang('general.sale_price')</h4>
-              <input name="prices[`+childNumberprice+`][quantity_from]" type="text" class="form-control">
+              <input name="prices[`+childNumberprice+`][quantity_from]" type="number" class="form-control">
            </div>
            <div class="form-group col-md-3 col-xs-12">
               <h4>@lang('general.sale_price')</h4>
-              <input name="prices[`+childNumberprice+`][quantity_to]" type="text" class="form-control">
+              <input name="prices[`+childNumberprice+`][quantity_to]" type="number" class="form-control">
            </div>
 
            `;
