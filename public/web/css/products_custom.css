@@ -1,102 +1,89 @@
-@import url(https://fonts.googleapis.com/css?family=Roboto);
+// Learn about this technique:
+// @link https://moderncss.dev/pure-css-custom-styled-radio-buttons/
 
-$md-radio-checked-color: rgb(51, 122, 183);
-$md-radio-border-color: rgba(0, 0, 0, 0.54);
-$md-radio-size: 20px;
-$md-radio-checked-size: 10px;
-$md-radio-ripple-size: 15px;
-
-@keyframes ripple {
-  0% {
-    box-shadow: 0px 0px 0px 1px rgba(0, 0, 0, 0.0);
-  }
-  50% {
-    box-shadow: 0px 0px 0px $md-radio-ripple-size rgba(0, 0, 0, 0.1);
-  }
-  100% {
-    box-shadow: 0px 0px 0px $md-radio-ripple-size rgba(0, 0, 0, 0);
-  }
+:root {
+  --color: rebeccapurple;
 }
 
-.md-radio {
-    margin: 16px 0;
-
-    &.md-radio-inline {
-        display: inline-block;
-    }
-
-    input[type="radio"] {
-        display: none;
-        &:checked + label:before {
-            border-color: $md-radio-checked-color;
-            animation: ripple 0.2s linear forwards;
-        }
-        &:checked + label:after {
-            transform: scale(1);
-        }
-    }
-
-    label {
-        display: inline-block;
-        min-height: $md-radio-size;
-        position: relative;
-        padding: 0 ($md-radio-size + 10px);
-        margin-bottom: 0;
-        cursor: pointer;
-        vertical-align: bottom;
-        &:before, &:after {
-            position: absolute;
-            content: '';
-            border-radius: 50%;
-            transition: all .3s ease;
-            transition-property: transform, border-color;
-        }
-        &:before {
-            left: 0;
-            top: 0;
-            width: $md-radio-size;
-            height: $md-radio-size;
-            border: 2px solid $md-radio-border-color;
-        }
-        &:after {
-            top: $md-radio-size / 2 - $md-radio-checked-size / 2;
-            left: $md-radio-size / 2 - $md-radio-checked-size / 2;
-            width:$md-radio-checked-size;
-            height:$md-radio-checked-size;
-            transform: scale(0);
-            background:$md-radio-checked-color;
-        }
-    }
-}
-
-
-
-// *************************************
-
-// *************************************
-*, *:before, *:after {
+*,
+*:before,
+*:after {
   box-sizing: border-box;
 }
 
-body {
-  background:#f0f0f0;
-  position: absolute;
-  width:100%;
-  padding:0;
-  margin:0;
-  font-family: "Roboto", sans-serif;
-  color: #333;
+.radio {
+  display: grid;
+  grid-template-columns: min-content auto;
+  grid-gap: 0.5em;
+  font-size: 2.25rem;
+  color: var(--color);
+
+  &:focus-within {
+    .radio__label {
+      transform: scale(1.05);
+      opacity: 1;
+    }
+  }
 }
 
-section {
-  background:white;
-  margin:0 auto;
-  padding: 4em;
-  max-width: 800px;
-  h1 {
-    margin: 0 0 2em;
+.radio__label {
+  line-height: 1;
+  transition: 180ms all ease-in-out;
+  opacity: 0.8;
+}
+
+.radio__input {
+  display: flex;
+
+  input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+
+    &:focus + .radio__control {
+      box-shadow: 0 0 0 0.05em #fff, 0 0 0.15em 0.1em currentColor;
+    }
   }
-  h3 {
-    margin: 1.5em 0 0;
+}
+
+.radio-gradient input:checked + .radio__control {
+  background: radial-gradient(currentcolor 50%, rgba(255, 0, 0, 0) 51%);
+}
+
+.radio-before {
+  .radio__control {
+    display: grid;
+    place-items: center;
   }
+
+  input + .radio__control::before {
+    content: "";
+    width: 0.5em;
+    height: 0.5em;
+    box-shadow: inset 0.5em 0.5em currentColor;
+    border-radius: 50%;
+    transition: 180ms transform ease-in-out;
+    transform: scale(0);
+  }
+
+  input:checked + .radio__control::before {
+    transform: scale(1);
+  }
+}
+
+.radio__control {
+  display: block;
+  width: 1em;
+  height: 1em;
+  border-radius: 50%;
+  border: 0.1em solid currentColor;
+  transform: translateY(-0.05em);
+}
+
+body {
+  min-height: 100vh;
+  display: grid;
+  place-content: center;
+  grid-gap: 2rem;
+  padding: 1rem;
 }

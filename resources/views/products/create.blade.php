@@ -3,7 +3,6 @@
 $menu = false ;
 @endphp
 
-
 @push('styles')
 <link rel="stylesheet" href="{{ asset('/web/css/products_custom.css')}}">
 
@@ -95,7 +94,21 @@ $menu = false ;
                     @enderror
 
                 </div>
+                <label class="radio radio-gradient">
+                    <span class="radio__input">
+                      <input type="radio" name="radio">
+                      <span class="radio__control"></span>
+                    </span>
+                    <span class="radio__label">Radio 1 - radial-gradient</span>
+                  </label>
 
+                  <label class="radio radio-before">
+                    <span class="radio__input">
+                      <input type="radio" name="radio">
+                      <span class="radio__control"></span>
+                    </span>
+                    <span class="radio__label">Radio 2 - :before</span>
+                  </label>
                 <div class="form-group col-md-6 col-xs-12">
                     <h4>@lang('general.tag')</h4>
 
@@ -119,15 +132,15 @@ $menu = false ;
                     <h4>Order Condition</h4>
                     <ul>
                         <li>
-                            <label for="r1">
-                                <input type="radio" id="r1" value="1" name="product_condition">
+                            <label for="r1d">
+                                <input type="radio" id="r1d" value="1" name="product_condition">
                                 <span>new</span>
                             </label>
                         </li>
 
                         <li>
-                            <label for="r2">
-                                <input type="radio" id="r2" value="0" name="product_condition">
+                            <label for="r2d">
+                                <input type="radio" id="r2d" value="0" name="product_condition">
                                 <span>Used</span>
                             </label>
                         </li>
@@ -138,58 +151,7 @@ $menu = false ;
                     @enderror
 
                 </div>
-                <section>
-                    <h1>Simple material design CSS only radio button example</h1>
-                    <div>
-                        <div class="md-radio">
-                            <input id="1" type="radio" name="g" checked>
-                            <label for="1">Option 1</label>
-                        </div>
-                        <div class="md-radio">
-                            <input id="2" type="radio" name="g">
-                            <label for="2">Option 2</label>
-                        </div>
-                    </div>
-                    <div>
-                        <h3>Inline</h3>
-                        <div class="md-radio md-radio-inline">
-                            <input id="3" type="radio" name="g2" checked>
-                            <label for="3">Option 3</label>
-                        </div>
-                        <div class="md-radio md-radio-inline">
-                            <input id="4" type="radio" name="g2">
-                            <label for="4">Option 4</label>
-                        </div>
-                    </div>
-                    <div>
-                        <h3>Inline without text</h3>
-                        <div class="md-radio md-radio-inline">
-                            <input id="5" type="radio" name="g3" checked>
-                            <label for="5"></label>
-                        </div>
-                        <div class="md-radio md-radio-inline">
-                            <input id="6" type="radio" name="g3">
-                            <label for="6">Option 6</label>
-                        </div>
-                    </div>
-                    <div style="width:30em">
-                        <h3>Long text</h3>
-                        <div class="md-radio">
-                            <input id="7" type="radio" name="g7" checked>
-                            <label for="7">
-                                Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor
-                                invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.
-                            </label>
-                        </div>
-                        <div class="md-radio">
-                            <input id="8" type="radio" name="g7">
-                            <label for="8">
-                                Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor
-                                invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.
-                            </label>
-                        </div>
-                    </div>
-                </section>
+
 
 
                 <div class="form-group col-md-12 col-xs-12">
