@@ -138,7 +138,58 @@ $menu = false ;
                     @enderror
 
                 </div>
-
+                <section>
+                    <h1>Simple material design CSS only radio button example</h1>
+                    <div>
+                        <div class="md-radio">
+                            <input id="1" type="radio" name="g" checked>
+                            <label for="1">Option 1</label>
+                        </div>
+                        <div class="md-radio">
+                            <input id="2" type="radio" name="g">
+                            <label for="2">Option 2</label>
+                        </div>
+                    </div>
+                    <div>
+                        <h3>Inline</h3>
+                        <div class="md-radio md-radio-inline">
+                            <input id="3" type="radio" name="g2" checked>
+                            <label for="3">Option 3</label>
+                        </div>
+                        <div class="md-radio md-radio-inline">
+                            <input id="4" type="radio" name="g2">
+                            <label for="4">Option 4</label>
+                        </div>
+                    </div>
+                    <div>
+                        <h3>Inline without text</h3>
+                        <div class="md-radio md-radio-inline">
+                            <input id="5" type="radio" name="g3" checked>
+                            <label for="5"></label>
+                        </div>
+                        <div class="md-radio md-radio-inline">
+                            <input id="6" type="radio" name="g3">
+                            <label for="6">Option 6</label>
+                        </div>
+                    </div>
+                    <div style="width:30em">
+                        <h3>Long text</h3>
+                        <div class="md-radio">
+                            <input id="7" type="radio" name="g7" checked>
+                            <label for="7">
+                                Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor
+                                invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.
+                            </label>
+                        </div>
+                        <div class="md-radio">
+                            <input id="8" type="radio" name="g7">
+                            <label for="8">
+                                Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor
+                                invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.
+                            </label>
+                        </div>
+                    </div>
+                </section>
 
 
                 <div class="form-group col-md-12 col-xs-12">
