@@ -135,6 +135,8 @@ return [
     'description_ar' =>  '(عربي) تفاصيل المنتج ',
     'description_en' =>  '(إنجليزي) تفاصيل المنتج ',
 
+    'product_main_image' =>  'صورة المنتج الرئيسية ',
+    'product_addional_image' =>  'صورة المنتج الرئيسيةالإضافية ',
 
     'main_categories' =>  ' الأقسام الرئيسية',
     'sub_categories' =>  ' الأقسام الفرعية',

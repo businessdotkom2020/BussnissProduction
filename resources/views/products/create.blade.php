@@ -109,7 +109,7 @@ $menu = false ;
 
 
                 <div class="form-group col-md-12 col-xs-12">
-                    <h4>@lang('general.description_ar') (ar)</h4>
+                    <h4>@lang('general.description_ar') </h4>
                     <textarea name="description_ar" class="form-control"></textarea>
 
                     @error('description_ar')
@@ -118,7 +118,7 @@ $menu = false ;
 
                 </div>
                 <div class="form-group col-md-12 col-xs-12">
-                    <h4>@lang('general.description_en') (en)</h4>
+                    <h4>@lang('general.description_en') </h4>
                     <textarea name="description_en" class="form-control"></textarea>
 
                     @error('description_en')
@@ -138,7 +138,7 @@ $menu = false ;
 
 
                 <div class="form-group col-md-12 col-xs-12">
-                    <h4>Product Main Image</h4>
+                    <h4>@lang('general.product_main_image') </h4>
                     <div class="s-item col-md-4 col-sm-6 col-xs-12">
 
 
@@ -151,10 +151,15 @@ $menu = false ;
                     </div>
                     <div class="s-item col-md-4 col-sm-6 col-xs-12">
                     </div>
+
+
+                    @error('image')
+                    <div class="alert" style="color:#a94442">{{ $message }}</div>
+                    @enderror
                 </div>
 
                 <div class="form-group col-md-12 col-xs-12">
-                    <h4>Product Images</h4>
+                    <h4>@lang('general.product_addional_image') </h4>
                     <div class="s-item col-md-4 col-sm-6 col-xs-12">
                         <div class="file-upload-wrapper">
                             <input type="file" name="images[]" id="input-file-max-fs" class="file-upload"
@@ -193,7 +198,7 @@ $menu = false ;
                     </div>
 
 
-                    @error('name_ar')
+                    @error('images')
                     <div class="alert" style="color:#a94442">{{ $message }}</div>
                     @enderror
 
