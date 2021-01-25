@@ -2,6 +2,14 @@
 @php
 $menu = false ;
 @endphp
+
+<link rel="stylesheet" href="{{ asset('/web/css/products-custom.css')}}">
+@push('styles')
+<link rel="stylesheet" href="{{ asset('/web/css/products-custom.css')}}">
+
+@endpush
+
+
 @section('content')
 <main class="main-content col-xs-12">
     <div class="add-req-wrap col-xs-12">
@@ -111,15 +119,15 @@ $menu = false ;
                     <h4>Order Condition</h4>
                     <ul>
                         <li>
-                            <label>
-                                <input type="radio" value="1" name="product_condition">
+                            <label for="r1d">
+                                <input type="radio" id="r1d" value="1" name="product_condition">
                                 <span>new</span>
                             </label>
                         </li>
 
                         <li>
-                            <label>
-                                <input type="radio" value="0" name="product_condition">
+                            <label for="r2d">
+                                <input type="radio" id="r2d" value="0" name="product_condition">
                                 <span>Used</span>
                             </label>
                         </li>
