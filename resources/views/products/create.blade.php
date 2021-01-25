@@ -205,7 +205,7 @@ $menu = false ;
                 </h3>
                 <br>
                 <div id="prices">
-                    <div class="form-group col-md-4 col-xs-12">
+                    <div class="form-group col-md-5 col-xs-12">
                         <h4>@lang('general.price')</h4>
                         <input name="prices[0][price]" type="text" class="form-control">
                     </div>
@@ -233,7 +233,9 @@ $menu = false ;
                 </div>
                 <div class="form-group col-md-12 col-xs-12">
                 </div>
-                <h3 class="update-header">@lang('general.product_attributes')</h3>
+                <div class="form-group col-md-12 col-xs-12">
+                    <h3 class="update-header">@lang('general.product_attributes')</h3>
+                </div>
                 <br>
                 <div id="parent">
                     <div class="form-group col-md-6 col-xs-12">
