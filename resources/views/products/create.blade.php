@@ -206,18 +206,18 @@ $menu = false ;
                 <br>
                 <div id="prices">
                     <div class="form-group col-md-6 col-xs-12">
-                        <h4>Price</h4>
+                        <h4>@lang('general.price')</h4>
                         <input name="prices[0][price]" type="text" class="form-control">
                     </div>
                     <div class="form-group col-md-3 col-xs-12">
-                        <h4>Quantity From</h4>
+                        <h4>@lang('general.quantity_from')</h4>
                         <input name="prices[0][quantity_from]" type="text" class="form-control">
                     </div>
                     <div class="form-group col-md-3 col-xs-12">
-                        <h4>Quantity To)</h4>
-                        <input name="prices[0][quantity_to]" type="text" class="form-control">
+                        <h4>@lang('general.quantity_to')</h4>
+                        <input name="prices[0][quantity_to]"  type="text" class="form-control">
                     </div>
-                    @error('name_ar')
+                    @error('product_price_list')
                     <div class="alert" style="color:#a94442">{{ $message }}</div>
                     @enderror
                 </div>
@@ -255,7 +255,7 @@ $menu = false ;
                 </div>
                 <div class="form-group col-md-12 col-xs-12">
                 </div>
-                <h3 class="update-header">@lang('general.product_condition')</h3>
+
                 <div style="text-align: center;" class="form-group col-md-12 col-xs-12">
                     <button type="submit" class="btn">Add Product</button>
                 </div>

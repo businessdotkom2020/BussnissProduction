@@ -150,6 +150,8 @@ return [
     'price' =>  ' السعر ',
     'optional' =>  ' (إختيارى)  ',
     'sale_price' =>  'السعر بعد الخصم  ',
+    'quantity_from' =>  'السعر  من ',
+    'quantity_to' =>  'السعر بعد الخصم  ',
 
 
 
