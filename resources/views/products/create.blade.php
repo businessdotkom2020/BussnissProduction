@@ -185,7 +185,7 @@ $menu = false ;
         <div class="form-group col-md-6 col-xs-12">
             <h4>@lang('general.price')</h4>
             <input name="price" type="text" class="form-control">
-            @error('name_ar')
+            @error('price')
             <div class="alert" style="color:#a94442">{{ $message }}</div>
             @enderror
         </div>
