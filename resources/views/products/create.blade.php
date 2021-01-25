@@ -258,7 +258,7 @@ $menu = false ;
                     @enderror
                 </div>
                 <div style="text-align: center;" class="form-group col-md-12 col-xs-12">
-                    <button type="submit" onclick="addChild();" class="btn">@lang('general.add_rquest')</button>
+                    <button type="button" onclick="addChild();" class="btn">@lang('general.add_rquest')</button>
                 </div>
                 <div class="form-group col-md-12 col-xs-12">
                 </div>
