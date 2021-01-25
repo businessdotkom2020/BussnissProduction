@@ -119,15 +119,15 @@ $menu = false ;
                     <h4>Order Condition</h4>
                     <ul>
                         <li>
-                            <label for="r1d">
-                                <input type="radio" id="r1d" value="1" name="product_condition">
+                            <label for="r1">
+                                <input type="radio" id="r1" value="1" name="product_condition">
                                 <span>new</span>
                             </label>
                         </li>
 
                         <li>
-                            <label for="r2d">
-                                <input type="radio" id="r2d" value="0" name="product_condition">
+                            <label for="r2">
+                                <input type="radio" id="r2" value="0" name="product_condition">
                                 <span>Used</span>
                             </label>
                         </li>
