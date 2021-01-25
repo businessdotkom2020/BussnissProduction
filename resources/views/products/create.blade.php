@@ -205,7 +205,7 @@ $menu = false ;
                 </h3>
                 <br>
                 <div id="prices">
-                    <div class="form-group col-md-6 col-xs-12">
+                    <div class="form-group col-md-4 col-xs-12">
                         <h4>@lang('general.price')</h4>
                         <input name="prices[0][price]" type="text" class="form-control">
                     </div>
@@ -217,11 +217,9 @@ $menu = false ;
                         <h4>@lang('general.quantity_to')</h4>
                         <input name="prices[0][quantity_to]" type="number" class="form-control">
                     </div>
-                    <div class="form-group col-md-3 col-xs-12">
+                    <div class="form-group col-md-2 col-xs-12">
                         <button type="button" class="btn btn-danger">Delete </button>
-                        <button type="button" class="btn btn-danger"><i class="bi bi-trash"></i>
-
-                            <span class="visually-hidden">Button</span>
+                        <button type="button" class="btn btn-danger"><i class="fa fa-trash" aria-hidden="true"></i>
                         </button>
                     </div>
                     @error('product_price_list')
