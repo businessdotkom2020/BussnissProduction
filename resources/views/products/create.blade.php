@@ -94,21 +94,8 @@ $menu = false ;
                     @enderror
 
                 </div>
-                <label class="radio radio-gradient">
-                    <span class="radio__input">
-                      <input type="radio" name="radio">
-                      <span class="radio__control"></span>
-                    </span>
-                    <span class="radio__label">Radio 1 - radial-gradient</span>
-                  </label>
 
-                  <label class="radio radio-before">
-                    <span class="radio__input">
-                      <input type="radio" name="radio">
-                      <span class="radio__control"></span>
-                    </span>
-                    <span class="radio__label">Radio 2 - :before</span>
-                  </label>
+
                 <div class="form-group col-md-6 col-xs-12">
                     <h4>@lang('general.tag')</h4>
 
