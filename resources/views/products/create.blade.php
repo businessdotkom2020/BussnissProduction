@@ -190,9 +190,9 @@ $menu = false ;
             @enderror
         </div>
         <div class="form-group col-md-6 col-xs-12">
-            <h4>@lang('general.sale_price')</h4>
+            <h4>@lang('general.sale_price') @lang('general.optional')</h4>
             <input name="sale_price" type="text" class="form-control">
-            @error('name_ar')
+            @error('sale_price')
             <div class="alert" style="color:#a94442">{{ $message }}</div>
             @enderror
         </div>
