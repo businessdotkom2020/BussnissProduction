@@ -88,177 +88,179 @@ $menu = false ;
                         <li>
                             <label for="r1d">
                                 <input type="radio" id="r1d" value="1" name="product_condition">
-                                <span>@lang('general.new') </span> </label> </li> <li>
-                                        <label for="r2d">
-                                            <input type="radio" id="r2d" value="0" name="product_condition">
-                                            <span>@lang('general.used') </span> </label> </li> </ul>
-                                                    @error('product_condition') <div class="alert"
-                                                    style="color:#a94442">{{ $message }}
+                                <span>@lang('general.new') </span> </label> </li>
+                        <li>
+                            <label for="r2d">
+                                <input type="radio" id="r2d" value="0" name="product_condition">
+                                <span>@lang('general.used') </span> </label> </li>
+                    </ul>
+                    @error('product_condition') <div class="alert" style="color:#a94442">{{ $message }}
+                    </div>
+                    @enderror
                 </div>
-                @enderror
-        </div>
-        <div class="form-group col-md-12 col-xs-12">
-            <h4>@lang('general.description_ar') </h4>
-            <textarea name="description_ar" class="form-control"></textarea>
-            @error('description_ar')
-            <div class="alert" style="color:#a94442">{{ $message }}</div>
-            @enderror
-        </div>
-        <div class="form-group col-md-12 col-xs-12">
-            <h4>@lang('general.description_en') </h4>
-            <textarea name="description_en" class="form-control"></textarea>
-            @error('description_en')
-            <div class="alert" style="color:#a94442">{{ $message }}</div>
-            @enderror
-        </div>
-        <div class="form-group col-md-12 col-xs-12">
-        </div>
-        <div class="form-group col-md-12 col-xs-12">
-        </div>
-        <h3 class="update-header">@lang('general.product_Images')</h3>
-        <br>
-        <br>
-        <div class="form-group col-md-12 col-xs-12">
-            <h4>@lang('general.product_main_image') </h4>
-            <div class="s-item col-md-4 col-sm-6 col-xs-12">
-            </div>
-            <div class="s-item col-md-4 col-sm-6 col-xs-12">
-                <div class="file-upload-wrapper">
-                    <input type="file" name="image" id="input-file-max-fs" class="file-upload"
-                        data-max-file-size="5M" />
+                <div class="form-group col-md-12 col-xs-12">
+                    <h4>@lang('general.description_ar') </h4>
+                    <textarea name="description_ar" class="form-control"></textarea>
+                    @error('description_ar')
+                    <div class="alert" style="color:#a94442">{{ $message }}</div>
+                    @enderror
                 </div>
-            </div>
-            <div class="s-item col-md-4 col-sm-6 col-xs-12">
-            </div>
-            @error('image')
-            <div class="alert" style="color:#a94442">{{ $message }}</div>
-            @enderror
-        </div>
-        <div class="form-group col-md-12 col-xs-12">
-            <h4>@lang('general.product_addional_image') </h4>
-            <div class="s-item col-md-4 col-sm-6 col-xs-12">
-                <div class="file-upload-wrapper">
-                    <input type="file" name="images[]" id="input-file-max-fs" class="file-upload"
-                        data-max-file-size="5M" />
+                <div class="form-group col-md-12 col-xs-12">
+                    <h4>@lang('general.description_en') </h4>
+                    <textarea name="description_en" class="form-control"></textarea>
+                    @error('description_en')
+                    <div class="alert" style="color:#a94442">{{ $message }}</div>
+                    @enderror
                 </div>
-            </div>
-            <div class="s-item col-md-4 col-sm-6 col-xs-12">
-                <div class="file-upload-wrapper">
-                    <input type="file" name="images[]" id="input-file-max-fs" class="file-upload"
-                        data-max-file-size="5M" />
+                <div class="form-group col-md-12 col-xs-12">
                 </div>
-            </div>
-            <div class="s-item col-md-4 col-sm-6 col-xs-12">
-                <div class="file-upload-wrapper">
-                    <input type="file" name="images[]" id="input-file-max-fs" class="file-upload"
-                        data-max-file-size="5M" />
+                <div class="form-group col-md-12 col-xs-12">
                 </div>
-            </div>
-            <div class="s-item col-md-4 col-sm-6 col-xs-12">
-                <div class="file-upload-wrapper">
-                    <input type="file" name="images[]" id="input-file-max-fs" class="file-upload"
-                        data-max-file-size="5M" />
+                <h3 class="update-header">@lang('general.product_Images')</h3>
+                <br>
+                <br>
+                <div class="form-group col-md-12 col-xs-12">
+                    <h4>@lang('general.product_main_image') </h4>
+                    <div class="s-item col-md-4 col-sm-6 col-xs-12">
+                    </div>
+                    <div class="s-item col-md-4 col-sm-6 col-xs-12">
+                        <div class="file-upload-wrapper">
+                            <input type="file" name="image" id="input-file-max-fs" class="file-upload"
+                                data-max-file-size="5M" />
+                        </div>
+                    </div>
+                    <div class="s-item col-md-4 col-sm-6 col-xs-12">
+                    </div>
+                    @error('image')
+                    <div class="alert" style="color:#a94442">{{ $message }}</div>
+                    @enderror
                 </div>
-            </div>
-            <div class="s-item col-md-4 col-sm-6 col-xs-12">
-                <div class="file-upload-wrapper">
-                    <input type="file" name="images[]" id="input-file-max-fs" class="file-upload"
-                        data-max-file-size="5M" />
+                <div class="form-group col-md-12 col-xs-12">
+                    <h4>@lang('general.product_addional_image') </h4>
+                    <div class="s-item col-md-4 col-sm-6 col-xs-12">
+                        <div class="file-upload-wrapper">
+                            <input type="file" name="images[]" id="input-file-max-fs" class="file-upload"
+                                data-max-file-size="5M" />
+                        </div>
+                    </div>
+                    <div class="s-item col-md-4 col-sm-6 col-xs-12">
+                        <div class="file-upload-wrapper">
+                            <input type="file" name="images[]" id="input-file-max-fs" class="file-upload"
+                                data-max-file-size="5M" />
+                        </div>
+                    </div>
+                    <div class="s-item col-md-4 col-sm-6 col-xs-12">
+                        <div class="file-upload-wrapper">
+                            <input type="file" name="images[]" id="input-file-max-fs" class="file-upload"
+                                data-max-file-size="5M" />
+                        </div>
+                    </div>
+                    <div class="s-item col-md-4 col-sm-6 col-xs-12">
+                        <div class="file-upload-wrapper">
+                            <input type="file" name="images[]" id="input-file-max-fs" class="file-upload"
+                                data-max-file-size="5M" />
+                        </div>
+                    </div>
+                    <div class="s-item col-md-4 col-sm-6 col-xs-12">
+                        <div class="file-upload-wrapper">
+                            <input type="file" name="images[]" id="input-file-max-fs" class="file-upload"
+                                data-max-file-size="5M" />
+                        </div>
+                    </div>
+                    <div class="s-item col-md-4 col-sm-6 col-xs-12">
+                        <div class="file-upload-wrapper">
+                            <input type="file" name="images[]" id="input-file-max-fs" class="file-upload"
+                                data-max-file-size="5M" />
+                        </div>
+                    </div>
+                    @error('images')
+                    <div class="alert" style="color:#a94442">{{ $message }}</div>
+                    @enderror
                 </div>
-            </div>
-            <div class="s-item col-md-4 col-sm-6 col-xs-12">
-                <div class="file-upload-wrapper">
-                    <input type="file" name="images[]" id="input-file-max-fs" class="file-upload"
-                        data-max-file-size="5M" />
+                <div class="form-group col-md-12 col-xs-12">
                 </div>
-            </div>
-            @error('images')
-            <div class="alert" style="color:#a94442">{{ $message }}</div>
-            @enderror
+                <div class="form-group col-md-12 col-xs-12">
+                </div>
+                <h3 class="update-header">@lang('general.product_price')</h3>
+                <br>
+                <div class="form-group col-md-6 col-xs-12">
+                    <h4>@lang('general.price')</h4>
+                    <input name="price" type="text" class="form-control">
+                    @error('price')
+                    <div class="alert" style="color:#a94442">{{ $message }}</div>
+                    @enderror
+                </div>
+                <div class="form-group col-md-6 col-xs-12">
+                    <h4>@lang('general.sale_price') <small> @lang('general.optional') </small></h4>
+                    <input name="sale_price" type="text" class="form-control">
+                    @error('sale_price')
+                    <div class="alert" style="color:#a94442">{{ $message }}</div>
+                    @enderror
+                </div>
+                <div class="form-group col-md-12 col-xs-12">
+                </div>
+                <div class="form-group col-md-12 col-xs-12">
+                </div>
+                <h3 class="update-header">@lang('general.product_price_list') <small> @lang('general.optional') </small>
+                </h3>
+                <br>
+                <div id="prices">
+                    <div class="form-group col-md-6 col-xs-12">
+                        <h4>Price</h4>
+                        <input name="prices[0][price]" type="text" class="form-control">
+                    </div>
+                    <div class="form-group col-md-3 col-xs-12">
+                        <h4>Quantity From</h4>
+                        <input name="prices[0][quantity_from]" type="text" class="form-control">
+                    </div>
+                    <div class="form-group col-md-3 col-xs-12">
+                        <h4>Quantity To)</h4>
+                        <input name="prices[0][quantity_to]" type="text" class="form-control">
+                    </div>
+                    @error('name_ar')
+                    <div class="alert" style="color:#a94442">{{ $message }}</div>
+                    @enderror
+                </div>
+                <div style="text-align: center;" class="form-group col-md-12 col-xs-12">
+                    <button type="submit" onclick="addPrice();" class="btn">@lang('general.add_rquest')</button>
+                </div>
+                <div class="form-group col-md-12 col-xs-12">
+                </div>
+                <div class="form-group col-md-12 col-xs-12">
+                </div>
+                <h3 class="update-header">@lang('general.product_attributes')</h3>
+                <br>
+                <div id="parent">
+                    <div class="form-group col-md-6 col-xs-12">
+                        <select id="optselect1" onchange="selectoption(1,this)" name="options[0][attribute_id]"
+                            class="form-control">
+                            @foreach(\App\Models\Attribute::get() as $category)
+                            <option value="{{$category->id}}">
+                                {{$category->getTranslatedAttribute('name',\App::getLocale())}}
+                            </option>
+                            @endforeach
+                        </select>
+                    </div>
+                    <div class="form-group col-md-6 col-xs-12">
+                        <select id="valueselect1" required name="options[0][values_id]" class="form-control"></select>
+                    </div>
+                    @error('name_ar')
+                    <div class="alert" style="color:#a94442">{{ $message }}</div>
+                    @enderror
+                </div>
+                <div style="text-align: center;" class="form-group col-md-12 col-xs-12">
+                    <button type="submit" onclick="addChild();" class="btn">@lang('general.add_rquest')</button>
+                </div>
+                <div class="form-group col-md-12 col-xs-12">
+                </div>
+                <div class="form-group col-md-12 col-xs-12">
+                </div>
+                <h3 class="update-header">@lang('general.product_condition')</h3>
+                <div style="text-align: center;" class="form-group col-md-12 col-xs-12">
+                    <button type="submit" class="btn">Add Product</button>
+                </div>
+            </form>
         </div>
-        <div class="form-group col-md-12 col-xs-12">
-        </div>
-        <div class="form-group col-md-12 col-xs-12">
-        </div>
-        <h3 class="update-header">@lang('general.product_price')</h3>
-        <br>
-        <div class="form-group col-md-6 col-xs-12">
-            <h4>@lang('general.price')</h4>
-            <input name="price" type="text" class="form-control">
-            @error('price')
-            <div class="alert" style="color:#a94442">{{ $message }}</div>
-            @enderror
-        </div>
-        <div class="form-group col-md-6 col-xs-12">
-            <h4>@lang('general.sale_price') @lang('general.optional')</h4>
-            <input name="sale_price" type="text" class="form-control">
-            @error('sale_price')
-            <div class="alert" style="color:#a94442">{{ $message }}</div>
-            @enderror
-        </div>
-        <div class="form-group col-md-12 col-xs-12">
-        </div>
-        <div class="form-group col-md-12 col-xs-12">
-        </div>
-        <h3 class="update-header">@lang('general.product_price_list')</h3>
-        <br>
-        <div id="prices">
-            <div class="form-group col-md-6 col-xs-12">
-                <h4>Price</h4>
-                <input name="prices[0][price]" type="text" class="form-control">
-            </div>
-            <div class="form-group col-md-3 col-xs-12">
-                <h4>Quantity From</h4>
-                <input name="prices[0][quantity_from]" type="text" class="form-control">
-            </div>
-            <div class="form-group col-md-3 col-xs-12">
-                <h4>Quantity To)</h4>
-                <input name="prices[0][quantity_to]" type="text" class="form-control">
-            </div>
-            @error('name_ar')
-            <div class="alert" style="color:#a94442">{{ $message }}</div>
-            @enderror
-        </div>
-        <div style="text-align: center;" class="form-group col-md-12 col-xs-12">
-            <button type="submit" onclick="addPrice();" class="btn">@lang('general.add_rquest')</button>
-        </div>
-        <div class="form-group col-md-12 col-xs-12">
-        </div>
-        <div class="form-group col-md-12 col-xs-12">
-        </div>
-        <h3 class="update-header">@lang('general.product_attributes')</h3>
-        <br>
-        <div id="parent">
-            <div class="form-group col-md-6 col-xs-12">
-                <select id="optselect1" onchange="selectoption(1,this)" name="options[0][attribute_id]"
-                    class="form-control">
-                    @foreach(\App\Models\Attribute::get() as $category)
-                    <option value="{{$category->id}}">
-                        {{$category->getTranslatedAttribute('name',\App::getLocale())}}
-                    </option>
-                    @endforeach
-                </select>
-            </div>
-            <div class="form-group col-md-6 col-xs-12">
-                <select id="valueselect1" required name="options[0][values_id]" class="form-control"></select>
-            </div>
-            @error('name_ar')
-            <div class="alert" style="color:#a94442">{{ $message }}</div>
-            @enderror
-        </div>
-        <div style="text-align: center;" class="form-group col-md-12 col-xs-12">
-            <button type="submit" onclick="addChild();" class="btn">@lang('general.add_rquest')</button>
-        </div>
-        <div class="form-group col-md-12 col-xs-12">
-        </div>
-        <div class="form-group col-md-12 col-xs-12">
-        </div>
-        <h3 class="update-header">@lang('general.product_condition')</h3>
-        <div style="text-align: center;" class="form-group col-md-12 col-xs-12">
-            <button type="submit" class="btn">Add Product</button>
-        </div>
-        </form>
-    </div>
     </div>
 </main>
 <!--end::Form-->
