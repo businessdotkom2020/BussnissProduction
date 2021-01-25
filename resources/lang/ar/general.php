@@ -132,11 +132,16 @@ return [
     'product_name_ar' =>  '(عربي) إسم المنتج ',
     'product_name_en' =>  '(إنجليزي) إسم المنتج ',
 
+    'description_ar' =>  '(عربي) تفاصيل المنتج ',
+    'description_en' =>  '(إنجليزي) تفاصيل المنتج ',
+
+
     'main_categories' =>  ' الأقسام الرئيسية',
     'sub_categories' =>  ' الأقسام الفرعية',
     'sub_sub_categories' =>  '  الأقسام الثانوية',
 
-
-
     'brand' =>  'العلامة التجارية',
+    'tag' =>  ' الفئة',
+
+
 ];

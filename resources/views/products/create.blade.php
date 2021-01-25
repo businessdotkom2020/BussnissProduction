@@ -82,13 +82,15 @@ $menu = false ;
 
                     </select>
 
-                    @error('name_ar')
+                    @error('brand_id')
                     <div class="alert" style="color:#a94442">{{ $message }}</div>
                     @enderror
 
                 </div>
 
                 <div class="form-group col-md-12 col-xs-12">
+                    <h4>@lang('general.tag')</h4>
+
                     <select id="subsubcategory" required name="tag_id" id="city" class="form-control">
                         <option selected disabled>Tag</option>
 
@@ -98,8 +100,7 @@ $menu = false ;
 
                     </select>
 
-
-                    @error('name_ar')
+                    @error('tag_id')
                     <div class="alert" style="color:#a94442">{{ $message }}</div>
                     @enderror
 
@@ -108,19 +109,19 @@ $menu = false ;
 
 
                 <div class="form-group col-md-12 col-xs-12">
-                    <h4>@lang('general.description') (ar)</h4>
+                    <h4>@lang('general.description_ar') (ar)</h4>
                     <textarea name="description_ar" class="form-control"></textarea>
 
-                    @error('name_ar')
+                    @error('description_ar')
                     <div class="alert" style="color:#a94442">{{ $message }}</div>
                     @enderror
 
                 </div>
                 <div class="form-group col-md-12 col-xs-12">
-                    <h4>@lang('general.description') (en)</h4>
+                    <h4>@lang('general.description_en') (en)</h4>
                     <textarea name="description_en" class="form-control"></textarea>
 
-                    @error('name_ar')
+                    @error('description_en')
                     <div class="alert" style="color:#a94442">{{ $message }}</div>
                     @enderror
 
