@@ -218,7 +218,7 @@ $menu = false ;
                         <input name="prices[0][quantity_to]" type="number" class="form-control">
                     </div>
                     <div class="form-group col-md-1 col-xs-12">
-                        <button type="button" class="btn btn-danger"><i style=" color: white; class=" fa fa-trash"
+                        <button type="button" class="btn btn-danger"><i style=" color: white;" class=" fa fa-trash"
                                 aria-hidden="true"></i>
                         </button>
                     </div>
