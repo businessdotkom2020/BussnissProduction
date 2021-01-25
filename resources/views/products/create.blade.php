@@ -88,7 +88,7 @@ $menu = false ;
 
                 </div>
 
-                <div class="form-group col-md-12 col-xs-12">
+                <div class="form-group col-md-6 col-xs-12">
                     <h4>@lang('general.tag')</h4>
 
                     <select id="subsubcategory" required name="tag_id" id="city" class="form-control">
@@ -101,6 +101,31 @@ $menu = false ;
                     </select>
 
                     @error('tag_id')
+                    <div class="alert" style="color:#a94442">{{ $message }}</div>
+                    @enderror
+
+                </div>
+
+
+                <div class="form-group col-md-6 col-xs-12">
+                    <h4>Order Condition</h4>
+                    <ul>
+                        <li>
+                            <label>
+                                <input type="radio" value="1" name="product_condition">
+                                <span>new</span>
+                            </label>
+                        </li>
+
+                        <li>
+                            <label>
+                                <input type="radio" value="0" name="product_condition">
+                                <span>Used</span>
+                            </label>
+                        </li>
+                    </ul>
+
+                    @error('name_ar')
                     <div class="alert" style="color:#a94442">{{ $message }}</div>
                     @enderror
 
@@ -310,30 +335,6 @@ $menu = false ;
                 <h3 class="update-header">@lang('general.product_condition')</h3>
 
 
-
-                <div class="form-group col-md-12 col-xs-12">
-                    <h4>Order Condition</h4>
-                    <ul>
-                        <li>
-                            <label>
-                                <input type="radio" value="1" name="product_condition">
-                                <span>new</span>
-                            </label>
-                        </li>
-
-                        <li>
-                            <label>
-                                <input type="radio" value="0" name="product_condition">
-                                <span>Used</span>
-                            </label>
-                        </li>
-                    </ul>
-
-                    @error('name_ar')
-                    <div class="alert" style="color:#a94442">{{ $message }}</div>
-                    @enderror
-
-                </div>
 
 
                 <div style="text-align: center;" class="form-group col-md-12 col-xs-12">
