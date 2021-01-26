@@ -132,13 +132,7 @@ $menu = false ;
 
                 {{-- ************************* Start Description  ************************************** --}}
 
-                <div class="form-group col-md-12 col-xs-12">
-                    <h4>@lang('general.description_ar') </h4>
-                    <textarea name="description" class="form-control"></textarea>
-                    @error('description_ar')
-                    <div class="alert" style="color:#a94442">{{ $message }}</div>
-                    @enderror
-                </div>
+
                 <div class="form-group col-md-12 col-xs-12">
                     <h4>@lang('general.description_en') </h4>
                     <textarea name="description_en" class="form-control"></textarea>
@@ -146,6 +140,14 @@ $menu = false ;
                     <div class="alert" style="color:#a94442">{{ $message }}</div>
                     @enderror
                 </div>
+                <div class="form-group col-md-12 col-xs-12">
+                    <h4>@lang('general.description_ar') </h4>
+                    <textarea name="description" class="form-control"></textarea>
+                    @error('description_ar')
+                    <div class="alert" style="color:#a94442">{{ $message }}</div>
+                    @enderror
+                </div>
+
                 <div class="form-group col-md-12 col-xs-12">
                 </div>
                 <div class="form-group col-md-12 col-xs-12">
