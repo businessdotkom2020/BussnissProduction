@@ -213,9 +213,8 @@ class ProductsController extends Controller
             }
         }
 
-        $attributes = array();
-        $attributes = $request->options;
-        return $attributes;
+        $attributes =   $request->options ?  $request->options : array();
+
         foreach ($attributes as $attribute) {
             if ($attribute['attribute_id'] &&  $attribute['values_id']) {
 
