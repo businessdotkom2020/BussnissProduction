@@ -154,6 +154,8 @@ return [
     'quantity_to' =>  'السعر بعد الخصم  ',
     'add_price_list' =>  'إضافة قائمة أسعار جديدة',
     'add_product_attributes' =>  'إضافة  سمة جديدة',
+    'choose_attribute' =>  '  إختر السمة',
+    'choose_attribute_value' =>  'إختر سمة جديدة',
 
 
 
