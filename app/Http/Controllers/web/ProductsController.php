@@ -202,12 +202,16 @@ class ProductsController extends Controller
         return array_filter($price_list = $request->prices);
 
         foreach ($price_list as $price) {
-            $price_option = new ProductPrice;
-            $price_option->product_id = $product->id;
-            $price_option->price = $price['price'];
-            $price_option->quantity_from = $price['quantity_from'];
-            $price_option->quantity_to = $price['quantity_to'];
-            $price_option->save();
+            if( $price['price'] &&  $price['quantity_from'] && $price['quantity_to']){
+
+                $price_option = new ProductPrice;
+                $price_option->product_id = $product->id;
+                $price_option->price = $price['price'];
+                $price_option->quantity_from = $price['quantity_from'];
+                $price_option->quantity_to = $price['quantity_to'];
+                $price_option->save();
+
+            }
         }
 
         $attributes = [];
