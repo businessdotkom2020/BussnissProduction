@@ -283,7 +283,7 @@ $menu = false ;
                 {{-- ************************* End product attributes   ******************************* --}}
 
                 <div style="text-align: center;" class="form-group col-md-12 col-xs-12">
-                    <button type="submit" class="btn">Add Product</button>
+                    <button type="submit" class="btn"> @lang('general.add_product')</button>
                 </div>
             </form>
         </div>

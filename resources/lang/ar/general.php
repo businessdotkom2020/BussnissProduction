@@ -156,6 +156,7 @@ return [
     'add_product_attributes' =>  'إضافة  سمة جديدة',
     'choose_attribute' =>  '  إختر السمة',
     'choose_attribute_value' =>  'إختر  قيمة السمة  ',
+    'add_product' => 'إضافة المنتج',
 
 
 
