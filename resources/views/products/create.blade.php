@@ -11,8 +11,16 @@ $menu = false ;
         <div class="container">
             <form action="{{route('ProductSave')}}" method="POST" enctype="multipart/form-data">
                 @csrf
+                @foreach ($errors->all() as $error)
+                <li>{{ $error }}</li>
+                @endforeach
+
                 <h3 class="update-header">@lang('general.product_main_details')</h3>
                 <br>
+
+
+                {{-- ******************************* Start Name  ************************************** --}}
+
                 <div class="form-group col-md-6 col-xs-12">
                     <h4> @lang('general.product_name_en') </h4>
                     <input name="name_en" required type="text" class="form-control">
@@ -20,6 +28,8 @@ $menu = false ;
                     <div class="alert" style="color:#a94442">{{ $message }}</div>
                     @enderror
                 </div>
+
+
                 <div class="form-group col-md-6 col-xs-12">
                     <h4>@lang('general.product_name_ar')</h4>
                     <input name="name_ar" required type="text" class="form-control">
@@ -27,6 +37,9 @@ $menu = false ;
                     <div class="alert" style="color:#a94442">{{ $message }}</div>
                     @enderror
                 </div>
+
+                {{-- ******************************* Start Main Category  ************************************** --}}
+
                 <div class="form-group col-md-6 col-xs-12">
                     <h4>@lang('general.main_categories')</h4>
                     <select id="category" name="category_ids" class="form-control">
@@ -40,6 +53,9 @@ $menu = false ;
                     <div class="alert" style="color:#a94442">{{ $message }}</div>
                     @enderror
                 </div>
+
+                {{-- ******************************* Start Sub Category  ************************************** --}}
+
                 <div class="form-group col-md-6 col-xs-12">
                     <h4>@lang('general.sub_categories')</h4>
                     <select id="subcategory" required name="sub_category_id" class="form-control">
@@ -49,6 +65,10 @@ $menu = false ;
                     <div class="alert" style="color:#a94442">{{ $message }}</div>
                     @enderror
                 </div>
+
+                {{-- ******************************* Start Sub Sub Category  ************************************** --}}
+
+
                 <div class="form-group col-md-6 col-xs-12">
                     <h4>@lang('general.sub_sub_categories')</h4>
                     <select id="subsubcategory" required name="category_id" class="form-control">
@@ -58,9 +78,12 @@ $menu = false ;
                     <div class="alert" style="color:#a94442">{{ $message }}</div>
                     @enderror
                 </div>
+
+                {{-- ******************************* Start Brand  ************************************** --}}
+
                 <div class="form-group col-md-6 col-xs-12">
                     <h4>@lang('general.brand')</h4>
-                    <select id="subsubcategory" required name="brand_id" id="city" class="form-control">
+                    <select id="brand" required name="brand_id" id="city" class="form-control">
                         <option selected disabled>@lang('general.brand')</option>
                         @foreach(\App\Models\Brand::get() as $brand)
                         <option value="{{$brand->id}}">{{$brand->name}}</option>
@@ -70,10 +93,14 @@ $menu = false ;
                     <div class="alert" style="color:#a94442">{{ $message }}</div>
                     @enderror
                 </div>
+
+
+                {{-- ******************************* Start Tag  ************************************** --}}
+
                 <div class="form-group col-md-6 col-xs-12">
                     <h4>@lang('general.tag')</h4>
-                    <select id="subsubcategory" required name="tag_id" id="city" class="form-control">
-                        <option selected disabled>Tag</option>
+                    <select id="tag" required name="tag_id" id="city" class="form-control">
+                        <option selected disabled>@lang('general.tag')</option>
                         @foreach(\App\Models\Tag::get() as $tag)
                         <option value="{{$tag->id}}">{{$tag->name}}</option>
                         @endforeach
@@ -82,6 +109,9 @@ $menu = false ;
                     <div class="alert" style="color:#a94442">{{ $message }}</div>
                     @enderror
                 </div>
+
+                {{-- ******************************* Start Product Condition  ************************************** --}}
+
                 <div class="form-group col-md-6 col-xs-12">
                     <h4>@lang('general.product_condition') </h4>
                     <ul>
@@ -98,6 +128,10 @@ $menu = false ;
                     </div>
                     @enderror
                 </div>
+
+
+                {{-- ************************* Start Description  ************************************** --}}
+
                 <div class="form-group col-md-12 col-xs-12">
                     <h4>@lang('general.description_ar') </h4>
                     <textarea name="description_ar" class="form-control"></textarea>
@@ -116,6 +150,11 @@ $menu = false ;
                 </div>
                 <div class="form-group col-md-12 col-xs-12">
                 </div>
+
+
+
+                {{-- ************************* Start Image  ************************************** --}}
+
                 <h3 class="update-header">@lang('general.product_Images')</h3>
                 <br>
                 <br>
@@ -135,6 +174,11 @@ $menu = false ;
                     <div class="alert" style="color:#a94442">{{ $message }}</div>
                     @enderror
                 </div>
+
+
+                {{-- ************************* Start Images  ************************************** --}}
+
+
                 <div class="form-group col-md-12 col-xs-12">
                     <h4>@lang('general.product_addional_image') </h4>
                     <div class="s-item col-md-4 col-sm-6 col-xs-12">
@@ -177,6 +221,12 @@ $menu = false ;
                     <div class="alert" style="color:#a94442">{{ $message }}</div>
                     @enderror
                 </div>
+
+                {{-- ************************* End Images  ************************************** --}}
+
+
+                {{-- ************************* Start Prices ************************************** --}}
+
                 <div class="form-group col-md-12 col-xs-12">
                 </div>
                 <div class="form-group col-md-12 col-xs-12">
@@ -201,6 +251,8 @@ $menu = false ;
                 </div>
                 <div class="form-group col-md-12 col-xs-12">
                 </div>
+
+                {{-- ************************* End Prices ************************************** --}}
 
 
                 {{-- ************************* Start Price List ******************************* --}}
