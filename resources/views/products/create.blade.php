@@ -300,7 +300,7 @@ $menu = false ;
              $.each(res,function(key,value){
                  $("#valueselect"+select_id).append('<option value="'+key+'">'+value+'</option>');
              });
-                     $('#valueselect'+select_id).niceSelect('update');
+            $('#valueselect'+select_id).niceSelect('update');
 
          }
     }
@@ -364,6 +364,7 @@ $menu = false ;
                             style="padding: 10px; background: #d9534f!important; border: none; margin-top: 35px;"><i
                                 style=" color: white;" class=" fa fa-trash" aria-hidden="true"></i>
             </button>
+        </div>
 
            `;
    parent.insertAdjacentHTML('beforeend', newChild);
@@ -371,6 +372,12 @@ $menu = false ;
 
 
      $('select').niceSelect();
+   }
+
+   function deletePrice() {
+
+
+
    }
 
 
