@@ -260,10 +260,17 @@ $menu = false ;
                             @endforeach
                         </select>
                     </div>
-                    <div class="form-group col-md-6 col-xs-12">
+                    <div class="form-group col-md-5 col-xs-12">
                         <select id="valueselect1" required name="options[0][values_id]" class="form-control">
                             <option selected disabled>@lang('general.choose_attribute_value')</option>
                         </select>
+                    </div>
+
+                    <div id="list_delete_`+childNumberprice+`" class="form-group col-md-1 col-xs-12">
+                        <button type="button" onclick="deletePrice(`+childNumberprice+`);"
+                            style="padding: 10px; background: #d9534f!important; border: none; margin-top: 35px;"><i
+                                style=" color: white;" class=" fa fa-trash" aria-hidden="true"></i>
+                        </button>
                     </div>
                     @error('options')
                     <div class="alert" style="color:#a94442">{{ $message }}</div>
