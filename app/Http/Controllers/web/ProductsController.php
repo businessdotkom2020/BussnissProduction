@@ -248,7 +248,7 @@ class ProductsController extends Controller
             }
         }
 
-        return request()->all();
+        // return request()->all();
 
 
         Alert::toast('Product Added Successfully', 'success');
