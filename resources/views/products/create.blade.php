@@ -311,7 +311,7 @@ $menu = false ;
          {
 
              $("#valueselect"+select_id).empty();
-             $("#valueselect"+select_id).append('<option disabled >Select Values</option>');
+             $("#valueselect"+select_id).append("<option selected disabled>@lang('general.choose_attribute')</option>");
              $.each(res,function(key,value){
                  $("#valueselect"+select_id).append('<option value="'+key+'">'+value+'</option>');
              });
