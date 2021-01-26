@@ -23,7 +23,7 @@ $menu = false ;
 
                 <div class="form-group col-md-6 col-xs-12">
                     <h4> @lang('general.product_name_en') </h4>
-                    <input name="name_en" required type="text" class="form-control">
+                    <input name="name" required type="text" class="form-control">
                     @error('name_en')
                     <div class="alert" style="color:#a94442">{{ $message }}</div>
                     @enderror
@@ -134,7 +134,7 @@ $menu = false ;
 
                 <div class="form-group col-md-12 col-xs-12">
                     <h4>@lang('general.description_ar') </h4>
-                    <textarea name="description_ar" class="form-control"></textarea>
+                    <textarea name="description" class="form-control"></textarea>
                     @error('description_ar')
                     <div class="alert" style="color:#a94442">{{ $message }}</div>
                     @enderror
