@@ -331,7 +331,7 @@ $menu = false ;
    var parent = document.getElementById('parent');
    //   var newChild = '<p>Child ' + childNumber + '</p>';
    var newChild = `
-           <div class="form-group col-md-6 col-xs-12">
+           <div  id="attribute_attribute_`+childNumber+`" class="form-group col-md-6 col-xs-12">
 
                              <select id="optselect`+childNumber+`"  onchange="selectoption(`+childNumber+`,this)"  name="options[`+childNumberprice+`][attribute_id]" class=" optselect form-control">
                                 <option selected disabled>@lang('general.choose_attribute')</option>
@@ -343,7 +343,7 @@ $menu = false ;
 
            </div>
 
-                       <div  id="attribute_value_`+childNumber+`"  class="form-group col-md-6 col-xs-12">
+                       <div  id="attribute_value_`+childNumber+`"  class="form-group col-md-5 col-xs-12">
               <select id="valueselect`+childNumber+`"  name="options[`+childNumberprice+`][values_id]" class=" optselect form-control select-nosearch" multiple>
                  <!--<option selected disabled>@lang('general.categories')</option>-->
                  <option selected disabled>@lang('general.choose_attribute')</option>
@@ -421,14 +421,14 @@ $menu = false ;
 
 
 
-    var list_quantity_to = document.getElementById("optselect"+number);
-    list_quantity_to.remove();
+    var attribute_attribute = document.getElementById("attribute_attribute_"+number);
+    attribute_attribute.remove();
 
-    var list_quantity_from = document.getElementById("attribute_value_"+number);
-    list_quantity_from.remove();
+    var attribute_value = document.getElementById("attribute_value_"+number);
+    attribute_value.remove();
 
-    var list_delete = document.getElementById("attribute_delete_"+number);
-    list_delete.remove();
+    var attribute_delete = document.getElementById("attribute_delete_"+number);
+    attribute_delete.remove();
 
    }
 
