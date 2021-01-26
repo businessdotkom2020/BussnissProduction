@@ -201,8 +201,14 @@ $menu = false ;
                 </div>
                 <div class="form-group col-md-12 col-xs-12">
                 </div>
+
+
+                {{-- ************************* Start Price List ******************************* --}}
+
+
                 <h3 class="update-header">@lang('general.product_price_list') <small> @lang('general.optional') </small>
                 </h3>
+
                 <br>
                 <div id="prices">
                     <div class="form-group col-md-5 col-xs-12">
@@ -213,15 +219,12 @@ $menu = false ;
                         <h4>@lang('general.quantity_from')</h4>
                         <input name="prices[0][quantity_from]" type="number" class="form-control">
                     </div>
+
                     <div class="form-group col-md-3 col-xs-12">
                         <h4>@lang('general.quantity_to')</h4>
                         <input name="prices[0][quantity_to]" type="number" class="form-control">
                     </div>
                     <div class="form-group col-md-1 col-xs-12">
-                        <button type="button"
-                            style="padding: 10px; background: #d9534f!important; border: none; margin-top: 35px;"><i
-                                style=" color: white;" class=" fa fa-trash" aria-hidden="true"></i>
-                        </button>
 
                     </div>
                     @error('product_price_list')
@@ -235,6 +238,11 @@ $menu = false ;
                 </div>
                 <div class="form-group col-md-12 col-xs-12">
                 </div>
+                {{-- ************************* End Price List ******************************* --}}
+
+
+                {{-- ************************* Start product attributes   ******************************* --}}
+
                 <div class="form-group col-md-12 col-xs-12">
                     <h3 class="update-header">@lang('general.product_attributes')</h3>
                 </div>
@@ -243,11 +251,8 @@ $menu = false ;
                     <div class="form-group col-md-6 col-xs-12">
                         <select id="optselect1" onchange="selectoption(1,this)" name="options[0][attribute_id]"
                             class="form-control">
-                            @foreach(\App\Models\Attribute::get() as $category)
-                            <option value="{{$category->id}}">
-                                {{$category->getTranslatedAttribute('name',\App::getLocale())}}
-                            </option>
-                            @endforeach
+                            <option value="volvo" disabled>Volvo</option>
+
                         </select>
                     </div>
                     <div class="form-group col-md-6 col-xs-12">
@@ -258,12 +263,15 @@ $menu = false ;
                     @enderror
                 </div>
                 <div style="text-align: center;" class="form-group col-md-12 col-xs-12">
-                    <button type="button" onclick="addChild();" class="btn">@lang('general.add_rquest')</button>
+                    <button type="button" onclick="addChild();"
+                        class="btn">@lang('general.add_product_attributes')</button>
                 </div>
                 <div class="form-group col-md-12 col-xs-12">
                 </div>
                 <div class="form-group col-md-12 col-xs-12">
                 </div>
+
+                {{-- ************************* End product attributes   ******************************* --}}
 
                 <div style="text-align: center;" class="form-group col-md-12 col-xs-12">
                     <button type="submit" class="btn">Add Product</button>
