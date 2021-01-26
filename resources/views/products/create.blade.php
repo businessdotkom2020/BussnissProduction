@@ -346,21 +346,21 @@ $menu = false ;
    //   var newChild = '<p>Child ' + childNumber + '</p>';
    var newChild = `
 
-            <div class="form-group col-md-5 col-xs-12">
+            <div id="list_price_`+childNumberprice+`" class="form-group col-md-5 col-xs-12">
               <h4>@lang('general.price')</h4>
               <input name="prices[`+childNumberprice+`][price]" type="text" class="form-control">
            </div>
-           <div class="form-group col-md-3 col-xs-12">
+           <div id="list_quantity_from_`+childNumberprice+`" class="form-group col-md-3 col-xs-12">
               <h4>@lang('general.sale_price')</h4>
               <input name="prices[`+childNumberprice+`][quantity_from]" type="number" class="form-control">
            </div>
-           <div class="form-group col-md-3 col-xs-12">
+           <div id="list_quantity_to_`+childNumberprice+`" class="form-group col-md-3 col-xs-12">
               <h4>@lang('general.sale_price')</h4>
               <input name="prices[`+childNumberprice+`][quantity_to]" type="number" class="form-control">
            </div>
 
-           <div class="form-group col-md-1 col-xs-12">
-                        <button type="button"
+           <div id="list_delete_`+childNumberprice+`" class="form-group col-md-1 col-xs-12">
+                        <button type="button"  onclick="deletePrice(`+childNumberprice+`);"
                             style="padding: 10px; background: #d9534f!important; border: none; margin-top: 35px;"><i
                                 style=" color: white;" class=" fa fa-trash" aria-hidden="true"></i>
             </button>
@@ -374,9 +374,19 @@ $menu = false ;
      $('select').niceSelect();
    }
 
-   function deletePrice() {
+   function deletePrice(number) {
 
+    var list_price = document.getElementById("list_price_"+number);
+    list_price.remove();
 
+    var list_quantity_to = document.getElementById("list_quantity_to_"+number);
+    list_quantity_to.remove();
+
+    var list_quantity_from = document.getElementById("list_quantity_from_"+number);
+    list_quantity_from.remove();
+
+    var list_delete = document.getElementById("list_delete_"+number);
+    list_delete.remove();
 
    }
 
