@@ -202,7 +202,7 @@ class ProductsController extends Controller
         $price_list = $request->prices;
 
         foreach ($price_list as $price) {
-            if( $price['price'] &&  $price['quantity_from'] && $price['quantity_to']){
+            if ($price['price'] &&  $price['quantity_from'] && $price['quantity_to']) {
 
                 $price_option = new ProductPrice;
                 $price_option->product_id = $product->id;
@@ -210,21 +210,23 @@ class ProductsController extends Controller
                 $price_option->quantity_from = $price['quantity_from'];
                 $price_option->quantity_to = $price['quantity_to'];
                 $price_option->save();
-
             }
         }
 
         $attributes = [];
-         $attributes = $request->options;
+        $attributes = $request->options;
 
         foreach ($attributes as $attribute) {
-            $attribute_id =   $attribute['attribute_id'];
-            $values_id =   $attribute['values_id'];
-            $attribute = new \App\Models\ProductAttribute;
-            $attribute->product_id = $product->id;
-            $attribute->attribute_id = $attribute_id;
-            $attribute->value_id = $values_id;
-            $attribute->save();
+            if ($price['attribute_id'] &&  $price['values_id']) {
+
+                $attribute_id =   $attribute['attribute_id'];
+                $values_id =   $attribute['values_id'];
+                $attribute = new \App\Models\ProductAttribute;
+                $attribute->product_id = $product->id;
+                $attribute->attribute_id = $attribute_id;
+                $attribute->value_id = $values_id;
+                $attribute->save();
+            }
         }
 
 
