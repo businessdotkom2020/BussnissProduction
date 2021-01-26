@@ -145,7 +145,7 @@ class ProductsController extends Controller
 
     public function store(ProductFormRequest $request)
     {
-        return request()->all();
+        // return request()->all();
 
         $lang = \Config::get('voyager.multilingual')['locales'];
         $lang = array_values(array_diff($lang, array(\Config::get('voyager.multilingual')['default'])));
