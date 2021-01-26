@@ -146,7 +146,6 @@ class ProductsController extends Controller
     public function store(ProductFormRequest $request)
     {
 
-        return request()->all();
         $lang = \Config::get('voyager.multilingual')['locales'];
         $lang = array_values(array_diff($lang, array(\Config::get('voyager.multilingual')['default'])));
 
@@ -155,7 +154,7 @@ class ProductsController extends Controller
 
         $product = new Product;
 
-        $product->name = $request->name_en;
+        $product->name = $request->name;
         $product->user_id = Request()->user()->id;
         $product->description = $request->description_en;
         $product->price = $request->price;
@@ -242,6 +241,7 @@ class ProductsController extends Controller
             }
         }
 
+        return request()->all();
 
 
         Alert::toast('Product Added Successfully', 'success');
