@@ -18,7 +18,7 @@ use App\Notifications\PasswordResetRequest;
 use App\Models\PasswordReset;
 use App\Http\Requests\RessetPassword;
 
-class AuthController extends Controller
+ class AuthController extends Controller
 {
     public function show_register_form()
     {
@@ -33,17 +33,9 @@ class AuthController extends Controller
     {
         return view('auth.login');
     }
-    public function do_login(Request $request)
+    public function do_login()
     {
-
-        if (is_numeric($request->get('email'))) {
-            $credentials =  ['mobile' => $request->get('email'), 'password' => $request->get('password')];
-        } elseif (filter_var($request->get('email'), FILTER_VALIDATE_EMAIL)) {
-            $credentials =  ['email' => $request->get('email'), 'password' => $request->get('password')];
-        }
-
-
-        if (Auth::attempt($credentials)) {
+        if (Auth::attempt(['email' => Request()->email, 'password' => Request()->password])) {
             Alert::toast(trans('general.logged_user_successfully'), 'success');
 
             return redirect('/');
@@ -81,6 +73,8 @@ class AuthController extends Controller
     }
     public function do_register_supplier(WebRegisterSupplierRequest $request)
     {
+
+
         $user = new User();
         $user->name       = Request()->supplier_name;
         $user->email      = Request()->email;
@@ -153,53 +147,53 @@ class AuthController extends Controller
     }
 
 
-    public function show_forget_password_form()
-    {
-        return view('auth.send_resset_password');
+public function show_forget_password_form(){
+    return view('auth.send_resset_password');
+}
+public function do_forget_password_supplier(SendRessetEmail $request){
+
+    $user = User::where('email', Request()->email)->first();
+
+
+    $passwordReset = PasswordReset::updateOrCreate(
+        ['email' => $user->email],
+        [
+            'email' => $user->email,
+            'code' => rand(1,9).rand(6,9).rand(1,9).rand(4,9).rand(11,99)
+            // 'code' => 999999
+        ]
+    );
+    $user->notify(new PasswordResetRequest($passwordReset->code));
+
+    return redirect()->route('form.resset_password',['user_id' => $user->id]);
+}
+
+public function show_resset_password_form($user_id){
+    $user = User::find($user_id);
+    return view('auth.resset_password',compact('user'));
+
+}
+public function do_resset_password_supplier(RessetPassword $request){
+
+    $password_resset = PasswordReset::where([['code', Request()->code], ['email', Request()->email]])->first();
+
+    if(!$password_resset){
+        throw ValidationException::withMessages(['field_name' => 'Wrong Resset Code ']);
     }
-    public function do_forget_password_supplier(SendRessetEmail $request)
-    {
-
-        $user = User::where('email', Request()->email)->first();
 
 
-        $passwordReset = PasswordReset::updateOrCreate(
-            ['email' => $user->email],
-            [
-                'email' => $user->email,
-                'code' => rand(1, 9) . rand(6, 9) . rand(1, 9) . rand(4, 9) . rand(11, 99)
-                // 'code' => 999999
-            ]
-        );
-        $user->notify(new PasswordResetRequest($passwordReset->code));
+    $user = User::where('email', $password_resset->email)->first();
+    $user->password = bcrypt(Request()->password);
+    $user->save();
+    $password_resset->forceDelete();
 
-        return redirect()->route('form.resset_password', ['user_id' => $user->id]);
-    }
+    Auth::login($user);
 
-    public function show_resset_password_form($user_id)
-    {
-        $user = User::find($user_id);
-        return view('auth.resset_password', compact('user'));
-    }
-    public function do_resset_password_supplier(RessetPassword $request)
-    {
+    Alert::toast(trans('general.password_resseted_successfully'), 'success');
 
-        $password_resset = PasswordReset::where([['code', Request()->code], ['email', Request()->email]])->first();
-
-        if (!$password_resset) {
-            throw ValidationException::withMessages(['field_name' => 'Wrong Resset Code ']);
-        }
+    return redirect('/');
+}
 
 
-        $user = User::where('email', $password_resset->email)->first();
-        $user->password = bcrypt(Request()->password);
-        $user->save();
-        $password_resset->forceDelete();
 
-        Auth::login($user);
-
-        Alert::toast(trans('general.password_resseted_successfully'), 'success');
-
-        return redirect('/');
-    }
 }
