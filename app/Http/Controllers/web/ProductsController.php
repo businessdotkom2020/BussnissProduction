@@ -217,7 +217,7 @@ class ProductsController extends Controller
         $attributes = $request->options;
 
         foreach ($attributes as $attribute) {
-            if ($price['attribute_id'] &&  $price['values_id']) {
+            if ($attribute['attribute_id'] &&  $attribute['values_id']) {
 
                 $attribute_id =   $attribute['attribute_id'];
                 $values_id =   $attribute['values_id'];
