@@ -35,7 +35,15 @@ use App\Http\Requests\RessetPassword;
     }
     public function do_login()
     {
-        if (Auth::attempt(['email' => Request()->email, 'password' => Request()->password], 1)) {
+
+        if (is_numeric($request->get('email'))) {
+            $credentials =  ['mobile' => $request->get('email'), 'password' => $request->get('password')];
+        } elseif (filter_var($request->get('email'), FILTER_VALIDATE_EMAIL)) {
+            $credentials =  ['email' => $request->get('email'), 'password' => $request->get('password')];
+        }
+
+
+        if (Auth::attempt($credentials)) {
             Alert::toast(trans('general.logged_user_successfully'), 'success');
 
             return redirect('/');
@@ -73,8 +81,6 @@ use App\Http\Requests\RessetPassword;
     }
     public function do_register_supplier(WebRegisterSupplierRequest $request)
     {
-
-
         $user = new User();
         $user->name       = Request()->supplier_name;
         $user->email      = Request()->email;
