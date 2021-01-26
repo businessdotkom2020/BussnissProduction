@@ -213,9 +213,9 @@ class ProductsController extends Controller
             }
         }
 
-        $attributes = [];
+        $attributes = array();
         $attributes = $request->options;
-
+        return $attributes;
         foreach ($attributes as $attribute) {
             if ($attribute['attribute_id'] &&  $attribute['values_id']) {
 
@@ -228,6 +228,7 @@ class ProductsController extends Controller
                 $attribute->save();
             }
         }
+
 
 
         foreach ($lang as $lang_option) {
