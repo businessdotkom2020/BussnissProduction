@@ -215,7 +215,7 @@ class ProductsController extends Controller
         }
 
         $attributes = [];
-        $attributes = $request->options;
+       return  $attributes = $request->options;
 
         foreach ($attributes as $attribute) {
             $attribute_id =   $attribute['attribute_id'];
