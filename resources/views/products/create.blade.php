@@ -251,12 +251,17 @@ $menu = false ;
                     <div class="form-group col-md-6 col-xs-12">
                         <select id="optselect1" onchange="selectoption(1,this)" name="options[0][attribute_id]"
                             class="form-control">
-                            <option value="volvo" disabled>Volvo</option>
-
+                            @foreach(\App\Models\Attribute::get() as $attribute)
+                            <option value="{{$attribute->id}}">
+                                {{$attribute->getTranslatedAttribute('name',\App::getLocale())}}
+                            </option>
+                            @endforeach
                         </select>
                     </div>
                     <div class="form-group col-md-6 col-xs-12">
-                        <select id="valueselect1" required name="options[0][values_id]" class="form-control"></select>
+                        <select id="valueselect1" required name="options[0][values_id]" class="form-control">
+                            <option value="volvo" disabled>Volvo</option>
+                        </select>
                     </div>
                     @error('name_ar')
                     <div class="alert" style="color:#a94442">{{ $message }}</div>
