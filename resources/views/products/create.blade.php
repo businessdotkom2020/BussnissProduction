@@ -332,6 +332,8 @@ $menu = false ;
            <div class="form-group col-md-6 col-xs-12">
 
                              <select id="optselect`+childNumber+`"  onchange="selectoption(`+childNumber+`,this)"  name="options[`+childNumberprice+`][attribute_id]" class=" optselect form-control">
+                                <option selected disabled>@lang('general.choose_attribute')</option>
+
                  @foreach(\App\Models\Attribute::get() as $category)
                  <option value="{{$category->id}}">{{$category->getTranslatedAttribute('name',\App::getLocale())}}</option>
                  @endforeach
@@ -342,6 +344,7 @@ $menu = false ;
                        <div class="form-group col-md-6 col-xs-12">
               <select id="valueselect`+childNumber+`"  name="options[`+childNumberprice+`][values_id]" class=" optselect form-control select-nosearch" multiple>
                  <!--<option selected disabled>@lang('general.categories')</option>-->
+                 <option selected disabled>@lang('general.choose_attribute')</option>
 
 
               </select>
