@@ -199,7 +199,7 @@ class ProductsController extends Controller
 
         $product->categories()->attach(Request()->category_ids);
         $price_list = [];
-        return array_filter($price_list = $request->prices);
+        $price_list = $request->prices;
 
         foreach ($price_list as $price) {
             if( $price['price'] &&  $price['quantity_from'] && $price['quantity_to']){
