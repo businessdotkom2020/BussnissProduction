@@ -252,7 +252,7 @@ class ProductsController extends Controller
 
 
         Alert::toast('Product Added Successfully', 'success');
-        // return redirect('/dashboard/products' . $product->id);
+        return redirect('/dashboard/products');
         // return redirect('/product/' . $product->id);
     }
 
