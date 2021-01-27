@@ -295,14 +295,14 @@ class ProductsController extends Controller
                     array_push($images, $image);
             }
 
-            if ($request->file('images'))
+            if ($request->file('images')) {
 
-            foreach ($request->file('images') as $image) {
-                $file_name     = 'product_image' .   rand(1, 15) . rand(155, 200) . rand(25, 55) . '.png';
-                $image->storeAs('public/products', $file_name);
-                $img_url = 'products/' . $file_name;
-                array_push($images, $img_url);
-            }
+                foreach ($request->file('images') as $image) {
+                    $file_name     = 'product_image' .   rand(1, 15) . rand(155, 200) . rand(25, 55) . '.png';
+                    $image->storeAs('public/products', $file_name);
+                    $img_url = 'products/' . $file_name;
+                    array_push($images, $img_url);
+                }
             }
         }
 
