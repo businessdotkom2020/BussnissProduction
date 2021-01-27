@@ -332,29 +332,32 @@ class ProductsController extends Controller
         $price_list = $request->prices;
 
         foreach ($price_list as $price) {
-            $price_option = new ProductPrice;
-            $price_option->product_id = $product->id;
-            $price_option->price = $price['price'];
-            $price_option->quantity_from = $price['quantity_from'];
-            $price_option->quantity_to = $price['quantity_to'];
-            $price_option->save();
+            if ($price['price'] &&  $price['quantity_from'] && $price['quantity_to']) {
+
+                $price_option = new ProductPrice;
+                $price_option->product_id = $product->id;
+                $price_option->price = $price['price'];
+                $price_option->quantity_from = $price['quantity_from'];
+                $price_option->quantity_to = $price['quantity_to'];
+                $price_option->save();
+            }
         }
 
-        $attributes = [];
-        $attributes = $request->options;
-
-
-        \App\Models\ProductAttribute::where('product_id', $product_id)->delete();
+        $attributes =   $request->options ?  $request->options : array();
 
         foreach ($attributes as $attribute) {
-            $attribute_id =   $attribute['attribute_id'];
-            $values_id =   $attribute['values_id'];
-            $attribute = new \App\Models\ProductAttribute;
-            $attribute->product_id = $product->id;
-            $attribute->attribute_id = $attribute_id;
-            $attribute->value_id = $values_id;
-            $attribute->save();
+            if ($attribute['attribute_id'] &&  $attribute['values_id']) {
+
+                $attribute_id =   $attribute['attribute_id'];
+                $values_id =   $attribute['values_id'];
+                $attribute = new \App\Models\ProductAttribute;
+                $attribute->product_id = $product->id;
+                $attribute->attribute_id = $attribute_id;
+                $attribute->value_id = $values_id;
+                $attribute->save();
+            }
         }
+
 
 
         foreach ($lang as $lang_option) {
