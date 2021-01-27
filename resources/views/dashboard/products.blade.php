@@ -65,7 +65,7 @@ $menu = false ;
                 <div class="i-data">
                     <a href="{{url('product/'.$product->id)}}"
                         class="title">{{$product->getTranslatedAttribute('name',\App::getLocale())}}</a>
-                    <p>{{str_limit($product->getTranslatedAttribute('description',\App::getLocale()), 110)}}</p>
+
 
 
                     @if($product->sale_price)

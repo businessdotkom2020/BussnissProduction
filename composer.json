@@ -16,6 +16,7 @@
         "laravel/passport": "^7.4",
         "laravel/tinker": "^1.0",
         "moneyphp/money": "^3.2",
+        "proengsoft/laravel-jsvalidation": "3.0",
         "realrashid/sweet-alert": "^3.1",
         "spatie/laravel-permission": "^3.17",
         "tcg/voyager": "1.4.*",
