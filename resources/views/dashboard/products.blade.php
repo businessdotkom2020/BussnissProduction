@@ -91,7 +91,8 @@ $menu = false ;
                         </div>
                     </div>
 
-                    <span class="title">{{$product->sale_price  ? $product->sale_price : $product->price  }} l.e</span>
+                    <a href="#" class="title">{{$product->sale_price  ? $product->sale_price : $product->price  }}
+                        l.e</a>
 
                     @if($product->sale_price)
                     <span class="{{$product->sale_price ? 'old' : ''}}">{{$product->price}} l.e</span>
