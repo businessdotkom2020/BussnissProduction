@@ -328,8 +328,7 @@ class ProductsController extends Controller
 
         ProductPrice::where('product_id', $product_id)->delete();
 
-        $price_list = [];
-        $price_list = $request->prices;
+        $price_list = $request->prices ? $request->prices : array();
 
         foreach ($price_list as $price) {
             if ($price['price'] &&  $price['quantity_from'] && $price['quantity_to']) {
