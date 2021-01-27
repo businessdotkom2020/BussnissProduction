@@ -78,6 +78,7 @@ $menu = false ;
                                 </div>
                             </div>
                         </div>
+
                         <!-- <p>{{ Str::limit($product->getTranslatedAttribute('description',\App::getLocale()),50 )}}</p> -->
                         <div class="block-price">
                             <span
