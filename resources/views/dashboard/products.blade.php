@@ -67,6 +67,29 @@ $menu = false ;
                 <div class="i-data">
                     <a href="{{url('product/'.$product->id)}}"
                         class="title">{{$product->getTranslatedAttribute('name',\App::getLocale())}}</a>
+                    <div class="cardo" style="flex-grow: 1;padding:0px">
+                        <div class="c-inner" style="text-align: right;">
+                            <div class="c-data">
+                                <p>
+                                    @php $rating = $product->average_rating ; @endphp
+                                    @foreach(range(1,5) as $i)
+                                    @if($rating >0)
+                                    @if($rating > 0.5)
+                                    <i class="fa fa-star active"></i>
+                                    @elseif($rating < 0.5 && $rating> 0)
+                                        <i class="fas fa-star-half"></i>
+                                        @endif
+                                        @else
+                                        <i class="fa fa-star"></i>
+                                        @endif
+                                        @php $rating--; @endphp
+
+                                        @endforeach
+
+                                </p>
+                            </div>
+                        </div>
+                    </div>
 
                     <span>{{$product->sale_price  ? $product->sale_price : $product->price  }} l.e</span>
 
