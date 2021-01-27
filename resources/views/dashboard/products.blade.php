@@ -30,11 +30,13 @@ $menu = false ;
             <button onclick="window.location='{{ url('products/new') }}'" type="submit" class="btn">Add Product <i
                     class="fa fa-plus"></i></button>
         </div>
+
         <br>
         <br>
         <br>
         <br>
         <br>
+
         @foreach(\App\Models\Product::where('user_id',\Auth::id())->get() as $product)
         <div class="block b-product col-md-3 col-sm-6 col-xs-12">
             <div class="inner">
@@ -67,12 +69,14 @@ $menu = false ;
                         class="title">{{$product->getTranslatedAttribute('name',\App::getLocale())}}</a>
 
 
-                    @if($product->sale_price)
-                    <span>{{$product->sale_price}} l.e</span>
+                    @if($product->price)
+                    <span>{{$product->price}} l.e</span>
                     @endif
 
 
-                    <span class="{{$product->sale_price ? 'old' : ''}}">{{$product->sale_price}} l.e</span>
+                    <span class="{{$product->sale_price ? 'old' : ''}}">{{$product->price}} l.e</span>
+
+
                 </div>
             </div>
         </div>
@@ -91,12 +95,7 @@ $menu = false ;
 
              var token = '{{ Session::token() }}';
 
-
-
          $.ajax({
-
-
-
             type : 'POST',
 
             url  : '{!!URL::to('product_favorite')!!}',
