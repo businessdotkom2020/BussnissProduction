@@ -68,14 +68,11 @@ $menu = false ;
                     <a href="{{url('product/'.$product->id)}}"
                         class="title">{{$product->getTranslatedAttribute('name',\App::getLocale())}}</a>
 
+                    <span>{{$product->sale_price  ? $product->sale_price : $product->price  }} l.e</span>
 
-                    @if($product->price)
-                    <span>{{$product->price}} l.e</span>
-                    @endif
-
-
+                    @if($product->sale_price)
                     <span class="{{$product->sale_price ? 'old' : ''}}">{{$product->price}} l.e</span>
-
+                    @endif
 
                 </div>
             </div>
