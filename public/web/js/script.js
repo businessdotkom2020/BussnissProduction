@@ -170,10 +170,8 @@ $(document).ready(function () {
     $('select').niceSelect();
 
 
-    // ------------step-wizard-------------
     $('.nav-tabs > li a[title]').tooltip();
     
-    //Wizard
     $('a[data-toggle="tab"]').on('shown.bs.tab', function (e) {
 
         var target = $(e.target);
@@ -183,14 +181,14 @@ $(document).ready(function () {
         }
     });
 
-    $(".next-step").click(function (e) {
+    $(".next-step").on('click', function (e) {
 
         var active = $('.wizard .nav-tabs li.active');
         active.next().removeClass('disabled');
         nextTab(active);
 
     });
-    $(".prev-step").click(function (e) {
+    $(".prev-step").on('click', function (e) {
 
         var active = $('.wizard .nav-tabs li.active');
         prevTab(active);
