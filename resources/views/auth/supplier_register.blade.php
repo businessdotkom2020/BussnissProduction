@@ -36,10 +36,7 @@ $menu = false ;
             <form action="{{route('do.supplier.register')}}" method="post">
                 @csrf
 
-                <section class="signup-step-container">
-                    <div class="container">
-                        <div class="row d-flex justify-content-center">
-                            <div class="col-md-8">
+                <div class="col-md-8">
                                 <div class="wizard">
                                     <div class="wizard-inner">
                                         <div class="connecting-line"></div>
@@ -74,9 +71,6 @@ $menu = false ;
                                     </form>
                                 </div>
                             </div>
-                        </div>
-                    </div>
-                </section>
 
                 <div class="ito-h col-xs-12">
                     <h4>@lang('general.background_image')</h4>
