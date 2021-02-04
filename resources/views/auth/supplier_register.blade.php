@@ -357,8 +357,8 @@ $menu = false ;
 <!--<script src="https://maps.googleapis.com/maps/api/js?key={{ env('GOOGLE_MAPS_API_KEY') }}&libraries=places&callback=initialize" async defer></script>-->
 <!--<script src="https://maps.googleapis.com/maps/api/js?key=&callback=initMap" async defer></script>-->
 
-
-
+    
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
 
 
 <script>
@@ -366,8 +366,6 @@ $menu = false ;
     // ------------step-wizard-------------
 $(document).ready(function () {
     $('.nav-tabs > li a[title]').tooltip();
-    
-    //Wizard
     $('a[data-toggle="tab"]').on('shown.bs.tab', function (e) {
 
         var target = $(e.target);
