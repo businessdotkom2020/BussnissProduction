@@ -144,6 +144,82 @@ $menu = false ;
                         </div>
                         <button class="btn btn-primary nextBtn btn-lg pull-right" type="button" >Next</button>
                     </div>
+                    <div class="ito-h col-xs-12">
+                        <h4>@lang('general.localization_info')</h4>
+                        </h4>
+                        <div class="form-group col-md-4 col-xs-12">
+                            <select required id="country" name="country_id" class="form-control">
+                                <option selected disabled>@lang('general.country')</option>
+
+                                @foreach (\App\Models\Country::get() as $country)
+                                <option value="{{$country->id}}">{{$country->name}}</option>
+                                @endforeach
+
+                            </select>
+
+                            @error('country_id')
+                            <div class="alert" style="color:#a94442">{{ $message }}</div>
+                            @enderror
+
+                        </div>
+                        <div class="form-group col-md-4 col-xs-12">
+                            <select required name="state_id" id="state" class="form-control">
+                                <option selected disabled>@lang('general.state')</option>
+                            </select>
+
+                            @error('state_id')
+                            <div class="alert" style="color:#a94442">{{ $message }}</div>
+                            @enderror
+
+                        </div>
+                        <div class="form-group col-md-4 col-xs-12">
+                            <select required name="city_id" id="city" class="form-control">
+                                <option selected disabled>@lang('general.city')</option>
+                            </select>
+
+                            @error('city_id')
+                            <div class="alert" style="color:#a94442">{{ $message }}</div>
+                            @enderror
+
+                        </div>
+                        <div class="form-group col-md-12 col-xs-12">
+                            <input required type="text" name="street_nom" placeholder="@lang('general.street_num')"
+                                class="form-control">
+                            @error('street_nom')
+                            <div class="alert" style="color:#a94442">{{ $message }}</div>
+                            @enderror
+                        </div>
+
+                        <div class="form-group col-md-6 col-xs-12">
+                            <input required type="text" name="zip_code" placeholder="@lang('general.zip_code')"
+                                class="form-control">
+                            @error('zip_code')
+                            <div class="alert" style="color:#a94442">{{ $message }}</div>
+                            @enderror
+                        </div>
+                        <div class="form-group col-md-6 col-xs-12">
+                            <!--<input type="text" placeholder="@lang('general.map_location')" class="form-control">-->
+                            <a href="#" class="btn btn-review" data-toggle="modal" onclick="initMap()"
+                                data-target="#review-pop">@lang('general.map_location')</a>
+
+                        </div>
+                        <div class="form-group col-md-6 col-xs-12">
+                            <input required type="text" name="address" placeholder="@lang('general.address_spec')"
+                                class="form-control">
+                            @error('address_spec')
+                            <div class="alert" style="color:#a94442">{{ $message }}</div>
+                            @enderror
+
+                        </div>
+
+                        <div class="form-group col-md-12 col-xs-12">
+
+                        </div>
+                        <div class="form-group col-md-12 col-xs-12">
+                            <button type="submit" class="btn">@lang('general.register')</button>
+                        </div>
+
+                    </div>
                 </div>
 
                 <div class="modal fade" id="review-pop">
