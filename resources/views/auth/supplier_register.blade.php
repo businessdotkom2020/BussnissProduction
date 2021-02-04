@@ -52,7 +52,6 @@ $menu = false ;
                         </div>
                     </div>
                 </div>
-                <form role="form">
                     <div class="row setup-content" id="step-1">
                         <div class="col-xs-12">
                             <div class="col-md-12">
@@ -93,7 +92,6 @@ $menu = false ;
                             </div>
                         </div>
                     </div>
-                </form>
                 </div>
 
                 <div class="ito-h col-xs-12">
