@@ -23,48 +23,6 @@ $menu = false ;
         <div class="container">
             <form action="{{route('do.user.register')}}" method="Post" enctype="multipart/form-data">
                 @csrf
-                
-                <section class="signup-step-container">
-        <div class="container">
-            <div class="row d-flex justify-content-center">
-                <div class="col-md-8">
-                    <div class="wizard">
-                        <div class="wizard-inner">
-                            <div class="connecting-line"></div>
-                            <ul class="nav nav-tabs" role="tablist">
-                                <li role="presentation" class="active">
-                                    <a href="#step1" data-toggle="tab" aria-controls="step1" role="tab" aria-expanded="true"><span class="round-tab">1 </span> <i>المعلومات الرئيسية</i></a>
-                                </li>
-                                <li role="presentation" class="disabled">
-                                    <a href="#step2" data-toggle="tab" aria-controls="step2" role="tab" aria-expanded="false"><span class="round-tab">2</span> <i>معلومات البلد</i></a>
-                                </li>
-                            </ul>
-                        </div>
-        
-                        <form role="form" action="index.html" class="login-box">
-                            <div class="tab-content" id="main_form">
-                                <div class="tab-pane active" role="tabpanel" id="step1">
-                                    step 1
-                                    <ul class="list-inline pull-right">
-                                        <li><button type="button" class="default-btn next-step">الخطوة التالية</button></li>
-                                    </ul>
-                                </div>
-                                <div class="tab-pane" role="tabpanel" id="step2">
-                                    step 2
-                                    <ul class="list-inline pull-right">
-                                        <li><button type="button" class="default-btn prev-step">Back</button></li>
-                                        <li><button type="button" class="default-btn next-step skip-btn">Skip</button></li>
-                                        <li><button type="button" class="default-btn next-step">Continue</button></li>
-                                    </ul>
-                                </div>
-                                <div class="clearfix"></div>
-                            </div>
-                        </form>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
 
                 <div class="col-lg-4"></div>
                 <div class="ito-h col-lg-4 col-xs-12">
