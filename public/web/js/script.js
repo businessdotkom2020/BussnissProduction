@@ -186,7 +186,7 @@ $(document).ready(function () {
         var active = $('.wizard .nav-tabs li.active');
         active.next().removeClass('disabled');
         nextTab(active);
-
+        
     });
     $(".prev-step").on('click', function (e) {
 

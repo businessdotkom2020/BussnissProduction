@@ -65,8 +65,8 @@ $menu = false ;
                                                 step 2
                                                 <ul class="list-inline pull-right">
                                                     <li><button type="button" class="default-btn prev-step">Back</button></li>
-                                                    <li><button type="button" class="default-btn next-step skip-btn">Skip</button></li>
-                                                    <li><button type="button" class="default-btn next-step">Continue</button></li>
+                                                    <!-- <li><button type="button" class="default-btn next-step skip-btn">Skip</button></li> -->
+                                                    <li><button type="button" class="default-btn next-step">Finish</button></li>
                                                 </ul>
                                             </div>
                                             <div class="clearfix"></div>
