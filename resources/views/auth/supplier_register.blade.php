@@ -39,140 +39,20 @@ $menu = false ;
             <form id="msform"> 
                 <!-- Tittle -->
                 <div class="tittle">
-                <h2>Verification Process</h2>
-                <p>In order to use this service, you have to complete this verification process</p>
+                    <h2>Verification Process</h2>
+                    <p>In order to use this service, you have to complete this verification process</p>
                 </div>
                 <!-- progressbar -->
                 <ul id="progressbar">
-                <li class="active">Verify Phone</li>  
-                <li>Upload Documents</li> 
-                <li>Security Questions</li>
+                    <li class="active">Verify Phone</li>  
+                    <li>Upload Documents</li> 
+                    <li>Security Questions</li>
                 </ul>
                 <!-- fieldsets -->
                 <fieldset>
-                <h3>Setup your phone</h3>
-                <h6>We will send you a SMS. Input the code to verify.</h6> 
-                <div class="form-row"> 
-                    <div class="form-group col-md-6">  
-                    <input type="tel" id="phone" class="form-control" placeholder="+880"> 
-                    </div>  
-                    <div class="form-group col-md-6"> 
-                    <input type="text" class="form-control" placeholder="+8801123456789">
-                    </div> 
-                </div> 
-                <div class="done_text"> 
-                    <a href="#" class="don_icon"><i class="ion-android-done"></i></a> 
-                    <h6>A secret code is sent to your phone. <br>Please enter it here.</h6> 
-                </div>  
-                <div class="code_group"> 
-                    <input type="text" class="form-control" placeholder="0">
-                    <input type="text" class="form-control" placeholder="0">
-                    <input type="text" class="form-control" placeholder="0">
-                    <input type="text" class="form-control" placeholder="0">
-                </div>  
-                <button type="button" class="action-button previous_button">Back</button>
-                <button type="button" class="next action-button">Continue</button>  
-                </fieldset>
-                <fieldset>
-                <h3>Verify Your Identity</h3>
-                <h6>Please upload any of these documents to verify your Identity.</h6>
-                <div class="passport">
-                    <h4>Govt. ID card <br>PassPort <br>Driving License.</h4> 
-                    <a href="#" class="don_icon"><i class="ion-android-done"></i></a> 
-                </div>
-                <div class="input-group"> 
-                    <div class="custom-file">
-                    <input type="file" class="custom-file-input" id="upload">
-                    <label class="custom-file-label" for="upload"><i class="ion-android-cloud-outline"></i>Choose file</label>
-                    </div>
-                </div>
-                <ul class="file_added">
-                    <li>File Added:</li>
-                    <li><a href="#"><i class="ion-paperclip"></i>national_id_card.png</a></li>
-                    <li><a href="#"><i class="ion-paperclip"></i>national_id_card_back.png</a></li>
-                </ul>
-                <button type="button" class="action-button previous previous_button">Back</button>
-                <button type="button" class="next action-button">Continue</button>  
-                </fieldset>  
-                <fieldset>
-                    <h3>@lang('general.localization_info')</h3>
-                    <div class="form-group col-md-4 col-xs-12">
-                        <select required id="country" name="country_id" class="form-control">
-                            <option selected disabled>@lang('general.country')</option>
-
-                            @foreach (\App\Models\Country::get() as $country)
-                            <option value="{{$country->id}}">{{$country->name}}</option>
-                            @endforeach
-
-                        </select>
-
-                        @error('country_id')
-                        <div class="alert" style="color:#a94442">{{ $message }}</div>
-                        @enderror
-
-                    </div>
-                    <div class="form-group col-md-4 col-xs-12">
-                        <select required name="state_id" id="state" class="form-control">
-                            <option selected disabled>@lang('general.state')</option>
-                        </select>
-
-                        @error('state_id')
-                        <div class="alert" style="color:#a94442">{{ $message }}</div>
-                        @enderror
-
-                    </div>
-                    <div class="form-group col-md-4 col-xs-12">
-                        <select required name="city_id" id="city" class="form-control">
-                            <option selected disabled>@lang('general.city')</option>
-                        </select>
-
-                        @error('city_id')
-                        <div class="alert" style="color:#a94442">{{ $message }}</div>
-                        @enderror
-
-                    </div>
-                    <div class="form-group col-md-12 col-xs-12">
-                        <input required type="text" name="street_nom" placeholder="@lang('general.street_num')"
-                            class="form-control">
-                        @error('street_nom')
-                        <div class="alert" style="color:#a94442">{{ $message }}</div>
-                        @enderror
-                    </div>
-
-                    <div class="form-group col-md-6 col-xs-12">
-                        <input required type="text" name="zip_code" placeholder="@lang('general.zip_code')"
-                            class="form-control">
-                        @error('zip_code')
-                        <div class="alert" style="color:#a94442">{{ $message }}</div>
-                        @enderror
-                    </div>
-                    <div class="form-group col-md-6 col-xs-12">
-                        <!--<input type="text" placeholder="@lang('general.map_location')" class="form-control">-->
-                        <a href="#" class="btn btn-review" data-toggle="modal" onclick="initMap()"
-                            data-target="#review-pop">@lang('general.map_location')</a>
-
-                    </div>
-                    <div class="form-group col-md-6 col-xs-12">
-                        <input required type="text" name="address" placeholder="@lang('general.address_spec')"
-                            class="form-control">
-                        @error('address_spec')
-                        <div class="alert" style="color:#a94442">{{ $message }}</div>
-                        @enderror
-
-                    </div>
-                    <button type="button" class="action-button previous previous_button">رجوع</button> 
-                    <button type="submit" class="action-button">@lang('general.register')</button> 
-                </fieldset>  
-            </form>  
-            </section> 
-            <!-- End Multi step form -->   
-
-            <form action="{{route('do.supplier.register')}}" method="post">
-                @csrf
-                <div class="ito-h col-xs-12">
-                    <h4>@lang('general.background_image')</h4>
+                    <h3>@lang('general.background_image')</h3>
+                    <div class="form-row">
                     <div class="form-group col-xs-12">
-
                         <div class="prof-img">
                             <label>
                                 <i class="fa fa-camera"></i>
@@ -197,14 +77,13 @@ $menu = false ;
                             <div class="alert" style="color:#a94442">{{ $message }}</div>
                             @enderror
                         </div>
+                        </div>
                     </div>
-
-                </div>
-
-                <br>
-                <div class="ito-h col-xs-12">
-
-                    <h4 style="text-align: center;">@lang('general.main_information')</h4>
+                    <button type="button" class="next action-button">التالي</button>  
+                </fieldset>
+                <fieldset>
+                    <h3>@lang('general.main_information')</h3>
+                    <div class="form-row">
                     <div class="form-group col-md-6 col-xs-12">
                         <h4 style="font-size:15px">@lang('general.supplier_name')</h4>
                         <input type="text" required name="supplier_name" placeholder="@lang('general.supplier_name')"
@@ -263,174 +142,173 @@ $menu = false ;
                         <div class="alert" style="color:#a94442">{{ $message }}</div>
                         @enderror
                     </div>
-                </div>
-
-                <div class="ito-h col-xs-12">
-                    <h4>@lang('general.localization_info')</h4>
-                    <div class="form-group col-md-4 col-xs-12">
-                        <select required id="country" name="country_id" class="form-control">
-                            <option selected disabled>@lang('general.country')</option>
-
-                            @foreach (\App\Models\Country::get() as $country)
-                            <option value="{{$country->id}}">{{$country->name}}</option>
-                            @endforeach
-
-                        </select>
-
-                        @error('country_id')
-                        <div class="alert" style="color:#a94442">{{ $message }}</div>
-                        @enderror
-
                     </div>
-                    <div class="form-group col-md-4 col-xs-12">
-                        <select required name="state_id" id="state" class="form-control">
-                            <option selected disabled>@lang('general.state')</option>
-                        </select>
+                    <button type="button" class="action-button previous previous_button">السابق</button>
+                    <button type="button" class="next action-button">التالي</button>  
+                </fieldset>  
+                <fieldset>
+                    <h3>@lang('general.localization_info')</h3>
+                    <div class="form-row">
+                        <div class="form-group col-md-4 col-xs-12">
+                            <select required id="country" name="country_id" class="form-control">
+                                <option selected disabled>@lang('general.country')</option>
 
-                        @error('state_id')
-                        <div class="alert" style="color:#a94442">{{ $message }}</div>
-                        @enderror
+                                @foreach (\App\Models\Country::get() as $country)
+                                <option value="{{$country->id}}">{{$country->name}}</option>
+                                @endforeach
 
+                            </select>
+
+                            @error('country_id')
+                            <div class="alert" style="color:#a94442">{{ $message }}</div>
+                            @enderror
+
+                        </div>
+                        <div class="form-group col-md-4 col-xs-12">
+                            <select required name="state_id" id="state" class="form-control">
+                                <option selected disabled>@lang('general.state')</option>
+                            </select>
+
+                            @error('state_id')
+                            <div class="alert" style="color:#a94442">{{ $message }}</div>
+                            @enderror
+
+                        </div>
+                        <div class="form-group col-md-4 col-xs-12">
+                            <select required name="city_id" id="city" class="form-control">
+                                <option selected disabled>@lang('general.city')</option>
+                            </select>
+
+                            @error('city_id')
+                            <div class="alert" style="color:#a94442">{{ $message }}</div>
+                            @enderror
+
+                        </div>
+                        <div class="form-group col-md-12 col-xs-12">
+                            <input required type="text" name="street_nom" placeholder="@lang('general.street_num')"
+                                class="form-control">
+                            @error('street_nom')
+                            <div class="alert" style="color:#a94442">{{ $message }}</div>
+                            @enderror
+                        </div>
+
+                        <div class="form-group col-md-6 col-xs-12">
+                            <input required type="text" name="zip_code" placeholder="@lang('general.zip_code')"
+                                class="form-control">
+                            @error('zip_code')
+                            <div class="alert" style="color:#a94442">{{ $message }}</div>
+                            @enderror
+                        </div>
+                        <div class="form-group col-md-6 col-xs-12">
+                            <!--<input type="text" placeholder="@lang('general.map_location')" class="form-control">-->
+                            <a href="#" class="btn btn-review" data-toggle="modal" onclick="initMap()"
+                                data-target="#review-pop">@lang('general.map_location')</a>
+
+                        </div>
+                        <div class="form-group col-md-6 col-xs-12">
+                            <input required type="text" name="address" placeholder="@lang('general.address_spec')"
+                                class="form-control">
+                            @error('address_spec')
+                            <div class="alert" style="color:#a94442">{{ $message }}</div>
+                            @enderror
+
+                        </div>
                     </div>
-                    <div class="form-group col-md-4 col-xs-12">
-                        <select required name="city_id" id="city" class="form-control">
-                            <option selected disabled>@lang('general.city')</option>
-                        </select>
-
-                        @error('city_id')
-                        <div class="alert" style="color:#a94442">{{ $message }}</div>
-                        @enderror
-
-                    </div>
-                    <div class="form-group col-md-12 col-xs-12">
-                        <input required type="text" name="street_nom" placeholder="@lang('general.street_num')"
-                            class="form-control">
-                        @error('street_nom')
-                        <div class="alert" style="color:#a94442">{{ $message }}</div>
-                        @enderror
-                    </div>
-
-                    <div class="form-group col-md-6 col-xs-12">
-                        <input required type="text" name="zip_code" placeholder="@lang('general.zip_code')"
-                            class="form-control">
-                        @error('zip_code')
-                        <div class="alert" style="color:#a94442">{{ $message }}</div>
-                        @enderror
-                    </div>
-                    <div class="form-group col-md-6 col-xs-12">
-                        <!--<input type="text" placeholder="@lang('general.map_location')" class="form-control">-->
-                        <a href="#" class="btn btn-review" data-toggle="modal" onclick="initMap()"
-                            data-target="#review-pop">@lang('general.map_location')</a>
-
-                    </div>
-                    <div class="form-group col-md-6 col-xs-12">
-                        <input required type="text" name="address" placeholder="@lang('general.address_spec')"
-                            class="form-control">
-                        @error('address_spec')
-                        <div class="alert" style="color:#a94442">{{ $message }}</div>
-                        @enderror
-
-                    </div>
-
-                    <div class="form-group col-md-12 col-xs-12">
-                        <button type="submit" class="btn">@lang('general.register')</button>
-                    </div>
-
-                </div>
+                    <button type="button" class="action-button previous previous_button">رجوع</button> 
+                    <button type="submit" class="action-button">@lang('general.register')</button> 
+                </fieldset>  
+            </form>  
+            </section> 
+            <!-- End Multi step form -->   
 
 
-                <div class="modal fade" id="review-pop">
-                    <div class="modal-dialog">
-                        <div class="modal-content">
-                            <button type="button" class="close" data-dismiss="modal">&times;</button>
-                            <div class="modal-body">
-                                <div class="rate-title">
-                                    <h3>@lang('general.map_location')</h3>
-                                </div>
-                                <div class="rate-stars">
-
-                                    <div class="col-md-8 col-xs-12 m10_b">
-
-                                        <div id="pac-container">
-                                            <input id="pac-input" type="text" placeholder="Enter a location">
-                                        </div>
-
-                                    </div>
-                                    <div class="col-md-4 col-xs-12 m10_b">
-
-                                        <button id="current_location" onclick="getLocation()">
-                                            @lang('general.current_location')<i class="fa fa-location-arrow"
-                                                aria-hidden="true"></i></button>
-                                    </div>
-
-                                    <div class="col-md-6 col-xs-12 ">
-
-                                        <div class="form-group">
-                                            <label for="">Lat</label>
-                                            <input type="text" oninput="initMap()" value="31.3540494"
-                                                class="form-control input-sm" name="lat" id="lat">
-                                        </div>
-                                    </div>
-                                    <div class="col-md-6 col-xs-12 ">
-
-                                        <div class="form-group">
-                                            <label for="">Lng</label>
-                                            <input type="text" oninput="initMap()" value="31.6841419"
-                                                class="form-control input-sm" name="lng" id="lng">
-                                        </div>
-                                    </div>
-
-
-                                </div>
-                                <div class="rate-form">
-
-
-                                    <div class="pac-card" id="pac-card">
-                                        <div>
-                                            <div id="title">
-                                                Autocomplete search
-                                            </div>
-                                            <div id="type-selector" class="pac-controls">
-                                                <input type="radio" name="type" id="changetype-all" checked="checked">
-                                                <label for="changetype-all">All</label>
-
-                                                <input type="radio" name="type" id="changetype-establishment">
-                                                <label for="changetype-establishment">Establishments</label>
-
-                                                <input type="radio" name="type" id="changetype-address">
-                                                <label for="changetype-address">Addresses</label>
-
-                                                <input type="radio" name="type" id="changetype-geocode">
-                                                <label for="changetype-geocode">Geocodes</label>
-                                            </div>
-                                            <div id="strict-bounds-selector" class="pac-controls">
-                                                <input type="checkbox" id="use-strict-bounds" value="">
-                                                <label for="use-strict-bounds">Strict Bounds</label>
-                                            </div>
-                                        </div>
-
-                                    </div>
-                                    <div id="map" style="width:100%;height:400px; "></div>
-                                    <div id="infowindow-content">
-                                        <img src="" width="16" height="16" id="place-icon">
-                                        <span id="place-name" class="title"></span><br>
-                                        <span id="place-address"></span>
-                                    </div>
-
-                                </div>
-                            </div>
-                        </div><!-- /.modal-content -->
-                    </div><!-- /.modal-dialog -->
-                </div><!-- /.modal -->
-
-
-
-
-            </form>
         </div>
     </div>
 </main>
 
+<div class="modal fade" id="review-pop">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <button type="button" class="close" data-dismiss="modal">&times;</button>
+            <div class="modal-body">
+                <div class="rate-title">
+                    <h3>@lang('general.map_location')</h3>
+                </div>
+                <div class="rate-stars">
+
+                    <div class="col-md-8 col-xs-12 m10_b">
+
+                        <div id="pac-container">
+                            <input id="pac-input" type="text" placeholder="Enter a location">
+                        </div>
+
+                    </div>
+                    <div class="col-md-4 col-xs-12 m10_b">
+
+                        <button id="current_location" onclick="getLocation()">
+                            @lang('general.current_location')<i class="fa fa-location-arrow"
+                                aria-hidden="true"></i></button>
+                    </div>
+
+                    <div class="col-md-6 col-xs-12 ">
+
+                        <div class="form-group">
+                            <label for="">Lat</label>
+                            <input type="text" oninput="initMap()" value="31.3540494"
+                                class="form-control input-sm" name="lat" id="lat">
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-xs-12 ">
+
+                        <div class="form-group">
+                            <label for="">Lng</label>
+                            <input type="text" oninput="initMap()" value="31.6841419"
+                                class="form-control input-sm" name="lng" id="lng">
+                        </div>
+                    </div>
+
+
+                </div>
+                <div class="rate-form">
+
+
+                    <div class="pac-card" id="pac-card">
+                        <div>
+                            <div id="title">
+                                Autocomplete search
+                            </div>
+                            <div id="type-selector" class="pac-controls">
+                                <input type="radio" name="type" id="changetype-all" checked="checked">
+                                <label for="changetype-all">All</label>
+
+                                <input type="radio" name="type" id="changetype-establishment">
+                                <label for="changetype-establishment">Establishments</label>
+
+                                <input type="radio" name="type" id="changetype-address">
+                                <label for="changetype-address">Addresses</label>
+
+                                <input type="radio" name="type" id="changetype-geocode">
+                                <label for="changetype-geocode">Geocodes</label>
+                            </div>
+                            <div id="strict-bounds-selector" class="pac-controls">
+                                <input type="checkbox" id="use-strict-bounds" value="">
+                                <label for="use-strict-bounds">Strict Bounds</label>
+                            </div>
+                        </div>
+
+                    </div>
+                    <div id="map" style="width:100%;height:400px; "></div>
+                    <div id="infowindow-content">
+                        <img src="" width="16" height="16" id="place-icon">
+                        <span id="place-name" class="title"></span><br>
+                        <span id="place-address"></span>
+                    </div>
+
+                </div>
+            </div>
+        </div><!-- /.modal-content -->
+    </div><!-- /.modal-dialog -->
+    </div><!-- /.modal -->
 
 
 @endsection
