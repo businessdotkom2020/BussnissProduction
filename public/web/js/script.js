@@ -277,7 +277,7 @@ $(document).ready(function () {
         var left, opacity, scale; //fieldset properties which we will animate
         var animating; //flag to prevent quick multi-click glitches
 
-        $(".next").on('click', function () {
+        $(".next").click(function () {
             if (animating) return false;
             animating = true;
 
@@ -320,7 +320,7 @@ $(document).ready(function () {
             });
         });
 
-        $(".previous").on('click', function () {
+        $(".previous").click(function () {
             if (animating) return false;
             animating = true;
 
@@ -362,7 +362,7 @@ $(document).ready(function () {
             });
         });
 
-        $(".submit").on('click', function () {
+        $(".submit").click(function () {
             return false;
         })
     }; 
