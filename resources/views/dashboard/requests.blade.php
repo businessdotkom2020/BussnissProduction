@@ -2,6 +2,7 @@
 @php
 $menu = false ;
 @endphp
+@section('title', trans('general.requests'))
 
 @section('content')
 
@@ -26,10 +27,11 @@ $menu = false ;
     <div class="container">
 
 
-        <div class="form-group col-md-12 col-xs-12" style="text-align: center;margin-top: 15px;">
+        <div class="form-group col-md-12 col-xs-12" style="text-align: center;margin-top: 15px;margin-bottom: 15px;">
             <button onclick="window.location='{{ url('request/new') }}'" type="submit" class="btn">Add Request <i
                     class="fa fa-plus"></i></button>
         </div>
+
 
         @foreach(\App\Models\Request::where('user_id',\Auth::id())->get() as $request)
         <div class="block b-product col-md-3 col-sm-6 col-xs-12">
