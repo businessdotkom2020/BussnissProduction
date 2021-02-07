@@ -99,6 +99,8 @@ public function tag($tag_id){
     }
 
     public function filter(Request $request){
+
+
         $sortprice = request()->sortprice == "highest" ? "DESC": "ASC"  ;
         $sortdate = request()->sortdate == "latest" ? "DESC": "ASC"  ;
 

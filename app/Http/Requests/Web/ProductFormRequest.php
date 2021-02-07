@@ -33,8 +33,8 @@ class ProductFormRequest extends FormRequest
             'images'                   => 'required|array',
             'images.*'                 => 'image',
             'prices.*.price'           => 'nullable',
-            'prices.*.quantity_from'   => 'required_with:person.*.price',
-            'prices.*.quantity_to'     => 'required_with:person.*.quantity_from',
+            'prices.*.quantity_from'   => 'required_with:prices.*.price',
+            'prices.*.quantity_to'     => 'required_with:prices.*.quantity_from',
 
         ];
     }
