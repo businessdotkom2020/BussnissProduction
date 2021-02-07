@@ -21,19 +21,21 @@ $menu = false ;
                 <div class="form-group col-md-6 col-xs-12">
                     <h4>@lang('general.categories')</h4>
                     <select name="category_id" class="form-control">
-
                         @foreach(\App\Models\Category::whereNull('parent_id')->get() as $category)
-
                         <option value="{{$category->id}}">
                             {{$category->getTranslatedAttribute('name',\App::getLocale())}}</option>
-
-
                         @endforeach
                     </select>
+                    @error('category_id')
+                    <div class="alert" style="color:#a94442">{{ $message }}</div>
+                    @enderror
                 </div>
                 <div class="form-group col-md-12 col-xs-12">
                     <h4>@lang('general.description')</h4>
                     <textarea name="description" class="form-control"></textarea>
+                    @error('description')
+                    <div class="alert" style="color:#a94442">{{ $message }}</div>
+                    @enderror
                 </div>
                 <div class="form-group col-md-12 col-xs-12">
                     <h4>@lang('general.request_images')</h4>
@@ -73,6 +75,9 @@ $menu = false ;
                                 data-max-file-size="5M" />
                         </div>
                     </div>
+                    @error('images')
+                    <div class="alert" style="color:#a94442">{{ $message }}</div>
+                    @enderror
                 </div>
                 <div class="form-group col-md-12 col-xs-12">
                     <button type="submit" class="btn">@lang('general.add_rquest')</button>
