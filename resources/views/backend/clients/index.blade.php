@@ -25,6 +25,7 @@
                             <th>@lang('dashboard.image')</th>
                             <th>@lang('dashboard.name')</th>
                             <th>@lang('dashboard.supplier')</th>
+                            <th>@lang('dashboard.add_date')</th>
                             <th>@lang('dashboard.options')</th>
                         </tr>
                         </thead>
@@ -41,6 +42,11 @@
                                 </td>
                                 <td>{{ $client->name ?? '' }}</td>
                                 <td>{{ $client->supplier->name ?? '' }}</td>
+                                <td>
+                                    @if(!empty($client->created_at))
+                                        {{ Carbon\Carbon::parse($client->created_at)->format('Y-m-d')}}
+                                    @endif
+                                </td>
                                 <td>
                                     <a href="{{ route('clients.edit' , $client->id) }}"
                                        class="mr-3 text-primary"><i class="mdi mdi-pencil font-size-18"></i></a>

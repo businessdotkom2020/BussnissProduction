@@ -144,4 +144,15 @@ class UserController extends Controller
         DB::table("users")->whereIn('id',explode(",",$ids))->delete();
         return response()->json(['success'=>"Records Deleted successfully."]);
     }
+
+    public function delete_user($id)
+    {
+        try {
+            $user = User::find($id);
+            $user->delete();
+            return redirect()->route('users.index')->with('done', 'Deleted Successfully');
+        } catch (\Exception $e) {
+            return redirect()->back()->with('error', 'Error Try Again !!');
+        }
+    }
 }

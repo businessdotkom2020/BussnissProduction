@@ -32,6 +32,7 @@
                                 <th data-priority="0">{{ __('dashboard.tag') }}</th>
                                 <th data-priority="0">{{ __('dashboard.zone') }}</th>
                                 <th data-priority="0">{{ __('dashboard.price') }}</th>
+                                <th data-priority="0">{{ __('dashboard.add_date') }}</th>
 
                                 <th data-priority="1">{{ __('dashboard.options') }}</th>
                             </tr>
@@ -67,6 +68,11 @@
                                         @endisset
                                     </td>
                                     <td>{{ $product->price }}</td>
+                                    <td>
+                                        @if(!empty($product->created_at))
+                                            {{ Carbon\Carbon::parse($product->created_at)->format('Y-m-d')}}
+                                        @endif
+                                    </td>
                                     <td>
                                         <a title="edit" href="{{ route('productss.edit' , $product->id) }}"
                                            class="mr-3 text-primary"><i class="mdi mdi-pencil font-size-18"></i></a>

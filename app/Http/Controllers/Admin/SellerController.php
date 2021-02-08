@@ -49,6 +49,7 @@ class SellerController extends Controller
         try {
             $categories = Category::whereNull('parent_id')->get();
             $countries = Country::all();
+
             return view('backend.sellers.create' , compact('countries','categories'));
         } catch (\Exception $e) {
             return redirect()->back()->with('error', 'Error Try Again !!');
@@ -122,7 +123,13 @@ class SellerController extends Controller
         try {
             $user = User::whereNotNull('state_id')->where('id',$id)->first();
             if(isset($user)){
-                return view('backend.sellers.show' , compact('user'));
+                $select_categoriesIds = [];
+                $select_cats = CategoryUser::where('user_id' , $id)->get();
+                foreach ($select_cats as $select_cat){
+                    array_push($select_categoriesIds , $select_cat->category_id);
+                }
+                $select_categories = Category::whereIn('id' , $select_categoriesIds)->get();
+                return view('backend.sellers.show' , compact('user','select_categories'));
             }else{
                 return redirect()->back()->with('error', 'Error Try Again !!');
             }
@@ -258,5 +265,21 @@ class SellerController extends Controller
             $user->delete();
         }
         return response()->json(['success'=>"Records Deleted successfully."]);
+    }
+
+    public function delete_seller($id)
+    {
+        try {
+            $user = User::find($id);
+            if($user->avatar != 'users/default.png'){
+                @unlink('storage/' . $user->avatar);
+            }
+            @unlink('storage/' . $user->store_background);
+            CategoryUser::where('user_id' , $id)->delete();
+            $user->delete();
+            return redirect()->route('sellerss.index')->with('done', 'Deleted Successfully ....');
+        } catch (\Exception $e) {
+            return redirect()->back()->with('error', 'Error Try Again !!');
+        }
     }
 }

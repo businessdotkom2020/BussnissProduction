@@ -116,6 +116,16 @@ class CategoryController extends Controller
         }
 
     }
+    public function category_info($id)
+    {
+        $category = Category::find($id);
+        if (isset($category)) {
+            return view('backend.categories.info', compact('category'));
+        } else {
+            return redirect()->back()->with('error', 'Error Try Again !!');
+        }
+
+    }
 
     /**
      * Update the specified resource in storage.

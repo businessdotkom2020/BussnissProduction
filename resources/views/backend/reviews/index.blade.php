@@ -24,6 +24,7 @@
                             <th>@lang('dashboard.com_owner')</th>
                             <th>@lang('dashboard.com_of')</th>
                             <th>@lang('dashboard.com_on')</th>
+                            <th>@lang('dashboard.add_date')</th>
                             <th>@lang('dashboard.options')</th>
                         </tr>
                         </thead>
@@ -52,6 +53,11 @@
                                         {{ __('dashboard.request') }}
                                     @elseif($review->reviewed_type == 'App\Models\Service')
                                         {{ __('dashboard.service') }}
+                                    @endif
+                                </td>
+                                <td>
+                                    @if(!empty($review->created_at))
+                                        {{ Carbon\Carbon::parse($review->created_at)->format('Y-m-d')}}
                                     @endif
                                 </td>
                                 <td>

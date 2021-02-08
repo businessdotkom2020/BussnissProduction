@@ -15,7 +15,7 @@ class ServiceController extends Controller
         $this->middleware('permission:service-list|service-create|service-edit|service-delete', ['only' => ['index','show']]);
         $this->middleware('permission:service-create', ['only' => ['create','store']]);
         $this->middleware('permission:service-edit', ['only' => ['edit','update']]);
-        $this->middleware('permission:service-delete', ['only' => ['destroy','delete_servicess']]);
+        $this->middleware('permission:service-delete', ['only' => ['destroy','delete_servicess','delete_service']]);
     }
     /**
      * Display a listing of the resource.
@@ -196,6 +196,22 @@ class ServiceController extends Controller
                     'error' => 'NO Records TO DELETE'
                 ]);
             }
+        } catch (\Exception $e) {
+            return redirect()->back()->with('error', 'Error Try Again !!');
+        }
+    }
+
+    public function delete_service($id)
+    {
+        try {
+            $service = Service::find($id);
+
+            foreach (json_decode($service->images) as $img){
+                @unlink('storage/' . $img);
+            }
+
+            $service->delete();
+            return redirect()->route('servicess.index')->with('done', 'Deleted Successfully ....');
         } catch (\Exception $e) {
             return redirect()->back()->with('error', 'Error Try Again !!');
         }

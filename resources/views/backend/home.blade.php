@@ -46,6 +46,15 @@
                                 </div>
                             </div>
                         </div>
+                        <div class="card-body text-center border-top py-3">
+                            <div class="text-truncate">
+                                <span class="text-muted ml-2">
+                                    <a href="{{ route('moderators.index') }}">
+                                          {{ __('dashboard.show_all') }}
+                                    </a>
+                                </span>
+                            </div>
+                        </div>
                     </div>
                 </div>
                 <div class="col-md-4">
@@ -59,6 +68,15 @@
                                 <div class="text-primary">
                                     <i class="ri-store-2-line font-size-24"></i>
                                 </div>
+                            </div>
+                        </div>
+                        <div class="card-body text-center border-top py-3">
+                            <div class="text-truncate">
+                                <span class="text-muted ml-2">
+                                    <a href="{{ route('sellerss.index') }}">
+                                          {{ __('dashboard.show_all') }}
+                                    </a>
+                                </span>
                             </div>
                         </div>
                     </div>
@@ -76,6 +94,15 @@
                                 </div>
                             </div>
                         </div>
+                        <div class="card-body text-center border-top py-3">
+                            <div class="text-truncate">
+                                <span class="text-muted ml-2">
+                                    <a href="{{ route('clients.index') }}">
+                                          {{ __('dashboard.show_all') }}
+                                    </a>
+                                </span>
+                            </div>
+                        </div>
                     </div>
                 </div>
                 <div class="col-md-4">
@@ -89,6 +116,15 @@
                                 <div class="text-primary">
                                     <i class="ri-git-branch-fill font-size-24"></i>
                                 </div>
+                            </div>
+                        </div>
+                        <div class="card-body text-center border-top py-3">
+                            <div class="text-truncate">
+                                <span class="text-muted ml-2">
+                                    <a href="{{ route('branches.index') }}">
+                                          {{ __('dashboard.show_all') }}
+                                    </a>
+                                </span>
                             </div>
                         </div>
                     </div>
@@ -106,6 +142,15 @@
                                 </div>
                             </div>
                         </div>
+                        <div class="card-body text-center border-top py-3">
+                            <div class="text-truncate">
+                                <span class="text-muted ml-2">
+                                    <a href="{{ route('users.index') }}">
+                                          {{ __('dashboard.show_all') }}
+                                    </a>
+                                </span>
+                            </div>
+                        </div>
                     </div>
                 </div>
                 <div class="col-md-4">
@@ -119,6 +164,15 @@
                                 <div class="text-primary">
                                     <i class="ri-shopping-cart-2-line font-size-24"></i>
                                 </div>
+                            </div>
+                        </div>
+                        <div class="card-body text-center border-top py-3">
+                            <div class="text-truncate">
+                                <span class="text-muted ml-2">
+                                    <a href="{{ route('productss.index') }}">
+                                          {{ __('dashboard.show_all') }}
+                                    </a>
+                                </span>
                             </div>
                         </div>
                     </div>
@@ -136,6 +190,15 @@
                                 </div>
                             </div>
                         </div>
+                        <div class="card-body text-center border-top py-3">
+                            <div class="text-truncate">
+                                <span class="text-muted ml-2">
+                                    <a href="{{ route('requestss.index') }}">
+                                          {{ __('dashboard.show_all') }}
+                                    </a>
+                                </span>
+                            </div>
+                        </div>
                     </div>
                 </div>
                 <div class="col-md-4">
@@ -144,11 +207,20 @@
                             <div class="media">
                                 <div class="media-body overflow-hidden">
                                     <p class="text-truncate font-size-14 mb-2">{{ __('dashboard.jobs') }}</p>
-                                    <h4 class="mb-0">{{ count(\App\Models\Request::get()) }}</h4>
+                                    <h4 class="mb-0">{{ count(\App\Models\Job::get()) }}</h4>
                                 </div>
                                 <div class="text-primary">
                                     <i class="fas fa-user-md font-size-24"></i>
                                 </div>
+                            </div>
+                        </div>
+                        <div class="card-body text-center border-top py-3">
+                            <div class="text-truncate">
+                                <span class="text-muted ml-2">
+                                    <a href="{{ route('jobss.index') }}">
+                                          {{ __('dashboard.show_all') }}
+                                    </a>
+                                </span>
                             </div>
                         </div>
                     </div>
@@ -166,6 +238,15 @@
                                 </div>
                             </div>
                         </div>
+                        <div class="card-body text-center border-top py-3">
+                            <div class="text-truncate">
+                                <span class="text-muted ml-2">
+                                    <a href="{{ route('servicess.index') }}">
+                                          {{ __('dashboard.show_all') }}
+                                    </a>
+                                </span>
+                            </div>
+                        </div>
                     </div>
                 </div>
                 <div class="col-md-4">
@@ -179,6 +260,15 @@
                                 <div class="text-primary">
                                     <i class="ri-hashtag font-size-24"></i>
                                 </div>
+                            </div>
+                        </div>
+                        <div class="card-body text-center border-top py-3">
+                            <div class="text-truncate">
+                                <span class="text-muted ml-2">
+                                    <a href="{{ route('tags.index') }}">
+                                          {{ __('dashboard.show_all') }}
+                                    </a>
+                                </span>
                             </div>
                         </div>
                     </div>
@@ -196,6 +286,15 @@
                                 </div>
                             </div>
                         </div>
+                        <div class="card-body text-center border-top py-3">
+                            <div class="text-truncate">
+                                <span class="text-muted ml-2">
+                                    <a href="{{ route('brands.index') }}">
+                                          {{ __('dashboard.show_all') }}
+                                    </a>
+                                </span>
+                            </div>
+                        </div>
                     </div>
                 </div>
                 <div class="col-md-4">
@@ -209,6 +308,15 @@
                                 <div class="text-primary">
                                     <i class="fas fa-images font-size-24"></i>
                                 </div>
+                            </div>
+                        </div>
+                        <div class="card-body text-center border-top py-3">
+                            <div class="text-truncate">
+                                <span class="text-muted ml-2">
+                                    <a href="{{ route('sliders.index') }}">
+                                          {{ __('dashboard.show_all') }}
+                                    </a>
+                                </span>
                             </div>
                         </div>
                     </div>
@@ -226,6 +334,15 @@
                                 </div>
                             </div>
                         </div>
+                        <div class="card-body text-center border-top py-3">
+                            <div class="text-truncate">
+                                <span class="text-muted ml-2">
+                                    <a href="{{ route('sliders.index') }}">
+                                          {{ __('dashboard.show_all') }}
+                                    </a>
+                                </span>
+                            </div>
+                        </div>
                     </div>
                 </div>
                 <div class="col-md-4">
@@ -239,6 +356,15 @@
                                 <div class="text-primary">
                                     <i class="ri-earth-fill font-size-24"></i>
                                 </div>
+                            </div>
+                        </div>
+                        <div class="card-body text-center border-top py-3">
+                            <div class="text-truncate">
+                                <span class="text-muted ml-2">
+                                    <a href="{{ route('countries.index') }}">
+                                          {{ __('dashboard.show_all') }}
+                                    </a>
+                                </span>
                             </div>
                         </div>
                     </div>
@@ -256,6 +382,15 @@
                                 </div>
                             </div>
                         </div>
+                        <div class="card-body text-center border-top py-3">
+                            <div class="text-truncate">
+                                <span class="text-muted ml-2">
+                                    <a href="{{ route('states.index') }}">
+                                          {{ __('dashboard.show_all') }}
+                                    </a>
+                                </span>
+                            </div>
+                        </div>
                     </div>
                 </div>
                 <div class="col-md-4">
@@ -269,6 +404,15 @@
                                 <div class="text-primary">
                                     <i class="ri-earthquake-line font-size-24"></i>
                                 </div>
+                            </div>
+                        </div>
+                        <div class="card-body text-center border-top py-3">
+                            <div class="text-truncate">
+                                <span class="text-muted ml-2">
+                                    <a href="{{ route('cities.index') }}">
+                                          {{ __('dashboard.show_all') }}
+                                    </a>
+                                </span>
                             </div>
                         </div>
                     </div>
@@ -286,6 +430,15 @@
                                 </div>
                             </div>
                         </div>
+                        <div class="card-body text-center border-top py-3">
+                            <div class="text-truncate">
+                                <span class="text-muted ml-2">
+                                    <a href="{{ route('zones.index') }}">
+                                          {{ __('dashboard.show_all') }}
+                                    </a>
+                                </span>
+                            </div>
+                        </div>
                     </div>
                 </div>
                 <div class="col-md-4">
@@ -299,6 +452,15 @@
                                 <div class="text-primary">
                                     <i class="ri-star-half-s-fill font-size-24"></i>
                                 </div>
+                            </div>
+                        </div>
+                        <div class="card-body text-center border-top py-3">
+                            <div class="text-truncate">
+                                <span class="text-muted ml-2">
+                                    <a href="{{ route('attributes.index') }}">
+                                          {{ __('dashboard.show_all') }}
+                                    </a>
+                                </span>
                             </div>
                         </div>
                     </div>

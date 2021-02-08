@@ -102,6 +102,8 @@
                     </table>
                     <br>
                     <a href="{{ route('productss.index') }}" style="width: 100%" class="btn btn-success">{{ __('dashboard.back') }}</a>
+                    <a href="{{ route('productss.edit' , $product->id) }}" style="width: 100%;margin-top: 20px" class="btn btn-primary"><i class="mdi mdi-pencil font-size-18"></i></a>
+                    <a href="{{ route('delete_product' , $product->id) }}" style="width: 100%;margin-top: 20px" class="btn btn-danger"><i class="mdi mdi-trash-can font-size-18"></i></a>
                 </div>
             </div>
 

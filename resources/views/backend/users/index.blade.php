@@ -35,6 +35,7 @@
                                 <th data-priority="0">{{ __('dashboard.country') }}</th>
                                 <th data-priority="0">{{ __('dashboard.requests') }}</th>
                                 <th data-priority="0">{{ __('dashboard.reviews') }}</th>
+                                <th data-priority="0">{{ __('dashboard.add_date') }}</th>
 
                                 <th data-priority="1">{{ __('dashboard.options') }}</th>
                             </tr>
@@ -60,6 +61,11 @@
                                         $reviws = \App\Models\Review::where('user_id' , $user->id)->get();
                                     ?>
                                     <td>{{ $reviws->count() }}</td>
+                                    <td>
+                                        @if(!empty($user->created_at))
+                                            {{ Carbon\Carbon::parse($user->created_at)->format('Y-m-d')}}
+                                        @endif
+                                    </td>
 
                                     <td>
                                         <a href="{{ route('users.edit' , $user->id) }}"

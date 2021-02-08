@@ -16,7 +16,7 @@ class ProductController extends Controller
         $this->middleware('permission:product-list|product-create|product-edit|product-delete', ['only' => ['index','show']]);
         $this->middleware('permission:product-create', ['only' => ['create','store']]);
         $this->middleware('permission:product-edit', ['only' => ['edit','update']]);
-        $this->middleware('permission:product-delete', ['only' => ['destroy' ,'delete_prodectss']]);
+        $this->middleware('permission:product-delete', ['only' => ['destroy' ,'delete_prodectss','delete_prodect']]);
     }
     /**
      * Display a listing of the resource.
@@ -345,6 +345,35 @@ class ProductController extends Controller
                     'error' => 'NO Records TO DELETE'
                 ]);
             }
+        } catch (\Exception $e) {
+            return redirect()->back()->with('error', 'Error Try Again !!');
+        }
+    }
+
+    public function delete_prodect($id)
+    {
+        try {
+            $product = Product::find($id);
+
+            Translation::where('table_name' , 'products')->where('column_name' , 'name')->
+            where('foreign_key' , $id)->delete();
+            Translation::where('table_name' , 'products')->where('column_name' , 'description')->
+            where('foreign_key' , $id)->delete();
+            $old_price_options = ProductPrice::where('product_id' , $id)->get();
+            foreach ($old_price_options as $old_price_option){
+                $old_price_option->delete();
+            }
+            $attribute_options = ProductAttribute::where('product_id' , $id)->get();
+            foreach ($attribute_options as $attribute_option){
+                $attribute_option->delete();
+            }
+            foreach (json_decode($product->images) as $img){
+                @unlink('storage/' . $img);
+            }
+            @unlink('storage/' . $product->image);
+
+            $product->delete();
+            return redirect()->route('productss.index')->with('done', 'Deleted Successfully ....');
         } catch (\Exception $e) {
             return redirect()->back()->with('error', 'Error Try Again !!');
         }

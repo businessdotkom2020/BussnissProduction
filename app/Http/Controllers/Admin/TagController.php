@@ -15,7 +15,7 @@ class TagController extends Controller
         $this->middleware('permission:tag-list|tag-create|tag-edit|tag-delete', ['only' => ['index','show']]);
         $this->middleware('permission:tag-create', ['only' => ['create','store']]);
         $this->middleware('permission:tag-edit', ['only' => ['edit','update']]);
-        $this->middleware('permission:tag-delete', ['only' => ['destroy' , 'delete_tags']]);
+        $this->middleware('permission:tag-delete', ['only' => ['destroy' , 'delete_tags','delete_tag']]);
     }
     /**
      * Display a listing of the resource.
@@ -174,6 +174,19 @@ class TagController extends Controller
                     'error' => 'NO Tags TO DELETE'
                 ]);
             }
+        } catch (\Exception $e) {
+            return redirect()->back()->with('error', 'Error Try Again !!');
+        }
+    }
+
+    public function delete_tag($id)
+    {
+        try {
+            $tag = Tag::find($id);
+            Translation::where('table_name' , 'tags')->where('column_name' , 'name')->
+            where('foreign_key' , $id)->delete();
+            $tag->delete();
+            return redirect()->route('tags.index')->with('done', 'Deleted Successfully ....');
         } catch (\Exception $e) {
             return redirect()->back()->with('error', 'Error Try Again !!');
         }

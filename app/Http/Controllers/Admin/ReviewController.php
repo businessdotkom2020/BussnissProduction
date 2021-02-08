@@ -42,4 +42,14 @@ class ReviewController extends Controller
             return redirect()->back()->with('error', 'Error Try Again !!');
         }
     }
+    public function delete_review($id)
+    {
+        try {
+            $review = Review::find($id);
+            $review->delete();
+            return redirect()->route('reviews.index')->with('done' , 'Deleted Successfully ....');
+        } catch (\Exception $e) {
+            return redirect()->back()->with('error', 'Error Try Again !!');
+        }
+    }
 }

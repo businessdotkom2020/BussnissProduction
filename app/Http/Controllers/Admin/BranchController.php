@@ -16,7 +16,7 @@ class BranchController extends Controller
         $this->middleware('permission:branch-list', ['only' => ['index','show']]);
         $this->middleware('permission:branch-create', ['only' => ['create','store']]);
         $this->middleware('permission:branch-edit', ['only' => ['edit','update']]);
-        $this->middleware('permission:branch-delete', ['only' => ['destroy' , 'delete_branches']]);
+        $this->middleware('permission:branch-delete', ['only' => ['destroy' , 'delete_branches','delete_branch']]);
     }
     /**
      * Display a listing of the resource.
@@ -178,5 +178,16 @@ class BranchController extends Controller
             $branch->delete();
         }
         return response()->json(['success'=>"Records Deleted successfully."]);
+    }
+
+    public function delete_branch($id)
+    {
+        try {
+            $branch = Branch::find($id);
+            $branch->delete();
+            return redirect()->route('branches.index')->with('done', 'Deleted Successfully ....');
+        } catch (\Exception $e) {
+            return redirect()->back()->with('error', 'Error Try Again !!');
+        }
     }
 }

@@ -39,6 +39,7 @@
                                 <th data-priority="0">{{ __('dashboard.country') }}</th>
                                 <th data-priority="0">{{ __('dashboard.state') }}</th>
                                 <th data-priority="0">{{ __('dashboard.city') }}</th>
+                                <th data-priority="0">{{ __('dashboard.add_date') }}</th>
 
                                 <th data-priority="1">{{ __('dashboard.options') }}</th>
                             </tr>
@@ -66,6 +67,11 @@
                                     <td>{{ $user->country->getTranslatedAttribute('name',\App::getLocale()) }}</td>
                                     <td>{{ $user->state->getTranslatedAttribute('name',\App::getLocale()) }}</td>
                                     <td>{{ $user->city->getTranslatedAttribute('name',\App::getLocale()) }}</td>
+                                    <td>
+                                        @if(!empty($user->created_at))
+                                            {{ Carbon\Carbon::parse($user->created_at)->format('Y-m-d')}}
+                                        @endif
+                                    </td>
 
                                     <td>
                                         <a href="{{ route('sellerss.edit' , $user->id) }}"

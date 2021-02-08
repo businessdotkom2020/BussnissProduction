@@ -24,6 +24,7 @@
                             <th>#</th>
                             <th>@lang('dashboard.name')</th>
                             <th>@lang('dashboard.email')</th>
+                            <th>@lang('dashboard.phone')</th>
                             <th>@lang('dashboard.role_group')</th>
                             <th>@lang('dashboard.active')</th>
                             <th>@lang('dashboard.options')</th>
@@ -35,6 +36,7 @@
                                 <td>{{ $loop->index + 1 }}</td>
                                 <td>{{ $mo->name}}</td>
                                 <td>{{ $mo->email}}</td>
+                                <td>{{ $mo->phone}}</td>
                                 <td>
                                     @if(!empty($mo->getRoleNames()))
                                         @foreach($mo->getRoleNames() as $v)
@@ -57,7 +59,8 @@
                                        delete_url="/moderators/" class="text-danger remove-alert" href="#"><i
                                                 class="mdi mdi-trash-can font-size-18"></i></a>
                                     @else
-                                        <i class="fa fa-times text-danger"></i>
+                                        <a href="{{ route('moderators.edit' , $mo->id) }}"
+                                           class="mr-3 text-primary"><i class="mdi mdi-pencil font-size-18"></i></a>
                                     @endif
                                 </td>
                             </tr>
