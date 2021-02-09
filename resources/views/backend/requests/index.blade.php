@@ -25,6 +25,7 @@
                             <th style="width: 28px;" ><input type="checkbox" id="master"></th>
                             <th>{{ __('dashboard.image') }}</th>
                             <th>{{ __('dashboard.title') }}</th>
+                            <th>{{ __('dashboard.add_date') }}</th>
                             <th>{{ __('dashboard.supplier') }}</th>
                             <th>{{ __('dashboard.options') }}</th>
                         </tr>
@@ -46,6 +47,11 @@
                                     {{  implode(' ', array_slice(explode(' ', $req->name), 0, 5)) }}
                                 </td>
                                 <td>{{ $req->user->name }}</td>
+                                <td>
+                                    @if(!empty($req->created_at))
+                                        {{ Carbon\Carbon::parse($req->created_at)->format('Y-m-d')}}
+                                    @endif
+                                </td>
                                 <td>
                                     <a title="edit" href="{{ route('requestss.edit' , $req->id) }}"
                                        class="mr-3 text-primary"><i class="mdi mdi-pencil font-size-18"></i></a>

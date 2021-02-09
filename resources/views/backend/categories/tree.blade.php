@@ -294,13 +294,25 @@
                                     <hr>
                                     <li @if(count($category->children) > 0) style="cursor: pointer" @endif>
                                         {{$category->getTranslatedAttribute('name',app()->getLocale())}}
-                                        <span class="badge badge-pill badge-primary float-right mx-3">{{ __('dashboard.products') }} {{ $category->products->count() }}</span>
-                                        <span class="badge badge-pill badge-soft-primary float-right mx-3">{{ __('dashboard.requests') }} {{ $category->requests->count() }}</span>
-                                        <span class="badge badge-pill badge-dark float-right mx-3">{{ __('dashboard.services') }} {{ $category->services->count() }}</span>
+                                        <a href="{{ route('category_info',$category->id) }}" class="badge badge-pill badge-soft-warning float-right mx-3">{{ __('dashboard.products') }} {{ $category->products->count() }}</a>
+                                        <a href="{{ route('category_info',$category->id) }}" class="badge badge-pill badge-soft-primary float-right mx-3">{{ __('dashboard.requests') }} {{ $category->requests->count() }}</a>
+                                        <a href="{{ route('category_info',$category->id) }}" class="badge badge-pill badge-soft-danger float-right mx-3">{{ __('dashboard.services') }} {{ $category->services->count() }}</a>
+                                        <a href="{{ route('category_info',$category->id) }}" class="badge badge-pill badge-soft-success float-right mx-3">{{ __('dashboard.sellers') }}
+                                            <?php
+                                                $cats = \App\Models\CategoryUser::where('category_id' , $category->id)->get();
+                                                $user_ids = [];
+                                                foreach ($cats as $cat){
+                                                    array_push( $user_ids , $cat->user_id);
+                                                }
+                                                $users = \App\Models\User::whereIn('id',$user_ids)->get();
+                                            ?>
+                                            {{ $users->count() }}
+                                        </a>
                                         @if(count($category->children))
                                             @include('backend.categories.category',['childs' => $category->children])
                                         @endif
                                     </li>
+                                    <a href="{{ route('category_info',$category->id) }}">{{ __('dashboard.visit') }}</a>
                                 @endforeach
                             </ul>
                         </div>

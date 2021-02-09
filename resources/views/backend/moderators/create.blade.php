@@ -34,6 +34,17 @@
                         <div class="row">
                             <div class="col-md-12">
                                 <div class="form-group">
+                                    <label for="phone">@lang('dashboard.phone')</label>
+                                    <input type="tel" name="phone" class="form-control" id="phone" placeholder="@lang('dashboard.phone')" required>
+                                    @error('phone')
+                                    <span class="text-danger">{{ $message }}</span>
+                                    @enderror
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-12">
+                                <div class="form-group">
                                     <label for="password">@lang('dashboard.password')</label>
                                     <input type="password" name="password" class="form-control" id="password" placeholder="@lang('dashboard.password')" required>
                                     @error('password')

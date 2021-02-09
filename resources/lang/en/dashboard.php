@@ -3,6 +3,8 @@
 return [
     /***********  sidebar   ***********/
     'menu' => 'Menu',
+    'show_all' => 'View More',
+    'add_date' => 'Date',
     'categories_tree' => 'Category Tree View',
     'active_users' => 'Online members',
     'most_active_users' => 'The most active Users',

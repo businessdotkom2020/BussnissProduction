@@ -26,6 +26,7 @@
                             <th>{{ __('dashboard.image') }}</th>
                             <th>{{ __('dashboard.title') }}</th>
                             <th>{{ __('dashboard.supplier') }}</th>
+                            <th>{{ __('dashboard.add_date') }}</th>
                             <th>{{ __('dashboard.options') }}</th>
                         </tr>
                         </thead>
@@ -46,6 +47,11 @@
                                     {{  implode(' ', array_slice(explode(' ', $service->name), 0, 5)) }}
                                 </td>
                                 <td>{{ $service->owner->name }}</td>
+                                <td>
+                                    @if(!empty($service->created_at))
+                                        {{ Carbon\Carbon::parse($service->created_at)->format('Y-m-d')}}
+                                    @endif
+                                </td>
                                 <td>
                                     <a title="edit" href="{{ route('servicess.edit' , $service->id) }}"
                                        class="mr-3 text-primary"><i class="mdi mdi-pencil font-size-18"></i></a>

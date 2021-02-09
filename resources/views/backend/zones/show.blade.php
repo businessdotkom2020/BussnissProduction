@@ -85,6 +85,8 @@
                         </div>
                     </div>
                     <a href="{{ route('zones.index') }}" style="width: 100%" class="btn btn-success">{{ __('dashboard.back') }}</a>
+                    <a href="{{ route('zones.edit' , $zone->id) }}" style="width: 100%;margin-top: 20px" class="btn btn-primary"><i class="mdi mdi-pencil font-size-18"></i></a>
+                    <a href="{{ route('delete_zone' , $zone->id) }}" style="width: 100%;margin-top: 20px" class="btn btn-danger"><i class="mdi mdi-trash-can font-size-18"></i></a>
                 </div>
             </div>
 

@@ -14,7 +14,7 @@ class RequestController extends Controller
         $this->middleware('permission:request-list|request-create|request-edit|request-delete', ['only' => ['index','show']]);
         $this->middleware('permission:request-create', ['only' => ['create','store']]);
         $this->middleware('permission:request-edit', ['only' => ['edit','update']]);
-        $this->middleware('permission:request-delete', ['only' => ['destroy','delete_requestss']]);
+        $this->middleware('permission:request-delete', ['only' => ['destroy','delete_requestss','delete_request']]);
     }
     /**
      * Display a listing of the resource.
@@ -196,6 +196,22 @@ class RequestController extends Controller
                     'error' => 'NO Records TO DELETE'
                 ]);
             }
+        } catch (\Exception $e) {
+            return redirect()->back()->with('error', 'Error Try Again !!');
+        }
+    }
+
+    public function delete_request($id)
+    {
+        try {
+            $req = Req::find($id);
+
+            foreach (json_decode($req->images) as $img){
+                @unlink('storage/' . $img);
+            }
+
+            $req->delete();
+            return redirect()->route('servicess.index')->with('done', 'Deleted Successfully ....');
         } catch (\Exception $e) {
             return redirect()->back()->with('error', 'Error Try Again !!');
         }

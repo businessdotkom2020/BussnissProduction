@@ -28,6 +28,7 @@
                             <th>@lang('dashboard.name')</th>
                             <th>@lang('dashboard.email')</th>
                             <th>@lang('dashboard.mobile')</th>
+                            <th>@lang('dashboard.add_date')</th>
                             <th>@lang('dashboard.options')</th>
                         </tr>
                         </thead>
@@ -39,6 +40,11 @@
                                 <td>{{ $branch->name }}</td>
                                 <td>{{ $branch->email }}</td>
                                 <td>{{ $branch->mobile }}</td>
+                                <td>
+                                    @if(!empty($branch->created_at))
+                                        {{ Carbon\Carbon::parse($branch->created_at)->format('Y-m-d')}}
+                                    @endif
+                                </td>
                                 <td>
                                     <a href="{{ route('branches.edit' , $branch->id) }}"
                                        class="mr-3 text-primary"><i class="mdi mdi-pencil font-size-18"></i></a>

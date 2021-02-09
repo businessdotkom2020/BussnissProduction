@@ -87,7 +87,7 @@
                                             <div class="col-md-12">
                                                 <div id="map-canvas"></div>
                                                 <input type="hidden" id="lat" name="lat" value="{{ $branch->lat }}" readonly>
-                                                <input type="hidden" id="lng" name="lng" value="{{ $branch->lng }}" readonly>
+                                                <input type="hidden" id="lng" name="lng" value="{{ $branch->lang }}" readonly>
                                             </div>
                                         </div>
                                     </div>
@@ -103,6 +103,8 @@
                     </div>
                     <br>
                     <a href="{{ route('branches.index') }}" style="width: 100%" class="btn btn-success">{{ __('dashboard.back') }}</a>
+                    <a href="{{ route('branches.edit' , $branch->id) }}" style="width: 100%;margin-top: 20px" class="btn btn-primary"><i class="mdi mdi-pencil font-size-18"></i></a>
+                    <a href="{{ route('delete_branch' , $branch->id) }}" style="width: 100%;margin-top: 20px" class="btn btn-danger"><i class="mdi mdi-trash-can font-size-18"></i></a>
                 </div>
             </div>
 

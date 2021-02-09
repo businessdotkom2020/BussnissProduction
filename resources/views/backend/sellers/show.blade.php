@@ -1,5 +1,23 @@
 @extends('backend.layout.master')
 @section('backend-head')
+    <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key={{ env('GOOGLE_MAPS_API_KEY') }}&libraries=places&sensor=false"></script>
+    <style>
+        #map-canvas {
+            width: 100%;
+            height: 350px;
+        }
+        #pac-input {
+            z-index: 0 !important;
+            position: absolute !important;
+            top: 0px !important;
+            left: 0 !important;
+            width: 100% !important;
+            height: 40px !important;
+            padding: 0 6px !important;
+            border: 2px solid #ce8483 !important;
+            border-radius: 3px!important;
+        }
+    </style>
 @endsection
 @section('backend-main')
     <div class="row">
@@ -8,6 +26,37 @@
                 <div class="card-body">
                     <h4 class="card-title">{{ $user->name }}</h4>
                     <table class="table table-striped table-bordered dt-responsive nowrap">
+                        <tr>
+                            <th>{{ __('dashboard.image') }}</th>
+                            <td>
+                                @if(isset($user->avatar))
+                                    <img style="width: 100px;height:100px;border-radius: 10px" src="{{ url('storage/' . $user->avatar) }}"/>
+                                @else
+                                    no image ....
+                                @endif
+                            </td>
+                        </tr>
+                        <tr>
+                            <th>{{ __('dashboard.image') }}   {{ __('dashboard.seller') }}</th>
+                            <td>
+                                @if(isset($user->store_image))
+                                    <img style="width: 100px;height:100px;border-radius: 10px" src="{{ url('storage/' . $user->store_image) }}"/>
+                                @else
+                                    no image ....
+                                @endif
+                            </td>
+                        </tr>
+                        <tr>
+                            <th>{{ __('dashboard.image') }} {{ __('dashboard.seller') }}</th>
+                            <td>
+                                @if(isset($user->store_background))
+                                    <img style="width: 100px;height:100px;border-radius: 10px" src="{{ url('storage/' . $user->store_background) }}"/>
+                                @else
+                                    no image ....
+                                @endif
+                            </td>
+                        </tr>
+
                         <tr>
                             <th>{{ __('dashboard.name') }}</th>
                             <td>{{ $user->name }}</td>
@@ -19,6 +68,10 @@
                         <tr>
                             <th>{{ __('dashboard.phone') }}</th>
                             <td>{{ $user->mobile }}</td>
+                        </tr>
+                        <tr>
+                            <th>{{ __('dashboard.address') }}</th>
+                            <td>{{ $user->address }}</td>
                         </tr>
                         <tr>
                             <th>{{ __('dashboard.wa') }}</th>
@@ -36,7 +89,43 @@
                             <th>{{ __('dashboard.city') }}</th>
                             <td>{{ $user->city->getTranslatedAttribute('name',\App::getLocale()) }}</td>
                         </tr>
+                        <tr>
+                            <th>{{ __('dashboard.categories') }}</th>
+                            <td>
+                                @foreach($select_categories as $cat)
+                                    <span style="border: 1px solid black;padding: 5px;border-radius: 5px;margin: 0 5px">
+                                        {{ $cat->getTranslatedAttribute('name',\App::getLocale()) }}
+                                    </span>
+                                @endforeach
+                            </td>
+                        </tr>
                     </table>
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="form-group">
+                                <div class="panel panel-default">
+                                    <div class="panel-heading">
+                                        <h3 class="panel-title">@lang('dashboard.location')</h3>
+                                    </div>
+                                    <div class="panel-body">
+                                        <div class="row">
+                                            <div class="col-md-12">
+                                                <div id="map-canvas"></div>
+                                                <input type="hidden" id="lat" name="lat" value="{{ $user->lat }}" readonly>
+                                                <input type="hidden" id="lng" name="lng" value="{{ $user->lang }}" readonly>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                @error('lat')
+                                <span class="text-danger">{{ $message }}</span>
+                                @enderror
+                                @error('lang')
+                                <span class="text-danger">{{ $message }}</span>
+                                @enderror
+                            </div>
+                        </div>
+                    </div>
                     <br>
                     <!-- Nav tabs -->
                     <ul class="nav nav-pills nav-justified" role="tablist">
@@ -301,8 +390,11 @@
                                 @endforeach
                             </div>
                         </div>
+
                     </div>
                     <a href="{{ route('sellerss.index') }}" style="width: 100%" class="btn btn-success">{{ __('dashboard.back') }}</a>
+                    <a href="{{ route('sellerss.edit' , $user->id) }}" style="width: 100%;margin-top: 20px" class="btn btn-primary"><i class="mdi mdi-pencil font-size-18"></i></a>
+                    <a href="{{ route('delete_seller' , $user->id) }}" style="width: 100%;margin-top: 20px" class="btn btn-danger"><i class="mdi mdi-trash-can font-size-18"></i></a>
                 </div>
             </div>
 
@@ -310,4 +402,33 @@
     </div> <!-- end row -->
 @endsection
 @section('backend-footer')
+    <script>
+        var map = new google.maps.Map(document.getElementById('map-canvas'),{
+            center:{
+                lat: {{ $user->lat }},
+                lng: {{ $user->lang }}
+            },
+            zoom:5
+        });
+        var marker = new google.maps.Marker({
+            position: {
+                lat: {{ $user->lat }},
+                lng: {{ $user->lang }}
+            },
+            map: map,
+            draggable: false
+        });
+        var searchBox = new google.maps.places.SearchBox(document.getElementById('pac-input'));
+        google.maps.event.addListener(searchBox,'places_changed',function(){
+            var places = searchBox.getPlaces();
+            var bounds = new google.maps.LatLngBounds();
+            var i, place;
+            for(i=0; place=places[i];i++){
+                bounds.extend(place.geometry.location);
+                marker.setPosition(place.geometry.location); //set marker position new...
+            }
+            map.fitBounds(bounds);
+            map.setZoom(5);
+        });
+    </script>
 @endsection

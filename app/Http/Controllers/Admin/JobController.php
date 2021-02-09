@@ -13,7 +13,7 @@ class JobController extends Controller
         $this->middleware('permission:job-list|job-create|job-edit|job-delete', ['only' => ['index','show']]);
         $this->middleware('permission:job-create', ['only' => ['create','store']]);
         $this->middleware('permission:job-edit', ['only' => ['edit','update']]);
-        $this->middleware('permission:job-delete', ['only' => ['destroy','delete_jobss']]);
+        $this->middleware('permission:job-delete', ['only' => ['destroy','delete_jobss','delete_job']]);
     }
     public function index()
     {
@@ -147,6 +147,17 @@ class JobController extends Controller
                     'error' => 'NO Records TO DELETE'
                 ]);
             }
+        } catch (\Exception $e) {
+            return redirect()->back()->with('error', 'Error Try Again !!');
+        }
+    }
+
+    public function delete_job($id)
+    {
+        try {
+            $job = Job::find($id);
+            $job->delete();
+            return redirect()->route('jobss.index')->with('done', 'Deleted Successfully ....');
         } catch (\Exception $e) {
             return redirect()->back()->with('error', 'Error Try Again !!');
         }

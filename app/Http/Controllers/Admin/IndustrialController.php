@@ -16,7 +16,7 @@ class IndustrialController extends Controller
         $this->middleware('permission:zone-list|zone-create|zone-edit|zone-delete', ['only' => ['index','show']]);
         $this->middleware('permission:zone-create', ['only' => ['create','store']]);
         $this->middleware('permission:zone-edit', ['only' => ['edit','update']]);
-        $this->middleware('permission:zone-delete', ['only' => ['destroy','delete_zones']]);
+        $this->middleware('permission:zone-delete', ['only' => ['destroy','delete_zones','delete_zone']]);
     }
     /**
      * Display a listing of the resource.
@@ -194,6 +194,20 @@ class IndustrialController extends Controller
                     'error' => 'NO Record TO DELETE'
                 ]);
             }
+        }catch(\Exception $e){
+            return redirect()->back()->with('error', 'Error Try Again !!');
+        }
+    }
+
+    public function delete_zone($id)
+    {
+        try{
+            $zone = IndustrialZones::find($id);
+            @unlink('storage/' . $zone->image);
+            Translation::where('table_name' , 'industrial_zones')->where('column_name' , 'name')->
+            where('foreign_key' , $id)->delete();
+            $zone->delete();
+            return redirect()->route('zones.index')->with('done' , 'Deleted Successfully ....');
         }catch(\Exception $e){
             return redirect()->back()->with('error', 'Error Try Again !!');
         }

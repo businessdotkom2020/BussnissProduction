@@ -29,6 +29,7 @@
                             <th>@lang('dashboard.supplier')</th>
                             <th>@lang('dashboard.date_announced')</th>
                             <th>@lang('dashboard.salary')</th>
+                            <th>@lang('dashboard.add_date')</th>
                             <th>@lang('dashboard.options')</th>
                         </tr>
                         </thead>
@@ -45,6 +46,11 @@
                                 </td>
                                 <td>
                                     {{  $job->salary ?? ''}}
+                                </td>
+                                <td>
+                                    @if(!empty($job->created_at))
+                                        {{ Carbon\Carbon::parse($job->created_at)->format('Y-m-d')}}
+                                    @endif
                                 </td>
                                 <td>
                                     <a title="edit" href="{{ route('jobss.edit' , $job->id) }}"

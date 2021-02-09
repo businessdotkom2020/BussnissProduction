@@ -58,6 +58,7 @@ class ModeratorController extends Controller
         $this->validate($request, [
             'name' => 'required',
             'status' => 'numeric',
+            'phone' => 'required|min:10',
             'email' => 'required|email|unique:users,email',
             'password' => 'required|same:confirm-password',
             'roles' => 'required'
@@ -124,6 +125,7 @@ class ModeratorController extends Controller
                 'name' => 'required',
                 'status' => 'numeric',
                 'email'=>'required|email',
+                'phone' => 'required|min:10',
                 'password' => 'same:confirm-password',
                 'roles' => 'required'
             ]);
@@ -131,6 +133,7 @@ class ModeratorController extends Controller
             $this->validate($request, [
                 'name' => 'required',
                 'status' => 'numeric',
+                'phone' => 'required|min:10',
                 'email'=>'required|email|unique:users,email,'.$id ,
                 'password' => 'same:confirm-password',
                 'roles' => 'required'

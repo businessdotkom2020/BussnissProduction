@@ -14,7 +14,7 @@ class BrandController extends Controller
         $this->middleware('permission:tag-list|tag-create|tag-edit|tag-delete', ['only' => ['index','show']]);
         $this->middleware('permission:tag-create', ['only' => ['create','store']]);
         $this->middleware('permission:tag-edit', ['only' => ['edit','update']]);
-        $this->middleware('permission:tag-delete', ['only' => ['destroy' , 'delete_brands']]);
+        $this->middleware('permission:tag-delete', ['only' => ['destroy' , 'delete_brands','delete_brand']]);
     }
     /**
      * Display a listing of the resource.
@@ -167,6 +167,18 @@ class BrandController extends Controller
                     'error' => 'NO Brands TO DELETE'
                 ]);
             }
+        } catch (\Exception $e) {
+            return redirect()->back()->with('error', 'Error Try Again !!');
+        }
+    }
+
+    public function delete_brand($id)
+    {
+        try {
+            $brand = Brand::find($id);
+            @unlink('storage/' . $brand->image);
+            $brand->delete();
+            return redirect()->route('brands.index')->with('done', 'Deleted Successfully ....');
         } catch (\Exception $e) {
             return redirect()->back()->with('error', 'Error Try Again !!');
         }

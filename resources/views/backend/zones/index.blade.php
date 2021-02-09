@@ -28,6 +28,7 @@
                             <th>{{ __('dashboard.image') }}</th>
                             <th>{{ __('dashboard.name') }}</th>
                             <th>{{ __('dashboard.state') }}</th>
+                            <th>{{ __('dashboard.add_date') }}</th>
                             <th>{{ __('dashboard.options') }}</th>
                         </tr>
                         </thead>
@@ -44,6 +45,11 @@
                                 </td>
                                 <td>{{$zone->getTranslatedAttribute('name','ar')}} / {{ $zone->name }}</td>
                                 <td>{{$zone->state->getTranslatedAttribute('name','ar')}} / {{ $zone->state->name }}</td>
+                                <td>
+                                    @if(!empty($zone->created_at))
+                                        {{ Carbon\Carbon::parse($zone->created_at)->format('Y-m-d')}}
+                                    @endif
+                                </td>
                                 <td>
                                     <a href="{{ route('zones.edit' , $zone->id) }}"
                                        class="mr-3 text-primary"><i class="mdi mdi-pencil font-size-18"></i></a>

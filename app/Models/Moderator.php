@@ -10,7 +10,7 @@ class Moderator extends Authenticatable
 {
     use HasRoles;
     protected $fillable = [
-        'name', 'email', 'password','status' , 'created_at' , 'updated_at'
+        'name','phone', 'email', 'password','status' , 'created_at' , 'updated_at'
     ];
 
     protected $hidden = [

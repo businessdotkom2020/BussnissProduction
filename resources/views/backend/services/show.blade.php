@@ -61,6 +61,8 @@
                     </table>
                     <br>
                     <a href="{{ route('servicess.index') }}" style="width: 100%" class="btn btn-success">{{ __('dashboard.back') }}</a>
+                    <a href="{{ route('servicess.edit' , $service->id) }}" style="width: 100%;margin-top: 20px" class="btn btn-primary"><i class="mdi mdi-pencil font-size-18"></i></a>
+                    <a href="{{ route('delete_service' , $service->id) }}" style="width: 100%;margin-top: 20px" class="btn btn-danger"><i class="mdi mdi-trash-can font-size-18"></i></a>
                 </div>
             </div>
 
