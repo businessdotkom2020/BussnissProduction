@@ -19,9 +19,15 @@ class Request extends Model
       }
 
 
-      protected $dates = [
-        'post_on','created_at'
-    ];
+    /**
+     * The attributes that should be cast to native types.
+     *
+     * @var array
+     */
+    protected $casts = [
+        'created_at'        => 'datetime',
+        'updated_at'        => 'datetime',
+     ];
 
 
     protected $appends = ['average_rating'];
