@@ -19,6 +19,11 @@ class Request extends Model
       }
 
 
+      protected $dates = [
+        'post_on','deleted_at'
+    ];
+
+
     protected $appends = ['average_rating'];
 
     public function getImagesAttribute($value)
