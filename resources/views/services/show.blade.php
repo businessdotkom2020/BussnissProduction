@@ -13,7 +13,7 @@ $menu = false ;
                         <div class="block col-xs-12">
                             <div class="inner col-xs-12">
                                 <div class="i-top col-xs-12">
-                                    <span class="type-badge">{{$service->category ? $service->category->getTranslatedAttribute('name',\App::getLocale()) : null}}</span>
+                                    <span class="type-badge">{{$service->category }}</span>
                                     <div class="i-slider owl-carousel owl-theme">
 
                                    @foreach(json_decode($service->images) as $img)
