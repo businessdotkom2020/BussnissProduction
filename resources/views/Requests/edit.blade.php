@@ -47,8 +47,7 @@ $menu = false ;
                     </div>
 
                     <div class="prof-img s-item col-md-4 col-sm-6 col-xs-12">
-                        <div>
-
+                        <div style="height: 200px; margin-top: 2px;">
                             <label>
                                 <i class="fa fa-camera"></i>
                                 <input type="file"
