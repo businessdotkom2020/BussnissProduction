@@ -14,9 +14,7 @@
     float: left;
     border-radius: 10px;
     overflow: hidden;
-    background-color: #fff;
-    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
-}
+  }
 
 .prof-img img {
     width: 100%;
