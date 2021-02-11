@@ -7,34 +7,34 @@ $menu = false ;
    <main class="main-content col-xs-12">
             <div class="reqs-wrap reqs-single col-xs-12">
                 <div class="container">
-                   
-                   
+
+
                     <div class="g-body col-xs-12">
                         <div class="block col-xs-12">
                             <div class="inner col-xs-12">
                                 <div class="i-top col-xs-12">
-                                    <span class="type-badge">{{$service->category->getTranslatedAttribute('name',\App::getLocale())}}</span>
+                                    <span class="type-badge">{{$service->category ? $service->category->getTranslatedAttribute('name',\App::getLocale()) : null}}</span>
                                     <div class="i-slider owl-carousel owl-theme">
-                                       
+
                                    @foreach(json_decode($service->images) as $img)
 
                                         <div class="item">
                                             <img src="{{ url('storage/'.$img)}}" alt="">
                                         </div>
-                               
-                               
+
+
                                      @endforeach
-                                     
+
                                     </div>
                                 </div>
                                 <div class="i-middle col-xs-12">
                                     <div class="author">
-                                 
-                                 
+
+
                                         <img src="{{ url('storage/'.$service->owner->avatar) }}" alt="">
                                         <a href="#">{{$service->name}}</a>
                                     </div>
-                                    
+
                                                                                                         <div class="cardo">
                                     <div class="c-inner" style="text-align: right;">
                                         <div class="c-data">
@@ -51,15 +51,15 @@ $menu = false ;
                                                             <i class="fa fa-star"></i>
                                                         @endif
                                                         @php $rating--; @endphp
-                                    
+
                                                 @endforeach
-                                            
+
                                             </p>
                                         </div>
                                     </div>
                                 </div>
-                                    
-                                    
+
+
                                     <div class="time">
                                         <span>{{$service->created_at ? $service->created_at->diffForHumans() : null}}</span>
                                     </div>
@@ -69,7 +69,7 @@ $menu = false ;
                                         <a href="#">{{$service->description}}</a>
                                     </div>
                                     <div class="extra">
-                                        
+
                             <div class="prod-extra">
                                 <a href="javascript:void(0)" id="fav-{{$service->id}}" class="{{$service->isFavorited() ? 'fav-active' : null  }}"  onclick="favtoggle({{$service->id }},{{Auth::user() ? Auth::user()->id : null}})">
                                     <i class="fa fa-heart"></i>
@@ -78,7 +78,7 @@ $menu = false ;
                                     <i class="fa fa-share-alt"></i>
                                 </a>
                             </div>
-                            
+
                             <div class="social shares">
                                 <a href="#" onclick="window.open('https://www.facebook.com/sharer/sharer.php?u='+encodeURIComponent(location.href),'facebook-share-dialog','width=626,height=436');return false;" class="fb">
                                     <i class="fa fa-facebook"></i>
@@ -94,7 +94,7 @@ $menu = false ;
                                 </a>
                             </div>
                             <a class="btn" href="{{url('supplier/'.$service->user_id)}}"  target="_blank">@lang('general.contact_supplier')</a>
-                                        
+
                                     </div>
                                 </div>
                             </div>
@@ -102,9 +102,9 @@ $menu = false ;
                         <div class="req-form col-md-7 col-xs-12">
                                        <form action="{{route('add_product_review',['type' => 'service','id' => $service->id])}}" method="POST">
                                         @csrf
-                                        
+
                                 <div class="form-group">
-                                    
+
                                         <div class="rate-stars" style="text-align: right;">
                                 <div class="stars">
 
@@ -121,7 +121,7 @@ $menu = false ;
 
 </div>
                             </div>
-                                    
+
                                     <textarea class="form-control" name="comment" placeholder="@lang('general.add_review')"></textarea>
                                     <button type="submit" class="btn">@lang('general.add_review')</button>
                                 </div>
@@ -132,7 +132,7 @@ $menu = false ;
                                 <h3>comments</h3>
                             </div>
                             <div class="req-body col-xs-12">
-                                
+
                                 @foreach($service->reviews as $review)
            <div class="rev-item col-md-7 col-xs-12">
 
@@ -146,12 +146,12 @@ $menu = false ;
 @endif
 @endauth
                                     <div class="r-data">
-                                      
+
                                         <div>
                                             <a href="{{url('supplier/'.$review->user_id)}}">{{$review->owner->name}}</a>
                                         </div>
-                                        
-                                        
+
+
                                 <div class="cardo">
                                     <div class="c-inner" style="text-align: right;">
                                         <div class="c-data">
@@ -168,20 +168,20 @@ $menu = false ;
                                                             <i class="fa fa-star"></i>
                                                         @endif
                                                         @php $rating--; @endphp
-                                    
+
                                                 @endforeach
-                                            
+
                                             </p>
                                         </div>
                                     </div>
                                 </div>
-                                        
+
                                         <p>{{$review->comment}}</p>
                                     </div>
                                 </div>
                             @endforeach
-                            
-                               
+
+
                             </div>
                         </div>
                     </div>
@@ -203,7 +203,7 @@ $menu = false ;
              var token = '{{ Session::token() }}';
 
 
-        
+
          $.ajax({
 
 
