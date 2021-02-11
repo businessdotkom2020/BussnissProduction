@@ -7,16 +7,16 @@ use Illuminate\Database\Eloquent\Model;
 
 class Service extends Model
 {
-          use Favoritable,Reviewable;
+    use Favoritable, Reviewable;
 
     protected $appends = ['average_rating'];
 
 
 
-    public function getCreatedAtAttribute($date)
-    {
-        return  $date ? \Carbon\Carbon::parse($date)->format('H:i Y/m/d') : '19:17 2021/01/25';
-    }
+    // public function getCreatedAtAttribute($date)
+    // {
+    //     return  $date ? \Carbon\Carbon::parse($date)->format('H:i Y/m/d') : '19:17 2021/01/25';
+    // }
 
 
     /**
@@ -27,7 +27,7 @@ class Service extends Model
     protected $casts = [
         'created_at'        => 'datetime',
         'updated_at'        => 'datetime',
-     ];
+    ];
 
 
     public function getAverageRatingAttribute()
@@ -35,13 +35,14 @@ class Service extends Model
         return (int)$this->reviews()->average('stars');
     }
 
-    	public function category() {
-		return $this->belongsTo(Category::class);
-	}
+    public function category()
+    {
+        return $this->belongsTo(Category::class);
+    }
 
 
     public function owner()
     {
-        return $this->belongsTo(User::class,'user_id');
+        return $this->belongsTo(User::class, 'user_id');
     }
 }
