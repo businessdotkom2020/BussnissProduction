@@ -147,6 +147,7 @@ Route::get('request/new', 'web\RequestController@create')->middleware('auth');
 Route::post('request/new', 'web\RequestController@post')->name('RequestSave')->middleware('auth');
 Route::post('/request_favorite', 'web\RequestController@favorite')->name('request.favorite');
 Route::get('request/{request_id}', 'web\RequestController@show');
+Route::get('request/{request_id}/edit', 'web\RequestController@edit');
 
 
 /////////////////////       Products ////////////////////

@@ -37,6 +37,16 @@ class RequestController extends Controller
 
         return view('Requests.index', compact('requests'));
     }
+
+
+    public function edit($request_id)
+    {
+        $request = Request::find($request_id);
+
+        return view('Requests.edit', compact('request'));
+    }
+
+
     public function post(AddResquest $request)
     {
         $req = new Request;
