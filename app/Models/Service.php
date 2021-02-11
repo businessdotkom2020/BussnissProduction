@@ -19,6 +19,17 @@ class Service extends Model
     }
 
 
+    /**
+     * The attributes that should be cast to native types.
+     *
+     * @var array
+     */
+    protected $casts = [
+        'created_at'        => 'datetime',
+        'updated_at'        => 'datetime',
+     ];
+
+
     public function getAverageRatingAttribute()
     {
         return (int)$this->reviews()->average('stars');
