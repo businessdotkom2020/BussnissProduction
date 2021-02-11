@@ -46,7 +46,7 @@ $menu = false ;
                         </div>
                     </div>
 
-                    <div class="s-item col-md-4 col-sm-6 col-xs-12">
+                    <div class="prof-img">
                         <label>
                             <i class="fa fa-camera"></i>
                             <input type="file" onchange="document.getElementById('blah').src = window.URL.createObjectURL(this.files[0])">
