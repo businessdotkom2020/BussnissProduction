@@ -7,3 +7,80 @@
 .wrapper {
     overflow:hidden;
 }
+
+
+
+ .prof-img {
+    width: 200px;
+    height: 200px;
+    float: left;
+    margin-left: 20px;
+    border-radius: 10px;
+    overflow: hidden;
+    background-color: #fff;
+    padding: 5px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+}
+
+.prof-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+
+ .prof-img label {
+    border-radius: 5px;
+    margin: 0 auto;
+    font-weight: normal;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    position: relative;
+    cursor: pointer;
+   float:right;
+}
+
+ .prof-img label:before {
+    content: '';
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    transition: all .3s;
+    opacity: 0;
+    visibility: hidden;
+}
+
+ .prof-img i {
+    position: absolute;
+    left: 50%;
+    top: 40%;
+    transform: translate(-50%, -50%);
+    color: #fff;
+    font-size: 60px;
+    opacity: 0;
+    transition: all .3s;
+}
+
+ .prof-img input {
+    position: absolute;
+    z-index: -1;
+    width: 100%;
+    height: 100%;
+    right: 0;
+    top: 0;
+}
+
+.prof-img label:hover:before {
+    opacity: 1;
+    visibility: visible;
+    transition: all .3s;
+}
+ .prof-img label:hover i {
+    top: 50%;
+    transition: all .3s;
+    opacity: 1;
+}
