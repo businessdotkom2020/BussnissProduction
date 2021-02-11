@@ -11,14 +11,11 @@
 
 
  .prof-img {
-    width: 200px;
-    height: 200px;
     float: left;
     margin-left: 20px;
     border-radius: 10px;
     overflow: hidden;
     background-color: #fff;
-    padding: 5px;
     box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
 }
 
