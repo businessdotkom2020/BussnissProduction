@@ -21,8 +21,8 @@ $menu = false ;
                     <h4>@lang('general.categories')</h4>
                     <select name="category_id" class="form-control">
                         @foreach(\App\Models\Category::whereNull('parent_id')->get() as $category)
-                        <option value="{{$category->id}}">
-                            {{$request->category_id == $category->id ? 'selected' : ''}}
+                        <option value="{{$category->id}}"  {{$request->category_id == $category->id ? 'selected' : ''}}>
+
                             {{$category->getTranslatedAttribute('name',\App::getLocale())}}</option>
                         @endforeach
                     </select>
