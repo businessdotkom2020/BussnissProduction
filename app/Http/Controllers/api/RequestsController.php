@@ -101,10 +101,7 @@ $images= [];
                 }
             }
 
-
-$images =  $new_images;
-
-
+            $images =  $new_images;
     }
 			if (is_array(Request()->file('images'))) {
 
