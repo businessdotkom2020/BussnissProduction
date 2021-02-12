@@ -55,7 +55,7 @@ $menu = false ;
                     </div>
                     @endforeach
 
-                    @for ($i = count(json_decode($request->images)); $i < 6; $i++) <div
+                    @for ($i = count(json_decode($request->images)); $i < 5; $i++) <div
                         class="s-item col-md-4 col-sm-6 col-xs-12">
                         <div class="file-upload-wrapper">
                             <input type="file" name="images[]" id="input-file-max-fs" class="file-upload"
