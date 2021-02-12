@@ -5,15 +5,14 @@ $menu = false ;
 
 @section('content')
 
-
 <main class="main-content col-xs-12">
     <div class="add-req-wrap col-xs-12">
         <div class="container">
-            <form action="{{route('RequestSave')}}" method="POST" enctype="multipart/form-data">
+            <form action="{{route('RequestUpdate')}}" method="POST" enctype="multipart/form-data">
                 @csrf
                 <div class="form-group col-md-6 col-xs-12">
                     <h4>@lang('general.request_name')</h4>
-                    <input name="name" type="text" class="form-control">
+                    <input name="name" value="{{$request->name}}" type="text" class="form-control">
                     @error('name')
                     <div class="alert" style="color:#a94442">{{ $message }}</div>
                     @enderror
@@ -51,9 +50,9 @@ $menu = false ;
                             <label>
                                 <i class="fa fa-camera"></i>
                                 <input type="file"
-                                onchange="document.getElementById('blah').src = window.URL.createObjectURL(this.files[0])">
+                                    onchange="document.getElementById('blah').src = window.URL.createObjectURL(this.files[0])">
                                 <img src="https://i.pinimg.com/originals/e8/9a/6b/e89a6b2894928d34e0a8a48d9d9e3f47.jpg"
-                                id="blah" alt="your image">
+                                    id="blah" alt="your image">
                             </label>
                         </div>
                     </div>
