@@ -64,9 +64,9 @@ $menu = false ;
                             <label>
                                 <i class="fa fa-camera"></i>
                                 <input type="file"
-                                    onchange="document.getElementById('blah').src = window.URL.createObjectURL(this.files[0])">
+                                    onchange="document.getElementById('blah1').src = window.URL.createObjectURL(this.files[0])">
                                 <img src="https://i.pinimg.com/originals/e8/9a/6b/e89a6b2894928d34e0a8a48d9d9e3f47.jpg"
-                                    id="blah" alt="your image">
+                                    id="blah1" alt="your image">
                             </label>
                         </div>
                     </div>
