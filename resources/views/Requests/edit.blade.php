@@ -59,7 +59,7 @@ $menu = false ;
                         </div>
                     </div>
 
-                    @foreach ($request->images as $item)
+                    @foreach (json_decode($request->images) as $item)
                     <div class="prof-img s-item col-md-4 col-sm-6 col-xs-12">
                         <div style="height: 200px; margin-top: 2px;">
                             <label>
