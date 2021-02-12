@@ -8,7 +8,8 @@ $menu = false ;
 <main class="main-content col-xs-12">
     <div class="add-req-wrap col-xs-12">
         <div class="container">
-            <form action="{{route('RequestUpdate',['request_id'=> $request->id])}}" method="POST" enctype="multipart/form-data">
+            <form action="{{route('RequestUpdate',['request_id'=> $request->id])}}" method="POST"
+                enctype="multipart/form-data">
                 @csrf
                 <div class="form-group col-md-6 col-xs-12">
                     <h4>@lang('general.request_name')</h4>
@@ -21,7 +22,7 @@ $menu = false ;
                     <h4>@lang('general.categories')</h4>
                     <select name="category_id" class="form-control">
                         @foreach(\App\Models\Category::whereNull('parent_id')->get() as $category)
-                        <option value="{{$category->id}}"  {{$request->category_id == $category->id ? 'selected' : ''}}>
+                        <option value="{{$category->id}}" {{$request->category_id == $category->id ? 'selected' : ''}}>
 
                             {{$category->getTranslatedAttribute('name',\App::getLocale())}}</option>
                         @endforeach
@@ -43,6 +44,18 @@ $menu = false ;
                         <div class="file-upload-wrapper">
                             <input type="file" name="images[]" id="input-file-max-fs" class="file-upload"
                                 data-max-file-size="5M" />
+                        </div>
+                    </div>
+
+                    <div class="prof-img s-item col-md-4 col-sm-6 col-xs-12">
+                        <div style="height: 200px; margin-top: 2px;">
+                            <label>
+                                <i class="fa fa-camera"></i>
+                                <input type="file"
+                                    onchange="document.getElementById('blah').src = window.URL.createObjectURL(this.files[0])">
+                                <img src="https://i.pinimg.com/originals/e8/9a/6b/e89a6b2894928d34e0a8a48d9d9e3f47.jpg"
+                                    id="blah" alt="your image">
+                            </label>
                         </div>
                     </div>
 
