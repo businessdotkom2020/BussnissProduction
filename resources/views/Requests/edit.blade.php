@@ -40,12 +40,6 @@ $menu = false ;
                 </div>
                 <div class="form-group col-md-12 col-xs-12">
                     <h4>@lang('general.request_images')</h4>
-                    <div class="s-item col-md-4 col-sm-6 col-xs-12">
-                        <div class="file-upload-wrapper">
-                            <input type="file" name="images[]" id="input-file-max-fs" class="file-upload"
-                                data-max-file-size="5M" />
-                        </div>
-                    </div>
 
 
                     @foreach (json_decode($request->images) as $image)
@@ -53,14 +47,21 @@ $menu = false ;
                         <div style="height: 200px; margin-top: 2px;">
                             <label>
                                 <i class="fa fa-camera"></i>
-                                <input type="file" onchange="document.getElementById("
-                                    image_item{{$loop->index}}").src=window.URL.createObjectURL(this.files[0])">
+                                <input type="file"
+                                    onchange="document.getElementById('image_item{{$loop->index}}').src=window.URL.createObjectURL(this.files[0])">
                                 <img src="{{url('storage/'.$image)}}" id="image_item{{$loop->index}}" alt="your image">
                             </label>
                         </div>
                     </div>
                     @endforeach
 
+
+                    <div class="s-item col-md-4 col-sm-6 col-xs-12">
+                        <div class="file-upload-wrapper">
+                            <input type="file" name="images[]" id="input-file-max-fs" class="file-upload"
+                                data-max-file-size="5M" />
+                        </div>
+                    </div>
 
                     <div class="s-item col-md-4 col-sm-6 col-xs-12">
                         <div class="file-upload-wrapper">
