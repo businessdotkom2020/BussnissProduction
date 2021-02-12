@@ -148,7 +148,7 @@ Route::post('request/new', 'web\RequestController@post')->name('RequestSave')->m
 Route::post('/request_favorite', 'web\RequestController@favorite')->name('request.favorite');
 Route::get('request/{request_id}', 'web\RequestController@show');
 Route::get('request/{request_id}/edit', 'web\RequestController@edit');
-Route::get('request/{request_id}/update', 'web\RequestController@update')->name('RequestUpdate')->middleware('auth');
+Route::post('request/{request_id}/update', 'web\RequestController@update')->name('RequestUpdate')->middleware('auth');
 
 
 /////////////////////       Products ////////////////////

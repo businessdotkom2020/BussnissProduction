@@ -84,6 +84,36 @@ class RequestController extends Controller
         return view('Requests.show', compact('req'));
     }
 
+
+    public function update(Request $request, $id)
+    {
+        try{
+            $req = Req::find($id);
+            $req->name = $request->name;
+            $req->user_id = $request->user_id;
+            $req->description = $request->description;
+            $req->category_id = $request->category_id;
+            $images = array();
+            if (is_array($request->file('images'))) {
+                foreach (json_decode($req->images) as $img){
+                    @unlink('storage/' . $img);
+                }
+                $req->images = null;
+                foreach ($request->file('images') as $image) {
+                    $file_name     = 'product_image'.   rand(1, 15). rand(155, 200) . rand(25, 55). '.png';
+                    $image->storeAs('public/services',$file_name);
+                    $img_url = 'services/'. $file_name;
+                    array_push($images, $img_url);
+                }
+                $req->images = json_encode($images);
+            }
+            $req->save();
+            return redirect()->route('servicess.index')->with('done', 'Added Successfully ....');
+        }catch (\Exception $e){
+            return redirect()->back()->with('error', 'Error Try Again !!');
+        }
+    }
+
     public function favorite()
     {
 
