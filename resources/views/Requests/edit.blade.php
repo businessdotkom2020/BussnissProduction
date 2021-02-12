@@ -22,7 +22,7 @@ $menu = false ;
                     <select name="category_id" class="form-control">
                         @foreach(\App\Models\Category::whereNull('parent_id')->get() as $category)
                         <option value="{{$category->id}}">
-                            {{$request->category_id == }}
+                            {{$request->category_id == $category->id ? 'selected' : ''}}
                             {{$category->getTranslatedAttribute('name',\App::getLocale())}}</option>
                         @endforeach
                     </select>
