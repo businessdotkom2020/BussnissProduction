@@ -8,7 +8,7 @@ $menu = false ;
 <main class="main-content col-xs-12">
     <div class="add-req-wrap col-xs-12">
         <div class="container">
-            <form action="{{route('RequestUpdate',[''])}}" method="POST" enctype="multipart/form-data">
+            <form action="{{route('RequestUpdate',['request_id'=> $request->id])}}" method="POST" enctype="multipart/form-data">
                 @csrf
                 <div class="form-group col-md-6 col-xs-12">
                     <h4>@lang('general.request_name')</h4>
@@ -22,6 +22,7 @@ $menu = false ;
                     <select name="category_id" class="form-control">
                         @foreach(\App\Models\Category::whereNull('parent_id')->get() as $category)
                         <option value="{{$category->id}}">
+                            {{$request->category_id == }}
                             {{$category->getTranslatedAttribute('name',\App::getLocale())}}</option>
                         @endforeach
                     </select>
