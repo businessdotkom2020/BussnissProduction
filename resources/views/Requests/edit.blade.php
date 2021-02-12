@@ -55,47 +55,26 @@ $menu = false ;
                     </div>
                     @endforeach
 
-
-                    <div class="s-item col-md-4 col-sm-6 col-xs-12">
+                    @for ($i = count(json_decode($request->images)); $i < 6; $i++) <div
+                        class="s-item col-md-4 col-sm-6 col-xs-12">
                         <div class="file-upload-wrapper">
                             <input type="file" name="images[]" id="input-file-max-fs" class="file-upload"
                                 data-max-file-size="5M" />
                         </div>
-                    </div>
-
-                    <div class="s-item col-md-4 col-sm-6 col-xs-12">
-                        <div class="file-upload-wrapper">
-                            <input type="file" name="images[]" id="input-file-max-fs" class="file-upload"
-                                data-max-file-size="5M" />
-                        </div>
-                    </div>
-                    <div class="s-item col-md-4 col-sm-6 col-xs-12">
-                        <div class="file-upload-wrapper">
-                            <input type="file" name="images[]" id="input-file-max-fs" class="file-upload"
-                                data-max-file-size="5M" />
-                        </div>
-                    </div>
-                    <div class="s-item col-md-4 col-sm-6 col-xs-12">
-                        <div class="file-upload-wrapper">
-                            <input type="file" name="images[]" id="input-file-max-fs" class="file-upload"
-                                data-max-file-size="5M" />
-                        </div>
-                    </div>
-                    <div class="s-item col-md-4 col-sm-6 col-xs-12">
-                        <div class="file-upload-wrapper">
-                            <input type="file" name="images[]" id="input-file-max-fs" class="file-upload"
-                                data-max-file-size="5M" />
-                        </div>
-                    </div>
-                    @error('images')
-                    <div class="alert" style="color:#a94442">{{ $message }}</div>
-                    @enderror
                 </div>
-                <div class="form-group col-md-12 col-xs-12">
-                    <button type="submit" class="btn">@lang('general.add_rquest')</button>
-                </div>
-            </form>
+                @endfor
+
+
+
+                @error('images')
+                <div class="alert" style="color:#a94442">{{ $message }}</div>
+                @enderror
         </div>
+        <div class="form-group col-md-12 col-xs-12">
+            <button type="submit" class="btn">@lang('general.add_rquest')</button>
+        </div>
+        </form>
+    </div>
     </div>
 </main>
 
