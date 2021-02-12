@@ -48,15 +48,14 @@ $menu = false ;
                     </div>
 
 
-                    @foreach (json_decode($request->images) as $item)
+                    @foreach (json_decode($request->images) as $image)
                     <div class="prof-img s-item col-md-4 col-sm-6 col-xs-12">
                         <div style="height: 200px; margin-top: 2px;">
                             <label>
                                 <i class="fa fa-camera"></i>
                                 <input type="file" onchange="document.getElementById("
                                     image_item{{$loop->index}}").src=window.URL.createObjectURL(this.files[0])">
-                                <img src="https://i.pinimg.com/originals/e8/9a/6b/e89a6b2894928d34e0a8a48d9d9e3f47.jpg"
-                                    id="image_item{{$loop->index}}" alt="your image">
+                                <img src="{{url('storage/'.$image)}}" id="image_item{{$loop->index}}" alt="your image">
                             </label>
                         </div>
                     </div>
