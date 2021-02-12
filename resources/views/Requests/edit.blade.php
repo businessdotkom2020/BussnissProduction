@@ -32,7 +32,7 @@ $menu = false ;
                 </div>
                 <div class="form-group col-md-12 col-xs-12">
                     <h4>@lang('general.description')</h4>
-                    <textarea name="description" class="form-control"></textarea>
+                    <textarea name="description" class="form-control">{{$request->description}}</textarea>
                     @error('description')
                     <div class="alert" style="color:#a94442">{{ $message }}</div>
                     @enderror
