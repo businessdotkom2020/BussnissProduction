@@ -59,17 +59,19 @@ $menu = false ;
                         </div>
                     </div>
 
+                    @foreach ($request->images as $item)
                     <div class="prof-img s-item col-md-4 col-sm-6 col-xs-12">
                         <div style="height: 200px; margin-top: 2px;">
                             <label>
                                 <i class="fa fa-camera"></i>
-                                <input type="file"
-                                    onchange="document.getElementById('blah1').src = window.URL.createObjectURL(this.files[0])">
+                                <input type="file" onchange="document.getElementById("
+                                    image_item{{$loop->index}}").src=window.URL.createObjectURL(this.files[0])">
                                 <img src="https://i.pinimg.com/originals/e8/9a/6b/e89a6b2894928d34e0a8a48d9d9e3f47.jpg"
-                                    id="blah1" alt="your image">
+                                    id="image_item{{$loop->index}}" alt="your image">
                             </label>
                         </div>
                     </div>
+                    @endforeach
 
 
                     <div class="s-item col-md-4 col-sm-6 col-xs-12">
