@@ -73,7 +73,7 @@ $menu = false ;
 
 
                         <div class="ito-h col-xs-12">
-                            <h4>@lang('general.main_information')</h4>
+                            {{-- <h4>@lang('general.main_information')</h4> --}}
                             <div class="form-group col-md-6 col-xs-12">
                                 <input type="text" required name="supplier_name" value="{{$supplier->name}}"
                                     placeholder="@lang('general.supplier_name')" class="form-control">
