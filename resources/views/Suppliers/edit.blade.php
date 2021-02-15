@@ -28,7 +28,7 @@ $menu = false ;
                 </li>
 
                 <li>
-                    <a href="#" data-toggle="tab" data-target="#u_branshes">Update Branches</a>
+                    <a href="#" data-toggle="tab" data-target="#u_location">Location Info</a>
                 </li>
                 <li>
                     <a href="#" data-toggle="tab" data-target="#u_password">Update Password</a>
