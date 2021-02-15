@@ -117,7 +117,7 @@ $menu = false ;
                     </form>
                 </div>
 
-                <div class="tab-pane fade active in" id="u_location">
+                <div class="tab-pane fade  in" id="u_location">
                     <form action="{{route('update_supplier')}}" method="post" enctype="multipart/form-data">
                         @csrf
 
