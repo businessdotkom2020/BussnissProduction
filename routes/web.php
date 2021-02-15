@@ -9,7 +9,7 @@ if (app()->isLocal()) {
     URL::forceScheme('https');
 }
 //URL::forceScheme('https');
- /*
+/*
 |--------------------------------------------------------------------------
 | Web Routes
 |--------------------------------------------------------------------------
@@ -243,5 +243,5 @@ Route::get('locale/{locale}', function ($locale) {
 Route::get('/profile/update', 'web\SuppliersController@edit');
 
 
-Route::get('/update/supplier/profile', 'web\SuppliersController@update')->name('update_supplier');
-Route::get('/update/password', 'web\SuppliersController@update_password')->name('update_password');
+Route::post('/update/supplier/profile', 'web\SuppliersController@update')->name('update_supplier');
+Route::post('/update/password', 'web\SuppliersController@update_password')->name('update_password');
