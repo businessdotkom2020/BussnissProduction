@@ -17,8 +17,8 @@
                 <div class="page-title-right">
                     <ol class="breadcrumb m-0">
                         @if(app()->getLocale() =='en')
-                        <li class="breadcrumb-item"><a href="/">{{ __('dashboard.business_com') }}</a></li>
-                        <li class="breadcrumb-item active">{{ __('dashboard.dashboard') }}</li>
+                            <li class="breadcrumb-item"><a href="/">{{ __('dashboard.business_com') }}</a></li>
+                            <li class="breadcrumb-item active">{{ __('dashboard.dashboard') }}</li>
                         @else
                             <li class="breadcrumb-item active">{{ __('dashboard.dashboard') }}</li>
                             <li class="breadcrumb-item"><a href="/">{{ __('dashboard.business_com') }}</a></li>
@@ -514,7 +514,9 @@
                                                 <td>
                                                     <h5 class="font-size-14 mb-0">
                                                         <a href="{{ route('productss.show' , $product->id) }}">
-                                                            {{ implode(' ', array_slice(explode(' ', $product->getTranslatedAttribute('name',\App::getLocale())), 0, 5)) }}
+                                                            @if(isset($product->name))
+                                                                {{ implode(' ', array_slice(explode(' ', $product->name), 0, 5)) }}
+                                                            @endif
                                                         </a>
                                                     </h5>
                                                 </td>
@@ -554,7 +556,9 @@
                                                 <td>
                                                     <h5 class="font-size-14 mb-0">
                                                         <a href="{{ route('productss.show' , $product->id) }}">
-                                                            {{ implode(' ', array_slice(explode(' ', $product->getTranslatedAttribute('name',\App::getLocale())), 0, 5)) }}
+                                                            @if(isset($product->name))
+                                                                {{ implode(' ', array_slice(explode(' ', $product->name), 0, 5)) }}
+                                                            @endif
                                                         </a>
                                                     </h5>
                                                 </td>
@@ -621,7 +625,9 @@
                                                 <td>
                                                     <h5 class="font-size-14 mb-0">
                                                         <a href="{{ route('requestss.show' , $product->id) }}">
-                                                            {{ implode(' ', array_slice(explode(' ', $product->getTranslatedAttribute('name','en')), 0, 5)) }}
+                                                            @if(isset($product->name))
+                                                                {{ implode(' ', array_slice(explode(' ', $product->name), 0, 5)) }}
+                                                            @endif
                                                         </a>
                                                     </h5>
                                                 </td>
@@ -663,7 +669,9 @@
                                                 <td>
                                                     <h5 class="font-size-14 mb-0">
                                                         <a href="{{ route('requestss.show' , $product->id) }}">
-                                                            {{ implode(' ', array_slice(explode(' ', $product->getTranslatedAttribute('name','en')), 0, 5)) }}
+                                                            @if(isset($product->name))
+                                                                {{ implode(' ', array_slice(explode(' ', $product->name), 0, 5)) }}
+                                                            @endif
                                                         </a>
                                                     </h5>
                                                 </td>
@@ -730,7 +738,9 @@
                                                 <td>
                                                     <h5 class="font-size-14 mb-0">
                                                         <a href="{{ route('servicess.show' , $product->id) }}">
-                                                            {{ implode(' ', array_slice(explode(' ', $product->name), 0, 5)) }}
+                                                            @if(isset($product->name))
+                                                                {{ implode(' ', array_slice(explode(' ', $product->name), 0, 5)) }}
+                                                            @endif
                                                         </a>
                                                     </h5>
                                                 </td>
@@ -772,7 +782,9 @@
                                                 <td>
                                                     <h5 class="font-size-14 mb-0">
                                                         <a href="{{ route('servicess.show' , $product->id) }}">
-                                                            {{ implode(' ', array_slice(explode(' ', $product->name), 0, 5)) }}
+                                                            @if(isset($product->name))
+                                                                {{ implode(' ', array_slice(explode(' ', $product->name), 0, 5)) }}
+                                                            @endif
                                                         </a>
                                                     </h5>
                                                 </td>
@@ -845,7 +857,9 @@
                                                 <td>
                                                     <h5 class="font-size-14 mb-0">
                                                         <a href="{{ route('sellerss.show' , $supplier->id) }}">
-                                                            {{ implode(' ', array_slice(explode(' ', $supplier->name), 0, 5)) }}
+                                                            @if(isset($supplier->name))
+                                                                {{ implode(' ', array_slice(explode(' ', $supplier->name), 0, 5)) }}
+                                                            @endif
                                                         </a>
                                                     </h5>
                                                 </td>
@@ -922,7 +936,7 @@
                                                     </div>
                                                 </td>
                                                 <td>
-                                                    <h5 class="font-size-14 mb-0">{{ $supplier->name }}
+                                                    <h5 class="font-size-14 mb-0">{{ $supplier->name ?? '' }}
                                                     </h5>
                                                 </td>
                                                 <td><div id="spak-chart3">
@@ -959,7 +973,7 @@
                                                     </div>
                                                 </td>
                                                 <td>
-                                                    <h5 class="font-size-14 mb-0">{{ $supplier->name }}
+                                                    <h5 class="font-size-14 mb-0">{{ $supplier->name ?? '' }}
                                                     </h5>
                                                 </td>
                                                 <td><div id="spak-chart3">
@@ -1012,7 +1026,7 @@
                                             </div>
                                         </td>
                                         <td>
-                                            <h5 class="font-size-14 mb-0">{{ $user->name }}
+                                            <h5 class="font-size-14 mb-0">{{ $user->name ?? '' }}
                                             </h5>
                                         </td>
                                         <td>
@@ -1067,32 +1081,38 @@
 
                                 </tr>
                                 @foreach(\App\Models\User::whereNotNull('state_id')->orderBy('id' , 'desc')->paginate(5) as $supplier)
-                                <tr>
-                                    <td>
-                                        <div class="avatar-xs">
-                                            <div class="avatar-title rounded-circle bg-light">
-                                                @if(isset($supplier->avatar))
-                                                    <img height="20" src="{{ url('storage/' . $supplier->avatar) }}"/>
+                                    <tr>
+                                        <td>
+                                            <div class="avatar-xs">
+                                                <div class="avatar-title rounded-circle bg-light">
+                                                    @if(isset($supplier->avatar))
+                                                        <img height="20" src="{{ url('storage/' . $supplier->avatar) }}"/>
+                                                    @endif
+                                                </div>
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <h5 class="font-size-14 mb-0">{{ $supplier->name ?? '' }}
+                                            </h5>
+                                        </td>
+                                        <td><div id="spak-chart3">
+                                                {{ $supplier->followers->count() }}
+                                            </div></td>
+
+                                        <td>
+                                            <div id="spak-chart3">
+                                                @if(isset($supplier->city))
+                                                    {{ $supplier->city->name ?? '' }}
                                                 @endif
                                             </div>
-                                        </div>
-                                    </td>
-                                    <td>
-                                        <h5 class="font-size-14 mb-0">{{ $supplier->name }}
-                                        </h5>
-                                    </td>
-                                    <td><div id="spak-chart3">
-                                            {{ $supplier->followers->count() }}
-                                        </div></td>
+                                        </td>
 
-                                    <td><div id="spak-chart3">{{ $supplier->city->getTranslatedAttribute('name',\App::getLocale()) ?? '' }}</div></td>
-
-                                    <td>
-                                        @if(!empty($supplier->created_at))
-                                            <p class="text-muted mb-0">{{ $supplier->created_at ?? '' }}</p>
-                                        @endif
-                                    </td>
-                                </tr>
+                                        <td>
+                                            @if(!empty($supplier->created_at))
+                                                <p class="text-muted mb-0">{{ $supplier->created_at ?? '' }}</p>
+                                            @endif
+                                        </td>
+                                    </tr>
                                 @endforeach
                                 </tbody>
                             </table>
@@ -1141,12 +1161,12 @@
                                             </div>
                                         </td>
                                         <td>
-                                            <h5 class="font-size-14 mb-0">{{ $user->name }}
+                                            <h5 class="font-size-14 mb-0">{{ $user->name ?? '' }}
                                             </h5>
                                         </td>
                                         <td>
                                             <div id="spak-chart3">
-                                                {{ $user->country->getTranslatedAttribute('name',\App::getLocale()) ?? '' }}
+                                                {{ $user->country->getTranslatedAttribute('name',app()->getLocale()) ?? '' }}
                                             </div>
                                         </td>
                                         <td>
