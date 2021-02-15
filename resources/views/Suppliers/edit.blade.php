@@ -64,8 +64,7 @@ $menu = false ;
                                         <i class="fa fa-camera"></i>
                                         <input name="image" type="file"
                                             onchange="document.getElementById('blah1').src = window.URL.createObjectURL(this.files[0])">
-                                        <img src="{{url('storage/'.$supplier->store_image)}}" id="blah1"
-                                            alt="your image">
+                                        <img src="{{url('storage/'.$supplier->avatar)}}" id="blah1" alt="your image">
                                     </label>
                                 </div>
 
@@ -110,7 +109,10 @@ $menu = false ;
                                     placeholder="@lang('general.hot_line')" class="form-control">
                             </div>
 
-
+                            <br>
+                            <div class="form-group col-md-6 col-xs-12">
+                                <button type="submit" class="btn">@lang('general.register')</button>
+                            </div>
                         </div>
 
 
