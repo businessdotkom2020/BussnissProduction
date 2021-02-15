@@ -169,7 +169,8 @@ $menu = false ;
                             <select name="category_ids[]" class="form-control select-nosearch" multiple>
                                 <!--<option selected disabled>@lang('general.categories')</option>-->
                                 @foreach(\App\Models\Category::whereNull('parent_id')->get() as $category)
-                                <option value="{{$category->id}}">{{$category->getTranslatedAttribute('name',\App::getLocale())}}</option>
+                                <option value="{{$category->id}}">
+                                    {{$category->getTranslatedAttribute('name',\App::getLocale())}}</option>
                                 @endforeach
                             </select>
                         </div>
@@ -215,38 +216,59 @@ $menu = false ;
                         <div class="form-group">
                             <h1>@lang('general.rating') </h1>
                             <fieldset class="rating">
-                                <input type="radio" id="star5" name="rating" value="5" /><label class="full" for="star5" title="Awesome - 5 stars"></label>
-                                <input type="radio" id="star4half" name="rating" value="4 and a half" /><label class="half" for="star4half" title="Pretty good - 4.5 stars"></label>
-                                <input type="radio" id="star4" name="rating" value="4" /><label class="full" for="star4" title="Pretty good - 4 stars"></label>
-                                <input type="radio" id="star3half" name="rating" value="3 and a half" /><label class="half" for="star3half" title="Meh - 3.5 stars"></label>
-                                <input type="radio" id="star3" name="rating" value="3" /><label class="full" for="star3" title="Meh - 3 stars"></label>
-                                <input type="radio" id="star2half" name="rating" value="2 and a half" /><label class="half" for="star2half" title="Kinda bad - 2.5 stars"></label>
-                                <input type="radio" id="star2" name="rating" value="2" /><label class="full" for="star2" title="Kinda bad - 2 stars"></label>
-                                <input type="radio" id="star1half" name="rating" value="1 and a half" /><label class="half" for="star1half" title="Meh - 1.5 stars"></label>
-                                <input type="radio" id="star1" name="rating" value="1" /><label class="full" for="star1" title="Sucks big time - 1 star"></label>
-                                <input type="radio" id="starhalf" name="rating" value="half" /><label class="half" for="starhalf" title="Sucks big time - 0.5 stars"></label>
+                                <input type="radio" id="star5" name="rating" value="5" /><label class="full" for="star5"
+                                    title="Awesome - 5 stars"></label>
+                                <input type="radio" id="star4half" name="rating" value="4 and a half" /><label
+                                    class="half" for="star4half" title="Pretty good - 4.5 stars"></label>
+                                <input type="radio" id="star4" name="rating" value="4" /><label class="full" for="star4"
+                                    title="Pretty good - 4 stars"></label>
+                                <input type="radio" id="star3half" name="rating" value="3 and a half" /><label
+                                    class="half" for="star3half" title="Meh - 3.5 stars"></label>
+                                <input type="radio" id="star3" name="rating" value="3" /><label class="full" for="star3"
+                                    title="Meh - 3 stars"></label>
+                                <input type="radio" id="star2half" name="rating" value="2 and a half" /><label
+                                    class="half" for="star2half" title="Kinda bad - 2.5 stars"></label>
+                                <input type="radio" id="star2" name="rating" value="2" /><label class="full" for="star2"
+                                    title="Kinda bad - 2 stars"></label>
+                                <input type="radio" id="star1half" name="rating" value="1 and a half" /><label
+                                    class="half" for="star1half" title="Meh - 1.5 stars"></label>
+                                <input type="radio" id="star1" name="rating" value="1" /><label class="full" for="star1"
+                                    title="Sucks big time - 1 star"></label>
+                                <input type="radio" id="starhalf" name="rating" value="half" /><label class="half"
+                                    for="starhalf" title="Sucks big time - 0.5 stars"></label>
                             </fieldset>
                         </div>
 
                         <div class="form-group">
                             <h1> @lang('general.supplier_rating') </h1>
                             <fieldset class="rating-supplier">
-                                <input type="radio" id="star10" name="saller_rating" value="5" /><label class="full" for="star10" title="Awesome - 5 stars"></label>
-                                <input type="radio" id="star9half" name="saller_rating" value="4 and a half" /><label class="half" for="star9half" title="Pretty good - 4.5 stars"></label>
-                                <input type="radio" id="star9" name="saller_rating" value="4" /><label class="full" for="star9" title="Pretty good - 4 stars"></label>
-                                <input type="radio" id="star8half" name="saller_rating" value="3 and a half" /><label class="half" for="star8half" title="Meh - 3.5 stars"></label>
-                                <input type="radio" id="star8" name="saller_rating" value="3" /><label class="full" for="star8" title="Meh - 3 stars"></label>
-                                <input type="radio" id="star7half" name="saller_rating" value="2 and a half" /><label class="half" for="star7half" title="Kinda bad - 2.5 stars"></label>
-                                <input type="radio" id="star7" name="saller_rating" value="2" /><label class="full" for="star7" title="Kinda bad - 2 stars"></label>
-                                <input type="radio" id="star6half" name="saller_rating" value="1 and a half" /><label class="half" for="star6half" title="Meh - 1.5 stars"></label>
-                                <input type="radio" id="star6" name="saller_rating" value="1" /><label class="full" for="star6" title="Sucks big time - 1 star"></label>
-                                <input type="radio" id="star5half" name="saller_rating" value="half" /><label class="half" for="star5half" title="Sucks big time - 0.5 stars"></label>
+                                <input type="radio" id="star10" name="saller_rating" value="5" /><label class="full"
+                                    for="star10" title="Awesome - 5 stars"></label>
+                                <input type="radio" id="star9half" name="saller_rating" value="4 and a half" /><label
+                                    class="half" for="star9half" title="Pretty good - 4.5 stars"></label>
+                                <input type="radio" id="star9" name="saller_rating" value="4" /><label class="full"
+                                    for="star9" title="Pretty good - 4 stars"></label>
+                                <input type="radio" id="star8half" name="saller_rating" value="3 and a half" /><label
+                                    class="half" for="star8half" title="Meh - 3.5 stars"></label>
+                                <input type="radio" id="star8" name="saller_rating" value="3" /><label class="full"
+                                    for="star8" title="Meh - 3 stars"></label>
+                                <input type="radio" id="star7half" name="saller_rating" value="2 and a half" /><label
+                                    class="half" for="star7half" title="Kinda bad - 2.5 stars"></label>
+                                <input type="radio" id="star7" name="saller_rating" value="2" /><label class="full"
+                                    for="star7" title="Kinda bad - 2 stars"></label>
+                                <input type="radio" id="star6half" name="saller_rating" value="1 and a half" /><label
+                                    class="half" for="star6half" title="Meh - 1.5 stars"></label>
+                                <input type="radio" id="star6" name="saller_rating" value="1" /><label class="full"
+                                    for="star6" title="Sucks big time - 1 star"></label>
+                                <input type="radio" id="star5half" name="saller_rating" value="half" /><label
+                                    class="half" for="star5half" title="Sucks big time - 0.5 stars"></label>
                             </fieldset>
                         </div>
 
                         <div class="form-check">
                             <input type="checkbox" name="has_discount" class="form-check-input" id="exampleCheck1">
-                            <label class="form-check-label" for="exampleCheck1">@lang('general.only_with_discount')</label>
+                            <label class="form-check-label"
+                                for="exampleCheck1">@lang('general.only_with_discount')</label>
                         </div>
 
                         <hr>
@@ -319,34 +341,35 @@ $menu = false ;
                                     </div>
                                     @endif
                                     <div class="offer-badge">
-                                        <span>{{number_format((($product->sale_price/$product->price) * 100) ,2) }} %</span>
+                                        <span>{{number_format((($product->sale_price/$product->price) * 100) ,2) }}
+                                            %</span>
                                     </div>
                                     <div class="prod-extra" style="position: inherit">
 
-<<<<<<< HEAD
-                                        <a href="javascript:void(0)" id="fav-{{$product->id}}" title="add to favourite" data-placement="top" class="fav-{{$product->id}} {{$product->isFavorited() ? 'fav-active' : null  }} fav-pro " onclick="favtoggle({{$product->id }},{{Auth::user() ? Auth::user()->id : null}})">
+                                        <a href="javascript:void(0)" id="fav-{{$product->id}}" title="add to favourite"
+                                            data-placement="top"
+                                            class="fav-{{$product->id}} {{$product->isFavorited() ? 'fav-active' : null  }} fav-pro "
+                                            onclick="favtoggle({{$product->id }},{{Auth::user() ? Auth::user()->id : null}})">
                                             <i class="fa fa-heart"></i>
                                         </a>
                                     </div>
-=======
-<a href="javascript:void(0)" id="fav-{{$product->id}}" title="add to favourite" data-placement="top" class="fav-{{$product->id}} {{$product->isFavorited() ? 'fav-active' : null  }} fav-pro " onclick="favtoggle({{$product->id }},{{Auth::user() ? Auth::user()->id : null}})">
-    <i class="fa fa-heart"></i>
-</a>
-</div>
->>>>>>> 3e831a1407b4483df18992c2ee8f4e0f4f78fe80
                                     <a href="{{url('product/'.$product->id)}}" class="img-hold">
 
-                                        <img src="{{ $product->image ? url('storage/'.$product->image) : "https://i.imgur.com/mFI2maG.jpg" }}" alt="">
+                                        <img src="{{ $product->image ? url('storage/'.$product->image) : "https://i.imgur.com/mFI2maG.jpg" }}"
+                                            alt="">
 
                                         @if($product->images)
-                                        <img src="{{ json_decode($product->images ) ? url('storage/'.(json_decode($product->images))[0]) : "https://i.imgur.com/mFI2maG.jpg" }}" alt="" class="sec-img">
+                                        <img src="{{ json_decode($product->images ) ? url('storage/'.(json_decode($product->images))[0]) : "https://i.imgur.com/mFI2maG.jpg" }}"
+                                            alt="" class="sec-img">
                                         @endif
                                     </a>
                                 </div>
                                 <div class="i-data">
-                                    <a href="{{url('product/'.$product->id)}}" class="title">{{$product->getTranslatedAttribute('name',\App::getLocale())}}</a>
+                                    <a href="{{url('product/'.$product->id)}}"
+                                        class="title">{{$product->getTranslatedAttribute('name',\App::getLocale())}}</a>
                                     <span>{{$product->price}} $</span>
-                                    <a class="btn" href="{{url('supplier/'.$product->user_id)}}" data-toggle="modal" data-target="#contact_pop">@lang('contact_supplier')</a>
+                                    <a class="btn" href="{{url('supplier/'.$product->user_id)}}" data-toggle="modal"
+                                        data-target="#contact_pop">@lang('contact_supplier')</a>
                                 </div>
                             </div>
                         </div>
@@ -367,16 +390,20 @@ $menu = false ;
                                         </a>
                                     </div>
                                     <div class="c-data">
-                                        @if(!Auth::check() || \Auth::user()->canFollow($supplier) && \Auth::user()->id != $supplier->id)
-                                        <a href="javascript:void(0)" id="followtoggle_{{$supplier->id}}" onclick="followtoggle({{$supplier->id }})" class="btn ">
+                                        @if(!Auth::check() || \Auth::user()->canFollow($supplier) && \Auth::user()->id
+                                        != $supplier->id)
+                                        <a href="javascript:void(0)" id="followtoggle_{{$supplier->id}}"
+                                            onclick="followtoggle({{$supplier->id }})" class="btn ">
                                             <i id="followicon_{{$supplier->id}}" class="fa fa-plus"></i>
                                             <span style="color:white">
                                                 Follow
                                             </span>
                                         </a>
 
-                                        @elseif(Auth::check() && !\Auth::user()->canFollow($supplier) && \Auth::user()->id != $supplier->id)
-                                        <a href="javascript:void(0)" id="followtoggle_{{$supplier->id}}" onclick="followtoggle({{$supplier->id }})" class="btn following">
+                                        @elseif(Auth::check() && !\Auth::user()->canFollow($supplier) &&
+                                        \Auth::user()->id != $supplier->id)
+                                        <a href="javascript:void(0)" id="followtoggle_{{$supplier->id}}"
+                                            onclick="followtoggle({{$supplier->id }})" class="btn following">
                                             <i id="followicon_{{$supplier->id}}" class="fa fa-check"></i>
                                             <span style="color:white">
                                                 following
@@ -423,32 +450,35 @@ $menu = false ;
                                         </div>
                                         @endif
                                         <div class="offer-badge">
-                                            <span>{{number_format((($product->sale_price/$product->price) * 100) ,2) }} %</span>
+                                            <span>{{number_format((($product->sale_price/$product->price) * 100) ,2) }}
+                                                %</span>
                                         </div>
                                         <div class="prod-extra" style="position: inherit">
 
-                                            <a href="javascript:void(0)" id="fav-{{$product->id}}" title="add to favourite" data-placement="top" class="fav-{{$product->id}} {{$product->isFavorited() ? 'fav-active' : null  }} fav-pro " onclick="favtoggle({{$product->id }},{{Auth::user() ? Auth::user()->id : null}})">
+                                            <a href="javascript:void(0)" id="fav-{{$product->id}}"
+                                                title="add to favourite" data-placement="top"
+                                                class="fav-{{$product->id}} {{$product->isFavorited() ? 'fav-active' : null  }} fav-pro "
+                                                onclick="favtoggle({{$product->id }},{{Auth::user() ? Auth::user()->id : null}})">
                                                 <i class="fa fa-heart"></i>
                                             </a>
                                         </div>
                                         <a href="{{url('product/'.$product->id)}}" class="img-hold">
                                             <img src="{{url('storage/'.$product->image)}}" alt="">
-                                            <img src="{{ json_decode($product->images ) ? url('storage/'.(json_decode($product->images))[0]) : "https://i.imgur.com/mFI2maG.jpg" }}" class="sec-img">
+                                            <img src="{{ json_decode($product->images ) ? url('storage/'.(json_decode($product->images))[0]) : "https://i.imgur.com/mFI2maG.jpg" }}"
+                                                class="sec-img">
 
                                         </a>
                                     </div>
                                     <div class="i-data">
-                                        <a href="{{url('product/'.$product->id)}}" class="title">{{$product->getTranslatedAttribute('name',\App::getLocale())}}</a>
+                                        <a href="{{url('product/'.$product->id)}}"
+                                            class="title">{{$product->getTranslatedAttribute('name',\App::getLocale())}}</a>
 
-<<<<<<< HEAD
+                                        <<<<<<< HEAD=======>>>>>>> 3e831a1407b4483df18992c2ee8f4e0f4f78fe80
 
-=======
-                                      
->>>>>>> 3e831a1407b4483df18992c2ee8f4e0f4f78fe80
+                                            <span>{{$product->sale_price ? $product->sale_price : $product->price}}$</span>
 
-                                        <span>{{$product->sale_price ? $product->sale_price : $product->price}}$</span>
-
-                                        <a class="btn" href="#" data-toggle="modal" data-target="#contact_pop">@lang('contact_supplier')</a>
+                                            <a class="btn" href="#" data-toggle="modal"
+                                                data-target="#contact_pop">@lang('contact_supplier')</a>
                                     </div>
                                 </div>
                             </div>
@@ -705,3 +735,4 @@ $menu = false ;
 </script>
 
 @endpush
+

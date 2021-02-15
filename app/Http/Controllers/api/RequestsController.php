@@ -24,44 +24,47 @@ use Illuminate\Support\Facades\DB;
 
 class RequestsController extends Controller
 {
-    public function index(){
+    public function index()
+    {
         return new RequestsCollection(Request::paginate(10));
     }
-    public function my_requests(){
-        return new RequestIndexCollection(Request::where('user_id',Request()->user()->id)->paginate(10));
+    public function my_requests()
+    {
+        return new RequestIndexCollection(Request::where('user_id', Request()->user()->id)->paginate(10));
     }
-    public function show($id){
+    public function show($id)
+    {
 
         return response()->json([
             'status' => true,
             'code' => 200,
-        'data' => new RequestResource(Request::find($id))
+            'data' => new RequestResource(Request::find($id))
         ]);
     }
 
-    public function store (){
+    public function store()
+    {
 
-         $req = new Request ;
-         $req->category_id = Request()->category_id;
-         $req->user_id = Request()->user()->id;
-         $req->name = Request()->name;
-         $req->description = Request()->description;
+        $req = new Request;
+        $req->category_id = Request()->category_id;
+        $req->user_id = Request()->user()->id;
+        $req->name = Request()->name;
+        $req->description = Request()->description;
 
-         $images = array();
-		/**
-		 * check if images come as array then loop the images to save them
-		 */
+        $images = array();
+        /**
+         * check if images come as array then loop the images to save them
+         */
 
-			if (is_array(Request()->file('images'))) {
+        if (is_array(Request()->file('images'))) {
 
-				foreach (Request()->file('images') as $image) {
-                    $file_name     = 'product_image'.   rand(1, 15). rand(155, 200) . rand(25, 55). '.png';
-                    $image->storeAs('public/requests',$file_name);
-                    $img_url = 'requests/'. $file_name;
-					array_push($images, $img_url);
-				}
-
-			}
+            foreach (Request()->file('images') as $image) {
+                $file_name     = 'product_image' .   rand(1, 15) . rand(155, 200) . rand(25, 55) . '.png';
+                $image->storeAs('public/requests', $file_name);
+                $img_url = 'requests/' . $file_name;
+                array_push($images, $img_url);
+            }
+        }
 
         $req->images = json_encode($images);
 
@@ -74,45 +77,44 @@ class RequestsController extends Controller
             'code' => 200,
             "message" => "Request created successfully"
 
-            ]) ;
-
+        ]);
     }
-    public function update ($id, EditRequest $request){
+    public function update($id, EditRequest $request)
+    {
 
-         $req =  Request::find($id) ;
-         if(!$req)
-         return response()->json(['status' => 'failed', 'message' => 'Request not fond']);
-         $req->category_id = Request()->category_id ? Request()->category_id : $req->category_id;
-         $req->user_id = Request()->user()->id;
-         $req->name = Request()->name ?  Request()->name  : $req->name ;
-         $req->description = Request()->description ?  Request()->description : $req->description ;
+        $req =  Request::find($id);
+        if (!$req)
+            return response()->json(['status' => 'failed', 'message' => 'Request not fond']);
+        $req->category_id = Request()->category_id ? Request()->category_id : $req->category_id;
+        $req->user_id = Request()->user()->id;
+        $req->name = Request()->name ?  Request()->name  : $req->name;
+        $req->description = Request()->description ?  Request()->description : $req->description;
 
 
-$images= [];
+        $images = [];
 
-          $images = json_decode($req->images);
+        $images = json_decode($req->images);
 
-         if(request()->deleted_images){
-           $deleted_images = request()->deleted_images;
+        if (request()->deleted_images) {
+            $deleted_images = request()->deleted_images;
 
-            foreach($images as $image){
-                if(!in_array($image,$deleted_images)){
+            foreach ($images as $image) {
+                if (!in_array($image, $deleted_images)) {
                     $new_images[] = $image;
                 }
             }
 
             $images =  $new_images;
-    }
-			if (is_array(Request()->file('images'))) {
+        }
+        if (is_array(Request()->file('images'))) {
 
-				foreach (Request()->file('images') as $image) {
-                    $file_name     = 'product_image'.   rand(1, 15). rand(155, 200) . rand(25, 55). '.png';
-                    $image->storeAs('public/services',$file_name);
-                    $img_url = 'services/'. $file_name;
-					array_push($images, $img_url);
-				}
-
-			}
+            foreach (Request()->file('images') as $image) {
+                $file_name     = 'product_image' .   rand(1, 15) . rand(155, 200) . rand(25, 55) . '.png';
+                $image->storeAs('public/services', $file_name);
+                $img_url = 'services/' . $file_name;
+                array_push($images, $img_url);
+            }
+        }
 
         $req->images = json_encode($images);
 
@@ -124,25 +126,23 @@ $images= [];
         return response()->json([
             'status' => true,
             'code' => 200,
-             "message" => "Request Updated successfully"
-            ]) ;
-
+            "message" => "Request Updated successfully"
+        ]);
     }
 
-    public function destroy($id){
-                 $req =  Request::find($id) ;
+    public function destroy($id)
+    {
+        $req =  Request::find($id);
 
-                 if(!$req)
-                        return response()->json(['status' => 'failed', 'message' => 'not fond']);
-            $req->delete();
+        if (!$req)
+            return response()->json(['status' => 'failed', 'message' => 'not fond']);
+        $req->delete();
 
         return response()->json([
             'status' => true,
             'code' => 200,
-             "message" => "Request Deleted successfully"
+            "message" => "Request Deleted successfully"
 
-            ]) ;
-
+        ]);
     }
-
 }

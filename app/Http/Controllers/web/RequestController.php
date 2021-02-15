@@ -87,43 +87,37 @@ class RequestController extends Controller
 
     public function update(Request $request, $id)
     {
-        try{
+        try {
             $req = Req::find($id);
             $req->name = $request->name;
             $req->user_id = $request->user_id;
             $req->description = $request->description;
             $req->category_id = $request->category_id;
-            $images= [];
 
-            $images = json_decode($req->images);
+            if ($request->images) {
+                $images = [];
 
-           if(request()->deleted_images){
-             $deleted_images = request()->deleted_images;
+                foreach ($request->images as $image) {
+                    if (is_string($image))
+                        array_push($images, $image);
+                }
 
-              foreach($images as $image){
-                  if(!in_array($image,$deleted_images)){
-                      $new_images[] = $image;
-                  }
-              }
+                if ($request->file('images')) {
 
-              $images =  $new_images;
-      }
-              if (is_array(Request()->file('images'))) {
+                    foreach ($request->file('images') as $image) {
+                        $file_name     = 'product_image' .   rand(1, 15) . rand(155, 200) . rand(25, 55) . '.png';
+                        $image->storeAs('public/requests', $file_name);
+                        $img_url = 'requests/' . $file_name;
+                        array_push($images, $img_url);
+                    }
+                }
+            }
 
-                  foreach (Request()->file('images') as $image) {
-                      $file_name     = 'product_image'.   rand(1, 15). rand(155, 200) . rand(25, 55). '.png';
-                      $image->storeAs('public/services',$file_name);
-                      $img_url = 'services/'. $file_name;
-                      array_push($images, $img_url);
-                  }
-
-              }
-
-          $req->images = json_encode($images);
+            $product->images = json_encode($images);
 
             $req->save();
             return redirect()->route('servicess.index')->with('done', 'Added Successfully ....');
-        }catch (\Exception $e){
+        } catch (\Exception $e) {
             return redirect()->back()->with('error', 'Error Try Again !!');
         }
     }

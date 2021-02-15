@@ -279,14 +279,6 @@ class ProductsController extends Controller
 
         $product->product_condition = $request->product_condition;
 
-
-
-
-
-
-
-
-
         if ($request->images) {
             $images = [];
 
