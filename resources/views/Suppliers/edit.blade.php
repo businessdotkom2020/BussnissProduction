@@ -5,10 +5,8 @@ $menu = false ;
 
 
 @push('styles')
-<!-- <link rel="stylesheet" href="{{ asset('/web/css/custom.css')}}">
-<link rel="stylesheet" href="{{ asset('/web/css/custom-register.css')}}"> -->
+
 <link rel="stylesheet" href="{{ asset('/web/css/custom-register-supplier.css')}}">
-<!-- <link rel="stylesheet" href="{{ asset('/web/css/custom-register.css')}}">   -->
 
 @endpush
 
@@ -17,19 +15,7 @@ $menu = false ;
 
 
 <main class="main-content col-xs-12">
-    <div class="supp-prof comp-prof us-profile col-xs-12">
-        <div class="supp-bottom col-xs-12">
-            <div class="supp-data">
-                {{-- <div class="supp-img">
-                <img src="images/marks/1.png" alt="">
-            </div> --}}
-                <div class="supp-l">
-                    <h3>{{$supplier->name}}</h3>
-                </div>
-            </div>
 
-        </div>
-    </div>
     <div class="supp-prof-about col-xs-12">
         <div class="container">
             <div class="g-head col-xs-12">
@@ -431,10 +417,36 @@ $menu = false ;
 
 <script src="{{ asset('/web/js/select2.full.min.js')}}"></script>
 <script src="{{ asset('/web/js/mapInput.js')}}"></script>
+
+<script
+    src="https://maps.googleapis.com/maps/api/js?key={{ env('GOOGLE_MAPS_API_KEY') }}&libraries=places&callback=initMap"
+    async defer></script>
+
+
+
+
+
 <script>
+    var x = document.getElementById("demo");
+
+function getLocation() {
+    if (navigator.geolocation) {
+        navigator.geolocation.getCurrentPosition(showPosition);
+    } else {
+        x.innerHTML = "Geolocation is not supported by this browser.";
+    }
+}
+
+function showPosition(position) {
+    x.innerHTML = "Latitude: " + position.coords.latitude +
+        "<br>Longitude: " + position.coords.longitude;
+}
+
+
+
+
     $('#country').change(function(){
-        console.log('asa');
-   var cid = $(this).val();
+    var cid = $(this).val();
    if(cid){
    $.ajax({
       type:"get",
