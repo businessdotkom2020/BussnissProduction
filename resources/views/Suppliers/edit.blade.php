@@ -43,13 +43,8 @@ $menu = false ;
                 <div class="tab-pane fade active in" id="u_profile">
                     <form action="{{route('update_supplier')}}" method="post" enctype="multipart/form-data">
                         @csrf
-
-
                         <div class="form-group col-md-12 col-xs-12">
-
                             <div class="s-item col-md-6 col-sm-6 col-xs-12">
-
-
 
                                 <div class="prof-img">
                                     <label>
@@ -63,8 +58,6 @@ $menu = false ;
 
                             </div>
                             <div class="s-item col-md-6 col-sm-6 col-xs-12">
-
-
 
                                 <div class="prof-img">
                                     <label>
@@ -262,7 +255,7 @@ $menu = false ;
                     </form>
                 </div>
 
-                <div class="tab-pane fade active in" id="u_password">
+                <div class="tab-pane fade  in" id="u_password">
 
                     <form action="{{route('update_password')}}" method="post" enctype="multipart/form-data">
                         @csrf
@@ -310,6 +303,9 @@ $menu = false ;
                             <button type="submit" class="btn">@lang('general.register')</button>
                         </div>
                 </div>
+
+
+
                 </form>
             </div>
         </div>
