@@ -24,17 +24,14 @@ $menu = false ;
             <ul class="nav-tabs col-md-3 col-xs-12">
 
                 <li class="active">
-                    <a href="#" data-toggle="tab" data-target="#t4">Update Profile</a>
+                    <a href="#" data-toggle="tab" data-target="#u_profile">Update Profile</a>
                 </li>
 
-
-
-                {{--
                 <li>
-                    <a href="#" data-toggle="tab" data-target="#t2">Update Branches</a>
-                </li> --}}
+                    <a href="#" data-toggle="tab" data-target="#u_branshes">Update Branches</a>
+                </li>
                 <li>
-                    <a href="#" data-toggle="tab" data-target="#t5">Update Password</a>
+                    <a href="#" data-toggle="tab" data-target="#u_password">Update Password</a>
                 </li>
             </ul>
             <div class="tab-content col-md-9 col-xs-12">
@@ -43,7 +40,7 @@ $menu = false ;
 
 
 
-                <div class="tab-pane fade active in" id="t4">
+                <div class="tab-pane fade active in" id="u_profile">
                     <form action="{{route('update_supplier')}}" method="post" enctype="multipart/form-data">
                         @csrf
 
@@ -265,7 +262,7 @@ $menu = false ;
                     </form>
                 </div>
 
-                <div class="tab-pane fade active in" id="t5">
+                <div class="tab-pane fade active in" id="u_password">
 
                     <form action="{{route('update_password')}}" method="post" enctype="multipart/form-data">
                         @csrf
