@@ -294,6 +294,12 @@ $menu = false ;
                         <div class="form-group col-md-6 col-xs-12">
                             <h4>@lang('general.work_from')</h4>
                             <h5>@lang('general.work_from')</h5>
+
+
+
+
+
+
                         </div>
 
 
