@@ -274,7 +274,8 @@ $menu = false ;
 
                         <div class="form-group col-md-12 col-xs-12">
                             <h4>@lang('general.street_num')</h4>
-                            <h3>@lang('general.street_num')</h3>
+                            <h6>@lang('general.street_num')</h6>
+                            <h5>@lang('general.street_num')</h5>
                         </div>
                         <div class="form-group col-md-6 col-xs-12">
                             <h4>@lang('general.zip_code')</h4>
