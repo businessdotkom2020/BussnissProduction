@@ -7,7 +7,7 @@ $menu = true ;
 @section('content')
 
 <div class="m">
-teswtt gggddddddddd
+teswtt gggdddddddddtest fewrffwer
 </div>
 <main class="main-content col-xs-12">
 <div class="col-md-7 col-md-offset-3 col-xs-12">
