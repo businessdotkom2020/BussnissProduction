@@ -265,7 +265,7 @@ $menu = false ;
                 </div>
 
 
-                
+
                 <div class="tab-pane fade  in" id="u_branches">
 
 
@@ -274,9 +274,7 @@ $menu = false ;
 
                         <div class="form-group col-md-12 col-xs-12">
                             <h4>@lang('general.street_num')</h4>
-
-                            <input required type="text" name="name" placeholder="@lang('general.name')"
-                                class="form-control">
+                            <h3>@lang('general.street_num')</h3>
                         </div>
                         <div class="form-group col-md-6 col-xs-12">
                             <h4>@lang('general.zip_code')</h4>
