@@ -274,103 +274,19 @@ $menu = false ;
 
                         <div class="form-group col-md-12 col-xs-12">
                             <h4>@lang('general.street_num')</h4>
-                            <h6>@lang('general.street_num')</h6>
                             <h5>@lang('general.street_num')</h5>
                         </div>
-                        <div class="form-group col-md-6 col-xs-12">
-                            <h4>@lang('general.zip_code')</h4>
-
-                            <input required type="text" name="zip_code" placeholder="@lang('general.zip_code')"
-                                class="form-control">
-                        </div>
-
-                        <div class="form-group col-md-6 col-xs-12">
-                            <h4>@lang('general.address_spec')</h4>
-
-                            <input required type="text" name="address" placeholder="@lang('general.address_spec')"
-                                class="form-control">
-                        </div>
-                        <div class="form-group col-md-6 col-xs-12">
-                            <h4>@lang('general.working_from')</h4>
-
-                            <input required type="text" name="working_from" placeholder="@lang('general.working_from')"
-                                class="form-control">
-                        </div>
-
-                        <div class="form-group col-md-6 col-xs-12">
-                            <h4>@lang('general.working_to')</h4>
-
-                            <input required type="text" name="working_to" placeholder="@lang('general.working_to')"
-                                class="form-control">
-                        </div>
-
-
-                        <div class="form-group col-md-6 col-xs-12">
-                            <h4>@lang('general.delivery_time')</h4>
-
-                            <input required type="text" name="delivery_time"
-                                placeholder="@lang('general.delivery_time')" class="form-control">
-                        </div>
-
-
-                        <div class="form-group col-md-6 col-xs-12">
-                            <h4>@lang('general.delivery_fee')</h4>
-
-                            <input required type="text" name="delivery_fee" placeholder="@lang('general.delivery_fee')"
-                                class="form-control">
-                        </div>
-
-                        <div class="form-group col-md-6 col-xs-12">
-                            <h4>@lang('general.year_founded')</h4>
-
-                            <input required type="text" name="year_founded" placeholder="@lang('general.year_founded')"
-                                class="form-control">
-                        </div>
-
-
-                        <div class="form-group col-md-6 col-xs-12">
-                            <h4>@lang('general.instagram_url')</h4>
-
-                            <input required type="text" name="instagram_url"
-                                placeholder="@lang('general.instagram_url')" class="form-control">
-                        </div>
-                        <div class="form-group col-md-6 col-xs-12">
-                            <h4>@lang('general.facebook_url')</h4>
-
-                            <input required type="text" name="facebook_url" placeholder="@lang('general.facebook_url')"
-                                class="form-control">
-                        </div>
-                        <div class="form-group col-md-6 col-xs-12">
-                            <h4>@lang('general.linkedin_url')</h4>
-
-                            <input required type="text" name="linkedin_url" placeholder="@lang('general.linkedin_url')"
-                                class="form-control">
-                        </div>
-                        <div class="form-group col-md-6 col-xs-12">
-                            <h4>@lang('general.youtube_url')</h4>
-
-                            <input required type="text" name="youtube_url" placeholder="@lang('general.youtube_url')"
-                                class="form-control">
-                        </div>
 
 
 
-                        <div class="form-group col-md-6 col-xs-12">
-                        </div>
 
-                        <div class="form-group col-md-6 col-xs-12">
-                            <!--<input type="text" placeholder="@lang('general.map_location')" class="form-control">-->
-                            <a href="#" class="btn btn-review" data-toggle="modal" onclick="initMap()"
-                                data-target="#review-pop">@lang('general.map_location')</a>
 
-                        </div>
-                        <div class="form-group col-md-12 col-xs-12">
-                        </div>
 
-                        <br>
-                        <div class="form-group col-md-6 col-xs-12">
-                            <button type="submit" class="btn">@lang('general.save')</button>
-                        </div>
+
+
+
+
+
                     </div>
 
                 </div>
