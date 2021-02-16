@@ -6,7 +6,7 @@ $menu = true ;
 
 @section('content')
 
-<div>
+<div class="m">
 
 </div>
 <main class="main-content col-xs-12">
