@@ -272,12 +272,12 @@ $menu = false ;
                     <div class="ito-h col-xs-12">
 
 
-                        <div class="form-group col-md-12 col-xs-12">
+                        <div class="form-group col-md-6 col-xs-12">
                             <h4>@lang('general.street_num')</h4>
                             <h5>@lang('general.street_num')</h5>
                         </div>
-                        
-                        <div class="form-group col-md-12 col-xs-12">
+
+                        <div class="form-group col-md-6 col-xs-12">
                             <h4>@lang('general.street_num')</h4>
                             <h5>@lang('general.street_num')</h5>
                         </div>
