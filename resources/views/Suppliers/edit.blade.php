@@ -6,7 +6,7 @@ $menu = false ;
 
 @push('styles')
 
-<link rel="stylesheet" href="{{ asset('/web/css/custom-register-supplier.css')}}">
+<link rel="stylesheet" href="{{ asset('/web/css/custom-save-supplier.css')}}">
 
 @endpush
 
@@ -24,21 +24,20 @@ $menu = false ;
             <ul class="nav-tabs col-md-3 col-xs-12">
 
                 <li class="active">
-                    <a href="#" data-toggle="tab" data-target="#u_profile">Update Profile</a>
+                    <a href="#" data-toggle="tab" data-target="#u_profile">@lang('general.u_profile')</a>
                 </li>
 
                 <li>
-                    <a href="#" data-toggle="tab" data-target="#u_location">Location Info</a>
+                    <a href="#" data-toggle="tab" data-target="#u_location">>@lang('general.u_location')</a>
                 </li>
                 <li>
-                    <a href="#" data-toggle="tab" data-target="#u_password">Update Password</a>
+                    <a href="#" data-toggle="tab" data-target="#u_branches">@lang('general.branches')</a>
+                </li>
+                <li>
+                    <a href="#" data-toggle="tab" data-target="#u_password">@lang('general.u_password')</a>
                 </li>
             </ul>
             <div class="tab-content col-md-9 col-xs-12">
-
-
-
-
 
                 <div class="tab-pane fade active in" id="u_profile">
                     <form action="{{route('update_supplier')}}" method="post" enctype="multipart/form-data">
@@ -84,14 +83,12 @@ $menu = false ;
                                     class="form-control select-nosearch" multiple>
                                     <!--<option selected disabled>@lang('general.categories')</option>-->
                                     @foreach(\App\Models\Category::whereNull('parent_id')->get() as $category)
-
                                     <option
                                         {{in_array($category->id,$supplier->categories->pluck('id')->toArray()) ? 'selected' : '' }}
                                         value="{{$category->id}}">
                                         {{$category->getTranslatedAttribute('name',\App::getLocale())}}</option>
-
-
                                     @endforeach
+
                                 </select>
                             </div>
 
@@ -111,7 +108,7 @@ $menu = false ;
 
                             <br>
                             <div class="form-group col-md-6 col-xs-12">
-                                <button type="submit" class="btn">@lang('general.register')</button>
+                                <button type="submit" class="btn">@lang('general.save')</button>
                             </div>
                         </div>
 
@@ -260,7 +257,7 @@ $menu = false ;
 
                             <br>
                             <div class="form-group col-md-6 col-xs-12">
-                                <button type="submit" class="btn">@lang('general.register')</button>
+                                <button type="submit" class="btn">@lang('general.save')</button>
                             </div>
                         </div>
                     </form>
@@ -311,7 +308,7 @@ $menu = false ;
 
                         <br>
                         <div class="form-group col-md-6 col-xs-12">
-                            <button type="submit" class="btn">@lang('general.register')</button>
+                            <button type="submit" class="btn">@lang('general.save')</button>
                         </div>
                 </div>
 
