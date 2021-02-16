@@ -273,13 +273,27 @@ $menu = false ;
 
 
                         <div class="form-group col-md-6 col-xs-12">
-                            <h4>@lang('general.street_num')</h4>
-                            <h5>@lang('general.street_num')</h5>
+                            <h4>@lang('general.name')</h4>
+                            <h5>@lang('general.name')</h5>
                         </div>
 
                         <div class="form-group col-md-6 col-xs-12">
-                            <h4>@lang('general.street_num')</h4>
-                            <h5>@lang('general.street_num')</h5>
+                            <h4>@lang('general.email')</h4>
+                            <h5>@lang('general.email')</h5>
+                        </div>
+
+                        <div class="form-group col-md-6 col-xs-12">
+                            <h4>@lang('general.mobile')</h4>
+                            <h5>@lang('general.mobile')</h5>
+                        </div>
+
+                        <div class="form-group col-md-6 col-xs-12">
+                            <h4>@lang('general.work_from')</h4>
+                            <h5>@lang('general.work_from')</h5>
+                        </div>
+                        <div class="form-group col-md-6 col-xs-12">
+                            <h4>@lang('general.work_from')</h4>
+                            <h5>@lang('general.work_from')</h5>
                         </div>
 
 
