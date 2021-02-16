@@ -28,10 +28,10 @@ $menu = false ;
                 </li>
 
                 <li>
-                    <a href="#" data-toggle="tab" data-target="#u_location">>@lang('general.u_location')</a>
+                    <a href="#" data-toggle="tab" data-target="#u_location">@lang('general.u_location')</a>
                 </li>
                 <li>
-                    <a href="#" data-toggle="tab" data-target="#u_branches">@lang('general.branches')</a>
+                    <a href="#" data-toggle="tab" data-target="#u_branches">@lang('general.u_branches')</a>
                 </li>
                 <li>
                     <a href="#" data-toggle="tab" data-target="#u_password">@lang('general.u_password')</a>
