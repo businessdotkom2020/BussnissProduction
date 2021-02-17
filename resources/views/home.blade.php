@@ -6,9 +6,6 @@ $menu = true ;
 
 @section('content')
 
-<div class="m">
-
-</div>
 <main class="main-content col-xs-12">
 <div class="col-md-7 col-md-offset-3 col-xs-12">
                     <div class="top-slider owl-carousel owl-theme">
@@ -63,7 +60,9 @@ $menu = true ;
                         </div>
                     </div>
                 </div>
+                <!--
                 <div class="col-md-2 col-xs-12 padding">
+
                     <div class="colum-right">
                         <div class="title-side">
                             <h3>new deals just arrived</h3>
@@ -76,7 +75,7 @@ $menu = true ;
                                         <!-- <img src="{{url('storage/'.$product->image)}}" alt=""> -->
                                         <img src="https://i.ibb.co/2cbfP9p/20961-20965-20969iphone12promaxblueproductimage1000x1000png.png" border="0">
                                         <!-- <img src="{{ json_decode($product->images ) ? url('storage/'.(json_decode($product->images))[0]) : "https://i.imgur.com/mFI2maG.jpg" }}" class="sec-img"> -->
-                                    </a>
+                                    <!--</a>
                                 </div>
                                 <div class="details-block">
                                     <a href="#" class="name">name product</a>
@@ -90,6 +89,7 @@ $menu = true ;
                             <a href="#">see more</a>
                         </div>
                     </div>
+                    -->
         <!-- <div class="h-slider owl-carousel owl-theme">
 
             @foreach (App\Models\Slider::whereType('web')->get() as $slider)
