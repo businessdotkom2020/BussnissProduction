@@ -107,14 +107,7 @@
                                         value="{{$state->id}}">{{$state->name}}</option> @endforeach
                                 </select>
                             </div>
-                            <div class="form-group col-md-4 col-xs-12">
-                                <select style="width:100%" required name="city_id" id="city" class="form-control">
-                                    <option selected disabled>@lang('general.city')</option> @foreach
-                                    (\App\Models\City::get() as $city)
-                                    <option {{ $supplier->city_id == $city->id ? 'selected' : ''}}
-                                        value="{{$city->id}}">{{$city->name}}</option> @endforeach
-                                </select>
-                            </div>
+
                             <div class="form-group col-md-12 col-xs-12">
                                 <h4>@lang('general.street_num')</h4>
                                 <input required type="text" name="street_nom" placeholder="@lang('general.street_num')"
