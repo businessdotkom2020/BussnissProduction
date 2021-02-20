@@ -14,7 +14,7 @@ $menu = true ;
                     <div class="top-slider owl-carousel owl-theme">
                         <div class="item">
                             <div class="slider-inner">
-                                <div class="slider-item">
+                                <div class="slider-item" style="background-image: url(https://i.imgur.com/mFI2maG.jpg)">
 <!--
                                     <div class="details-item">
                                         <h1>badil spare parts</h1>
@@ -23,11 +23,12 @@ $menu = true ;
                                         </p>
                                         <a href="#" class="btn">shop now</a>
                                     </div>
--->
+
                                     <div class="img-item">
                                         <div class="img" style="background-image: url(https://i.imgur.com/mFI2maG.jpg)"></div>
                                     </div>
                                 </div>
+                                -->
                             </div>
                         </div>
 
