@@ -1,11 +1,3 @@
-@extends('layouts.main')
-    @php $menu = false ;
-@endphp
-    @push('styles')
-    <link rel="stylesheet" href="{{ asset('/web/css/custom-save-supplier.css')}}">
-    @endpush
-@section('content')
-
 <main class="main-content col-xs-12">
     <div class="supp-prof-about col-xs-12">
         <div class="container">
@@ -380,4 +372,4 @@ $('#state').change(function() {
 		});
 	}
 });
-</script> @endpush
+</script>
