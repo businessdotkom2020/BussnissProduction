@@ -91,45 +91,9 @@
                 <div class="tab-pane fade  in " id="u_location">
                     <form action="{{route('update_supplier')}}" method="post" enctype="multipart/form-data">
                         @csrf
-                        <div class="ito-h col-xs-12 ubranch">
-                            <h4>@lang('general.localization_info')</h4>
-                            <div class="form-group col-md-4 col-xs-12">
-                                <select style="width:100%" required id="country" name="country_id" class="form-control">
-                                    @foreach (\App\Models\Country::get() as $country)
-                                    <option {{ $supplier->country_id == $country->id ? 'selected' : ''}}
-                                        value="{{$country->id}}">{{$country->name}}</option> @endforeach </select>
-                            </div>
-                            <div class="form-group col-md-4 col-xs-12">
-                                <select style="width:100%" required name="state_id" id="state" class="form-control">
-                                    <option selected disabled>@lang('general.state')</option> @foreach
-                                    (\App\Models\State::get() as $state)
-                                    <option {{ $supplier->state_id == $state->id ? 'selected' : ''}}
-                                        value="{{$state->id}}">{{$state->name}}</option> @endforeach
-                                </select>
-                            </div>
-                            <div class="form-group col-md-4 col-xs-12">
-                                <select style="width:100%" required name="city_id" id="city" class="form-control">
-                                    <option selected disabled>@lang('general.city')</option> @foreach
-                                    (\App\Models\City::get() as $city)
-                                    <option {{ $supplier->city_id == $city->id ? 'selected' : ''}}
-                                        value="{{$city->id}}">{{$city->name}}</option> @endforeach
-                                </select>
-                            </div>
-                            <div class="form-group col-md-12 col-xs-12">
-                                <h4>@lang('general.street_num')</h4>
-                                <input required type="text" name="street_nom" placeholder="@lang('general.street_num')"
-                                    class="form-control">
-                            </div>
-                            <div class="form-group col-md-6 col-xs-12">
-                                <h4>@lang('general.zip_code')</h4>
-                                <input required type="text" name="zip_code" placeholder="@lang('general.zip_code')"
-                                    class="form-control">
-                            </div>
-                            <div class="form-group col-md-6 col-xs-12">
-                                <h4>@lang('general.address_spec')</h4>
-                                <input required type="text" name="address" placeholder="@lang('general.address_spec')"
-                                    class="form-control">
-                            </div>
+
+
+
                             <div class="form-group col-md-6 col-xs-12">
                                 <h4>@lang('general.working_from')</h4>
                                 <input required type="text" name="working_from"
