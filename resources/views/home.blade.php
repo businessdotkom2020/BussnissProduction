@@ -7,10 +7,10 @@ $menu = true ;
 @section('content')
 
 <div class="m">
-teswtt gggdddddd
+
 </div>
 <main class="main-content col-xs-12">
-<div class="col-md-7 col-md-offset-3 col-xs-12">
+<div class="col-md-9 col-md-offset-3 col-xs-12">
                     <div class="top-slider owl-carousel owl-theme">
                         <div class="item">
                             <div class="slider-inner">
@@ -63,6 +63,9 @@ teswtt gggdddddd
                         </div>
                     </div>
                 </div>
+
+
+                <!--
                 <div class="col-md-2 col-xs-12 padding">
                     <div class="colum-right">
                         <div class="title-side">
@@ -73,9 +76,9 @@ teswtt gggdddddd
                             <div class="block-product">
                                 <div class="img-block">
                                     <a href="{{url('product/'.$product->id)}}" class="img-hold">
-                                        <!-- <img src="{{url('storage/'.$product->image)}}" alt=""> -->
+                                        
                                         <img src="https://i.ibb.co/2cbfP9p/20961-20965-20969iphone12promaxblueproductimage1000x1000png.png" border="0">
-                                        <!-- <img src="{{ json_decode($product->images ) ? url('storage/'.(json_decode($product->images))[0]) : "https://i.imgur.com/mFI2maG.jpg" }}" class="sec-img"> -->
+                                        
                                     </a>
                                 </div>
                                 <div class="details-block">
@@ -89,7 +92,7 @@ teswtt gggdddddd
                         <div class="see-more">
                             <a href="#">see more</a>
                         </div>
-                    </div>
+                    </div>-->
         <!-- <div class="h-slider owl-carousel owl-theme">
 
             @foreach (App\Models\Slider::whereType('web')->get() as $slider)
