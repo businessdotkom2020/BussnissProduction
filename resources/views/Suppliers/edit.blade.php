@@ -205,6 +205,11 @@
                                 src="https://maps.google.com/maps?q={{$branch->lat}},{{$branch->lang}}&hl=en&z=14&amp;output=embed">
                             </iframe>
                         </div>
+                        <div class="form-group col-md-9 col-xs-12">
+                            <iframe
+                                src="https://maps.google.com/maps?q={{$branch->lat}},{{$branch->lang}}&hl=es;z=14&amp;output=embed"></iframe>
+
+                        </div>
                         <div class="form-group col-md-3 col-xs-12">
                             <h4>@lang('general.email')</h4>
                             <h5>@lang('general.email')</h5>
