@@ -31,14 +31,15 @@ $menu = true ;
                                 -->
                             </div>
                         </div>
+                        </div>
                         <div class="item">
                             <div class="slider-inner">
-                                <div class="slider-item" style="background-image: url(https://i.imgur.com/zp9QK3C.jpg)">
+                                <div class="slider-item" style="background-image: url(https://i.imgur.com/zp9QK3C.jpg)"></div>
                             </div>
                         </div>
                         <div class="item">
                             <div class="slider-inner">
-                                <div class="slider-item" style="background-image: url(https://i.imgur.com/Undx7w5.jpg)">
+                                <div class="slider-item" style="background-image: url(https://i.imgur.com/Undx7w5.jpg)"></div>
                             </div>
                         </div>
                         
