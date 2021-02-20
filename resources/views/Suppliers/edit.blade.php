@@ -269,7 +269,7 @@ $menu = false ;
                 <div class="tab-pane fade  in" id="u_branches">
 
 
-                    <div class="ito-h col-xs-12">
+                    <div class="ito-h col-xs-12 ubranch">
 
 
                         <div class="form-group col-md-6 col-xs-12">
