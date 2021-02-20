@@ -206,13 +206,13 @@
                             </iframe>
                         </div>
 
-                        <div class="form-group col-md-3 col-xs-12">
-                            <h4>@lang('general.email')</h4>
-                            <h5>@lang('general.email')</h5>
+                        <div class="pr-item form-group col-md-3 col-xs-12">
+                            <h3>@lang('general.email')</h3>
+                            <h5>{{$branch->email}}</h5>
                         </div>
-                        <div class="form-group col-md-3 col-xs-12">
-                            <h4>@lang('general.mobile')</h4>
-                            <h5>@lang('general.mobile')</h5>
+                        <div class="pr-item form-group col-md-3 col-xs-12">
+                            <h3>@lang('general.mobile')</h3>
+                            <h5>{{$branch->mobile}}</h5>
                         </div>
 
 
