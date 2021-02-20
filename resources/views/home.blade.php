@@ -1006,7 +1006,7 @@ $menu = true ;
 
 
 
-
+<!--
 
     <div class="h-offers col-xs-12">
         <div class="container">
@@ -1044,59 +1044,64 @@ $menu = true ;
                             <div class="i-data">
                                 <a href="{{url('product/'.$product->id)}}"
                                     class="title">{{$product->getTranslatedAttribute('name',\App::getLocale())}}</a>
-                                <p>{{ Str::limit($product->getTranslatedAttribute('description',\App::getLocale()),50 )}}</p> 
-    
+                                <p>{{ Str::limit($product->getTranslatedAttribute('description',\App::getLocale()),50 )}}
+                                </p>
+
                                 <div class="cardo" style="flex-grow: 1;padding:0px">
-        <div class="c-inner" style="text-align: right;">
-            <div class="c-data">
-                <p>
-                    @php $rating = $product->average_rating ; @endphp
-                    @foreach(range(1,5) as $i)
-                    @if($rating >0)
-                    @if($rating > 0.5)
-                    <i class="fa fa-star active"></i>
-                    @elseif($rating < 0.5 && $rating> 0)
-                        <i class="fas fa-star-half"></i>
-                        @endif
-                        @else
-                        <i class="fa fa-star"></i>
-                        @endif
-                        @php $rating--; @endphp
+                                    <div class="c-inner" style="text-align: right;">
+                                        <div class="c-data">
+                                            <p>
+                                                @php $rating = $product->average_rating ; @endphp
+                                                @foreach(range(1,5) as $i)
+                                                @if($rating >0)
+                                                @if($rating > 0.5)
+                                                <i class="fa fa-star active"></i>
+                                                @elseif($rating < 0.5 && $rating> 0)
+                                                    <i class="fas fa-star-half"></i>
+                                                    @endif
+                                                    @else
+                                                    <i class="fa fa-star"></i>
+                                                    @endif
+                                                    @php $rating--; @endphp
 
-                        @endforeach
+                                                    @endforeach
 
-                </p>
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="block-price">
+                                    <span
+                                        class="new-price">{{$product->sale_price ? $product->sale_price : $product->price}}$</span>
+
+                                    <span class="old-price">120$</span>
+                                    @if($product->sale_price)
+                                    <span
+                                        class="offer-p">{{number_format( (($product->sale_price/$product->price) * 100) ,2 ) }}
+                                        % تخفيض</span>
+                                    @endif
+                                </div>
+                                <a class="btn" href="#" data-toggle="modal" data-target="#contact_{{$product->user_id}}"
+                                    target="_blank">@lang('general.contact_supplier')</a>
+                            </div>
+
+                        </div>
+                    </div>
+                    @endforeach
+                </div>
+
             </div>
         </div>
     </div>
-    <div class="block-price">
-        <span class="new-price">{{$product->sale_price ? $product->sale_price : $product->price}}$</span>
-        
-        <span class="old-price">120$</span>
-        @if($product->sale_price)
-        <span class="offer-p">{{number_format( (($product->sale_price/$product->price) * 100) ,2 ) }}
-            % تخفيض</span>
-        @endif
-    </div>
-    <a class="btn" href="#" data-toggle="modal" data-target="#contact_{{$product->user_id}}"
-        target="_blank">@lang('general.contact_supplier')</a>
-    </div>
+    -->
 
-    </div>
-    </div>
-    @endforeach
-    </div>
 
-    </div>
-    </div>
-    </div>
- 
 
     <div class="h-offers new-product-blocks col-xs-12">
         <div class="container-fluid">
             <div class="g-head col-xs-12">
-                <h3>hot <span>offers</span></h3>
-                <a href="#" class="more">view all</a>
+                <h3>الأكثر <span>شيوعا </span></h3>
+                <a href="{{url('products/most-common')}}" class="more">@lang('general.view_all')</a>
             </div>
             <div class="g-body col-xs-12">
                 <div class="col-md-2 col-sm-3 col-xs-6">
@@ -1126,9 +1131,10 @@ $menu = true ;
                                     <i class="fa fa-star"></i>
                                 </p>
                             </div>
+                            <a class="btn h-offers-btn" href="#" data-toggle="modal"
+                                data-target="#contact_{{$product->user_id}}"
+                                target="_blank">@lang('general.contact_supplier')</a>
 
-                            <a class="btn h-offers-btn" href="#" data-toggle="modal" data-target="#contact_pop">contact
-                                supplier</a>
                         </div>
                     </div>
                 </div>
@@ -1160,8 +1166,9 @@ $menu = true ;
                                     <i class="fa fa-star"></i>
                                 </p>
                             </div>
-                            <a class="btn h-offers-btn" href="#" data-toggle="modal" data-target="#contact_pop">contact
-                                supplier</a>
+                            <a class="btn h-offers-btn" href="#" data-toggle="modal"
+                                data-target="#contact_{{$product->user_id}}"
+                                target="_blank">@lang('general.contact_supplier')</a>
                         </div>
                     </div>
                 </div>
@@ -1193,8 +1200,9 @@ $menu = true ;
                                     <i class="fa fa-star"></i>
                                 </p>
                             </div>
-                            <a class="btn h-offers-btn" href="#" data-toggle="modal" data-target="#contact_pop">contact
-                                supplier</a>
+                            <a class="btn h-offers-btn" href="#" data-toggle="modal"
+                                data-target="#contact_{{$product->user_id}}"
+                                target="_blank">@lang('general.contact_supplier')</a>
                         </div>
                     </div>
                 </div>
@@ -1226,8 +1234,9 @@ $menu = true ;
                                     <i class="fa fa-star"></i>
                                 </p>
                             </div>
-                            <a class="btn  h-offers-btn" href="#" data-toggle="modal" data-target="#contact_pop">contact
-                                supplier</a>
+                            <a class="btn h-offers-btn" href="#" data-toggle="modal"
+                                data-target="#contact_{{$product->user_id}}"
+                                target="_blank">@lang('general.contact_supplier')</a>
                         </div>
                     </div>
                 </div>
@@ -1258,9 +1267,11 @@ $menu = true ;
                                     <i class="fa fa-star active"></i>
                                     <i class="fa fa-star"></i>
                                 </p>
-                                <a class="btn h-offers-btn" href="#" data-toggle="modal"
-                                    data-target="#contact_pop">contact supplier</a>
+
                             </div>
+                            <a class="btn h-offers-btn" href="#" data-toggle="modal"
+                                data-target="#contact_{{$product->user_id}}"
+                                target="_blank">@lang('general.contact_supplier')</a>
                         </div>
                     </div>
                 </div>
@@ -1292,8 +1303,9 @@ $menu = true ;
                                     <i class="fa fa-star"></i>
                                 </p>
                             </div>
-                            <a class="btn h-offers-btn" href="#" data-toggle="modal" data-target="#contact_pop">contact
-                                supplier</a>
+                            <a class="btn h-offers-btn" href="#" data-toggle="modal"
+                                data-target="#contact_{{$product->user_id}}"
+                                target="_blank">@lang('general.contact_supplier')</a>
                         </div>
                     </div>
                 </div>
