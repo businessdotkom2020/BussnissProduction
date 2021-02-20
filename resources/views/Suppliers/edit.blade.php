@@ -192,6 +192,8 @@
                 {{--************************************* update Branches  **********************************--}}
 
                 <div class="tab-pane fade  in" id="u_branches">
+                    @foreach ($supplier->branchs as $branch)
+
                     <div class="ito-h col-xs-12 ubranch">
                         <div class="form-group col-md-6 col-xs-12">
                             <h4>@lang('general.name')</h4>
@@ -218,6 +220,10 @@
                             <button type="submit" class="btn">@lang('general.update')</button>
                         </div>
                     </div>
+
+                    @endforeach
+
+
                 </div>
 
                 {{--************************************* update Password  **********************************--}}
