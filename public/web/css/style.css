@@ -5123,6 +5123,7 @@ button.close:hover {
 .cardo .c-inner .c-data .btn i {
     margin: 0 5px;
 }
-.h-supplier-box .c-data .btn span{
+.h-supplier-box .c-data .btn:hover span,
+.h-supplier-box .c-data .btn:focus span{
     color: #fff !important;
 }
