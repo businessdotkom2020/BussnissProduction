@@ -314,51 +314,53 @@ $menu = false ;
                         @csrf
 
 
+                        <div class="ito-h col-xs-12 ubranch">
 
-                        <div class="form-group col-md-6 col-xs-12">
-                            <h4>@lang('general.old_password')</h4>
+                            <div class="form-group col-md-6 col-xs-12">
+                                <h4>@lang('general.old_password')</h4>
 
-                            <input required type="password" name="old_password"
-                                placeholder="@lang('general.old_password')" class="form-control">
+                                <input required type="password" name="old_password"
+                                    placeholder="@lang('general.old_password')" class="form-control">
+                            </div>
+
+
+                            <div class="form-group col-md-6 col-xs-12">
+                                <h4>@lang('general.password')</h4>
+
+                                <input required type="password" name="password" placeholder="@lang('general.password')"
+                                    class="form-control">
+                            </div>
+
+
+                            <div class="form-group col-md-6 col-xs-12">
+                                <h4>@lang('general.password_confirmation')</h4>
+
+                                <input required type="password" name="password_confirmation"
+                                    placeholder="@lang('general.password_confirmation')" class="form-control">
+                            </div>
+
+
+
+
+
+
+                            <div class="form-group col-md-6 col-xs-12">
+                            </div>
+
+
+
+                            <div class="form-group col-md-12 col-xs-12">
+                            </div>
+
+                            <br>
+                            <div class="form-group col-md-6 col-xs-12">
+                                <button type="submit" class="btn">@lang('general.save')</button>
+                            </div>
                         </div>
 
 
-                        <div class="form-group col-md-6 col-xs-12">
-                            <h4>@lang('general.password')</h4>
 
-                            <input required type="password" name="password" placeholder="@lang('general.password')"
-                                class="form-control">
-                        </div>
-
-
-                        <div class="form-group col-md-6 col-xs-12">
-                            <h4>@lang('general.password_confirmation')</h4>
-
-                            <input required type="password" name="password_confirmation"
-                                placeholder="@lang('general.password_confirmation')" class="form-control">
-                        </div>
-
-
-
-
-
-
-                        <div class="form-group col-md-6 col-xs-12">
-                        </div>
-
-
-
-                        <div class="form-group col-md-12 col-xs-12">
-                        </div>
-
-                        <br>
-                        <div class="form-group col-md-6 col-xs-12">
-                            <button type="submit" class="btn">@lang('general.save')</button>
-                        </div>
                 </div>
-
-
-
             </div>
         </div>
     </div>
