@@ -1071,7 +1071,7 @@ $menu = true ;
     </div>
     <div class="block-price">
         <span class="new-price">{{$product->sale_price ? $product->sale_price : $product->price}}$</span>
-        <!-- Price before offer -->
+        
         <span class="old-price">120$</span>
         @if($product->sale_price)
         <span class="offer-p">{{number_format( (($product->sale_price/$product->price) * 100) ,2 ) }}
