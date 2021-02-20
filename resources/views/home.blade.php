@@ -14,7 +14,8 @@ $menu = true ;
                     <div class="top-slider owl-carousel owl-theme">
                         <div class="item">
                             <div class="slider-inner">
-                                <div class="slider-item">
+                                <div class="slider-item" style="background-image: url(https://i.imgur.com/wWctE6h.png)">
+<!--
                                     <div class="details-item">
                                         <h1>badil spare parts</h1>
                                         <p> 
@@ -22,45 +23,26 @@ $menu = true ;
                                         </p>
                                         <a href="#" class="btn">shop now</a>
                                     </div>
-                                    <div class="img-item">
-                                        <div class="img" style="background-image: url(https://i.imgur.com/mFI2maG.jpg)"></div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
 
-                        <div class="item">
-                            <div class="slider-inner">
-                                <div class="slider-item">
-                                    <div class="details-item">
-                                        <h1>badil spare parts</h1>
-                                        <p>
-                                            Lorem Ipsum is simply dummy text of the printing and typesetting industry
-                                        </p>
-                                        <a href="#" class="btn">shop now</a>
-                                    </div>
                                     <div class="img-item">
                                         <div class="img" style="background-image: url(https://i.imgur.com/mFI2maG.jpg)"></div>
                                     </div>
                                 </div>
+                                -->
                             </div>
                         </div>
                         <div class="item">
                             <div class="slider-inner">
-                                <div class="slider-item">
-                                    <div class="details-item">
-                                        <h1>badil spare parts</h1>
-                                        <p>
-                                            Lorem Ipsum is simply dummy text of the printing and typesetting industry
-                                        </p>
-                                        <a href="#" class="btn">shop now</a>
-                                    </div>
-                                    <div class="img-item">
-                                        <div class="img" style="background-image: url(https://i.imgur.com/mFI2maG.jpg)"></div>
-                                    </div>
-                                </div>
+                                <div class="slider-item" style="background-image: url(https://i.imgur.com/zp9QK3C.jpg)">
                             </div>
                         </div>
+                        <div class="item">
+                            <div class="slider-inner">
+                                <div class="slider-item" style="background-image: url(https://i.imgur.com/Undx7w5.jpg)">
+                            </div>
+                        </div>
+                        
+                        
                     </div>
                 </div>
 
