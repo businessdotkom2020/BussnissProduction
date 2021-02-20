@@ -546,6 +546,39 @@ $menu = true ;
 
         </div>
     </div>
+
+
+
+    <div class="home-banner-ad col-xs-12">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-md-4 col-sm-4 col-xs-12">
+                    <div class="h-banner-ad">
+                        <a href="#">
+                            <img src="https://i.imgur.com/GZyFqdI.jpg" alt="img" />
+                        </a>
+                    </div>
+                </div>
+                <div class="col-md-4 col-sm-4 col-xs-12">
+                    <div class="h-banner-ad">
+                        <a href="#">
+                            <img src="https://i.imgur.com/zp9QK3C.jpg" alt="img" />
+                        </a>
+                    </div>
+                </div>
+                <div class="col-md-4 col-sm-4 col-xs-12">
+                    <div class="h-banner-ad">
+                        <a href="#">
+                            <img src="https://i.imgur.com/Undx7w5.jpg" alt="img" />
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
     <!--
     <div class="n-products col-xs-12 col-md-12 col-lg-8">
         <div class="container">
@@ -636,7 +669,7 @@ $menu = true ;
             </div>
         </div>
     </div>
-
+-->
 
     <div class="suppliers col-xs-12">
         <div class="container">
@@ -645,8 +678,8 @@ $menu = true ;
                 <a href="{{url('suppliers')}}" class="more">@lang('general.view_all')</a>
             </div>
             <div class="g-body col-xs-12">
-               <div id="supplier_slider">
-                @foreach($home_suppliers as $supplier)
+                <div id="supplier_slider">
+                    @foreach($home_suppliers as $supplier)
                     <div class="slide-item">
                         <div class="cardo">
                             <div class="c-inner">
@@ -656,9 +689,10 @@ $menu = true ;
                                     </a>
                                 </div>
                                 <div class="c-data">
-                                    
+
                                     <h3>
-                                        <a href="{{url('supplier/'.$supplier->id)}}" class="title">{{$supplier->name}}</a>
+                                        <a href="{{url('supplier/'.$supplier->id)}}"
+                                            class="title">{{$supplier->name}}</a>
                                     </h3>
                                     <p>
                                         @php $rating = $supplier->average_rating ; @endphp
@@ -675,15 +709,19 @@ $menu = true ;
                                             @php $rating--; @endphp
                                             @endforeach
                                     </p>
-                                    @if(!Auth::check() || \Auth::user()->canFollow($supplier) && \Auth::user()->id != $supplier->id)
-                                    <a href="javascript:void(0)" id="followtoggle_{{$supplier->id}}" onclick="followtoggle({{$supplier->id }})" class="btn ">
+                                    @if(!Auth::check() || \Auth::user()->canFollow($supplier) && \Auth::user()->id !=
+                                    $supplier->id)
+                                    <a href="javascript:void(0)" id="followtoggle_{{$supplier->id}}"
+                                        onclick="followtoggle({{$supplier->id }})" class="btn ">
                                         <i id="followicon_{{$supplier->id}}" class="fa fa-plus"></i>
                                         <span style="color:white">
                                             Follow
                                         </span>
                                     </a>
-                                    @elseif(Auth::check() && !\Auth::user()->canFollow($supplier) && \Auth::user()->id != $supplier->id)
-                                    <a href="javascript:void(0)" id="followtoggle_{{$supplier->id}}" onclick="followtoggle({{$supplier->id }})" class="btn following">
+                                    @elseif(Auth::check() && !\Auth::user()->canFollow($supplier) && \Auth::user()->id
+                                    != $supplier->id)
+                                    <a href="javascript:void(0)" id="followtoggle_{{$supplier->id}}"
+                                        onclick="followtoggle({{$supplier->id }})" class="btn following">
                                         <i id="followicon_{{$supplier->id}}" class="fa fa-check"></i>
                                         <span style="color:white">
                                             following
@@ -694,12 +732,12 @@ $menu = true ;
                             </div>
                         </div>
                     </div>
-                @endforeach
+                    @endforeach
                 </div>
             </div>
         </div>
     </div>
--->
+
 
     <div class="h-offers col-xs-12">
         <div class="container">
