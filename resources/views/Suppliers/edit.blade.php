@@ -298,7 +298,7 @@ $menu = false ;
                         </div>
                             <br>
                             <div class="form-group col-md-6 col-xs-12">
-                                <button type="submit" class="btn">@lang('general.save')</button>
+                                <button type="submit" class="btn">@lang('general.update')</button>
                             </div>
 
 
