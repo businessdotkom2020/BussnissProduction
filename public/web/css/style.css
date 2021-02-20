@@ -5127,3 +5127,206 @@ button.close:hover {
 .h-supplier-box .c-data .btn:focus span{
     color: #fff !important;
 }
+/******************************* request-se **************************/
+.request-grid{
+    padding: 10px;
+    box-shadow: 0 8px 20px 0 rgba(0, 0, 0, .04);
+    transition: all 0.3s ease;
+    margin-bottom: 25px;
+}
+.request-grid:hover{ box-shadow: 0px 1px 51px 0px #d9d6d9; }
+.request-grid .request-image{
+    overflow: hidden;
+    position: relative;
+    z-index: 1;
+    height: 270px;
+}
+.request-grid .request-image a.image{ 
+    display: block; 
+    height: 100%;
+}
+.request-grid .request-image img{
+    width: 100%;
+    height: 100%;
+}
+.request-image .pic-1{
+    backface-visibility: hidden;
+    transition: all 0.5s;
+}
+.request-grid:hover .request-image .pic-1{ opacity: 0; }
+.request-image .pic-2{
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    opacity: 0;
+    position: absolute;
+    top: 0;
+    left: 0;
+    transition: opacity .5s ease,transform 2s cubic-bezier(0,0,.44,1.18);
+}
+.request-grid:hover .request-image .pic-2{
+    opacity: 1;
+    transform: scale(1.09);
+}
+.request-grid .request-discount-label{
+    content: "";
+    color: #fff;
+    background: #149EEB;
+    font-size: 14px;
+    font-weight:500;
+    line-height: 12px;
+    padding: 5px 30px;
+    display: block;
+    transform: rotate(-45deg);
+    position: absolute;
+    top: 8px;
+    left: -28px;
+}
+.request-grid .social{
+    text-align: center;
+    width: 100%;
+    padding:0;
+    margin: 0;
+    list-style: none;
+    transform: translateX(-50%) translateY(-50%);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+}
+.request-grid .social li{
+    margin: 0 2px;
+    display: inline-block;
+    opacity: 0;
+    transform: translateY(20px);
+    transition: all 0.3s;
+    transition-delay: .1s;
+}
+.request-grid:hover .social li{
+    opacity: 1;
+    transform: translateY(0);
+}
+.request-grid:hover .social li:nth-child(2){ transition-delay: .2s; }
+.request-grid:hover .social li:nth-child(3){ transition-delay: .3s; }
+.request-grid:hover .social li{ transform: translateX(0); }
+.request-grid .social li a{
+    color: #111111;
+    background: #fff;
+    font-size: 16px;
+    text-align: center;
+    line-height: 42px;
+    height: 42px;
+    width: 42px;
+    border-radius: 50px;
+    box-shadow: 0 0 10px #999;
+    display: block;
+    transition: all .3s;
+}
+.request-grid .social li a:hover {
+    color: #fff;
+    background-color: #149EEB;
+}
+.request-grid .social li a:before,
+.request-grid .social li a:after{
+    content: attr(data-tip);
+    color: #fff;
+    background-color: #149EEB;
+    font-size: 12px;
+    line-height: 22px;
+    padding: 2px 8px;
+    border-radius:3px;
+    white-space: nowrap;
+    display:none;
+    transform: translateX(-50%);
+    position: absolute;
+    left: 50%;
+    top: -35px;
+}
+.request-grid .social li a:after{
+    content: '';
+    height: 15px;
+    width: 15px;
+    border-radius: 0;
+    transform: translateX(-50%) rotate(45deg);
+    top: -22px;
+    z-index: -1;
+}
+.request-grid .social li a:hover:before,
+.request-grid .social li a:hover:after{
+    display: block;
+}
+.request-grid .request-content{
+    padding: 17px 0;
+    position: relative;
+}
+.request-grid .title{
+    font-size: 15px;
+    font-weight: 600;
+    text-transform: capitalize;
+    margin: 0 0 5px;
+    display: block;
+    height: 20px;
+    overflow: hidden;
+}
+.request-grid .title a{
+    color: #222;
+    transition: all 500ms;
+}
+.request-grid .title a:hover{ color: #149EEB; }
+.request-grid .request-category{
+    font-size: 13px;
+    font-weight: 600;
+    margin-bottom: 7px;
+    display: block;
+}
+.request-grid .request-category a{
+    color: #595959;
+    transition: all 0.3s ease;
+}
+.request-grid .request-category a:hover{ color: #149EEB; }
+.request-grid .price{
+    color: #149EEB;
+    font-size: 14px;
+    font-weight: 600;
+    line-height:20px;
+    transition: all .3s ease;
+}
+.request-grid .price span{
+    color: #000;
+    font-weight: 500;
+    text-decoration: line-through;
+    margin-right:4px;
+    display: inline-block;
+}
+.request-grid:hover .price{ opacity: 0; }
+.request-grid .add-to-cart{
+    color: #149EEB;
+    font-weight: 600;
+    font-size: 13px;
+    position: absolute;
+    opacity: 1;
+    bottom: 0;
+    left: 3px;
+    transition: all .3s ease-in-out 0s;
+}
+.request-grid .add-to-cart:hover{ 
+    /* text-shadow: 2px 2px 1px #999;  */
+}
+.request-grid:hover .add-to-cart{ opacity: 1; }
+.request-grid .rating{
+    color: #ffcd00;
+    font-size: 12px;
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+}
+.request-grid .rating i{
+    color: #ffcd00;
+}
+.request-grid .rating li{
+    padding: 0 1px;
+}
+.request-grid .rating i.disable{ color: #e8e8e8; }
+
