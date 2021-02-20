@@ -4813,7 +4813,7 @@ button.close:hover {
     background-color: #999;
     overflow: hidden;
     position: relative;
-    height: 280px;
+    height: 270px;
 }
 .product-grid .product-image a.image{ 
     display: block;
@@ -4968,3 +4968,15 @@ button.close:hover {
     color: #ffcd00;
 }
 /******************************************/
+.home-banner-ad{
+
+}
+.home-banner-ad .col-xs-12{
+    padding: 0 8px;
+}
+.h-banner-ad{
+    height: 250px;
+}
+.h-banner-ad img{
+    height: 100%;
+}
