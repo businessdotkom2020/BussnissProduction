@@ -207,14 +207,16 @@
                             <h4>@lang('general.mobile')</h4>
                             <h5>@lang('general.mobile')</h5>
                         </div>
-                        <div class="form-group col-md-6 col-xs-12">
-                            <h4>@lang('general.work_from')</h4>
-                            <h5>@lang('general.work_from')</h5>
-                        </div>
-                        <div class="form-group col-md-6 col-xs-12">
-                            <h4>@lang('general.work_from')</h4>
-                            <h5>@lang('general.work_from')</h5>
-                        </div>
+                        <iframe width="300" height="170" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"
+                            src="https://maps.google.com/maps?q='+YOUR_LAT+','+YOUR_LON+'&hl=es&z=14&amp;output=embed">
+                        </iframe>
+                        <br />
+                        <small>
+                            <a href="https://maps.google.com/maps?q='+data.lat+','+data.lon+'&hl=es;z=14&amp;output=embed"
+                                style="color:#0000FF;text-align:left" target="_blank">
+                                See map bigger
+                            </a>
+                        </small>
                         <br>
                         <div class="form-group col-md-6 col-xs-12">
                             <button type="submit" class="btn">@lang('general.update')</button>
