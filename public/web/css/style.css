@@ -4783,7 +4783,7 @@ button.close:hover {
 /**************************************** Mayada **********************************/
 /**************** index ***********************/
 .slider-inner{
-    padding: 0;
+    padding: 0 !important;
 }
 .slider-inner .slider-item{
     border-radius: 5px;

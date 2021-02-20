@@ -11,7 +11,7 @@ $menu = true ;
 </div>
 <main class="main-content col-xs-12">
 <div class="col-md-9 col-md-offset-3 col-xs-12">
-                    <div class="top-slider owl-carousel owl-theme">
+                    <div class="h-slider owl-carousel owl-theme">
                         <div class="item">
                             <div class="slider-inner">
                                 <div class="slider-item" style="background-image: url(https://i.imgur.com/wWctE6h.png)">
