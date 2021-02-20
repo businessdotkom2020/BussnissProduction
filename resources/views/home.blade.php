@@ -1044,8 +1044,9 @@ $menu = true ;
                             <div class="i-data">
                                 <a href="{{url('product/'.$product->id)}}"
                                     class="title">{{$product->getTranslatedAttribute('name',\App::getLocale())}}</a>
-                                <!-- <p>{{ Str::limit($product->getTranslatedAttribute('description',\App::getLocale()),50 )}}</p> -->
-    <div class="cardo" style="flex-grow: 1;padding:0px">
+                                <p>{{ Str::limit($product->getTranslatedAttribute('description',\App::getLocale()),50 )}}</p> 
+    <!-- 
+                                <div class="cardo" style="flex-grow: 1;padding:0px">
         <div class="c-inner" style="text-align: right;">
             <div class="c-data">
                 <p>
