@@ -5041,9 +5041,7 @@ button.close:hover {
 }
 
 /******************************************/
-.latest-requests {
-  
-}
+.latest-requests {}
 
 .btn.h-request-btn,
 .btn.h-pro-btn,
@@ -5068,41 +5066,57 @@ button.close:hover {
 .h-suppliers .col-md-2 {
     padding: 0 8px;
 }
+
 .s-block {
     padding: 0;
     overflow: hidden;
     margin-bottom: 25px;
 }
+
 .s-block .s-img img {
     object-fit: inherit;
 }
+
 /**************************************************/
-.h-supplier-box{
-  margin: 70px 0 15px 0;
-  padding: 35px 20px;
-  background-color: #fff;
-  -webkit-box-shadow: 0px 0 15px rgb(41 41 41 / 6%);
-  -moz-box-shadow: 0px 0 15px rgb(41 41 41 / 6%);
-  box-shadow: 0px 0 15px rgb(41 41 41 / 6%);
-  border-radius: 5px;
-  transition: all 0.3s ease-in;
-  cursor: pointer;
+.h-supplier-box {
+    margin: 70px 0 15px;
+    padding: 0px 15px 30px 15px;
+    background-color: #fff;
+    -webkit-box-shadow: 0 0 15px rgb(41 41 41 / 6%);
+    -moz-box-shadow: 0 0 15px rgb(41 41 41/6%);
+    box-shadow: 0 0 15px rgb(41 41 41 / 6%);
+    border-radius: 5px;
+    transition: all .3s ease-in;
+    cursor: pointer;
 }
-.h-supplier-box:hover{
-  -webkit-box-shadow: 0px 0 20px rgb(41 41 41 / 12%);
-  -moz-box-shadow: 0px 0 20px rgb(41 41 41 / 12%);
-  box-shadow: 0px 0 20px rgb(41 41 41 / 12%);
+
+.h-supplier-box:hover {
+    -webkit-box-shadow: 0px 0 20px rgb(41 41 41 / 12%);
+    -moz-box-shadow: 0px 0 20px rgb(41 41 41 / 12%);
+    box-shadow: 0px 0 20px rgb(41 41 41 / 12%);
 }
-.h-supplier-box span{
+
+.h-supplier-box span {
     margin-top: -50px;
     position: relative;
     display: inline-block;
-    top: -40px;
+    top: 0;
 }
-.h-supplier-box span img{
-  width: 120px;
-  height: 120px;
-  border: 2px solid #16BBD9;
-  border-radius: 100%;
-  display: inline-block;
+
+.h-supplier-box span img {
+    width: 120px;
+    height: 120px;
+    border: 2px solid #149EEB;
+    border-radius: 100%;
+    display: inline-block;
+}
+
+.h-supplier-box .c-data p {
+    padding: 0 0 10px 0;
+}
+.h-supplier-box .c-data .btn:focus, 
+.h-supplier-box .c-data .btn:hover {
+    color: #fff !important;
+    background-color: #149EEB!important;
+    transition: all .3s;
 }

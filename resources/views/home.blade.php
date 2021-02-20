@@ -1044,7 +1044,7 @@ $menu = true ;
                                 <a href="javascript:void(0)" id="followtoggle_{{$supplier->id}}"
                                     onclick="followtoggle({{$supplier->id }})" class="btn ">
                                     <i id="followicon_{{$supplier->id}}" class="fa fa-plus"></i>
-                                    <span style="color:white">
+                                    <span>
                                         Follow
                                     </span>
                                 </a>
@@ -1054,7 +1054,7 @@ $menu = true ;
                                 <a href="javascript:void(0)" id="followtoggle_{{$supplier->id}}"
                                     onclick="followtoggle({{$supplier->id }})" class="btn following">
                                     <i id="followicon_{{$supplier->id}}" class="fa fa-check"></i>
-                                    <span style="color:white">
+                                    <span>
                                         following
                                     </span>
                                 </a>
