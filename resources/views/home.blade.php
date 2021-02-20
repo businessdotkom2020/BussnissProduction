@@ -1343,7 +1343,7 @@ $menu = true ;
 
 
 
-    <div class="services col-xs-12">
+    <div class="services home-services col-xs-12">
         <div class="container-fluid">
             <div class="g-head col-xs-12">
                 <h3>@lang('general.services')</h3>

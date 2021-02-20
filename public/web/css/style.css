@@ -5055,6 +5055,15 @@ button.close:hover {
 
 .btn.h-request-btn:hover,
 .btn.h-pro-btn:hover,
-.btn.h-offers-btn:hover{
+.btn.h-offers-btn:hover {
     background-color: #149EEB !important;
+}
+
+/**************************************************/
+.home-services .col-md-2 {
+    padding: 0 8px;
+}
+.s-block {
+    padding: 0;
+    overflow: hidden;
 }
