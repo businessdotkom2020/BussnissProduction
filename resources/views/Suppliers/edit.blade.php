@@ -202,20 +202,12 @@
                         <div class="form-group col-md-9 col-xs-12">
                             <iframe width="300" height="570" frameborder="0" scrolling="no" marginheight="0"
                                 marginwidth="0"
+                                &zoom=18
+  &maptype=satellite
                                 src="https://maps.google.com/maps?q={{$branch->lat}},{{$branch->lang}}&hl=en&z=14&amp;output=embed">
                             </iframe>
                         </div>
-                        <div class="form-group col-md-9 col-xs-12">
-                            <iframe
-                                src="https://maps.google.com/maps?q={{$branch->lat}},{{$branch->lang}}&hl=es;z=14&amp;output=embed"></iframe>
 
-                        </div>
-                        <div class="form-group col-md-9 col-xs-12">
-                            <iframe
-                                src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d27258.06542951798!2d31.683394!3d31.351854!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMzHCsDIxJzA2LjciTiAzMcKwNDEnMDAuMiJF!5e0!3m2!1sen!2sus!4v1613826286569!5m2!1sen!2sus"
-                                width="800" height="600" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
-
-                        </div>
                         <div class="form-group col-md-3 col-xs-12">
                             <h4>@lang('general.email')</h4>
                             <h5>@lang('general.email')</h5>
