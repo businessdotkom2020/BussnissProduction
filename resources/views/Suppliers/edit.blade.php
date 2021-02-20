@@ -195,15 +195,13 @@
                     @foreach ($supplier->branchs as $branch)
 
                     <div class="ito-h col-xs-12 ubranch">
-                        <div class="form-group col-md-3 col-xs-12">
-                            <h4>@lang('general.name')</h4>
+                        <div class="pr-item form-group col-md-3 col-xs-12">
+                            <h3>@lang('general.name')</h3>
                             <h5>@lang('general.name')</h5>
                         </div>
                         <div class="form-group col-md-9 col-xs-12">
                             <iframe width="300" height="570" frameborder="0" scrolling="no" marginheight="0"
-                                marginwidth="0"
-                                &zoom=18
-  &maptype=satellite
+                                marginwidth="0" &zoom=18 &maptype=satellite
                                 src="https://maps.google.com/maps?q={{$branch->lat}},{{$branch->lang}}&hl=en&z=14&amp;output=embed">
                             </iframe>
                         </div>
