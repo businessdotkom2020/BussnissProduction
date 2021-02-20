@@ -29,7 +29,7 @@
 
             <div class="tab-content col-md-9 col-xs-12">
 
-                {{--************************************* update Profile  **********************************--}}
+            {{--************************************* update Profile  **********************************--}}
 
                 <div class="tab-pane fade active in " id="u_profile">
                     <form action="{{route('update_supplier')}}" method="post" enctype="multipart/form-data"> @csrf
@@ -88,7 +88,106 @@
 
                 {{--************************************* update location  **********************************--}}
 
-
+                <div class="tab-pane fade  in " id="u_location">
+                    <form action="{{route('update_supplier')}}" method="post" enctype="multipart/form-data">
+                        @csrf
+                        <div class="ito-h col-xs-12 ubranch">
+                            <h4>@lang('general.localization_info')</h4>
+                            <div class="form-group col-md-4 col-xs-12">
+                                <select style="width:100%" required id="country" name="country_id" class="form-control">
+                                    @foreach (\App\Models\Country::get() as $country)
+                                    <option {{ $supplier->country_id == $country->id ? 'selected' : ''}}
+                                        value="{{$country->id}}">{{$country->name}}</option> @endforeach </select>
+                            </div>
+                            <div class="form-group col-md-4 col-xs-12">
+                                <select style="width:100%" required name="state_id" id="state" class="form-control">
+                                    <option selected disabled>@lang('general.state')</option> @foreach
+                                    (\App\Models\State::get() as $state)
+                                    <option {{ $supplier->state_id == $state->id ? 'selected' : ''}}
+                                        value="{{$state->id}}">{{$state->name}}</option> @endforeach
+                                </select>
+                            </div>
+                            <div class="form-group col-md-4 col-xs-12">
+                                <select style="width:100%" required name="city_id" id="city" class="form-control">
+                                    <option selected disabled>@lang('general.city')</option> @foreach
+                                    (\App\Models\City::get() as $city)
+                                    <option {{ $supplier->city_id == $city->id ? 'selected' : ''}}
+                                        value="{{$city->id}}">{{$city->name}}</option> @endforeach
+                                </select>
+                            </div>
+                            <div class="form-group col-md-12 col-xs-12">
+                                <h4>@lang('general.street_num')</h4>
+                                <input required type="text" name="street_nom" placeholder="@lang('general.street_num')"
+                                    class="form-control">
+                            </div>
+                            <div class="form-group col-md-6 col-xs-12">
+                                <h4>@lang('general.zip_code')</h4>
+                                <input required type="text" name="zip_code" placeholder="@lang('general.zip_code')"
+                                    class="form-control">
+                            </div>
+                            <div class="form-group col-md-6 col-xs-12">
+                                <h4>@lang('general.address_spec')</h4>
+                                <input required type="text" name="address" placeholder="@lang('general.address_spec')"
+                                    class="form-control">
+                            </div>
+                            <div class="form-group col-md-6 col-xs-12">
+                                <h4>@lang('general.working_from')</h4>
+                                <input required type="text" name="working_from"
+                                    placeholder="@lang('general.working_from')" class="form-control">
+                            </div>
+                            <div class="form-group col-md-6 col-xs-12">
+                                <h4>@lang('general.working_to')</h4>
+                                <input required type="text" name="working_to" placeholder="@lang('general.working_to')"
+                                    class="form-control">
+                            </div>
+                            <div class="form-group col-md-6 col-xs-12">
+                                <h4>@lang('general.delivery_time')</h4>
+                                <input required type="text" name="delivery_time"
+                                    placeholder="@lang('general.delivery_time')" class="form-control">
+                            </div>
+                            <div class="form-group col-md-6 col-xs-12">
+                                <h4>@lang('general.delivery_fee')</h4>
+                                <input required type="text" name="delivery_fee"
+                                    placeholder="@lang('general.delivery_fee')" class="form-control">
+                            </div>
+                            <div class="form-group col-md-6 col-xs-12">
+                                <h4>@lang('general.year_founded')</h4>
+                                <input required type="text" name="year_founded"
+                                    placeholder="@lang('general.year_founded')" class="form-control">
+                            </div>
+                            <div class="form-group col-md-6 col-xs-12">
+                                <h4>@lang('general.instagram_url')</h4>
+                                <input required type="text" name="instagram_url"
+                                    placeholder="@lang('general.instagram_url')" class="form-control">
+                            </div>
+                            <div class="form-group col-md-6 col-xs-12">
+                                <h4>@lang('general.facebook_url')</h4>
+                                <input required type="text" name="facebook_url"
+                                    placeholder="@lang('general.facebook_url')" class="form-control">
+                            </div>
+                            <div class="form-group col-md-6 col-xs-12">
+                                <h4>@lang('general.linkedin_url')</h4>
+                                <input required type="text" name="linkedin_url"
+                                    placeholder="@lang('general.linkedin_url')" class="form-control">
+                            </div>
+                            <div class="form-group col-md-6 col-xs-12">
+                                <h4>@lang('general.youtube_url')</h4>
+                                <input required type="text" name="youtube_url"
+                                    placeholder="@lang('general.youtube_url')" class="form-control">
+                            </div>
+                            <div class="form-group col-md-6 col-xs-12"> </div>
+                            <div class="form-group col-md-6 col-xs-12">
+                                <!--<input type="text" placeholder="@lang('general.map_location')" class="form-control">--><a
+                                    href="#" class="btn btn-review" data-toggle="modal" onclick="initMap()"
+                                    data-target="#review-pop">@lang('general.map_location')</a> </div>
+                            <div class="form-group col-md-12 col-xs-12"> </div>
+                            <br>
+                            <div class="form-group col-md-6 col-xs-12">
+                                <button type="submit" class="btn">@lang('general.save')</button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
 
                 {{--************************************* update Branches  **********************************--}}
 
@@ -152,7 +251,7 @@
                     </form>
                 </div>
 
-                {{--************************************* End update Password   **********************************--}}
+                        {{--************************************* End update Password   **********************************--}}
 
             </div>
         </div>
