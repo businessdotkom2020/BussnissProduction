@@ -5043,7 +5043,9 @@ button.close:hover {
     padding: 60px 0;
 }
 
-.btn.h-request-btn {
+.btn.h-request-btn,
+.btn.h-pro-btn,
+.btn.h-offers-btn {
     padding: 7px 25px;
     font-size: 13px;
     line-height: inherit !important;
@@ -5051,7 +5053,8 @@ button.close:hover {
     height: unset !important;
 }
 
-.btn.h-request-btn:hover {
+.btn.h-request-btn:hover,
+.btn.h-pro-btn:hover,
+.btn.h-offers-btn:hover{
     background-color: #149EEB !important;
 }
-

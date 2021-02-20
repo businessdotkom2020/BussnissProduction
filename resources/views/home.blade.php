@@ -106,7 +106,97 @@ $menu = true ;
 
 -->
 
+    <!--
+    <div class="n-products col-xs-12 col-md-12 col-lg-8">
+        <div class="container">
+            <div class="g-head col-xs-12">
+                <h3>@lang('general.newly') <span class="f-r"> @lang('general.arrival')</span></h3>
+                <a href="{{url('products/latest')}}" class="more">@lang('general.view_all')</a>
+            </div>
+            <div class="g-body col-xs-12">
+                <div class="slick-wrapper">
+                    <div id="slick1">
+                    @foreach ($latest_products as $product)
+                        <div class="slide-item">
+                            <div class="flex-container-row">
+                                <div class="block b-product">
+                                    <div class="inner">
+                                        <div class="i-img">
+                                            @if($product->product_condition == 'new')
+                                            <div class="ribbon">
+                                                <span>@lang('general.new')</span>
+                                            </div>
+                                            @endif
 
+                                            <div class="prod-extra" style="position: inherit">
+
+                                                <a href="javascript:void(0)" id="fav-{{$product->id}}" title="add to favourite" data-placement="top" class="fav-{{$product->id}} {{$product->isFavorited() ? 'fav-active' : null  }} fav-pro " onclick="favtoggle({{$product->id }},{{Auth::user() ? Auth::user()->id : null}})">
+                                                    <i class="fa fa-heart"></i>
+                                                </a>
+                                            </div>
+
+
+
+                                            <a href="{{url('product/'.$product->id)}}" class="img-hold">
+                                                <img src="{{url('storage/'.$product->image)}}" alt="">
+                                                <img src="{{ json_decode($product->images ) ? url('storage/'.(json_decode($product->images))[0]) : "https://i.imgur.com/mFI2maG.jpg" }}" class="sec-img">
+
+                                            </a>
+                                        </div>
+                                        <div class="i-data">
+
+                                            <a href="{{url('product/'.$product->id)}}" class="title">{{$product->getTranslatedAttribute('name',\App::getLocale())}}</a>
+
+
+
+                                          <p>{{ Str::limit($product->getTranslatedAttribute('description',\App::getLocale()),50 )}}</p> 
+
+                                            <div class="cardo" style="flex-grow: 1;padding:0px">
+                                                <div class="c-inner" style="text-align: right;">
+                                                    <div class="c-data">
+                                                        <p>
+                                                            @php $rating = $product->average_rating ; @endphp
+                                                            @foreach(range(1,5) as $i)
+                                                            @if($rating >0)
+                                                            @if($rating > 0.5)
+                                                            <i class="fa fa-star active"></i>
+                                                            @elseif($rating < 0.5 && $rating> 0)
+                                                                <i class="fas fa-star-half"></i>
+                                                                @endif
+                                                                @else
+                                                                <i class="fa fa-star"></i>
+                                                                @endif
+                                                                @php $rating--; @endphp
+
+                                                                @endforeach
+
+                                                        </p>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <div class="block-price">
+                                            <span class="new-price">{{$product->sale_price ? $product->sale_price : $product->price}}$</span>  
+                                           
+                                            <span class="old-price">120$</span>
+                                            @if($product->sale_price)
+                                            <span class="offer-p">{{number_format( (($product->sale_price/$product->price) * 100) ,2 ) }} % تخفيض</span>
+                                            @endif
+                                            </div>
+                                            <a class="btn" href="#" data-toggle="modal" data-target="#contact_{{$product->user_id}}" target="_blank">@lang('general.contact_supplier')</a>
+                                        </div>
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    @endforeach
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+-->
 
 
     <div class="n-products new-product-blocks col-xs-12">
@@ -142,6 +232,9 @@ $menu = true ;
                                     <i class="fa fa-star"></i>
                                 </p>
                             </div>
+                            <a class="btn h-pro-btn" href="#" data-toggle="modal"
+                                data-target="#contact_{{$product->user_id}}"
+                                target="_blank">@lang('general.contact_supplier')</a>
                         </div>
                     </div>
                 </div>
@@ -172,6 +265,9 @@ $menu = true ;
                                     <i class="fa fa-star"></i>
                                 </p>
                             </div>
+                            <a class="btn h-pro-btn" href="#" data-toggle="modal"
+                                data-target="#contact_{{$product->user_id}}"
+                                target="_blank">@lang('general.contact_supplier')</a>
                         </div>
                     </div>
                 </div>
@@ -202,6 +298,9 @@ $menu = true ;
                                     <i class="fa fa-star"></i>
                                 </p>
                             </div>
+                            <a class="btn h-pro-btn" href="#" data-toggle="modal"
+                                data-target="#contact_{{$product->user_id}}"
+                                target="_blank">@lang('general.contact_supplier')</a>
                         </div>
                     </div>
                 </div>
@@ -232,6 +331,9 @@ $menu = true ;
                                     <i class="fa fa-star"></i>
                                 </p>
                             </div>
+                            <a class="btn h-pro-btn" href="#" data-toggle="modal"
+                                data-target="#contact_{{$product->user_id}}"
+                                target="_blank">@lang('general.contact_supplier')</a>
                         </div>
                     </div>
                 </div>
@@ -262,6 +364,9 @@ $menu = true ;
                                     <i class="fa fa-star"></i>
                                 </p>
                             </div>
+                            <a class="btn h-pro-btn" href="#" data-toggle="modal"
+                                data-target="#contact_{{$product->user_id}}"
+                                target="_blank">@lang('general.contact_supplier')</a>
                         </div>
                     </div>
                 </div>
@@ -292,6 +397,9 @@ $menu = true ;
                                     <i class="fa fa-star"></i>
                                 </p>
                             </div>
+                            <a class="btn h-pro-btn" href="#" data-toggle="modal"
+                                data-target="#contact_{{$product->user_id}}"
+                                target="_blank">@lang('general.contact_supplier')</a>
                         </div>
                     </div>
                 </div>
@@ -321,6 +429,9 @@ $menu = true ;
                                     <i class="fa fa-star"></i>
                                 </p>
                             </div>
+                            <a class="btn h-pro-btn" href="#" data-toggle="modal"
+                                data-target="#contact_{{$product->user_id}}"
+                                target="_blank">@lang('general.contact_supplier')</a>
                         </div>
                     </div>
                 </div>
@@ -350,6 +461,9 @@ $menu = true ;
                                     <i class="fa fa-star"></i>
                                 </p>
                             </div>
+                            <a class="btn h-pro-btn" href="#" data-toggle="modal"
+                                data-target="#contact_{{$product->user_id}}"
+                                target="_blank">@lang('general.contact_supplier')</a>
                         </div>
                     </div>
                 </div>
@@ -379,6 +493,9 @@ $menu = true ;
                                     <i class="fa fa-star"></i>
                                 </p>
                             </div>
+                            <a class="btn h-pro-btn" href="#" data-toggle="modal"
+                                data-target="#contact_{{$product->user_id}}"
+                                target="_blank">@lang('general.contact_supplier')</a>
                         </div>
                     </div>
                 </div>
@@ -408,6 +525,9 @@ $menu = true ;
                                     <i class="fa fa-star"></i>
                                 </p>
                             </div>
+                            <a class="btn h-pro-btn" href="#" data-toggle="modal"
+                                data-target="#contact_{{$product->user_id}}"
+                                target="_blank">@lang('general.contact_supplier')</a>
                         </div>
                     </div>
                 </div>
@@ -437,6 +557,9 @@ $menu = true ;
                                     <i class="fa fa-star"></i>
                                 </p>
                             </div>
+                            <a class="btn h-pro-btn" href="#" data-toggle="modal"
+                                data-target="#contact_{{$product->user_id}}"
+                                target="_blank">@lang('general.contact_supplier')</a>
                         </div>
                     </div>
                 </div>
@@ -466,6 +589,9 @@ $menu = true ;
                                     <i class="fa fa-star"></i>
                                 </p>
                             </div>
+                            <a class="btn h-pro-btn" href="#" data-toggle="modal"
+                                data-target="#contact_{{$product->user_id}}"
+                                target="_blank">@lang('general.contact_supplier')</a>
                         </div>
                     </div>
                 </div>
@@ -583,8 +709,6 @@ $menu = true ;
         </div>
     </div>
 -->
-
-
 
     <div class="latest-requests new-product-blocks col-xs-12">
         <div class="container-fluid">
@@ -806,97 +930,9 @@ $menu = true ;
 
 
 
-    <!--
-    <div class="n-products col-xs-12 col-md-12 col-lg-8">
-        <div class="container">
-            <div class="g-head col-xs-12">
-                <h3>@lang('general.newly') <span class="f-r"> @lang('general.arrival')</span></h3>
-                <a href="{{url('products/latest')}}" class="more">@lang('general.view_all')</a>
-            </div>
-            <div class="g-body col-xs-12">
-                <div class="slick-wrapper">
-                    <div id="slick1">
-                    @foreach ($latest_products as $product)
-                        <div class="slide-item">
-                            <div class="flex-container-row">
-                                <div class="block b-product">
-                                    <div class="inner">
-                                        <div class="i-img">
-                                            @if($product->product_condition == 'new')
-                                            <div class="ribbon">
-                                                <span>@lang('general.new')</span>
-                                            </div>
-                                            @endif
-
-                                            <div class="prod-extra" style="position: inherit">
-
-                                                <a href="javascript:void(0)" id="fav-{{$product->id}}" title="add to favourite" data-placement="top" class="fav-{{$product->id}} {{$product->isFavorited() ? 'fav-active' : null  }} fav-pro " onclick="favtoggle({{$product->id }},{{Auth::user() ? Auth::user()->id : null}})">
-                                                    <i class="fa fa-heart"></i>
-                                                </a>
-                                            </div>
 
 
 
-                                            <a href="{{url('product/'.$product->id)}}" class="img-hold">
-                                                <img src="{{url('storage/'.$product->image)}}" alt="">
-                                                <img src="{{ json_decode($product->images ) ? url('storage/'.(json_decode($product->images))[0]) : "https://i.imgur.com/mFI2maG.jpg" }}" class="sec-img">
-
-                                            </a>
-                                        </div>
-                                        <div class="i-data">
-
-                                            <a href="{{url('product/'.$product->id)}}" class="title">{{$product->getTranslatedAttribute('name',\App::getLocale())}}</a>
-
-
-
-                                          <p>{{ Str::limit($product->getTranslatedAttribute('description',\App::getLocale()),50 )}}</p> 
-
-                                            <div class="cardo" style="flex-grow: 1;padding:0px">
-                                                <div class="c-inner" style="text-align: right;">
-                                                    <div class="c-data">
-                                                        <p>
-                                                            @php $rating = $product->average_rating ; @endphp
-                                                            @foreach(range(1,5) as $i)
-                                                            @if($rating >0)
-                                                            @if($rating > 0.5)
-                                                            <i class="fa fa-star active"></i>
-                                                            @elseif($rating < 0.5 && $rating> 0)
-                                                                <i class="fas fa-star-half"></i>
-                                                                @endif
-                                                                @else
-                                                                <i class="fa fa-star"></i>
-                                                                @endif
-                                                                @php $rating--; @endphp
-
-                                                                @endforeach
-
-                                                        </p>
-                                                    </div>
-                                                </div>
-                                            </div>
-
-                                            <div class="block-price">
-                                            <span class="new-price">{{$product->sale_price ? $product->sale_price : $product->price}}$</span>  
-                                           
-                                            <span class="old-price">120$</span>
-                                            @if($product->sale_price)
-                                            <span class="offer-p">{{number_format( (($product->sale_price/$product->price) * 100) ,2 ) }} % تخفيض</span>
-                                            @endif
-                                            </div>
-                                            <a class="btn" href="#" data-toggle="modal" data-target="#contact_{{$product->user_id}}" target="_blank">@lang('general.contact_supplier')</a>
-                                        </div>
-
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    @endforeach
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
--->
 
     <div class="suppliers col-xs-12">
         <div class="container">
@@ -968,6 +1004,10 @@ $menu = true ;
     </div>
 
 
+
+
+
+    <!--
     <div class="h-offers col-xs-12">
         <div class="container">
             <div class="g-head col-xs-12">
@@ -1005,53 +1045,264 @@ $menu = true ;
                                 <a href="{{url('product/'.$product->id)}}"
                                     class="title">{{$product->getTranslatedAttribute('name',\App::getLocale())}}</a>
                                 <!-- <p>{{ Str::limit($product->getTranslatedAttribute('description',\App::getLocale()),50 )}}</p> -->
-                                <div class="cardo" style="flex-grow: 1;padding:0px">
-                                    <div class="c-inner" style="text-align: right;">
-                                        <div class="c-data">
-                                            <p>
-                                                @php $rating = $product->average_rating ; @endphp
-                                                @foreach(range(1,5) as $i)
-                                                @if($rating >0)
-                                                @if($rating > 0.5)
-                                                <i class="fa fa-star active"></i>
-                                                @elseif($rating < 0.5 && $rating> 0)
-                                                    <i class="fas fa-star-half"></i>
-                                                    @endif
-                                                    @else
-                                                    <i class="fa fa-star"></i>
-                                                    @endif
-                                                    @php $rating--; @endphp
+    <div class="cardo" style="flex-grow: 1;padding:0px">
+        <div class="c-inner" style="text-align: right;">
+            <div class="c-data">
+                <p>
+                    @php $rating = $product->average_rating ; @endphp
+                    @foreach(range(1,5) as $i)
+                    @if($rating >0)
+                    @if($rating > 0.5)
+                    <i class="fa fa-star active"></i>
+                    @elseif($rating < 0.5 && $rating> 0)
+                        <i class="fas fa-star-half"></i>
+                        @endif
+                        @else
+                        <i class="fa fa-star"></i>
+                        @endif
+                        @php $rating--; @endphp
 
-                                                    @endforeach
+                        @endforeach
 
-                                            </p>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="block-price">
-                                    <span
-                                        class="new-price">{{$product->sale_price ? $product->sale_price : $product->price}}$</span>
-                                    <!-- Price before offer -->
-                                    <span class="old-price">120$</span>
-                                    @if($product->sale_price)
-                                    <span
-                                        class="offer-p">{{number_format( (($product->sale_price/$product->price) * 100) ,2 ) }}
-                                        % تخفيض</span>
-                                    @endif
-                                </div>
-                                <a class="btn" href="#" data-toggle="modal" data-target="#contact_{{$product->user_id}}"
-                                    target="_blank">@lang('general.contact_supplier')</a>
-                            </div>
-
-                        </div>
-                    </div>
-                    @endforeach
-                </div>
-
+                </p>
             </div>
         </div>
     </div>
+    <div class="block-price">
+        <span class="new-price">{{$product->sale_price ? $product->sale_price : $product->price}}$</span>
+        <!-- Price before offer -->
+        <span class="old-price">120$</span>
+        @if($product->sale_price)
+        <span class="offer-p">{{number_format( (($product->sale_price/$product->price) * 100) ,2 ) }}
+            % تخفيض</span>
+        @endif
+    </div>
+    <a class="btn" href="#" data-toggle="modal" data-target="#contact_{{$product->user_id}}"
+        target="_blank">@lang('general.contact_supplier')</a>
+    </div>
 
+    </div>
+    </div>
+    @endforeach
+    </div>
+
+    </div>
+    </div>
+    </div>
+    -->
+
+    <div class="h-offers new-product-blocks col-xs-12">
+        <div class="container-fluid">
+            <div class="g-head col-xs-12">
+                <h3>hot <span>offers</span></h3>
+                <a href="#" class="more">view all</a>
+            </div>
+            <div class="g-body col-xs-12">
+                <div class="col-md-2 col-sm-3 col-xs-6">
+                    <div class="product-grid">
+                        <div class="product-image">
+                            <a href="#" class="image">
+                                <img class="pic-1" src="https://i.imgur.com/gY5s6z0.jpg">
+                                <img class="pic-2" src="https://i.imgur.com/CEQeTSE.jpg">
+                            </a>
+                            <ul class="product-links">
+                                <li><a href="#" data-tip="Compare"><i class="fa fa-random"></i></a></li>
+                                <li><a href="#" data-tip="Add to Wishlist"><i class="fa fa-heart"></i></a>
+                                </li>
+                                <li><a href="#" data-tip="Quick View"><i class="fa fa-search"></i></a></li>
+                                <li><a href="#" data-tip="Add to Cart"><i class="fa fa-shopping-cart"></i></a></li>
+                            </ul>
+                        </div>
+                        <div class="product-content">
+                            <h3 class="title"><a href="#">Women's T-Shirt</a></h3>
+                            <div class="price">$70.99</div>
+                            <div class="c-data">
+                                <p>
+                                    <i class="fa fa-star active"></i>
+                                    <i class="fa fa-star active"></i>
+                                    <i class="fa fa-star active"></i>
+                                    <i class="fa fa-star active"></i>
+                                    <i class="fa fa-star"></i>
+                                </p>
+                            </div>
+
+                            <a class="btn h-offers-btn" href="#" data-toggle="modal" data-target="#contact_pop">contact
+                                supplier</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-2 col-sm-3 col-xs-6">
+                    <div class="product-grid">
+                        <div class="product-image">
+                            <a href="#" class="image">
+                                <img class="pic-1" src="https://i.imgur.com/gY5s6z0.jpg">
+                                <img class="pic-2" src="https://i.imgur.com/CEQeTSE.jpg">
+                            </a>
+                            <span class="product-discount-label">-33%</span>
+                            <ul class="product-links">
+                                <li><a href="#" data-tip="Compare"><i class="fa fa-random"></i></a></li>
+                                <li><a href="#" data-tip="Add to Wishlist"><i class="fa fa-heart"></i></a>
+                                </li>
+                                <li><a href="#" data-tip="Quick View"><i class="fa fa-search"></i></a></li>
+                                <li><a href="#" data-tip="Add to Cart"><i class="fa fa-shopping-cart"></i></a></li>
+                            </ul>
+                        </div>
+                        <div class="product-content">
+                            <h3 class="title"><a href="#">Men's T-Shirt</a></h3>
+                            <div class="price"><span>$85.33</span> $57.22</div>
+                            <div class="c-data">
+                                <p>
+                                    <i class="fa fa-star active"></i>
+                                    <i class="fa fa-star active"></i>
+                                    <i class="fa fa-star active"></i>
+                                    <i class="fa fa-star active"></i>
+                                    <i class="fa fa-star"></i>
+                                </p>
+                            </div>
+                            <a class="btn h-offers-btn" href="#" data-toggle="modal" data-target="#contact_pop">contact
+                                supplier</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-2 col-sm-3 col-xs-6">
+                    <div class="product-grid">
+                        <div class="product-image">
+                            <a href="#" class="image">
+                                <img class="pic-1" src="https://i.imgur.com/gY5s6z0.jpg">
+                                <img class="pic-2" src="https://i.imgur.com/CEQeTSE.jpg">
+                            </a>
+                            <span class="product-new-label">New</span>
+                            <ul class="product-links">
+                                <li><a href="#" data-tip="Compare"><i class="fa fa-random"></i></a></li>
+                                <li><a href="#" data-tip="Add to Wishlist"><i class="fa fa-heart"></i></a>
+                                </li>
+                                <li><a href="#" data-tip="Quick View"><i class="fa fa-search"></i></a></li>
+                                <li><a href="#" data-tip="Add to Cart"><i class="fa fa-shopping-cart"></i></a></li>
+                            </ul>
+                        </div>
+                        <div class="product-content">
+                            <h3 class="title"><a href="#">Women's Top</a></h3>
+                            <div class="price">$60.99</div>
+                            <div class="c-data">
+                                <p>
+                                    <i class="fa fa-star active"></i>
+                                    <i class="fa fa-star active"></i>
+                                    <i class="fa fa-star active"></i>
+                                    <i class="fa fa-star active"></i>
+                                    <i class="fa fa-star"></i>
+                                </p>
+                            </div>
+                            <a class="btn h-offers-btn" href="#" data-toggle="modal" data-target="#contact_pop">contact
+                                supplier</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-2 col-sm-3 col-xs-6">
+                    <div class="product-grid">
+                        <div class="product-image">
+                            <a href="#" class="image">
+                                <img class="pic-1" src="https://i.imgur.com/gY5s6z0.jpg">
+                                <img class="pic-2" src="https://i.imgur.com/CEQeTSE.jpg">
+                            </a>
+                            <span class="product-new-label">New</span>
+                            <ul class="product-links">
+                                <li><a href="#" data-tip="Compare"><i class="fa fa-random"></i></a></li>
+                                <li><a href="#" data-tip="Add to Wishlist"><i class="fa fa-heart"></i></a>
+                                </li>
+                                <li><a href="#" data-tip="Quick View"><i class="fa fa-search"></i></a></li>
+                                <li><a href="#" data-tip="Add to Cart"><i class="fa fa-shopping-cart"></i></a></li>
+                            </ul>
+                        </div>
+                        <div class="product-content">
+                            <h3 class="title"><a href="#">Women's Top</a></h3>
+                            <div class="price">$60.99</div>
+                            <div class="c-data">
+                                <p>
+                                    <i class="fa fa-star active"></i>
+                                    <i class="fa fa-star active"></i>
+                                    <i class="fa fa-star active"></i>
+                                    <i class="fa fa-star active"></i>
+                                    <i class="fa fa-star"></i>
+                                </p>
+                            </div>
+                            <a class="btn  h-offers-btn" href="#" data-toggle="modal" data-target="#contact_pop">contact
+                                supplier</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-2 col-sm-3 col-xs-6">
+                    <div class="product-grid">
+                        <div class="product-image">
+                            <a href="#" class="image">
+                                <img class="pic-1" src="https://i.imgur.com/gY5s6z0.jpg">
+                                <img class="pic-2" src="https://i.imgur.com/CEQeTSE.jpg">
+                            </a>
+                            <span class="product-new-label">New</span>
+                            <ul class="product-links">
+                                <li><a href="#" data-tip="Compare"><i class="fa fa-random"></i></a></li>
+                                <li><a href="#" data-tip="Add to Wishlist"><i class="fa fa-heart"></i></a>
+                                </li>
+                                <li><a href="#" data-tip="Quick View"><i class="fa fa-search"></i></a></li>
+                                <li><a href="#" data-tip="Add to Cart"><i class="fa fa-shopping-cart"></i></a></li>
+                            </ul>
+                        </div>
+                        <div class="product-content">
+                            <h3 class="title"><a href="#">Women's Top</a></h3>
+                            <div class="price">$60.99</div>
+                            <div class="c-data">
+                                <p>
+                                    <i class="fa fa-star active"></i>
+                                    <i class="fa fa-star active"></i>
+                                    <i class="fa fa-star active"></i>
+                                    <i class="fa fa-star active"></i>
+                                    <i class="fa fa-star"></i>
+                                </p>
+                                <a class="btn h-offers-btn" href="#" data-toggle="modal"
+                                    data-target="#contact_pop">contact supplier</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-2 col-sm-3 col-xs-6">
+                    <div class="product-grid">
+                        <div class="product-image">
+                            <a href="#" class="image">
+                                <img class="pic-1" src="images/img-1.jpg">
+                                <img class="pic-2" src="images/img-2.jpg">
+                            </a>
+                            <span class="product-new-label">New</span>
+                            <ul class="product-links">
+                                <li><a href="#" data-tip="Compare"><i class="fa fa-random"></i></a></li>
+                                <li><a href="#" data-tip="Add to Wishlist"><i class="fa fa-heart"></i></a>
+                                </li>
+                                <li><a href="#" data-tip="Quick View"><i class="fa fa-search"></i></a></li>
+                                <li><a href="#" data-tip="Add to Cart"><i class="fa fa-shopping-cart"></i></a></li>
+                            </ul>
+                        </div>
+                        <div class="product-content">
+                            <h3 class="title"><a href="#">Women's Top</a></h3>
+                            <div class="price">$60.99</div>
+                            <div class="c-data">
+                                <p>
+                                    <i class="fa fa-star active"></i>
+                                    <i class="fa fa-star active"></i>
+                                    <i class="fa fa-star active"></i>
+                                    <i class="fa fa-star active"></i>
+                                    <i class="fa fa-star"></i>
+                                </p>
+                            </div>
+                            <a class="btn h-offers-btn" href="#" data-toggle="modal" data-target="#contact_pop">contact
+                                supplier</a>
+                        </div>
+                    </div>
+                </div>
+
+
+
+            </div>
+
+        </div>
+    </div>
 
 
     <div class="services col-xs-12">
