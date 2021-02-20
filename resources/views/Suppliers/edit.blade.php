@@ -40,39 +40,41 @@ $menu = false ;
 
             <div class="tab-content col-md-9 col-xs-12">
 
-                <div class="tab-pane fade active in ubranch" id="u_profile">
+                <div class="tab-pane fade active in " id="u_profile">
                     <form action="{{route('update_supplier')}}" method="post" enctype="multipart/form-data">
                         @csrf
-                        <div class="form-group col-md-12 col-xs-12">
-                            <div class="s-item col-md-6 col-sm-6 col-xs-12">
+                        <div class="ito-h col-xs-12 ubranch">
 
-                                <div class="prof-img">
-                                    <label>
-                                        <i class="fa fa-camera"></i>
-                                        <input name="image" type="file"
-                                            onchange="document.getElementById('blah').src = window.URL.createObjectURL(this.files[0])">
-                                        <img src="{{url('storage/'.$supplier->store_background)}}" id="blah"
-                                            alt="your image">
-                                    </label>
+                            <div class="form-group col-md-12 col-xs-12">
+                                <div class="s-item col-md-6 col-sm-6 col-xs-12">
+
+                                    <div class="prof-img">
+                                        <label>
+                                            <i class="fa fa-camera"></i>
+                                            <input name="image" type="file"
+                                                onchange="document.getElementById('blah').src = window.URL.createObjectURL(this.files[0])">
+                                            <img src="{{url('storage/'.$supplier->store_background)}}" id="blah"
+                                                alt="your image">
+                                        </label>
+                                    </div>
+
                                 </div>
+                                <div class="s-item col-md-6 col-sm-6 col-xs-12">
 
-                            </div>
-                            <div class="s-item col-md-6 col-sm-6 col-xs-12">
+                                    <div class="prof-img">
+                                        <label>
+                                            <i class="fa fa-camera"></i>
+                                            <input name="image" type="file"
+                                                onchange="document.getElementById('blah1').src = window.URL.createObjectURL(this.files[0])">
+                                            <img src="{{url('storage/'.$supplier->avatar)}}" id="blah1"
+                                                alt="your image">
+                                        </label>
+                                    </div>
 
-                                <div class="prof-img">
-                                    <label>
-                                        <i class="fa fa-camera"></i>
-                                        <input name="image" type="file"
-                                            onchange="document.getElementById('blah1').src = window.URL.createObjectURL(this.files[0])">
-                                        <img src="{{url('storage/'.$supplier->avatar)}}" id="blah1" alt="your image">
-                                    </label>
                                 </div>
-
                             </div>
-                        </div>
 
 
-                        <div class="ito-h col-xs-12">
                             {{-- <h4>@lang('general.main_information')</h4> --}}
                             <div class="form-group col-md-6 col-xs-12">
                                 <input type="text" required name="supplier_name" value="{{$supplier->name}}"
@@ -117,7 +119,7 @@ $menu = false ;
                     </form>
                 </div>
 
-                <div class="tab-pane fade  in ubranch" id="u_location">
+                <div class="tab-pane fade  in " id="u_location">
                     <form action="{{route('update_supplier')}}" method="post" enctype="multipart/form-data">
                         @csrf
 
@@ -296,10 +298,10 @@ $menu = false ;
                             <h5>@lang('general.work_from')</h5>
 
                         </div>
-                            <br>
-                            <div class="form-group col-md-6 col-xs-12">
-                                <button type="submit" class="btn">@lang('general.update')</button>
-                            </div>
+                        <br>
+                        <div class="form-group col-md-6 col-xs-12">
+                            <button type="submit" class="btn">@lang('general.update')</button>
+                        </div>
 
 
                     </div>
