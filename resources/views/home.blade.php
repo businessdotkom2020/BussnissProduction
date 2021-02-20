@@ -604,7 +604,7 @@ $menu = true ;
 
 
 
-    <div class="home-banner-ad col-xs-12">
+    <div class="home-banner-ad home-banner-ad1 col-xs-12">
         <div class="container-fluid">
             <div class="row">
                 <div class="col-md-4 col-sm-4 col-xs-12">
@@ -714,7 +714,7 @@ $menu = true ;
         <div class="container-fluid">
             <div class="g-head col-xs-12">
                 <h3>Latest <span>Requests</span></h3>
-                <a href="#" class="more">view all</a>
+                <a href="{{url('requests')}}" class="more">@lang('general.view_all')</a>
             </div>
             <div class="g-body col-xs-12">
                 <div class="col-md-2 col-sm-3 col-xs-6">
@@ -934,12 +934,15 @@ $menu = true ;
 
 
 
-    <div class="suppliers col-xs-12">
+    <div class="suppliers h-suppliers col-xs-12">
         <div class="container">
             <div class="g-head col-xs-12">
                 <h3>@lang('general.suppliers')</h3>
                 <a href="{{url('suppliers')}}" class="more">@lang('general.view_all')</a>
             </div>
+
+
+            <!--
             <div class="g-body col-xs-12">
                 <div id="supplier_slider">
                     @foreach($home_suppliers as $supplier)
@@ -1000,6 +1003,71 @@ $menu = true ;
                     @endforeach
                 </div>
             </div>
+-->
+
+
+
+            <div class="g-body col-xs-12">
+
+
+            @foreach($home_suppliers as $supplier)
+                <div class="col-md-2">
+                    <div class="h-supplier-box text-center">
+                        <span>
+                            <a href="{{url('supplier/'.$supplier->id)}}">
+                                <img src="{{ url('storage/'.$supplier->avatar)}}" alt="">
+                            </a>
+                        </span>
+                        <div class="c-data">
+
+                                    <h3>
+                                        <a href="{{url('supplier/'.$supplier->id)}}"
+                                            class="title">{{$supplier->name}}</a>
+                                    </h3>
+                                    <p>
+                                        @php $rating = $supplier->average_rating ; @endphp
+                                        @foreach(range(1,5) as $i)
+                                        @if($rating >0)
+                                        @if($rating > 0.5)
+                                        <i class="fa fa-star active"></i>
+                                        @elseif($rating < 0.5 && $rating> 0)
+                                            <i class="fas fa-star-half"></i>
+                                            @endif
+                                            @else
+                                            <i class="fa fa-star"></i>
+                                            @endif
+                                            @php $rating--; @endphp
+                                            @endforeach
+                                    </p>
+                                    @if(!Auth::check() || \Auth::user()->canFollow($supplier) &&
+                                    \Auth::user()->id !=
+                                    $supplier->id)
+                                    <a href="javascript:void(0)" id="followtoggle_{{$supplier->id}}"
+                                        onclick="followtoggle({{$supplier->id }})" class="btn ">
+                                        <i id="followicon_{{$supplier->id}}" class="fa fa-plus"></i>
+                                        <span style="color:white">
+                                            Follow
+                                        </span>
+                                    </a>
+                                    @elseif(Auth::check() && !\Auth::user()->canFollow($supplier) &&
+                                    \Auth::user()->id
+                                    != $supplier->id)
+                                    <a href="javascript:void(0)" id="followtoggle_{{$supplier->id}}"
+                                        onclick="followtoggle({{$supplier->id }})" class="btn following">
+                                        <i id="followicon_{{$supplier->id}}" class="fa fa-check"></i>
+                                        <span style="color:white">
+                                            following
+                                        </span>
+                                    </a>
+                                    @endif
+                                </div>
+                    </div>
+                </div>
+                @endforeach
+            </div>
+                
+
+
         </div>
     </div>
 
@@ -1343,7 +1411,7 @@ $menu = true ;
 
 
 
-    <div class="services col-xs-12">
+    <div class="services home-services col-xs-12">
         <div class="container-fluid">
             <div class="g-head col-xs-12">
                 <h3>@lang('general.services')</h3>
