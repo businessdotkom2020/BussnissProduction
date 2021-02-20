@@ -5045,7 +5045,8 @@ button.close:hover {
 
 .btn.h-request-btn,
 .btn.h-pro-btn,
-.btn.h-offers-btn {
+.btn.h-offers-btn,
+.home-services .btn {
     padding: 7px 25px;
     font-size: 13px;
     line-height: inherit !important;
@@ -5055,7 +5056,8 @@ button.close:hover {
 
 .btn.h-request-btn:hover,
 .btn.h-pro-btn:hover,
-.btn.h-offers-btn:hover {
+.btn.h-offers-btn:hover,
+.home-services .btn:hover {
     background-color: #149EEB !important;
 }
 
@@ -5063,7 +5065,9 @@ button.close:hover {
 .home-services .col-md-2 {
     padding: 0 8px;
 }
+
 .s-block {
     padding: 0;
     overflow: hidden;
+    margin-bottom: 25px;
 }
