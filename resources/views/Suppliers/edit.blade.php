@@ -193,12 +193,12 @@
 
                 <div class="tab-pane fade  in" id="u_branches">
                     @foreach ($supplier->branchs as $branch)
+                    <div class="pr-item form-group col-md-3 col-xs-12">
+                        <h3>{{$branch->name}}</h3>
+                    </div>
 
                     <div class="ito-h col-xs-12 ubranch">
-                        <div class="pr-item form-group col-md-3 col-xs-12">
-                            <h3>@lang('general.name')</h3>
-                            <h5>@lang('general.name')</h5>
-                        </div>
+
                         <div class="form-group col-md-9 col-xs-12">
                             <iframe width="300" height="570" frameborder="0" scrolling="no" marginheight="0"
                                 marginwidth="0" &zoom=18 &maptype=satellite
@@ -206,13 +206,13 @@
                             </iframe>
                         </div>
 
-                        <div class="form-group col-md-3 col-xs-12">
-                            <h4>@lang('general.email')</h4>
-                            <h5>@lang('general.email')</h5>
+                        <div class="pr-item form-group col-md-3 col-xs-12">
+                            <h3>@lang('general.email')</h3>
+                            <h5>{{$branch->email}}</h5>
                         </div>
-                        <div class="form-group col-md-3 col-xs-12">
-                            <h4>@lang('general.mobile')</h4>
-                            <h5>@lang('general.mobile')</h5>
+                        <div class="pr-item form-group col-md-3 col-xs-12">
+                            <h3>@lang('general.mobile')</h3>
+                            <h5>{{$branch->mobile}}</h5>
                         </div>
 
 
