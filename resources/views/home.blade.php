@@ -1318,18 +1318,41 @@ $menu = true ;
     </div>
 
 
+
+
+    <div class="home-banner-ad home-banner-ad2 col-xs-12">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-md-8 col-sm-8 col-xs-12">
+                    <div class="h-banner-ad">
+                        <a href="#">
+                            <img src="https://i.imgur.com/abwMo0G.jpg" alt="img" />
+                        </a>
+                    </div>
+                </div>
+                <div class="col-md-4 col-sm-4 col-xs-12">
+                    <div class="h-banner-ad">
+                        <a href="#">
+                            <img src="https://i.imgur.com/ikmVzdY.jpg" alt="img" />
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
     <div class="services col-xs-12">
-        <div class="container">
+        <div class="container-fluid">
             <div class="g-head col-xs-12">
                 <h3>@lang('general.services')</h3>
                 <a href="{{url('services')}}" class="more">@lang('general.view_all')</a>
             </div>
             <div class="g-body col-xs-12">
-
-
                 @foreach ($home_services as $service)
-
-                <div class="s-block col-md-2 col-sm-6 col-xs-12">
+                <div class="col-md-2 col-sm-3 col-xs-6">
+                <div class="s-block">
                     <div class="s-img">
                         <a href="{{url('service/'.$service->id)}}">
                             <img src="{{ url('storage/'.json_decode($product->images)[0])}}" alt="">
@@ -1357,7 +1380,7 @@ $menu = true ;
                             target="_blank">@lang('general.contact_supplier')</a>
                     </div>
                 </div>
-
+                </div>
                 @endforeach
 
 
