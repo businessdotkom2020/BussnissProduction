@@ -89,6 +89,9 @@ $menu = true ;
 
         </div> 
     </div>
+    -->
+
+    
     <div class="cats col-xs-12">
         <div class="container">
             <ul>
@@ -104,7 +107,7 @@ $menu = true ;
         </div>
     </div>
 
--->
+
 
     <!--
     <div class="n-products col-xs-12 col-md-12 col-lg-8">
