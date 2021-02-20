@@ -1007,7 +1007,7 @@ $menu = true ;
 
 
 
-    <!--
+
     <div class="h-offers col-xs-12">
         <div class="container">
             <div class="g-head col-xs-12">
@@ -1090,7 +1090,7 @@ $menu = true ;
     </div>
     </div>
     </div>
-    -->
+ 
 
     <div class="h-offers new-product-blocks col-xs-12">
         <div class="container-fluid">
