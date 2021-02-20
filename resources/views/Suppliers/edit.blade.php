@@ -199,6 +199,12 @@
                             <h4>@lang('general.name')</h4>
                             <h5>@lang('general.name')</h5>
                         </div>
+                        <div class="form-group col-md-9 col-xs-12">
+                            <iframe width="300" height="170" frameborder="0" scrolling="no" marginheight="0"
+                                marginwidth="0"
+                                src="https://maps.google.com/maps?q={{$branch->lat}},{{$branch->lang}}&hl=en&z=14&amp;output=embed">
+                            </iframe>
+                        </div>
                         <div class="form-group col-md-3 col-xs-12">
                             <h4>@lang('general.email')</h4>
                             <h5>@lang('general.email')</h5>
@@ -207,12 +213,7 @@
                             <h4>@lang('general.mobile')</h4>
                             <h5>@lang('general.mobile')</h5>
                         </div>
-                        <div class="form-group col-md-9 col-xs-12">
-                            <iframe width="300" height="170" frameborder="0" scrolling="no" marginheight="0"
-                                marginwidth="0"
-                                src="https://maps.google.com/maps?q={{$branch->lat}},{{$branch->lang}}&hl=en&z=14&amp;output=embed">
-                            </iframe>
-                        </div>
+
 
 
                         <br>
