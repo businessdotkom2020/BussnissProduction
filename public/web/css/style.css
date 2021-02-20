@@ -1546,8 +1546,8 @@ footer.main-footer.col-xs-12 {
 }
 
 .s-block .s-data .btn {
-    padding: 0 20px;
-    font-size: 12px
+    /*padding: 0 20px;
+    font-size: 12px*/
 }
 
 .s-block .s-data p i {
@@ -5022,7 +5022,9 @@ button.close:hover {
 }
 
 /******************************************/
-.home-banner-ad {}
+.home-banner-ad1 {
+    padding: 60px 0;
+}
 
 .home-banner-ad .col-xs-12 {
     padding: 0 8px;
@@ -5040,7 +5042,7 @@ button.close:hover {
 
 /******************************************/
 .latest-requests {
-    padding: 60px 0;
+  
 }
 
 .btn.h-request-btn,
@@ -5065,9 +5067,40 @@ button.close:hover {
 .home-services .col-md-2 {
     padding: 0 8px;
 }
-
 .s-block {
     padding: 0;
     overflow: hidden;
     margin-bottom: 25px;
+}
+.s-block .s-img img {
+    object-fit: inherit;
+}
+/**************************************************/
+.h-supplier-box{
+  margin: 66px 0 30px 0;
+  padding: 35px 20px;
+  background-color: #fff;
+  -webkit-box-shadow: 0px 0 15px rgb(41 41 41 / 6%);
+  -moz-box-shadow: 0px 0 15px rgb(41 41 41 / 6%);
+  box-shadow: 0px 0 15px rgb(41 41 41 / 6%);
+  border-radius: 5px;
+  transition: all 0.3s ease-in;
+  cursor: pointer;
+}
+.h-supplier-box:hover{
+  -webkit-box-shadow: 0px 0 20px rgb(41 41 41 / 12%);
+  -moz-box-shadow: 0px 0 20px rgb(41 41 41 / 12%);
+  box-shadow: 0px 0 20px rgb(41 41 41 / 12%);
+}
+.h-supplier-box span{
+  margin-top: -95px;
+  position: relative;
+  display: inline-block;
+}
+.h-supplier-box span img{
+  width: 120px;
+  height: 120px;
+  border: 2px solid #16BBD9;
+  border-radius: 100%;
+  display: inline-block;
 }
