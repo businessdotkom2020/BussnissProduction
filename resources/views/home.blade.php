@@ -935,7 +935,7 @@ $menu = true ;
 
 
     <div class="suppliers h-suppliers col-xs-12">
-        <div class="container">
+        <div class="container-fluid">
             <div class="g-head col-xs-12">
                 <h3>@lang('general.suppliers')</h3>
                 <a href="{{url('suppliers')}}" class="more">@lang('general.view_all')</a>
@@ -1011,7 +1011,7 @@ $menu = true ;
 
 
             @foreach($home_suppliers as $supplier)
-                <div class="col-md-2">
+                <div class="col-md-2 col-sm-2 col-xs-6">
                     <div class="h-supplier-box text-center">
                         <span>
                             <a href="{{url('supplier/'.$supplier->id)}}">

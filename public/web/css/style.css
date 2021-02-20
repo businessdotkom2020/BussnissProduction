@@ -5064,7 +5064,8 @@ button.close:hover {
 }
 
 /**************************************************/
-.home-services .col-md-2 {
+.home-services .col-md-2,
+.h-suppliers .col-md-2 {
     padding: 0 8px;
 }
 .s-block {
