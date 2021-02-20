@@ -5078,7 +5078,7 @@ button.close:hover {
 }
 /**************************************************/
 .h-supplier-box{
-  margin: 66px 0 30px 0;
+  margin: 70px 0 15px 0;
   padding: 35px 20px;
   background-color: #fff;
   -webkit-box-shadow: 0px 0 15px rgb(41 41 41 / 6%);
@@ -5094,9 +5094,10 @@ button.close:hover {
   box-shadow: 0px 0 20px rgb(41 41 41 / 12%);
 }
 .h-supplier-box span{
-  margin-top: -95px;
-  position: relative;
-  display: inline-block;
+    margin-top: -50px;
+    position: relative;
+    display: inline-block;
+    top: -40px;
 }
 .h-supplier-box span img{
   width: 120px;

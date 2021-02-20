@@ -1012,7 +1012,7 @@ $menu = true ;
 
             @foreach($home_suppliers as $supplier)
                 <div class="col-md-2 col-sm-2 col-xs-6">
-                    <div class="h-supplier-box text-center">
+                    <div class="h-supplier-box cardo text-center">
                         <span>
                             <a href="{{url('supplier/'.$supplier->id)}}">
                                 <img src="{{ url('storage/'.$supplier->avatar)}}" alt="">
