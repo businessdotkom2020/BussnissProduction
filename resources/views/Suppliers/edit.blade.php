@@ -40,7 +40,7 @@ $menu = false ;
 
             <div class="tab-content col-md-9 col-xs-12">
 
-                <div class="tab-pane fade active in" id="u_profile">
+                <div class="tab-pane fade active in ubranch" id="u_profile">
                     <form action="{{route('update_supplier')}}" method="post" enctype="multipart/form-data">
                         @csrf
                         <div class="form-group col-md-12 col-xs-12">
@@ -117,7 +117,7 @@ $menu = false ;
                     </form>
                 </div>
 
-                <div class="tab-pane fade  in" id="u_location">
+                <div class="tab-pane fade  in ubranch" id="u_location">
                     <form action="{{route('update_supplier')}}" method="post" enctype="multipart/form-data">
                         @csrf
 
