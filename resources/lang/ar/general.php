@@ -2,6 +2,7 @@
 
 return [
     'language' => 'اللغة',
+    'name' => 'الإسم',
     'select_category' => 'إختر القسم',
     'search_products' => 'إبحث عن المنتجات',
     'search' => 'البحث',
