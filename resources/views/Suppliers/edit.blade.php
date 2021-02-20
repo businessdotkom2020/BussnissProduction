@@ -31,6 +31,60 @@
 
                 {{--************************************* update Profile  **********************************--}}
 
+                <div class="tab-pane fade active in " id="u_profile">
+                    <form action="{{route('update_supplier')}}" method="post" enctype="multipart/form-data"> @csrf
+                        <div class="ito-h col-xs-12 ubranch">
+                            <div class="form-group col-md-12 col-xs-12">
+                                <div class="s-item col-md-6 col-sm-6 col-xs-12">
+                                    <div class="prof-img">
+                                        <label> <i class="fa fa-camera"></i>
+                                            <input name="image" type="file"
+                                                onchange="document.getElementById('blah').src = window.URL.createObjectURL(this.files[0])">
+                                            <img src="{{url('storage/'.$supplier->store_background)}}" id="blah"
+                                                alt="your image"> </label>
+                                    </div>
+                                </div>
+                                <div class="s-item col-md-6 col-sm-6 col-xs-12">
+                                    <div class="prof-img">
+                                        <label> <i class="fa fa-camera"></i>
+                                            <input name="image" type="file"
+                                                onchange="document.getElementById('blah1').src = window.URL.createObjectURL(this.files[0])">
+                                            <img src="{{url('storage/'.$supplier->avatar)}}" id="blah1"
+                                                alt="your image"> </label>
+                                    </div>
+                                </div>
+                            </div> {{--
+							<h4>@lang('general.main_information')</h4> --}}
+                            <div class="form-group col-md-6 col-xs-12">
+                                <input type="text" required name="supplier_name" value="{{$supplier->name}}"
+                                    placeholder="@lang('general.supplier_name')" class="form-control"> </div>
+                            <div class="form-group col-md-6 col-xs-12">
+                                <select style="width:100%" required name="category_ids[]"
+                                    class="form-control select-nosearch" multiple>
+                                    <!--<option selected disabled>@lang('general.categories')</option>-->@foreach(\App\Models\Category::whereNull('parent_id')->get()
+                                    as $category)
+                                    <option
+                                        {{in_array($category->id,$supplier->categories->pluck('id')->toArray()) ? 'selected' : '' }}
+                                        value="{{$category->id}}">
+                                        {{$category->getTranslatedAttribute('name',\App::getLocale())}}</option>
+                                    @endforeach </select>
+                            </div>
+                            <div class="form-group col-md-6 col-xs-12">
+                                <input type="email" required name="email" value="{{$supplier->email}}"
+                                    placeholder="@lang('general.email')" class="form-control"> </div>
+                            <div class="form-group col-md-6 col-xs-12">
+                                <input type="text" required name="mobile" value="{{$supplier->mobile}}"
+                                    placeholder="@lang('general.mobile')" class="form-control"> </div>
+                            <div class="form-group col-md-12 col-xs-12">
+                                <input type="text" required name="hot_number" value="{{$supplier->hot_number}}"
+                                    placeholder="@lang('general.hot_line')" class="form-control"> </div>
+                            <br>
+                            <div class="form-group col-md-6 col-xs-12">
+                                <button type="submit" class="btn">@lang('general.save')</button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
 
                 {{--************************************* update location  **********************************--}}
 
