@@ -597,8 +597,8 @@ $menu = true ;
                     <div class="product-grid">
                         <div class="product-image">
                             <a href="#" class="image">
-                                <img class="pic-1" src="images/img-1.jpg">
-                                <img class="pic-2" src="images/img-2.jpg">
+                                <img class="pic-1" src="https://i.imgur.com/gY5s6z0.jpg">
+                                <img class="pic-2" src="https://i.imgur.com/CEQeTSE.jpg">
                             </a>
                             <ul class="product-links">
                                 <li><a href="#" data-tip="Compare"><i class="fa fa-random"></i></a></li>
@@ -620,6 +620,9 @@ $menu = true ;
                                     <i class="fa fa-star"></i>
                                 </p>
                             </div>
+                            <a class="btn h-request-btn" href="#" data-toggle="modal"
+                                data-target="#contact_{{$product->user_id}}"
+                                target="_blank">@lang('general.contact_supplier')</a>
                         </div>
                     </div>
                 </div>
@@ -627,8 +630,8 @@ $menu = true ;
                     <div class="product-grid">
                         <div class="product-image">
                             <a href="#" class="image">
-                                <img class="pic-1" src="images/img-1.jpg">
-                                <img class="pic-2" src="images/img-2.jpg">
+                                <img class="pic-1" src="https://i.imgur.com/gY5s6z0.jpg">
+                                <img class="pic-2" src="https://i.imgur.com/CEQeTSE.jpg">
                             </a>
                             <span class="product-discount-label">-33%</span>
                             <ul class="product-links">
@@ -651,6 +654,9 @@ $menu = true ;
                                     <i class="fa fa-star"></i>
                                 </p>
                             </div>
+                            <a class="btn h-request-btn" href="#" data-toggle="modal"
+                                data-target="#contact_{{$product->user_id}}"
+                                target="_blank">@lang('general.contact_supplier')</a>
                         </div>
                     </div>
                 </div>
@@ -658,8 +664,8 @@ $menu = true ;
                     <div class="product-grid">
                         <div class="product-image">
                             <a href="#" class="image">
-                                <img class="pic-1" src="images/img-1.jpg">
-                                <img class="pic-2" src="images/img-2.jpg">
+                                <img class="pic-1" src="https://i.imgur.com/gY5s6z0.jpg">
+                                <img class="pic-2" src="https://i.imgur.com/CEQeTSE.jpg">
                             </a>
                             <span class="product-new-label">New</span>
                             <ul class="product-links">
@@ -682,6 +688,9 @@ $menu = true ;
                                     <i class="fa fa-star"></i>
                                 </p>
                             </div>
+                            <a class="btn h-request-btn" href="#" data-toggle="modal"
+                                data-target="#contact_{{$product->user_id}}"
+                                target="_blank">@lang('general.contact_supplier')</a>
                         </div>
                     </div>
                 </div>
@@ -689,8 +698,8 @@ $menu = true ;
                     <div class="product-grid">
                         <div class="product-image">
                             <a href="#" class="image">
-                                <img class="pic-1" src="images/img-1.jpg">
-                                <img class="pic-2" src="images/img-2.jpg">
+                                <img class="pic-1" src="https://i.imgur.com/gY5s6z0.jpg">
+                                <img class="pic-2" src="https://i.imgur.com/CEQeTSE.jpg">
                             </a>
                             <span class="product-new-label">New</span>
                             <ul class="product-links">
@@ -713,6 +722,9 @@ $menu = true ;
                                     <i class="fa fa-star"></i>
                                 </p>
                             </div>
+                            <a class="btn h-request-btn" href="#" data-toggle="modal"
+                                data-target="#contact_{{$product->user_id}}"
+                                target="_blank">@lang('general.contact_supplier')</a>
                         </div>
                     </div>
                 </div>
@@ -720,8 +732,8 @@ $menu = true ;
                     <div class="product-grid">
                         <div class="product-image">
                             <a href="#" class="image">
-                                <img class="pic-1" src="images/img-1.jpg">
-                                <img class="pic-2" src="images/img-2.jpg">
+                                <img class="pic-1" src="https://i.imgur.com/gY5s6z0.jpg">
+                                <img class="pic-2" src="https://i.imgur.com/CEQeTSE.jpg">
                             </a>
                             <span class="product-new-label">New</span>
                             <ul class="product-links">
@@ -743,7 +755,8 @@ $menu = true ;
                                     <i class="fa fa-star active"></i>
                                     <i class="fa fa-star"></i>
                                 </p>
-                                <a class="btn" href="#" data-toggle="modal" data-target="#contact_{{$product->user_id}}"
+                                <a class="btn h-request-btn" href="#" data-toggle="modal"
+                                    data-target="#contact_{{$product->user_id}}"
                                     target="_blank">@lang('general.contact_supplier')</a>
                             </div>
                         </div>
@@ -777,7 +790,8 @@ $menu = true ;
                                     <i class="fa fa-star"></i>
                                 </p>
                             </div>
-                            <a class="btn" href="#" data-toggle="modal" data-target="#contact_{{$product->user_id}}"
+                            <a class="btn h-request-btn" href="#" data-toggle="modal"
+                                data-target="#contact_{{$product->user_id}}"
                                 target="_blank">@lang('general.contact_supplier')</a>
                         </div>
                     </div>
