@@ -99,12 +99,14 @@
                                     <option {{ $supplier->country_id == $country->id ? 'selected' : ''}}
                                         value="{{$country->id}}">{{$country->name}}</option> @endforeach </select>
                             </div>
+
                             <div class="form-group col-md-4 col-xs-12">
                                 <select style="width:100%" required name="state_id" id="state" class="form-control">
-                                    <option selected disabled>@lang('general.state')</option> @foreach
-                                    (\App\Models\State::get() as $state)
+                                    <option selected disabled>@lang('general.state')</option>
+                                    @foreach(\App\Models\State::get() as $state)
                                     <option {{ $supplier->state_id == $state->id ? 'selected' : ''}}
-                                        value="{{$state->id}}">{{$state->name}}</option> @endforeach
+                                        value="{{$state->id}}">{{$state->name}}</option>
+                                    @endforeach
                                 </select>
                             </div>
 
