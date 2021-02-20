@@ -5045,9 +5045,13 @@ button.close:hover {
 
 .btn.h-request-btn {
     padding: 7px 25px;
-    font-size: 14px;
+    font-size: 13px;
     line-height: inherit !important;
     margin-top: 8px;
     height: unset !important;
 }
-.btn.h-request-btn
+
+.btn.h-request-btn:hover {
+    background-color: #149EEB !important;
+}
+
