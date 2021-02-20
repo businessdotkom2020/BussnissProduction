@@ -93,7 +93,21 @@
                         @csrf
 
 
-
+                            <div class="form-group col-md-12 col-xs-12">
+                                <h4>@lang('general.street_num')</h4>
+                                <input required type="text" name="street_nom" placeholder="@lang('general.street_num')"
+                                    class="form-control">
+                            </div>
+                            <div class="form-group col-md-6 col-xs-12">
+                                <h4>@lang('general.zip_code')</h4>
+                                <input required type="text" name="zip_code" placeholder="@lang('general.zip_code')"
+                                    class="form-control">
+                            </div>
+                            <div class="form-group col-md-6 col-xs-12">
+                                <h4>@lang('general.address_spec')</h4>
+                                <input required type="text" name="address" placeholder="@lang('general.address_spec')"
+                                    class="form-control">
+                            </div>
                             <div class="form-group col-md-6 col-xs-12">
                                 <h4>@lang('general.working_from')</h4>
                                 <input required type="text" name="working_from"
