@@ -192,6 +192,13 @@
                 {{--************************************* update Branches  **********************************--}}
 
                 <div class="tab-pane fade  in" id="u_branches">
+                    <div class="reqs">
+                        <a href="https://businessdotcom.net/request/new">
+                            <i class="fa fa-plus"></i>
+                            أضف طلب
+                        </a>
+                    </div>
+
                     @foreach ($supplier->branchs as $branch)
 
 
