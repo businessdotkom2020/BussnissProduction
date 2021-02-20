@@ -124,7 +124,7 @@ $menu = false ;
                         @csrf
 
 
-                        <div class="ito-h col-xs-12">
+                        <div class="ito-h col-xs-12 ubranch">
                             <h4>@lang('general.localization_info')</h4>
                             </h4>
                             <div class="form-group col-md-4 col-xs-12">
