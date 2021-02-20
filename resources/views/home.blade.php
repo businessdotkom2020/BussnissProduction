@@ -941,7 +941,6 @@ $menu = true ;
                 <a href="{{url('suppliers')}}" class="more">@lang('general.view_all')</a>
             </div>
 
-
             <!--
             <div class="g-body col-xs-12">
                 <div id="supplier_slider">
@@ -1010,7 +1009,7 @@ $menu = true ;
             <div class="g-body col-xs-12">
 
 
-            @foreach($home_suppliers as $supplier)
+                @foreach($home_suppliers as $supplier)
                 <div class="col-md-2 col-sm-2 col-xs-6">
                     <div class="h-supplier-box cardo text-center">
                         <span>
@@ -1018,54 +1017,55 @@ $menu = true ;
                                 <img src="{{ url('storage/'.$supplier->avatar)}}" alt="">
                             </a>
                         </span>
-                        <div class="c-data">
 
-                                    <h3>
-                                        <a href="{{url('supplier/'.$supplier->id)}}"
-                                            class="title">{{$supplier->name}}</a>
-                                    </h3>
-                                    <p>
-                                        @php $rating = $supplier->average_rating ; @endphp
-                                        @foreach(range(1,5) as $i)
-                                        @if($rating >0)
-                                        @if($rating > 0.5)
-                                        <i class="fa fa-star active"></i>
-                                        @elseif($rating < 0.5 && $rating> 0)
-                                            <i class="fas fa-star-half"></i>
-                                            @endif
-                                            @else
-                                            <i class="fa fa-star"></i>
-                                            @endif
-                                            @php $rating--; @endphp
-                                            @endforeach
-                                    </p>
-                                    @if(!Auth::check() || \Auth::user()->canFollow($supplier) &&
-                                    \Auth::user()->id !=
-                                    $supplier->id)
-                                    <a href="javascript:void(0)" id="followtoggle_{{$supplier->id}}"
-                                        onclick="followtoggle({{$supplier->id }})" class="btn ">
-                                        <i id="followicon_{{$supplier->id}}" class="fa fa-plus"></i>
-                                        <span style="color:white">
-                                            Follow
-                                        </span>
-                                    </a>
-                                    @elseif(Auth::check() && !\Auth::user()->canFollow($supplier) &&
-                                    \Auth::user()->id
-                                    != $supplier->id)
-                                    <a href="javascript:void(0)" id="followtoggle_{{$supplier->id}}"
-                                        onclick="followtoggle({{$supplier->id }})" class="btn following">
-                                        <i id="followicon_{{$supplier->id}}" class="fa fa-check"></i>
-                                        <span style="color:white">
-                                            following
-                                        </span>
-                                    </a>
-                                    @endif
-                                </div>
+                        <div class="c-inner">
+                            <div class="c-data">
+                                <h3>
+                                    <a href="{{url('supplier/'.$supplier->id)}}" class="title">{{$supplier->name}}</a>
+                                </h3>
+                                <p>
+                                    @php $rating = $supplier->average_rating ; @endphp
+                                    @foreach(range(1,5) as $i)
+                                    @if($rating >0)
+                                    @if($rating > 0.5)
+                                    <i class="fa fa-star active"></i>
+                                    @elseif($rating < 0.5 && $rating> 0)
+                                        <i class="fas fa-star-half"></i>
+                                        @endif
+                                        @else
+                                        <i class="fa fa-star"></i>
+                                        @endif
+                                        @php $rating--; @endphp
+                                        @endforeach
+                                </p>
+                                @if(!Auth::check() || \Auth::user()->canFollow($supplier) &&
+                                \Auth::user()->id !=
+                                $supplier->id)
+                                <a href="javascript:void(0)" id="followtoggle_{{$supplier->id}}"
+                                    onclick="followtoggle({{$supplier->id }})" class="btn ">
+                                    <i id="followicon_{{$supplier->id}}" class="fa fa-plus"></i>
+                                    <span style="color:white">
+                                        Follow
+                                    </span>
+                                </a>
+                                @elseif(Auth::check() && !\Auth::user()->canFollow($supplier) &&
+                                \Auth::user()->id
+                                != $supplier->id)
+                                <a href="javascript:void(0)" id="followtoggle_{{$supplier->id}}"
+                                    onclick="followtoggle({{$supplier->id }})" class="btn following">
+                                    <i id="followicon_{{$supplier->id}}" class="fa fa-check"></i>
+                                    <span style="color:white">
+                                        following
+                                    </span>
+                                </a>
+                                @endif
+                            </div>
+                        </div>
                     </div>
                 </div>
                 @endforeach
             </div>
-                
+
 
 
         </div>
@@ -1074,7 +1074,7 @@ $menu = true ;
 
 
 
-<!--
+    <!--
 
     <div class="h-offers col-xs-12">
         <div class="container">
@@ -1420,34 +1420,34 @@ $menu = true ;
             <div class="g-body col-xs-12">
                 @foreach ($home_services as $service)
                 <div class="col-md-2 col-sm-3 col-xs-6">
-                <div class="s-block">
-                    <div class="s-img">
-                        <a href="{{url('service/'.$service->id)}}">
-                            <img src="{{ url('storage/'.json_decode($product->images)[0])}}" alt="">
-                        </a>
-                    </div>
-                    <div class="s-data">
-                        <a href="#" class="title">{{$service->name}}</a>
-                        <p>
-                            @php $rating = $service->average_rating ; @endphp
-                            @foreach(range(1,5) as $i)
-                            @if($rating >0)
-                            @if($rating > 0.5)
-                            <i class="fa fa-star active"></i>
-                            @elseif($rating < 0.5 && $rating> 0)
-                                <i class="fas fa-star-half"></i>
-                                @endif
-                                @else
-                                <i class="fa fa-star"></i>
-                                @endif
-                                @php $rating--; @endphp
+                    <div class="s-block">
+                        <div class="s-img">
+                            <a href="{{url('service/'.$service->id)}}">
+                                <img src="{{ url('storage/'.json_decode($product->images)[0])}}" alt="">
+                            </a>
+                        </div>
+                        <div class="s-data">
+                            <a href="#" class="title">{{$service->name}}</a>
+                            <p>
+                                @php $rating = $service->average_rating ; @endphp
+                                @foreach(range(1,5) as $i)
+                                @if($rating >0)
+                                @if($rating > 0.5)
+                                <i class="fa fa-star active"></i>
+                                @elseif($rating < 0.5 && $rating> 0)
+                                    <i class="fas fa-star-half"></i>
+                                    @endif
+                                    @else
+                                    <i class="fa fa-star"></i>
+                                    @endif
+                                    @php $rating--; @endphp
 
-                                @endforeach
-                        </p>
-                        <a class="btn" href="#" data-toggle="modal" data-target="#contact_{{$service->user_id}}"
-                            target="_blank">@lang('general.contact_supplier')</a>
+                                    @endforeach
+                            </p>
+                            <a class="btn" href="#" data-toggle="modal" data-target="#contact_{{$service->user_id}}"
+                                target="_blank">@lang('general.contact_supplier')</a>
+                        </div>
                     </div>
-                </div>
                 </div>
                 @endforeach
 
