@@ -3,6 +3,8 @@
 @endphp
 @push('styles')
 <link rel="stylesheet" href="{{ asset('/web/css/custom-save-supplier.css')}}">
+<link rel="stylesheet" href="{{ asset('/web/css/custom-register-supplier.css')}}">
+
 @endpush
 @section('content')
 
