@@ -3,10 +3,9 @@
     border: none;
     color: #fff;
     border-radius: 10px;
-    font-size: 16px;
+    font-size: 12px;
     cursor: pointer;
 }
-
 
 .rate-stars button {
     width: 100%;
@@ -43,7 +42,8 @@
 #pac-container {
     padding-bottom: 12px;
     margin-right: 12px;
-} 
+}
+
 .rate-stars {
     text-align: center;
     direction: rtl;
@@ -62,7 +62,10 @@
 #pac-container {
     padding: 0;
 }
-input, select, textarea {
+
+input,
+select,
+textarea {
     vertical-align: middle;
     margin: 0;
     padding: 0;
@@ -82,7 +85,6 @@ input, select, textarea {
     font-size: 14px;
 }
 
-
 .form-control {
     height: 45px;
     line-height: 38px;
@@ -101,7 +103,6 @@ input, select, textarea {
     background-color: #4169e1;
 }
 
-
 #current_location {
     background-color: #1e90ff;
     border: none;
@@ -111,19 +112,19 @@ input, select, textarea {
     cursor: pointer;
 }
 
- 
-.form-group, .form-control {
+.form-group,
+.form-control {
     margin-bottom: 0;
 }
+
 .m10_b {
     margin-bottom: 10px;
 }
 
-
-#type-selector{
-    display : none;
+#type-selector {
+    display: none;
 }
 
-#pac-card{
-    display : none;
+#pac-card {
+    display: none;
 }
