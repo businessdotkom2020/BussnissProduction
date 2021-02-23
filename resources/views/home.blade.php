@@ -89,6 +89,9 @@ $menu = true ;
 
         </div> 
     </div>
+    -->
+
+
     <div class="cats col-xs-12">
         <div class="container">
             <ul>
@@ -104,7 +107,7 @@ $menu = true ;
         </div>
     </div>
 
--->
+
 
     <!--
     <div class="n-products col-xs-12 col-md-12 col-lg-8">
@@ -716,6 +719,7 @@ $menu = true ;
                 <h3>Latest <span>Requests</span></h3>
                 <a href="{{url('requests')}}" class="more">@lang('general.view_all')</a>
             </div>
+            <!--
             <div class="g-body col-xs-12">
                 <div class="col-md-2 col-sm-3 col-xs-6">
                     <div class="product-grid">
@@ -924,6 +928,207 @@ $menu = true ;
 
 
             </div>
+-->
+            <div class="g-body col-xs-12">
+                <div class="col-md-2 col-sm-3 col-xs-6">
+                    <div class="request-grid">
+                        <div class="request-image">
+                            <a href="#" class="image">
+                                <img class="pic-1" src="https://i.imgur.com/gY5s6z0.jpg">
+                                <img class="pic-2" src="https://i.imgur.com/CEQeTSE.jpg">
+                            </a>
+
+                            <ul class="social">
+                                <li><a href="#" data-tip="Quick View" data-toggle="modal"
+                                        data-target="#contact_{{$product->user_id}}" target="_blank"><i
+                                            class="fa fa-eye"></i></a></li>
+                            </ul>
+                        </div>
+                        <div class="request-content">
+                            <h3 class="title"><a href="#">Men's Shirt</a></h3>
+                            <div class="request-de">
+                                <a class="add-to-cart" href="#" data-tip="add-to-cart" data-toggle="modal"
+                                    data-target="#contact_{{$product->user_id}}" target="_blank">تواصل مع المعلن
+                                </a>
+                                <ul class="rating list-inline">
+                                    <li><i class="fa fa-star"></i></li>
+                                    <li><i class="fa fa-star"></i></li>
+                                    <li><i class="fa fa-star"></i></li>
+                                    <li><i class="fa fa-star disable"></i></li>
+                                    <li><i class="fa fa-star disable"></i></li>
+                                </ul>
+                            </div>
+
+                        </div>
+                    </div>
+
+                </div>
+                <div class="col-md-2 col-sm-3 col-xs-6">
+                    <div class="request-grid">
+                        <div class="request-image">
+                            <a href="#" class="image">
+                                <img class="pic-1" src="https://i.imgur.com/gY5s6z0.jpg">
+                                <img class="pic-2" src="https://i.imgur.com/CEQeTSE.jpg">
+                            </a>
+
+                            <ul class="social">
+                                <li><a href="#" data-tip="Quick View" data-toggle="modal"
+                                        data-target="#contact_{{$product->user_id}}" target="_blank"><i
+                                            class="fa fa-eye"></i></a></li>
+                            </ul>
+                        </div>
+                        <div class="request-content">
+                            <h3 class="title"><a href="#">Men's Shirt</a></h3>
+                            <div class="request-de">
+                                <a class="add-to-cart" href="#" data-tip="add-to-cart" data-toggle="modal"
+                                    data-target="#contact_{{$product->user_id}}" target="_blank">تواصل مع المعلن
+                                </a>
+                                <ul class="rating list-inline">
+                                    <li><i class="fa fa-star"></i></li>
+                                    <li><i class="fa fa-star"></i></li>
+                                    <li><i class="fa fa-star"></i></li>
+                                    <li><i class="fa fa-star disable"></i></li>
+                                    <li><i class="fa fa-star disable"></i></li>
+                                </ul>
+                            </div>
+
+                        </div>
+                    </div>
+
+                </div>
+                <div class="col-md-2 col-sm-3 col-xs-6">
+                    <div class="request-grid">
+                        <div class="request-image">
+                            <a href="#" class="image">
+                                <img class="pic-1" src="https://i.imgur.com/gY5s6z0.jpg">
+                                <img class="pic-2" src="https://i.imgur.com/CEQeTSE.jpg">
+                            </a>
+
+                            <ul class="social">
+                                <li><a href="#" data-tip="Quick View" data-toggle="modal"
+                                        data-target="#contact_{{$product->user_id}}" target="_blank"><i
+                                            class="fa fa-eye"></i></a></li>
+                            </ul>
+                        </div>
+                        <div class="request-content">
+                            <h3 class="title"><a href="#">Men's Shirt</a></h3>
+                            <div class="request-de">
+                                <a class="add-to-cart" href="#" data-tip="add-to-cart" data-toggle="modal"
+                                    data-target="#contact_{{$product->user_id}}" target="_blank">تواصل مع المعلن
+                                </a>
+                                <ul class="rating list-inline">
+                                    <li><i class="fa fa-star"></i></li>
+                                    <li><i class="fa fa-star"></i></li>
+                                    <li><i class="fa fa-star"></i></li>
+                                    <li><i class="fa fa-star disable"></i></li>
+                                    <li><i class="fa fa-star disable"></i></li>
+                                </ul>
+                            </div>
+
+                        </div>
+                    </div>
+
+                </div>
+                <div class="col-md-2 col-sm-3 col-xs-6">
+                    <div class="request-grid">
+                        <div class="request-image">
+                            <a href="#" class="image">
+                                <img class="pic-1" src="https://i.imgur.com/gY5s6z0.jpg">
+                                <img class="pic-2" src="https://i.imgur.com/CEQeTSE.jpg">
+                            </a>
+
+                            <ul class="social">
+                                <li><a href="#" data-tip="Quick View" data-toggle="modal"
+                                        data-target="#contact_{{$product->user_id}}" target="_blank"><i
+                                            class="fa fa-eye"></i></a></li>
+                            </ul>
+                        </div>
+                        <div class="request-content">
+                            <h3 class="title"><a href="#">Men's Shirt</a></h3>
+                            <div class="request-de">
+                                <a class="add-to-cart" href="#" data-tip="add-to-cart" data-toggle="modal"
+                                    data-target="#contact_{{$product->user_id}}" target="_blank">تواصل مع المعلن
+                                </a>
+                                <ul class="rating list-inline">
+                                    <li><i class="fa fa-star"></i></li>
+                                    <li><i class="fa fa-star"></i></li>
+                                    <li><i class="fa fa-star"></i></li>
+                                    <li><i class="fa fa-star disable"></i></li>
+                                    <li><i class="fa fa-star disable"></i></li>
+                                </ul>
+                            </div>
+
+                        </div>
+                    </div>
+
+                </div>
+                <div class="col-md-2 col-sm-3 col-xs-6">
+                    <div class="request-grid">
+                        <div class="request-image">
+                            <a href="#" class="image">
+                                <img class="pic-1" src="https://i.imgur.com/gY5s6z0.jpg">
+                                <img class="pic-2" src="https://i.imgur.com/CEQeTSE.jpg">
+                            </a>
+
+                            <ul class="social">
+                                <li><a href="#" data-tip="Quick View" data-toggle="modal"
+                                        data-target="#contact_{{$product->user_id}}" target="_blank"><i
+                                            class="fa fa-eye"></i></a></li>
+                            </ul>
+                        </div>
+                        <div class="request-content">
+                            <h3 class="title"><a href="#">Men's Shirt</a></h3>
+                            <div class="request-de">
+                                <a class="add-to-cart" href="#" data-tip="add-to-cart" data-toggle="modal"
+                                    data-target="#contact_{{$product->user_id}}" target="_blank">تواصل مع المعلن
+                                </a>
+                                <ul class="rating list-inline">
+                                    <li><i class="fa fa-star"></i></li>
+                                    <li><i class="fa fa-star"></i></li>
+                                    <li><i class="fa fa-star"></i></li>
+                                    <li><i class="fa fa-star disable"></i></li>
+                                    <li><i class="fa fa-star disable"></i></li>
+                                </ul>
+                            </div>
+
+                        </div>
+                    </div>
+
+                </div>
+                <div class="col-md-2 col-sm-3 col-xs-6">
+                    <div class="request-grid">
+                        <div class="request-image">
+                            <a href="#" class="image">
+                                <img class="pic-1" src="https://i.imgur.com/gY5s6z0.jpg">
+                                <img class="pic-2" src="https://i.imgur.com/CEQeTSE.jpg">
+                            </a>
+
+                            <ul class="social">
+                                <li><a href="#" data-tip="Quick View" data-toggle="modal"
+                                        data-target="#contact_{{$product->user_id}}" target="_blank"><i
+                                            class="fa fa-eye"></i></a></li>
+                            </ul>
+                        </div>
+                        <div class="request-content">
+                            <h3 class="title"><a href="#">Men's Shirt</a></h3>
+                            <div class="request-de">
+                                <a class="add-to-cart" href="#" data-tip="add-to-cart" data-toggle="modal"
+                                    data-target="#contact_{{$product->user_id}}" target="_blank">تواصل مع المعلن
+                                </a>
+                                <ul class="rating list-inline">
+                                    <li><i class="fa fa-star"></i></li>
+                                    <li><i class="fa fa-star"></i></li>
+                                    <li><i class="fa fa-star"></i></li>
+                                    <li><i class="fa fa-star disable"></i></li>
+                                    <li><i class="fa fa-star disable"></i></li>
+                                </ul>
+                            </div>
+
+                        </div>
+                    </div>
+
+                </div>
+            </div>
 
         </div>
     </div>
@@ -935,12 +1140,11 @@ $menu = true ;
 
 
     <div class="suppliers h-suppliers col-xs-12">
-        <div class="container">
+        <div class="container-fluid">
             <div class="g-head col-xs-12">
                 <h3>@lang('general.suppliers')</h3>
                 <a href="{{url('suppliers')}}" class="more">@lang('general.view_all')</a>
             </div>
-
 
             <!--
             <div class="g-body col-xs-12">
@@ -1010,62 +1214,63 @@ $menu = true ;
             <div class="g-body col-xs-12">
 
 
-            @foreach($home_suppliers as $supplier)
-                <div class="col-md-2">
-                    <div class="h-supplier-box text-center">
+                @foreach($home_suppliers as $supplier)
+                <div class="col-md-2 col-sm-2 col-xs-6">
+                    <div class="h-supplier-box cardo text-center">
                         <span>
                             <a href="{{url('supplier/'.$supplier->id)}}">
                                 <img src="{{ url('storage/'.$supplier->avatar)}}" alt="">
                             </a>
                         </span>
-                        <div class="c-data">
 
-                                    <h3>
-                                        <a href="{{url('supplier/'.$supplier->id)}}"
-                                            class="title">{{$supplier->name}}</a>
-                                    </h3>
-                                    <p>
-                                        @php $rating = $supplier->average_rating ; @endphp
-                                        @foreach(range(1,5) as $i)
-                                        @if($rating >0)
-                                        @if($rating > 0.5)
-                                        <i class="fa fa-star active"></i>
-                                        @elseif($rating < 0.5 && $rating> 0)
-                                            <i class="fas fa-star-half"></i>
-                                            @endif
-                                            @else
-                                            <i class="fa fa-star"></i>
-                                            @endif
-                                            @php $rating--; @endphp
-                                            @endforeach
-                                    </p>
-                                    @if(!Auth::check() || \Auth::user()->canFollow($supplier) &&
-                                    \Auth::user()->id !=
-                                    $supplier->id)
-                                    <a href="javascript:void(0)" id="followtoggle_{{$supplier->id}}"
-                                        onclick="followtoggle({{$supplier->id }})" class="btn ">
-                                        <i id="followicon_{{$supplier->id}}" class="fa fa-plus"></i>
-                                        <span style="color:white">
-                                            Follow
-                                        </span>
-                                    </a>
-                                    @elseif(Auth::check() && !\Auth::user()->canFollow($supplier) &&
-                                    \Auth::user()->id
-                                    != $supplier->id)
-                                    <a href="javascript:void(0)" id="followtoggle_{{$supplier->id}}"
-                                        onclick="followtoggle({{$supplier->id }})" class="btn following">
-                                        <i id="followicon_{{$supplier->id}}" class="fa fa-check"></i>
-                                        <span style="color:white">
-                                            following
-                                        </span>
-                                    </a>
-                                    @endif
-                                </div>
+                        <div class="c-inner">
+                            <div class="c-data">
+                                <h3>
+                                    <a href="{{url('supplier/'.$supplier->id)}}" class="title">{{$supplier->name}}</a>
+                                </h3>
+                                <p>
+                                    @php $rating = $supplier->average_rating ; @endphp
+                                    @foreach(range(1,5) as $i)
+                                    @if($rating >0)
+                                    @if($rating > 0.5)
+                                    <i class="fa fa-star active"></i>
+                                    @elseif($rating < 0.5 && $rating> 0)
+                                        <i class="fas fa-star-half"></i>
+                                        @endif
+                                        @else
+                                        <i class="fa fa-star"></i>
+                                        @endif
+                                        @php $rating--; @endphp
+                                        @endforeach
+                                </p>
+                                @if(!Auth::check() || \Auth::user()->canFollow($supplier) &&
+                                \Auth::user()->id !=
+                                $supplier->id)
+                                <a href="javascript:void(0)" id="followtoggle_{{$supplier->id}}"
+                                    onclick="followtoggle({{$supplier->id }})" class="btn ">
+                                    <i id="followicon_{{$supplier->id}}" class="fa fa-plus"></i>
+                                    <span>
+                                        Follow
+                                    </span>
+                                </a>
+                                @elseif(Auth::check() && !\Auth::user()->canFollow($supplier) &&
+                                \Auth::user()->id
+                                != $supplier->id)
+                                <a href="javascript:void(0)" id="followtoggle_{{$supplier->id}}"
+                                    onclick="followtoggle({{$supplier->id }})" class="btn following">
+                                    <i id="followicon_{{$supplier->id}}" class="fa fa-check"></i>
+                                    <span>
+                                        following
+                                    </span>
+                                </a>
+                                @endif
+                            </div>
+                        </div>
                     </div>
                 </div>
                 @endforeach
             </div>
-                
+
 
 
         </div>
@@ -1074,7 +1279,7 @@ $menu = true ;
 
 
 
-<!--
+    <!--
 
     <div class="h-offers col-xs-12">
         <div class="container">
@@ -1420,34 +1625,34 @@ $menu = true ;
             <div class="g-body col-xs-12">
                 @foreach ($home_services as $service)
                 <div class="col-md-2 col-sm-3 col-xs-6">
-                <div class="s-block">
-                    <div class="s-img">
-                        <a href="{{url('service/'.$service->id)}}">
-                            <img src="{{ url('storage/'.json_decode($product->images)[0])}}" alt="">
-                        </a>
-                    </div>
-                    <div class="s-data">
-                        <a href="#" class="title">{{$service->name}}</a>
-                        <p>
-                            @php $rating = $service->average_rating ; @endphp
-                            @foreach(range(1,5) as $i)
-                            @if($rating >0)
-                            @if($rating > 0.5)
-                            <i class="fa fa-star active"></i>
-                            @elseif($rating < 0.5 && $rating> 0)
-                                <i class="fas fa-star-half"></i>
-                                @endif
-                                @else
-                                <i class="fa fa-star"></i>
-                                @endif
-                                @php $rating--; @endphp
+                    <div class="s-block">
+                        <div class="s-img">
+                            <a href="{{url('service/'.$service->id)}}">
+                                <img src="{{ url('storage/'.json_decode($product->images)[0])}}" alt="">
+                            </a>
+                        </div>
+                        <div class="s-data">
+                            <a href="#" class="title">{{$service->name}}</a>
+                            <p>
+                                @php $rating = $service->average_rating ; @endphp
+                                @foreach(range(1,5) as $i)
+                                @if($rating >0)
+                                @if($rating > 0.5)
+                                <i class="fa fa-star active"></i>
+                                @elseif($rating < 0.5 && $rating> 0)
+                                    <i class="fas fa-star-half"></i>
+                                    @endif
+                                    @else
+                                    <i class="fa fa-star"></i>
+                                    @endif
+                                    @php $rating--; @endphp
 
-                                @endforeach
-                        </p>
-                        <a class="btn" href="#" data-toggle="modal" data-target="#contact_{{$service->user_id}}"
-                            target="_blank">@lang('general.contact_supplier')</a>
+                                    @endforeach
+                            </p>
+                            <a class="btn" href="#" data-toggle="modal" data-target="#contact_{{$service->user_id}}"
+                                target="_blank">@lang('general.contact_supplier')</a>
+                        </div>
                     </div>
-                </div>
                 </div>
                 @endforeach
 
