@@ -164,6 +164,212 @@ $menu = true ;
     <div class="h-categories col-xs-12">
         <div class="container-fluid">
             <div class="row">
+            <div class="g-head col-xs-12">
+                <h3>TOP <span>CATEGORIES</span>OF THE MONTH </h3>
+            </div>
+                <div class="col-md-3 col-sm-4 col-sx-12">
+                    <div class="row categories-blocks">
+                        <div class="col-md-5 col-sm-5 col-xs-6">
+                            <div class="category-img">
+                                <a href="#">
+                                    <img src="https://demo2.drfuri.com/martfury17/wp-content/uploads/sites/58/elementor/thumbs/c1-o8k9olcyrwe8m5dunmsk1org093wzb8ajrg7wzbc4k.jpg"
+                                        alt="">
+                                </a>
+                            </div>
+                        </div>
+                        <div class="col-md-7 col-sm-7 col-xs-6">
+                            <div class="category-links">
+                                <h4><a href="#">main category</a></h4>
+                                <ul class="list-inline">
+                                    <li><a href="#">sub category</a></li>
+                                    <li><a href="#">sub category</a></li>
+                                    <li><a href="#">sub category</a></li>
+                                    <li><a href="#">sub category</a></li>
+                                    <li><a href="#">sub category</a></li>
+                                    <li><a href="#">sub category</a></li>
+                                </ul>
+                                <a href="#" class="cat-more">
+                                    More
+                                    <i class="fa fa-angle-right hvr-icon"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3 col-sm-4 col-sx-12">
+                    <div class="row categories-blocks">
+                        <div class="col-md-5 col-sm-5 col-xs-6">
+                            <div class="category-img">
+                                <a href="#">
+                                    <img src="https://demo2.drfuri.com/martfury17/wp-content/uploads/sites/58/elementor/thumbs/c1-o8k9olcyrwe8m5dunmsk1org093wzb8ajrg7wzbc4k.jpg"
+                                        alt="">
+                                </a>
+                            </div>
+                        </div>
+                        <div class="col-md-7 col-sm-7 col-xs-6">
+                            <div class="category-links">
+                                <h4><a href="#">main category</a></h4>
+                                <ul class="list-inline">
+                                    <li><a href="#">sub category</a></li>
+                                    <li><a href="#">sub category</a></li>
+                                    <li><a href="#">sub category</a></li>
+                                    <li><a href="#">sub category</a></li>
+                                    <li><a href="#">sub category</a></li>
+                                    <li><a href="#">sub category</a></li>
+                                </ul>
+                                <a href="#" class="cat-more">
+                                    More
+                                    <i class="fa fa-angle-right hvr-icon"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3 col-sm-4 col-sx-12">
+                    <div class="row categories-blocks">
+                        <div class="col-md-5 col-sm-5 col-xs-6">
+                            <div class="category-img">
+                                <a href="#">
+                                    <img src="https://demo2.drfuri.com/martfury17/wp-content/uploads/sites/58/elementor/thumbs/c1-o8k9olcyrwe8m5dunmsk1org093wzb8ajrg7wzbc4k.jpg"
+                                        alt="">
+                                </a>
+                            </div>
+                        </div>
+                        <div class="col-md-7 col-sm-7 col-xs-6">
+                            <div class="category-links">
+                                <h4><a href="#">main category</a></h4>
+                                <ul class="list-inline">
+                                    <li><a href="#">sub category</a></li>
+                                    <li><a href="#">sub category</a></li>
+                                    <li><a href="#">sub category</a></li>
+                                    <li><a href="#">sub category</a></li>
+                                    <li><a href="#">sub category</a></li>
+                                    <li><a href="#">sub category</a></li>
+                                </ul>
+                                <a href="#" class="cat-more">
+                                    More
+                                    <i class="fa fa-angle-right hvr-icon"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3 col-sm-4 col-sx-12">
+                    <div class="row categories-blocks">
+                        <div class="col-md-5 col-sm-5 col-xs-6">
+                            <div class="category-img">
+                                <a href="#">
+                                    <img src="https://demo2.drfuri.com/martfury17/wp-content/uploads/sites/58/elementor/thumbs/c1-o8k9olcyrwe8m5dunmsk1org093wzb8ajrg7wzbc4k.jpg"
+                                        alt="">
+                                </a>
+                            </div>
+                        </div>
+                        <div class="col-md-7 col-sm-7 col-xs-6">
+                            <div class="category-links">
+                                <h4><a href="#">main category</a></h4>
+                                <ul class="list-inline">
+                                    <li><a href="#">sub category</a></li>
+                                    <li><a href="#">sub category</a></li>
+                                    <li><a href="#">sub category</a></li>
+                                    <li><a href="#">sub category</a></li>
+                                    <li><a href="#">sub category</a></li>
+                                    <li><a href="#">sub category</a></li>
+                                </ul>
+                                <a href="#" class="cat-more">
+                                    More
+                                    <i class="fa fa-angle-right hvr-icon"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3 col-sm-4 col-sx-12">
+                    <div class="row categories-blocks">
+                        <div class="col-md-5 col-sm-5 col-xs-6">
+                            <div class="category-img">
+                                <a href="#">
+                                    <img src="https://demo2.drfuri.com/martfury17/wp-content/uploads/sites/58/elementor/thumbs/c1-o8k9olcyrwe8m5dunmsk1org093wzb8ajrg7wzbc4k.jpg"
+                                        alt="">
+                                </a>
+                            </div>
+                        </div>
+                        <div class="col-md-7 col-sm-7 col-xs-6">
+                            <div class="category-links">
+                                <h4><a href="#">main category</a></h4>
+                                <ul class="list-inline">
+                                    <li><a href="#">sub category</a></li>
+                                    <li><a href="#">sub category</a></li>
+                                    <li><a href="#">sub category</a></li>
+                                    <li><a href="#">sub category</a></li>
+                                    <li><a href="#">sub category</a></li>
+                                    <li><a href="#">sub category</a></li>
+                                </ul>
+                                <a href="#" class="cat-more">
+                                    More
+                                    <i class="fa fa-angle-right hvr-icon"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3 col-sm-4 col-sx-12">
+                    <div class="row categories-blocks">
+                        <div class="col-md-5 col-sm-5 col-xs-6">
+                            <div class="category-img">
+                                <a href="#">
+                                    <img src="https://demo2.drfuri.com/martfury17/wp-content/uploads/sites/58/elementor/thumbs/c1-o8k9olcyrwe8m5dunmsk1org093wzb8ajrg7wzbc4k.jpg"
+                                        alt="">
+                                </a>
+                            </div>
+                        </div>
+                        <div class="col-md-7 col-sm-7 col-xs-6">
+                            <div class="category-links">
+                                <h4><a href="#">main category</a></h4>
+                                <ul class="list-inline">
+                                    <li><a href="#">sub category</a></li>
+                                    <li><a href="#">sub category</a></li>
+                                    <li><a href="#">sub category</a></li>
+                                    <li><a href="#">sub category</a></li>
+                                    <li><a href="#">sub category</a></li>
+                                    <li><a href="#">sub category</a></li>
+                                </ul>
+                                <a href="#" class="cat-more">
+                                    More
+                                    <i class="fa fa-angle-right hvr-icon"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3 col-sm-4 col-sx-12">
+                    <div class="row categories-blocks">
+                        <div class="col-md-5 col-sm-5 col-xs-6">
+                            <div class="category-img">
+                                <a href="#">
+                                    <img src="https://demo2.drfuri.com/martfury17/wp-content/uploads/sites/58/elementor/thumbs/c1-o8k9olcyrwe8m5dunmsk1org093wzb8ajrg7wzbc4k.jpg"
+                                        alt="">
+                                </a>
+                            </div>
+                        </div>
+                        <div class="col-md-7 col-sm-7 col-xs-6">
+                            <div class="category-links">
+                                <h4><a href="#">main category</a></h4>
+                                <ul class="list-inline">
+                                    <li><a href="#">sub category</a></li>
+                                    <li><a href="#">sub category</a></li>
+                                    <li><a href="#">sub category</a></li>
+                                    <li><a href="#">sub category</a></li>
+                                    <li><a href="#">sub category</a></li>
+                                    <li><a href="#">sub category</a></li>
+                                </ul>
+                                <a href="#" class="cat-more">
+                                    More
+                                    <i class="fa fa-angle-right hvr-icon"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
                 <div class="col-md-3 col-sm-4 col-sx-12">
                     <div class="row categories-blocks">
                         <div class="col-md-5 col-sm-5 col-xs-6">
