@@ -1,20 +1,22 @@
-.swal2-checkbox, .swal2-file, .swal2-input, .swal2-radio, .swal2-select, .swal2-textarea {
+.swal2-checkbox,
+.swal2-file,
+.swal2-input,
+.swal2-radio,
+.swal2-select,
+.swal2-textarea {
     margin: 1em auto;
     display: none;
 }
 
-
 .wrapper {
-    overflow:hidden;
+    overflow: hidden;
 }
 
-
-
- .prof-img {
+.prof-img {
     float: left;
     border-radius: 10px;
     overflow: hidden;
-  }
+}
 
 .prof-img img {
     width: 100%;
@@ -23,7 +25,7 @@
     object-position: center;
 }
 
- .prof-img label {
+.prof-img label {
     border-radius: 5px;
     margin: 0 auto;
     font-weight: normal;
@@ -32,10 +34,10 @@
     overflow: hidden;
     position: relative;
     cursor: pointer;
-   float:right;
+    float: right;
 }
 
- .prof-img label:before {
+.prof-img label:before {
     content: '';
     position: absolute;
     right: 0;
@@ -48,7 +50,7 @@
     visibility: hidden;
 }
 
- .prof-img i {
+.prof-img i {
     position: absolute;
     left: 50%;
     top: 40%;
@@ -59,7 +61,7 @@
     transition: all .3s;
 }
 
- .prof-img input {
+.prof-img input {
     position: absolute;
     z-index: -1;
     width: 100%;
@@ -67,8 +69,16 @@
     right: 0;
     top: 0;
 }
-.ubranch{
-    border: 2px solid #139FEB; border-radius: 15px; padding: 6px; padding-top: 20px;
+
+.ubranch {
+    border: 2px solid #139FEB;
+    border-radius: 15px;
+    padding: 6px;
+    padding-top: 20px;
+}
+
+.center {
+    text-align: center;
 }
 
 .prof-img label:hover:before {
@@ -76,7 +86,8 @@
     visibility: visible;
     transition: all .3s;
 }
- .prof-img label:hover i {
+
+.prof-img label:hover i {
     top: 50%;
     transition: all .3s;
     opacity: 1;

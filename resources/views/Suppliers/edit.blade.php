@@ -194,7 +194,7 @@
                 <div class="tab-pane fade  in" id="u_branches">
 
 
-                    <div class="form-group col-md-6 col-xs-12">
+                    <div class="form-group col-md-12 col-xs-12 center">
                         <!--<input type="text" placeholder="@lang('general.map_location')" class="form-control">--><a
                             href="#" class="btn btn-review" data-toggle="modal" onclick="initMap()"
                             data-target="#review-pop">@lang('general.add_branch')</a>
