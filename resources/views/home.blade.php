@@ -164,8 +164,10 @@ $menu = true ;
     <div class="h-categories col-xs-12">
         <div class="container-fluid">
             <div class="row">
-            <div class="g-head col-xs-12">
-                <h3>TOP <span>CATEGORIES</span>OF THE MONTH </h3>
+            <div class="col-xs-12">
+                <div class="g-head">
+                    <h3>TOP <span>CATEGORIES</span>OF THE MONTH </h3>
+                </div>
             </div>
                 <div class="col-md-3 col-sm-4 col-sx-12">
                     <div class="row categories-blocks">
