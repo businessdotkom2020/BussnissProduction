@@ -10,6 +10,12 @@ $(document).ready(function () {
         $('#loading').fadeOut(1000);
     });
 
+    $(window).load(function () {
+        $("body").css('overflow-y', 'auto');
+        $('.loader').fadeOut(1000);
+    });
+
+
     $('[data-tool="tooltip"]').tooltip({
         trigger: 'hover',
         animate: true,

@@ -45,7 +45,7 @@
 -->
 
 
-<div class="loader" id="loading">
+<div class="loader">
     <div class="loader-inner">
         <span class="dot"></span>
         <span class="dot dot1">
