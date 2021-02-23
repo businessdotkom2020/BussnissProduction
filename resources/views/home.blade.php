@@ -91,7 +91,7 @@ $menu = true ;
     </div>
     -->
 
-
+<!--
     <div class="cats col-xs-12">
         <div class="container">
             <ul>
@@ -106,7 +106,96 @@ $menu = true ;
             </ul>
         </div>
     </div>
+-->
 
+
+
+<div class="h-features col-xs-12">
+        <div class="container">
+            <div class="row">
+                <div class="col-xs-12">
+                    <div class="features-all">
+                        <!-- Start Block -->
+                        <div class="features-block">
+                            <div class="icon-block">
+                                <img src="https://i.imgur.com/RTTk0lR.png">
+                            </div>
+                            <div class="details-block">
+                                <h4>Secure Payment</h4>
+                                <span>100% secure payment</span>
+                            </div>
+                        </div>
+                        <!-- Start Block -->
+                        <div class="features-block">
+                            <div class="icon-block">
+                                <img src="https://i.imgur.com/CiuevtK.png">
+                            </div>
+                            <div class="details-block">
+                                <h4>24/7 Support</h4>
+                                <span>Dedicated support </span>
+                            </div>
+                        </div>
+                        <!-- Start Block -->
+                        <div class="features-block">
+                            <div class="icon-block">
+                                <img src="https://i.imgur.com/qpcO6RN.png">
+                            </div>
+                            <div class="details-block">
+                                <h4>90 Days Return</h4>
+                                <span>If goods have problems</span>
+                            </div>
+                        </div>
+                        <!-- Start Block -->
+                        <div class="features-block">
+                            <div class="icon-block">
+                                <img src="https://i.imgur.com/EkPv6sc.png">
+                            </div>
+                            <div class="details-block">
+                                <h4>Free Delivery </h4>
+                                <span>For all oders over $99</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="h-categories col-xs-12">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-md-3 col-sm-4 col-sx-12">
+                    <div class="row categories-blocks">
+                        <div class="col-md-5 col-sm-5 col-xs-6">
+                            <div class="category-img">
+                                <a href="#">
+                                    <img src="https://demo2.drfuri.com/martfury17/wp-content/uploads/sites/58/elementor/thumbs/c1-o8k9olcyrwe8m5dunmsk1org093wzb8ajrg7wzbc4k.jpg"
+                                        alt="">
+                                </a>
+                            </div>
+                        </div>
+                        <div class="col-md-7 col-sm-7 col-xs-6">
+                            <div class="category-links">
+                                <h4><a href="#">main category</a></h4>
+                                <ul class="list-inline">
+                                    <li><a href="#">sub category</a></li>
+                                    <li><a href="#">sub category</a></li>
+                                    <li><a href="#">sub category</a></li>
+                                    <li><a href="#">sub category</a></li>
+                                    <li><a href="#">sub category</a></li>
+                                    <li><a href="#">sub category</a></li>
+                                </ul>
+                                <a href="#" class="cat-more">
+                                    More
+                                    <i class="fa fa-angle-right hvr-icon"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 
 
     <!--

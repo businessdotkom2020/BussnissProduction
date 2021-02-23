@@ -5330,3 +5330,225 @@ button.close:hover {
 }
 .request-grid .rating i.disable{ color: #e8e8e8; }
 
+/********************************************************************************/
+/*********************************** h-features *****************************************/
+.h-features {
+    padding: 50px 0;
+}
+
+.features-block {
+    padding-bottom: 70px;
+}
+
+.features-all {
+    float: left;
+    width: 100%;
+    border: 1px #eee solid;
+    border-radius: 50px;
+    padding: 20px 0;
+
+}
+
+.new-arrival {
+    padding: 40px 0px;
+}
+
+.content-a .colum-right {
+    margin: 0;
+}
+
+.features-all .features-block {
+    width: 25%;
+    float: right;
+    padding: 0 15px;
+}
+
+.features-all .features-block .icon-block {
+    width: 40px;
+    float: left;
+}
+
+.features-all .features-block .details-block {
+    float: right;
+    width: calc(100% - 45px);
+    padding-left: 15px;
+    padding-top: 3px;
+}
+
+.features-all .features-block .details-block h4 {
+    margin: 0;
+    font-size: 14px;
+    color: #666;
+}
+
+.features-all .features-block .details-block span {
+    font-size: 12px;
+    color: #777;
+    margin-top: 5px;
+    display: inline-block;
+}
+
+
+
+
+
+/********************************************************************************/
+/*********************************** h-categories *****************************************/
+.categories-blocks {
+    margin: 0 0 30px 0;
+    padding: 15px 0;
+    border: 1px solid #eee;
+    transition: all .3s ease-in;
+}
+
+.categories-blocks:hover {
+    border-color: #139feb;
+}
+
+.categories-blocks h4 a {
+    color: #252525;
+    font-weight: bold;
+    display: block;
+    font-size: 16px;
+    height: 20px;
+    overflow: hidden;
+    transition: all .3s ease-in;
+}
+
+.categories-blocks h4 a:hover {
+    color: #139feb;
+
+}
+
+.category-img {
+    height: 150px;
+}
+
+.category-img img {
+    width: 100%;
+    height: 100%;
+}
+
+.category-links ul {
+    margin: 7px 0;
+    height: 109px;
+    overflow: hidden;
+}
+
+.category-links ul li {
+    padding: 0;
+}
+
+.category-links ul li a {
+    color: #666;
+    border-bottom: 1px solid transparent;
+    display: inline-block;
+    transition: all .3s ease-in;
+    font-size: 14px;
+    margin-bottom: 1px;
+}
+
+.category-links ul li a:hover {
+    color: #000;
+    border-color: #000;
+}
+
+/* Icon Wobble Horizontal */
+@-webkit-keyframes hvr-icon-wobble-horizontal {
+    16.65% {
+        -webkit-transform: translateX(6px);
+        transform: translateX(6px);
+    }
+
+    33.3% {
+        -webkit-transform: translateX(-5px);
+        transform: translateX(-5px);
+    }
+
+    49.95% {
+        -webkit-transform: translateX(4px);
+        transform: translateX(4px);
+    }
+
+    66.6% {
+        -webkit-transform: translateX(-2px);
+        transform: translateX(-2px);
+    }
+
+    83.25% {
+        -webkit-transform: translateX(1px);
+        transform: translateX(1px);
+    }
+
+    100% {
+        -webkit-transform: translateX(0);
+        transform: translateX(0);
+    }
+}
+
+@keyframes hvr-icon-wobble-horizontal {
+    16.65% {
+        -webkit-transform: translateX(6px);
+        transform: translateX(6px);
+    }
+
+    33.3% {
+        -webkit-transform: translateX(-5px);
+        transform: translateX(-5px);
+    }
+
+    49.95% {
+        -webkit-transform: translateX(4px);
+        transform: translateX(4px);
+    }
+
+    66.6% {
+        -webkit-transform: translateX(-2px);
+        transform: translateX(-2px);
+    }
+
+    83.25% {
+        -webkit-transform: translateX(1px);
+        transform: translateX(1px);
+    }
+
+    100% {
+        -webkit-transform: translateX(0);
+        transform: translateX(0);
+    }
+}
+
+.cat-more {
+    color: #139feb;
+    font-size: 14px;
+    display: inline-block;
+    vertical-align: middle;
+    -webkit-transform: perspective(1px) translateZ(0);
+    transform: perspective(1px) translateZ(0);
+    box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+    -webkit-transition-duration: 0.3s;
+    transition-duration: 0.3s;
+}
+
+.cat-more .hvr-icon {
+    -webkit-transform: translateZ(0);
+    transform: translateZ(0);
+    margin: 0 2px;
+    font-size: 15px;
+    position: relative;
+    top: 1px;
+}
+
+.cat-more:hover .hvr-icon,
+.cat-more:focus .hvr-icon,
+.cat-more:active .hvr-icon {
+    color: #139feb;
+    -webkit-animation-name: hvr-icon-wobble-horizontal;
+    animation-name: hvr-icon-wobble-horizontal;
+    -webkit-animation-duration: 1s;
+    animation-duration: 1s;
+    -webkit-animation-timing-function: ease-in-out;
+    animation-timing-function: ease-in-out;
+    -webkit-animation-iteration-count: 5;
+    animation-iteration-count: 5;
+}
