@@ -172,6 +172,7 @@ return [
 
     'save' => 'حفظ',
     'update' => 'تعديل',
+    'add_branch' => 'إضافة فرع',
 
 
 
