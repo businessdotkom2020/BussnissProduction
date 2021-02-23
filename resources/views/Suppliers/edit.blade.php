@@ -193,16 +193,11 @@
 
                 <div class="tab-pane fade  in" id="u_branches">
 
-                    <div class="reqs">
-                        <a href="https://businessdotcom.net/request/new">
-                            <i class="fa fa-plus"></i>
-                            أضف طلب
-                        </a>
-                    </div>
+
                     <div class="form-group col-md-6 col-xs-12">
                         <!--<input type="text" placeholder="@lang('general.map_location')" class="form-control">--><a
                             href="#" class="btn btn-review" data-toggle="modal" onclick="initMap()"
-                            data-target="#review-pop">@lang('general.map_location')</a>
+                            data-target="#review-pop">@lang('general.add')</a>
                     </div>
                     @foreach ($supplier->branchs as $branch)
 
