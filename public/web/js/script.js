@@ -12,7 +12,7 @@ $(document).ready(function () {
 
     $(window).load(function () {
         $("body").css('overflow-y', 'auto');
-        $('.loader').fadeOut(1000);
+        $('.loader0').fadeOut(1000);
     });
 
 
