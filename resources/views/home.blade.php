@@ -113,7 +113,7 @@ $menu = true ;
 <div class="h-features col-xs-12">
         <div class="container">
             <div class="row">
-                <div class="col-xs-12">
+                <div class="col-md-12">
                     <div class="features-all">
                         <!-- Start Block -->
                         <div class="features-block">
@@ -164,7 +164,7 @@ $menu = true ;
     <div class="h-categories col-xs-12">
         <div class="container-fluid">
             <div class="row">
-            <div class="col-xs-12">
+            <div class="col-md-12">
                 <div class="g-head">
                     <h3>TOP <span>CATEGORIES</span>OF THE MONTH </h3>
                 </div>
