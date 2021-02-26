@@ -505,7 +505,14 @@ i {
 
 footer.main-footer.col-xs-12 {
     background: #252525;
-    z-index: 1
+    z-index: 1;
+    /*
+    background: -webkit-linear-gradient(top, rgb(19, 159, 235) 0%, rgb(0, 0, 0) 100%);
+    background: -o-linear-gradient(top, rgb(19, 159, 235) 0%, rgb(0, 0, 0) 100%);
+    background: -ms-linear-gradient(top, rgb(19, 159, 235) 0%, rgb(0, 0, 0) 100%);
+    background: -moz-linear-gradient(top, rgb(19, 159, 235) 0%, rgb(0, 0, 0) 100%);
+    background: linear-gradient(to top, rgb(19, 159, 235) 0%, rgb(0, 0, 0) 100%);
+    */
 }
 
 .ocean {
@@ -970,7 +977,8 @@ footer.main-footer.col-xs-12 {
 .bottom-head .categories .menu-item-has-children .sub-menu li .mega-sub .s-item ul li a:hover {
     color: #139feb !important;
     transition: all .3s;
-    padding-left: 7px
+    padding-left: 7px;
+    padding: 0 !important;
 }
 
 .has-mega-sub>a:after {
@@ -4785,6 +4793,10 @@ button.close:hover {
 
 /**************************************** Mayada **********************************/
 /**************** index ***********************/
+.h-slider-conn {
+    padding: 0 15px;
+}
+
 .slider-inner {
     padding: 0 !important;
     margin-top: 20px;
