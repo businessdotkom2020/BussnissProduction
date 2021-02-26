@@ -5850,3 +5850,6 @@ button.close:hover {
 .h-offers-slider .product-grid {
     margin: 0 7px 25px;
 }
+.latest-requests-slider  .request-grid{
+    margin: 0 6px 25px;  
+}
