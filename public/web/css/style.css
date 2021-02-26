@@ -5650,11 +5650,12 @@ button.close:hover {
     top: 0;
     width: 100%;
     z-index: 999991;
-    background-color: #139feb;
+    background-color: #fff;
 }
 
 .loader-inner:before {
     content: "Loading";
+    /* content: "Loading"; */
     display: block;
     font-size: 10em;
     text-transform: uppercase;
@@ -5690,7 +5691,7 @@ button.close:hover {
 .loader-inner .dot {
     width: 7px;
     height: 7px;
-    background-color: #fff;
+    background-color: #139feb;
     display: block;
     position: absolute;
     left: 50%;
