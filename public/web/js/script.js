@@ -153,7 +153,7 @@ $(document).ready(function () {
             600: {
                 items: 2
             },
-            1024: {
+            991: {
                 items: 3
             },
             4000: {
@@ -180,7 +180,7 @@ $(document).ready(function () {
             600: {
                 items: 2
             },
-            1024: {
+            991: {
                 items: 3
             },
             4000: {
