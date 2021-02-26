@@ -108,7 +108,12 @@ $menu = true ;
     </div>
 -->
 
-
+<div class="new-section col-xs-12">
+        <div class="container">
+            <div class="row">
+            </div>
+        </div>
+</div>
 
 <div class="h-features col-xs-12">
         <div class="container">
