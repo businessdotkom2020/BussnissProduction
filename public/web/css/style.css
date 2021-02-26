@@ -1128,27 +1128,29 @@ footer.main-footer.col-xs-12 {
 
 .n-products {
     background-color: #fcfcfc;
-    padding: 60px 0
+    padding: 50px 0 40px 0;
 }
 
 .g-head {
-    margin-bottom: 50px;
+    margin-bottom: 30px;
     border-bottom: 1px solid #dfdfdf;
-    padding-bottom: 15px
+    padding-bottom: 12px;
 }
 
 .g-head h3 {
     font-family: tajawal, sans-serif;
     font-weight: 500;
-    font-size: 28px;
-    display: inline-block
+    font-size: 25px;
+    display: inline-block;
+    margin: 0;
 }
 
 .g-head h3 span {
     font-family: inherit;
     font-size: inherit;
     color: #139feb;
-    text-transform: inherit
+    text-transform: inherit;
+    margin: 0 4px;
 }
 
 .g-head a {
@@ -1372,7 +1374,8 @@ footer.main-footer.col-xs-12 {
 .b-product .inner:hover {}
 
 .h-offers {
-    padding: 70px 0;
+    margin-bottom: 30px;
+    padding: 50px 0 45px;
     background: #fcfcfc
 }
 
@@ -1398,7 +1401,7 @@ footer.main-footer.col-xs-12 {
 }
 
 .suppliers {
-    padding: 70px 0
+    padding: 40px 0 55px 0;
 }
 
 .cardo {
@@ -1491,7 +1494,7 @@ footer.main-footer.col-xs-12 {
 
 .services {
     /* background-color:#fcfcfc; */
-    padding: 70px 0;
+    padding: 50px 0;
 }
 
 .s-block {
@@ -5023,7 +5026,7 @@ button.close:hover {
 
 /******************************************/
 .home-banner-ad1 {
-    padding: 60px 0;
+    padding: 30px 0 50px;
 }
 
 .home-banner-ad .col-xs-12 {
@@ -5031,8 +5034,15 @@ button.close:hover {
 }
 
 .h-banner-ad {
-    height: 250px;
+    height: 265px;
     margin-top: 25px;
+    overflow: hidden;
+}
+
+.h-banner-ad a {
+    height: 100%;
+    width: 100%;
+    display: block;
 }
 
 .h-banner-ad img {
@@ -5114,47 +5124,62 @@ button.close:hover {
 .h-supplier-box .c-data p {
     padding: 0 0 10px 0;
 }
-.h-supplier-box .c-data .btn:focus, 
+
+.h-supplier-box .c-data .btn:focus,
 .h-supplier-box .c-data .btn:hover {
     color: #fff !important;
-    background-color: #149EEB!important;
+    background-color: #149EEB !important;
     transition: all .3s;
 }
+
 .cardo .c-inner .c-data .btn i {
     margin: 0 5px;
 }
+
 .h-supplier-box .c-data .btn:hover span,
-.h-supplier-box .c-data .btn:focus span{
+.h-supplier-box .c-data .btn:focus span {
     color: #fff !important;
 }
+
 /******************************* request-se **************************/
-.request-grid{
+.request-grid {
     padding: 10px 10px 15px;
     box-shadow: 0 8px 20px 0 rgba(0, 0, 0, .04);
     transition: all 0.3s ease;
     margin-bottom: 25px;
 }
-.request-grid:hover{ box-shadow: 0px 1px 51px 0px #d9d6d9; }
-.request-grid .request-image{
+
+.request-grid:hover {
+    box-shadow: 0px 1px 51px 0px #d9d6d9;
+}
+
+.request-grid .request-image {
     overflow: hidden;
     position: relative;
     z-index: 1;
     height: 270px;
 }
-.request-grid .request-image a.image{ 
-    display: block; 
+
+.request-grid .request-image a.image {
+    display: block;
     height: 100%;
 }
-.request-grid .request-image img{
+
+.request-grid .request-image img {
     width: 100%;
     height: 100%;
 }
-.request-image .pic-1{
+
+.request-image .pic-1 {
     backface-visibility: hidden;
     transition: all 0.5s;
 }
-.request-grid:hover .request-image .pic-1{ opacity: 0; }
-.request-image .pic-2{
+
+.request-grid:hover .request-image .pic-1 {
+    opacity: 0;
+}
+
+.request-image .pic-2 {
     width: 100%;
     height: 100%;
     backface-visibility: hidden;
@@ -5162,18 +5187,20 @@ button.close:hover {
     position: absolute;
     top: 0;
     left: 0;
-    transition: opacity .5s ease,transform 2s cubic-bezier(0,0,.44,1.18);
+    transition: opacity .5s ease, transform 2s cubic-bezier(0, 0, .44, 1.18);
 }
-.request-grid:hover .request-image .pic-2{
+
+.request-grid:hover .request-image .pic-2 {
     opacity: 1;
     transform: scale(1.09);
 }
-.request-grid .request-discount-label{
+
+.request-grid .request-discount-label {
     content: "";
     color: #fff;
     background: #149EEB;
     font-size: 14px;
-    font-weight:500;
+    font-weight: 500;
     line-height: 12px;
     padding: 5px 30px;
     display: block;
@@ -5182,10 +5209,11 @@ button.close:hover {
     top: 8px;
     left: -28px;
 }
-.request-grid .social{
+
+.request-grid .social {
     text-align: center;
     width: 100%;
-    padding:0;
+    padding: 0;
     margin: 0;
     list-style: none;
     transform: translateX(-50%) translateY(-50%);
@@ -5193,7 +5221,8 @@ button.close:hover {
     top: 50%;
     left: 50%;
 }
-.request-grid .social li{
+
+.request-grid .social li {
     margin: 0 2px;
     display: inline-block;
     opacity: 0;
@@ -5201,14 +5230,25 @@ button.close:hover {
     transition: all 0.3s;
     transition-delay: .1s;
 }
-.request-grid:hover .social li{
+
+.request-grid:hover .social li {
     opacity: 1;
     transform: translateY(0);
 }
-.request-grid:hover .social li:nth-child(2){ transition-delay: .2s; }
-.request-grid:hover .social li:nth-child(3){ transition-delay: .3s; }
-.request-grid:hover .social li{ transform: translateX(0); }
-.request-grid .social li a{
+
+.request-grid:hover .social li:nth-child(2) {
+    transition-delay: .2s;
+}
+
+.request-grid:hover .social li:nth-child(3) {
+    transition-delay: .3s;
+}
+
+.request-grid:hover .social li {
+    transform: translateX(0);
+}
+
+.request-grid .social li a {
     color: #111111;
     background: #fff;
     font-size: 16px;
@@ -5221,27 +5261,30 @@ button.close:hover {
     display: block;
     transition: all .3s;
 }
+
 .request-grid .social li a:hover {
     color: #fff;
     background-color: #149EEB;
 }
+
 .request-grid .social li a:before,
-.request-grid .social li a:after{
+.request-grid .social li a:after {
     content: attr(data-tip);
     color: #fff;
     background-color: #149EEB;
     font-size: 12px;
     line-height: 22px;
     padding: 2px 8px;
-    border-radius:3px;
+    border-radius: 3px;
     white-space: nowrap;
-    display:none;
+    display: none;
     transform: translateX(-50%);
     position: absolute;
     left: 50%;
     top: -35px;
 }
-.request-grid .social li a:after{
+
+.request-grid .social li a:after {
     content: '';
     height: 15px;
     width: 15px;
@@ -5250,15 +5293,18 @@ button.close:hover {
     top: -22px;
     z-index: -1;
 }
+
 .request-grid .social li a:hover:before,
-.request-grid .social li a:hover:after{
+.request-grid .social li a:hover:after {
     display: block;
 }
-.request-grid .request-content{
+
+.request-grid .request-content {
     padding: 17px 0;
     position: relative;
 }
-.request-grid .title{
+
+.request-grid .title {
     font-size: 15px;
     font-weight: 600;
     text-transform: capitalize;
@@ -5267,38 +5313,53 @@ button.close:hover {
     height: 20px;
     overflow: hidden;
 }
-.request-grid .title a{
+
+.request-grid .title a {
     color: #222;
     transition: all 500ms;
 }
-.request-grid .title a:hover{ color: #149EEB; }
-.request-grid .request-category{
+
+.request-grid .title a:hover {
+    color: #149EEB;
+}
+
+.request-grid .request-category {
     font-size: 13px;
     font-weight: 600;
     margin-bottom: 7px;
     display: block;
 }
-.request-grid .request-category a{
+
+.request-grid .request-category a {
     color: #595959;
     transition: all 0.3s ease;
 }
-.request-grid .request-category a:hover{ color: #149EEB; }
-.request-grid .price{
+
+.request-grid .request-category a:hover {
+    color: #149EEB;
+}
+
+.request-grid .price {
     color: #149EEB;
     font-size: 14px;
     font-weight: 600;
-    line-height:20px;
+    line-height: 20px;
     transition: all .3s ease;
 }
-.request-grid .price span{
+
+.request-grid .price span {
     color: #000;
     font-weight: 500;
     text-decoration: line-through;
-    margin-right:4px;
+    margin-right: 4px;
     display: inline-block;
 }
-.request-grid:hover .price{ opacity: 0; }
-.request-grid .add-to-cart{
+
+.request-grid:hover .price {
+    opacity: 0;
+}
+
+.request-grid .add-to-cart {
     color: #149EEB;
     font-weight: 600;
     font-size: 13px;
@@ -5308,11 +5369,16 @@ button.close:hover {
     left: 3px;
     transition: all .3s ease-in-out 0s;
 }
-.request-grid .add-to-cart:hover{ 
+
+.request-grid .add-to-cart:hover {
     /* text-shadow: 2px 2px 1px #999;  */
 }
-.request-grid:hover .add-to-cart{ opacity: 1; }
-.request-grid .rating{
+
+.request-grid:hover .add-to-cart {
+    opacity: 1;
+}
+
+.request-grid .rating {
     color: #ffcd00;
     font-size: 12px;
     padding: 0;
@@ -5322,13 +5388,18 @@ button.close:hover {
     right: 0;
     bottom: 0;
 }
-.request-grid .rating i{
+
+.request-grid .rating i {
     color: #ffcd00;
 }
-.request-grid .rating li{
+
+.request-grid .rating li {
     padding: 0 1px;
 }
-.request-grid .rating i.disable{ color: #e8e8e8; }
+
+.request-grid .rating i.disable {
+    color: #e8e8e8;
+}
 
 /********************************************************************************/
 /*********************************** h-features *****************************************/
@@ -5390,10 +5461,12 @@ button.close:hover {
 
 
 
-
-
 /********************************************************************************/
 /*********************************** h-categories *****************************************/
+.h-categories {
+    padding-bottom: 30px;
+}
+
 .categories-blocks {
     margin: 0 0 30px 0;
     padding: 15px 0;
@@ -5753,4 +5826,9 @@ button.close:hover {
         left: 100%;
         opacity: 0
     }
+}
+
+/*******************************************************************************/
+.new-product-blocks .g-head h3 {
+    margin-top: 5px;
 }
