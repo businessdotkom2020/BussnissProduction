@@ -144,20 +144,23 @@ $(document).ready(function () {
         autoplay: 4000,
         animateIn: 'fadeIn',
         animateOut: 'fadeOut',
-        items: 4,
+        items: 6,
         responsiveClass: true,
         responsive: {
             0: {
-                items: 1
-            },
-            600: {
                 items: 2
             },
-            991: {
+            600: {
                 items: 3
             },
-            4000: {
-                items: 4
+            767: {
+                items: 5
+            },
+            991: {
+                items: 6
+            },
+            2000: {
+                items: 6
             }
         }
     });
@@ -171,20 +174,23 @@ $(document).ready(function () {
         autoplay: 4000,
         animateIn: 'fadeIn',
         animateOut: 'fadeOut',
-        items: 4,
+        items: 6,
         responsiveClass: true,
         responsive: {
             0: {
-                items: 1
-            },
-            600: {
                 items: 2
             },
-            991: {
+            600: {
                 items: 3
             },
-            4000: {
-                items: 4
+            767: {
+                items: 5
+            },
+            991: {
+                items: 6
+            },
+            2000: {
+                items: 6
             }
         }
     });
