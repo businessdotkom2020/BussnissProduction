@@ -4794,7 +4794,7 @@ button.close:hover {
 /**************************************** Mayada **********************************/
 /**************** index ***********************/
 .h-slider-conn {
-    padding: 0 15px;
+    padding: 0 15px 0 0;
 }
 
 .slider-inner {
@@ -4917,7 +4917,7 @@ button.close:hover {
 }
 
 .product-grid:hover .product-links li:nth-child(1) {
-    transition-delay: .4s;
+    transition-delay: .1s;
 }
 
 .product-grid:hover .product-links li:nth-child(2) {

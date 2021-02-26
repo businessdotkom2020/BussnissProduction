@@ -172,6 +172,7 @@ $menu = true ;
             <div class="col-md-12">
                 <div class="g-head">
                     <h3>TOP <span>CATEGORIES</span>OF THE MONTH </h3>
+                    <a href="#" class="more">@lang('general.view_all')</a>
                 </div>
             </div>
                 <div class="col-md-3 col-sm-4 col-sx-12">
@@ -1232,6 +1233,43 @@ $menu = true ;
             </div>
 -->
             <div class="g-body col-xs-12">
+
+                
+                <div class="latest-requests-slider owl-carousel owl-theme">
+                    <div class="item">
+                        <div class="request-grid">
+                            <div class="request-image">
+                                <a href="#" class="image">
+                                    <img class="pic-1" src="https://i.imgur.com/gY5s6z0.jpg">
+                                    <img class="pic-2" src="https://i.imgur.com/CEQeTSE.jpg">
+                                </a>
+
+                                <ul class="social">
+                                    <li><a href="#" data-tip="Quick View" data-toggle="modal"
+                                            data-target="#contact_{{$product->user_id}}" target="_blank"><i
+                                                class="fa fa-eye"></i></a></li>
+                                </ul>
+                            </div>
+                            <div class="request-content">
+                                <h3 class="title"><a href="#">Men's Shirt</a></h3>
+                                <div class="request-de">
+                                    <a class="add-to-cart" href="#" data-tip="add-to-cart" data-toggle="modal"
+                                        data-target="#contact_{{$product->user_id}}" target="_blank">تواصل مع المعلن
+                                    </a>
+                                    <ul class="rating list-inline">
+                                        <li><i class="fa fa-star"></i></li>
+                                        <li><i class="fa fa-star"></i></li>
+                                        <li><i class="fa fa-star"></i></li>
+                                        <li><i class="fa fa-star disable"></i></li>
+                                        <li><i class="fa fa-star disable"></i></li>
+                                    </ul>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
                 <div class="col-md-2 col-sm-3 col-xs-6">
                     <div class="request-grid">
                         <div class="request-image">
@@ -1679,6 +1717,52 @@ $menu = true ;
                 <a href="{{url('products/most-common')}}" class="more">@lang('general.view_all')</a>
             </div>
             <div class="g-body col-xs-12">
+
+
+            <div class="h-offers-slider owl-carousel owl-theme">
+                    <div class="item">
+                        <div class="product-grid">
+                            <div class="product-image">
+                                <a href="#" class="image">
+                                    <img class="pic-1" src="https://i.imgur.com/gY5s6z0.jpg">
+                                    <img class="pic-2" src="https://i.imgur.com/CEQeTSE.jpg">
+                                </a>
+                                <ul class="product-links">
+                                    <li><a href="#" data-tip="Compare"><i class="fa fa-random"></i></a></li>
+                                    <li><a href="#" data-tip="Add to Wishlist"><i class="fa fa-heart"></i></a>
+                                    </li>
+                                    <li><a href="#" data-tip="Quick View"><i class="fa fa-search"></i></a></li>
+                                    <li><a href="#" data-tip="Add to Cart"><i class="fa fa-shopping-cart"></i></a></li>
+                                </ul>
+                            </div>
+                            <div class="product-content">
+                                <h3 class="title"><a href="#">Women's T-Shirt</a></h3>
+                                <div class="price">$70.99</div>
+                                <div class="c-data">
+                                    <p>
+                                        <i class="fa fa-star active"></i>
+                                        <i class="fa fa-star active"></i>
+                                        <i class="fa fa-star active"></i>
+                                        <i class="fa fa-star active"></i>
+                                        <i class="fa fa-star"></i>
+                                    </p>
+                                </div>
+                                <a class="btn h-offers-btn" href="#" data-toggle="modal"
+                                    data-target="#contact_{{$product->user_id}}"
+                                    target="_blank">@lang('general.contact_supplier')</a>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+
+
+
+
+
+
                 <div class="col-md-2 col-sm-3 col-xs-6">
                     <div class="product-grid">
                         <div class="product-image">

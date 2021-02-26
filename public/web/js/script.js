@@ -134,6 +134,67 @@ $(document).ready(function () {
         items: 1
     });
 
+
+    
+
+    $(".latest-requests-slider").owlCarousel({
+        nav: false,
+        loop: true,
+        dots: true,
+        autoplay: 4000,
+        animateIn: 'fadeIn',
+        animateOut: 'fadeOut',
+        items: 4,
+        responsiveClass: true,
+        responsive: {
+            0: {
+                items: 1
+            },
+            600: {
+                items: 2
+            },
+            1024: {
+                items: 3
+            },
+            4000: {
+                items: 4
+            }
+        }
+    });
+
+
+
+    $(".h-offers-slider").owlCarousel({
+        nav: false,
+        loop: true,
+        dots: true,
+        autoplay: 4000,
+        animateIn: 'fadeIn',
+        animateOut: 'fadeOut',
+        items: 4,
+        responsiveClass: true,
+        responsive: {
+            0: {
+                items: 1
+            },
+            600: {
+                items: 2
+            },
+            1024: {
+                items: 3
+            },
+            4000: {
+                items: 4
+            }
+        }
+    });
+
+
+
+
+
+    
+
     $(".i-slider").owlCarousel({
         nav: false,
         loop: true,
