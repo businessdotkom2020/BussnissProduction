@@ -5654,7 +5654,7 @@ button.close:hover {
 }
 
 .loader-inner:before {
-    content: "Loading";
+    content: "";
     /* content: "Loading"; */
     display: block;
     font-size: 10em;
