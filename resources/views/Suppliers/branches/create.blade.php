@@ -16,7 +16,8 @@
                 <h3>@lang('general.add_branch')</h3>
 
             </div>
-            <form action="{{route('store_branch')}}" method="post" enctype="multipart/form-data"> @csrf
+            <form action="{{route('store_branch')}}" method="post" enctype="multipart/form-data">
+                @csrf
 
                 <div class="col-md-12 col-xs-12">
                     <div class="form-group col-md-6 col-xs-12">
