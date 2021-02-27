@@ -214,4 +214,5 @@ Route::get('/profile/update', 'web\SuppliersController@edit')->name('edit_profil
 Route::post('/update/supplier/profile', 'web\SuppliersController@update')->name('update_supplier');
 Route::post('/update/password', 'web\SuppliersController@update_password')->name('update_password');
 Route::get('/add/branch', 'web\BranchController@create_branch')->name('create_branch');
+Route::get('/branch/edit/{branch_id}', 'web\BranchController@edit_branch')->name('edit_branch');
 Route::post('/store/branch', 'web\BranchController@store')->name('store_branch');

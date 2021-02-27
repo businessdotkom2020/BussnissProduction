@@ -31,6 +31,11 @@ class BranchController extends Controller
         return view('Suppliers.branches.create');
     }
 
+    public function edit_branch()
+    {
+        return view('Suppliers.branches.edit');
+    }
+
     public function show($category_id)
     {
 

@@ -229,7 +229,8 @@
 
                         <br>
                         <div class="form-group col-md-12 col-xs-12 center">
-                            <a type="submit" target="_blank" class="btn">@lang('general.update')</a>
+                            <a href="{{route('edit_branch',['branch_id' => {{$branch->id}}])}}" target="_blank"
+                                class="btn">@lang('general.update')</a>
                         </div>
                     </div>
 
