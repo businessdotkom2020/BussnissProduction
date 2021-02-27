@@ -10,6 +10,7 @@ use App\Models\Category;
 use App\Models\Product;
 use App\Models\Service;
 use App\Models\Request;
+use App\Models\Branch;
 
 use App\Http\Resources\ParentCategoryResource;
 use App\Http\Resources\MainCategoryResource;
