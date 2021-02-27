@@ -6,7 +6,7 @@
     </div>
     <div class="f-top col-xs-12">
         <div class="container">
-            <div class="f-item col-md-3 col-sm-3 col-xs-12">
+            <div class="f-item  f-logo-item col-md-3 col-sm-3 col-xs-12">
                 <img src="{{ asset('/web/images/splash_logo.png')}}" alt="">
             </div>
             <div class="f-item col-md-2 col-md-offset-1  col-sm-3 col-xs-12">
