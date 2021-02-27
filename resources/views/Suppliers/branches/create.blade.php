@@ -142,9 +142,7 @@
                         <div id="infowindow-content"> <img src="" width="16" height="16" id="place-icon"> <span
                                 id="place-name" class="title"></span>
                             <br> <span id="place-address"></span> </div>
-                        <div class="form-group col-md-12 col-xs-12 center">
-                            <button type="submit" class="btn">@lang('general.save')</button>
-                        </div>
+
                     </div>
 
                     <div class="form-group col-md-12 col-xs-12 center">
