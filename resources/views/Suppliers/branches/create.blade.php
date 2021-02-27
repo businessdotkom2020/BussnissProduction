@@ -99,10 +99,10 @@
                     </div>
 
                     <div class="form-group col-md-6 col-xs-12">
-                        <h4>@lang('general.working_to')</h4>
-                        <input type="text" required name="working_to" placeholder="@lang('general.working_to')"
+                        <h4>@lang('general.work_to')</h4>
+                        <input type="text" required name="work_to" placeholder="@lang('general.work_to')"
                             class="form-control">
-                        @error('working_to')
+                        @error('work_to')
                         <div class="alert" style="color:#a94442">{{ $message }}</div>
                         @enderror
                     </div>
