@@ -33,8 +33,8 @@ class BranchRequest extends FormRequest
                         'hotline'      => 'required|string|min:4|max:20|unique:branches,land_line',
                         'user_id'      => 'required',
                         "address"         => "required|string",
-                        // "lng"         => "required",
-                        // "lat"         => "required",
+                        "lng"         => "required",
+                        "lat"         => "required",
                     ];
                 }
                 break;

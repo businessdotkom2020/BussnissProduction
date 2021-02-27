@@ -68,6 +68,25 @@
                         <div class="alert" style="color:#a94442">{{ $message }}</div>
                         @enderror
                     </div>
+
+                    <div class="form-group col-md-6 col-xs-12">
+                        <h4>@lang('general.delivery_from')</h4>
+                        <input type="text" required name="delivery_from" placeholder="@lang('general.delivery_from')"
+                            class="form-control">
+                        @error('delivery_from')
+                        <div class="alert" style="color:#a94442">{{ $message }}</div>
+                        @enderror
+                    </div>
+
+                    <div class="form-group col-md-6 col-xs-12">
+                        <h4>@lang('general.delivery_to')</h4>
+                        <input type="text" required name="delivery_to" placeholder="@lang('general.delivery_to')"
+                            class="form-control">
+                        @error('delivery_to')
+                        <div class="alert" style="color:#a94442">{{ $message }}</div>
+                        @enderror
+                    </div>
+
                     <div class="form-group col-md-6 col-xs-12">
                         <h4>@lang('general.work_from')</h4>
                         <input type="text" required name="work_from" placeholder="@lang('general.work_from')"
