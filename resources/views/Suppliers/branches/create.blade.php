@@ -14,7 +14,9 @@
             <div class="form-group col-md-12 col-xs-12 center">
 
                 <h3>@lang('general.add_branch')</h3>
-
+                @if($errors->any())
+                {!! implode('', $errors->all('<div>:message</div>')) !!}
+                @endif
             </div>
             <form action="{{route('store_branch')}}" method="post" enctype="multipart/form-data">
                 @csrf
