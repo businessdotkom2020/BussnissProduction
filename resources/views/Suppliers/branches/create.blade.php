@@ -164,10 +164,11 @@
 @push('scripts')
 <script src="{{ asset('/web/js/select2.full.min.js')}}"></script>
 <script src="{{ asset('/web/js/mapInput.js')}}"></script>
-<script
+{{-- <script
     src="https://maps.googleapis.com/maps/api/js?key={{ env('GOOGLE_MAPS_API_KEY') }}&libraries=places&callback=initMap"
-    async defer></script>
-<script>
+async defer></script> --}}
+<script async defer src="https://maps.googleapis.com/maps/api/js?callback=initMap">
+    <script>
     var x = document.getElementById("demo");
 
 function getLocation() {
