@@ -58,7 +58,7 @@
                         class="form-control"></textarea>
                 </div>
 
-                <div class="form-group col-md-6 col-xs-12 center">
+                <div class="form-group col-md-12 col-xs-12 center">
                     <button type="submit" class="btn">@lang('general.update')</button>
                 </div>
             </div>
