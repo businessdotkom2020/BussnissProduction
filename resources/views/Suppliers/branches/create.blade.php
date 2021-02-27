@@ -13,7 +13,7 @@
         <div class="container">
             <div class="form-group col-md-12 col-xs-12 center">
 
-                <h4>@lang('general.name')</h4>
+                <h3>@lang('general.add_branch')</h3>
 
             </div>
             <form action="{{route('store_branch')}}" method="post" enctype="multipart/form-data"> @csrf
