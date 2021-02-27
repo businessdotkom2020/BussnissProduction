@@ -24,9 +24,10 @@ class AddBranshRequest extends FormRequest
     public function rules()
     {
         return [
+
             'name'             =>  'required',
-            'email'            =>  'required|unique:branches,email',
-            'mobile'           =>  'required',
+            'email'            => 'required|email|unique:branches,email',
+            'mobile'           => 'required|string|min:9|max:20|unique:branches,mobile',
             'land_line'        =>  'required',
             'work_from'        =>  'required',
             'work_to'          =>  'required',
