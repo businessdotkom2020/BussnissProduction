@@ -8,7 +8,7 @@ $menu = true ;
 
 
 <main class="main-content col-xs-12">
-    <div class="col-md-9 col-md-offset-3 col-xs-12">
+    <div class="col-md-9 col-md-offset-3 col-sm-12 col-xs-12 h-slider-conn">
         <div class="h-slider owl-carousel owl-theme">
             <div class="item">
                 <div class="slider-inner">
@@ -91,7 +91,7 @@ $menu = true ;
     </div>
     -->
 
-
+<!--
     <div class="cats col-xs-12">
         <div class="container">
             <ul>
@@ -106,7 +106,310 @@ $menu = true ;
             </ul>
         </div>
     </div>
+-->
 
+<div class="new-section col-xs-12">
+        <div class="container">
+            <div class="row">
+            </div>
+        </div>
+</div>
+
+<div class="h-features col-xs-12">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="features-all">
+                        <!-- Start Block -->
+                        <div class="features-block">
+                            <div class="icon-block">
+                                <img src="https://i.imgur.com/RTTk0lR.png">
+                            </div>
+                            <div class="details-block">
+                                <h4>Secure Payment</h4>
+                                <span>100% secure payment</span>
+                            </div>
+                        </div>
+                        <!-- Start Block -->
+                        <div class="features-block">
+                            <div class="icon-block">
+                                <img src="https://i.imgur.com/CiuevtK.png">
+                            </div>
+                            <div class="details-block">
+                                <h4>24/7 Support</h4>
+                                <span>Dedicated support </span>
+                            </div>
+                        </div>
+                        <!-- Start Block -->
+                        <div class="features-block">
+                            <div class="icon-block">
+                                <img src="https://i.imgur.com/qpcO6RN.png">
+                            </div>
+                            <div class="details-block">
+                                <h4>90 Days Return</h4>
+                                <span>If goods have problems</span>
+                            </div>
+                        </div>
+                        <!-- Start Block -->
+                        <div class="features-block">
+                            <div class="icon-block">
+                                <img src="https://i.imgur.com/EkPv6sc.png">
+                            </div>
+                            <div class="details-block">
+                                <h4>Free Delivery </h4>
+                                <span>For all oders over $99</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="h-categories col-xs-12">
+        <div class="container-fluid">
+            <div class="row">
+            <div class="col-md-12">
+                <div class="g-head">
+                    <h3>TOP <span>CATEGORIES</span>OF THE MONTH </h3>
+                    <a href="#" class="more">@lang('general.view_all')</a>
+                </div>
+            </div>
+                <div class="col-md-3 col-sm-4 col-sx-12">
+                    <div class="row categories-blocks">
+                        <div class="col-md-5 col-sm-5 col-xs-6">
+                            <div class="category-img">
+                                <a href="#">
+                                    <img src="https://demo2.drfuri.com/martfury17/wp-content/uploads/sites/58/elementor/thumbs/c1-o8k9olcyrwe8m5dunmsk1org093wzb8ajrg7wzbc4k.jpg"
+                                        alt="">
+                                </a>
+                            </div>
+                        </div>
+                        <div class="col-md-7 col-sm-7 col-xs-6">
+                            <div class="category-links">
+                                <h4><a href="#">main category</a></h4>
+                                <ul class="list-inline">
+                                    <li><a href="#">sub category</a></li>
+                                    <li><a href="#">sub category</a></li>
+                                    <li><a href="#">sub category</a></li>
+                                    <li><a href="#">sub category</a></li>
+                                    <li><a href="#">sub category</a></li>
+                                    <li><a href="#">sub category</a></li>
+                                </ul>
+                                <a href="#" class="cat-more">
+                                    More
+                                    <i class="fa fa-angle-right hvr-icon"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3 col-sm-4 col-sx-12">
+                    <div class="row categories-blocks">
+                        <div class="col-md-5 col-sm-5 col-xs-6">
+                            <div class="category-img">
+                                <a href="#">
+                                    <img src="https://demo2.drfuri.com/martfury17/wp-content/uploads/sites/58/elementor/thumbs/c1-o8k9olcyrwe8m5dunmsk1org093wzb8ajrg7wzbc4k.jpg"
+                                        alt="">
+                                </a>
+                            </div>
+                        </div>
+                        <div class="col-md-7 col-sm-7 col-xs-6">
+                            <div class="category-links">
+                                <h4><a href="#">main category</a></h4>
+                                <ul class="list-inline">
+                                    <li><a href="#">sub category</a></li>
+                                    <li><a href="#">sub category</a></li>
+                                    <li><a href="#">sub category</a></li>
+                                    <li><a href="#">sub category</a></li>
+                                    <li><a href="#">sub category</a></li>
+                                    <li><a href="#">sub category</a></li>
+                                </ul>
+                                <a href="#" class="cat-more">
+                                    More
+                                    <i class="fa fa-angle-right hvr-icon"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3 col-sm-4 col-sx-12">
+                    <div class="row categories-blocks">
+                        <div class="col-md-5 col-sm-5 col-xs-6">
+                            <div class="category-img">
+                                <a href="#">
+                                    <img src="https://demo2.drfuri.com/martfury17/wp-content/uploads/sites/58/elementor/thumbs/c1-o8k9olcyrwe8m5dunmsk1org093wzb8ajrg7wzbc4k.jpg"
+                                        alt="">
+                                </a>
+                            </div>
+                        </div>
+                        <div class="col-md-7 col-sm-7 col-xs-6">
+                            <div class="category-links">
+                                <h4><a href="#">main category</a></h4>
+                                <ul class="list-inline">
+                                    <li><a href="#">sub category</a></li>
+                                    <li><a href="#">sub category</a></li>
+                                    <li><a href="#">sub category</a></li>
+                                    <li><a href="#">sub category</a></li>
+                                    <li><a href="#">sub category</a></li>
+                                    <li><a href="#">sub category</a></li>
+                                </ul>
+                                <a href="#" class="cat-more">
+                                    More
+                                    <i class="fa fa-angle-right hvr-icon"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3 col-sm-4 col-sx-12">
+                    <div class="row categories-blocks">
+                        <div class="col-md-5 col-sm-5 col-xs-6">
+                            <div class="category-img">
+                                <a href="#">
+                                    <img src="https://demo2.drfuri.com/martfury17/wp-content/uploads/sites/58/elementor/thumbs/c1-o8k9olcyrwe8m5dunmsk1org093wzb8ajrg7wzbc4k.jpg"
+                                        alt="">
+                                </a>
+                            </div>
+                        </div>
+                        <div class="col-md-7 col-sm-7 col-xs-6">
+                            <div class="category-links">
+                                <h4><a href="#">main category</a></h4>
+                                <ul class="list-inline">
+                                    <li><a href="#">sub category</a></li>
+                                    <li><a href="#">sub category</a></li>
+                                    <li><a href="#">sub category</a></li>
+                                    <li><a href="#">sub category</a></li>
+                                    <li><a href="#">sub category</a></li>
+                                    <li><a href="#">sub category</a></li>
+                                </ul>
+                                <a href="#" class="cat-more">
+                                    More
+                                    <i class="fa fa-angle-right hvr-icon"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3 col-sm-4 col-sx-12">
+                    <div class="row categories-blocks">
+                        <div class="col-md-5 col-sm-5 col-xs-6">
+                            <div class="category-img">
+                                <a href="#">
+                                    <img src="https://demo2.drfuri.com/martfury17/wp-content/uploads/sites/58/elementor/thumbs/c1-o8k9olcyrwe8m5dunmsk1org093wzb8ajrg7wzbc4k.jpg"
+                                        alt="">
+                                </a>
+                            </div>
+                        </div>
+                        <div class="col-md-7 col-sm-7 col-xs-6">
+                            <div class="category-links">
+                                <h4><a href="#">main category</a></h4>
+                                <ul class="list-inline">
+                                    <li><a href="#">sub category</a></li>
+                                    <li><a href="#">sub category</a></li>
+                                    <li><a href="#">sub category</a></li>
+                                    <li><a href="#">sub category</a></li>
+                                    <li><a href="#">sub category</a></li>
+                                    <li><a href="#">sub category</a></li>
+                                </ul>
+                                <a href="#" class="cat-more">
+                                    More
+                                    <i class="fa fa-angle-right hvr-icon"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3 col-sm-4 col-sx-12">
+                    <div class="row categories-blocks">
+                        <div class="col-md-5 col-sm-5 col-xs-6">
+                            <div class="category-img">
+                                <a href="#">
+                                    <img src="https://demo2.drfuri.com/martfury17/wp-content/uploads/sites/58/elementor/thumbs/c1-o8k9olcyrwe8m5dunmsk1org093wzb8ajrg7wzbc4k.jpg"
+                                        alt="">
+                                </a>
+                            </div>
+                        </div>
+                        <div class="col-md-7 col-sm-7 col-xs-6">
+                            <div class="category-links">
+                                <h4><a href="#">main category</a></h4>
+                                <ul class="list-inline">
+                                    <li><a href="#">sub category</a></li>
+                                    <li><a href="#">sub category</a></li>
+                                    <li><a href="#">sub category</a></li>
+                                    <li><a href="#">sub category</a></li>
+                                    <li><a href="#">sub category</a></li>
+                                    <li><a href="#">sub category</a></li>
+                                </ul>
+                                <a href="#" class="cat-more">
+                                    More
+                                    <i class="fa fa-angle-right hvr-icon"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3 col-sm-4 col-sx-12">
+                    <div class="row categories-blocks">
+                        <div class="col-md-5 col-sm-5 col-xs-6">
+                            <div class="category-img">
+                                <a href="#">
+                                    <img src="https://demo2.drfuri.com/martfury17/wp-content/uploads/sites/58/elementor/thumbs/c1-o8k9olcyrwe8m5dunmsk1org093wzb8ajrg7wzbc4k.jpg"
+                                        alt="">
+                                </a>
+                            </div>
+                        </div>
+                        <div class="col-md-7 col-sm-7 col-xs-6">
+                            <div class="category-links">
+                                <h4><a href="#">main category</a></h4>
+                                <ul class="list-inline">
+                                    <li><a href="#">sub category</a></li>
+                                    <li><a href="#">sub category</a></li>
+                                    <li><a href="#">sub category</a></li>
+                                    <li><a href="#">sub category</a></li>
+                                    <li><a href="#">sub category</a></li>
+                                    <li><a href="#">sub category</a></li>
+                                </ul>
+                                <a href="#" class="cat-more">
+                                    More
+                                    <i class="fa fa-angle-right hvr-icon"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3 col-sm-4 col-sx-12">
+                    <div class="row categories-blocks">
+                        <div class="col-md-5 col-sm-5 col-xs-6">
+                            <div class="category-img">
+                                <a href="#">
+                                    <img src="https://demo2.drfuri.com/martfury17/wp-content/uploads/sites/58/elementor/thumbs/c1-o8k9olcyrwe8m5dunmsk1org093wzb8ajrg7wzbc4k.jpg"
+                                        alt="">
+                                </a>
+                            </div>
+                        </div>
+                        <div class="col-md-7 col-sm-7 col-xs-6">
+                            <div class="category-links">
+                                <h4><a href="#">main category</a></h4>
+                                <ul class="list-inline">
+                                    <li><a href="#">sub category</a></li>
+                                    <li><a href="#">sub category</a></li>
+                                    <li><a href="#">sub category</a></li>
+                                    <li><a href="#">sub category</a></li>
+                                    <li><a href="#">sub category</a></li>
+                                    <li><a href="#">sub category</a></li>
+                                </ul>
+                                <a href="#" class="cat-more">
+                                    More
+                                    <i class="fa fa-angle-right hvr-icon"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 
 
     <!--
@@ -930,204 +1233,269 @@ $menu = true ;
             </div>
 -->
             <div class="g-body col-xs-12">
-                <div class="col-md-2 col-sm-3 col-xs-6">
-                    <div class="request-grid">
-                        <div class="request-image">
-                            <a href="#" class="image">
-                                <img class="pic-1" src="https://i.imgur.com/gY5s6z0.jpg">
-                                <img class="pic-2" src="https://i.imgur.com/CEQeTSE.jpg">
-                            </a>
 
-                            <ul class="social">
-                                <li><a href="#" data-tip="Quick View" data-toggle="modal"
-                                        data-target="#contact_{{$product->user_id}}" target="_blank"><i
-                                            class="fa fa-eye"></i></a></li>
-                            </ul>
-                        </div>
-                        <div class="request-content">
-                            <h3 class="title"><a href="#">Men's Shirt</a></h3>
-                            <div class="request-de">
-                                <a class="add-to-cart" href="#" data-tip="add-to-cart" data-toggle="modal"
-                                    data-target="#contact_{{$product->user_id}}" target="_blank">تواصل مع المعلن
+                
+                <div class="latest-requests-slider owl-carousel owl-theme">
+                    <div class="item">
+                        <div class="request-grid">
+                            <div class="request-image">
+                                <a href="#" class="image">
+                                    <img class="pic-1" src="https://i.imgur.com/gY5s6z0.jpg">
+                                    <img class="pic-2" src="https://i.imgur.com/CEQeTSE.jpg">
                                 </a>
-                                <ul class="rating list-inline">
-                                    <li><i class="fa fa-star"></i></li>
-                                    <li><i class="fa fa-star"></i></li>
-                                    <li><i class="fa fa-star"></i></li>
-                                    <li><i class="fa fa-star disable"></i></li>
-                                    <li><i class="fa fa-star disable"></i></li>
+
+                                <ul class="social">
+                                    <li><a href="#" data-tip="Quick View" data-toggle="modal"
+                                            data-target="#contact_{{$product->user_id}}" target="_blank"><i
+                                                class="fa fa-eye"></i></a></li>
                                 </ul>
                             </div>
+                            <div class="request-content">
+                                <h3 class="title"><a href="#">Men's Shirt</a></h3>
+                                <div class="request-de">
+                                    <a class="add-to-cart" href="#" data-tip="add-to-cart" data-toggle="modal"
+                                        data-target="#contact_{{$product->user_id}}" target="_blank">تواصل مع المعلن
+                                    </a>
+                                    <ul class="rating list-inline">
+                                        <li><i class="fa fa-star"></i></li>
+                                        <li><i class="fa fa-star"></i></li>
+                                        <li><i class="fa fa-star"></i></li>
+                                        <li><i class="fa fa-star disable"></i></li>
+                                        <li><i class="fa fa-star disable"></i></li>
+                                    </ul>
+                                </div>
 
+                            </div>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="request-grid">
+                            <div class="request-image">
+                                <a href="#" class="image">
+                                    <img class="pic-1" src="https://i.imgur.com/gY5s6z0.jpg">
+                                    <img class="pic-2" src="https://i.imgur.com/CEQeTSE.jpg">
+                                </a>
+
+                                <ul class="social">
+                                    <li><a href="#" data-tip="Quick View" data-toggle="modal"
+                                            data-target="#contact_{{$product->user_id}}" target="_blank"><i
+                                                class="fa fa-eye"></i></a></li>
+                                </ul>
+                            </div>
+                            <div class="request-content">
+                                <h3 class="title"><a href="#">Men's Shirt</a></h3>
+                                <div class="request-de">
+                                    <a class="add-to-cart" href="#" data-tip="add-to-cart" data-toggle="modal"
+                                        data-target="#contact_{{$product->user_id}}" target="_blank">تواصل مع المعلن
+                                    </a>
+                                    <ul class="rating list-inline">
+                                        <li><i class="fa fa-star"></i></li>
+                                        <li><i class="fa fa-star"></i></li>
+                                        <li><i class="fa fa-star"></i></li>
+                                        <li><i class="fa fa-star disable"></i></li>
+                                        <li><i class="fa fa-star disable"></i></li>
+                                    </ul>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="request-grid">
+                            <div class="request-image">
+                                <a href="#" class="image">
+                                    <img class="pic-1" src="https://i.imgur.com/gY5s6z0.jpg">
+                                    <img class="pic-2" src="https://i.imgur.com/CEQeTSE.jpg">
+                                </a>
+
+                                <ul class="social">
+                                    <li><a href="#" data-tip="Quick View" data-toggle="modal"
+                                            data-target="#contact_{{$product->user_id}}" target="_blank"><i
+                                                class="fa fa-eye"></i></a></li>
+                                </ul>
+                            </div>
+                            <div class="request-content">
+                                <h3 class="title"><a href="#">Men's Shirt</a></h3>
+                                <div class="request-de">
+                                    <a class="add-to-cart" href="#" data-tip="add-to-cart" data-toggle="modal"
+                                        data-target="#contact_{{$product->user_id}}" target="_blank">تواصل مع المعلن
+                                    </a>
+                                    <ul class="rating list-inline">
+                                        <li><i class="fa fa-star"></i></li>
+                                        <li><i class="fa fa-star"></i></li>
+                                        <li><i class="fa fa-star"></i></li>
+                                        <li><i class="fa fa-star disable"></i></li>
+                                        <li><i class="fa fa-star disable"></i></li>
+                                    </ul>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="request-grid">
+                            <div class="request-image">
+                                <a href="#" class="image">
+                                    <img class="pic-1" src="https://i.imgur.com/gY5s6z0.jpg">
+                                    <img class="pic-2" src="https://i.imgur.com/CEQeTSE.jpg">
+                                </a>
+
+                                <ul class="social">
+                                    <li><a href="#" data-tip="Quick View" data-toggle="modal"
+                                            data-target="#contact_{{$product->user_id}}" target="_blank"><i
+                                                class="fa fa-eye"></i></a></li>
+                                </ul>
+                            </div>
+                            <div class="request-content">
+                                <h3 class="title"><a href="#">Men's Shirt</a></h3>
+                                <div class="request-de">
+                                    <a class="add-to-cart" href="#" data-tip="add-to-cart" data-toggle="modal"
+                                        data-target="#contact_{{$product->user_id}}" target="_blank">تواصل مع المعلن
+                                    </a>
+                                    <ul class="rating list-inline">
+                                        <li><i class="fa fa-star"></i></li>
+                                        <li><i class="fa fa-star"></i></li>
+                                        <li><i class="fa fa-star"></i></li>
+                                        <li><i class="fa fa-star disable"></i></li>
+                                        <li><i class="fa fa-star disable"></i></li>
+                                    </ul>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="request-grid">
+                            <div class="request-image">
+                                <a href="#" class="image">
+                                    <img class="pic-1" src="https://i.imgur.com/gY5s6z0.jpg">
+                                    <img class="pic-2" src="https://i.imgur.com/CEQeTSE.jpg">
+                                </a>
+
+                                <ul class="social">
+                                    <li><a href="#" data-tip="Quick View" data-toggle="modal"
+                                            data-target="#contact_{{$product->user_id}}" target="_blank"><i
+                                                class="fa fa-eye"></i></a></li>
+                                </ul>
+                            </div>
+                            <div class="request-content">
+                                <h3 class="title"><a href="#">Men's Shirt</a></h3>
+                                <div class="request-de">
+                                    <a class="add-to-cart" href="#" data-tip="add-to-cart" data-toggle="modal"
+                                        data-target="#contact_{{$product->user_id}}" target="_blank">تواصل مع المعلن
+                                    </a>
+                                    <ul class="rating list-inline">
+                                        <li><i class="fa fa-star"></i></li>
+                                        <li><i class="fa fa-star"></i></li>
+                                        <li><i class="fa fa-star"></i></li>
+                                        <li><i class="fa fa-star disable"></i></li>
+                                        <li><i class="fa fa-star disable"></i></li>
+                                    </ul>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="request-grid">
+                            <div class="request-image">
+                                <a href="#" class="image">
+                                    <img class="pic-1" src="https://i.imgur.com/gY5s6z0.jpg">
+                                    <img class="pic-2" src="https://i.imgur.com/CEQeTSE.jpg">
+                                </a>
+
+                                <ul class="social">
+                                    <li><a href="#" data-tip="Quick View" data-toggle="modal"
+                                            data-target="#contact_{{$product->user_id}}" target="_blank"><i
+                                                class="fa fa-eye"></i></a></li>
+                                </ul>
+                            </div>
+                            <div class="request-content">
+                                <h3 class="title"><a href="#">Men's Shirt</a></h3>
+                                <div class="request-de">
+                                    <a class="add-to-cart" href="#" data-tip="add-to-cart" data-toggle="modal"
+                                        data-target="#contact_{{$product->user_id}}" target="_blank">تواصل مع المعلن
+                                    </a>
+                                    <ul class="rating list-inline">
+                                        <li><i class="fa fa-star"></i></li>
+                                        <li><i class="fa fa-star"></i></li>
+                                        <li><i class="fa fa-star"></i></li>
+                                        <li><i class="fa fa-star disable"></i></li>
+                                        <li><i class="fa fa-star disable"></i></li>
+                                    </ul>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="request-grid">
+                            <div class="request-image">
+                                <a href="#" class="image">
+                                    <img class="pic-1" src="https://i.imgur.com/gY5s6z0.jpg">
+                                    <img class="pic-2" src="https://i.imgur.com/CEQeTSE.jpg">
+                                </a>
+
+                                <ul class="social">
+                                    <li><a href="#" data-tip="Quick View" data-toggle="modal"
+                                            data-target="#contact_{{$product->user_id}}" target="_blank"><i
+                                                class="fa fa-eye"></i></a></li>
+                                </ul>
+                            </div>
+                            <div class="request-content">
+                                <h3 class="title"><a href="#">Men's Shirt</a></h3>
+                                <div class="request-de">
+                                    <a class="add-to-cart" href="#" data-tip="add-to-cart" data-toggle="modal"
+                                        data-target="#contact_{{$product->user_id}}" target="_blank">تواصل مع المعلن
+                                    </a>
+                                    <ul class="rating list-inline">
+                                        <li><i class="fa fa-star"></i></li>
+                                        <li><i class="fa fa-star"></i></li>
+                                        <li><i class="fa fa-star"></i></li>
+                                        <li><i class="fa fa-star disable"></i></li>
+                                        <li><i class="fa fa-star disable"></i></li>
+                                    </ul>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="request-grid">
+                            <div class="request-image">
+                                <a href="#" class="image">
+                                    <img class="pic-1" src="https://i.imgur.com/gY5s6z0.jpg">
+                                    <img class="pic-2" src="https://i.imgur.com/CEQeTSE.jpg">
+                                </a>
+
+                                <ul class="social">
+                                    <li><a href="#" data-tip="Quick View" data-toggle="modal"
+                                            data-target="#contact_{{$product->user_id}}" target="_blank"><i
+                                                class="fa fa-eye"></i></a></li>
+                                </ul>
+                            </div>
+                            <div class="request-content">
+                                <h3 class="title"><a href="#">Men's Shirt</a></h3>
+                                <div class="request-de">
+                                    <a class="add-to-cart" href="#" data-tip="add-to-cart" data-toggle="modal"
+                                        data-target="#contact_{{$product->user_id}}" target="_blank">تواصل مع المعلن
+                                    </a>
+                                    <ul class="rating list-inline">
+                                        <li><i class="fa fa-star"></i></li>
+                                        <li><i class="fa fa-star"></i></li>
+                                        <li><i class="fa fa-star"></i></li>
+                                        <li><i class="fa fa-star disable"></i></li>
+                                        <li><i class="fa fa-star disable"></i></li>
+                                    </ul>
+                                </div>
+
+                            </div>
                         </div>
                     </div>
 
                 </div>
-                <div class="col-md-2 col-sm-3 col-xs-6">
-                    <div class="request-grid">
-                        <div class="request-image">
-                            <a href="#" class="image">
-                                <img class="pic-1" src="https://i.imgur.com/gY5s6z0.jpg">
-                                <img class="pic-2" src="https://i.imgur.com/CEQeTSE.jpg">
-                            </a>
 
-                            <ul class="social">
-                                <li><a href="#" data-tip="Quick View" data-toggle="modal"
-                                        data-target="#contact_{{$product->user_id}}" target="_blank"><i
-                                            class="fa fa-eye"></i></a></li>
-                            </ul>
-                        </div>
-                        <div class="request-content">
-                            <h3 class="title"><a href="#">Men's Shirt</a></h3>
-                            <div class="request-de">
-                                <a class="add-to-cart" href="#" data-tip="add-to-cart" data-toggle="modal"
-                                    data-target="#contact_{{$product->user_id}}" target="_blank">تواصل مع المعلن
-                                </a>
-                                <ul class="rating list-inline">
-                                    <li><i class="fa fa-star"></i></li>
-                                    <li><i class="fa fa-star"></i></li>
-                                    <li><i class="fa fa-star"></i></li>
-                                    <li><i class="fa fa-star disable"></i></li>
-                                    <li><i class="fa fa-star disable"></i></li>
-                                </ul>
-                            </div>
 
-                        </div>
-                    </div>
-
-                </div>
-                <div class="col-md-2 col-sm-3 col-xs-6">
-                    <div class="request-grid">
-                        <div class="request-image">
-                            <a href="#" class="image">
-                                <img class="pic-1" src="https://i.imgur.com/gY5s6z0.jpg">
-                                <img class="pic-2" src="https://i.imgur.com/CEQeTSE.jpg">
-                            </a>
-
-                            <ul class="social">
-                                <li><a href="#" data-tip="Quick View" data-toggle="modal"
-                                        data-target="#contact_{{$product->user_id}}" target="_blank"><i
-                                            class="fa fa-eye"></i></a></li>
-                            </ul>
-                        </div>
-                        <div class="request-content">
-                            <h3 class="title"><a href="#">Men's Shirt</a></h3>
-                            <div class="request-de">
-                                <a class="add-to-cart" href="#" data-tip="add-to-cart" data-toggle="modal"
-                                    data-target="#contact_{{$product->user_id}}" target="_blank">تواصل مع المعلن
-                                </a>
-                                <ul class="rating list-inline">
-                                    <li><i class="fa fa-star"></i></li>
-                                    <li><i class="fa fa-star"></i></li>
-                                    <li><i class="fa fa-star"></i></li>
-                                    <li><i class="fa fa-star disable"></i></li>
-                                    <li><i class="fa fa-star disable"></i></li>
-                                </ul>
-                            </div>
-
-                        </div>
-                    </div>
-
-                </div>
-                <div class="col-md-2 col-sm-3 col-xs-6">
-                    <div class="request-grid">
-                        <div class="request-image">
-                            <a href="#" class="image">
-                                <img class="pic-1" src="https://i.imgur.com/gY5s6z0.jpg">
-                                <img class="pic-2" src="https://i.imgur.com/CEQeTSE.jpg">
-                            </a>
-
-                            <ul class="social">
-                                <li><a href="#" data-tip="Quick View" data-toggle="modal"
-                                        data-target="#contact_{{$product->user_id}}" target="_blank"><i
-                                            class="fa fa-eye"></i></a></li>
-                            </ul>
-                        </div>
-                        <div class="request-content">
-                            <h3 class="title"><a href="#">Men's Shirt</a></h3>
-                            <div class="request-de">
-                                <a class="add-to-cart" href="#" data-tip="add-to-cart" data-toggle="modal"
-                                    data-target="#contact_{{$product->user_id}}" target="_blank">تواصل مع المعلن
-                                </a>
-                                <ul class="rating list-inline">
-                                    <li><i class="fa fa-star"></i></li>
-                                    <li><i class="fa fa-star"></i></li>
-                                    <li><i class="fa fa-star"></i></li>
-                                    <li><i class="fa fa-star disable"></i></li>
-                                    <li><i class="fa fa-star disable"></i></li>
-                                </ul>
-                            </div>
-
-                        </div>
-                    </div>
-
-                </div>
-                <div class="col-md-2 col-sm-3 col-xs-6">
-                    <div class="request-grid">
-                        <div class="request-image">
-                            <a href="#" class="image">
-                                <img class="pic-1" src="https://i.imgur.com/gY5s6z0.jpg">
-                                <img class="pic-2" src="https://i.imgur.com/CEQeTSE.jpg">
-                            </a>
-
-                            <ul class="social">
-                                <li><a href="#" data-tip="Quick View" data-toggle="modal"
-                                        data-target="#contact_{{$product->user_id}}" target="_blank"><i
-                                            class="fa fa-eye"></i></a></li>
-                            </ul>
-                        </div>
-                        <div class="request-content">
-                            <h3 class="title"><a href="#">Men's Shirt</a></h3>
-                            <div class="request-de">
-                                <a class="add-to-cart" href="#" data-tip="add-to-cart" data-toggle="modal"
-                                    data-target="#contact_{{$product->user_id}}" target="_blank">تواصل مع المعلن
-                                </a>
-                                <ul class="rating list-inline">
-                                    <li><i class="fa fa-star"></i></li>
-                                    <li><i class="fa fa-star"></i></li>
-                                    <li><i class="fa fa-star"></i></li>
-                                    <li><i class="fa fa-star disable"></i></li>
-                                    <li><i class="fa fa-star disable"></i></li>
-                                </ul>
-                            </div>
-
-                        </div>
-                    </div>
-
-                </div>
-                <div class="col-md-2 col-sm-3 col-xs-6">
-                    <div class="request-grid">
-                        <div class="request-image">
-                            <a href="#" class="image">
-                                <img class="pic-1" src="https://i.imgur.com/gY5s6z0.jpg">
-                                <img class="pic-2" src="https://i.imgur.com/CEQeTSE.jpg">
-                            </a>
-
-                            <ul class="social">
-                                <li><a href="#" data-tip="Quick View" data-toggle="modal"
-                                        data-target="#contact_{{$product->user_id}}" target="_blank"><i
-                                            class="fa fa-eye"></i></a></li>
-                            </ul>
-                        </div>
-                        <div class="request-content">
-                            <h3 class="title"><a href="#">Men's Shirt</a></h3>
-                            <div class="request-de">
-                                <a class="add-to-cart" href="#" data-tip="add-to-cart" data-toggle="modal"
-                                    data-target="#contact_{{$product->user_id}}" target="_blank">تواصل مع المعلن
-                                </a>
-                                <ul class="rating list-inline">
-                                    <li><i class="fa fa-star"></i></li>
-                                    <li><i class="fa fa-star"></i></li>
-                                    <li><i class="fa fa-star"></i></li>
-                                    <li><i class="fa fa-star disable"></i></li>
-                                    <li><i class="fa fa-star disable"></i></li>
-                                </ul>
-                            </div>
-
-                        </div>
-                    </div>
-
-                </div>
             </div>
 
         </div>
@@ -1377,211 +1745,353 @@ $menu = true ;
                 <a href="{{url('products/most-common')}}" class="more">@lang('general.view_all')</a>
             </div>
             <div class="g-body col-xs-12">
-                <div class="col-md-2 col-sm-3 col-xs-6">
-                    <div class="product-grid">
-                        <div class="product-image">
-                            <a href="#" class="image">
-                                <img class="pic-1" src="https://i.imgur.com/gY5s6z0.jpg">
-                                <img class="pic-2" src="https://i.imgur.com/CEQeTSE.jpg">
-                            </a>
-                            <ul class="product-links">
-                                <li><a href="#" data-tip="Compare"><i class="fa fa-random"></i></a></li>
-                                <li><a href="#" data-tip="Add to Wishlist"><i class="fa fa-heart"></i></a>
-                                </li>
-                                <li><a href="#" data-tip="Quick View"><i class="fa fa-search"></i></a></li>
-                                <li><a href="#" data-tip="Add to Cart"><i class="fa fa-shopping-cart"></i></a></li>
-                            </ul>
-                        </div>
-                        <div class="product-content">
-                            <h3 class="title"><a href="#">Women's T-Shirt</a></h3>
-                            <div class="price">$70.99</div>
-                            <div class="c-data">
-                                <p>
-                                    <i class="fa fa-star active"></i>
-                                    <i class="fa fa-star active"></i>
-                                    <i class="fa fa-star active"></i>
-                                    <i class="fa fa-star active"></i>
-                                    <i class="fa fa-star"></i>
-                                </p>
-                            </div>
-                            <a class="btn h-offers-btn" href="#" data-toggle="modal"
-                                data-target="#contact_{{$product->user_id}}"
-                                target="_blank">@lang('general.contact_supplier')</a>
 
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-2 col-sm-3 col-xs-6">
-                    <div class="product-grid">
-                        <div class="product-image">
-                            <a href="#" class="image">
-                                <img class="pic-1" src="https://i.imgur.com/gY5s6z0.jpg">
-                                <img class="pic-2" src="https://i.imgur.com/CEQeTSE.jpg">
-                            </a>
-                            <span class="product-discount-label">-33%</span>
-                            <ul class="product-links">
-                                <li><a href="#" data-tip="Compare"><i class="fa fa-random"></i></a></li>
-                                <li><a href="#" data-tip="Add to Wishlist"><i class="fa fa-heart"></i></a>
-                                </li>
-                                <li><a href="#" data-tip="Quick View"><i class="fa fa-search"></i></a></li>
-                                <li><a href="#" data-tip="Add to Cart"><i class="fa fa-shopping-cart"></i></a></li>
-                            </ul>
-                        </div>
-                        <div class="product-content">
-                            <h3 class="title"><a href="#">Men's T-Shirt</a></h3>
-                            <div class="price"><span>$85.33</span> $57.22</div>
-                            <div class="c-data">
-                                <p>
-                                    <i class="fa fa-star active"></i>
-                                    <i class="fa fa-star active"></i>
-                                    <i class="fa fa-star active"></i>
-                                    <i class="fa fa-star active"></i>
-                                    <i class="fa fa-star"></i>
-                                </p>
+
+            <div class="h-offers-slider owl-carousel owl-theme">
+                    <div class="item">
+                        <div class="product-grid">
+                            <div class="product-image">
+                                <a href="#" class="image">
+                                    <img class="pic-1" src="https://i.imgur.com/gY5s6z0.jpg">
+                                    <img class="pic-2" src="https://i.imgur.com/CEQeTSE.jpg">
+                                </a>
+                                <ul class="product-links">
+                                    <li><a href="#" data-tip="Compare"><i class="fa fa-random"></i></a></li>
+                                    <li><a href="#" data-tip="Add to Wishlist"><i class="fa fa-heart"></i></a>
+                                    </li>
+                                    <li><a href="#" data-tip="Quick View"><i class="fa fa-search"></i></a></li>
+                                    <li><a href="#" data-tip="Add to Cart"><i class="fa fa-shopping-cart"></i></a></li>
+                                </ul>
                             </div>
-                            <a class="btn h-offers-btn" href="#" data-toggle="modal"
-                                data-target="#contact_{{$product->user_id}}"
-                                target="_blank">@lang('general.contact_supplier')</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-2 col-sm-3 col-xs-6">
-                    <div class="product-grid">
-                        <div class="product-image">
-                            <a href="#" class="image">
-                                <img class="pic-1" src="https://i.imgur.com/gY5s6z0.jpg">
-                                <img class="pic-2" src="https://i.imgur.com/CEQeTSE.jpg">
-                            </a>
-                            <span class="product-new-label">New</span>
-                            <ul class="product-links">
-                                <li><a href="#" data-tip="Compare"><i class="fa fa-random"></i></a></li>
-                                <li><a href="#" data-tip="Add to Wishlist"><i class="fa fa-heart"></i></a>
-                                </li>
-                                <li><a href="#" data-tip="Quick View"><i class="fa fa-search"></i></a></li>
-                                <li><a href="#" data-tip="Add to Cart"><i class="fa fa-shopping-cart"></i></a></li>
-                            </ul>
-                        </div>
-                        <div class="product-content">
-                            <h3 class="title"><a href="#">Women's Top</a></h3>
-                            <div class="price">$60.99</div>
-                            <div class="c-data">
-                                <p>
-                                    <i class="fa fa-star active"></i>
-                                    <i class="fa fa-star active"></i>
-                                    <i class="fa fa-star active"></i>
-                                    <i class="fa fa-star active"></i>
-                                    <i class="fa fa-star"></i>
-                                </p>
-                            </div>
-                            <a class="btn h-offers-btn" href="#" data-toggle="modal"
-                                data-target="#contact_{{$product->user_id}}"
-                                target="_blank">@lang('general.contact_supplier')</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-2 col-sm-3 col-xs-6">
-                    <div class="product-grid">
-                        <div class="product-image">
-                            <a href="#" class="image">
-                                <img class="pic-1" src="https://i.imgur.com/gY5s6z0.jpg">
-                                <img class="pic-2" src="https://i.imgur.com/CEQeTSE.jpg">
-                            </a>
-                            <span class="product-new-label">New</span>
-                            <ul class="product-links">
-                                <li><a href="#" data-tip="Compare"><i class="fa fa-random"></i></a></li>
-                                <li><a href="#" data-tip="Add to Wishlist"><i class="fa fa-heart"></i></a>
-                                </li>
-                                <li><a href="#" data-tip="Quick View"><i class="fa fa-search"></i></a></li>
-                                <li><a href="#" data-tip="Add to Cart"><i class="fa fa-shopping-cart"></i></a></li>
-                            </ul>
-                        </div>
-                        <div class="product-content">
-                            <h3 class="title"><a href="#">Women's Top</a></h3>
-                            <div class="price">$60.99</div>
-                            <div class="c-data">
-                                <p>
-                                    <i class="fa fa-star active"></i>
-                                    <i class="fa fa-star active"></i>
-                                    <i class="fa fa-star active"></i>
-                                    <i class="fa fa-star active"></i>
-                                    <i class="fa fa-star"></i>
-                                </p>
-                            </div>
-                            <a class="btn h-offers-btn" href="#" data-toggle="modal"
-                                data-target="#contact_{{$product->user_id}}"
-                                target="_blank">@lang('general.contact_supplier')</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-2 col-sm-3 col-xs-6">
-                    <div class="product-grid">
-                        <div class="product-image">
-                            <a href="#" class="image">
-                                <img class="pic-1" src="https://i.imgur.com/gY5s6z0.jpg">
-                                <img class="pic-2" src="https://i.imgur.com/CEQeTSE.jpg">
-                            </a>
-                            <span class="product-new-label">New</span>
-                            <ul class="product-links">
-                                <li><a href="#" data-tip="Compare"><i class="fa fa-random"></i></a></li>
-                                <li><a href="#" data-tip="Add to Wishlist"><i class="fa fa-heart"></i></a>
-                                </li>
-                                <li><a href="#" data-tip="Quick View"><i class="fa fa-search"></i></a></li>
-                                <li><a href="#" data-tip="Add to Cart"><i class="fa fa-shopping-cart"></i></a></li>
-                            </ul>
-                        </div>
-                        <div class="product-content">
-                            <h3 class="title"><a href="#">Women's Top</a></h3>
-                            <div class="price">$60.99</div>
-                            <div class="c-data">
-                                <p>
-                                    <i class="fa fa-star active"></i>
-                                    <i class="fa fa-star active"></i>
-                                    <i class="fa fa-star active"></i>
-                                    <i class="fa fa-star active"></i>
-                                    <i class="fa fa-star"></i>
-                                </p>
+                            <div class="product-content">
+                                <h3 class="title"><a href="#">Women's T-Shirt</a></h3>
+                                <div class="price">$70.99</div>
+                                <div class="c-data">
+                                    <p>
+                                        <i class="fa fa-star active"></i>
+                                        <i class="fa fa-star active"></i>
+                                        <i class="fa fa-star active"></i>
+                                        <i class="fa fa-star active"></i>
+                                        <i class="fa fa-star"></i>
+                                    </p>
+                                </div>
+                                <a class="btn h-offers-btn" href="#" data-toggle="modal"
+                                    data-target="#contact_{{$product->user_id}}"
+                                    target="_blank">@lang('general.contact_supplier')</a>
 
                             </div>
-                            <a class="btn h-offers-btn" href="#" data-toggle="modal"
-                                data-target="#contact_{{$product->user_id}}"
-                                target="_blank">@lang('general.contact_supplier')</a>
                         </div>
                     </div>
-                </div>
-                <div class="col-md-2 col-sm-3 col-xs-6">
-                    <div class="product-grid">
-                        <div class="product-image">
-                            <a href="#" class="image">
-                                <img class="pic-1" src="images/img-1.jpg">
-                                <img class="pic-2" src="images/img-2.jpg">
-                            </a>
-                            <span class="product-new-label">New</span>
-                            <ul class="product-links">
-                                <li><a href="#" data-tip="Compare"><i class="fa fa-random"></i></a></li>
-                                <li><a href="#" data-tip="Add to Wishlist"><i class="fa fa-heart"></i></a>
-                                </li>
-                                <li><a href="#" data-tip="Quick View"><i class="fa fa-search"></i></a></li>
-                                <li><a href="#" data-tip="Add to Cart"><i class="fa fa-shopping-cart"></i></a></li>
-                            </ul>
-                        </div>
-                        <div class="product-content">
-                            <h3 class="title"><a href="#">Women's Top</a></h3>
-                            <div class="price">$60.99</div>
-                            <div class="c-data">
-                                <p>
-                                    <i class="fa fa-star active"></i>
-                                    <i class="fa fa-star active"></i>
-                                    <i class="fa fa-star active"></i>
-                                    <i class="fa fa-star active"></i>
-                                    <i class="fa fa-star"></i>
-                                </p>
+                    <div class="item">
+                        <div class="product-grid">
+                            <div class="product-image">
+                                <a href="#" class="image">
+                                    <img class="pic-1" src="https://i.imgur.com/gY5s6z0.jpg">
+                                    <img class="pic-2" src="https://i.imgur.com/CEQeTSE.jpg">
+                                </a>
+                                <ul class="product-links">
+                                    <li><a href="#" data-tip="Compare"><i class="fa fa-random"></i></a></li>
+                                    <li><a href="#" data-tip="Add to Wishlist"><i class="fa fa-heart"></i></a>
+                                    </li>
+                                    <li><a href="#" data-tip="Quick View"><i class="fa fa-search"></i></a></li>
+                                    <li><a href="#" data-tip="Add to Cart"><i class="fa fa-shopping-cart"></i></a></li>
+                                </ul>
                             </div>
-                            <a class="btn h-offers-btn" href="#" data-toggle="modal"
-                                data-target="#contact_{{$product->user_id}}"
-                                target="_blank">@lang('general.contact_supplier')</a>
+                            <div class="product-content">
+                                <h3 class="title"><a href="#">Women's T-Shirt</a></h3>
+                                <div class="price">$70.99</div>
+                                <div class="c-data">
+                                    <p>
+                                        <i class="fa fa-star active"></i>
+                                        <i class="fa fa-star active"></i>
+                                        <i class="fa fa-star active"></i>
+                                        <i class="fa fa-star active"></i>
+                                        <i class="fa fa-star"></i>
+                                    </p>
+                                </div>
+                                <a class="btn h-offers-btn" href="#" data-toggle="modal"
+                                    data-target="#contact_{{$product->user_id}}"
+                                    target="_blank">@lang('general.contact_supplier')</a>
+
+                            </div>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="product-grid">
+                            <div class="product-image">
+                                <a href="#" class="image">
+                                    <img class="pic-1" src="https://i.imgur.com/gY5s6z0.jpg">
+                                    <img class="pic-2" src="https://i.imgur.com/CEQeTSE.jpg">
+                                </a>
+                                <ul class="product-links">
+                                    <li><a href="#" data-tip="Compare"><i class="fa fa-random"></i></a></li>
+                                    <li><a href="#" data-tip="Add to Wishlist"><i class="fa fa-heart"></i></a>
+                                    </li>
+                                    <li><a href="#" data-tip="Quick View"><i class="fa fa-search"></i></a></li>
+                                    <li><a href="#" data-tip="Add to Cart"><i class="fa fa-shopping-cart"></i></a></li>
+                                </ul>
+                            </div>
+                            <div class="product-content">
+                                <h3 class="title"><a href="#">Women's T-Shirt</a></h3>
+                                <div class="price">$70.99</div>
+                                <div class="c-data">
+                                    <p>
+                                        <i class="fa fa-star active"></i>
+                                        <i class="fa fa-star active"></i>
+                                        <i class="fa fa-star active"></i>
+                                        <i class="fa fa-star active"></i>
+                                        <i class="fa fa-star"></i>
+                                    </p>
+                                </div>
+                                <a class="btn h-offers-btn" href="#" data-toggle="modal"
+                                    data-target="#contact_{{$product->user_id}}"
+                                    target="_blank">@lang('general.contact_supplier')</a>
+
+                            </div>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="product-grid">
+                            <div class="product-image">
+                                <a href="#" class="image">
+                                    <img class="pic-1" src="https://i.imgur.com/gY5s6z0.jpg">
+                                    <img class="pic-2" src="https://i.imgur.com/CEQeTSE.jpg">
+                                </a>
+                                <ul class="product-links">
+                                    <li><a href="#" data-tip="Compare"><i class="fa fa-random"></i></a></li>
+                                    <li><a href="#" data-tip="Add to Wishlist"><i class="fa fa-heart"></i></a>
+                                    </li>
+                                    <li><a href="#" data-tip="Quick View"><i class="fa fa-search"></i></a></li>
+                                    <li><a href="#" data-tip="Add to Cart"><i class="fa fa-shopping-cart"></i></a></li>
+                                </ul>
+                            </div>
+                            <div class="product-content">
+                                <h3 class="title"><a href="#">Women's T-Shirt</a></h3>
+                                <div class="price">$70.99</div>
+                                <div class="c-data">
+                                    <p>
+                                        <i class="fa fa-star active"></i>
+                                        <i class="fa fa-star active"></i>
+                                        <i class="fa fa-star active"></i>
+                                        <i class="fa fa-star active"></i>
+                                        <i class="fa fa-star"></i>
+                                    </p>
+                                </div>
+                                <a class="btn h-offers-btn" href="#" data-toggle="modal"
+                                    data-target="#contact_{{$product->user_id}}"
+                                    target="_blank">@lang('general.contact_supplier')</a>
+
+                            </div>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="product-grid">
+                            <div class="product-image">
+                                <a href="#" class="image">
+                                    <img class="pic-1" src="https://i.imgur.com/gY5s6z0.jpg">
+                                    <img class="pic-2" src="https://i.imgur.com/CEQeTSE.jpg">
+                                </a>
+                                <ul class="product-links">
+                                    <li><a href="#" data-tip="Compare"><i class="fa fa-random"></i></a></li>
+                                    <li><a href="#" data-tip="Add to Wishlist"><i class="fa fa-heart"></i></a>
+                                    </li>
+                                    <li><a href="#" data-tip="Quick View"><i class="fa fa-search"></i></a></li>
+                                    <li><a href="#" data-tip="Add to Cart"><i class="fa fa-shopping-cart"></i></a></li>
+                                </ul>
+                            </div>
+                            <div class="product-content">
+                                <h3 class="title"><a href="#">Women's T-Shirt</a></h3>
+                                <div class="price">$70.99</div>
+                                <div class="c-data">
+                                    <p>
+                                        <i class="fa fa-star active"></i>
+                                        <i class="fa fa-star active"></i>
+                                        <i class="fa fa-star active"></i>
+                                        <i class="fa fa-star active"></i>
+                                        <i class="fa fa-star"></i>
+                                    </p>
+                                </div>
+                                <a class="btn h-offers-btn" href="#" data-toggle="modal"
+                                    data-target="#contact_{{$product->user_id}}"
+                                    target="_blank">@lang('general.contact_supplier')</a>
+
+                            </div>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="product-grid">
+                            <div class="product-image">
+                                <a href="#" class="image">
+                                    <img class="pic-1" src="https://i.imgur.com/gY5s6z0.jpg">
+                                    <img class="pic-2" src="https://i.imgur.com/CEQeTSE.jpg">
+                                </a>
+                                <ul class="product-links">
+                                    <li><a href="#" data-tip="Compare"><i class="fa fa-random"></i></a></li>
+                                    <li><a href="#" data-tip="Add to Wishlist"><i class="fa fa-heart"></i></a>
+                                    </li>
+                                    <li><a href="#" data-tip="Quick View"><i class="fa fa-search"></i></a></li>
+                                    <li><a href="#" data-tip="Add to Cart"><i class="fa fa-shopping-cart"></i></a></li>
+                                </ul>
+                            </div>
+                            <div class="product-content">
+                                <h3 class="title"><a href="#">Women's T-Shirt</a></h3>
+                                <div class="price">$70.99</div>
+                                <div class="c-data">
+                                    <p>
+                                        <i class="fa fa-star active"></i>
+                                        <i class="fa fa-star active"></i>
+                                        <i class="fa fa-star active"></i>
+                                        <i class="fa fa-star active"></i>
+                                        <i class="fa fa-star"></i>
+                                    </p>
+                                </div>
+                                <a class="btn h-offers-btn" href="#" data-toggle="modal"
+                                    data-target="#contact_{{$product->user_id}}"
+                                    target="_blank">@lang('general.contact_supplier')</a>
+
+                            </div>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="product-grid">
+                            <div class="product-image">
+                                <a href="#" class="image">
+                                    <img class="pic-1" src="https://i.imgur.com/gY5s6z0.jpg">
+                                    <img class="pic-2" src="https://i.imgur.com/CEQeTSE.jpg">
+                                </a>
+                                <ul class="product-links">
+                                    <li><a href="#" data-tip="Compare"><i class="fa fa-random"></i></a></li>
+                                    <li><a href="#" data-tip="Add to Wishlist"><i class="fa fa-heart"></i></a>
+                                    </li>
+                                    <li><a href="#" data-tip="Quick View"><i class="fa fa-search"></i></a></li>
+                                    <li><a href="#" data-tip="Add to Cart"><i class="fa fa-shopping-cart"></i></a></li>
+                                </ul>
+                            </div>
+                            <div class="product-content">
+                                <h3 class="title"><a href="#">Women's T-Shirt</a></h3>
+                                <div class="price">$70.99</div>
+                                <div class="c-data">
+                                    <p>
+                                        <i class="fa fa-star active"></i>
+                                        <i class="fa fa-star active"></i>
+                                        <i class="fa fa-star active"></i>
+                                        <i class="fa fa-star active"></i>
+                                        <i class="fa fa-star"></i>
+                                    </p>
+                                </div>
+                                <a class="btn h-offers-btn" href="#" data-toggle="modal"
+                                    data-target="#contact_{{$product->user_id}}"
+                                    target="_blank">@lang('general.contact_supplier')</a>
+
+                            </div>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="product-grid">
+                            <div class="product-image">
+                                <a href="#" class="image">
+                                    <img class="pic-1" src="https://i.imgur.com/gY5s6z0.jpg">
+                                    <img class="pic-2" src="https://i.imgur.com/CEQeTSE.jpg">
+                                </a>
+                                <ul class="product-links">
+                                    <li><a href="#" data-tip="Compare"><i class="fa fa-random"></i></a></li>
+                                    <li><a href="#" data-tip="Add to Wishlist"><i class="fa fa-heart"></i></a>
+                                    </li>
+                                    <li><a href="#" data-tip="Quick View"><i class="fa fa-search"></i></a></li>
+                                    <li><a href="#" data-tip="Add to Cart"><i class="fa fa-shopping-cart"></i></a></li>
+                                </ul>
+                            </div>
+                            <div class="product-content">
+                                <h3 class="title"><a href="#">Women's T-Shirt</a></h3>
+                                <div class="price">$70.99</div>
+                                <div class="c-data">
+                                    <p>
+                                        <i class="fa fa-star active"></i>
+                                        <i class="fa fa-star active"></i>
+                                        <i class="fa fa-star active"></i>
+                                        <i class="fa fa-star active"></i>
+                                        <i class="fa fa-star"></i>
+                                    </p>
+                                </div>
+                                <a class="btn h-offers-btn" href="#" data-toggle="modal"
+                                    data-target="#contact_{{$product->user_id}}"
+                                    target="_blank">@lang('general.contact_supplier')</a>
+
+                            </div>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="product-grid">
+                            <div class="product-image">
+                                <a href="#" class="image">
+                                    <img class="pic-1" src="https://i.imgur.com/gY5s6z0.jpg">
+                                    <img class="pic-2" src="https://i.imgur.com/CEQeTSE.jpg">
+                                </a>
+                                <ul class="product-links">
+                                    <li><a href="#" data-tip="Compare"><i class="fa fa-random"></i></a></li>
+                                    <li><a href="#" data-tip="Add to Wishlist"><i class="fa fa-heart"></i></a>
+                                    </li>
+                                    <li><a href="#" data-tip="Quick View"><i class="fa fa-search"></i></a></li>
+                                    <li><a href="#" data-tip="Add to Cart"><i class="fa fa-shopping-cart"></i></a></li>
+                                </ul>
+                            </div>
+                            <div class="product-content">
+                                <h3 class="title"><a href="#">Women's T-Shirt</a></h3>
+                                <div class="price">$70.99</div>
+                                <div class="c-data">
+                                    <p>
+                                        <i class="fa fa-star active"></i>
+                                        <i class="fa fa-star active"></i>
+                                        <i class="fa fa-star active"></i>
+                                        <i class="fa fa-star active"></i>
+                                        <i class="fa fa-star"></i>
+                                    </p>
+                                </div>
+                                <a class="btn h-offers-btn" href="#" data-toggle="modal"
+                                    data-target="#contact_{{$product->user_id}}"
+                                    target="_blank">@lang('general.contact_supplier')</a>
+
+                            </div>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="product-grid">
+                            <div class="product-image">
+                                <a href="#" class="image">
+                                    <img class="pic-1" src="https://i.imgur.com/gY5s6z0.jpg">
+                                    <img class="pic-2" src="https://i.imgur.com/CEQeTSE.jpg">
+                                </a>
+                                <ul class="product-links">
+                                    <li><a href="#" data-tip="Compare"><i class="fa fa-random"></i></a></li>
+                                    <li><a href="#" data-tip="Add to Wishlist"><i class="fa fa-heart"></i></a>
+                                    </li>
+                                    <li><a href="#" data-tip="Quick View"><i class="fa fa-search"></i></a></li>
+                                    <li><a href="#" data-tip="Add to Cart"><i class="fa fa-shopping-cart"></i></a></li>
+                                </ul>
+                            </div>
+                            <div class="product-content">
+                                <h3 class="title"><a href="#">Women's T-Shirt</a></h3>
+                                <div class="price">$70.99</div>
+                                <div class="c-data">
+                                    <p>
+                                        <i class="fa fa-star active"></i>
+                                        <i class="fa fa-star active"></i>
+                                        <i class="fa fa-star active"></i>
+                                        <i class="fa fa-star active"></i>
+                                        <i class="fa fa-star"></i>
+                                    </p>
+                                </div>
+                                <a class="btn h-offers-btn" href="#" data-toggle="modal"
+                                    data-target="#contact_{{$product->user_id}}"
+                                    target="_blank">@lang('general.contact_supplier')</a>
+
+                            </div>
                         </div>
                     </div>
                 </div>
+
+
+
 
 
 

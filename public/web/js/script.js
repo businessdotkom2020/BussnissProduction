@@ -10,6 +10,12 @@ $(document).ready(function () {
         $('#loading').fadeOut(1000);
     });
 
+    $(window).load(function () {
+        $("body").css('overflow-y', 'auto');
+        $('.loader0').fadeOut(1000);
+    });
+
+
     $('[data-tool="tooltip"]').tooltip({
         trigger: 'hover',
         animate: true,
@@ -127,6 +133,73 @@ $(document).ready(function () {
         animateOut: 'fadeOut',
         items: 1
     });
+
+
+    
+
+    $(".latest-requests-slider").owlCarousel({
+        nav: false,
+        loop: true,
+        dots: true,
+        autoplay: 4000,
+        animateIn: 'fadeIn',
+        animateOut: 'fadeOut',
+        items: 6,
+        responsiveClass: true,
+        responsive: {
+            0: {
+                items: 2
+            },
+            600: {
+                items: 3
+            },
+            767: {
+                items: 5
+            },
+            991: {
+                items: 6
+            },
+            2000: {
+                items: 6
+            }
+        }
+    });
+
+
+
+    $(".h-offers-slider").owlCarousel({
+        nav: false,
+        loop: true,
+        dots: true,
+        autoplay: 4000,
+        animateIn: 'fadeIn',
+        animateOut: 'fadeOut',
+        items: 6,
+        responsiveClass: true,
+        responsive: {
+            0: {
+                items: 2
+            },
+            600: {
+                items: 3
+            },
+            767: {
+                items: 5
+            },
+            991: {
+                items: 6
+            },
+            2000: {
+                items: 6
+            }
+        }
+    });
+
+
+
+
+
+    
 
     $(".i-slider").owlCarousel({
         nav: false,
