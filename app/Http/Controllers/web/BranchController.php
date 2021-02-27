@@ -67,7 +67,7 @@ class BranchController extends Controller
             /**********************************/
             $branch->save();
 
-            return redirect()->route('branches.index')->with('done', 'Added Successfully ....');
+            return redirect()->route('edit_profile')->with('done', 'Added Successfully ....');
         } catch (\Exception $e) {
             return redirect()->back()->with('error', 'Error Try Again !!');
         }
