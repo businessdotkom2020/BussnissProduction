@@ -23,7 +23,7 @@
                         <h4>@lang('general.name')</h4>
                         <input type="text" required name="name" placeholder="@lang('general.name')"
                             class="form-control">
-                        @error('name_ar')
+                        @error('name')
                         <div class="alert" style="color:#a94442">{{ $message }}</div>
                         @enderror
                     </div>
@@ -31,7 +31,7 @@
                         <h4>@lang('general.mobile')</h4>
                         <input type="text" required name="mobile" placeholder="@lang('general.mobile')"
                             class="form-control">
-                        @error('name_ar')
+                        @error('mobile')
                         <div class="alert" style="color:#a94442">{{ $message }}</div>
                         @enderror
                     </div>
@@ -39,7 +39,7 @@
                         <h4>@lang('general.email')</h4>
                         <input type="text" required name="email" placeholder="@lang('general.email')"
                             class="form-control">
-                        @error('name_ar')
+                        @error('email')
                         <div class="alert" style="color:#a94442">{{ $message }}</div>
                         @enderror
                     </div>
@@ -47,7 +47,7 @@
                         <h4>@lang('general.mobile')</h4>
                         <input type="text" required name="mobile" placeholder="@lang('general.mobile')"
                             class="form-control">
-                        @error('name_ar')
+                        @error('mobile')
                         <div class="alert" style="color:#a94442">{{ $message }}</div>
                         @enderror
                     </div>
@@ -55,7 +55,7 @@
                         <h4>@lang('general.land_line')</h4>
                         <input type="text" required name="land_line" placeholder="@lang('general.land_line')"
                             class="form-control">
-                        @error('name_ar')
+                        @error('land_line')
                         <div class="alert" style="color:#a94442">{{ $message }}</div>
                         @enderror
                     </div>
