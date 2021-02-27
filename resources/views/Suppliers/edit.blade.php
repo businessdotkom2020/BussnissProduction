@@ -284,6 +284,11 @@
         <div class="modal-content">
             <button type="button" class="close" data-dismiss="modal">&times;</button>
             <div class="modal-body">
+
+                <div class="form-group col-md-6 col-xs-12">
+                    <input type="text" required name="mobile" value="{{$supplier->mobile}}"
+                        placeholder="@lang('general.mobile')" class="form-control"> </div>
+
                 <div class="rate-title">
                     <h3>@lang('general.map_location')</h3>
                 </div>
