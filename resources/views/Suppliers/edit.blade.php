@@ -240,7 +240,6 @@
 
                 {{--************************************* update Password  **********************************--}}
 
-
                 <div class="tab-pane fade  in" id="u_password">
                     <form action="{{route('update_password')}}" method="post" enctype="multipart/form-data"> @csrf
                         <div class="ito-h col-xs-12 ubranch">
