@@ -198,8 +198,8 @@
 
                     <div class="form-group col-md-12 col-xs-12 center">
                         <!--<input type="text" placeholder="@lang('general.map_location')" class="form-control">--><a
-                            href="#" class="btn btn-review" data-toggle="modal" onclick="initMap()"
-                            data-target="#add_branch">@lang('general.add_branch')</a>
+                            href="{{route('create_branch')}}" class="btn btn-review" target="_blank"
+                            onclick="initMap()">@lang('general.add_branch')</a>
                     </div>
                     @foreach ($supplier->branchs as $branch)
 
