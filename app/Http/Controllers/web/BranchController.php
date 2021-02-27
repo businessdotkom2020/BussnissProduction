@@ -18,7 +18,7 @@ use App\Http\Resources\CategoryProductsResource;
 use App\Http\Resources\ProductIndexResource;
 use App\Http\Resources\ReviewsRecource;
 use App\Http\Resources\StoreResource;
-use App\Http\Requests\AddReviewRequest;
+use App\Http\Requests\AddBranshRequest;
 
 use RealRashid\SweetAlert\Facades\Alert;
 use Lang;
@@ -46,7 +46,7 @@ class BranchController extends Controller
     }
 
 
-    public function store(Branch $request)
+    public function store(AddBranshRequest $request)
     {
         try {
             $branch = new Branch();
