@@ -11,7 +11,7 @@
 <main class="main-content col-xs-12">
     <div class="add-req-wrap col-xs-12">
         <div class="container">
-            <form action="{{route('update_password')}}" method="post" enctype="multipart/form-data"> @csrf
+            <form action="{{route('store_branch')}}" method="post" enctype="multipart/form-data"> @csrf
 
                 <div class="col-md-12 col-xs-12">
                     <div class="form-group col-md-6 col-xs-12">
@@ -62,7 +62,7 @@
                     </div>
 
                     <div class="form-group col-md-12 col-xs-12 center">
-                        <button type="submit" class="btn">@lang('general.update')</button>
+                        <button type="submit" class="btn">@lang('general.save')</button>
                     </div>
                 </div>
             </form>
