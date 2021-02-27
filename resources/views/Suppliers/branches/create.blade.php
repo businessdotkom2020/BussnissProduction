@@ -159,5 +159,62 @@
 @endsection
 
 @push('scripts')
+<script src="{{ asset('/web/js/select2.full.min.js')}}"></script>
+<script src="{{ asset('/web/js/mapInput.js')}}"></script>
+<script
+    src="https://maps.googleapis.com/maps/api/js?key={{ env('GOOGLE_MAPS_API_KEY') }}&libraries=places&callback=initMap"
+    async defer></script>
+<script>
+    var x = document.getElementById("demo");
 
-@endpush
+function getLocation() {
+	if(navigator.geolocation) {
+		navigator.geolocation.getCurrentPosition(showPosition);
+	} else {
+		x.innerHTML = "Geolocation is not supported by this browser.";
+	}
+}
+
+function showPosition(position) {
+	x.innerHTML = "Latitude: " + position.coords.latitude + "<br>Longitude: " + position.coords.longitude;
+}
+$('#country').change(function() {
+	var cid = $(this).val();
+	if(cid) {
+		$.ajax({
+			type: "get",
+			url: " /getStates/" + cid,
+			success: function(res) {
+				if(res) {
+					$("#state").empty();
+					$("#city").empty();
+					$("#state").append('<option>Select State</option>');
+					$.each(res, function(key, value) {
+						$("#state").append('<option value="' + key + '">' + value + '</option>');
+					});
+					$('#state').niceSelect('update');
+				}
+			}
+		});
+	}
+});
+$('#state').change(function() {
+	var sid = $(this).val();
+	if(sid) {
+		$.ajax({
+			type: "get",
+			url: "/getCities/" + sid,
+			success: function(res) {
+				if(res) {
+					$("#city").empty();
+					$("#city").append('<option>Select City</option>');
+					$.each(res, function(key, value) {
+						$("#city").append('<option value="' + key + '">' + value + '</option>');
+					});
+					$('#city').niceSelect('update');
+				}
+			}
+		});
+	}
+});
+</script> @endpush
