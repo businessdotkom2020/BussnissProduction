@@ -31,7 +31,8 @@ class ServicesDetailsResource extends ProductIndexResource
             'images'       => $this->images(),
             'rating'       => 5,
             'is_favorite'  => $this->isFavorited(),
-
+            'user_image'       => $this->owner ? url('storage/' . $this->owner->avatar) : "http://businessdotkom.com/storage/users/default.png",
+            'user_name'       =>  $this->owner ? $this->owner->name :  "Essam Elsharkawy",
             'share_url'  => "https://www.facebook.com/",
             'created_at'   => $this->created_at,
             'updated_at'   => $this->updated_at,

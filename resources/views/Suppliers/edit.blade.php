@@ -287,6 +287,21 @@
 
                 <div class="form-group col-md-12 col-xs-12">
                     <div class="form-group col-md-6 col-xs-12">
+                        <h4>@lang('general.name')</h4>
+                        <input type="text" required name="name" placeholder="@lang('general.name')"
+                            class="form-control">
+                    </div>
+                    <div class="form-group col-md-6 col-xs-12">
+                        <h4>@lang('general.mobile')</h4>
+                        <input type="text" required name="mobile" value="{{$supplier->mobile}}"
+                            placeholder="@lang('general.mobile')" class="form-control">
+                    </div>
+                    <div class="form-group col-md-6 col-xs-12">
+                        <h4>@lang('general.email')</h4>
+                        <input type="text" required name="email" placeholder="@lang('general.email')"
+                            class="form-control">
+                    </div>
+                    <div class="form-group col-md-6 col-xs-12">
                         <h4>@lang('general.working_to')</h4>
                         <input type="text" required name="mobile" value="{{$supplier->mobile}}"
                             placeholder="@lang('general.mobile')" class="form-control">
