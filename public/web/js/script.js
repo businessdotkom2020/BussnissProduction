@@ -154,9 +154,12 @@ $(document).ready(function () {
                 items: 3
             },
             767: {
-                items: 5
+                items: 3
             },
             991: {
+                items: 4
+            },
+            1024: {
                 items: 6
             },
             2000: {
@@ -184,9 +187,12 @@ $(document).ready(function () {
                 items: 3
             },
             767: {
-                items: 5
+                items: 3
             },
             991: {
+                items: 4
+            },
+            1024: {
                 items: 6
             },
             2000: {
