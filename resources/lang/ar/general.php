@@ -179,6 +179,7 @@ return [
     'work_from' => 'العمل من',
     'delivery_fee' => 'رسوم التوصيل',
     'land_line' => 'الرقم الأرضى',
+    'address' => 'العنوان',
 
 
 ];

@@ -327,7 +327,7 @@
                         <input type="text" required name="delivery_fee" placeholder="@lang('general.delivery_fee')"
                             class="form-control">
                     </div>
-                    <div class="form-group col-md-6 col-xs-12">
+                    <div class="form-group col-md-12 col-xs-12">
                         <h4>@lang('general.address')</h4>
                         <textarea type="text" required name="address" placeholder="@lang('general.address')"
                             class="form-control"></textarea>
