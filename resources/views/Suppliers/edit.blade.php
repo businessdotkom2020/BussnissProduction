@@ -228,8 +228,8 @@
 
 
                         <br>
-                        <div class="form-group col-md-6 col-xs-12 center">
-                            <button type="submit" class="btn">@lang('general.update')</button>
+                        <div class="form-group col-md-12 col-xs-12 center">
+                            <a type="submit" target="_blank" class="btn">@lang('general.update')</a>
                         </div>
                     </div>
 
