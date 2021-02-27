@@ -984,3 +984,9 @@
     right: 10px;
     left: auto;
 }
+.bottom-head .categories .menu-item-has-children .sub-menu li .mega-sub .s-item ul li a {
+    font-weight: 500;
+}
+.bottom-head .categories .menu-item-has-children .sub-menu li .mega-sub .s-item h4{
+    font-weight: 700;
+}
