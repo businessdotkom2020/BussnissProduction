@@ -11,7 +11,53 @@
 <main class="main-content col-xs-12">
     <div class="supp-prof-about col-xs-12">
         <div class="container">
+            <div class="form-group col-md-12 col-xs-12">
+                <div class="form-group col-md-6 col-xs-12">
+                    <h4>@lang('general.name')</h4>
+                    <input type="text" required name="name" placeholder="@lang('general.name')" class="form-control">
+                </div>
+                <div class="form-group col-md-6 col-xs-12">
+                    <h4>@lang('general.mobile')</h4>
+                    <input type="text" required name="mobile" placeholder="@lang('general.mobile')"
+                        class="form-control">
+                </div>
+                <div class="form-group col-md-6 col-xs-12">
+                    <h4>@lang('general.email')</h4>
+                    <input type="text" required name="email" placeholder="@lang('general.email')" class="form-control">
+                </div>
+                <div class="form-group col-md-6 col-xs-12">
+                    <h4>@lang('general.mobile')</h4>
+                    <input type="text" required name="mobile" placeholder="@lang('general.mobile')"
+                        class="form-control">
+                </div>
+                <div class="form-group col-md-6 col-xs-12">
+                    <h4>@lang('general.land_line')</h4>
+                    <input type="text" required name="land_line" placeholder="@lang('general.land_line')"
+                        class="form-control">
+                </div>
+                <div class="form-group col-md-6 col-xs-12">
+                    <h4>@lang('general.working_to')</h4>
+                    <input type="text" required name="mobile" placeholder="@lang('general.working_to')"
+                        class="form-control">
+                </div>
+                <div class="form-group col-md-6 col-xs-12">
+                    <h4>@lang('general.work_from')</h4>
+                    <input type="text" required name="work_from" placeholder="@lang('general.work_from')"
+                        class="form-control">
+                </div>
 
+                <div class="form-group col-md-6 col-xs-12">
+                    <h4>@lang('general.delivery_fee')</h4>
+                    <input type="text" required name="delivery_fee" placeholder="@lang('general.delivery_fee')"
+                        class="form-control">
+                </div>
+                <div class="form-group col-md-12 col-xs-12">
+                    <h4>@lang('general.address')</h4>
+                    <textarea type="text" required name="address" placeholder="@lang('general.address')"
+                        class="form-control"></textarea>
+                </div>
+
+            </div>
 
         </div>
     </div>
