@@ -285,10 +285,27 @@
             <button type="button" class="close" data-dismiss="modal">&times;</button>
             <div class="modal-body">
 
-                <div class="form-group col-md-6 col-xs-12">
-                    <h4>@lang('general.working_to')</h4>
-                    <input type="text" required name="mobile" value="{{$supplier->mobile}}"
-                        placeholder="@lang('general.mobile')" class="form-control">
+                <div class="form-group col-md-12 col-xs-12">
+                    <div class="form-group col-md-6 col-xs-12">
+                        <h4>@lang('general.working_to')</h4>
+                        <input type="text" required name="mobile" value="{{$supplier->mobile}}"
+                            placeholder="@lang('general.mobile')" class="form-control">
+                    </div>
+                    <div class="form-group col-md-6 col-xs-12">
+                        <h4>@lang('general.working_to')</h4>
+                        <input type="text" required name="mobile" value="{{$supplier->mobile}}"
+                            placeholder="@lang('general.mobile')" class="form-control">
+                    </div>
+                    <div class="form-group col-md-6 col-xs-12">
+                        <h4>@lang('general.working_to')</h4>
+                        <input type="text" required name="mobile" value="{{$supplier->mobile}}"
+                            placeholder="@lang('general.mobile')" class="form-control">
+                    </div>
+                    <div class="form-group col-md-6 col-xs-12">
+                        <h4>@lang('general.working_to')</h4>
+                        <input type="text" required name="mobile" value="{{$supplier->mobile}}"
+                            placeholder="@lang('general.mobile')" class="form-control">
+                    </div>
                 </div>
 
                 <div class="rate-title">
