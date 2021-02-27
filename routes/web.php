@@ -212,5 +212,6 @@ Route::get('locale/{locale}', function ($locale) {
 ///////////// Supplier  Settings ////////////////
 Route::get('/profile/update', 'web\SuppliersController@edit');
 Route::post('/update/supplier/profile', 'web\SuppliersController@update')->name('update_supplier');
+Route::post('/update/password', 'web\SuppliersController@update_password')->name('update_password');
 Route::get('/add/branch', 'web\BranchController@create_branch')->name('create_branch');
 Route::post('/add/branch', 'web\BranchController@add_branch')->name('store_branch');
