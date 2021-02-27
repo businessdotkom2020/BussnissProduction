@@ -118,7 +118,28 @@
                     </div>
 
                     <div class="form-group col-md-12 col-xs-12">
-
+                        <div class="rate-stars">
+                            <div class="col-md-8 col-xs-12">
+                                <div id="pac-container">
+                                    <input id="pac-input" type="text" placeholder="Enter a location"> </div>
+                            </div>
+                            <div class="col-md-4 col-xs-12">
+                                <button id="current_location" onclick="getLocation()"> Current Location <i
+                                        class="fa fa-location-arrow" aria-hidden="true"></i></button>
+                            </div>
+                            <div class="col-md-6 col-xs-12">
+                                <div class="form-group">
+                                    <label for="">Lat</label>
+                                    <input type="text" oninput="initMap()" value="31.3540494"
+                                        class="form-control input-sm" name="lat" id="lat"> </div>
+                            </div>
+                            <div class="col-md-6 col-xs-12">
+                                <div class="form-group">
+                                    <label for="">Lng</label>
+                                    <input type="text" oninput="initMap()" value="31.6841419"
+                                        class="form-control input-sm" name="lng" id="lng"> </div>
+                            </div>
+                        </div>
                         <div class="rate-form">
                             <div class="pac-card" id="pac-card">
                                 <div>
