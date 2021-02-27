@@ -11,6 +11,31 @@
 <main class="main-content col-xs-12">
     <div class="supp-prof-about col-xs-12">
         <div class="container">
+            <form action="{{route('update_password')}}" method="post" enctype="multipart/form-data"> @csrf
+                <div class="ito-h col-xs-12 ubranch">
+                    <div class="form-group col-md-6 col-xs-12">
+                        <h4>@lang('general.old_password')</h4>
+                        <input required type="password" name="old_password" placeholder="@lang('general.old_password')"
+                            class="form-control">
+                    </div>
+                    <div class="form-group col-md-6 col-xs-12">
+                        <h4>@lang('general.password')</h4>
+                        <input required type="password" name="password" placeholder="@lang('general.password')"
+                            class="form-control">
+                    </div>
+                    <div class="form-group col-md-6 col-xs-12">
+                        <h4>@lang('general.password_confirmation')</h4>
+                        <input required type="password" name="password_confirmation"
+                            placeholder="@lang('general.password_confirmation')" class="form-control">
+                    </div>
+                    <div class="form-group col-md-6 col-xs-12"> </div>
+                    <div class="form-group col-md-12 col-xs-12"></div>
+                    <br>
+                    <div class="form-group col-md-6 col-xs-12 center">
+                        <button type="submit" class="btn">@lang('general.save')</button>
+                    </div>
+                </div>
+            </form>
             <div class="form-group col-md-12 col-xs-12">
                 <div class="form-group col-md-6 col-xs-12">
                     <h4>@lang('general.name')</h4>
