@@ -180,6 +180,8 @@ return [
     'delivery_fee' => 'رسوم التوصيل',
     'land_line' => 'الرقم الأرضى',
     'address' => 'العنوان',
+    'delivery_from' => 'التوصيل من يوم',
+    'delivery_to' => 'إلى يوم',
 
 
 ];
