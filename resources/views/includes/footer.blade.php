@@ -6,10 +6,24 @@
     </div>
     <div class="f-top col-xs-12">
         <div class="container">
-            <div class="f-item col-md-3 col-xs-12">
+            <div class="f-item col-md-3 col-sm-3 col-xs-12">
                 <img src="{{ asset('/web/images/splash_logo.png')}}" alt="">
             </div>
-            <div class="f-item col-md-3 col-xs-12">
+            <div class="f-item col-md-2 col-md-offset-1  col-sm-3 col-xs-12">
+                <h4>{{__('general.my_profile')}}</h4>
+                <ul>
+                    <li>
+                        <a href="{{url('/')}}">{{__('general.account')}}</a>
+                    </li>
+                    <li>
+                        <a href="{{url('/')}}">{{__('general.favourites')}}</a>
+                    </li>
+                    <li>
+                        <a href="{{url('/')}}">{{__('general.notifications')}}</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="f-item col-md-3 col-sm-3 col-xs-12">
                 <h4>@lang('general.fast_links')</h4>
                 <ul>
                     <li>
@@ -31,21 +45,8 @@
                     </li>
                 </ul>
             </div>
-            <div class="f-item col-md-3 col-xs-12">
-                <h4>{{__('general.my_profile')}}</h4>
-                <ul>
-                    <li>
-                        <a href="{{url('/')}}">{{__('general.account')}}</a>
-                    </li>
-                    <li>
-                        <a href="{{url('/')}}">{{__('general.favourites')}}</a>
-                    </li>
-                    <li>
-                        <a href="{{url('/')}}">{{__('general.notifications')}}</a>
-                    </li>
-                </ul>
-            </div>
-            <div class="f-item col-md-3 col-xs-12">
+           
+            <div class="f-item col-md-3 col-sm-3 col-xs-12">
                 <h4>social</h4>
                 <div class="social-f">
                     <a href="{{\App\Models\AppSetting::first()->facebook}}">
