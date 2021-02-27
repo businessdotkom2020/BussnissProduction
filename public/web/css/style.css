@@ -421,7 +421,7 @@ i {
 }
 
 .menu-item-has-children .sub-menu li a:hover {
-    background-color: #13a024;
+    background-color: #139feb;
     color: #fff !important;
     transition: all .3s
 }
