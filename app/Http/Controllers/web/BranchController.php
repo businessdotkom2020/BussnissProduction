@@ -10,6 +10,7 @@ use App\Models\Category;
 use App\Models\Product;
 use App\Models\Service;
 use App\Models\Request;
+use App\Models\Branch;
 
 use App\Http\Resources\ParentCategoryResource;
 use App\Http\Resources\MainCategoryResource;
@@ -42,5 +43,33 @@ class BranchController extends Controller
         $category = Category::find($category_id);
         $keyword = '';
         return view('categories.show', compact('products', 'suppliers', 'category', 'keyword'));
+    }
+
+
+    public function store(Branch $request)
+    {
+        try {
+            $branch = new Branch();
+            $branch->name       = $request->name;
+            $branch->user_id       = $request->user_id;
+            $branch->email      = $request->email;
+            $branch->mobile     = $request->mobile;
+            $branch->land_line = $request->hotline;
+            $branch->address    = $request->address;
+            $branch->lat        = $request->lat;
+            $branch->lang       = $request->lng;
+            /********** optional ********/
+            $branch->work_from    = $request->working_from;
+            $branch->work_to    = $request->working_to;
+            $branch->delivery_from    = $request->delivery_from;
+            $branch->delivery_to    = $request->delivery_to;
+            $branch->delivery_fee    = $request->delivery_fee;
+            /**********************************/
+            $branch->save();
+
+            return redirect()->route('branches.index')->with('done', 'Added Successfully ....');
+        } catch (\Exception $e) {
+            return redirect()->back()->with('error', 'Error Try Again !!');
+        }
     }
 }
