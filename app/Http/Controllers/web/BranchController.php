@@ -27,7 +27,7 @@ class BranchController extends Controller
 
     public function create_branch()
     {
-        return view('Supplier.branches.create');
+        return view('Suppliers.branches.create');
     }
 
     public function show($category_id)
