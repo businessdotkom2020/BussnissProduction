@@ -18,7 +18,7 @@
                 {!! implode('', $errors->all('<div>:message</div>')) !!}
                 @endif
             </div>
-            <form action="{{route('store_branch')}}" method="post" enctype="multipart/form-data">
+            <form action="{{route('store_branch')}}" method="POST" enctype="multipart/form-data">
                 @csrf
 
                 <div class="col-md-12 col-xs-12">
