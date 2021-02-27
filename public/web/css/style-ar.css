@@ -954,3 +954,31 @@
     margin-right: 0;
     margin-left: 15px;
 }
+
+/*****************************************************************************/
+.features-all .features-block .icon-block {
+    float: right;
+}
+
+.features-all .features-block .details-block {
+    float: left;
+    padding-right: 12px;
+    padding-left: 0;
+}
+
+.cat-more .hvr-icon .fa-angle-right:before {
+    content: "\f104";
+}
+
+.footer-btn {
+    left: 0;
+    right: auto;
+}
+.product-grid .product-discount-label {
+    left: 10px;
+    right: auto;
+}
+.product-grid .product-new-label {
+    right: 10px;
+    left: auto;
+}
