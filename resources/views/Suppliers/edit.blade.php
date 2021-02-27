@@ -293,8 +293,8 @@
                     </div>
                     <div class="form-group col-md-6 col-xs-12">
                         <h4>@lang('general.mobile')</h4>
-                        <input type="text" required name="mobile" value="{{$supplier->mobile}}"
-                            placeholder="@lang('general.mobile')" class="form-control">
+                        <input type="text" required name="mobile" placeholder="@lang('general.mobile')"
+                            class="form-control">
                     </div>
                     <div class="form-group col-md-6 col-xs-12">
                         <h4>@lang('general.email')</h4>
@@ -302,25 +302,37 @@
                             class="form-control">
                     </div>
                     <div class="form-group col-md-6 col-xs-12">
-                        <h4>@lang('general.working_to')</h4>
-                        <input type="text" required name="mobile" value="{{$supplier->mobile}}"
-                            placeholder="@lang('general.mobile')" class="form-control">
+                        <h4>@lang('general.mobile')</h4>
+                        <input type="text" required name="mobile" placeholder="@lang('general.mobile')"
+                            class="form-control">
+                    </div>
+                    <div class="form-group col-md-6 col-xs-12">
+                        <h4>@lang('general.land_line')</h4>
+                        <input type="text" required name="land_line" placeholder="@lang('general.land_line')"
+                            class="form-control">
                     </div>
                     <div class="form-group col-md-6 col-xs-12">
                         <h4>@lang('general.working_to')</h4>
-                        <input type="text" required name="mobile" value="{{$supplier->mobile}}"
-                            placeholder="@lang('general.mobile')" class="form-control">
+                        <input type="text" required name="mobile" placeholder="@lang('general.mobile')"
+                            class="form-control">
                     </div>
                     <div class="form-group col-md-6 col-xs-12">
-                        <h4>@lang('general.working_to')</h4>
-                        <input type="text" required name="mobile" value="{{$supplier->mobile}}"
-                            placeholder="@lang('general.mobile')" class="form-control">
+                        <h4>@lang('general.work_from')</h4>
+                        <input type="text" required name="work_from" placeholder="@lang('general.work_from')"
+                            class="form-control">
                     </div>
                     <div class="form-group col-md-6 col-xs-12">
-                        <h4>@lang('general.working_to')</h4>
-                        <input type="text" required name="mobile" value="{{$supplier->mobile}}"
-                            placeholder="@lang('general.mobile')" class="form-control">
+                        <h4>@lang('general.address')</h4>
+                        <input type="text" required name="address" placeholder="@lang('general.address')"
+                            class="form-control">
                     </div>
+                    <div class="form-group col-md-6 col-xs-12">
+                        <h4>@lang('general.delivery_fee')</h4>
+                        <input type="text" required name="delivery_fee" placeholder="@lang('general.delivery_fee')"
+                            class="form-control">
+                    </div>
+
+
                 </div>
 
                 <div class="rate-title">
