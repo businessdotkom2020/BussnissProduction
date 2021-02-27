@@ -175,7 +175,7 @@ return [
 
     'add_branch' => 'إضافة فرع',
     'land_line' => 'الرقم الأرضى',
-    'working_to' => 'العمل إلى',
+    'work_to' => 'العمل إلى',
     'work_from' => 'العمل من',
     'delivery_fee' => 'رسوم التوصيل',
     'land_line' => 'الرقم الأرضى',
