@@ -966,18 +966,20 @@
     padding-left: 0;
 }
 
-.cat-more .hvr-icon .fa-angle-right:before {
-    content: "\f104";
+.cat-more .fa-angle-right:before {
+    content: "\f104" !important;
 }
 
 .footer-btn {
     left: 0;
     right: auto;
 }
+
 .product-grid .product-discount-label {
     left: 10px;
     right: auto;
 }
+
 .product-grid .product-new-label {
     right: 10px;
     left: auto;
