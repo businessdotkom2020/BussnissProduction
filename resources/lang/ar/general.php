@@ -175,11 +175,13 @@ return [
 
     'add_branch' => 'إضافة فرع',
     'land_line' => 'الرقم الأرضى',
-    'working_to' => 'العمل إلى',
+    'work_to' => 'العمل إلى',
     'work_from' => 'العمل من',
     'delivery_fee' => 'رسوم التوصيل',
     'land_line' => 'الرقم الأرضى',
     'address' => 'العنوان',
+    'delivery_from' => 'التوصيل من يوم',
+    'delivery_to' => 'إلى يوم',
 
 
 ];

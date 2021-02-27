@@ -24,10 +24,8 @@ class BranchRequest extends FormRequest
     public function rules()
     {
         $rules = [];
-        switch($this->method())
-        {
-            case 'POST':
-                {
+        switch ($this->method()) {
+            case 'POST': {
                     $rules = [
                         'name'   => 'required|min:5|max:20|',
                         'email'           => 'required|email|unique:branches,email',
@@ -40,8 +38,7 @@ class BranchRequest extends FormRequest
                     ];
                 }
                 break;
-            case 'PATCH':
-                {
+            case 'PATCH': {
                     $rules = [
                         'name'   => 'required|min:5|max:20|',
                         'email'           => 'required|email',
@@ -56,6 +53,5 @@ class BranchRequest extends FormRequest
                 break;
         }
         return $rules;
-
     }
 }

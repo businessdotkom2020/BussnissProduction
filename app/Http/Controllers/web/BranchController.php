@@ -18,7 +18,7 @@ use App\Http\Resources\CategoryProductsResource;
 use App\Http\Resources\ProductIndexResource;
 use App\Http\Resources\ReviewsRecource;
 use App\Http\Resources\StoreResource;
-use App\Http\Requests\AddReviewRequest;
+use App\Http\Requests\AddBranshRequest;
 
 use RealRashid\SweetAlert\Facades\Alert;
 use Lang;
@@ -29,6 +29,11 @@ class BranchController extends Controller
     public function create_branch()
     {
         return view('Suppliers.branches.create');
+    }
+
+    public function edit_branch()
+    {
+        return view('Suppliers.branches.edit');
     }
 
     public function show($category_id)
@@ -46,30 +51,27 @@ class BranchController extends Controller
     }
 
 
-    public function store(Branch $request)
+    public function store(AddBranshRequest $request)
     {
-        try {
-            $branch = new Branch();
-            $branch->name       = $request->name;
-            $branch->user_id       = $request->user_id;
-            $branch->email      = $request->email;
-            $branch->mobile     = $request->mobile;
-            $branch->land_line = $request->hotline;
-            $branch->address    = $request->address;
-            $branch->lat        = $request->lat;
-            $branch->lang       = $request->lng;
-            /********** optional ********/
-            $branch->work_from    = $request->working_from;
-            $branch->work_to    = $request->working_to;
-            $branch->delivery_from    = $request->delivery_from;
-            $branch->delivery_to    = $request->delivery_to;
-            $branch->delivery_fee    = $request->delivery_fee;
-            /**********************************/
-            $branch->save();
 
-            return redirect()->route('branches.index')->with('done', 'Added Successfully ....');
-        } catch (\Exception $e) {
-            return redirect()->back()->with('error', 'Error Try Again !!');
-        }
+        $branch = new Branch();
+        $branch->name       = $request->name;
+        $branch->user_id       = $request->user_id;
+        $branch->email      = $request->email;
+        $branch->mobile     = $request->mobile;
+        $branch->land_line = $request->land_line;
+        $branch->address    = $request->address;
+        $branch->lat        = $request->lat;
+        $branch->lang       = $request->lng;
+        /********** optional ********/
+        $branch->work_from    = $request->work_from;
+        $branch->work_to    = $request->work_to;
+        $branch->delivery_from    = $request->delivery_from;
+        $branch->delivery_to    = $request->delivery_to;
+        $branch->delivery_fee    = $request->delivery_fee;
+        /**********************************/
+        $branch->save();
+
+        return redirect()->route('edit_profile')->with('done', 'Added Successfully ....');
     }
 }
