@@ -48,6 +48,7 @@ class BranchController extends Controller
 
     public function store(AddBranshRequest $request)
     {
+
         $branch = new Branch();
         $branch->name       = $request->name;
         $branch->user_id       = $request->user_id;
@@ -58,8 +59,8 @@ class BranchController extends Controller
         $branch->lat        = $request->lat;
         $branch->lang       = $request->lng;
         /********** optional ********/
-        $branch->work_from    = $request->working_from;
-        $branch->work_to    = $request->working_to;
+        $branch->work_from    = $request->work_from;
+        $branch->work_to    = $request->work_to;
         $branch->delivery_from    = $request->delivery_from;
         $branch->delivery_to    = $request->delivery_to;
         $branch->delivery_fee    = $request->delivery_fee;
