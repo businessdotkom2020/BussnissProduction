@@ -1633,7 +1633,7 @@ footer.main-footer.col-xs-12 {
     height: 35px;
     display: inline-block;
     line-height: 35px;
-    background-color: #252525;
+    background-color: #fff;
     text-align: center;
     color: #fff;
     border-radius: 100%;
@@ -1641,7 +1641,7 @@ footer.main-footer.col-xs-12 {
 }
 
 .main-footer .f-top .f-item .social-f a:hover {
-    background-color: #fff;
+    background-color: #149EEB;
     color: #252525;
     transition: all .3s
 }
