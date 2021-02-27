@@ -9,13 +9,14 @@
 @section('content')
 
 <main class="main-content col-xs-12">
+    <div class="form-group col-md-12 col-xs-12 center">
+
+        <h3>@lang('general.add_branch')</h3>
+
+    </div>
     <div class="add-req-wrap col-xs-12">
         <div class="container">
-            <div class="form-group col-md-12 col-xs-12 center">
 
-                <h3>@lang('general.add_branch')</h3>
-
-            </div>
             <form action="{{route('store_branch')}}" method="post" enctype="multipart/form-data"> @csrf
 
                 <div class="col-md-12 col-xs-12">
