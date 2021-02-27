@@ -17,8 +17,7 @@ use App\Http\Resources\CategoryProductsResource;
 use App\Http\Resources\ProductIndexResource;
 use App\Http\Resources\ReviewsRecource;
 use App\Http\Resources\StoreResource;
-use App\Http\Requests\AddReview
-Request;
+use App\Http\Requests\AddReviewRequest;
 
 use RealRashid\SweetAlert\Facades\Alert;
 use Lang;
@@ -44,6 +43,7 @@ class BranchController extends Controller
         $keyword = '';
         return view('categories.show', compact('products', 'suppliers', 'category', 'keyword'));
     }
+
 
     public function store(Branch $request)
     {
