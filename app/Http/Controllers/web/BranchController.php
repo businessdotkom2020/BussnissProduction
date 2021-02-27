@@ -53,7 +53,7 @@ class BranchController extends Controller
         $branch->user_id       = $request->user_id;
         $branch->email      = $request->email;
         $branch->mobile     = $request->mobile;
-        $branch->land_line = $request->hotline;
+        $branch->land_line = $request->land_line;
         $branch->address    = $request->address;
         $branch->lat        = $request->lat;
         $branch->lang       = $request->lng;

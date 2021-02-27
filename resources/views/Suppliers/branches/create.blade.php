@@ -46,14 +46,7 @@
                         <div class="alert" style="color:#a94442">{{ $message }}</div>
                         @enderror
                     </div>
-                    <div class="form-group col-md-6 col-xs-12">
-                        <h4>@lang('general.mobile')</h4>
-                        <input type="text" required name="mobile" placeholder="@lang('general.mobile')"
-                            class="form-control">
-                        @error('mobile')
-                        <div class="alert" style="color:#a94442">{{ $message }}</div>
-                        @enderror
-                    </div>
+
                     <div class="form-group col-md-6 col-xs-12">
                         <h4>@lang('general.land_line')</h4>
                         <input type="text" required name="land_line" placeholder="@lang('general.land_line')"
