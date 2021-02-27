@@ -313,7 +313,7 @@
                     </div>
                     <div class="form-group col-md-6 col-xs-12">
                         <h4>@lang('general.working_to')</h4>
-                        <input type="text" required name="mobile" placeholder="@lang('general.mobile')"
+                        <input type="text" required name="mobile" placeholder="@lang('general.working_to')"
                             class="form-control">
                     </div>
                     <div class="form-group col-md-6 col-xs-12">
@@ -321,17 +321,17 @@
                         <input type="text" required name="work_from" placeholder="@lang('general.work_from')"
                             class="form-control">
                     </div>
-                    <div class="form-group col-md-6 col-xs-12">
-                        <h4>@lang('general.address')</h4>
-                        <input type="text" required name="address" placeholder="@lang('general.address')"
-                            class="form-control">
-                    </div>
+
                     <div class="form-group col-md-6 col-xs-12">
                         <h4>@lang('general.delivery_fee')</h4>
                         <input type="text" required name="delivery_fee" placeholder="@lang('general.delivery_fee')"
                             class="form-control">
                     </div>
-
+                    <div class="form-group col-md-6 col-xs-12">
+                        <h4>@lang('general.address')</h4>
+                        <textarea type="text" required name="address" placeholder="@lang('general.address')"
+                            class="form-control"></textarea>
+                    </div>
 
                 </div>
 
