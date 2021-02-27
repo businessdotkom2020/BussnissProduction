@@ -11,6 +11,11 @@
 <main class="main-content col-xs-12">
     <div class="add-req-wrap col-xs-12">
         <div class="container">
+            <div class="form-group col-md-12 col-xs-12 center">
+                <!--<input type="text" placeholder="@lang('general.map_location')" class="form-control">--><a
+                    href="{{route('create_branch')}}" class="btn btn-review" target="_blank"
+                    onclick="initMap()">@lang('general.add_branch')</a>
+            </div>
             <form action="{{route('store_branch')}}" method="post" enctype="multipart/form-data"> @csrf
 
                 <div class="col-md-12 col-xs-12">
