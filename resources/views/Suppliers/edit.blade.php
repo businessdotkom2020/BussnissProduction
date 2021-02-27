@@ -184,7 +184,7 @@
                                     data-target="#review-pop">@lang('general.map_location')</a> </div>
                             <div class="form-group col-md-12 col-xs-12"> </div>
                             <br>
-                            <div class="form-group col-md-6 col-xs-12">
+                            <div class="form-group col-md-6 col-xs-12 center">
                                 <button type="submit" class="btn">@lang('general.save')</button>
                             </div>
                         </div>
@@ -228,7 +228,7 @@
 
 
                         <br>
-                        <div class="form-group col-md-6 col-xs-12">
+                        <div class="form-group col-md-6 col-xs-12 center">
                             <button type="submit" class="btn">@lang('general.update')</button>
                         </div>
                     </div>
@@ -262,7 +262,7 @@
                             <div class="form-group col-md-6 col-xs-12"> </div>
                             <div class="form-group col-md-12 col-xs-12"></div>
                             <br>
-                            <div class="form-group col-md-6 col-xs-12">
+                            <div class="form-group col-md-6 col-xs-12 center">
                                 <button type="submit" class="btn">@lang('general.save')</button>
                             </div>
                         </div>
