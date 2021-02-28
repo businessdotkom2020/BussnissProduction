@@ -9,12 +9,7 @@ use Illuminate\Support\Facades\Storage;
 
 class Request extends Model
 {
-      use Favoritable, Translatable,Reviewable;
-
-
-
-
-      
+    use Favoritable, Translatable, Reviewable;
 
     /**
      * The attributes that should be cast to native types.
@@ -24,7 +19,7 @@ class Request extends Model
     protected $casts = [
         'created_at'        => 'datetime',
         'updated_at'        => 'datetime',
-     ];
+    ];
 
 
     protected $appends = ['average_rating'];
@@ -33,15 +28,14 @@ class Request extends Model
     {
         $images =  json_decode($value);
 
-        if(is_Array($images) && count($images)){
-            foreach($images as $image){
-                $isExists = Storage::exists('public/'.$image);
+        if (is_Array($images) && count($images)) {
+            foreach ($images as $image) {
+                $isExists = Storage::exists('public/' . $image);
 
                 if (is_null($image) || empty($image)  || !$isExists) {
-                    $avalible_images[] = 'products/default.jpg' ;
-                }else{
-                    $avalible_images[] = $image ;
-
+                    $avalible_images[] = 'products/default.jpg';
+                } else {
+                    $avalible_images[] = $image;
                 }
             }
             $avalible_images = array_unique($avalible_images);
@@ -50,7 +44,6 @@ class Request extends Model
         }
 
         return json_encode(['products/default.jpg']);
-
     }
 
 
@@ -60,10 +53,23 @@ class Request extends Model
     }
 
     protected $translatable = ['name', 'description'];
-    	public function category() {
-		return $this->belongsTo('App\Models\Category','category_id');
-	}
-    	public function user() {
-		return $this->belongsTo('App\Models\User','user_id');
-	}
+    public function category()
+    {
+        return $this->belongsTo('App\Models\Category', 'category_id');
+    }
+    public function user()
+    {
+        return $this->belongsTo('App\Models\User', 'user_id');
+    }
+
+    public function getCreatedAtAttribute($date)
+    {
+        return  $date ? \Carbon\Carbon::parse($date)->format('H:i Y/m/d') : '19:17 2021/01/25';
+    }
+
+
+    public function getUpdatedAtAttribute($date)
+    {
+        return  $date ? \Carbon\Carbon::parse($date)->format('H:i Y/m/d') : '19:17 2021/01/25';
+    }
 }

@@ -18,9 +18,10 @@ class StoreContactResource extends JsonResource
         return [
             'id' => $this->id,
             'name' => $this->name,
-            'image' => url('storage/'.$this->avatar),
+            'image' => url('storage/' . $this->avatar),
             'mobile' => $this->mobile,
             'email' => $this->email,
+            'stars' => $this->average_rating,
             'whatsapp' => $this->whatsapp_mobile,
             'hot_number' => $this->hot_number,
             'instagram' => $this->instagram_url,
