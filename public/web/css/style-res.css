@@ -236,6 +236,9 @@
     .main-footer .f-top .f-item .social-f {
         margin-bottom: 20px;
     }
+    .modal-dialog {
+        margin: 30px auto;
+    }
 }
 
 @media(max-width:600px) {
@@ -563,6 +566,11 @@
 
     .product-grid {
         margin: 0 0 22px;
+    }
+    .h-categories .col-md-3 {
+        flex: 0 0 100%;
+        max-width: 100%;
+        padding: 0 15px;
     }
 }
 

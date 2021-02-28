@@ -421,7 +421,7 @@ i {
 }
 
 .menu-item-has-children .sub-menu li a:hover {
-    background-color: #13a024;
+    background-color: #139feb;
     color: #fff !important;
     transition: all .3s
 }
@@ -1635,14 +1635,14 @@ footer.main-footer.col-xs-12 {
     line-height: 35px;
     background-color: #fff;
     text-align: center;
-    color: #fff;
+    color: #252525;
     border-radius: 100%;
     transition: all .3s
 }
 
 .main-footer .f-top .f-item .social-f a:hover {
     background-color: #149EEB;
-    color: #252525;
+    color: #fff;
     transition: all .3s
 }
 
@@ -5879,4 +5879,15 @@ button.close:hover {
 
 .main-footer .ocean {
     display: none;
+}
+button, input, select, textarea {
+    outline: 0;
+}
+
+
+.modal-dialog {
+    margin: 150px auto;
+}
+.modal {
+    background: #149eeb1c !important;
 }
