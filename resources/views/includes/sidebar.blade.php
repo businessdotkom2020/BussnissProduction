@@ -174,7 +174,7 @@
                             <li class="">
                                 <a href="{{url('/all-categories')}}">
                                     <img src="{{url('/storage/allcat.png')}}" alt="">
-                                    __('general.others')
+                                    {{__('general.others')}}
                                 </a>
 
                             </li>
