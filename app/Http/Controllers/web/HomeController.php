@@ -19,7 +19,7 @@ class HomeController extends Controller
         $latest_requests = \App\Models\Request::latest()->limit(12)->get();
         $latest_requests_ids = $latest_requests->pluck('user_id')->toArray();
 
-        $home_suppliers = \App\Models\User::where('type', 'supplier')->get();
+        $home_suppliers = \App\Models\User::where('type', 'supplier')->limit(20)->get();
 
         $home_services = \App\Models\Service::latest()->limit(12)->get();
         $home_services_id = $home_services->pluck('user_id')->toArray();
@@ -27,7 +27,7 @@ class HomeController extends Controller
 
         $result = array_merge($home_services_id, $latest_requests_ids, $common_products_ids, $latest_products_ids);
 
-        $owners = User::whereIn('id',array_unique($result))->get();
+        $owners = User::whereIn('id', array_unique($result))->get();
 
         return view('home', compact(
             'latest_products',

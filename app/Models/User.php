@@ -25,6 +25,11 @@ class User extends \TCG\Voyager\Models\User
     }
 
 
+    public function getUpdatedAtAttribute($date)
+    {
+        return  $date ? \Carbon\Carbon::parse($date)->format('H:i Y/m/d') : '19:17 2021/01/25';
+    }
+
 
     protected $fillable = [
         'name', 'email', 'password', 'type', 'mobile', 'country_id', 'social_auth_type', 'social_id'
