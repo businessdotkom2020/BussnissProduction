@@ -183,6 +183,7 @@
                     </li>
                 </ul>
             </div>
+
             <ul class="main-nav">
                 <li>
                     <a href="{{url('/')}}">{{__('general.home')}}</a>
