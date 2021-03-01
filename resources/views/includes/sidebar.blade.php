@@ -1,5 +1,3 @@
-
-
 <header class="main-head col-xs-12">
     <div class="top-head col-xs-12">
         <div class="container">
@@ -29,7 +27,7 @@
                     </a> --}}
                 </div>
                 <div class="social">
-                <a href="{{\App\Models\AppSetting::first()->facebook}}">
+                    <a href="{{\App\Models\AppSetting::first()->facebook}}">
                         <i class="fa fa-facebook"></i>
                     </a>
                     <a href="{{\App\Models\AppSetting::first()->twitter}}">
@@ -55,14 +53,15 @@
     <div class="mid-head col-xs-12">
         <div class="container">
             <div class="logo">
-            <a href="{{url('/')}}">
+                <a href="{{url('/')}}">
                     <img src="{{ asset('/web/images/logo.png')}}" alt="">
                 </a>
             </div>
             <div class="search-g">
                 <form action="{{url('search')}}" method="get">
                     <div class="form-group">
-                        <input type="search" name="keyword" class="form-control" placeholder="{{__('general.search_products')}}">
+                        <input type="search" name="keyword" class="form-control"
+                            placeholder="{{__('general.search_products')}}">
                         <select class="form-control">
                             <option selected disabled>{{__('general.select_category')}}</option>
                             @foreach (\App\Models\Category::whereNull('parent_id')->get() as $category)
@@ -79,35 +78,36 @@
             </div>
             <div class="u-controls">
                 @if(!Auth::check())
-            <a class="mg-0" href="{{url('login')}}">{{__('general.login')}}</a>/
-            <a href="{{url('register')}}">{{__('general.register')}}</a>/
-            <a href="{{url('register/supplier')}}">{{__('general.register_supplier')}}</a>
-@else
+                <a class="mg-0" href="{{url('login')}}">{{__('general.login')}}</a>/
+                <a href="{{url('register')}}">{{__('general.register')}}</a>/
+                <a href="{{url('register/supplier')}}">{{__('general.register_supplier')}}</a>
+                @else
                 {{-- <a href="javascript:void(0)" class="op-notif">
                     <i class="fa fa-bell"></i>
                     <b class="badgo">5</b>
                 </a> --}}
 
-<div style="display: flex;">
+                <div style="display: flex;">
 
-                <a href="javascript:void(0)" class="op-user" >
-                    <i class="fa fa-user-o"></i>
-                    {{Auth::user()->name}}
-                </a>
+                    <a href="javascript:void(0)" class="op-user">
+                        <i class="fa fa-user-o"></i>
+                        {{Auth::user()->name}}
+                    </a>
 
-                @if(Auth::user()->type= "supplier")
-                {{-- <div style="background-image: url({{asset('/web/images/bbd.svg')}});padding: 5px;color: white;border-radius: 5px;margin-top: -7px;
-margin-right: 10px;"> --}}
+                    @if(Auth::user()->type= "supplier")
+                    {{-- <div style="background-image: url({{asset('/web/images/bbd.svg')}});padding: 5px;color:
+                    white;border-radius: 5px;margin-top: -7px;
+                    margin-right: 10px;"> --}}
 
-                {{-- <a style="color:white" href="#" class="op-user" >
+                    {{-- <a style="color:white" href="#" class="op-user" >
                    Dashboard
                    <img style="max-width: 35px;" src="{{asset('/web/images/dashboard.svg')}}">
-                </a> --}}
-                {{-- </div> --}}
-</div>
-@endif
+                    </a> --}}
+                    {{-- </div> --}}
+                </div>
+                @endif
 
-              @endif
+                @endif
 
             </div>
         </div>
@@ -116,7 +116,7 @@ margin-right: 10px;"> --}}
         <div class="container">
             <div class="categories">
                 <ul>
-                <li class="menu-item-has-children {{$menu ? 'active' :  ''}}">
+                    <li class="menu-item-has-children {{$menu ? 'active' :  ''}}">
                         <a href="javascript:void(0)">
                             <i class="fa fa-bars"></i>
 
@@ -125,16 +125,16 @@ margin-right: 10px;"> --}}
                         <ul class="sub-menu">
                             @foreach (\App\Models\Category::whereNull('parent_id')->limit(10)->get() as $category)
 
-                        <li class="{{$category->hasChild ? "has-mega-sub" : ""}}">
+                            <li class="{{$category->hasChild ? "has-mega-sub" : ""}}">
                                 <a href="{{url('category/'.$category->id)}}">
                                     <img src="{{url('storage/'.$category->image)}}" alt="">
                                     {{$category->getTranslatedAttribute('name',\App::getLocale())}}
                                 </a>
-@if($category->hasChild == true)
+                                @if($category->hasChild == true)
 
-                                <ul class="mega-sub" >
+                                <ul class="mega-sub">
                                     @foreach ($category->children as $sub_cat)
-                                        <li>
+                                    <li>
 
                                         <div class="s-item col-md-3 col-xs-12">
                                             <h4>
@@ -166,12 +166,19 @@ margin-right: 10px;"> --}}
 
                                 </ul>
                             </li>
-                                @endif
+                            @endif
 
 
                             @endforeach
 
+                            <li class="has-mega-sub">
+                                <a href="https://businessdotcom.net/category/131">
+                                    <img src="https://businessdotcom.net/storage/categories/April2020/3IalTtGFJwExlLojHBE1.png"
+                                        alt="">
+                                    مصنوعات يدوية و هدايا
+                                </a>
 
+                            </li>
 
                         </ul>
                     </li>
@@ -228,26 +235,26 @@ margin-right: 10px;"> --}}
             <div class="tab-pane fade active in" id="menu-panel">
                 <ul>
                     <li>
-                    <a href="{{url('/')}}">{{__('general.home')}}</a>
-                </li>
-                <li>
-                    <a href="{{url('about')}}">{{__('general.about')}}</a>
-                </li>
-                <li>
-                    <a href="{{url('services')}}">{{__('general.services')}}</a>
-                </li>
-                <li>
-                    <a href="#">
-                        {{__('general.requests')}}
-                        <i class="badge-n"> {{__('general.new_notf')}} 10</i>
-                    </a>
-                </li>
-                <li>
-                    <a href="{{url('privacy')}}">@lang('general.privacy')</a>
-                </li>
-                <li>
-                    <a href="#">@lang('general.contact_us')</a></a>
-                </li>
+                        <a href="{{url('/')}}">{{__('general.home')}}</a>
+                    </li>
+                    <li>
+                        <a href="{{url('about')}}">{{__('general.about')}}</a>
+                    </li>
+                    <li>
+                        <a href="{{url('services')}}">{{__('general.services')}}</a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            {{__('general.requests')}}
+                            <i class="badge-n"> {{__('general.new_notf')}} 10</i>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="{{url('privacy')}}">@lang('general.privacy')</a>
+                    </li>
+                    <li>
+                        <a href="#">@lang('general.contact_us')</a></a>
+                    </li>
                 </ul>
             </div>
             <div class="tab-pane fade" id="cats-panel">
@@ -255,53 +262,53 @@ margin-right: 10px;"> --}}
                     @foreach (\App\Models\Category::whereNull('parent_id')->limit(10)->get() as $category)
 
 
-                            <li class="{{ $category->hasChild ? "menu-item-has-children" : ""}}">
-                                <a href="javascript:void(0)">
-                                    <img src="{{url('storage/'.$category->image)}}" alt="">
-                                    {{$category->getTranslatedAttribute('name',\App::getLocale())}}
-                                </a>
-                                @if($category->hasChild == true)
+                    <li class="{{ $category->hasChild ? "menu-item-has-children" : ""}}">
+                        <a href="javascript:void(0)">
+                            <img src="{{url('storage/'.$category->image)}}" alt="">
+                            {{$category->getTranslatedAttribute('name',\App::getLocale())}}
+                        </a>
+                        @if($category->hasChild == true)
 
-                                <ul class="sub-menu">
-                                    @foreach ($category->children as $sub_cat)
+                        <ul class="sub-menu">
+                            @foreach ($category->children as $sub_cat)
 
-                                    <li>
-                                        <div class="s-item">
-                                            <h4>
-                                                 <a href="#">
-                                                {{$sub_cat->getTranslatedAttribute('name',\App::getLocale())}}
-                                                 </a>
+                            <li>
+                                <div class="s-item">
+                                    <h4>
+                                        <a href="#">
+                                            {{$sub_cat->getTranslatedAttribute('name',\App::getLocale())}}
+                                        </a>
 
-                                            </h4>
-                                            @if($sub_cat->hasChild == true)
+                                    </h4>
+                                    @if($sub_cat->hasChild == true)
 
-                                            <ul>
-                                                @foreach ($sub_cat->children as $sub_sub_cat)
+                                    <ul>
+                                        @foreach ($sub_cat->children as $sub_sub_cat)
 
-                                                <li>
-                                                    <a href="#">
-                                                    {{$sub_sub_cat->getTranslatedAttribute('name',\App::getLocale())}}
-                                                    </a>
-                                                </li>
-                                                @endforeach
-
-
-                                            </ul>
-                                            @endif
-
-                                        </div>
+                                        <li>
+                                            <a href="#">
+                                                {{$sub_sub_cat->getTranslatedAttribute('name',\App::getLocale())}}
+                                            </a>
+                                        </li>
+                                        @endforeach
 
 
-                                    </li>
-                                    @endforeach
+                                    </ul>
+                                    @endif
 
-                                </ul>
-@endif
+                                </div>
+
+
                             </li>
                             @endforeach
 
-
                         </ul>
+                        @endif
+                    </li>
+                    @endforeach
+
+
+                </ul>
             </div>
         </div>
     </div>
@@ -318,7 +325,9 @@ margin-right: 10px;"> --}}
                     <img src="{{ asset('/web/images/marks/nike.png')}}" alt="">
                     <div class="data">
                         <h4>supplier name</h4>
-                        <p>Competently whiteboard granular content and turnkey applications. Holisticly build global e-markets rather than enterprise ideas. Distinctively iterate scalable vortals before open-source collaboration and idea-sharing. Distinctively.</p>
+                        <p>Competently whiteboard granular content and turnkey applications. Holisticly build global
+                            e-markets rather than enterprise ideas. Distinctively iterate scalable vortals before
+                            open-source collaboration and idea-sharing. Distinctively.</p>
                     </div>
                 </a>
             </li>
@@ -333,7 +342,7 @@ margin-right: 10px;"> --}}
         <a href="#" class="btn">all notifications</a>
     </div>
 </div>
-                @if(Auth::check())
+@if(Auth::check())
 
 <div class="sticky-sidebar user-area">
     <div class="st-body">
@@ -342,7 +351,7 @@ margin-right: 10px;"> --}}
             <div class="user-pic">
                 <img src="{{ asset('/web/images/marks/1.png')}}" alt="">
             </div>
-                            <h3>{{Auth::user()->name}}</h3>
+            <h3>{{Auth::user()->name}}</h3>
 
         </div>
         <div class="user-inner">
@@ -383,7 +392,7 @@ margin-right: 10px;"> --}}
                 <select class="form-control">
                     <option selected disabled>@lang('general.select_category')</option>
                     @foreach (\App\Models\Category::whereNull('parent_id')->get() as $category)
-                        <option>{{$category->getTranslatedAttribute('name',\App::getLocale())}}</option>
+                    <option>{{$category->getTranslatedAttribute('name',\App::getLocale())}}</option>
                     @endforeach
                 </select>
             </div>
@@ -399,18 +408,18 @@ margin-right: 10px;"> --}}
 <div class="mob-header">
     <div class="container">
         <div class="logo">
-        <a href="#">
-            <img src="{{ asset('/web/images/logo.png')}}" alt="">
-        </a>
-    </div>
-    <div class="mob-btns">
-        <button type="button" class="op-search">
-            <i class="fa fa-search"></i>
-        </button>
-        <button type="button" class="op-menu">
-            <i class="fa fa-bars"></i>
-        </button>
-    </div>
+            <a href="#">
+                <img src="{{ asset('/web/images/logo.png')}}" alt="">
+            </a>
+        </div>
+        <div class="mob-btns">
+            <button type="button" class="op-search">
+                <i class="fa fa-search"></i>
+            </button>
+            <button type="button" class="op-menu">
+                <i class="fa fa-bars"></i>
+            </button>
+        </div>
     </div>
 </div>
 <div class="sticky-menu">
@@ -438,5 +447,3 @@ margin-right: 10px;"> --}}
     </a>
 </div>
 <div class="overlay-s"></div>
-
-
