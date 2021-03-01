@@ -171,11 +171,10 @@
 
                             @endforeach
 
-                            <li class="has-mega-sub">
-                                <a href="https://businessdotcom.net/category/131">
-                                    <img src="https://businessdotcom.net/storage/categories/April2020/3IalTtGFJwExlLojHBE1.png"
-                                        alt="">
-                                    مصنوعات يدوية و هدايا
+                            <li class="">
+                                <a href="{{url('/all-categories')}}">
+                                    <img src="{{url('/storage/allcat.png')}}" alt="">
+                                    __('general.others')
                                 </a>
 
                             </li>

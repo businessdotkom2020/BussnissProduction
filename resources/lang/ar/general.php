@@ -182,6 +182,7 @@ return [
     'address' => 'العنوان',
     'delivery_from' => 'التوصيل من يوم',
     'delivery_to' => 'إلى يوم',
+    'others' => 'أخرى',
 
 
 ];
