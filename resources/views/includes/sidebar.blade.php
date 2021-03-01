@@ -173,7 +173,7 @@
 
                             <li class="">
                                 <a href="{{url('/all-categories')}}">
-                                    <img src="{{url('/storage/categories/allcat.png')}}" alt="">
+                                    <img src="{{url('/storage/categories/category_logo.png')}}" alt="">
                                     {{__('general.others')}}
                                 </a>
 
