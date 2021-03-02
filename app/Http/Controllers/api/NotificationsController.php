@@ -31,6 +31,6 @@ class NotificationsController extends Controller
     public function seen()
     {
         $notifications = Notification::where('user_id', request()->user()->id)->get();
-        return new NotificationsCollections(Notification::where('user_id', auth()->id)->get());
+        return new NotificationsCollections(Notification::where('user_id', request()->user()->id)->get());
     }
 }
