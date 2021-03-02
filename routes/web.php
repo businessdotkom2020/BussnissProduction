@@ -140,6 +140,13 @@ Route::get('/supplier/{supplier_id}/info', 'web\SuppliersController@info');
 Route::get('/suppliers', 'web\SuppliersController@index');
 
 
+///////////////// Users ////////////////////
+
+Route::get('/user/{supplier_id}', 'web\SuppliersController@show');
+Route::get('/supplier/{supplier_id}/info', 'web\SuppliersController@info');
+Route::get('/suppliers', 'web\SuppliersController@index');
+
+
 
 /////////////////////       Requests ////////////////////
 Route::get('requests', 'web\RequestController@index');
