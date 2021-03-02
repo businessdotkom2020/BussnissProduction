@@ -176,11 +176,13 @@ $menu = true ;
                     </div>
                 </div>
 
+                @foreach (\App\Models\Category::limit(8)->get() as $category)
+
                 <div class="col-md-3 col-sm-4 col-sx-12">
                     <div class="row categories-blocks">
                         <div class="col-md-5 col-sm-5 col-xs-6">
                             <div class="category-img">
-                                <a href="#">
+                                <a href="{{url('category/'.$category->id)}}">
                                     <img src="https://demo2.drfuri.com/martfury17/wp-content/uploads/sites/58/elementor/thumbs/c1-o8k9olcyrwe8m5dunmsk1org093wzb8ajrg7wzbc4k.jpg"
                                         alt="">
                                 </a>
@@ -188,7 +190,9 @@ $menu = true ;
                         </div>
                         <div class="col-md-7 col-sm-7 col-xs-6">
                             <div class="category-links">
-                                <h4><a href="#">main category</a></h4>
+                                <h4><a href="{{url('category/'.$category->id)}}">
+                                        {{$category->getTranslatedAttribute('name',\App::getLocale())}}</a>
+                                </h4>
                                 <ul class="list-inline">
                                     <li><a href="#">sub category</a></li>
                                     <li><a href="#">sub category</a></li>
@@ -205,6 +209,7 @@ $menu = true ;
                         </div>
                     </div>
                 </div>
+                @endforeach
 
             </div>
         </div>
@@ -2367,4 +2372,3 @@ $.ajax({
 </script>
 
 @endpush
-

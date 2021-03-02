@@ -60,7 +60,7 @@
 
 
 
-        @include('includes.sidebar')
+        @include('includes.\sidebar')
 
         @yield('content')
 
