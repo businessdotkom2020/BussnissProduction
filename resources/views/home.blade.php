@@ -194,10 +194,11 @@ $menu = true ;
                                     </a>
                                 </h4>
                                 <ul class="list-inline">
-                                    @foreach (\App\Models\Category::where('parent_id',$category->id)->limit(8)->get() as $sub_category)
-                                        <li>
-                                            <a href="{{url('category/'.$sub_category->id)}}">{{$sub_category->getTranslatedAttribute('name',\App::getLocale())}}</a>
-                                        </li>
+                                    @foreach (\App\Models\Category::where('parent_id',$category->id)->limit(4)->get() as  $sub_category)
+                                    <li>
+                                        <a
+                                            href="{{url('category/'.$sub_category->id)}}">{{$sub_category->getTranslatedAttribute('name',\App::getLocale())}}</a>
+                                    </li>
                                     @endforeach
                                 </ul>
                                 <a href="#" class="cat-more">
