@@ -35,7 +35,7 @@ class NotificationsController extends Controller
         return response()->json([
             'status' => true,
             'code' => 200,
-            "message" => "Job  Created successfully"
+            "message" => "تم تغيير حالة الإشعارات بنجاح"
         ]);
     }
 }
