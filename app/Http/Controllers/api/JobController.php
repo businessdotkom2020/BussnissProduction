@@ -14,7 +14,7 @@ use App\Models\Job;
 class JobController extends BaseController
 {
 
-    
+
         public function post(JobRequest $request){
             $job = new Job;
             $job->user_id            = $request->user()->id;

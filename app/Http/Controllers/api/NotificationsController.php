@@ -21,7 +21,11 @@ class NotificationsController extends Controller
 
     public function show($notification_id)
     {
-        return new NotificationsCollections(Notification::where([['user_id', request()->user()->id], ['id', $notification_id]])->get());
+        return response()->json([
+            'status' => true,
+            'code' => 200,
+            "data" => new NotificationsResource(Notification::find($notification_id))
+        ]);
     }
 
     public function seen()
