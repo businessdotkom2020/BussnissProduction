@@ -741,8 +741,8 @@ $menu = true ;
                                 </ul>
                             </div>
                             <div class="request-content">
-                                <h3 class="title"><a
-                                        href="{{url('request/'.$product->id)}}">{{$product->getTranslatedAttribute('name',\App::getLocale())}}</a>
+                                <h3 class="title"><a href="{{url('request/'.$product->id)}}">
+                                        {{$product->getTranslatedAttribute('name',\App::getLocale())}}</a>
                                 </h3>
                                 <div class="request-de">
                                     <a class="add-to-cart" href="{{url('request/'.$product->id)}}"
@@ -1037,31 +1037,56 @@ $menu = true ;
 
 
                 <div class="h-offers-slider owl-carousel owl-theme">
+                    @foreach ($recommended_products as $product)
+
                     <div class="item">
                         <div class="product-grid">
                             <div class="product-image">
-                                <a href="#" class="image">
-                                    <img class="pic-1" src="https://i.imgur.com/gY5s6z0.jpg">
-                                    <img class="pic-2" src="https://i.imgur.com/CEQeTSE.jpg">
+                                <a href="{{url('product/'.$product->id)}}" class="image">
+                                    <img class="pic-1" src="{{ url('storage/'.(json_decode($request->images))[0])}}">
+                                    <img class="pic-2" src="{{ url('storage/'.(json_decode($request->images))[0])}}">
                                 </a>
                                 <ul class="product-links">
                                     <li><a href="#" data-tip="Compare"><i class="fa fa-random"></i></a></li>
                                     <li><a href="#" data-tip="Add to Wishlist"><i class="fa fa-heart"></i></a>
                                     </li>
-                                    <li><a href="#" data-tip="Quick View"><i class="fa fa-search"></i></a></li>
-                                    <li><a href="#" data-tip="Add to Cart"><i class="fa fa-shopping-cart"></i></a></li>
+                                    {{-- <li><a href="#" data-tip="Quick View"><i class="fa fa-search"></i></a></li> --}}
+                                    {{-- <li><a href="#" data-tip="Add to Cart"><i class="fa fa-shopping-cart"></i></a></li> --}}
                                 </ul>
                             </div>
                             <div class="product-content">
-                                <h3 class="title"><a href="#">Women's T-Shirt</a></h3>
-                                <div class="price">$70.99</div>
+                                <h3 class="title"><a
+                                        href="{{url('request/'.$product->id)}}">{{$product->getTranslatedAttribute('name',\App::getLocale())}}</a>
+                                </h3>
+                                <div class="price">
+                                    @if ($product->sale_price)
+                                    <span>{{$product->price}}</span>
+                                    {{$product->sale_price}}
+                                    @else
+                                    {{$product->price}}
+
+                                    @endif
+                                </div>
                                 <div class="c-data">
                                     <p>
+                                        @php
+                                        $rating = $product->average_rating ;
+                                        @endphp
+
+                                        @foreach(range(1,5) as $i)
+                                        @if($rating >0)
+                                        @if($rating > 0.5)
                                         <i class="fa fa-star active"></i>
-                                        <i class="fa fa-star active"></i>
-                                        <i class="fa fa-star active"></i>
-                                        <i class="fa fa-star active"></i>
-                                        <i class="fa fa-star"></i>
+                                        @elseif($rating < 0.5 && $rating> 0)
+                                            <i class="fas fa-star-half"></i>
+                                            @endif
+                                            @else
+                                            <i class="fa fa-star"></i>
+                                            @endif
+                                            @php $rating--; @endphp
+
+                                            @endforeach
+
                                     </p>
                                 </div>
                                 <a class="btn h-offers-btn" href="#" data-toggle="modal"
@@ -1071,312 +1096,14 @@ $menu = true ;
                             </div>
                         </div>
                     </div>
-                    <div class="item">
-                        <div class="product-grid">
-                            <div class="product-image">
-                                <a href="#" class="image">
-                                    <img class="pic-1" src="https://i.imgur.com/gY5s6z0.jpg">
-                                    <img class="pic-2" src="https://i.imgur.com/CEQeTSE.jpg">
-                                </a>
-                                <ul class="product-links">
-                                    <li><a href="#" data-tip="Compare"><i class="fa fa-random"></i></a></li>
-                                    <li><a href="#" data-tip="Add to Wishlist"><i class="fa fa-heart"></i></a>
-                                    </li>
-                                    <li><a href="#" data-tip="Quick View"><i class="fa fa-search"></i></a></li>
-                                    <li><a href="#" data-tip="Add to Cart"><i class="fa fa-shopping-cart"></i></a></li>
-                                </ul>
-                            </div>
-                            <div class="product-content">
-                                <h3 class="title"><a href="#">Women's T-Shirt</a></h3>
-                                <div class="price">$70.99</div>
-                                <div class="c-data">
-                                    <p>
-                                        <i class="fa fa-star active"></i>
-                                        <i class="fa fa-star active"></i>
-                                        <i class="fa fa-star active"></i>
-                                        <i class="fa fa-star active"></i>
-                                        <i class="fa fa-star"></i>
-                                    </p>
-                                </div>
-                                <a class="btn h-offers-btn" href="#" data-toggle="modal"
-                                    data-target="#contact_{{$product->user_id}}"
-                                    target="_blank">@lang('general.contact_supplier')</a>
 
-                            </div>
-                        </div>
-                    </div>
-                    <div class="item">
-                        <div class="product-grid">
-                            <div class="product-image">
-                                <a href="#" class="image">
-                                    <img class="pic-1" src="https://i.imgur.com/gY5s6z0.jpg">
-                                    <img class="pic-2" src="https://i.imgur.com/CEQeTSE.jpg">
-                                </a>
-                                <ul class="product-links">
-                                    <li><a href="#" data-tip="Compare"><i class="fa fa-random"></i></a></li>
-                                    <li><a href="#" data-tip="Add to Wishlist"><i class="fa fa-heart"></i></a>
-                                    </li>
-                                    <li><a href="#" data-tip="Quick View"><i class="fa fa-search"></i></a></li>
-                                    <li><a href="#" data-tip="Add to Cart"><i class="fa fa-shopping-cart"></i></a></li>
-                                </ul>
-                            </div>
-                            <div class="product-content">
-                                <h3 class="title"><a href="#">Women's T-Shirt</a></h3>
-                                <div class="price">$70.99</div>
-                                <div class="c-data">
-                                    <p>
-                                        <i class="fa fa-star active"></i>
-                                        <i class="fa fa-star active"></i>
-                                        <i class="fa fa-star active"></i>
-                                        <i class="fa fa-star active"></i>
-                                        <i class="fa fa-star"></i>
-                                    </p>
-                                </div>
-                                <a class="btn h-offers-btn" href="#" data-toggle="modal"
-                                    data-target="#contact_{{$product->user_id}}"
-                                    target="_blank">@lang('general.contact_supplier')</a>
 
-                            </div>
-                        </div>
-                    </div>
-                    <div class="item">
-                        <div class="product-grid">
-                            <div class="product-image">
-                                <a href="#" class="image">
-                                    <img class="pic-1" src="https://i.imgur.com/gY5s6z0.jpg">
-                                    <img class="pic-2" src="https://i.imgur.com/CEQeTSE.jpg">
-                                </a>
-                                <ul class="product-links">
-                                    <li><a href="#" data-tip="Compare"><i class="fa fa-random"></i></a></li>
-                                    <li><a href="#" data-tip="Add to Wishlist"><i class="fa fa-heart"></i></a>
-                                    </li>
-                                    <li><a href="#" data-tip="Quick View"><i class="fa fa-search"></i></a></li>
-                                    <li><a href="#" data-tip="Add to Cart"><i class="fa fa-shopping-cart"></i></a></li>
-                                </ul>
-                            </div>
-                            <div class="product-content">
-                                <h3 class="title"><a href="#">Women's T-Shirt</a></h3>
-                                <div class="price">$70.99</div>
-                                <div class="c-data">
-                                    <p>
-                                        <i class="fa fa-star active"></i>
-                                        <i class="fa fa-star active"></i>
-                                        <i class="fa fa-star active"></i>
-                                        <i class="fa fa-star active"></i>
-                                        <i class="fa fa-star"></i>
-                                    </p>
-                                </div>
-                                <a class="btn h-offers-btn" href="#" data-toggle="modal"
-                                    data-target="#contact_{{$product->user_id}}"
-                                    target="_blank">@lang('general.contact_supplier')</a>
+                    @endforeach
 
-                            </div>
-                        </div>
-                    </div>
-                    <div class="item">
-                        <div class="product-grid">
-                            <div class="product-image">
-                                <a href="#" class="image">
-                                    <img class="pic-1" src="https://i.imgur.com/gY5s6z0.jpg">
-                                    <img class="pic-2" src="https://i.imgur.com/CEQeTSE.jpg">
-                                </a>
-                                <ul class="product-links">
-                                    <li><a href="#" data-tip="Compare"><i class="fa fa-random"></i></a></li>
-                                    <li><a href="#" data-tip="Add to Wishlist"><i class="fa fa-heart"></i></a>
-                                    </li>
-                                    <li><a href="#" data-tip="Quick View"><i class="fa fa-search"></i></a></li>
-                                    <li><a href="#" data-tip="Add to Cart"><i class="fa fa-shopping-cart"></i></a></li>
-                                </ul>
-                            </div>
-                            <div class="product-content">
-                                <h3 class="title"><a href="#">Women's T-Shirt</a></h3>
-                                <div class="price">$70.99</div>
-                                <div class="c-data">
-                                    <p>
-                                        <i class="fa fa-star active"></i>
-                                        <i class="fa fa-star active"></i>
-                                        <i class="fa fa-star active"></i>
-                                        <i class="fa fa-star active"></i>
-                                        <i class="fa fa-star"></i>
-                                    </p>
-                                </div>
-                                <a class="btn h-offers-btn" href="#" data-toggle="modal"
-                                    data-target="#contact_{{$product->user_id}}"
-                                    target="_blank">@lang('general.contact_supplier')</a>
 
-                            </div>
-                        </div>
-                    </div>
-                    <div class="item">
-                        <div class="product-grid">
-                            <div class="product-image">
-                                <a href="#" class="image">
-                                    <img class="pic-1" src="https://i.imgur.com/gY5s6z0.jpg">
-                                    <img class="pic-2" src="https://i.imgur.com/CEQeTSE.jpg">
-                                </a>
-                                <ul class="product-links">
-                                    <li><a href="#" data-tip="Compare"><i class="fa fa-random"></i></a></li>
-                                    <li><a href="#" data-tip="Add to Wishlist"><i class="fa fa-heart"></i></a>
-                                    </li>
-                                    <li><a href="#" data-tip="Quick View"><i class="fa fa-search"></i></a></li>
-                                    <li><a href="#" data-tip="Add to Cart"><i class="fa fa-shopping-cart"></i></a></li>
-                                </ul>
-                            </div>
-                            <div class="product-content">
-                                <h3 class="title"><a href="#">Women's T-Shirt</a></h3>
-                                <div class="price">$70.99</div>
-                                <div class="c-data">
-                                    <p>
-                                        <i class="fa fa-star active"></i>
-                                        <i class="fa fa-star active"></i>
-                                        <i class="fa fa-star active"></i>
-                                        <i class="fa fa-star active"></i>
-                                        <i class="fa fa-star"></i>
-                                    </p>
-                                </div>
-                                <a class="btn h-offers-btn" href="#" data-toggle="modal"
-                                    data-target="#contact_{{$product->user_id}}"
-                                    target="_blank">@lang('general.contact_supplier')</a>
 
-                            </div>
-                        </div>
-                    </div>
-                    <div class="item">
-                        <div class="product-grid">
-                            <div class="product-image">
-                                <a href="#" class="image">
-                                    <img class="pic-1" src="https://i.imgur.com/gY5s6z0.jpg">
-                                    <img class="pic-2" src="https://i.imgur.com/CEQeTSE.jpg">
-                                </a>
-                                <ul class="product-links">
-                                    <li><a href="#" data-tip="Compare"><i class="fa fa-random"></i></a></li>
-                                    <li><a href="#" data-tip="Add to Wishlist"><i class="fa fa-heart"></i></a>
-                                    </li>
-                                    <li><a href="#" data-tip="Quick View"><i class="fa fa-search"></i></a></li>
-                                    <li><a href="#" data-tip="Add to Cart"><i class="fa fa-shopping-cart"></i></a></li>
-                                </ul>
-                            </div>
-                            <div class="product-content">
-                                <h3 class="title"><a href="#">Women's T-Shirt</a></h3>
-                                <div class="price">$70.99</div>
-                                <div class="c-data">
-                                    <p>
-                                        <i class="fa fa-star active"></i>
-                                        <i class="fa fa-star active"></i>
-                                        <i class="fa fa-star active"></i>
-                                        <i class="fa fa-star active"></i>
-                                        <i class="fa fa-star"></i>
-                                    </p>
-                                </div>
-                                <a class="btn h-offers-btn" href="#" data-toggle="modal"
-                                    data-target="#contact_{{$product->user_id}}"
-                                    target="_blank">@lang('general.contact_supplier')</a>
 
-                            </div>
-                        </div>
-                    </div>
-                    <div class="item">
-                        <div class="product-grid">
-                            <div class="product-image">
-                                <a href="#" class="image">
-                                    <img class="pic-1" src="https://i.imgur.com/gY5s6z0.jpg">
-                                    <img class="pic-2" src="https://i.imgur.com/CEQeTSE.jpg">
-                                </a>
-                                <ul class="product-links">
-                                    <li><a href="#" data-tip="Compare"><i class="fa fa-random"></i></a></li>
-                                    <li><a href="#" data-tip="Add to Wishlist"><i class="fa fa-heart"></i></a>
-                                    </li>
-                                    <li><a href="#" data-tip="Quick View"><i class="fa fa-search"></i></a></li>
-                                    <li><a href="#" data-tip="Add to Cart"><i class="fa fa-shopping-cart"></i></a></li>
-                                </ul>
-                            </div>
-                            <div class="product-content">
-                                <h3 class="title"><a href="#">Women's T-Shirt</a></h3>
-                                <div class="price">$70.99</div>
-                                <div class="c-data">
-                                    <p>
-                                        <i class="fa fa-star active"></i>
-                                        <i class="fa fa-star active"></i>
-                                        <i class="fa fa-star active"></i>
-                                        <i class="fa fa-star active"></i>
-                                        <i class="fa fa-star"></i>
-                                    </p>
-                                </div>
-                                <a class="btn h-offers-btn" href="#" data-toggle="modal"
-                                    data-target="#contact_{{$product->user_id}}"
-                                    target="_blank">@lang('general.contact_supplier')</a>
 
-                            </div>
-                        </div>
-                    </div>
-                    <div class="item">
-                        <div class="product-grid">
-                            <div class="product-image">
-                                <a href="#" class="image">
-                                    <img class="pic-1" src="https://i.imgur.com/gY5s6z0.jpg">
-                                    <img class="pic-2" src="https://i.imgur.com/CEQeTSE.jpg">
-                                </a>
-                                <ul class="product-links">
-                                    <li><a href="#" data-tip="Compare"><i class="fa fa-random"></i></a></li>
-                                    <li><a href="#" data-tip="Add to Wishlist"><i class="fa fa-heart"></i></a>
-                                    </li>
-                                    <li><a href="#" data-tip="Quick View"><i class="fa fa-search"></i></a></li>
-                                    <li><a href="#" data-tip="Add to Cart"><i class="fa fa-shopping-cart"></i></a></li>
-                                </ul>
-                            </div>
-                            <div class="product-content">
-                                <h3 class="title"><a href="#">Women's T-Shirt</a></h3>
-                                <div class="price">$70.99</div>
-                                <div class="c-data">
-                                    <p>
-                                        <i class="fa fa-star active"></i>
-                                        <i class="fa fa-star active"></i>
-                                        <i class="fa fa-star active"></i>
-                                        <i class="fa fa-star active"></i>
-                                        <i class="fa fa-star"></i>
-                                    </p>
-                                </div>
-                                <a class="btn h-offers-btn" href="#" data-toggle="modal"
-                                    data-target="#contact_{{$product->user_id}}"
-                                    target="_blank">@lang('general.contact_supplier')</a>
-
-                            </div>
-                        </div>
-                    </div>
-                    <div class="item">
-                        <div class="product-grid">
-                            <div class="product-image">
-                                <a href="#" class="image">
-                                    <img class="pic-1" src="https://i.imgur.com/gY5s6z0.jpg">
-                                    <img class="pic-2" src="https://i.imgur.com/CEQeTSE.jpg">
-                                </a>
-                                <ul class="product-links">
-                                    <li><a href="#" data-tip="Compare"><i class="fa fa-random"></i></a></li>
-                                    <li><a href="#" data-tip="Add to Wishlist"><i class="fa fa-heart"></i></a>
-                                    </li>
-                                    <li><a href="#" data-tip="Quick View"><i class="fa fa-search"></i></a></li>
-                                    <li><a href="#" data-tip="Add to Cart"><i class="fa fa-shopping-cart"></i></a></li>
-                                </ul>
-                            </div>
-                            <div class="product-content">
-                                <h3 class="title"><a href="#">Women's T-Shirt</a></h3>
-                                <div class="price">$70.99</div>
-                                <div class="c-data">
-                                    <p>
-                                        <i class="fa fa-star active"></i>
-                                        <i class="fa fa-star active"></i>
-                                        <i class="fa fa-star active"></i>
-                                        <i class="fa fa-star active"></i>
-                                        <i class="fa fa-star"></i>
-                                    </p>
-                                </div>
-                                <a class="btn h-offers-btn" href="#" data-toggle="modal"
-                                    data-target="#contact_{{$product->user_id}}"
-                                    target="_blank">@lang('general.contact_supplier')</a>
-
-                            </div>
-                        </div>
-                    </div>
                 </div>
 
 

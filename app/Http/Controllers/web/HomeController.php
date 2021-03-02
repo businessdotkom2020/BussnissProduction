@@ -11,6 +11,7 @@ class HomeController extends Controller
     public function home()
     {
         $latest_products = \App\Models\Product::latest()->limit(12)->get();
+        $recommended_products = \App\Models\Product::oldest()->limit(12)->get();
         $latest_products_ids = $latest_products->pluck('user_id')->toArray();
 
         $common_products = \App\Models\Product::limit(12)->orderBy('name', 'asc')->get();
@@ -33,6 +34,7 @@ class HomeController extends Controller
             'latest_products',
             'common_products',
             'latest_requests',
+            'recommended_products',
             'home_suppliers',
             'home_services',
             'owners',
