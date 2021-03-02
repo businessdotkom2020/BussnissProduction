@@ -16,7 +16,7 @@ $menu = true ;
                         <!--
                                     <div class="details-item">
                                         <h1>badil spare parts</h1>
-                                        <p> 
+                                        <p>
                                             Lorem Ipsum is simply dummy text of the printing and typesetting industry
                                         </p>
                                         <a href="#" class="btn">shop now</a>
@@ -57,9 +57,9 @@ $menu = true ;
                             <div class="block-product">
                                 <div class="img-block">
                                     <a href="{{url('product/'.$product->id)}}" class="img-hold">
-                                        
+
                                         <img src="https://i.ibb.co/2cbfP9p/20961-20965-20969iphone12promaxblueproductimage1000x1000png.png" border="0">
-                                        
+
                                     </a>
                                 </div>
                                 <div class="details-block">
@@ -87,11 +87,11 @@ $menu = true ;
             </div>
             @endforeach
 
-        </div> 
+        </div>
     </div>
     -->
 
-<!--
+    <!--
     <div class="cats col-xs-12">
         <div class="container">
             <ul>
@@ -108,14 +108,14 @@ $menu = true ;
     </div>
 -->
 
-<div class="new-section col-xs-12">
+    <div class="new-section col-xs-12">
         <div class="container">
             <div class="row">
             </div>
         </div>
-</div>
+    </div>
 
-<div class="h-features col-xs-12">
+    <div class="h-features col-xs-12">
         <div class="container">
             <div class="row">
                 <div class="col-md-12">
@@ -169,12 +169,13 @@ $menu = true ;
     <div class="h-categories col-xs-12">
         <div class="container-fluid">
             <div class="row">
-            <div class="col-md-12">
-                <div class="g-head">
-                    <h3>TOP <span>CATEGORIES</span>OF THE MONTH </h3>
-                    <a href="#" class="more">@lang('general.view_all')</a>
+                <div class="col-md-12">
+                    <div class="g-head">
+                        <h3>TOP <span>CATEGORIES</span>OF THE MONTH </h3>
+                        <a href="#" class="more">@lang('general.view_all')</a>
+                    </div>
                 </div>
-            </div>
+
                 <div class="col-md-3 col-sm-4 col-sx-12">
                     <div class="row categories-blocks">
                         <div class="col-md-5 col-sm-5 col-xs-6">
@@ -204,209 +205,7 @@ $menu = true ;
                         </div>
                     </div>
                 </div>
-                <div class="col-md-3 col-sm-4 col-sx-12">
-                    <div class="row categories-blocks">
-                        <div class="col-md-5 col-sm-5 col-xs-6">
-                            <div class="category-img">
-                                <a href="#">
-                                    <img src="https://demo2.drfuri.com/martfury17/wp-content/uploads/sites/58/elementor/thumbs/c1-o8k9olcyrwe8m5dunmsk1org093wzb8ajrg7wzbc4k.jpg"
-                                        alt="">
-                                </a>
-                            </div>
-                        </div>
-                        <div class="col-md-7 col-sm-7 col-xs-6">
-                            <div class="category-links">
-                                <h4><a href="#">main category</a></h4>
-                                <ul class="list-inline">
-                                    <li><a href="#">sub category</a></li>
-                                    <li><a href="#">sub category</a></li>
-                                    <li><a href="#">sub category</a></li>
-                                    <li><a href="#">sub category</a></li>
-                                    <li><a href="#">sub category</a></li>
-                                    <li><a href="#">sub category</a></li>
-                                </ul>
-                                <a href="#" class="cat-more">
-                                    More
-                                    <i class="fa fa-angle-right hvr-icon"></i>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-3 col-sm-4 col-sx-12">
-                    <div class="row categories-blocks">
-                        <div class="col-md-5 col-sm-5 col-xs-6">
-                            <div class="category-img">
-                                <a href="#">
-                                    <img src="https://demo2.drfuri.com/martfury17/wp-content/uploads/sites/58/elementor/thumbs/c1-o8k9olcyrwe8m5dunmsk1org093wzb8ajrg7wzbc4k.jpg"
-                                        alt="">
-                                </a>
-                            </div>
-                        </div>
-                        <div class="col-md-7 col-sm-7 col-xs-6">
-                            <div class="category-links">
-                                <h4><a href="#">main category</a></h4>
-                                <ul class="list-inline">
-                                    <li><a href="#">sub category</a></li>
-                                    <li><a href="#">sub category</a></li>
-                                    <li><a href="#">sub category</a></li>
-                                    <li><a href="#">sub category</a></li>
-                                    <li><a href="#">sub category</a></li>
-                                    <li><a href="#">sub category</a></li>
-                                </ul>
-                                <a href="#" class="cat-more">
-                                    More
-                                    <i class="fa fa-angle-right hvr-icon"></i>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-3 col-sm-4 col-sx-12">
-                    <div class="row categories-blocks">
-                        <div class="col-md-5 col-sm-5 col-xs-6">
-                            <div class="category-img">
-                                <a href="#">
-                                    <img src="https://demo2.drfuri.com/martfury17/wp-content/uploads/sites/58/elementor/thumbs/c1-o8k9olcyrwe8m5dunmsk1org093wzb8ajrg7wzbc4k.jpg"
-                                        alt="">
-                                </a>
-                            </div>
-                        </div>
-                        <div class="col-md-7 col-sm-7 col-xs-6">
-                            <div class="category-links">
-                                <h4><a href="#">main category</a></h4>
-                                <ul class="list-inline">
-                                    <li><a href="#">sub category</a></li>
-                                    <li><a href="#">sub category</a></li>
-                                    <li><a href="#">sub category</a></li>
-                                    <li><a href="#">sub category</a></li>
-                                    <li><a href="#">sub category</a></li>
-                                    <li><a href="#">sub category</a></li>
-                                </ul>
-                                <a href="#" class="cat-more">
-                                    More
-                                    <i class="fa fa-angle-right hvr-icon"></i>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-3 col-sm-4 col-sx-12">
-                    <div class="row categories-blocks">
-                        <div class="col-md-5 col-sm-5 col-xs-6">
-                            <div class="category-img">
-                                <a href="#">
-                                    <img src="https://demo2.drfuri.com/martfury17/wp-content/uploads/sites/58/elementor/thumbs/c1-o8k9olcyrwe8m5dunmsk1org093wzb8ajrg7wzbc4k.jpg"
-                                        alt="">
-                                </a>
-                            </div>
-                        </div>
-                        <div class="col-md-7 col-sm-7 col-xs-6">
-                            <div class="category-links">
-                                <h4><a href="#">main category</a></h4>
-                                <ul class="list-inline">
-                                    <li><a href="#">sub category</a></li>
-                                    <li><a href="#">sub category</a></li>
-                                    <li><a href="#">sub category</a></li>
-                                    <li><a href="#">sub category</a></li>
-                                    <li><a href="#">sub category</a></li>
-                                    <li><a href="#">sub category</a></li>
-                                </ul>
-                                <a href="#" class="cat-more">
-                                    More
-                                    <i class="fa fa-angle-right hvr-icon"></i>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-3 col-sm-4 col-sx-12">
-                    <div class="row categories-blocks">
-                        <div class="col-md-5 col-sm-5 col-xs-6">
-                            <div class="category-img">
-                                <a href="#">
-                                    <img src="https://demo2.drfuri.com/martfury17/wp-content/uploads/sites/58/elementor/thumbs/c1-o8k9olcyrwe8m5dunmsk1org093wzb8ajrg7wzbc4k.jpg"
-                                        alt="">
-                                </a>
-                            </div>
-                        </div>
-                        <div class="col-md-7 col-sm-7 col-xs-6">
-                            <div class="category-links">
-                                <h4><a href="#">main category</a></h4>
-                                <ul class="list-inline">
-                                    <li><a href="#">sub category</a></li>
-                                    <li><a href="#">sub category</a></li>
-                                    <li><a href="#">sub category</a></li>
-                                    <li><a href="#">sub category</a></li>
-                                    <li><a href="#">sub category</a></li>
-                                    <li><a href="#">sub category</a></li>
-                                </ul>
-                                <a href="#" class="cat-more">
-                                    More
-                                    <i class="fa fa-angle-right hvr-icon"></i>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-3 col-sm-4 col-sx-12">
-                    <div class="row categories-blocks">
-                        <div class="col-md-5 col-sm-5 col-xs-6">
-                            <div class="category-img">
-                                <a href="#">
-                                    <img src="https://demo2.drfuri.com/martfury17/wp-content/uploads/sites/58/elementor/thumbs/c1-o8k9olcyrwe8m5dunmsk1org093wzb8ajrg7wzbc4k.jpg"
-                                        alt="">
-                                </a>
-                            </div>
-                        </div>
-                        <div class="col-md-7 col-sm-7 col-xs-6">
-                            <div class="category-links">
-                                <h4><a href="#">main category</a></h4>
-                                <ul class="list-inline">
-                                    <li><a href="#">sub category</a></li>
-                                    <li><a href="#">sub category</a></li>
-                                    <li><a href="#">sub category</a></li>
-                                    <li><a href="#">sub category</a></li>
-                                    <li><a href="#">sub category</a></li>
-                                    <li><a href="#">sub category</a></li>
-                                </ul>
-                                <a href="#" class="cat-more">
-                                    More
-                                    <i class="fa fa-angle-right hvr-icon"></i>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-3 col-sm-4 col-sx-12">
-                    <div class="row categories-blocks">
-                        <div class="col-md-5 col-sm-5 col-xs-6">
-                            <div class="category-img">
-                                <a href="#">
-                                    <img src="https://demo2.drfuri.com/martfury17/wp-content/uploads/sites/58/elementor/thumbs/c1-o8k9olcyrwe8m5dunmsk1org093wzb8ajrg7wzbc4k.jpg"
-                                        alt="">
-                                </a>
-                            </div>
-                        </div>
-                        <div class="col-md-7 col-sm-7 col-xs-6">
-                            <div class="category-links">
-                                <h4><a href="#">main category</a></h4>
-                                <ul class="list-inline">
-                                    <li><a href="#">sub category</a></li>
-                                    <li><a href="#">sub category</a></li>
-                                    <li><a href="#">sub category</a></li>
-                                    <li><a href="#">sub category</a></li>
-                                    <li><a href="#">sub category</a></li>
-                                    <li><a href="#">sub category</a></li>
-                                </ul>
-                                <a href="#" class="cat-more">
-                                    More
-                                    <i class="fa fa-angle-right hvr-icon"></i>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+
             </div>
         </div>
     </div>
@@ -455,7 +254,7 @@ $menu = true ;
 
 
 
-                                          <p>{{ Str::limit($product->getTranslatedAttribute('description',\App::getLocale()),50 )}}</p> 
+                                          <p>{{ Str::limit($product->getTranslatedAttribute('description',\App::getLocale()),50 )}}</p>
 
                                             <div class="cardo" style="flex-grow: 1;padding:0px">
                                                 <div class="c-inner" style="text-align: right;">
@@ -482,8 +281,8 @@ $menu = true ;
                                             </div>
 
                                             <div class="block-price">
-                                            <span class="new-price">{{$product->sale_price ? $product->sale_price : $product->price}}$</span>  
-                                           
+                                            <span class="new-price">{{$product->sale_price ? $product->sale_price : $product->price}}$</span>
+
                                             <span class="old-price">120$</span>
                                             @if($product->sale_price)
                                             <span class="offer-p">{{number_format( (($product->sale_price/$product->price) * 100) ,2 ) }} % تخفيض</span>
@@ -992,11 +791,11 @@ $menu = true ;
                                         </div>
                                     </div>
                                 </div>
-                                <p>{{ Str::limit($product->getTranslatedAttribute('description',\App::getLocale()),50 )}}</p> 
+                                <p>{{ Str::limit($product->getTranslatedAttribute('description',\App::getLocale()),50 )}}</p>
                                 <div class="block-price">
                                     <span
                                         class="new-price">{{$product->sale_price ? $product->sale_price : $product->price}}$</span>
-                                    
+
                                     <span class="old-price">120$</span>
                                     @if($product->sale_price)
                                     <span
@@ -1234,7 +1033,7 @@ $menu = true ;
 -->
             <div class="g-body col-xs-12">
 
-                
+
                 <div class="latest-requests-slider owl-carousel owl-theme">
                     <div class="item">
                         <div class="request-grid">
@@ -1749,7 +1548,7 @@ $menu = true ;
             <div class="g-body col-xs-12">
 
 
-            <div class="h-offers-slider owl-carousel owl-theme">
+                <div class="h-offers-slider owl-carousel owl-theme">
                     <div class="item">
                         <div class="product-grid">
                             <div class="product-image">
@@ -2567,6 +2366,75 @@ $menu = true ;
 
     }
 
+
+    function followtoggle(follower_id) {
+
+var token = '{{ Session::token() }}';
+
+
+
+$.ajax({
+
+
+
+    type: 'POST',
+
+    url: '{!!URL::to('user_follow')!!}',
+
+    data: {
+        follower_id: follower_id,
+        _token: token
+    },
+
+    success: function(result) {
+
+        if (result.class) {
+            $("#followtoggle_" + follower_id).toggleClass(result.class);
+            $("#followicon_" + follower_id).toggleClass(result.icon);
+            $("#followicon_" + follower_id).addClass(result.icon).removeClass(result.old_icon)
+            $("#followtoggle_" + follower_id + " span").text(result.but_status);
+
+        }
+
+
+
+        const Toast = Swal.mixin({
+
+            toast: true,
+
+            position: 'top-end',
+
+            showConfirmButton: false,
+
+            timer: 6000,
+
+            timerProgressBar: true,
+
+            onOpen: (toast) => {
+
+                toast.addEventListener('mouseenter', Swal.stopTimer)
+
+                toast.addEventListener('mouseleave', Swal.resumeTimer)
+
+            }
+
+        })
+
+
+
+        Toast.fire({
+
+            icon: 'success',
+
+            title: result.message
+
+        })
+
+    }
+
+});
+
+}
 </script>
 
 @endpush
