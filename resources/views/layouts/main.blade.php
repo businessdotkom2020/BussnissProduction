@@ -32,7 +32,7 @@
 
 <body>
     @include('sweetalert::alert')
-<!--
+    <!--
     <div id="loading">
     <div class="loader">
       <span></span>
@@ -45,22 +45,22 @@
 -->
 
 
-<div class="loader0">
-    <div class="loader-inner">
-        <span class="dot"></span>
-        <span class="dot dot1">
-        </span><span class="dot dot2">
-        </span><span class="dot dot3">
-        </span><span class="dot dot4"></span>
+    <div class="loader0">
+        <div class="loader-inner">
+            <span class="dot"></span>
+            <span class="dot dot1">
+            </span><span class="dot dot2">
+            </span><span class="dot dot3">
+            </span><span class="dot dot4"></span>
+        </div>
     </div>
-</div>
 
     <div class="wrapper col-xs-12">
 
 
 
 
-        @include('includes.\sidebar')
+        @include('includes.sidebar')
 
         @yield('content')
 
