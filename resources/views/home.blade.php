@@ -309,7 +309,6 @@ $menu = true ;
     </div>
 -->
 
-    @foreach ($latest_products as $product)
 
     <div class="n-products new-product-blocks col-xs-12">
         <div class="container-fluid">
@@ -318,6 +317,7 @@ $menu = true ;
                 <a href="#" class="more">view all</a>
             </div>
             <div class="g-body col-xs-12">
+                @foreach ($latest_products as $product)
 
                 <div class="col-md-2 col-sm-3 col-xs-6">
                     <div class="product-grid">
@@ -348,26 +348,11 @@ $menu = true ;
                             </div>
                             <div class="c-data">
                                 <p>
-                                    @php $rating = $product->average_rating ; @endphp
-                                    @foreach(range(1,5) as $i)
-                                    @if($rating >0)
-                                    @if($rating > 0.5)
                                     <i class="fa fa-star active"></i>
-                                    @elseif($rating < 0.5 && $rating> 0)
-                                        <i class="fas fa-star-half"></i>
-                                        @endif
-                                        @else
-                                        <i class="fa fa-star"></i>
-                                        @endif
-                                        @php $rating--; @endphp
-
-                                        @endforeach
-
-                                        <i class="fa fa-star active"></i>
-                                        <i class="fa fa-star active"></i>
-                                        <i class="fa fa-star active"></i>
-                                        <i class="fa fa-star active"></i>
-                                        <i class="fa fa-star"></i>
+                                    <i class="fa fa-star active"></i>
+                                    <i class="fa fa-star active"></i>
+                                    <i class="fa fa-star active"></i>
+                                    <i class="fa fa-star"></i>
                                 </p>
                             </div>
                             <a class="btn h-pro-btn" href="#" data-toggle="modal"
