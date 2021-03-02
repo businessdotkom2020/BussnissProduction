@@ -16,17 +16,17 @@ class NotificationsController extends Controller
 
     public function index()
     {
-        return new NotificationsCollections(Notification::where('user_id', auth()->id)->get());
+        return new NotificationsCollections(Notification::where('user_id', request()->user()->id)->get());
     }
 
     public function show($notification_id)
     {
-        return new NotificationsCollections(Notification::where([['user_id', auth()->id], ['id', $notification_id]])->get());
+        return new NotificationsCollections(Notification::where([['user_id', request()->user()->id], ['id', $notification_id]])->get());
     }
 
     public function seen()
     {
-        $notifications = Notification::where('user_id', auth()->id)->get();
+        $notifications = Notification::where('user_id', request()->user()->id)->get();
         return new NotificationsCollections(Notification::where('user_id', auth()->id)->get());
     }
 }
