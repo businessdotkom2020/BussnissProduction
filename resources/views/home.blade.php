@@ -2295,77 +2295,6 @@ $menu = true ;
 
 
 
-    function followtoggle(follower_id) {
-
-        var token = '{{ Session::token() }}';
-
-
-
-        $.ajax({
-
-
-
-            type: 'POST',
-
-            url: '{!!URL::to('
-            user_follow ')!!}',
-
-            data: {
-                follower_id: follower_id,
-                _token: token
-            },
-
-            success: function (result) {
-
-                if (result.class) {
-                    $("#followtoggle_" + follower_id).toggleClass(result.class);
-                    $("#followicon_" + follower_id).toggleClass(result.icon);
-                    $("#followicon_" + follower_id).addClass(result.icon).removeClass(result.old_icon)
-                    $("#followtoggle_" + follower_id + " span").text(result.but_status);
-
-                }
-
-
-
-                const Toast = Swal.mixin({
-
-                    toast: true,
-
-                    position: 'top-end',
-
-                    showConfirmButton: false,
-
-                    timer: 6000,
-
-                    timerProgressBar: true,
-
-                    onOpen: (toast) => {
-
-                        toast.addEventListener('mouseenter', Swal.stopTimer)
-
-                        toast.addEventListener('mouseleave', Swal.resumeTimer)
-
-                    }
-
-                })
-
-
-
-
-                Toast.fire({
-
-                    icon: 'success',
-
-                    title: result.message
-
-                })
-
-            }
-
-        });
-
-    }
-
 
     function followtoggle(follower_id) {
 
@@ -2438,3 +2367,4 @@ $.ajax({
 </script>
 
 @endpush
+
