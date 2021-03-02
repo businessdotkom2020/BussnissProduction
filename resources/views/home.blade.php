@@ -176,7 +176,7 @@ $menu = true ;
                     </div>
                 </div>
 
-                @foreach (\App\Models\Category::limit(8)->get() as $category)
+                @foreach (\App\Models\Category::whereNull('parent_id')->limit(8)->get() as $category)
 
                 <div class="col-md-3 col-sm-4 col-sx-12">
                     <div class="row categories-blocks">
@@ -355,11 +355,27 @@ $menu = true ;
                             </div>
                             <div class="c-data">
                                 <p>
+                                    @php
+                                    $rating = $product->average_rating ;
+                                    @endphp
+
+                                    @foreach(range(1,5) as $i)
+                                    @if($rating >0)
+                                    @if($rating > 0.5)
                                     <i class="fa fa-star active"></i>
-                                    <i class="fa fa-star active"></i>
-                                    <i class="fa fa-star active"></i>
-                                    <i class="fa fa-star active"></i>
-                                    <i class="fa fa-star"></i>
+                                    @elseif($rating < 0.5 && $rating> 0)
+                                        <i class="fas fa-star-half"></i>
+                                        @endif
+                                        @else
+                                        <i class="fa fa-star"></i>
+                                        @endif
+                                        @php $rating--; @endphp
+
+                                        @endforeach
+
+
+
+
                                 </p>
                             </div>
                             <a class="btn h-pro-btn" href="#" data-toggle="modal"
