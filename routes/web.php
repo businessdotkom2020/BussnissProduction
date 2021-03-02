@@ -8,7 +8,7 @@ if (app()->isLocal()) {
 } else {
     URL::forceScheme('https');
 }
-//URL::forceScheme('https');
+URL::forceScheme('https');
 /*
 |--------------------------------------------------------------------------
 | Web Routes
