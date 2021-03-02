@@ -33,7 +33,11 @@ class Request extends Model
                 $isExists = Storage::exists('public/' . $image);
 
                 if (is_null($image) || empty($image)  || !$isExists) {
-                    $avalible_images[] = 'products/default.jpg';
+                    $avalible_images[] = 'products/product_image819748.jpg';
+                    $avalible_images[] = 'products/product_image819952.png';
+                    $avalible_images[] = 'products/product_image1017553.png';
+                    $avalible_images[] = 'products/product_image1116640.png';
+                    $avalible_images[] = 'products/product_image1318544.jpg';
                 } else {
                     $avalible_images[] = $image;
                 }
