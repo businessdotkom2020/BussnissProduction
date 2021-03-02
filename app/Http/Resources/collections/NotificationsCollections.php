@@ -2,10 +2,10 @@
 
 namespace App\Http\Resources\collections;
 
-use Illuminate\Http\Resources\Json\JsonResource;
+use Illuminate\Http\Resources\Json\ResourceCollection;
 use App\Http\Resources\NotificationsResource;
 
-class NotificationsCollections extends JsonResource
+class NotificationsCollections extends ResourceCollection
 {
     /**
      * Transform the resource collection into an array.
