@@ -146,9 +146,9 @@ Route::get('client/{client_id}/details', 'api\ClientController@show');
 Route::group(['middleware' => 'auth:api'], function () {
 
 
-    Route::post('my-notifications', 'api\NotificationsController@index');
-    Route::post('notification/{notification_id}', 'api\NotificationsController@show');
-    Route::post('my-notifications/seen', 'api\NotificationsController@seen');
+    Route::get('my-notifications', 'api\NotificationsController@index');
+    Route::get('notification/{notification_id}', 'api\NotificationsController@show');
+    Route::get('my-notifications/seen', 'api\NotificationsController@seen');
 
 
     Route::post('{review_type}/{id}/makereview', 'api\ReviewController@review');
