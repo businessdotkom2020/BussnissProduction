@@ -730,8 +730,8 @@ $menu = true ;
                         <div class="request-grid">
                             <div class="request-image">
                                 <a href="#" class="image">
-                                    <img class="pic-1" src="{{ url('storage/'.(json_decode($product->images))[0])}}">
-                                    <img class="pic-2" src="{{ url('storage/'.(json_decode($product->images))[0])}}">
+                                    <img class="pic-1" src="{{ url('storage/'.(json_decode($request->images))[0])}}">
+                                    <img class="pic-2" src="{{ url('storage/'.(json_decode($request->images))[0])}}">
                                 </a>
 
                                 <ul class="social">
@@ -741,9 +741,12 @@ $menu = true ;
                                 </ul>
                             </div>
                             <div class="request-content">
-                                <h3 class="title"><a href="#">Men's Shirt</a></h3>
+                                <h3 class="title"><a
+                                        href="{{url('request/'.$product->id)}}">{{$product->getTranslatedAttribute('name',\App::getLocale())}}</a>
+                                </h3>
                                 <div class="request-de">
-                                    <a class="add-to-cart" href="#" data-tip="add-to-cart" data-toggle="modal"
+                                    <a class="add-to-cart" href="{{url('request/'.$product->id)}}"
+                                        data-tip="add-to-cart" data-toggle="modal"
                                         data-target="#contact_{{$request->user_id}}" target="_blank">
                                         @lang('general.contact_supplier')
 
