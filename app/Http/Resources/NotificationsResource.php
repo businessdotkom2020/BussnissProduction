@@ -19,13 +19,10 @@ class NotificationsResource extends JsonResource
             'id' => $this->id,
             'title' => $this->title,
             'description' => $this->description,
-            'supplier_id' => $this->supplier_id,
-            'notify_type' => $this->notify_type,
-            'notify_type_id' => $this->notify_id,
+            'type' => $this->type,
+            'type_id' => $this->notify_id,
+            'image' => url('/web/images/logo.png'),
             'created_at' => $this->created_at,
         ];
     }
-    
-    
-   
 }

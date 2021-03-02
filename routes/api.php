@@ -18,7 +18,7 @@ Route::get('supplier/{supplier_id}/sub-sub-categories', 'api\ProductController@f
 Route::get('supplier/{supplier_id}/sub-sub-categories/{sub_sub_category_id}', 'api\ProductController@factory_categories_products');
 
 Route::post('search', 'api\HomeController@filter');
- 
+
 
 Route::get('home/all-industrial-areas', 'api\ZoneController@index');
 Route::get('home/industrial-areas/{state_id}', 'api\ZoneController@show');
@@ -146,7 +146,9 @@ Route::get('client/{client_id}/details', 'api\ClientController@show');
 Route::group(['middleware' => 'auth:api'], function () {
 
 
-    Route::post('notifications', 'api\NotificationsController@index');
+    Route::post('my-notifications', 'api\NotificationsController@index');
+    Route::post('notification/{notification_id}', 'api\NotificationsController@show');
+    Route::post('my-notifications/seen', 'api\NotificationsController@seen');
 
 
     Route::post('{review_type}/{id}/makereview', 'api\ReviewController@review');
