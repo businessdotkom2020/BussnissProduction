@@ -346,9 +346,12 @@ $menu = true ;
                             </h3>
                             <div class="price">
                                 @if ($product->sale_price)
-                                <span>{{$product->sale_price}}</span>
-                                @endif
+                                <span>{{$product->price}}</span>
+                                {{$product->sale_price}}
+                                @else
                                 {{$product->price}}
+
+                                @endif
                             </div>
                             <div class="c-data">
                                 <p>
