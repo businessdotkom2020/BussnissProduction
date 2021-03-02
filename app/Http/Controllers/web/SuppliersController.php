@@ -22,9 +22,10 @@ class SuppliersController extends Controller
 
     public function edit()
     {
+
         $user = request()->user();
 
-        if ($supplier->type == 'supplier') {
+        if ($user->type == 'supplier') {
             return view('Suppliers.edit', ['supplier' => $user]);
         }
         return view('users.edit', ['user' => $user]);
@@ -41,12 +42,12 @@ class SuppliersController extends Controller
 
 
         $supplier_services_categories = Category::whereIn('id', $supplier_categories_ids)->whereHas('services', function (Builder $query)  use ($supplier) {
-                $query->where('user_id', $supplier->id);
-            })->get();
+            $query->where('user_id', $supplier->id);
+        })->get();
 
         $supplier_requests_categories = Category::whereIn('id', $supplier_categories_ids)->whereHas('requests', function (Builder $query)  use ($supplier) {
-                $query->where('user_id', $supplier->id);
-            })->get();
+            $query->where('user_id', $supplier->id);
+        })->get();
 
 
 
