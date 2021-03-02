@@ -183,26 +183,25 @@ $menu = true ;
                         <div class="col-md-5 col-sm-5 col-xs-6">
                             <div class="category-img">
                                 <a href="{{url('category/'.$category->id)}}">
-                                    <img src="https://demo2.drfuri.com/martfury17/wp-content/uploads/sites/58/elementor/thumbs/c1-o8k9olcyrwe8m5dunmsk1org093wzb8ajrg7wzbc4k.jpg"
-                                        alt="">
+                                    <img src="{{url('storage/'.$category->image)}}" alt="">
                                 </a>
                             </div>
                         </div>
                         <div class="col-md-7 col-sm-7 col-xs-6">
                             <div class="category-links">
                                 <h4><a href="{{url('category/'.$category->id)}}">
-                                        {{$category->getTranslatedAttribute('name',\App::getLocale())}}</a>
+                                        {{$category->getTranslatedAttribute('name',\App::getLocale())}}
+                                    </a>
                                 </h4>
                                 <ul class="list-inline">
-                                    <li><a href="#">sub category</a></li>
-                                    <li><a href="#">sub category</a></li>
-                                    <li><a href="#">sub category</a></li>
-                                    <li><a href="#">sub category</a></li>
-                                    <li><a href="#">sub category</a></li>
-                                    <li><a href="#">sub category</a></li>
+                                    @foreach (\App\Models\Category::where('parent_id',$category->id)->limit(8)->get() as $sub_category)
+                                        <li>
+                                            <a href="{{url('category/'.$sub_category->id)}}">{{$sub_category->getTranslatedAttribute('name',\App::getLocale())}}</a>
+                                        </li>
+                                    @endforeach
                                 </ul>
                                 <a href="#" class="cat-more">
-                                    More
+                                    {{__('general.others')}}
                                     <i class="fa fa-angle-right hvr-icon"></i>
                                 </a>
                             </div>
