@@ -328,7 +328,7 @@ $menu = true ;
                             </a>
                             @if ($product->sale_price)
                             <span
-                                class="product-discount-label">{{number_format($product->price - ($product->price * ( $product->sale_price / 100) ) ,0)  .'%' }}</span>
+                                class="product-discount-label">{{number_format((($this->product/$this->product) * 100) ,0)  .'%'}}</span>
                             @endif
 
                             <ul class="product-links">
