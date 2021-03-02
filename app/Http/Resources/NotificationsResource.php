@@ -20,7 +20,8 @@ class NotificationsResource extends JsonResource
             'title' => $this->title,
             'description' => $this->description,
             'type' => $this->type,
-            'type_id' => $this->notify_id,
+            'type_id' => $this->type_id,
+            'seen' => $this->seen ? true : false,
             'image' => url('/web/images/logo.png'),
             'created_at' => $this->created_at,
         ];
