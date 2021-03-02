@@ -322,24 +322,28 @@ $menu = true ;
                 <div class="col-md-2 col-sm-3 col-xs-6">
                     <div class="product-grid">
                         <div class="product-image">
-                            <a href="#" class="image">
-                                <img class="pic-1" src="https://i.imgur.com/gY5s6z0.jpg">
-                                <img class="pic-2" src="https://i.imgur.com/CEQeTSE.jpg">
+                            <a href="{{url('product/'.$product->id)}}" class="image">
+                                <img class="pic-1" src="{{url('storage/'.$product->image)}}">
+                                <img class="pic-2" src="{{url('storage/'.(json_decode($product->images))[0])}}">
                             </a>
                             @if ($product->sale_price)
                             <span
-                                class="product-discount-label">{{number_format( (($product->sale_price/$product->price) * 100) ,2 ) }}%</span>
+                                class="product-discount-label">{{number_format( (($product->price/$product->sale_price) * 100) ,2 ) }}%</span>
                             @endif
 
                             <ul class="product-links">
-                                <li><a href="#" data-tip="Compare"><i class="fa fa-random"></i></a></li>
-                                <li><a href="#" data-tip="Add to Wishlist"><i class="fa fa-heart"></i></a></li>
+                                <li><a href="{{url('product/'.$product->id)}}" data-tip="Compare"><i
+                                            class="fa fa-random"></i></a></li>
+                                <li><a href="{{url('product/'.$product->id)}}" data-tip="Add to Wishlist"><i
+                                            class="fa fa-heart"></i></a></li>
                                 {{-- <li><a href="#" data-tip="Quick View"><i class="fa fa-search"></i></a></li> --}}
                                 {{-- <li><a href="#" data-tip="Add to Cart"><i class="fa fa-shopping-cart"></i></a></li> --}}
                             </ul>
                         </div>
                         <div class="product-content">
-                            <h3 class="title"><a href="#">Men's T-Shirt</a></h3>
+                            <h3 class="title"><a
+                                    href="{{url('product/'.$product->id)}}">{{$product->getTranslatedAttribute('name',\App::getLocale())}}</a>
+                            </h3>
                             <div class="price">
                                 @if ($product->sale_price)
                                 <span>{{$product->sale_price}}</span>
