@@ -30,7 +30,7 @@ class NotificationsController extends Controller
 
     public function seen()
     {
-        $notifications = Notification::where('user_id', request()->user()->id)->update('read_at', Carbon\Carbon::now());
+        $notifications = Notification::where('user_id', request()->user()->id)->update('read_at', \Carbon\Carbon::now());
 
         return response()->json([
             'status' => true,
