@@ -47,7 +47,7 @@ class Request extends Model
             return json_encode($avalible_images);
         }
 
-        return json_encode(['products/default.jpg']);
+        return json_encode(['products/desssfault.jpg']);
     }
 
 
