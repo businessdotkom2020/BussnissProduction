@@ -30,7 +30,12 @@ class NotificationsController extends Controller
 
     public function seen()
     {
-        $notifications = Notification::where('user_id', request()->user()->id)->get();
-        return new NotificationsCollections(Notification::where('user_id', request()->user()->id)->get());
+        $notifications = Notification::where('user_id', request()->user()->id)->update('read_at', Carbon\Carbon::now());
+
+        return response()->json([
+            'status' => true,
+            'code' => 200,
+            "message" => "Job  Created successfully"
+        ]);
     }
 }
