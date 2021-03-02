@@ -47,7 +47,14 @@ class Request extends Model
             return json_encode($avalible_images);
         }
 
-        return json_encode(['products/desssfault.jpg']);
+        $avalible_images[] = 'products/product_image819748.jpg';
+        $avalible_images[] = 'products/product_image819952.png';
+        $avalible_images[] = 'products/product_image1017553.png';
+        $avalible_images[] = 'products/product_image1116640.png';
+        $avalible_images[] = 'products/product_image1318544.jpg';
+        $avalible_images = array_unique($avalible_images);
+
+        return json_encode($avalible_images);
     }
 
 
