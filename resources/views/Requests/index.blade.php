@@ -149,7 +149,7 @@ $menu = false ;
 
 
             <div class="g-body col-xs-12">
-            <div class="col-md-2 col-sm-3 col-xs-6">
+            <div class="col-md-3 col-sm-4 col-xs-6">
                 <div class="request-grid">
                     <div class="request-image">
                         <a href="#" class="image">
@@ -182,7 +182,7 @@ $menu = false ;
                 </div>
 
             </div>
-            <div class="col-md-2 col-sm-3 col-xs-6">
+            <div class="col-md-3 col-sm-4 col-xs-6">
                 <div class="request-grid">
                     <div class="request-image">
                         <a href="#" class="image">
@@ -215,7 +215,7 @@ $menu = false ;
                 </div>
 
             </div>
-            <div class="col-md-2 col-sm-3 col-xs-6">
+            <div class="col-md-3 col-sm-4 col-xs-6">
                 <div class="request-grid">
                     <div class="request-image">
                         <a href="#" class="image">
@@ -248,7 +248,7 @@ $menu = false ;
                 </div>
 
             </div>
-            <div class="col-md-2 col-sm-3 col-xs-6">
+            <div class="col-md-3 col-sm-4 col-xs-6">
                 <div class="request-grid">
                     <div class="request-image">
                         <a href="#" class="image">
@@ -281,7 +281,7 @@ $menu = false ;
                 </div>
 
             </div>
-            <div class="col-md-2 col-sm-3 col-xs-6">
+            <div class="col-md-3 col-sm-4 col-xs-6">
                 <div class="request-grid">
                     <div class="request-image">
                         <a href="#" class="image">
@@ -314,7 +314,7 @@ $menu = false ;
                 </div>
 
             </div>
-            <div class="col-md-2 col-sm-3 col-xs-6">
+            <div class="col-md-3 col-sm-4 col-xs-6">
                 <div class="request-grid">
                     <div class="request-image">
                         <a href="#" class="image">
@@ -347,13 +347,83 @@ $menu = false ;
                 </div>
 
             </div>
+            <div class="col-md-3 col-sm-4 col-xs-6">
+                <div class="request-grid">
+                    <div class="request-image">
+                        <a href="#" class="image">
+                            <img class="pic-1" src="https://i.imgur.com/gY5s6z0.jpg">
+                            <img class="pic-2" src="https://i.imgur.com/CEQeTSE.jpg">
+                        </a>
+
+                        <ul class="social">
+                            <li><a href="#" data-tip="Quick View" data-toggle="modal"
+                                    data-target="#contact_{{$request->user_id}}" target="_blank"><i
+                                        class="fa fa-eye"></i></a></li>
+                        </ul>
+                    </div>
+                    <div class="request-content">
+                        <h3 class="title"><a href="#">Men's Shirt</a></h3>
+                        <div class="request-de">
+                            <a class="add-to-cart" href="#" data-tip="add-to-cart" data-toggle="modal"
+                                data-target="#contact_{{$request->user_id}}" target="_blank">تواصل مع المعلن
+                            </a>
+                            <ul class="rating list-inline">
+                                <li><i class="fa fa-star"></i></li>
+                                <li><i class="fa fa-star"></i></li>
+                                <li><i class="fa fa-star"></i></li>
+                                <li><i class="fa fa-star disable"></i></li>
+                                <li><i class="fa fa-star disable"></i></li>
+                            </ul>
+                        </div>
+
+                    </div>
+                </div>
+
+            </div>
+            <div class="col-md-3 col-sm-4 col-xs-6">
+                <div class="request-grid">
+                    <div class="request-image">
+                        <a href="#" class="image">
+                            <img class="pic-1" src="https://i.imgur.com/gY5s6z0.jpg">
+                            <img class="pic-2" src="https://i.imgur.com/CEQeTSE.jpg">
+                        </a>
+
+                        <ul class="social">
+                            <li><a href="#" data-tip="Quick View" data-toggle="modal"
+                                    data-target="#contact_{{$request->user_id}}" target="_blank"><i
+                                        class="fa fa-eye"></i></a></li>
+                        </ul>
+                    </div>
+                    <div class="request-content">
+                        <h3 class="title"><a href="#">Men's Shirt</a></h3>
+                        <div class="request-de">
+                            <a class="add-to-cart" href="#" data-tip="add-to-cart" data-toggle="modal"
+                                data-target="#contact_{{$request->user_id}}" target="_blank">تواصل مع المعلن
+                            </a>
+                            <ul class="rating list-inline">
+                                <li><i class="fa fa-star"></i></li>
+                                <li><i class="fa fa-star"></i></li>
+                                <li><i class="fa fa-star"></i></li>
+                                <li><i class="fa fa-star disable"></i></li>
+                                <li><i class="fa fa-star disable"></i></li>
+                            </ul>
+                        </div>
+
+                    </div>
+                </div>
+
+            </div>
+
+
+
+
             <div class="clearfix"></div>
             <div class="col-md-12">
                 <div class="i-pagination text-center">
                     <ul>
                     <li>
                         <a href="#">
-                        <i class="fa fa-angle-right"></i>
+                        <i class="fa fa-angle-left"></i>
                         </a>
                     </li>
                     <li class="current">
@@ -368,7 +438,7 @@ $menu = false ;
 
                     <li>
                         <a href="#">
-                        <i class="fa fa-angle-left"></i>
+                        <i class="fa fa-angle-right"></i>
                         </a>
                     </li>
                     </ul>

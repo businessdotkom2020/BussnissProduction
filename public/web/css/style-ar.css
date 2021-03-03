@@ -993,4 +993,7 @@
     font-weight: 700;
     font-size: 14px;
 }
-
+.i-pagination .fa-angle-right,
+.i-pagination .fa-angle-left{
+    transform: rotate(180deg) !important;
+}
