@@ -5891,3 +5891,22 @@ button, input, select, textarea {
 .modal {
     background: #149eeb1c !important;
 }
+
+
+/****************************** services-page *****************************/
+
+/*************************************/
+.service-wrap{
+
+}
+.service-wrap .nav-tabs > li {
+  float:none;
+  display:inline-block;
+  zoom:1;
+  margin: 0 10px;
+}
+.service-wrap .nav-tabs {
+  text-align:center;
+  border-bottom: 0;
+  margin: 0px 0 30px 0;
+}
