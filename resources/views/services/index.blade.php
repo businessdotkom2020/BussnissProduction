@@ -43,7 +43,8 @@ $menu = false ;
                             
                     
                     @foreach(\App\Models\Service::get() as $service)
-                        <div class="s-block col-md-3 col-sm-6 col-xs-12">
+                         <div class="col-md-3 col-sm-6 col-xs-12">
+                          <div class="s-block">
                             <div class="s-img">
                                 <a href="{{url('service/'.$service->id)}}">
                                 @if(isset(json_decode($service->images)[0]))
@@ -85,7 +86,7 @@ $menu = false ;
                                 @endphp
 
                                 <a href="{{url('supplier/'.$service->user_id)}}" class="btn" data-toggle="modal" data-target="contact_pop">contact supplier</a>
-                               
+                                </div>
                             </div>
                         </div>
                         @endforeach
