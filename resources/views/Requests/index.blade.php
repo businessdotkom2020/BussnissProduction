@@ -159,7 +159,7 @@ $menu = false ;
 
                         <ul class="social">
                             <li><a href="#" data-tip="Quick View" data-toggle="modal"
-                                    data-target="#contact_{{$product->user_id}}" target="_blank"><i
+                                    data-target="#contact_{{$request->user_id}}" target="_blank"><i
                                         class="fa fa-eye"></i></a></li>
                         </ul>
                     </div>
@@ -167,7 +167,7 @@ $menu = false ;
                         <h3 class="title"><a href="#">Men's Shirt</a></h3>
                         <div class="request-de">
                             <a class="add-to-cart" href="#" data-tip="add-to-cart" data-toggle="modal"
-                                data-target="#contact_{{$product->user_id}}" target="_blank">تواصل مع المعلن
+                                data-target="#contact_{{$request->user_id}}" target="_blank">تواصل مع المعلن
                             </a>
                             <ul class="rating list-inline">
                                 <li><i class="fa fa-star"></i></li>
@@ -192,7 +192,7 @@ $menu = false ;
 
                         <ul class="social">
                             <li><a href="#" data-tip="Quick View" data-toggle="modal"
-                                    data-target="#contact_{{$product->user_id}}" target="_blank"><i
+                                    data-target="#contact_{{$request->user_id}}" target="_blank"><i
                                         class="fa fa-eye"></i></a></li>
                         </ul>
                     </div>
@@ -200,7 +200,7 @@ $menu = false ;
                         <h3 class="title"><a href="#">Men's Shirt</a></h3>
                         <div class="request-de">
                             <a class="add-to-cart" href="#" data-tip="add-to-cart" data-toggle="modal"
-                                data-target="#contact_{{$product->user_id}}" target="_blank">تواصل مع المعلن
+                                data-target="#contact_{{$request->user_id}}" target="_blank">تواصل مع المعلن
                             </a>
                             <ul class="rating list-inline">
                                 <li><i class="fa fa-star"></i></li>
@@ -225,7 +225,7 @@ $menu = false ;
 
                         <ul class="social">
                             <li><a href="#" data-tip="Quick View" data-toggle="modal"
-                                    data-target="#contact_{{$product->user_id}}" target="_blank"><i
+                                    data-target="#contact_{{$request->user_id}}" target="_blank"><i
                                         class="fa fa-eye"></i></a></li>
                         </ul>
                     </div>
@@ -233,7 +233,7 @@ $menu = false ;
                         <h3 class="title"><a href="#">Men's Shirt</a></h3>
                         <div class="request-de">
                             <a class="add-to-cart" href="#" data-tip="add-to-cart" data-toggle="modal"
-                                data-target="#contact_{{$product->user_id}}" target="_blank">تواصل مع المعلن
+                                data-target="#contact_{{$request->user_id}}" target="_blank">تواصل مع المعلن
                             </a>
                             <ul class="rating list-inline">
                                 <li><i class="fa fa-star"></i></li>
@@ -258,7 +258,7 @@ $menu = false ;
 
                         <ul class="social">
                             <li><a href="#" data-tip="Quick View" data-toggle="modal"
-                                    data-target="#contact_{{$product->user_id}}" target="_blank"><i
+                                    data-target="#contact_{{$request->user_id}}" target="_blank"><i
                                         class="fa fa-eye"></i></a></li>
                         </ul>
                     </div>
@@ -266,7 +266,7 @@ $menu = false ;
                         <h3 class="title"><a href="#">Men's Shirt</a></h3>
                         <div class="request-de">
                             <a class="add-to-cart" href="#" data-tip="add-to-cart" data-toggle="modal"
-                                data-target="#contact_{{$product->user_id}}" target="_blank">تواصل مع المعلن
+                                data-target="#contact_{{$request->user_id}}" target="_blank">تواصل مع المعلن
                             </a>
                             <ul class="rating list-inline">
                                 <li><i class="fa fa-star"></i></li>
@@ -291,7 +291,7 @@ $menu = false ;
 
                         <ul class="social">
                             <li><a href="#" data-tip="Quick View" data-toggle="modal"
-                                    data-target="#contact_{{$product->user_id}}" target="_blank"><i
+                                    data-target="#contact_{{$request->user_id}}" target="_blank"><i
                                         class="fa fa-eye"></i></a></li>
                         </ul>
                     </div>
@@ -299,7 +299,7 @@ $menu = false ;
                         <h3 class="title"><a href="#">Men's Shirt</a></h3>
                         <div class="request-de">
                             <a class="add-to-cart" href="#" data-tip="add-to-cart" data-toggle="modal"
-                                data-target="#contact_{{$product->user_id}}" target="_blank">تواصل مع المعلن
+                                data-target="#contact_{{$request->user_id}}" target="_blank">تواصل مع المعلن
                             </a>
                             <ul class="rating list-inline">
                                 <li><i class="fa fa-star"></i></li>
@@ -324,7 +324,7 @@ $menu = false ;
 
                         <ul class="social">
                             <li><a href="#" data-tip="Quick View" data-toggle="modal"
-                                    data-target="#contact_{{$product->user_id}}" target="_blank"><i
+                                    data-target="#contact_{{$request->user_id}}" target="_blank"><i
                                         class="fa fa-eye"></i></a></li>
                         </ul>
                     </div>
@@ -332,7 +332,7 @@ $menu = false ;
                         <h3 class="title"><a href="#">Men's Shirt</a></h3>
                         <div class="request-de">
                             <a class="add-to-cart" href="#" data-tip="add-to-cart" data-toggle="modal"
-                                data-target="#contact_{{$product->user_id}}" target="_blank">تواصل مع المعلن
+                                data-target="#contact_{{$request->user_id}}" target="_blank">تواصل مع المعلن
                             </a>
                             <ul class="rating list-inline">
                                 <li><i class="fa fa-star"></i></li>
