@@ -341,7 +341,8 @@ $menu = false ;
                                             <li><a href="#" data-tip="Add to Wishlist"><i class="fa fa-heart"></i></a>
                                             </li>
                                             <li><a href="#" data-tip="Quick View"><i class="fa fa-search"></i></a></li>
-                                            <li><a href="#" data-tip="Add to Cart"><i class="fa fa-shopping-cart"></i></a></li>
+                                            <li><a href="#" data-tip="Add to Cart"><i
+                                                        class="fa fa-shopping-cart"></i></a></li>
                                         </ul>
                                     </div>
                                     <div class="product-content">
@@ -357,8 +358,7 @@ $menu = false ;
                                             </p>
                                         </div>
                                         <a class="btn h-offers-btn" href="#" data-toggle="modal"
-                                            data-target="#contact_{{$product->user_id}}"
-                                            target="_blank">@lang('contact_supplier')</a>
+                                            data-target="#contact_1" target="_blank">@lang('contact_supplier')</a>
 
                                     </div>
                                 </div>
@@ -369,7 +369,7 @@ $menu = false ;
 
                         </div>
 
-<!---
+                        <!---
                         @foreach($products as $product)
                         <div class="block b-product col-md-3 col-sm-6 col-xs-12">
                             <div class="inner">
@@ -513,12 +513,11 @@ $menu = false ;
                                         <a href="{{url('product/'.$product->id)}}"
                                             class="title">{{$product->getTranslatedAttribute('name',\App::getLocale())}}</a>
 
-                                        <<<<<<< HEAD=======>>>>>>> 3e831a1407b4483df18992c2ee8f4e0f4f78fe80
 
-                                            <span>{{$product->sale_price ? $product->sale_price : $product->price}}$</span>
+                                        <span>{{$product->sale_price ? $product->sale_price : $product->price}}$</span>
 
-                                            <a class="btn" href="#" data-toggle="modal"
-                                                data-target="#contact_pop">@lang('contact_supplier')</a>
+                                        <a class="btn" href="#" data-toggle="modal"
+                                            data-target="#contact_pop">@lang('contact_supplier')</a>
                                     </div>
                                 </div>
                             </div>
@@ -775,4 +774,3 @@ $menu = false ;
 </script>
 
 @endpush
-
