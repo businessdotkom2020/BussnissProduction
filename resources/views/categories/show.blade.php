@@ -358,7 +358,7 @@ $menu = false ;
                                         </div>
                                         <a class="btn h-offers-btn" href="#" data-toggle="modal"
                                             data-target="#contact_{{$product->user_id}}"
-                                            target="_blank">000000</a>
+                                            target="_blank">@lang('contact_supplier')</a>
 
                                     </div>
                                 </div>
