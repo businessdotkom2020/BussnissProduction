@@ -2142,7 +2142,7 @@ footer.main-footer.col-xs-12 {
 }
 
 .jumpo {
-    padding: 30px 0;
+    padding: 50px 0;
     background-position: center;
     background-size: cover;
     position: relative
@@ -5903,10 +5903,9 @@ button, input, select, textarea {
   float:none;
   display:inline-block;
   zoom:1;
-  margin: 0 10px;
 }
 .service-wrap .nav-tabs {
   text-align:center;
   border-bottom: 0;
-  margin: 0px 0 30px 0;
+  margin: 0px 0 25px 0;
 }
