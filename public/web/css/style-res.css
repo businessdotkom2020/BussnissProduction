@@ -239,6 +239,13 @@
     .modal-dialog {
         margin: 30px auto;
     }
+    .service-wrap {
+        padding: 45px 0;
+    }
+
+
+
+
 }
 
 @media(max-width:600px) {
