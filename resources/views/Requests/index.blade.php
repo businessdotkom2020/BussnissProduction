@@ -389,12 +389,12 @@ $menu = false ;
 </main>
 
 
-
+<!--
 @endsection
 
 
 @push('scripts')
-
+-->
 
 <script>
     function favtoggle(request_id, user_id){
