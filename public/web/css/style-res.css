@@ -239,7 +239,8 @@
     .modal-dialog {
         margin: 30px auto;
     }
-    .service-wrap {
+    .service-wrap,
+    .reqs-wrap {
         padding: 45px 0;
     }
 

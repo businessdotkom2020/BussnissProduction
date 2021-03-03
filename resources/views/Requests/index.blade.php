@@ -19,7 +19,7 @@ $menu = false ;
 </div>
 <main class="main-content col-xs-12">
     <div class="reqs-wrap col-xs-12">
-        <div class="container-fluid">
+        <div class="container">
 
 <!--
             <div class="g-body col-xs-12">
