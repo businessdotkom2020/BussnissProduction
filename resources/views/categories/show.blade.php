@@ -699,7 +699,7 @@ $menu = false ;
                     -->
 
                         <div class="g-body col-xs-12 supplier-p-search">
-                            <div class="col-md-4 col-sm-4 col-xs-12">
+                        <div class="col-md-4 col-sm-4 col-xs-12">
                                 <div class="h-supplier-box cardo text-center">
                                     <span>
                                         <a href="https://businessdotcom.net/supplier/216">
@@ -725,6 +725,11 @@ $menu = false ;
                                                 <i id="followicon_216" class="fa fa-plus"></i>
                                                 <span>
                                                     Follow
+                                                </span>
+                                            </a>
+                                            <a href="#"  class="btn sh-pro-s">
+                                                <span>
+                                                    مشاهده جميع المنتجات 
                                                 </span>
                                             </a>
                                         </div>
@@ -768,6 +773,155 @@ $menu = false ;
                                     </div>
                                 </div>
                             </div>
+                            <div class="col-md-4 col-sm-4 col-xs-12">
+                                <div class="h-supplier-box cardo text-center">
+                                    <span>
+                                        <a href="https://businessdotcom.net/supplier/216">
+                                            <img src="https://businessdotcom.net/storage/users/default_company.png"
+                                                alt="">
+                                        </a>
+                                    </span>
+                                    <div class="c-inner">
+                                        <div class="c-data">
+                                            <h3>
+                                                <a href="https://businessdotcom.net/supplier/216" class="title">متجر
+                                                    عصام</a>
+                                            </h3>
+                                            <p>
+                                                <i class="fa fa-star active"></i>
+                                                <i class="fa fa-star active"></i>
+                                                <i class="fa fa-star"></i>
+                                                <i class="fa fa-star"></i>
+                                                <i class="fa fa-star"></i>
+                                            </p>
+                                            <a href="javascript:void(0)" id="followtoggle_216"
+                                                onclick="followtoggle(216)" class="btn ">
+                                                <i id="followicon_216" class="fa fa-plus"></i>
+                                                <span>
+                                                    Follow
+                                                </span>
+                                            </a>
+                                            <a href="#"  class="btn sh-pro-s">
+                                                <span>
+                                                    مشاهده جميع المنتجات 
+                                                </span>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-4 col-sm-4 col-xs-12">
+                                <div class="h-supplier-box cardo text-center">
+                                    <span>
+                                        <a href="https://businessdotcom.net/supplier/216">
+                                            <img src="https://businessdotcom.net/storage/users/default_company.png"
+                                                alt="">
+                                        </a>
+                                    </span>
+                                    <div class="c-inner">
+                                        <div class="c-data">
+                                            <h3>
+                                                <a href="https://businessdotcom.net/supplier/216" class="title">متجر
+                                                    عصام</a>
+                                            </h3>
+                                            <p>
+                                                <i class="fa fa-star active"></i>
+                                                <i class="fa fa-star active"></i>
+                                                <i class="fa fa-star"></i>
+                                                <i class="fa fa-star"></i>
+                                                <i class="fa fa-star"></i>
+                                            </p>
+                                            <a href="javascript:void(0)" id="followtoggle_216"
+                                                onclick="followtoggle(216)" class="btn ">
+                                                <i id="followicon_216" class="fa fa-plus"></i>
+                                                <span>
+                                                    Follow
+                                                </span>
+                                            </a>
+                                            <a href="#"  class="btn sh-pro-s">
+                                                <span>
+                                                    مشاهده جميع المنتجات 
+                                                </span>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-4 col-sm-4 col-xs-12">
+                                <div class="h-supplier-box cardo text-center">
+                                    <span>
+                                        <a href="https://businessdotcom.net/supplier/216">
+                                            <img src="https://businessdotcom.net/storage/users/default_company.png"
+                                                alt="">
+                                        </a>
+                                    </span>
+                                    <div class="c-inner">
+                                        <div class="c-data">
+                                            <h3>
+                                                <a href="https://businessdotcom.net/supplier/216" class="title">متجر
+                                                    عصام</a>
+                                            </h3>
+                                            <p>
+                                                <i class="fa fa-star active"></i>
+                                                <i class="fa fa-star active"></i>
+                                                <i class="fa fa-star"></i>
+                                                <i class="fa fa-star"></i>
+                                                <i class="fa fa-star"></i>
+                                            </p>
+                                            <a href="javascript:void(0)" id="followtoggle_216"
+                                                onclick="followtoggle(216)" class="btn ">
+                                                <i id="followicon_216" class="fa fa-plus"></i>
+                                                <span>
+                                                    Follow
+                                                </span>
+                                            </a>
+                                            <a href="#"  class="btn sh-pro-s">
+                                                <span>
+                                                    مشاهده جميع المنتجات 
+                                                </span>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-4 col-sm-4 col-xs-12">
+                                <div class="h-supplier-box cardo text-center">
+                                    <span>
+                                        <a href="https://businessdotcom.net/supplier/216">
+                                            <img src="https://businessdotcom.net/storage/users/default_company.png"
+                                                alt="">
+                                        </a>
+                                    </span>
+                                    <div class="c-inner">
+                                        <div class="c-data">
+                                            <h3>
+                                                <a href="https://businessdotcom.net/supplier/216" class="title">متجر
+                                                    عصام</a>
+                                            </h3>
+                                            <p>
+                                                <i class="fa fa-star active"></i>
+                                                <i class="fa fa-star active"></i>
+                                                <i class="fa fa-star"></i>
+                                                <i class="fa fa-star"></i>
+                                                <i class="fa fa-star"></i>
+                                            </p>
+                                            <a href="javascript:void(0)" id="followtoggle_216"
+                                                onclick="followtoggle(216)" class="btn ">
+                                                <i id="followicon_216" class="fa fa-plus"></i>
+                                                <span>
+                                                    Follow
+                                                </span>
+                                            </a>
+                                            <a href="#"  class="btn sh-pro-s">
+                                                <span>
+                                                    مشاهده جميع المنتجات 
+                                                </span>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
                             
                         </div>
 
