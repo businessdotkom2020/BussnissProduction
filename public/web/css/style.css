@@ -5972,3 +5972,9 @@ button, input, select, textarea {
 .cardo .c-inner .c-data .btn.sh-pro-s{
     margin-top: 14px;
 }
+.serch-t-box{
+    font-family: tajawal,sans-serif;
+    font-weight: 600;
+    font-size: 23px;
+    margin-bottom: 8px;
+}

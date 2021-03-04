@@ -215,7 +215,7 @@ $menu = false ;
                         </div>
 
                         <div class="form-group">
-                            <h1>@lang('general.rating') </h1>
+                            <h1 class="serch-t-box">@lang('general.rating') </h1>
                             <fieldset class="rating">
                                 <input type="radio" id="star5" name="rating" value="5" /><label class="full" for="star5"
                                     title="Awesome - 5 stars"></label>
@@ -241,7 +241,7 @@ $menu = false ;
                         </div>
 
                         <div class="form-group">
-                            <h1> @lang('general.supplier_rating') </h1>
+                            <h1 class="serch-t-box"> @lang('general.supplier_rating') </h1>
                             <fieldset class="rating-supplier">
                                 <input type="radio" id="star10" name="saller_rating" value="5" /><label class="full"
                                     for="star10" title="Awesome - 5 stars"></label>
@@ -922,7 +922,7 @@ $menu = false ;
                                 </div>
                             </div>
 
-                            
+
                         </div>
 
 
