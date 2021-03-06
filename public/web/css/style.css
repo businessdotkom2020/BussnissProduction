@@ -6004,12 +6004,12 @@ button, input, select, textarea {
   padding-bottom: 55px;
 }
 .multi_step_form #msform .tittle h2 {
-  font: 500 24px/35px "Roboto", sans-serif;
+  /* font: 500 24px/35px "Roboto", sans-serif; */
   color: #3f4553;
   padding-bottom: 5px;
 }
 .multi_step_form #msform .tittle p {
-  font: 400 16px/28px "Roboto", sans-serif;
+
   color: #5f6771;
 }
 .multi_step_form #msform fieldset {
@@ -6024,11 +6024,11 @@ button, input, select, textarea {
   display: none;
 }
 .multi_step_form #msform fieldset h3 {
-  font: 500 18px/35px "Roboto", sans-serif;
+
   color: #3f4553;
 }
 .multi_step_form #msform fieldset h6 {
-  font: 400 15px/28px "Roboto", sans-serif;
+
   color: #5f6771;
   padding-bottom: 30px;
 }
@@ -6079,7 +6079,6 @@ button, input, select, textarea {
   border: 1px solid #d8e1e7;
   padding: 0 20px;
   height: auto;
-  font: 400 15px/48px "Roboto", sans-serif;
   color: #5f6771;
   box-shadow: none;
   outline: none;
@@ -6104,7 +6103,7 @@ button, input, select, textarea {
 .multi_step_form #msform fieldset .form-control:hover, .multi_step_form #msform fieldset .form-control:focus,
 .multi_step_form #msform fieldset .product_select:hover,
 .multi_step_form #msform fieldset .product_select:focus {
-  border-color: #5cb85c;
+  border-color: #139feb;
 }
 .multi_step_form #msform fieldset .form-control:focus.placeholder,
 .multi_step_form #msform fieldset .product_select:focus.placeholder {
@@ -6145,7 +6144,7 @@ button, input, select, textarea {
   line-height: 36px;
   font-size: 22px;
   margin-bottom: 10px;
-  background: #5cb85c;
+  background: #139feb;
   display: inline-block;
   border-radius: 50%;
   color: #ffffff;
@@ -6183,7 +6182,7 @@ button, input, select, textarea {
   position: absolute;
   top: 4px;
   right: 0;
-  background: #5cb85c;
+  background: #139feb;
   display: inline-block;
   border-radius: 50%;
   color: #ffffff;
@@ -6205,7 +6204,6 @@ button, input, select, textarea {
   width: 168px;
   border-radius: 5px;
   cursor: pointer;
-  font: 700 14px/40px "Roboto", sans-serif;
   border: 1px solid #99a2a8;
   text-align: center;
   transition: all 300ms linear 0s;
@@ -6216,8 +6214,8 @@ button, input, select, textarea {
   padding-right: 10px;
 }
 .multi_step_form #msform fieldset .input-group .custom-file .custom-file-label:hover, .multi_step_form #msform fieldset .input-group .custom-file .custom-file-label:focus {
-  background: #5cb85c;
-  border-color: #5cb85c;
+  background: #139feb;
+  border-color: #139feb;
   color: #fff;
 }
 .multi_step_form #msform fieldset .input-group .custom-file input {
@@ -6229,11 +6227,10 @@ button, input, select, textarea {
   padding-bottom: 60px;
 }
 .multi_step_form #msform fieldset .file_added li {
-  font: 400 15px/28px "Roboto", sans-serif;
   color: #5f6771;
 }
 .multi_step_form #msform fieldset .file_added li a {
-  color: #5cb85c;
+  color: #139feb;
   font-weight: 500;
   display: inline-block;
   position: relative;
@@ -6289,28 +6286,27 @@ button, input, select, textarea {
   width: 150%;
 }
 .multi_step_form #msform #progressbar li.active {
-  color: #5cb85c;
+  color: #139feb;
 }
 .multi_step_form #msform #progressbar li.active:before, .multi_step_form #msform #progressbar li.active:after {
-  background: #5cb85c;
+  background: #139feb;
   color: white;
 }
 .multi_step_form #msform .action-button {
-  background: #5cb85c;
+  background: #139feb;
   color: white;
   border: 0 none;
   border-radius: 5px;
   cursor: pointer;
   min-width: 130px;
-  font: 700 14px/40px "Roboto", sans-serif;
-  border: 1px solid #5cb85c;
+  border: 1px solid #139feb;
   margin: 0 5px;
   text-transform: uppercase;
   display: inline-block;
 }
 .multi_step_form #msform .action-button:hover, .multi_step_form #msform .action-button:focus {
-  background: #405867;
-  border-color: #405867;
+  background: #000;
+  border-color: #000;
 }
 .multi_step_form #msform .previous_button {
   background: transparent;
@@ -6318,7 +6314,7 @@ button, input, select, textarea {
   border-color: #99a2a8;
 }
 .multi_step_form #msform .previous_button:hover, .multi_step_form #msform .previous_button:focus {
-  background: #405867;
-  border-color: #405867;
+  background: #000;
+  border-color: #000;
   color: #fff;
 }
