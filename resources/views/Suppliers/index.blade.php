@@ -23,7 +23,7 @@ $menu = false ;
 
 
 
-            <div class="suppliers col-xs-12">
+            <div class="suppliers-archive col-xs-12">
                 <div class="container">
 
 
