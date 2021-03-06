@@ -6075,14 +6075,16 @@ button, input, select, textarea {
 }
 .multi_step_form #msform fieldset .form-control,
 .multi_step_form #msform fieldset .product_select {
-  border-radius: 3px;
-  border: 1px solid #d8e1e7;
-  padding: 0 20px;
-  height: auto;
-  color: #5f6771;
-  box-shadow: none;
-  outline: none;
-  width: 100%;
+    border-radius: 3px;
+    border: 1px solid #d8e1e7;
+    padding: 0 20px;
+    height: auto;
+    color: #5f6771;
+    box-shadow: none;
+    outline: none;
+    width: 100%;
+    font-size: 15px;
+    font-weight: 400;
 }
 .multi_step_form #msform fieldset .form-control.placeholder,
 .multi_step_form #msform fieldset .product_select.placeholder {
@@ -6293,16 +6295,17 @@ button, input, select, textarea {
   color: white;
 }
 .multi_step_form #msform .action-button {
-  background: #139feb;
-  color: white;
-  border: 0 none;
-  border-radius: 5px;
-  cursor: pointer;
-  min-width: 130px;
-  border: 1px solid #139feb;
-  margin: 0 5px;
-  text-transform: uppercase;
-  display: inline-block;
+    background: #139feb;
+    color: #fff;
+    border: 0;
+    border-radius: 5px;
+    padding: 10px 30px;
+    cursor: pointer;
+    border: 1px solid #139feb;
+    margin: 0 5px;
+    text-transform: uppercase;
+    display: inline-block;
+    margin-top: 10px;
 }
 .multi_step_form #msform .action-button:hover, .multi_step_form #msform .action-button:focus {
   background: #000;
@@ -6318,3 +6321,7 @@ button, input, select, textarea {
   border-color: #000;
   color: #fff;
 }
+.multi_step_form #msform fieldset h3{
+    margin-bottom: 25px;
+}
+.multi_step_form #msform fieldset h3
