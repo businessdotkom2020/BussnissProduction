@@ -6033,7 +6033,7 @@ textarea {
 
 .multi_step_form #msform fieldset {
     border: 0;
-    padding: 20px 105px 0;
+    padding: 20px 105px 30px;
     position: relative;
     width: 100%;
     left: 0;
@@ -6414,7 +6414,7 @@ textarea {
     display: none;
 }
 .prof-change-btn label{
-    margin-bottom: 12px;
+    margin-bottom: 12px !important;
 }
 .suppliers-register-f .prof-img img {
     height: 300px;
