@@ -6259,13 +6259,13 @@ button, input, select, textarea {
   position: relative;
 }
 .multi_step_form #msform #progressbar li:nth-child(2):before {
-  content: "/f083";
+  content: "\f129";
 }
 .multi_step_form #msform #progressbar li:nth-child(3):before {
-  content: "/f083";
+  content: "\f041";
 }
 .multi_step_form #msform #progressbar li:before {
-  content: "/f083";
+  content: "\f083";
   font: normal normal normal 14px/1 FontAwesome;
   width: 50px;
   height: 50px;
