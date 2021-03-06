@@ -56,7 +56,9 @@ $menu = false ;
                         
                         <div class="prof-img">
                             <div class="prof-change-btn">
-                                <span> @lang('general.cheange')</span>
+                                <label>
+                                    <span> @lang('general.cheange')</span>
+                                </label>
                             
                             </div>
                             <label>
