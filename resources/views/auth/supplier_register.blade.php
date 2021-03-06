@@ -205,8 +205,7 @@ $menu = false ;
                             @enderror
                         </div>
 
-                        <div class="form-group col-md-12
-                         col-xs-12">
+                        <div class="form-group col-md-12 col-xs-12">
                             <input required type="text" name="zip_code" placeholder="@lang('general.zip_code')"
                                 class="form-control">
                             @error('zip_code')
@@ -214,10 +213,20 @@ $menu = false ;
                             @enderror
                         </div>
                         <div class="form-group col-md-12 col-xs-12">
+                            <input required type="text" name="address" placeholder="@lang('general.address_spec')"
+                                class="form-control">
+                            @error('address_spec')
+                            <div class="alert" style="color:#a94442">{{ $message }}</div>
+                            @enderror
+
+                        </div>
+                        <div class="form-group col-md-12 col-xs-12">
                             <!--<input type="text" placeholder="@lang('general.map_location')" class="form-control">-->
                             <!--<a href="#" class="btn btn-review" data-toggle="modal" onclick="initMap()"
-                                data-target="#review-pop">@lang('general.map_location')</a>
-                                <div class="modal-body0000">-->
+                                data-target="#review-pop">@lang('general.map_location')</a>-->
+
+                        </div>
+                        <div class="form-group col-md-12 col-xs-12 map-location-block">
                 <div class="rate-title">
                     <h3>@lang('general.map_location')</h3>
                 </div>
@@ -293,15 +302,7 @@ $menu = false ;
 
                 </div>
             </div>
-                        </div>
-                        <div class="form-group col-md-6 col-xs-12">
-                            <input required type="text" name="address" placeholder="@lang('general.address_spec')"
-                                class="form-control">
-                            @error('address_spec')
-                            <div class="alert" style="color:#a94442">{{ $message }}</div>
-                            @enderror
-
-                        </div>
+                       
                     </div>
                     <div class="clearfix"></div>
                     <button type="button" class="action-button previous previous_button">رجوع</button> 
