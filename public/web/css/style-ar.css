@@ -5,7 +5,9 @@
     font-family: tajawal, sans-serif;
     font-weight: 600
 }
-
+body{
+    font-family: tajawal, sans-serif;
+}
 .top-head .tp-links {
     float: right
 }
@@ -996,4 +998,12 @@
 .i-pagination .fa-angle-right,
 .i-pagination .fa-angle-left{
     transform: rotate(180deg) !important;
+}
+
+.multi_step_form #msform #progressbar li {
+    float: right;
+}
+.multi_step_form #msform #progressbar li:after {
+    right: -50%;
+    left: auto;
 }
