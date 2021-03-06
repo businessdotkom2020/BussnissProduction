@@ -6413,3 +6413,9 @@ textarea {
 .prof-change-btn label:before{
     display: none;
 }
+.suppliers-register-f .prof-img img {
+    height: 300px;
+}
+.suppliers-register-f .prof-img{
+    margin-bottom: 30px;
+}

@@ -31,7 +31,7 @@ $menu = false ;
     </div>
 </div>
 <main class="main-content col-xs-12">
-    <div class="sign-wrap sup-wrap col-xs-12">
+    <div class="sign-wrap sup-wrap suppliers-register-f col-xs-12">
         <div class="container">
 
             <!-- Multi step form --> 
