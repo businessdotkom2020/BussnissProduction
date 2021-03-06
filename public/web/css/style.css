@@ -6257,7 +6257,6 @@ button, input, select, textarea {
   width: calc(100% / 3);
   float: left;
   position: relative;
-  font: 500 13px/1 "Roboto", sans-serif;
 }
 .multi_step_form #msform #progressbar li:nth-child(2):before {
   content: "/f083";
