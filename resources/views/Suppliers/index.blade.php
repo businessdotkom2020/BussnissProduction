@@ -5,7 +5,18 @@
 
 @section('content')
 
-
+<div class="overlay-s"></div>
+    <div class="jumpo col-xs-12" style="background-image: url({{ asset('web/images/cover.jpg')}})">
+        <div class="container">
+            <h3>Suppliers</h3>
+            <ul>
+                <li>
+                    <a href="{{url('/')}}">@lang('general.home')</a>
+                </li>
+                <li>Suppliers</li>
+            </ul>
+    </div>
+</div>
    <main class="main-content col-xs-12">
             <div class="reqs-wrap col-xs-12">
                 <div class="container">
@@ -37,7 +48,7 @@
     
     
     @if(\Auth::user()->canFollow($supplier) &&\Auth::user()->id != $supplier->id)
-                        <a href="javascript:void(0)" id="followtoggle_{{$supplier->id}}" onclick="followtoggle({{$supplier->id }})" class="btn ">
+                        <a href="javascript:void(0)" id="followtoggle_{{$supplier->id}}" onclick="followtoggle({{$supplier->id }})" class="btn c-inner-btn">
                         <i id="followicon_{{$supplier->id}}" class="fa fa-plus"></i>
                                     <span  style="color:white" >
                         Follow
