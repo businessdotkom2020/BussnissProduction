@@ -87,7 +87,7 @@ $menu = false ;
                         </div>
                     </div>
                     <div class="clearfix"></div>
-                    <button type="button" class="next action-button">التالي</button>  
+                    <button type="button" class="next action-button next11">التالي</button>  
                 </fieldset>
                 <fieldset>
                     <h3>@lang('general.main_information')</h3>
