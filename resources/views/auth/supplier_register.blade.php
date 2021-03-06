@@ -59,7 +59,6 @@ $menu = false ;
                                 <label>
                                     <span> @lang('general.cheange')</span>
                                 </label>
-                            
                             </div>
                             <label>
                                 <i class="fa fa-camera"></i>
@@ -73,9 +72,14 @@ $menu = false ;
                             @enderror
                         </div>
                         <div class="prof-img pic">
+                            <div class="prof-change-btn">
+                                <label>
+                                    <span>@lang('general.cheange_profile_image')</span>
+                                </label>
+                            </div>
                             <label>
                                 <i class="fa fa-camera"></i>
-                                <span>@lang('general.cheange_profile_image')</span>
+                                
                                 <input name="store_image" type="file"
                                     onchange="document.getElementById('blah1').src = window.URL.createObjectURL(this.files[0])">
                                 <img src="{{ url('storage/users/default_company.png')}}" id="blah1" alt="your image">
