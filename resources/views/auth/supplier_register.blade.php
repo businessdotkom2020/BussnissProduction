@@ -31,209 +31,12 @@ $menu = false ;
     </div>
 </div>
 <main class="main-content col-xs-12">
-<!--
     <div class="sign-wrap sup-wrap col-xs-12">
         <div class="container">
 
-            
-            <section class="multi_step_form">
-                <form id="msform">
-                    
-                    <div class="tittle">
-                        <h2>Verification Process</h2>
-                        <p>In order to use this service, you have to complete this verification process</p>
-                    </div>
-                    
-                    <ul id="progressbar">
-                        <li class="active">Verify Phone</li>
-                        <li>Upload Documents</li>
-                        <li>Security Questions</li>
-                    </ul>
-                   
-                    <fieldset>
-                        <h3>@lang('general.background_image')</h3>
-                        <div class="form-row">
-                            <div class="form-group col-xs-12">
-                                <div class="prof-img">
-                                    <label>
-                                        <i class="fa fa-camera"></i>
-                                        <span> @lang('general.cheange')</span>
-                                        <input name="store_background" type="file"
-                                            onchange="document.getElementById('blah').src = window.URL.createObjectURL(this.files[0])">
-                                        <img src="{{ asset('/web/images/cover.jpg')}}" id="blah" alt="your image">
-                                    </label>
-                                    @error('store_background')
-                                    <div class="alert" style="color:#a94442">{{ $message }}</div>
-                                    @enderror
-                                </div>
-                                <div class="prof-img pic">
-                                    <label>
-                                        <i class="fa fa-camera"></i>
-                                        <span>@lang('general.cheange_profile_image')</span>
-                                        <input name="store_image" type="file"
-                                            onchange="document.getElementById('blah1').src = window.URL.createObjectURL(this.files[0])">
-                                        <img src="{{ url('storage/users/default_company.png')}}" id="blah1"
-                                            alt="your image">
-                                    </label>
-                                    @error('store_image')
-                                    <div class="alert" style="color:#a94442">{{ $message }}</div>
-                                    @enderror
-                                </div>
-                            </div>
-                        </div>
-                        <button type="button" class="next action-button">التالي</button>
-                    </fieldset>
-                    <fieldset>
-                        <h3>@lang('general.main_information')</h3>
-                        <div class="form-row">
-                            <div class="form-group col-md-6 col-xs-12">
-                                <h4 style="font-size:15px">@lang('general.supplier_name')</h4>
-                                <input type="text" required name="supplier_name"
-                                    placeholder="@lang('general.supplier_name')" class="form-control">
-                            </div>
-
-                            <div class="form-group col-md-6 col-xs-12">
-                                <h4 style="font-size:15px">@lang('general.categories')</h4>
-
-                                <select required name="category_ids[]" class="form-control select-nosearch"
-                                    placeholde="@lang('general.categories')" multiple>
-                                    <!-- <option selected disabled>@lang('general.categories')</option> -->
-                                     <!--
-                                    @foreach(\App\Models\Category::whereNull('parent_id')->get() as $category)
-                                    <option value="{{$category->id}}">
-                                        {{$category->getTranslatedAttribute('name',\App::getLocale())}}</option>
-                                    @endforeach
-                                </select>
-
-                                @error('category_ids')
-                                <div class="alert" style="color:#a94442">{{ $message }}</div>
-                                @enderror
-                            </div>
-
-                            <div class="form-group col-md-6 col-xs-12">
-                                <input type="email" required name="email" placeholder="@lang('general.email')"
-                                    class="form-control">
-                                @error('email')
-                                <div class="alert" style="color:#a94442">{{ $message }}</div>
-                                @enderror
-                            </div>
-                            <div class="form-group col-md-6 col-xs-12">
-                                <input type="text" required name="mobile" placeholder="@lang('general.mobile')"
-                                    class="form-control">
-                                @error('mobile')
-                                <div class="alert" style="color:#a94442">{{ $message }}</div>
-                                @enderror
-                            </div>
-                            <div class="form-group col-md-12 col-xs-12">
-                                <input type="text" required name="hot_number" placeholder="@lang('general.hot_line')"
-                                    class="form-control">
-                                @error('hot_line')
-                                <div class="alert" style="color:#a94442">{{ $message }}</div>
-                                @enderror
-                            </div>
-                            <div class="form-group col-md-6 col-xs-12">
-                                <input type="password" required name="password" placeholder="@lang('general.password')"
-                                    class="form-control">
-                                @error('password')
-                                <div class="alert" style="color:#a94442">{{ $message }}</div>
-                                @enderror
-                            </div>
-                            <div class="form-group col-md-6 col-xs-12">
-                                <input type="password" required name="password_confirmation"
-                                    placeholder="@lang('general.password_confirmation')" class="form-control">
-                                @error('password_confirmation')
-                                <div class="alert" style="color:#a94442">{{ $message }}</div>
-                                @enderror
-                            </div>
-                        </div>
-                        <button type="button" class="action-button previous previous_button">السابق</button>
-                        <button type="button" class="next action-button">التالي</button>
-                    </fieldset>
-                    <fieldset>
-                        <h3>@lang('general.localization_info')</h3>
-                        <div class="form-row">
-                            <div class="form-group col-md-4 col-xs-12">
-                                <select required id="country" name="country_id" class="form-control">
-                                    <option selected disabled>@lang('general.country')</option>
-
-                                    @foreach (\App\Models\Country::get() as $country)
-                                    <option value="{{$country->id}}">{{$country->name}}</option>
-                                    @endforeach
-
-                                </select>
-
-                                @error('country_id')
-                                <div class="alert" style="color:#a94442">{{ $message }}</div>
-                                @enderror
-
-                            </div>
-                            <div class="form-group col-md-4 col-xs-12">
-                                <select required name="state_id" id="state" class="form-control">
-                                    <option selected disabled>@lang('general.state')</option>
-                                </select>
-
-                                @error('state_id')
-                                <div class="alert" style="color:#a94442">{{ $message }}</div>
-                                @enderror
-
-                            </div>
-                            <div class="form-group col-md-4 col-xs-12">
-                                <select required name="city_id" id="city" class="form-control">
-                                    <option selected disabled>@lang('general.city')</option>
-                                </select>
-
-                                @error('city_id')
-                                <div class="alert" style="color:#a94442">{{ $message }}</div>
-                                @enderror
-
-                            </div>
-                            <div class="form-group col-md-12 col-xs-12">
-                                <input required type="text" name="street_nom" placeholder="@lang('general.street_num')"
-                                    class="form-control">
-                                @error('street_nom')
-                                <div class="alert" style="color:#a94442">{{ $message }}</div>
-                                @enderror
-                            </div>
-
-                            <div class="form-group col-md-6 col-xs-12">
-                                <input required type="text" name="zip_code" placeholder="@lang('general.zip_code')"
-                                    class="form-control">
-                                @error('zip_code')
-                                <div class="alert" style="color:#a94442">{{ $message }}</div>
-                                @enderror
-                            </div>
-                            <div class="form-group col-md-6 col-xs-12">
-                                <!--<input type="text" placeholder="@lang('general.map_location')" class="form-control">-->
-                                <!--
-                                <a href="#" class="btn btn-review" data-toggle="modal" onclick="initMap()"
-                                    data-target="#review-pop">@lang('general.map_location')</a>
-
-                            </div>
-                            <div class="form-group col-md-6 col-xs-12">
-                                <input required type="text" name="address" placeholder="@lang('general.address_spec')"
-                                    class="form-control">
-                                @error('address_spec')
-                                <div class="alert" style="color:#a94442">{{ $message }}</div>
-                                @enderror
-
-                            </div>
-                        </div>
-                        <button type="button" class="action-button previous previous_button">رجوع</button>
-                        <button type="submit" class="action-button">@lang('general.register')</button>
-                    </fieldset>
-                </form>
-            </section>
-           
-
-
-        </div>
-    </div>
--->
-
-    <div class="suppliers-register">
-        <!-- Multi step form -->
-        <section class="multi_step_form">
-            <form id="msform">
+            <!-- Multi step form --> 
+            <section class="multi_step_form">  
+            <form id="msform"> 
                 <!-- Tittle -->
                 <div class="tittle">
                     <h2>Verification Process</h2>
@@ -241,90 +44,186 @@ $menu = false ;
                 </div>
                 <!-- progressbar -->
                 <ul id="progressbar">
-                    <li class="active">Verify Phone</li>
-                    <li>Upload Documents</li>
+                    <li class="active">Verify Phone</li>  
+                    <li>Upload Documents</li> 
                     <li>Security Questions</li>
                 </ul>
                 <!-- fieldsets -->
                 <fieldset>
-                    <h3>Setup your phone</h3>
-                    <h6>We will send you a SMS. Input the code to verify.</h6>
+                    <h3>@lang('general.background_image')</h3>
                     <div class="form-row">
-                        <div class="form-group col-md-6">
-                            <input type="tel" id="phone" class="form-control" placeholder="+880">
+                    <div class="form-group col-xs-12">
+                        <div class="prof-img">
+                            <label>
+                                <i class="fa fa-camera"></i>
+                                <span> @lang('general.cheange')</span>
+                                <input name="store_background" type="file"
+                                    onchange="document.getElementById('blah').src = window.URL.createObjectURL(this.files[0])">
+                                <img src="{{ asset('/web/images/cover.jpg')}}" id="blah" alt="your image">
+                            </label>
+                            @error('store_background')
+                            <div class="alert" style="color:#a94442">{{ $message }}</div>
+                            @enderror
                         </div>
-                        <div class="form-group col-md-6">
-                            <input type="text" class="form-control" placeholder="+8801123456789">
+                        <div class="prof-img pic">
+                            <label>
+                                <i class="fa fa-camera"></i>
+                                <span>@lang('general.cheange_profile_image')</span>
+                                <input name="store_image" type="file"
+                                    onchange="document.getElementById('blah1').src = window.URL.createObjectURL(this.files[0])">
+                                <img src="{{ url('storage/users/default_company.png')}}" id="blah1" alt="your image">
+                            </label>
+                            @error('store_image')
+                            <div class="alert" style="color:#a94442">{{ $message }}</div>
+                            @enderror
+                        </div>
                         </div>
                     </div>
-                    <div class="done_text">
-                        <a href="#" class="don_icon"><i class="ion-android-done"></i></a>
-                        <h6>A secret code is sent to your phone. <br>Please enter it here.</h6>
-                    </div>
-                    <div class="code_group">
-                        <input type="text" class="form-control" placeholder="0">
-                        <input type="text" class="form-control" placeholder="0">
-                        <input type="text" class="form-control" placeholder="0">
-                        <input type="text" class="form-control" placeholder="0">
-                    </div>
-                    <button type="button" class="action-button previous_button">Back</button>
-                    <button type="button" class="next action-button">Continue</button>
+                    <button type="button" class="next action-button">التالي</button>  
                 </fieldset>
                 <fieldset>
-                    <h3>Verify Your Identity</h3>
-                    <h6>Please upload any of these documents to verify your Identity.</h6>
-                    <div class="passport">
-                        <h4>Govt. ID card <br>PassPort <br>Driving License.</h4>
-                        <a href="#" class="don_icon"><i class="ion-android-done"></i></a>
+                    <h3>@lang('general.main_information')</h3>
+                    <div class="form-row">
+                    <div class="form-group col-md-6 col-xs-12">
+                        <h4 style="font-size:15px">@lang('general.supplier_name')</h4>
+                        <input type="text" required name="supplier_name" placeholder="@lang('general.supplier_name')"
+                            class="form-control">
                     </div>
-                    <div class="input-group">
-                        <div class="custom-file">
-                            <input type="file" class="custom-file-input" id="upload">
-                            <label class="custom-file-label" for="upload"><i
-                                    class="ion-android-cloud-outline"></i>Choose file</label>
+
+                    <div class="form-group col-md-6 col-xs-12">
+                        <h4 style="font-size:15px">@lang('general.categories')</h4>
+
+                        <select required name="category_ids[]" class="form-control select-nosearch"
+                            placeholde="@lang('general.categories')" multiple>
+                            <!-- <option selected disabled>@lang('general.categories')</option> -->
+                            @foreach(\App\Models\Category::whereNull('parent_id')->get() as $category)
+                            <option value="{{$category->id}}">
+                                {{$category->getTranslatedAttribute('name',\App::getLocale())}}</option>
+                            @endforeach
+                        </select>
+
+                        @error('category_ids')
+                        <div class="alert" style="color:#a94442">{{ $message }}</div>
+                        @enderror
+                    </div>
+
+                    <div class="form-group col-md-6 col-xs-12">
+                        <input type="email" required name="email" placeholder="@lang('general.email')"
+                            class="form-control">
+                        @error('email')
+                        <div class="alert" style="color:#a94442">{{ $message }}</div>
+                        @enderror
+                    </div>
+                    <div class="form-group col-md-6 col-xs-12">
+                        <input type="text" required name="mobile" placeholder="@lang('general.mobile')"
+                            class="form-control">
+                        @error('mobile')
+                        <div class="alert" style="color:#a94442">{{ $message }}</div>
+                        @enderror
+                    </div>
+                    <div class="form-group col-md-12 col-xs-12">
+                        <input type="text" required name="hot_number" placeholder="@lang('general.hot_line')"
+                            class="form-control">
+                        @error('hot_line')
+                        <div class="alert" style="color:#a94442">{{ $message }}</div>
+                        @enderror
+                    </div>
+                    <div class="form-group col-md-6 col-xs-12">
+                        <input type="password" required name="password" placeholder="@lang('general.password')"
+                            class="form-control">
+                        @error('password')
+                        <div class="alert" style="color:#a94442">{{ $message }}</div>
+                        @enderror
+                    </div>
+                    <div class="form-group col-md-6 col-xs-12">
+                        <input type="password" required name="password_confirmation"
+                            placeholder="@lang('general.password_confirmation')" class="form-control">
+                        @error('password_confirmation')
+                        <div class="alert" style="color:#a94442">{{ $message }}</div>
+                        @enderror
+                    </div>
+                    </div>
+                    <button type="button" class="action-button previous previous_button">السابق</button>
+                    <button type="button" class="next action-button">التالي</button>  
+                </fieldset>  
+                <fieldset>
+                    <h3>@lang('general.localization_info')</h3>
+                    <div class="form-row">
+                        <div class="form-group col-md-4 col-xs-12">
+                            <select required id="country" name="country_id" class="form-control">
+                                <option selected disabled>@lang('general.country')</option>
+
+                                @foreach (\App\Models\Country::get() as $country)
+                                <option value="{{$country->id}}">{{$country->name}}</option>
+                                @endforeach
+
+                            </select>
+
+                            @error('country_id')
+                            <div class="alert" style="color:#a94442">{{ $message }}</div>
+                            @enderror
+
+                        </div>
+                        <div class="form-group col-md-4 col-xs-12">
+                            <select required name="state_id" id="state" class="form-control">
+                                <option selected disabled>@lang('general.state')</option>
+                            </select>
+
+                            @error('state_id')
+                            <div class="alert" style="color:#a94442">{{ $message }}</div>
+                            @enderror
+
+                        </div>
+                        <div class="form-group col-md-4 col-xs-12">
+                            <select required name="city_id" id="city" class="form-control">
+                                <option selected disabled>@lang('general.city')</option>
+                            </select>
+
+                            @error('city_id')
+                            <div class="alert" style="color:#a94442">{{ $message }}</div>
+                            @enderror
+
+                        </div>
+                        <div class="form-group col-md-12 col-xs-12">
+                            <input required type="text" name="street_nom" placeholder="@lang('general.street_num')"
+                                class="form-control">
+                            @error('street_nom')
+                            <div class="alert" style="color:#a94442">{{ $message }}</div>
+                            @enderror
+                        </div>
+
+                        <div class="form-group col-md-6 col-xs-12">
+                            <input required type="text" name="zip_code" placeholder="@lang('general.zip_code')"
+                                class="form-control">
+                            @error('zip_code')
+                            <div class="alert" style="color:#a94442">{{ $message }}</div>
+                            @enderror
+                        </div>
+                        <div class="form-group col-md-6 col-xs-12">
+                            <!--<input type="text" placeholder="@lang('general.map_location')" class="form-control">-->
+                            <a href="#" class="btn btn-review" data-toggle="modal" onclick="initMap()"
+                                data-target="#review-pop">@lang('general.map_location')</a>
+
+                        </div>
+                        <div class="form-group col-md-6 col-xs-12">
+                            <input required type="text" name="address" placeholder="@lang('general.address_spec')"
+                                class="form-control">
+                            @error('address_spec')
+                            <div class="alert" style="color:#a94442">{{ $message }}</div>
+                            @enderror
+
                         </div>
                     </div>
-                    <ul class="file_added">
-                        <li>File Added:</li>
-                        <li><a href="#"><i class="ion-paperclip"></i>national_id_card.png</a></li>
-                        <li><a href="#"><i class="ion-paperclip"></i>national_id_card_back.png</a></li>
-                    </ul>
-                    <button type="button" class="action-button previous previous_button">Back</button>
-                    <button type="button" class="next action-button">Continue</button>
-                </fieldset>
-                <fieldset>
-                    <h3>Create Security Questions</h3>
-                    <h6>Please update your account with security questions</h6>
-                    <div class="form-group">
-                        <select class="product_select">
-                            <option data-display="1. Choose A Question">1. Choose A Question</option>
-                            <option>2. Choose A Question</option>
-                            <option>3. Choose A Question</option>
-                        </select>
-                    </div>
-                    <div class="form-group fg_2">
-                        <input type="text" class="form-control" placeholder="Anwser here:">
-                    </div>
-                    <div class="form-group">
-                        <select class="product_select">
-                            <option data-display="1. Choose A Question">1. Choose A Question</option>
-                            <option>2. Choose A Question</option>
-                            <option>3. Choose A Question</option>
-                        </select>
-                    </div>
-                    <div class="form-group fg_3">
-                        <input type="text" class="form-control" placeholder="Anwser here:">
-                    </div>
-                    <button type="button" class="action-button previous previous_button">Back</button>
-                    <a href="#" class="action-button">Finish</a>
-                </fieldset>
-            </form>
-        </section>
-        <!-- End Multi step form -->
+                    <button type="button" class="action-button previous previous_button">رجوع</button> 
+                    <button type="submit" class="action-button">@lang('general.register')</button> 
+                </fieldset>  
+            </form>  
+            </section> 
+            <!-- End Multi step form -->   
+
+
+        </div>
     </div>
-
-
-
 </main>
 
 <div class="modal fade" id="review-pop">
@@ -355,16 +254,16 @@ $menu = false ;
 
                         <div class="form-group">
                             <label for="">Lat</label>
-                            <input type="text" oninput="initMap()" value="31.3540494" class="form-control input-sm"
-                                name="lat" id="lat">
+                            <input type="text" oninput="initMap()" value="31.3540494"
+                                class="form-control input-sm" name="lat" id="lat">
                         </div>
                     </div>
                     <div class="col-md-6 col-xs-12 ">
 
                         <div class="form-group">
                             <label for="">Lng</label>
-                            <input type="text" oninput="initMap()" value="31.6841419" class="form-control input-sm"
-                                name="lng" id="lng">
+                            <input type="text" oninput="initMap()" value="31.6841419"
+                                class="form-control input-sm" name="lng" id="lng">
                         </div>
                     </div>
 
@@ -409,7 +308,7 @@ $menu = false ;
             </div>
         </div><!-- /.modal-content -->
     </div><!-- /.modal-dialog -->
-</div><!-- /.modal -->
+    </div><!-- /.modal -->
 
 
 @endsection
@@ -432,6 +331,8 @@ $menu = false ;
 
 
 
+<!-- mayada -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js"></script>
 
 <script>
     var x = document.getElementById("demo");
@@ -450,21 +351,20 @@ $menu = false ;
     }
 
 
-    $('#country').change(function () {
+    $('#country').change(function() {
         console.log('asa');
         var cid = $(this).val();
         if (cid) {
             $.ajax({
                 type: "get",
                 url: " /getStates/" + cid,
-                success: function (res) {
+                success: function(res) {
                     if (res) {
                         $("#state").empty();
                         $("#city").empty();
                         $("#state").append('<option>Select State</option>');
-                        $.each(res, function (key, value) {
-                            $("#state").append('<option value="' + key + '">' + value +
-                                '</option>');
+                        $.each(res, function(key, value) {
+                            $("#state").append('<option value="' + key + '">' + value + '</option>');
                         });
                         $('#state').niceSelect('update');
 
@@ -474,19 +374,18 @@ $menu = false ;
             });
         }
     });
-    $('#state').change(function () {
+    $('#state').change(function() {
         var sid = $(this).val();
         if (sid) {
             $.ajax({
                 type: "get",
                 url: "/getCities/" + sid,
-                success: function (res) {
+                success: function(res) {
                     if (res) {
                         $("#city").empty();
                         $("#city").append('<option>Select City</option>');
-                        $.each(res, function (key, value) {
-                            $("#city").append('<option value="' + key + '">' + value +
-                                '</option>');
+                        $.each(res, function(key, value) {
+                            $("#city").append('<option value="' + key + '">' + value + '</option>');
                         });
                         $('#city').niceSelect('update');
 
@@ -496,6 +395,5 @@ $menu = false ;
             });
         }
     });
-
 </script>
 @endpush
