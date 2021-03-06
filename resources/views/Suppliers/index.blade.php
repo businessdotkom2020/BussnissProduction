@@ -18,13 +18,19 @@
                
                 <div class="g-body col-xs-12">
 @foreach($suppliers as $supplier)
-                    <div class="cardo col-md-3 col-sm-6 col-xs-12">
+                    <div class="col-md-3 col-sm-6 col-xs-12">
+                        <div class="h-supplier-box cardo text-center">
+                        <span>
+                            <a href="{{url('supplier/'.$supplier->id)}}">
+                                <img src="{{ url('storage/'.$supplier->avatar)}}" alt="">
+                            </a>
+                        </span>
                         <div class="c-inner">
-                            <div class="c-img">
+                            <!-- <div class="c-img">
                                 <a href="{{url('supplier/'.$supplier->id)}}">
                                     <img src="{{ url('storage/'.$supplier->avatar)}}" alt="">
                                 </a>
-                            </div>
+                            </div> -->
                             <div class="c-data">
                     
                     @if(Auth::check())
@@ -108,6 +114,7 @@
                                 </p>
                             </div>
                         </div>
+                    </div>
                     </div>
 @endforeach
                  
