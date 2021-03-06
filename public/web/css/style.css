@@ -6410,3 +6410,6 @@ textarea {
     text-align: initial;
     margin-bottom: 10px;
 }
+.prof-change-btn label:before{
+    display: none;
+}
