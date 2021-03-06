@@ -53,12 +53,16 @@ $menu = false ;
                     <h3>@lang('general.background_image')</h3>
                     <div class="form-row">
                     <div class="form-group col-xs-12">
+                        <div class="prof-change-btn">
+                            <span> @lang('general.cheange')</span>
+                            <input name="store_background" type="file"
+                                    onchange="document.getElementById('blah').src = window.URL.createObjectURL(this.files[0])">
+                        </div>
                         <div class="prof-img">
                             <label>
                                 <i class="fa fa-camera"></i>
-                                <span> @lang('general.cheange')</span>
-                                <input name="store_background" type="file"
-                                    onchange="document.getElementById('blah').src = window.URL.createObjectURL(this.files[0])">
+                                
+                                
                                 <img src="{{ asset('/web/images/cover.jpg')}}" id="blah" alt="your image">
                             </label>
                             @error('store_background')
