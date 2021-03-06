@@ -31,24 +31,25 @@ $menu = false ;
     </div>
 </div>
 <main class="main-content col-xs-12">
+<!--
     <div class="sign-wrap sup-wrap col-xs-12">
         <div class="container">
 
-            <!-- Multi step form -->
+            
             <section class="multi_step_form">
                 <form id="msform">
-                    <!-- Tittle -->
+                    
                     <div class="tittle">
                         <h2>Verification Process</h2>
                         <p>In order to use this service, you have to complete this verification process</p>
                     </div>
-                    <!-- progressbar -->
+                    
                     <ul id="progressbar">
                         <li class="active">Verify Phone</li>
                         <li>Upload Documents</li>
                         <li>Security Questions</li>
                     </ul>
-                    <!-- fieldsets -->
+                   
                     <fieldset>
                         <h3>@lang('general.background_image')</h3>
                         <div class="form-row">
@@ -97,6 +98,7 @@ $menu = false ;
                                 <select required name="category_ids[]" class="form-control select-nosearch"
                                     placeholde="@lang('general.categories')" multiple>
                                     <!-- <option selected disabled>@lang('general.categories')</option> -->
+                                     <!--
                                     @foreach(\App\Models\Category::whereNull('parent_id')->get() as $category)
                                     <option value="{{$category->id}}">
                                         {{$category->getTranslatedAttribute('name',\App::getLocale())}}</option>
@@ -202,6 +204,7 @@ $menu = false ;
                             </div>
                             <div class="form-group col-md-6 col-xs-12">
                                 <!--<input type="text" placeholder="@lang('general.map_location')" class="form-control">-->
+                                <!--
                                 <a href="#" class="btn btn-review" data-toggle="modal" onclick="initMap()"
                                     data-target="#review-pop">@lang('general.map_location')</a>
 
@@ -220,12 +223,12 @@ $menu = false ;
                     </fieldset>
                 </form>
             </section>
-            <!-- End Multi step form -->
+           
 
 
         </div>
     </div>
-
+-->
 
     <div class="suppliers-register">
         <!-- Multi step form -->
