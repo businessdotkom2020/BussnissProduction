@@ -9,7 +9,7 @@ body{
     font-family: tajawal !important;
 }
 .h1, .h2, .h3, .h4, .h5, .h6, h1, h2, h3, h4, h5, h6,
-a, li, span, p {
+a, li, span, p, button{
     font-family: tajawal;
 }
 .top-head .tp-links {
