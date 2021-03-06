@@ -6425,3 +6425,9 @@ textarea {
 .next11{
     margin-bottom: 30px;
 }
+.map-location-block .rate-title{
+    margin: 0 !important;
+}
+.map-location-block #map{
+    margin-top: 12px;
+}

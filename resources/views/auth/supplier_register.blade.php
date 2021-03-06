@@ -293,7 +293,7 @@ $menu = false ;
                         </div>
 
                     </div>
-                    <div id="map" style="width:100%;height:400px; "></div>
+                    <div id="map" style="width:100%;height:330px; "></div>
                     <div id="infowindow-content">
                         <img src="" width="16" height="16" id="place-icon">
                         <span id="place-name" class="title"></span><br>
@@ -316,7 +316,7 @@ $menu = false ;
         </div>
     </div>
 </main>
-
+<!-- 
 <div class="modal fade" id="review-pop">
     <div class="modal-dialog">
         <div class="modal-content">
@@ -397,9 +397,9 @@ $menu = false ;
 
                 </div>
             </div>
-        </div><!-- /.modal-content -->
-    </div><!-- /.modal-dialog -->
-    </div><!-- /.modal -->
+        </div>
+    </div>
+    </div>/.modal -->
 
 
 @endsection

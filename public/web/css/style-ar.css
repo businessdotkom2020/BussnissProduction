@@ -1015,3 +1015,6 @@ a, li, span, p, button{
 .multi_step_form #msform fieldset .product_select {
     font-family: 'Tajawal';
 }
+.multi_step_form #msform fieldset h3{
+    font-family: 'Tajawal';
+}
