@@ -53,11 +53,12 @@ $menu = false ;
                     <h3>@lang('general.background_image')</h3>
                     <div class="form-row">
                     <div class="form-group col-xs-12">
-                        <div class="prof-change-btn">
-                            <span> @lang('general.cheange')</span>
-                           
-                        </div>
+                        
                         <div class="prof-img">
+                            <div class="prof-change-btn">
+                                <span> @lang('general.cheange')</span>
+                            
+                            </div>
                             <label>
                                 <i class="fa fa-camera"></i>
                                 <input name="store_background" type="file"
