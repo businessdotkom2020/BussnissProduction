@@ -6456,6 +6456,7 @@ textarea {
 }
 .categories-block .accordion{
     padding: 20px 15px;
+    background: #fff;
     box-shadow: 0 2px 5px 0 rgb(0 0 0 / 8%);
 }
 .categories-block ul .inner {
