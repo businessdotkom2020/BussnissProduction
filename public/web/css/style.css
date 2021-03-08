@@ -6441,7 +6441,8 @@ textarea {
 .categories-block{
     margin-bottom: 30px;
 }
-.categories-pagee .col-md-3{
+.categories-pagee .categories-block-content{
+    width: 25%;
     padding: 0 10px;
 }
 .categories-block h4{
