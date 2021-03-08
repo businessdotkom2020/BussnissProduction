@@ -125,6 +125,7 @@ $menu = false ;
         padding: 10px;
         margin: 0 20px 0 0;
     }
+
 </style>
 
 @endpush
@@ -214,7 +215,7 @@ $menu = false ;
                         </div>
 
                         <div class="form-group">
-                            <h1>@lang('general.rating') </h1>
+                            <h1 class="serch-t-box">@lang('general.rating') </h1>
                             <fieldset class="rating">
                                 <input type="radio" id="star5" name="rating" value="5" /><label class="full" for="star5"
                                     title="Awesome - 5 stars"></label>
@@ -240,7 +241,7 @@ $menu = false ;
                         </div>
 
                         <div class="form-group">
-                            <h1> @lang('general.supplier_rating') </h1>
+                            <h1 class="serch-t-box"> @lang('general.supplier_rating') </h1>
                             <fieldset class="rating-supplier">
                                 <input type="radio" id="star10" name="saller_rating" value="5" /><label class="full"
                                     for="star10" title="Awesome - 5 stars"></label>
@@ -363,7 +364,176 @@ $menu = false ;
                                     </div>
                                 </div>
                             </div>
+                            <div class="col-md-4 col-sm-4 col-xs-6">
+                                <div class="product-grid">
+                                    <div class="product-image">
+                                        <a href="#" class="image">
+                                            <img class="pic-1" src="https://i.imgur.com/gY5s6z0.jpg">
+                                            <img class="pic-2" src="https://i.imgur.com/CEQeTSE.jpg">
+                                        </a>
+                                        <ul class="product-links">
+                                            <li><a href="#" data-tip="Compare"><i class="fa fa-random"></i></a></li>
+                                            <li><a href="#" data-tip="Add to Wishlist"><i class="fa fa-heart"></i></a>
+                                            </li>
+                                            <li><a href="#" data-tip="Quick View"><i class="fa fa-search"></i></a></li>
+                                            <li><a href="#" data-tip="Add to Cart"><i
+                                                        class="fa fa-shopping-cart"></i></a></li>
+                                        </ul>
+                                    </div>
+                                    <div class="product-content">
+                                        <h3 class="title"><a href="#">Women's T-Shirt</a></h3>
+                                        <div class="price">$70.99</div>
+                                        <div class="c-data">
+                                            <p>
+                                                <i class="fa fa-star active"></i>
+                                                <i class="fa fa-star active"></i>
+                                                <i class="fa fa-star active"></i>
+                                                <i class="fa fa-star active"></i>
+                                                <i class="fa fa-star"></i>
+                                            </p>
+                                        </div>
+                                        <a class="btn h-offers-btn" href="#" data-toggle="modal"
+                                            data-target="#contact_1" target="_blank">@lang('contact_supplier')</a>
 
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-4 col-sm-4 col-xs-6">
+                                <div class="product-grid">
+                                    <div class="product-image">
+                                        <a href="#" class="image">
+                                            <img class="pic-1" src="https://i.imgur.com/gY5s6z0.jpg">
+                                            <img class="pic-2" src="https://i.imgur.com/CEQeTSE.jpg">
+                                        </a>
+                                        <ul class="product-links">
+                                            <li><a href="#" data-tip="Compare"><i class="fa fa-random"></i></a></li>
+                                            <li><a href="#" data-tip="Add to Wishlist"><i class="fa fa-heart"></i></a>
+                                            </li>
+                                            <li><a href="#" data-tip="Quick View"><i class="fa fa-search"></i></a></li>
+                                            <li><a href="#" data-tip="Add to Cart"><i
+                                                        class="fa fa-shopping-cart"></i></a></li>
+                                        </ul>
+                                    </div>
+                                    <div class="product-content">
+                                        <h3 class="title"><a href="#">Women's T-Shirt</a></h3>
+                                        <div class="price">$70.99</div>
+                                        <div class="c-data">
+                                            <p>
+                                                <i class="fa fa-star active"></i>
+                                                <i class="fa fa-star active"></i>
+                                                <i class="fa fa-star active"></i>
+                                                <i class="fa fa-star active"></i>
+                                                <i class="fa fa-star"></i>
+                                            </p>
+                                        </div>
+                                        <a class="btn h-offers-btn" href="#" data-toggle="modal"
+                                            data-target="#contact_1" target="_blank">@lang('contact_supplier')</a>
+
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-4 col-sm-4 col-xs-6">
+                                <div class="product-grid">
+                                    <div class="product-image">
+                                        <a href="#" class="image">
+                                            <img class="pic-1" src="https://i.imgur.com/gY5s6z0.jpg">
+                                            <img class="pic-2" src="https://i.imgur.com/CEQeTSE.jpg">
+                                        </a>
+                                        <ul class="product-links">
+                                            <li><a href="#" data-tip="Compare"><i class="fa fa-random"></i></a></li>
+                                            <li><a href="#" data-tip="Add to Wishlist"><i class="fa fa-heart"></i></a>
+                                            </li>
+                                            <li><a href="#" data-tip="Quick View"><i class="fa fa-search"></i></a></li>
+                                            <li><a href="#" data-tip="Add to Cart"><i
+                                                        class="fa fa-shopping-cart"></i></a></li>
+                                        </ul>
+                                    </div>
+                                    <div class="product-content">
+                                        <h3 class="title"><a href="#">Women's T-Shirt</a></h3>
+                                        <div class="price">$70.99</div>
+                                        <div class="c-data">
+                                            <p>
+                                                <i class="fa fa-star active"></i>
+                                                <i class="fa fa-star active"></i>
+                                                <i class="fa fa-star active"></i>
+                                                <i class="fa fa-star active"></i>
+                                                <i class="fa fa-star"></i>
+                                            </p>
+                                        </div>
+                                        <a class="btn h-offers-btn" href="#" data-toggle="modal"
+                                            data-target="#contact_1" target="_blank">@lang('contact_supplier')</a>
+
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-4 col-sm-4 col-xs-6">
+                                <div class="product-grid">
+                                    <div class="product-image">
+                                        <a href="#" class="image">
+                                            <img class="pic-1" src="https://i.imgur.com/gY5s6z0.jpg">
+                                            <img class="pic-2" src="https://i.imgur.com/CEQeTSE.jpg">
+                                        </a>
+                                        <ul class="product-links">
+                                            <li><a href="#" data-tip="Compare"><i class="fa fa-random"></i></a></li>
+                                            <li><a href="#" data-tip="Add to Wishlist"><i class="fa fa-heart"></i></a>
+                                            </li>
+                                            <li><a href="#" data-tip="Quick View"><i class="fa fa-search"></i></a></li>
+                                            <li><a href="#" data-tip="Add to Cart"><i
+                                                        class="fa fa-shopping-cart"></i></a></li>
+                                        </ul>
+                                    </div>
+                                    <div class="product-content">
+                                        <h3 class="title"><a href="#">Women's T-Shirt</a></h3>
+                                        <div class="price">$70.99</div>
+                                        <div class="c-data">
+                                            <p>
+                                                <i class="fa fa-star active"></i>
+                                                <i class="fa fa-star active"></i>
+                                                <i class="fa fa-star active"></i>
+                                                <i class="fa fa-star active"></i>
+                                                <i class="fa fa-star"></i>
+                                            </p>
+                                        </div>
+                                        <a class="btn h-offers-btn" href="#" data-toggle="modal"
+                                            data-target="#contact_1" target="_blank">@lang('contact_supplier')</a>
+
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-4 col-sm-4 col-xs-6">
+                                <div class="product-grid">
+                                    <div class="product-image">
+                                        <a href="#" class="image">
+                                            <img class="pic-1" src="https://i.imgur.com/gY5s6z0.jpg">
+                                            <img class="pic-2" src="https://i.imgur.com/CEQeTSE.jpg">
+                                        </a>
+                                        <ul class="product-links">
+                                            <li><a href="#" data-tip="Compare"><i class="fa fa-random"></i></a></li>
+                                            <li><a href="#" data-tip="Add to Wishlist"><i class="fa fa-heart"></i></a>
+                                            </li>
+                                            <li><a href="#" data-tip="Quick View"><i class="fa fa-search"></i></a></li>
+                                            <li><a href="#" data-tip="Add to Cart"><i
+                                                        class="fa fa-shopping-cart"></i></a></li>
+                                        </ul>
+                                    </div>
+                                    <div class="product-content">
+                                        <h3 class="title"><a href="#">Women's T-Shirt</a></h3>
+                                        <div class="price">$70.99</div>
+                                        <div class="c-data">
+                                            <p>
+                                                <i class="fa fa-star active"></i>
+                                                <i class="fa fa-star active"></i>
+                                                <i class="fa fa-star active"></i>
+                                                <i class="fa fa-star active"></i>
+                                                <i class="fa fa-star"></i>
+                                            </p>
+                                        </div>
+                                        <a class="btn h-offers-btn" href="#" data-toggle="modal"
+                                            data-target="#contact_1" target="_blank">@lang('contact_supplier')</a>
+
+                                    </div>
+                                </div>
+                            </div>
 
 
 
@@ -418,7 +588,7 @@ $menu = false ;
 
                     </div>
                     <div class="tab-pane fade" id="suppliers_view">
-
+                        <!--
                         @foreach($suppliers as $supplier)
 
                         <div class="sup-v col-xs-12">
@@ -526,6 +696,235 @@ $menu = false ;
 
                         @endforeach
 
+                    -->
+
+                        <div class="g-body col-xs-12 supplier-p-search">
+                        <div class="col-md-4 col-sm-4 col-xs-12">
+                                <div class="h-supplier-box cardo text-center">
+                                    <span>
+                                        <a href="https://businessdotcom.net/supplier/216">
+                                            <img src="https://businessdotcom.net/storage/users/default_company.png"
+                                                alt="">
+                                        </a>
+                                    </span>
+                                    <div class="c-inner">
+                                        <div class="c-data">
+                                            <h3>
+                                                <a href="https://businessdotcom.net/supplier/216" class="title">متجر
+                                                    عصام</a>
+                                            </h3>
+                                            <p>
+                                                <i class="fa fa-star active"></i>
+                                                <i class="fa fa-star active"></i>
+                                                <i class="fa fa-star"></i>
+                                                <i class="fa fa-star"></i>
+                                                <i class="fa fa-star"></i>
+                                            </p>
+                                            <a href="javascript:void(0)" id="followtoggle_216"
+                                                onclick="followtoggle(216)" class="btn ">
+                                                <i id="followicon_216" class="fa fa-plus"></i>
+                                                <span>
+                                                    Follow
+                                                </span>
+                                            </a>
+                                            <a href="#"  class="btn sh-pro-s">
+                                                <span>
+                                                    مشاهده جميع المنتجات 
+                                                </span>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-4 col-sm-4 col-xs-12">
+                                <div class="h-supplier-box cardo text-center">
+                                    <span>
+                                        <a href="https://businessdotcom.net/supplier/216">
+                                            <img src="https://businessdotcom.net/storage/users/default_company.png"
+                                                alt="">
+                                        </a>
+                                    </span>
+                                    <div class="c-inner">
+                                        <div class="c-data">
+                                            <h3>
+                                                <a href="https://businessdotcom.net/supplier/216" class="title">متجر
+                                                    عصام</a>
+                                            </h3>
+                                            <p>
+                                                <i class="fa fa-star active"></i>
+                                                <i class="fa fa-star active"></i>
+                                                <i class="fa fa-star"></i>
+                                                <i class="fa fa-star"></i>
+                                                <i class="fa fa-star"></i>
+                                            </p>
+                                            <a href="javascript:void(0)" id="followtoggle_216"
+                                                onclick="followtoggle(216)" class="btn ">
+                                                <i id="followicon_216" class="fa fa-plus"></i>
+                                                <span>
+                                                    Follow
+                                                </span>
+                                            </a>
+                                            <a href="#"  class="btn sh-pro-s">
+                                                <span>
+                                                    مشاهده جميع المنتجات 
+                                                </span>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-4 col-sm-4 col-xs-12">
+                                <div class="h-supplier-box cardo text-center">
+                                    <span>
+                                        <a href="https://businessdotcom.net/supplier/216">
+                                            <img src="https://businessdotcom.net/storage/users/default_company.png"
+                                                alt="">
+                                        </a>
+                                    </span>
+                                    <div class="c-inner">
+                                        <div class="c-data">
+                                            <h3>
+                                                <a href="https://businessdotcom.net/supplier/216" class="title">متجر
+                                                    عصام</a>
+                                            </h3>
+                                            <p>
+                                                <i class="fa fa-star active"></i>
+                                                <i class="fa fa-star active"></i>
+                                                <i class="fa fa-star"></i>
+                                                <i class="fa fa-star"></i>
+                                                <i class="fa fa-star"></i>
+                                            </p>
+                                            <a href="javascript:void(0)" id="followtoggle_216"
+                                                onclick="followtoggle(216)" class="btn ">
+                                                <i id="followicon_216" class="fa fa-plus"></i>
+                                                <span>
+                                                    Follow
+                                                </span>
+                                            </a>
+                                            <a href="#"  class="btn sh-pro-s">
+                                                <span>
+                                                    مشاهده جميع المنتجات 
+                                                </span>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-4 col-sm-4 col-xs-12">
+                                <div class="h-supplier-box cardo text-center">
+                                    <span>
+                                        <a href="https://businessdotcom.net/supplier/216">
+                                            <img src="https://businessdotcom.net/storage/users/default_company.png"
+                                                alt="">
+                                        </a>
+                                    </span>
+                                    <div class="c-inner">
+                                        <div class="c-data">
+                                            <h3>
+                                                <a href="https://businessdotcom.net/supplier/216" class="title">متجر
+                                                    عصام</a>
+                                            </h3>
+                                            <p>
+                                                <i class="fa fa-star active"></i>
+                                                <i class="fa fa-star active"></i>
+                                                <i class="fa fa-star"></i>
+                                                <i class="fa fa-star"></i>
+                                                <i class="fa fa-star"></i>
+                                            </p>
+                                            <a href="javascript:void(0)" id="followtoggle_216"
+                                                onclick="followtoggle(216)" class="btn ">
+                                                <i id="followicon_216" class="fa fa-plus"></i>
+                                                <span>
+                                                    Follow
+                                                </span>
+                                            </a>
+                                            <a href="#"  class="btn sh-pro-s">
+                                                <span>
+                                                    مشاهده جميع المنتجات 
+                                                </span>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-4 col-sm-4 col-xs-12">
+                                <div class="h-supplier-box cardo text-center">
+                                    <span>
+                                        <a href="https://businessdotcom.net/supplier/216">
+                                            <img src="https://businessdotcom.net/storage/users/default_company.png"
+                                                alt="">
+                                        </a>
+                                    </span>
+                                    <div class="c-inner">
+                                        <div class="c-data">
+                                            <h3>
+                                                <a href="https://businessdotcom.net/supplier/216" class="title">متجر
+                                                    عصام</a>
+                                            </h3>
+                                            <p>
+                                                <i class="fa fa-star active"></i>
+                                                <i class="fa fa-star active"></i>
+                                                <i class="fa fa-star"></i>
+                                                <i class="fa fa-star"></i>
+                                                <i class="fa fa-star"></i>
+                                            </p>
+                                            <a href="javascript:void(0)" id="followtoggle_216"
+                                                onclick="followtoggle(216)" class="btn ">
+                                                <i id="followicon_216" class="fa fa-plus"></i>
+                                                <span>
+                                                    Follow
+                                                </span>
+                                            </a>
+                                            <a href="#"  class="btn sh-pro-s">
+                                                <span>
+                                                    مشاهده جميع المنتجات 
+                                                </span>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-4 col-sm-4 col-xs-12">
+                                <div class="h-supplier-box cardo text-center">
+                                    <span>
+                                        <a href="https://businessdotcom.net/supplier/216">
+                                            <img src="https://businessdotcom.net/storage/users/default_company.png"
+                                                alt="">
+                                        </a>
+                                    </span>
+                                    <div class="c-inner">
+                                        <div class="c-data">
+                                            <h3>
+                                                <a href="https://businessdotcom.net/supplier/216" class="title">متجر
+                                                    عصام</a>
+                                            </h3>
+                                            <p>
+                                                <i class="fa fa-star active"></i>
+                                                <i class="fa fa-star active"></i>
+                                                <i class="fa fa-star"></i>
+                                                <i class="fa fa-star"></i>
+                                                <i class="fa fa-star"></i>
+                                            </p>
+                                            <a href="javascript:void(0)" id="followtoggle_216"
+                                                onclick="followtoggle(216)" class="btn ">
+                                                <i id="followicon_216" class="fa fa-plus"></i>
+                                                <span>
+                                                    Follow
+                                                </span>
+                                            </a>
+                                            <a href="#"  class="btn sh-pro-s">
+                                                <span>
+                                                    مشاهده جميع المنتجات 
+                                                </span>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+
+                        </div>
+
 
 
 
@@ -559,29 +958,31 @@ $menu = false ;
         skin: "round"
     });
 
-    $('.op-filter').click(function() {
+    $('.op-filter').click(function () {
         $('.cat-sidebar .widget').slideToggle();
     });
+
 </script>
 
 
 
 
 <script>
-    $('#category').change(function() {
+    $('#category').change(function () {
 
         var cid = $(this).val();
         if (cid) {
             $.ajax({
                 type: "get",
                 url: " /getSub/" + cid,
-                success: function(res) {
+                success: function (res) {
                     if (res) {
                         $("#subcategory").empty();
                         $("#subsubcategory").empty();
                         $("#subcategory").append('<option>Select State</option>');
-                        $.each(res, function(key, value) {
-                            $("#subcategory").append('<option value="' + key + '">' + value + '</option>');
+                        $.each(res, function (key, value) {
+                            $("#subcategory").append('<option value="' + key + '">' +
+                                value + '</option>');
                         });
 
 
@@ -593,18 +994,19 @@ $menu = false ;
             });
         }
     });
-    $('#subcategory').change(function() {
+    $('#subcategory').change(function () {
         var sid = $(this).val();
         if (sid) {
             $.ajax({
                 type: "get",
                 url: "/getSubSub/" + sid,
-                success: function(res) {
+                success: function (res) {
                     if (res) {
                         $("#subsubcategory").empty();
                         $("#subsubcategory").append('<option>Select City</option>');
-                        $.each(res, function(key, value) {
-                            $("#subsubcategory").append('<option value="' + key + '">' + value + '</option>');
+                        $.each(res, function (key, value) {
+                            $("#subsubcategory").append('<option value="' + key + '">' +
+                                value + '</option>');
                         });
 
 
@@ -617,6 +1019,7 @@ $menu = false ;
             });
         }
     });
+
 </script>
 
 
@@ -638,7 +1041,7 @@ $menu = false ;
                 user_id: user_id
             },
 
-            success: function(result) {
+            success: function (result) {
 
 
                 if (result.class) {
@@ -683,6 +1086,7 @@ $menu = false ;
         });
 
     }
+
 </script>
 
 
@@ -696,7 +1100,7 @@ $menu = false ;
         skin: "round"
     });
 
-    $('.op-filter').click(function() {
+    $('.op-filter').click(function () {
         $('.cat-sidebar .widget').slideToggle();
     });
 
@@ -722,7 +1126,7 @@ $menu = false ;
                 _token: token
             },
 
-            success: function(result) {
+            success: function (result) {
 
                 if (result.class) {
                     $("#followtoggle_" + follower_id).toggleClass(result.class);
@@ -771,6 +1175,7 @@ $menu = false ;
         });
 
     }
+
 </script>
 
 @endpush

@@ -240,10 +240,13 @@
         margin: 30px auto;
     }
     .service-wrap,
-    .reqs-wrap {
+    .reqs-wrap,
+    .sign-wrap {
         padding: 45px 0;
     }
-
+    .box-filter {
+        text-align: center;
+    }
 
 
 
