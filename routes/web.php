@@ -226,4 +226,4 @@ Route::post('/store/branch', 'web\BranchController@store')->name('store_branch')
 
 
 //////////////// Categories /////////////////////////
-Route::post('/categories', 'web\CategoriesController@index')->name('index');
+Route::get('/categories', 'web\CategoriesController@index')->name('index');
