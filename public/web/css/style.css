@@ -6449,7 +6449,7 @@ textarea {
     font-size: 18px;
     margin-bottom: 13px;
     color: #252525;
-    font-weight: 700;
+    font-weight: 400;
     display: block;
     transition: all .3s ease-in;
     text-transform: capitalize;
@@ -6474,7 +6474,7 @@ textarea {
     display: block;
     color: #252525;
     padding: 2px 0;
-    font-size: 16px;
+    font-size: 15px;
     transition: all .3s ease-in;
 }
 .categories-block ul li .inner li{
@@ -6482,7 +6482,7 @@ textarea {
 }
 .categories-block ul li .inner a{
     color: #666;
-    font-size: 15px;
+    font-size: 14px;
     transition: all .3s ease-in;
 }
 .categories-block  ul li a.category-toggle:before {
@@ -6496,4 +6496,20 @@ textarea {
 }
 .categories-block ul li a:hover{
     color: #139feb;
+}
+@media(max-width:991px) {
+    .categories-pagee .categories-block-content{
+        width: 33.3%;
+    }
+}
+@media(max-width:768px) {
+    .categories-pagee .categories-block-content{
+        width: 50%;
+    }
+}
+
+@media(max-width:500px) {
+    .categories-pagee .categories-block-content{
+        width: 100%;
+    }
 }
