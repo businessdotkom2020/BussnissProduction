@@ -38,6 +38,12 @@ class CategoriesController extends Controller
         $keyword = '';
         return view('categories.show', compact('products', 'suppliers', 'category', 'keyword'));
     }
+
+    public function index()
+    {
+
+        return view('categories.index');
+    }
     public function search(Request $request)
     {
 
@@ -46,7 +52,7 @@ class CategoriesController extends Controller
         $sortdate = request()->sortdate == "latest" ? "DESC" : "ASC";
 
         $products = Product::orderBy('price', $sortprice)->orderBy('created_at', $sortdate)->paginate(16);
- 
+
         if ($request->category_ids) {
             $categories_ids = Category::whereIn('parent_id', $request->category_ids)->get()->pluck('id');
             $sub_categories_ids =  Category::whereIn('parent_id', $categories_ids)->get()->pluck('id');
@@ -109,7 +115,7 @@ class CategoriesController extends Controller
         // })->orwhereHas('categories', function ($query) use ($category_ids) {
         //     $query->whereIn('id', $category_ids);
         // })->get();
-        $suppliers = User::where([['name', 'like', '%' . $q . '%'],['type','supplier']])->get();
+        $suppliers = User::where([['name', 'like', '%' . $q . '%'], ['type', 'supplier']])->get();
         $category = null;
         $keyword = request()->keyword;
         return view('categories.show', compact('products', 'suppliers', 'category', 'keyword'));

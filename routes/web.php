@@ -223,3 +223,7 @@ Route::post('/update/password', 'web\SuppliersController@update_password')->name
 Route::get('/add/branch', 'web\BranchController@create_branch')->name('create_branch');
 Route::get('/branch/{branch_id}/edit', 'web\BranchController@edit_branch')->name('edit_branch');
 Route::post('/store/branch', 'web\BranchController@store')->name('store_branch');
+
+
+//////////////// Categories /////////////////////////
+Route::post('/categories', 'web\CategoriesController@index')->name('index');
