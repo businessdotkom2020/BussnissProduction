@@ -6514,3 +6514,8 @@ textarea {
         width: 100%;
     }
 }
+
+/*****************************************************/
+.service-wrap .tab-content .col-md-3{
+    padding: 0 10px;
+}
