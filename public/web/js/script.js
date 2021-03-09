@@ -464,3 +464,30 @@ $(document).ready(function () {
     phoneNoselect ();
     nice_Select ();
 });
+
+
+/****************************************************/
+// category page
+
+$('.category-toggle').click(function (e) {
+    e.preventDefault();
+
+    var $this = $(this);
+
+    if ($this.next().hasClass('show')) {
+        $this.next().removeClass('show');
+        $this.next().slideUp(350);
+        $(this).toggleClass("active").siblings().removeClass("active");
+    } else {
+        $this.parent().parent().find('li .inner').removeClass('show');
+        $this.parent().parent().find('li .inner').slideUp(350);
+        $this.next().slideToggle();
+        $this.next().toggleClass('show');
+        $(this).toggleClass("active").siblings().removeClass("active");
+
+    }
+
+    // $(".category-toggle").click(function(){
+    //     $(this).toggleClass("active").siblings().removeClass("active");
+    // })
+});
