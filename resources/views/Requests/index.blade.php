@@ -155,29 +155,39 @@ $menu = false ;
                 <div class="col-md-3 col-sm-4 col-xs-6">
                     <div class="request-grid">
                         <div class="request-image">
-                            <a href="#" class="image">
+                            <a href="{{url('request/'.$request->id)}}" class="image">
                                 <img class="pic-1" src="https://i.imgur.com/gY5s6z0.jpg">
                                 <img class="pic-2" src="https://i.imgur.com/CEQeTSE.jpg">
                             </a>
 
                             <ul class="social">
-                                <li><a href="#" data-tip="Quick View" data-toggle="modal"
+                                <li><a href="{{url('request/'.$request->id)}}" data-tip="Quick View" data-toggle="modal"
                                         data-target="#contact_{{$request->user_id}}" target="_blank"><i
                                             class="fa fa-eye"></i></a></li>
                             </ul>
                         </div>
                         <div class="request-content">
-                            <h3 class="title"><a href="#">Men's Shirt</a></h3>
+                            <h3 class="title"><a href="{{url('request/'.$request->id)}}">{{$request->name}}</a></h3>
                             <div class="request-de">
-                                <a class="add-to-cart" href="#" data-tip="add-to-cart" data-toggle="modal"
-                                    data-target="#contact_{{$request->user_id}}" target="_blank">تواصل مع المعلن
+                                <a class="add-to-cart" href="{{url('request/'.$request->id)}}" data-tip="add-to-cart"
+                                    data-toggle="modal" data-target="#contact_{{$request->user_id}}" target="_blank">
+                                    @lang('general.contact_supplier')
                                 </a>
                                 <ul class="rating list-inline">
-                                    <li><i class="fa fa-star"></i></li>
-                                    <li><i class="fa fa-star"></i></li>
-                                    <li><i class="fa fa-star"></i></li>
-                                    <li><i class="fa fa-star disable"></i></li>
-                                    <li><i class="fa fa-star disable"></i></li>
+                                    @php $rating = $request->average_rating ; @endphp
+                                    @foreach(range(1,5) as $i)
+                                    @if($rating >0)
+                                    @if($rating > 0.5)
+                                    <i class="fa fa-star active"></i>
+                                    @elseif($rating < 0.5 && $rating> 0)
+                                        <i class="fas fa-star-half"></i>
+                                        @endif
+                                        @else
+                                        <i class="fa fa-star"></i>
+                                        @endif
+                                        @php $rating--; @endphp
+
+                                        @endforeach
                                 </ul>
                             </div>
 
