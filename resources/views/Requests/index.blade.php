@@ -234,7 +234,97 @@ $menu = false ;
 
 
 
+            @foreach($requests as $request)
 
+            <div class="modal fade" id="contact_{{$request->user->id}}">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <i class="fa fa-close"></i>
+                        </button>
+                        <div class="modal-body">
+
+                            <div class="supp-card">
+                                <h3>@lang('general.contact_supplier')</h3>
+                                <div class="c-img">
+                                    <img src="{{$request->user->store_image ? url('storage/'.$request->user->avatar) : asset('/web/images/marks/1.png')}}"
+                                        alt="">
+                                </div>
+                                <h4>{{$request->user->name}}</h4>
+                                <p>
+                                    @php $rating = $request->user->average_rating ; @endphp
+                                    @foreach(range(1,5) as $i)
+                                    @if($rating >0)
+                                    @if($rating > 0.5)
+                                    <i class="fa fa-star active"></i>
+                                    @elseif($rating < 0.5 && $rating> 0)
+                                        <i class="fas fa-star-half"></i>
+                                        @endif
+                                        @else
+                                        <i class="fa fa-star"></i>
+                                        @endif
+                                        @php $rating--; @endphp
+
+                                        @endforeach
+                                </p>
+                                <div class="c-info">
+                                    <a href="tel:{{$request->user->mobile}}" class="btn">
+                                        <i class="fa fa-phone"></i>
+                                        {{$request->user->mobile}}
+                                    </a>
+                                    <a href="mailto:{{$request->user->email}}" class="btn">
+                                        <i class="fa fa-envelope"></i>
+                                        {{$request->user->email}}
+                                    </a>
+                                </div>
+                                <div class="c-social">
+                                    <!--<span>social:</span>-->
+                                    @if($request->user->facebook_url)
+                                    <a href="{{$request->user->facebook_url}}">
+                                        <i class="fa fa-facebook"></i>
+                                    </a>
+
+                                    @endif
+
+                                    @if($request->user->whatsapp_mobile)
+
+                                    <a href=" https://api.whatsapp.com/send?phone={{$request->user->whatsapp_mobile}}">
+                                        <i class="fa fa-whatsapp"></i>
+                                    </a>
+
+                                    @endif
+
+                                    @if($request->user->linkedin_url)
+
+                                    <a href="{{$request->user->linkedin_url}}">
+                                        <i class="fa fa-linkedin"></i>
+                                    </a>
+                                    @endif
+
+                                    @if($request->user->instagram_url)
+
+                                    <a href="{{$request->user->instagram_url}}">
+                                        <i class="fa fa-instagram"></i>
+                                    </a>
+
+                                    @endif
+
+                                    @if($request->user->youtube_url)
+
+                                    <a href="{{$request->user->youtube_url}}">
+                                        <i class="fa fa-youtube-play"></i>
+                                    </a>
+
+                                    @endif
+
+                                </div>
+                            </div>
+                        </div>
+                    </div><!-- /.modal-content -->
+                </div><!-- /.modal-dialog -->
+            </div><!-- /.modal -->
+
+            @endforeach
 
 
 
