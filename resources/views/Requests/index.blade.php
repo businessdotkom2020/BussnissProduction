@@ -156,8 +156,8 @@ $menu = false ;
                     <div class="request-grid">
                         <div class="request-image">
                             <a href="{{url('request/'.$request->id)}}" class="image">
-                                <img class="pic-1" src="{{url('storage/'.(json_decode($product->images))[0])}}">
-                                <img class="pic-2" src="{{url('storage/'.(json_decode($product->images))[1])}}">
+                                <img class="pic-1" src="{{url('storage/'.(json_decode($request->images))[0])}}">
+                                <img class="pic-2" src="{{url('storage/'.(json_decode($request->images))[1])}}">
                             </a>
 
                             <ul class="social">
