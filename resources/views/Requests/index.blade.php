@@ -169,8 +169,8 @@ $menu = false ;
                         <div class="request-content">
                             <h3 class="title"><a href="{{url('request/'.$request->id)}}">{{$request->name}}</a></h3>
                             <div class="request-de">
-                                <a class="add-to-cart" href="{{url('request/'.$request->id)}}" data-tip="add-to-cart"
-                                    data-toggle="modal" data-target="#contact_{{$request->user_id}}" target="_blank">
+                                <a class="add-to-cart" href="#" data-tip="add-to-cart" data-toggle="modal"
+                                    data-target="#contact_{{$request->user_id}}" target="_blank">
                                     @lang('general.contact_supplier')
                                 </a>
                                 <ul class="rating list-inline">
