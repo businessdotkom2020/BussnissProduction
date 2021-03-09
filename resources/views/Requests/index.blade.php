@@ -6,22 +6,22 @@ $menu = false ;
 @section('content')
 
 <div class="overlay-s"></div>
-    <div class="jumpo col-xs-12" style="background-image: url({{ asset('web/images/cover.jpg')}})">
-        <div class="container">
-            <h3>Requests</h3>
-            <ul>
-                <li>
-                    <a href="{{url('/')}}">@lang('general.home')</a>
-                </li>
-                <li>Requests</li>
-            </ul>
+<div class="jumpo col-xs-12" style="background-image: url({{ asset('web/images/cover.jpg')}})">
+    <div class="container">
+        <h3>Requests</h3>
+        <ul>
+            <li>
+                <a href="{{url('/')}}">@lang('general.home')</a>
+            </li>
+            <li>Requests</li>
+        </ul>
     </div>
 </div>
 <main class="main-content col-xs-12">
     <div class="reqs-wrap col-xs-12">
         <div class="container">
 
-<!--
+            <!--
             <div class="g-body col-xs-12">
                 @foreach($requests as $request)
 
@@ -149,302 +149,77 @@ $menu = false ;
 
 
             <div class="g-body col-xs-12">
-            <div class="col-md-3 col-sm-4 col-xs-6">
-                <div class="request-grid">
-                    <div class="request-image">
-                        <a href="#" class="image">
-                            <img class="pic-1" src="https://i.imgur.com/gY5s6z0.jpg">
-                            <img class="pic-2" src="https://i.imgur.com/CEQeTSE.jpg">
-                        </a>
 
-                        <ul class="social">
-                            <li><a href="#" data-tip="Quick View" data-toggle="modal"
-                                    data-target="#contact_{{$request->user_id}}" target="_blank"><i
-                                        class="fa fa-eye"></i></a></li>
-                        </ul>
-                    </div>
-                    <div class="request-content">
-                        <h3 class="title"><a href="#">Men's Shirt</a></h3>
-                        <div class="request-de">
-                            <a class="add-to-cart" href="#" data-tip="add-to-cart" data-toggle="modal"
-                                data-target="#contact_{{$request->user_id}}" target="_blank">تواصل مع المعلن
+                @foreach($requests as $request)
+
+                <div class="col-md-3 col-sm-4 col-xs-6">
+                    <div class="request-grid">
+                        <div class="request-image">
+                            <a href="#" class="image">
+                                <img class="pic-1" src="https://i.imgur.com/gY5s6z0.jpg">
+                                <img class="pic-2" src="https://i.imgur.com/CEQeTSE.jpg">
                             </a>
-                            <ul class="rating list-inline">
-                                <li><i class="fa fa-star"></i></li>
-                                <li><i class="fa fa-star"></i></li>
-                                <li><i class="fa fa-star"></i></li>
-                                <li><i class="fa fa-star disable"></i></li>
-                                <li><i class="fa fa-star disable"></i></li>
+
+                            <ul class="social">
+                                <li><a href="#" data-tip="Quick View" data-toggle="modal"
+                                        data-target="#contact_{{$request->user_id}}" target="_blank"><i
+                                            class="fa fa-eye"></i></a></li>
                             </ul>
                         </div>
+                        <div class="request-content">
+                            <h3 class="title"><a href="#">Men's Shirt</a></h3>
+                            <div class="request-de">
+                                <a class="add-to-cart" href="#" data-tip="add-to-cart" data-toggle="modal"
+                                    data-target="#contact_{{$request->user_id}}" target="_blank">تواصل مع المعلن
+                                </a>
+                                <ul class="rating list-inline">
+                                    <li><i class="fa fa-star"></i></li>
+                                    <li><i class="fa fa-star"></i></li>
+                                    <li><i class="fa fa-star"></i></li>
+                                    <li><i class="fa fa-star disable"></i></li>
+                                    <li><i class="fa fa-star disable"></i></li>
+                                </ul>
+                            </div>
 
+                        </div>
                     </div>
+
                 </div>
+                @endforeach
 
-            </div>
-            <div class="col-md-3 col-sm-4 col-xs-6">
-                <div class="request-grid">
-                    <div class="request-image">
-                        <a href="#" class="image">
-                            <img class="pic-1" src="https://i.imgur.com/gY5s6z0.jpg">
-                            <img class="pic-2" src="https://i.imgur.com/CEQeTSE.jpg">
-                        </a>
 
-                        <ul class="social">
-                            <li><a href="#" data-tip="Quick View" data-toggle="modal"
-                                    data-target="#contact_{{$request->user_id}}" target="_blank"><i
-                                        class="fa fa-eye"></i></a></li>
+
+
+
+
+                <div class="clearfix"></div>
+                <div class="col-md-12">
+                    <div class="i-pagination text-center">
+                        <ul>
+                            <li>
+                                <a href="#">
+                                    <i class="fa fa-angle-left"></i>
+                                </a>
+                            </li>
+                            <li class="current">
+                                1
+                            </li>
+                            <li>
+                                <a href="#">2</a>
+                            </li>
+                            <li>
+                                <a href="#">3</a>
+                            </li>
+
+                            <li>
+                                <a href="#">
+                                    <i class="fa fa-angle-right"></i>
+                                </a>
+                            </li>
                         </ul>
                     </div>
-                    <div class="request-content">
-                        <h3 class="title"><a href="#">Men's Shirt</a></h3>
-                        <div class="request-de">
-                            <a class="add-to-cart" href="#" data-tip="add-to-cart" data-toggle="modal"
-                                data-target="#contact_{{$request->user_id}}" target="_blank">تواصل مع المعلن
-                            </a>
-                            <ul class="rating list-inline">
-                                <li><i class="fa fa-star"></i></li>
-                                <li><i class="fa fa-star"></i></li>
-                                <li><i class="fa fa-star"></i></li>
-                                <li><i class="fa fa-star disable"></i></li>
-                                <li><i class="fa fa-star disable"></i></li>
-                            </ul>
-                        </div>
-
-                    </div>
                 </div>
-
             </div>
-            <div class="col-md-3 col-sm-4 col-xs-6">
-                <div class="request-grid">
-                    <div class="request-image">
-                        <a href="#" class="image">
-                            <img class="pic-1" src="https://i.imgur.com/gY5s6z0.jpg">
-                            <img class="pic-2" src="https://i.imgur.com/CEQeTSE.jpg">
-                        </a>
-
-                        <ul class="social">
-                            <li><a href="#" data-tip="Quick View" data-toggle="modal"
-                                    data-target="#contact_{{$request->user_id}}" target="_blank"><i
-                                        class="fa fa-eye"></i></a></li>
-                        </ul>
-                    </div>
-                    <div class="request-content">
-                        <h3 class="title"><a href="#">Men's Shirt</a></h3>
-                        <div class="request-de">
-                            <a class="add-to-cart" href="#" data-tip="add-to-cart" data-toggle="modal"
-                                data-target="#contact_{{$request->user_id}}" target="_blank">تواصل مع المعلن
-                            </a>
-                            <ul class="rating list-inline">
-                                <li><i class="fa fa-star"></i></li>
-                                <li><i class="fa fa-star"></i></li>
-                                <li><i class="fa fa-star"></i></li>
-                                <li><i class="fa fa-star disable"></i></li>
-                                <li><i class="fa fa-star disable"></i></li>
-                            </ul>
-                        </div>
-
-                    </div>
-                </div>
-
-            </div>
-            <div class="col-md-3 col-sm-4 col-xs-6">
-                <div class="request-grid">
-                    <div class="request-image">
-                        <a href="#" class="image">
-                            <img class="pic-1" src="https://i.imgur.com/gY5s6z0.jpg">
-                            <img class="pic-2" src="https://i.imgur.com/CEQeTSE.jpg">
-                        </a>
-
-                        <ul class="social">
-                            <li><a href="#" data-tip="Quick View" data-toggle="modal"
-                                    data-target="#contact_{{$request->user_id}}" target="_blank"><i
-                                        class="fa fa-eye"></i></a></li>
-                        </ul>
-                    </div>
-                    <div class="request-content">
-                        <h3 class="title"><a href="#">Men's Shirt</a></h3>
-                        <div class="request-de">
-                            <a class="add-to-cart" href="#" data-tip="add-to-cart" data-toggle="modal"
-                                data-target="#contact_{{$request->user_id}}" target="_blank">تواصل مع المعلن
-                            </a>
-                            <ul class="rating list-inline">
-                                <li><i class="fa fa-star"></i></li>
-                                <li><i class="fa fa-star"></i></li>
-                                <li><i class="fa fa-star"></i></li>
-                                <li><i class="fa fa-star disable"></i></li>
-                                <li><i class="fa fa-star disable"></i></li>
-                            </ul>
-                        </div>
-
-                    </div>
-                </div>
-
-            </div>
-            <div class="col-md-3 col-sm-4 col-xs-6">
-                <div class="request-grid">
-                    <div class="request-image">
-                        <a href="#" class="image">
-                            <img class="pic-1" src="https://i.imgur.com/gY5s6z0.jpg">
-                            <img class="pic-2" src="https://i.imgur.com/CEQeTSE.jpg">
-                        </a>
-
-                        <ul class="social">
-                            <li><a href="#" data-tip="Quick View" data-toggle="modal"
-                                    data-target="#contact_{{$request->user_id}}" target="_blank"><i
-                                        class="fa fa-eye"></i></a></li>
-                        </ul>
-                    </div>
-                    <div class="request-content">
-                        <h3 class="title"><a href="#">Men's Shirt</a></h3>
-                        <div class="request-de">
-                            <a class="add-to-cart" href="#" data-tip="add-to-cart" data-toggle="modal"
-                                data-target="#contact_{{$request->user_id}}" target="_blank">تواصل مع المعلن
-                            </a>
-                            <ul class="rating list-inline">
-                                <li><i class="fa fa-star"></i></li>
-                                <li><i class="fa fa-star"></i></li>
-                                <li><i class="fa fa-star"></i></li>
-                                <li><i class="fa fa-star disable"></i></li>
-                                <li><i class="fa fa-star disable"></i></li>
-                            </ul>
-                        </div>
-
-                    </div>
-                </div>
-
-            </div>
-            <div class="col-md-3 col-sm-4 col-xs-6">
-                <div class="request-grid">
-                    <div class="request-image">
-                        <a href="#" class="image">
-                            <img class="pic-1" src="https://i.imgur.com/gY5s6z0.jpg">
-                            <img class="pic-2" src="https://i.imgur.com/CEQeTSE.jpg">
-                        </a>
-
-                        <ul class="social">
-                            <li><a href="#" data-tip="Quick View" data-toggle="modal"
-                                    data-target="#contact_{{$request->user_id}}" target="_blank"><i
-                                        class="fa fa-eye"></i></a></li>
-                        </ul>
-                    </div>
-                    <div class="request-content">
-                        <h3 class="title"><a href="#">Men's Shirt</a></h3>
-                        <div class="request-de">
-                            <a class="add-to-cart" href="#" data-tip="add-to-cart" data-toggle="modal"
-                                data-target="#contact_{{$request->user_id}}" target="_blank">تواصل مع المعلن
-                            </a>
-                            <ul class="rating list-inline">
-                                <li><i class="fa fa-star"></i></li>
-                                <li><i class="fa fa-star"></i></li>
-                                <li><i class="fa fa-star"></i></li>
-                                <li><i class="fa fa-star disable"></i></li>
-                                <li><i class="fa fa-star disable"></i></li>
-                            </ul>
-                        </div>
-
-                    </div>
-                </div>
-
-            </div>
-            <div class="col-md-3 col-sm-4 col-xs-6">
-                <div class="request-grid">
-                    <div class="request-image">
-                        <a href="#" class="image">
-                            <img class="pic-1" src="https://i.imgur.com/gY5s6z0.jpg">
-                            <img class="pic-2" src="https://i.imgur.com/CEQeTSE.jpg">
-                        </a>
-
-                        <ul class="social">
-                            <li><a href="#" data-tip="Quick View" data-toggle="modal"
-                                    data-target="#contact_{{$request->user_id}}" target="_blank"><i
-                                        class="fa fa-eye"></i></a></li>
-                        </ul>
-                    </div>
-                    <div class="request-content">
-                        <h3 class="title"><a href="#">Men's Shirt</a></h3>
-                        <div class="request-de">
-                            <a class="add-to-cart" href="#" data-tip="add-to-cart" data-toggle="modal"
-                                data-target="#contact_{{$request->user_id}}" target="_blank">تواصل مع المعلن
-                            </a>
-                            <ul class="rating list-inline">
-                                <li><i class="fa fa-star"></i></li>
-                                <li><i class="fa fa-star"></i></li>
-                                <li><i class="fa fa-star"></i></li>
-                                <li><i class="fa fa-star disable"></i></li>
-                                <li><i class="fa fa-star disable"></i></li>
-                            </ul>
-                        </div>
-
-                    </div>
-                </div>
-
-            </div>
-            <div class="col-md-3 col-sm-4 col-xs-6">
-                <div class="request-grid">
-                    <div class="request-image">
-                        <a href="#" class="image">
-                            <img class="pic-1" src="https://i.imgur.com/gY5s6z0.jpg">
-                            <img class="pic-2" src="https://i.imgur.com/CEQeTSE.jpg">
-                        </a>
-
-                        <ul class="social">
-                            <li><a href="#" data-tip="Quick View" data-toggle="modal"
-                                    data-target="#contact_{{$request->user_id}}" target="_blank"><i
-                                        class="fa fa-eye"></i></a></li>
-                        </ul>
-                    </div>
-                    <div class="request-content">
-                        <h3 class="title"><a href="#">Men's Shirt</a></h3>
-                        <div class="request-de">
-                            <a class="add-to-cart" href="#" data-tip="add-to-cart" data-toggle="modal"
-                                data-target="#contact_{{$request->user_id}}" target="_blank">تواصل مع المعلن
-                            </a>
-                            <ul class="rating list-inline">
-                                <li><i class="fa fa-star"></i></li>
-                                <li><i class="fa fa-star"></i></li>
-                                <li><i class="fa fa-star"></i></li>
-                                <li><i class="fa fa-star disable"></i></li>
-                                <li><i class="fa fa-star disable"></i></li>
-                            </ul>
-                        </div>
-
-                    </div>
-                </div>
-
-            </div>
-
-
-
-
-            <div class="clearfix"></div>
-            <div class="col-md-12">
-                <div class="i-pagination text-center">
-                    <ul>
-                    <li>
-                        <a href="#">
-                        <i class="fa fa-angle-left"></i>
-                        </a>
-                    </li>
-                    <li class="current">
-                        1
-                    </li>
-                    <li>
-                        <a href="#">2</a>
-                    </li>
-                    <li>
-                        <a href="#">3</a>
-                    </li>
-
-                    <li>
-                        <a href="#">
-                        <i class="fa fa-angle-right"></i>
-                        </a>
-                    </li>
-                    </ul>
-                </div>
-                </div>
-        </div>
 
 
 
