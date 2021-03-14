@@ -2961,7 +2961,7 @@ button.close {
 }
 
 label.star {
-    font-size: 35px;
+    font-size: 22px;
     margin: 0 2px
 }
 
@@ -6518,4 +6518,12 @@ textarea {
 /*****************************************************/
 .service-wrap .tab-content .col-md-3{
     padding: 0 10px;
+}
+
+.extra .btn:focus, 
+.extra .btn:hover,
+.rate-stars .btn:focus, 
+.rate-stars .btn:hover{
+    color: #fff;
+    background-color: #139feb !important;
 }

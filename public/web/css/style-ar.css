@@ -1018,3 +1018,9 @@ a, li, span, p, button{
 .multi_step_form #msform fieldset h3{
     font-family: 'Tajawal';
 }
+.reqs-wrap .block .inner .time {
+    float: right;
+}
+.rate-stars .stars{
+    direction: ltr;
+}
