@@ -6547,7 +6547,7 @@ textarea {
 .req-form .btn:focus,
 .req-form .btn:hover,
 .supp-btns .btn:focus,
-.supp-btns .btn:hover
+.supp-btns .btn:hover,
 .supp-btns a:hover span{
     color: #fff;
     background-color: #139feb !important;
