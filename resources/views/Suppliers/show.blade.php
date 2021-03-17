@@ -53,7 +53,7 @@
     @if(\Auth::user()->canFollow($supplier) &&\Auth::user()->id != $supplier->id)
                         <a href="javascript:void(0)" id="followtoggle_{{$supplier->id}}" onclick="followtoggle({{$supplier->id }})" class="btn ">
                         <i id="followicon_{{$supplier->id}}" class="fa fa-plus"></i>
-                                    <span  style="color:white" >
+                                    <span  style="color:" >
                         Follow
 
                         </span>
