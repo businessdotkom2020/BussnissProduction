@@ -718,7 +718,7 @@ a, li, span, p, button{
 }
 
 .ribbon span {
-    left: -21px;
+    left: 21px;
     right: auto;
     transform: rotate(-45deg)
 }

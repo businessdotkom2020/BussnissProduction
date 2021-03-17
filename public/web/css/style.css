@@ -1242,19 +1242,26 @@ footer.main-footer.col-xs-12 {
     color: #fff;
     text-transform: uppercase;
     text-align: center;
-    line-height: 20px;
-    height: 20px;
-    transform: rotate(45deg);
-    -webkit-transform: rotate(45deg);
-    width: 100px;
+    /* line-height: 20px;
+    height: 20px; */
+    transform: rotate(0deg) !important;
+    -webkit-transform: rotate(0deg) !important;
+    /* width: 100px; */
     display: block;
     background-color: #139feb;
     box-shadow: 0 3px 10px -5px rgba(0, 0, 0, .12);
     position: absolute;
     top: 19px;
-    right: -21px
+    /* right: -21px; */
+    right: 20px;
+    width: 55px;
+    height: 55px;
+    line-height: 55px;
+    border-radius: 100%;
+    text-align: center;
 }
 
+/*
 .ribbon span::before {
     content: "";
     position: absolute;
@@ -1264,7 +1271,8 @@ footer.main-footer.col-xs-12 {
     border-left: 3px solid #139feb;
     border-right: 3px solid transparent;
     border-bottom: 3px solid transparent;
-    border-top: 3px solid #139feb
+    border-top: 3px solid #139feb;
+
 }
 
 .ribbon span::after {
@@ -1278,7 +1286,7 @@ footer.main-footer.col-xs-12 {
     border-bottom: 3px solid transparent;
     border-top: 3px solid #139feb
 }
-
+*/
 .b-product .inner:hover .i-img .sec-img {
     opacity: 1;
     transition: all 1s
@@ -1296,6 +1304,7 @@ footer.main-footer.col-xs-12 {
     position: absolute
 }
 
+/*
 .offer-badge:before {
     content: "";
     border-left: 80px solid red;
@@ -1307,7 +1316,7 @@ footer.main-footer.col-xs-12 {
     border-top: 0;
     z-index: -1
 }
-
+*/
 .offer-badge span {
     color: #fff;
     font-family: pop-semibold;
@@ -1316,7 +1325,13 @@ footer.main-footer.col-xs-12 {
     display: inline-block;
     position: relative;
     top: 13px;
-    left: -8px
+    left: -8px;
+    background: red;
+    width: 55px;
+    height: 55px;
+    line-height: 55px;
+    border-radius: 100%;
+    text-align: center;
 }
 
 .fav-pro {
@@ -6547,10 +6562,13 @@ textarea {
 .req-form .btn:focus,
 .req-form .btn:hover,
 .supp-btns .btn:focus,
-.supp-btns .btn:hover{
+.supp-btns .btn:hover,
+.controls .btn:focus,
+.controls .btn:hover {
     color: #fff;
     background-color: #139feb !important;
 }
-.supp-btns a:hover span{
+
+.supp-btns a:hover span {
     color: #fff;
 }
