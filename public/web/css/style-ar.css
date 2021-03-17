@@ -741,14 +741,14 @@ a, li, span, p, button{
 }
 
 .offer-badge span {
-    transform: rotate(45deg);
+    /* transform: rotate(45deg); */
     left: auto;
     right: -8px
 }
 
 .fav-pro {
-    left: a;
-    right: 10px;
+    left: auto;
+    right: 20px;
 }
 
 .pagination-i li:first-child,

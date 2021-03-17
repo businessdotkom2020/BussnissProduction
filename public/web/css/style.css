@@ -1321,7 +1321,7 @@ footer.main-footer.col-xs-12 {
     color: #fff;
     font-family: pop-semibold;
     font-size: 16px;
-    transform: rotate(-45deg);
+    /* transform: rotate(-45deg); */
     display: inline-block;
     position: relative;
     top: 13px;
@@ -1336,8 +1336,8 @@ footer.main-footer.col-xs-12 {
 
 .fav-pro {
     position: absolute;
-    left: 10px;
-    top: 10px;
+    left: 20px;
+    top: 0px;
     width: 35px;
     height: 35px;
     line-height: 35px;
