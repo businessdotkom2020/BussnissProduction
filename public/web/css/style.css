@@ -2573,7 +2573,10 @@ footer.main-footer.col-xs-12 {
     background-size: cover;
     background-position: center
 }
-
+.all .slider-two .item a{
+    display: block;
+    height: 100%;
+}
 .all .slider-two .item.active {
     border: solid 3px #73cddf
 }
