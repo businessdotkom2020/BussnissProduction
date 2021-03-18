@@ -7,7 +7,6 @@ $menu = false ;
 @section('content')
 
 
-
 <div class="overlay-s"></div>
 <div class="jumpo col-xs-12" style="background-image: url({{ asset('/web/images/cover.jpg')}})">
     <div class="container">
@@ -53,7 +52,10 @@ $menu = false ;
                                 @foreach(json_decode($product->images) as $img)
 
                                 <div class="item {{$loop->first ? 'active' : '' }}">
-                                    <img src="{{ url('storage/'.$img)}}" alt="">
+
+                                    <a href="{{ url('storage/'.$img)}}" data-fancybox="images" data-caption="">
+                                        <img src="{{ url('storage/'.$img)}}" alt="">
+                                    </a>
                                 </div>
                                 @endforeach
 
@@ -336,7 +338,8 @@ $menu = false ;
                                 </div>
                             </div>
                         </div>
-                        @endforeach
+                        <<<<<<< HEAD=======>>>>>>> 71f98d3a0fdf6e3cbfb2150076db5c83e4c4ca00
+                            @endforeach
 
 
 
@@ -495,66 +498,72 @@ $menu = false ;
 @push('scripts')
 
 <script>
-    function favtoggle(product_id, user_id){
+    function favtoggle(product_id, user_id) {
 
-             var token = '{{ Session::token() }}';
-
-
-
-         $.ajax({
+        var token = '{{ Session::token() }}';
 
 
 
-            type : 'POST',
+        $.ajax({
 
-            url  : '{!!URL::to('product_favorite')!!}',
 
-            data : { product_id: product_id,_token: token ,user_id:user_id },
 
-            success : function(result){
+            type: 'POST',
+
+            url: '{!!URL::to('
+            product_favorite ')!!}',
+
+            data: {
+                product_id: product_id,
+                _token: token,
+                user_id: user_id
+            },
+
+            success: function (result) {
 
                 console.log(result);
 
-  $(".fav-"+product_id).toggleClass("fav-active");
+                $(".fav-" + product_id).toggleClass("fav-active");
 
 
                 const Toast = Swal.mixin({
 
-  toast: true,
+                    toast: true,
 
-  position: 'top-end',
+                    position: 'top-end',
 
-  showConfirmButton: false,
+                    showConfirmButton: false,
 
-  timer: 6000,
+                    timer: 6000,
 
-  timerProgressBar: true,
+                    timerProgressBar: true,
 
-  onOpen: (toast) => {
+                    onOpen: (toast) => {
 
-    toast.addEventListener('mouseenter', Swal.stopTimer)
+                        toast.addEventListener('mouseenter', Swal.stopTimer)
 
-    toast.addEventListener('mouseleave', Swal.resumeTimer)
+                        toast.addEventListener('mouseleave', Swal.resumeTimer)
 
-  }
+                    }
 
-})
+                })
 
 
 
-Toast.fire({
+                Toast.fire({
 
-  icon: 'success',
+                    icon: 'success',
 
-  title: result.message
+                    title: result.message
 
-})
+                })
 
             }
 
         });
 
     }
+
 </script>
 
 
