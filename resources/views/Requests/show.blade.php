@@ -9,24 +9,24 @@
     <main class="main-content col-xs-12">
             <div class="reqs-wrap reqs-single col-xs-12">
                 <div class="container">
-            
-            
+
+
                     <div class="g-body col-xs-12">
                         <div class="block col-xs-12">
                             <div class="inner col-xs-12">
                                 <div class="i-top col-xs-12">
                                     <span class="type-badge">{{$req->category->getTranslatedAttribute('name',\App::getLocale())}}</span>
                                     <div class="i-slider owl-carousel owl-theme">
-                                       
+
                                                                                @foreach(json_decode($req->images) as $img)
 
                                         <div class="item">
                                             <img src="{{ url('storage/'.$img)}}" alt="">
                                         </div>
-                               
-                               
+
+
                                      @endforeach
-                                     
+
                                     </div>
                                 </div>
                                 <div class="i-middle col-xs-12">
@@ -50,22 +50,22 @@
                                                             <i class="fa fa-star"></i>
                                                         @endif
                                                         @php $rating--; @endphp
-                                    
+
                                                 @endforeach
-                                            
+
                                             </p>
                                         </div>
                                     </div>
                                 </div>
-                                    
-                                    
+
+
                                     <div class="time">
-                                        <span>{{$req->created_at ? $req->created_at->diffforHumans() : null}}</span>
+                                        <span>{{$req->created_at ? $req->created_at : null}}</span>
                                     </div>
                                 </div>
                                 <div class="i-footer col-xs-12">
                                     <div class="title">
-                                        <a href="{{$req->created_at ? $req->created_at->diffforHumans() : null}}">{{$req->description}}</a>
+                                        <a href="{{$req->created_at ? $req->created_at : null}}">{{$req->description}}</a>
                                     </div>
                                     <div class="extra">
                                         <div class="prod-extra">
@@ -91,7 +91,7 @@
                                 </a>
                             </div>
                             <a class="btn" href="{{url('supplier/'.$req->user_id)}}"  target="_blank">@lang('general.contact_supplier')</a>
-                                        
+
                                     </div>
                                 </div>
                             </div>
@@ -99,9 +99,9 @@
                         <div class="req-form col-md-7 col-xs-12">
                   <form action="{{route('add_product_review',['type' => 'request','id' => $req->id])}}" method="POST">
                                         @csrf
-                                        
+
                                 <div class="form-group">
-                                    
+
                                         <div class="rate-stars" style="text-align: right;">
                                 <div class="stars">
 
@@ -118,7 +118,7 @@
 
 </div>
                             </div>
-                                    
+
                                     <textarea class="form-control" name="comment" placeholder="@lang('general.add_review')"></textarea>
                                     <button type="submit" class="btn">@lang('general.add_review')</button>
                                 </div>
@@ -129,7 +129,7 @@
                                 <h3>comments</h3>
                             </div>
                             <div class="req-body col-xs-12">
-                                
+
                                 @foreach($req->reviews as $review)
                                 <div class="rev-item col-md-7 col-xs-12">
 
@@ -143,12 +143,12 @@
 @endif
 @endauth
                                     <div class="r-data">
-                                      
+
                                         <div>
                                             <a href="{{url('supplier/'.$review->user_id)}}">{{$review->owner->name}}</a>
                                         </div>
-                                        
-                                        
+
+
                                 <div class="cardo">
                                     <div class="c-inner" style="text-align: right;">
                                         <div class="c-data">
@@ -165,20 +165,20 @@
                                                             <i class="fa fa-star"></i>
                                                         @endif
                                                         @php $rating--; @endphp
-                                    
+
                                                 @endforeach
-                                            
+
                                             </p>
                                         </div>
                                     </div>
                                 </div>
-                                        
+
                                         <p>{{$review->comment}}</p>
                                     </div>
                                 </div>
                             @endforeach
-                            
-                               
+
+
                             </div>
                         </div>
                     </div>
