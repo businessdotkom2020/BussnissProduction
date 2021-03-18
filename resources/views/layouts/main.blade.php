@@ -6,11 +6,12 @@
     <meta name="description" content="">
     <meta name="keywords" content="">
     <meta charset="utf-8">
-    <meta name="author" content="Amir Nageh">
+    <meta name="author" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <!-- Css Files -->
-
+    
+    <link rel="stylesheet" href="{{ asset('/web/css/jquery.fancybox.min.css')}}">
     <link rel="stylesheet" href="{{ asset('/web/css/style.css')}}">
     <link rel="stylesheet" href="{{ asset('/web/css/last.css')}}">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.css">
