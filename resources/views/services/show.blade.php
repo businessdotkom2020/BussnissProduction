@@ -7,27 +7,27 @@ $menu = false ;
 
 <div class="overlay-s"></div>
 <div class="jumpo col-xs-12" style="background-image: url({{ asset('web/images/cover.jpg')}})">
-            <div class="container">
-                <h3>services</h3>
-                <ul>
-                    <li>
-                        <a href="{{url('/')}}">@lang('general.home')</a>
-                    </li>
-                    <li>
-                        <a href="#">services</a>
-                    </li>
-                    
-                    <li>single service</li>
-                </ul>
-            </div>
-        </div>
+    <div class="container">
+        <h3>services</h3>
+        <ul>
+            <li>
+                <a href="{{url('/')}}">@lang('general.home')</a>
+            </li>
+            <li>
+                <a href="#">services</a>
+            </li>
+
+            <li>single service</li>
+        </ul>
+    </div>
+</div>
 <main class="main-content col-xs-12">
     <div class="reqs-wrap reqs-single col-xs-12">
         <div class="container">
 
 
             <div class="g-body col-xs-12">
-                <div class="block col-xs-12">
+                <div class="block col-xs-12 col-md-8">
                     <div class="inner col-xs-12">
                         <div class="i-top col-xs-12">
 
@@ -124,39 +124,40 @@ $menu = false ;
                             </div>
                         </div>
                     </div>
-                </div>
-                <div class="req-form col-md-7 col-xs-12">
-                    <form action="{{route('add_product_review',['type' => 'service','id' => $service->id])}}"
-                        method="POST">
-                        @csrf
+                    <div class="req-form col-md-7 col-xs-12">
+                        <form action="{{route('add_product_review',['type' => 'service','id' => $service->id])}}"
+                            method="POST">
+                            @csrf
 
-                        <div class="form-group">
+                            <div class="form-group">
 
-                            <div class="rate-stars" style="text-align: right;">
-                                <div class="stars">
+                                <div class="rate-stars" style="text-align: right;">
+                                    <div class="stars">
 
-                                    <input value="1" class="star star-5" id="star-5" type="radio" required
-                                        name="stars" />
-                                    <label class="star star-5" for="star-5"></label>
-                                    <input value="2" class="star star-4" id="star-4" type="radio" name="stars" />
-                                    <label class="star star-4" for="star-4"></label>
-                                    <input value="3" class="star star-3" id="star-3" type="radio" name="stars" />
-                                    <label class="star star-3" for="star-3"></label>
-                                    <input value="4" class="star star-2" id="star-2" type="radio" name="stars" />
-                                    <label class="star star-2" for="star-2"></label>
-                                    <input value="5" class="star star-1" id="star-1" type="radio" name="stars" />
-                                    <label class="star star-1" for="star-1"></label>
+                                        <input value="1" class="star star-5" id="star-5" type="radio" required
+                                            name="stars" />
+                                        <label class="star star-5" for="star-5"></label>
+                                        <input value="2" class="star star-4" id="star-4" type="radio" name="stars" />
+                                        <label class="star star-4" for="star-4"></label>
+                                        <input value="3" class="star star-3" id="star-3" type="radio" name="stars" />
+                                        <label class="star star-3" for="star-3"></label>
+                                        <input value="4" class="star star-2" id="star-2" type="radio" name="stars" />
+                                        <label class="star star-2" for="star-2"></label>
+                                        <input value="5" class="star star-1" id="star-1" type="radio" name="stars" />
+                                        <label class="star star-1" for="star-1"></label>
 
+                                    </div>
                                 </div>
-                            </div>
 
-                            <textarea class="form-control" name="comment"
-                                placeholder="@lang('general.add_review')"></textarea>
-                            <button type="submit" class="btn">@lang('general.add_review')</button>
-                        </div>
-                    </form>
+                                <textarea class="form-control" name="comment"
+                                    placeholder="@lang('general.add_review')"></textarea>
+                                <button type="submit" class="btn">@lang('general.add_review')</button>
+                            </div>
+                        </form>
+                    </div>
                 </div>
-                <div class="req-comments col-xs-12">
+
+                <div class="req-comments col-xs-12 col-md-4">
                     <div class="req-head col-xs-12">
                         <h3>comments</h3>
                     </div>
@@ -227,60 +228,65 @@ $menu = false ;
 @push('scripts')
 
 <script>
-    function favtoggle(service_id, user_id){
+    function favtoggle(service_id, user_id) {
 
-             var token = '{{ Session::token() }}';
-
-
-
-         $.ajax({
+        var token = '{{ Session::token() }}';
 
 
 
-            type : 'POST',
+        $.ajax({
 
-            url  : '{!!URL::to('service_favorite')!!}',
 
-            data : { service_id: service_id,_token: token ,user_id:user_id },
 
-            success : function(result){
+            type: 'POST',
+
+            url: '{!!URL::to('
+            service_favorite ')!!}',
+
+            data: {
+                service_id: service_id,
+                _token: token,
+                user_id: user_id
+            },
+
+            success: function (result) {
 
                 console.log(result);
 
-  $("#fav-"+service_id).toggleClass("fav-active");
+                $("#fav-" + service_id).toggleClass("fav-active");
 
 
                 const Toast = Swal.mixin({
 
-  toast: true,
+                    toast: true,
 
-  position: 'top-end',
+                    position: 'top-end',
 
-  showConfirmButton: false,
+                    showConfirmButton: false,
 
-  timer: 6000,
+                    timer: 6000,
 
-  timerProgressBar: true,
+                    timerProgressBar: true,
 
-  onOpen: (toast) => {
+                    onOpen: (toast) => {
 
-    toast.addEventListener('mouseenter', Swal.stopTimer)
+                        toast.addEventListener('mouseenter', Swal.stopTimer)
 
-    toast.addEventListener('mouseleave', Swal.resumeTimer)
+                        toast.addEventListener('mouseleave', Swal.resumeTimer)
 
-  }
+                    }
 
-})
+                })
 
 
 
-Toast.fire({
+                Toast.fire({
 
-  icon: 'success',
+                    icon: 'success',
 
-  title: result.message
+                    title: result.message
 
-})
+                })
 
             }
 
