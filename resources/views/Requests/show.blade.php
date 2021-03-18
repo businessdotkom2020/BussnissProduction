@@ -2,7 +2,6 @@
 @php
 $menu = false ;
 @endphp
-
 @section('content')
 
 
@@ -21,14 +20,6 @@ $menu = false ;
         </ul>
     </div>
 </div>
-
-
-
-
-
-
-
-
 
 
 <main class="main-content col-xs-12">
@@ -82,6 +73,9 @@ $menu = false ;
                                         </p>
                                     </div>
                                 </div>
+                                <a class="btn" href="{{url('supplier/'.$req->user_id)}}"
+                                    target="_blank">@lang('general.contact_supplier')</a>
+
                             </div>
 
 
