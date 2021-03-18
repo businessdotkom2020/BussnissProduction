@@ -124,7 +124,7 @@ $menu = false ;
                             </div>
                         </div>
                     </div>
-                    <div class="req-form col-md-7 col-xs-12">
+                    <div class="req-form col-md-12 col-xs-12">
                         <form action="{{route('add_product_review',['type' => 'service','id' => $service->id])}}"
                             method="POST">
                             @csrf
@@ -164,7 +164,7 @@ $menu = false ;
                     <div class="req-body col-xs-12">
 
                         @foreach($service->reviews as $review)
-                        <div class="rev-item col-md-7 col-xs-12">
+                        <div class="rev-item col-md-12 col-xs-12">
 
                             <div class="r-img">
                                 <img src="{{url('storage/'.$review->owner->avatar)}}" alt="">
