@@ -36,7 +36,10 @@ $menu = false ;
                                 @foreach(json_decode($service->images) as $img)
 
                                 <div class="item">
-                                    <img src="{{ url('storage/'.$img)}}" alt="">
+                                    <a href="{{ url('storage/'.$img)}}" data-fancybox="images" data-caption="">
+                                        <img src="{{ url('storage/'.$img)}}" alt="">
+                                    </a>
+                                    
                                 </div>
 
                                 @endforeach
