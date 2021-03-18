@@ -6,13 +6,38 @@
 @section('content')
 
 
+<div class="overlay-s"></div>
+        <div class="jumpo col-xs-12" style="background-image: url({{ asset('/web/images/cover.jpg')}})">
+            <div class="container">
+                <h3>request page name</h3>
+                <ul>
+                    <li>
+                        <a href="{{url('/')}}">@lang('general.home')</a>
+                    </li>
+                    <li>
+                        <a href="#">requests</a>
+                    </li>
+                    <li>request name</li>
+                </ul>
+            </div>
+        </div>
+
+
+
+
+
+
+
+
+
+
     <main class="main-content col-xs-12">
             <div class="reqs-wrap reqs-single col-xs-12">
                 <div class="container">
 
 
                     <div class="g-body col-xs-12">
-                        <div class="block col-xs-12">
+                        <div class="block col-xs-12  col-md-8">
                             <div class="inner col-xs-12">
                                 <div class="i-top col-xs-12">
                                     <span class="type-badge">{{$req->category->getTranslatedAttribute('name',\App::getLocale())}}</span>
@@ -95,8 +120,11 @@
                                     </div>
                                 </div>
                             </div>
-                        </div>
-                        <div class="req-form col-md-7 col-xs-12">
+
+
+
+
+                            <div class="req-form col-md-12 col-xs-12">
                   <form action="{{route('add_product_review',['type' => 'request','id' => $req->id])}}" method="POST">
                                         @csrf
 
@@ -124,7 +152,14 @@
                                 </div>
                             </form>
                         </div>
-                        <div class="req-comments col-xs-12">
+
+
+
+
+
+                        </div>
+
+                        <div class="req-comments col-xs-12 col-md-4">
                             <div class="req-head col-xs-12">
                                 <h3>comments</h3>
                             </div>
