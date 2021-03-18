@@ -199,8 +199,8 @@ textarea.form-control {
 
 .form-control:focus {
     border: 1px solid #dfdfdf;
-    border-bottom: 1px solid #2c4c99;
-    -webkit-box-shadow: 0 1px 0 0 #2c4c99;
+    border-bottom: 1px solid #139feb;
+    -webkit-box-shadow: 0 1px 0 0 #139feb;
     box-shadow: 0 1px 0 0 #2c4c99;
     color: #303030
 }
