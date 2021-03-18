@@ -2,8 +2,24 @@
 @php
 $menu = false ;
 @endphp
-
 @section('content')
+
+
+<div class="overlay-s"></div>
+<div class="jumpo col-xs-12" style="background-image: url({{ asset('/web/images/cover.jpg')}})">
+    <div class="container">
+        <h3>request page name</h3>
+        <ul>
+            <li>
+                <a href="{{url('/')}}">@lang('general.home')</a>
+            </li>
+            <li>
+                <a href="#">requests</a>
+            </li>
+            <li>request name</li>
+        </ul>
+    </div>
+</div>
 
 
 <main class="main-content col-xs-12">
@@ -12,7 +28,7 @@ $menu = false ;
 
 
             <div class="g-body col-xs-12">
-                <div class="block col-xs-12">
+                <div class="block col-xs-12  col-md-8">
                     <div class="inner col-xs-12">
                         <div class="i-top col-xs-12">
                             <span
@@ -57,8 +73,10 @@ $menu = false ;
                                         </p>
                                     </div>
                                 </div>
-                            </div>
+                                <a class="btn" href="{{url('supplier/'.$req->user_id)}}"
+                                    target="_blank">@lang('general.contact_supplier')</a>
 
+                            </div>
 
 
                             <div class="time">
@@ -108,45 +126,56 @@ $menu = false ;
                             </div>
                         </div>
                     </div>
-                </div>
-                <div class="req-form col-md-7 col-xs-12">
-                    <form action="{{route('add_product_review',['type' => 'request','id' => $req->id])}}" method="POST">
-                        @csrf
 
-                        <div class="form-group">
 
-                            <div class="rate-stars" style="text-align: right;">
-                                <div class="stars">
 
-                                    <input value="1" class="star star-5" id="star-5" type="radio" required
-                                        name="stars" />
-                                    <label class="star star-5" for="star-5"></label>
-                                    <input value="2" class="star star-4" id="star-4" type="radio" name="stars" />
-                                    <label class="star star-4" for="star-4"></label>
-                                    <input value="3" class="star star-3" id="star-3" type="radio" name="stars" />
-                                    <label class="star star-3" for="star-3"></label>
-                                    <input value="4" class="star star-2" id="star-2" type="radio" name="stars" />
-                                    <label class="star star-2" for="star-2"></label>
-                                    <input value="5" class="star star-1" id="star-1" type="radio" name="stars" />
-                                    <label class="star star-1" for="star-1"></label>
 
+                    <div class="req-form col-md-12 col-xs-12">
+                        <form action="{{route('add_product_review',['type' => 'request','id' => $req->id])}}"
+                            method="POST">
+                            @csrf
+
+                            <div class="form-group">
+
+                                <div class="rate-stars" style="text-align: right;">
+                                    <div class="stars">
+
+                                        <input value="1" class="star star-5" id="star-5" type="radio" required
+                                            name="stars" />
+                                        <label class="star star-5" for="star-5"></label>
+                                        <input value="2" class="star star-4" id="star-4" type="radio" name="stars" />
+                                        <label class="star star-4" for="star-4"></label>
+                                        <input value="3" class="star star-3" id="star-3" type="radio" name="stars" />
+                                        <label class="star star-3" for="star-3"></label>
+                                        <input value="4" class="star star-2" id="star-2" type="radio" name="stars" />
+                                        <label class="star star-2" for="star-2"></label>
+                                        <input value="5" class="star star-1" id="star-1" type="radio" name="stars" />
+                                        <label class="star star-1" for="star-1"></label>
+
+                                    </div>
                                 </div>
-                            </div>
 
-                            <textarea class="form-control" name="comment"
-                                placeholder="@lang('general.add_review')"></textarea>
-                            <button type="submit" class="btn">@lang('general.add_review')</button>
-                        </div>
-                    </form>
+                                <textarea class="form-control" name="comment"
+                                    placeholder="@lang('general.add_review')"></textarea>
+                                <button type="submit" class="btn">@lang('general.add_review')</button>
+                            </div>
+                        </form>
+                    </div>
+
+
+
+
+
                 </div>
-                <div class="req-comments col-xs-12">
+
+                <div class="req-comments col-xs-12 col-md-4">
                     <div class="req-head col-xs-12">
                         <h3>comments</h3>
                     </div>
                     <div class="req-body col-xs-12">
 
                         @foreach($req->reviews as $review)
-                        <div class="rev-item col-md-7 col-xs-12">
+                        <div class="rev-item col-md-12 col-xs-12">
 
                             <div class="r-img">
                                 <img src="{{url('storage/'.$review->owner->avatar)}}" alt="">

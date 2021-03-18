@@ -39,7 +39,9 @@
                                     <div class="owl-carousel owl-theme one">
                                         @foreach(json_decode($product->images) as $img)
                                         <div class="item-box">
-                                            <img src="{{ url('storage/'.$img)}}" alt="">
+                                            <a href="{{ url('storage/'.$img)}}" data-fancybox="images" data-caption="">
+                                                <img src="{{ url('storage/'.$img)}}" alt="">
+                                            </a>
                                         </div>
                                       @endforeach
                                       
