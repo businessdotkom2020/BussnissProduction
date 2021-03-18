@@ -3070,7 +3070,10 @@ button.close:hover {
     object-fit: scale-down;
     object-position: center
 }
-
+.reqs-wrap .block .inner .item a{
+    display: block;
+    height: 100%;
+}
 .reqs-wrap .block .inner .author {
     display: inline-block
 }
