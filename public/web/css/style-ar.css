@@ -718,7 +718,7 @@ a, li, span, p, button{
 }
 
 .ribbon span {
-    left: -21px;
+    left: 21px;
     right: auto;
     transform: rotate(-45deg)
 }
@@ -741,14 +741,14 @@ a, li, span, p, button{
 }
 
 .offer-badge span {
-    transform: rotate(45deg);
+    /* transform: rotate(45deg); */
     left: auto;
     right: -8px
 }
 
 .fav-pro {
-    left: a;
-    right: 10px;
+    left: auto;
+    right: 20px;
 }
 
 .pagination-i li:first-child,
@@ -1017,4 +1017,10 @@ a, li, span, p, button{
 }
 .multi_step_form #msform fieldset h3{
     font-family: 'Tajawal';
+}
+.reqs-wrap .block .inner .time {
+    float: right;
+}
+.rate-stars .stars{
+    direction: ltr;
 }

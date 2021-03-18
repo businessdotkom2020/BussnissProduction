@@ -247,9 +247,19 @@
     .box-filter {
         text-align: center;
     }
-
-
-
+    .reqs-wrap.reqs-single .req-comments .req-head {
+        margin-bottom: 20px;
+    }
+    .reqs-wrap.reqs-single .req-comments .req-head h3 {
+        font-size: 21px;
+    }
+    .reqs-wrap.reqs-single .req-form {
+        margin-bottom: 33px;
+    }
+    .btn {
+        font-size: 15px;
+        line-height: 38px;
+    }
 }
 
 @media(max-width:600px) {

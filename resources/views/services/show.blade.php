@@ -4,6 +4,23 @@ $menu = false ;
 @endphp
 @section('content')
 
+
+<div class="overlay-s"></div>
+<div class="jumpo col-xs-12" style="background-image: url({{ asset('web/images/cover.jpg')}})">
+            <div class="container">
+                <h3>services</h3>
+                <ul>
+                    <li>
+                        <a href="{{url('/')}}">@lang('general.home')</a>
+                    </li>
+                    <li>
+                        <a href="#">services</a>
+                    </li>
+                    
+                    <li>single service</li>
+                </ul>
+            </div>
+        </div>
 <main class="main-content col-xs-12">
     <div class="reqs-wrap reqs-single col-xs-12">
         <div class="container">
