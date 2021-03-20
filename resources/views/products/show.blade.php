@@ -158,8 +158,8 @@ $menu = false ;
                     </div>
                 </div>
             </div>
-            <div class="product-table-p col-xs-12 col-md-6 ">
-                <table class="table">
+            <div class="product-table-p table-responsive col-xs-12 col-md-6 ">
+                <table class="table table-bordered">
 
 
                     <tbody>
