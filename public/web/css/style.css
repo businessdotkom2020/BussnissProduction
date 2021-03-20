@@ -2779,7 +2779,7 @@ footer.main-footer.col-xs-12 {
 }
 
 .product-top .prod-data .rating i {
-    font-size: 20px;
+    font-size: 17px;
     margin: 0 -1px;
     color: #d0d0d0
 }
@@ -2789,7 +2789,7 @@ footer.main-footer.col-xs-12 {
 }
 
 .product-top .prod-data .author {
-    margin-bottom: 20px;
+    margin-bottom: 12px;
     display: table;
     width: 100%
 }
@@ -2814,7 +2814,7 @@ footer.main-footer.col-xs-12 {
 }
 
 .product-top .prod-data .desc {
-    margin-bottom: 20px
+    margin-bottom: 12px
 }
 
 .product-top .prod-data .desc p {
@@ -2824,13 +2824,13 @@ footer.main-footer.col-xs-12 {
 }
 
 .product-top .prod-data .price {
-    margin-bottom: 20px
+    margin-bottom: 12px
 }
 
 .product-top .prod-data .price span {
     font-family: pop-semibold;
-    font-size: 30px;
-    margin-right: 20px
+    font-size: 22px;
+    margin-right: 0
 }
 
 .product-top .prod-data .price .old {
