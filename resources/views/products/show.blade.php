@@ -158,7 +158,7 @@ $menu = false ;
                     </div>
                 </div>
             </div>
-            <div class="col-xs-6">
+            <div class="product-table-p col-xs-12 col-md-6 ">
                 <table class="table">
 
 
@@ -179,7 +179,7 @@ $menu = false ;
                     </tbody>
                 </table>
             </div>
-            <div class="product-middle col-xs-12">
+            <div class="product-middle col-md-6 col-xs-12">
                 <ul class="nav-tabs">
                     <li class="active">
                         <a href="#" data-toggle="tab" data-target="#t1">@lang('general.pricing_plans')</a>

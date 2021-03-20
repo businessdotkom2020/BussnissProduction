@@ -6582,3 +6582,6 @@ textarea {
 .supp-btns a:hover span {
     color: #fff;
 }
+.rel-slider .product-grid {
+    margin: 0 8px 25px;
+}
