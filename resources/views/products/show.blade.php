@@ -74,16 +74,24 @@ $menu = false ;
                     <div class="name">
                         <h3>{{$product->getTranslatedAttribute('name',\App::getLocale())}}</h3>
                         <div class="prod-extra">
+                            <ul>
+                                <li>
+                                    <a href="javascript:void(0)" id="fav-{{$product->id}}"
+                                        class="fav-{{$product->id}} fav-pro {{$product->isFavorited() ? 'fav-active' : null  }}"
+                                        onclick="favtoggle({{$product->id }},{{Auth::user() ? Auth::user()->id : null}})">
+                                        <i class="fa fa-heart"></i>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="javascript:void(0)" class="op-social">
+                                        <i class="fa fa-share-alt"></i>
+                                    </a>
+                                </li>
+                            </ul>
+                           
 
-                            <a href="javascript:void(0)" id="fav-{{$product->id}}"
-                                class="fav-{{$product->id}} fav-pro {{$product->isFavorited() ? 'fav-active' : null  }}"
-                                onclick="favtoggle({{$product->id }},{{Auth::user() ? Auth::user()->id : null}})">
-                                <i class="fa fa-heart"></i>
-                            </a>
-
-                            <a href="javascript:void(0)" class="op-social">
-                                <i class="fa fa-share-alt"></i>
-                            </a>
+                           
+                            
                         </div>
                     </div>
                     <div class="social shares">
