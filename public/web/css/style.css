@@ -4514,12 +4514,15 @@ button.close:hover {
     font-size: 15px;
     padding: 10px 30px;
     line-height: inherit;
+    color: #fff;
+    background-color: #139feb;
+    border: 1px solid #139feb;
 }
 
 .sign-wrap .form-group .btn:hover,
 .sign-wrap .form-group .btn:focus {
-    color: #fff;
-    background-color: #139feb;
+    color: #139feb;
+    background-color: transparent !important;
     border: 1px solid #139feb;
 }
 
