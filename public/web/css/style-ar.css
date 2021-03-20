@@ -1024,3 +1024,7 @@ a, li, span, p, button{
 .rate-stars .stars{
     direction: ltr;
 }
+.prod-extra li{
+    right: auto;
+    left: 15px;
+}

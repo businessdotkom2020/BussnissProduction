@@ -2700,14 +2700,20 @@ footer.main-footer.col-xs-12 {
 }
 
 .prod-extra a {
-    width: 35px;
-    height: 35px;
-    line-height: 35px;
+    width: 30px;
+    height: 30px;
+    line-height: 32px;
     display: inline-block;
     text-align: center;
-    color: #333;
+    color: #fff;
     border-radius: 100%;
-    margin: 0 2px
+    margin: 0 4px;
+    background: #139feb;
+    font-size: 14px;
+}
+.prod-extra li{
+    position: relative;
+    right: 15px;
 }
 
 .social.shares {
