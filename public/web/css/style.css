@@ -1230,7 +1230,7 @@ footer.main-footer.col-xs-12 {
     position: absolute;
     right: -5px;
     top: -5px;
-    z-index: 1;
+    z-index: 10;
     overflow: hidden;
     width: 75px;
     height: 75px;
@@ -1320,7 +1320,7 @@ footer.main-footer.col-xs-12 {
 .offer-badge span {
     color: #fff;
     font-family: pop-semibold;
-    font-size: 16px;
+    font-size: 14px;
     /* transform: rotate(-45deg); */
     display: inline-block;
     position: relative;
@@ -2658,7 +2658,8 @@ footer.main-footer.col-xs-12 {
 .all .offer-badge {
     position: absolute;
     left: 0;
-    top: 0
+    top: 0;
+    z-index: 10;
 }
 
 .all .offer-badge span {

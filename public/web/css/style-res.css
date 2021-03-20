@@ -357,7 +357,7 @@
 
     .prod-extra {
         position: relative;
-        margin-bottom: 20px
+        margin: 10px 0;
     }
 
     .reqs-wrap .block .inner .extra .social {
@@ -592,6 +592,18 @@
         flex: 0 0 100%;
         max-width: 100%;
         padding: 0 15px;
+    }
+    .product-middle {
+        padding: 30px 0 0;
+    }
+    .product-table-p {
+        padding: 30px 0;
+    }
+    .product-middle .nav-tabs {
+        margin-bottom: 20px;
+    }
+    .product-wrap {
+        padding: 40px 0 10px;
     }
 }
 
