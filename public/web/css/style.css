@@ -2711,7 +2711,7 @@ footer.main-footer.col-xs-12 {
     background: #139feb;
     font-size: 14px;
 }
-.prod-extra li{
+.prod-extra li:first-child{
     position: relative;
     right: 15px;
 }
