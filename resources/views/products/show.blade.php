@@ -161,7 +161,13 @@ $menu = false ;
             <div class="product-table-p table-responsive col-xs-12 col-md-6 ">
                 <table class="table table-bordered">
 
-
+                    <thead>
+                        <tr>
+                            <th>العنوان</th>
+                            <th>القيمة</th>
+                        </tr>
+                    </thead>
+                    
                     <tbody>
 
 

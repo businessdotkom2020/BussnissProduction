@@ -6587,4 +6587,10 @@ textarea {
 }
 .product-top {
     margin-bottom: 50px;
+    border-bottom: 1px solid #eee;
 }
+.product-middle,
+.product-table-p{
+    padding: 50px 0;
+}
+.product-table-p 
