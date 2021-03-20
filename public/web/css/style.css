@@ -4508,7 +4508,7 @@ button.close:hover {
 
 .sign-wrap .form-group .btn {
     height: auto;
-    width: auto;
+    width: 99%;
     margin: 0 auto 20px;
     text-align: center;
     font-size: 15px;
