@@ -88,10 +88,10 @@ $menu = false ;
                                     </a>
                                 </li>
                             </ul>
-                           
 
-                           
-                            
+
+
+
                         </div>
                     </div>
                     <div class="social shares">
@@ -166,32 +166,35 @@ $menu = false ;
                     </div>
                 </div>
             </div>
-            <div class="product-table-p table-responsive col-xs-12 col-md-6 ">
-                <table class="table table-bordered">
+            <div class="product-table-p  col-xs-12 col-md-6 ">
+                <div class="table-responsive">
+                    <table class="table table-bordered ">
 
-                    <thead>
-                        <tr>
-                            <th>العنوان</th>
-                            <th>القيمة</th>
-                        </tr>
-                    </thead>
+                        <thead>
+                            <tr>
+                                <th>العنوان</th>
+                                <th>القيمة</th>
+                            </tr>
+                        </thead>
 
-                    <tbody>
-
-
-                        @foreach($product->options as $option)
-                        <tr>
-
-                            <td>{{  $option->attribute ? $option->attribute->getTranslatedAttribute('name',\App::getLocale()) : null }}
-                            </td>
-                            <td>{{ $option->value ? $option->value->getTranslatedAttribute('value',\App::getLocale()) : null }}
-                            </td>
+                        <tbody>
 
 
-                        </tr>
-                        @endforeach
-                    </tbody>
-                </table>
+                            @foreach($product->options as $option)
+                            <tr>
+
+                                <td>{{  $option->attribute ? $option->attribute->getTranslatedAttribute('name',\App::getLocale()) : null }}
+                                </td>
+                                <td>{{ $option->value ? $option->value->getTranslatedAttribute('value',\App::getLocale()) : null }}
+                                </td>
+
+
+                            </tr>
+                            @endforeach
+                        </tbody>
+                    </table>
+                </div>
+
             </div>
             <div class="product-middle col-md-6 col-xs-12">
                 <ul class="nav-tabs">
