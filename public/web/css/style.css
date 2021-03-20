@@ -2713,7 +2713,7 @@ footer.main-footer.col-xs-12 {
 }
 .prod-extra li:first-child{
     position: relative;
-    right: 15px;
+    right: -14px;
 }
 
 .social.shares {

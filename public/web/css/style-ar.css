@@ -1026,5 +1026,5 @@ a, li, span, p, button{
 }
 .prod-extra li:first-child{
     right: auto;
-    left: 15px;
+    left: -14px;
 }
