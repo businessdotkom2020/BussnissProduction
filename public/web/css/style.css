@@ -6602,4 +6602,9 @@ textarea {
 .product-price-p thead>tr>th{
     color: #fff;
     border-bottom-width: 1px; 
+    text-align: center;
+}
+.product-table-p .table>tbody>tr>td,
+.product-price-p .table>tbody>tr>td{
+    text-align: center;
 }
