@@ -167,7 +167,7 @@ $menu = false ;
                             <th>القيمة</th>
                         </tr>
                     </thead>
-                    
+
                     <tbody>
 
 
@@ -198,6 +198,7 @@ $menu = false ;
                 </ul>
                 <div class="tab-content">
                     <div class="tab-pane fade active in" id="t1">
+                        <!--
                         <ul>
                             @foreach($product->prices as $price)
                             <li>
@@ -207,6 +208,32 @@ $menu = false ;
                             </li>
                             @endforeach
                         </ul>
+                        -->
+
+                        <div class="product-price-p table-responsive">
+                            <table class="table table-bordered">
+
+                                <thead>
+                                    <tr>
+                                        <th>من</th>
+                                        <th>الي</th>
+                                        <th>السعر</th>
+                                    </tr>
+                                </thead>
+
+                                <tbody>
+                                    @foreach($product->prices as $price)
+                                    <tr>
+
+                                        <td>@lang('general.from') {{$price->quantity_from}} @lang('general.to')</td>
+                                        <td>{{$price->quantity_to}}</td>
+                                        <td> <span>{{$price->price}} l.e</span></td>
+
+                                    </tr>
+                                    @endforeach
+                                </tbody>
+                            </table>
+                        </div>
                     </div>
                     <div class="tab-pane fade" id="t2">
 

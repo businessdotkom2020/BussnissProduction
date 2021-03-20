@@ -6586,11 +6586,20 @@ textarea {
     margin: 0 8px 25px;
 }
 .product-top {
-    margin-bottom: 50px;
+    padding-bottom: 35px;
     border-bottom: 1px solid #eee;
 }
 .product-middle,
 .product-table-p{
-    padding: 50px 0;
+    padding: 60px 0;
 }
-.product-table-p 
+.product-table-p thead,
+.product-price-p thead{
+    background: #139feb;
+    color: #fff;
+}
+.product-table-p thead>tr>th,
+.product-price-p thead>tr>th{
+    color: #fff;
+    border-bottom-width: 1px; 
+}
