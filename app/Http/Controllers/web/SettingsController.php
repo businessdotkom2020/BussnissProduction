@@ -10,6 +10,7 @@ use App\Models\Category;
 use App\Models\Product;
 use App\Models\Service;
 use App\Models\Request;
+use RealRashid\SweetAlert\Facades\Alert;
 
 use App\Http\Resources\ParentCategoryResource;
 use App\Http\Resources\MainCategoryResource;
@@ -41,5 +42,20 @@ class SettingsController extends Controller
     public function contact()
     {
         return view('settings.contact');
+    }
+
+    public function add_subscriber()
+    {
+        $subscriber = \DB::table('subscribers')->where('email', request()->email)->first();
+        if (!subscriber)
+            Alert::toast(trans('general.already_subscribed'), 'success');
+
+        $subscriber = \DB::table('subscribers')->insertOrIgnore([
+            ['email' => request()->email]
+        ]);
+
+        Alert::toast(trans('general.subscription_has_been_successful'), 'success');
+
+        return redirect()->back();
     }
 }

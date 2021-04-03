@@ -183,6 +183,8 @@ return [
     'delivery_from' => 'التوصيل من يوم',
     'delivery_to' => 'إلى يوم',
     'others' => 'أخرى',
+    'subscription_has_been_successful' => 'تم الإشتراك بنجاح  سيتم إعلامك بكل جديد',
+    'already_subscribed' => 'أنت مشترك بالفعل',
 
 
 ];
