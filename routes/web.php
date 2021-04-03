@@ -183,6 +183,7 @@ Route::get('terms', 'web\SettingsController@terms');
 Route::get('privacy', 'web\SettingsController@privacy');
 Route::get('contact', 'web\SettingsController@contact');
 Route::post('contact', 'web\SettingsController@do_contact');
+Route::post('add_subscriber', 'web\SettingsController@add_subscriber')->name('add_subscriber');
 
 
 

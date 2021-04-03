@@ -45,7 +45,7 @@
                     </li>
                 </ul>
             </div>
-           
+
             <div class="f-item col-md-3 col-sm-3 col-xs-12">
                 <h4>social</h4>
                 <div class="social-f">
@@ -68,15 +68,16 @@
                 <div class="f-form">
                     <h4>@lang('general.newsletter')</h4>
                     <p>@lang('general.newsletter_benefits')</p>
-                    <form action="#" method="get">
+                    <form action="{{route('add_subscriber')}}" method="POST">
+                        @csrf
                         <div class="form-group">
-                            <input type="email" class="form-control" placeholder="your email">
+                            <input type="email" required class="form-control" placeholder="your email">
                             <button class="footer-btn" type="submit"><i class="fa fa-paper-plane-o"></i></button>
                         </div>
                     </form>
                 </div>
             </div>
-           
+
         </div>
     </div>
     <div class="f-bottom col-xs-12">
