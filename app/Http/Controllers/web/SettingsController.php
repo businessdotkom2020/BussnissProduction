@@ -38,7 +38,7 @@ class SettingsController extends Controller
     {
         return view('settings.terms');
     }
-    public function terms()
+    public function contact()
     {
         return view('settings.contact');
     }
