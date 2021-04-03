@@ -10,8 +10,6 @@ use App\Models\Category;
 use App\Models\Product;
 use App\Models\Service;
 use App\Models\Request;
-use RealRashid\SweetAlert\Facades\Alert;
-
 use App\Http\Resources\ParentCategoryResource;
 use App\Http\Resources\MainCategoryResource;
 use App\Http\Resources\CategoryProductsResource;
