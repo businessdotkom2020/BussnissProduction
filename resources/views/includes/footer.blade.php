@@ -71,7 +71,7 @@
                     <form action="{{route('add_subscriber')}}" method="POST">
                         @csrf
                         <div class="form-group">
-                            <input type="email" required class="form-control" placeholder="your email">
+                            <input type="email" name="email" required class="form-control" placeholder="your email">
                             <button class="footer-btn" type="submit"><i class="fa fa-paper-plane-o"></i></button>
                         </div>
                     </form>
