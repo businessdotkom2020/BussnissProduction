@@ -311,7 +311,7 @@ $menu = true ;
         <div class="container-fluid">
             <div class="g-head col-xs-12">
                 <h3>new <span>arrival</span></h3>
-                <a href="#" class="more">view all</a>
+                <a href="#" class="more">@lang('general.view_all')</a>
             </div>
             <div class="g-body col-xs-12">
                 @foreach ($latest_products as $product)
