@@ -45,7 +45,7 @@ class SettingsController extends Controller
     public function add_subscriber()
     {
         $subscriber = \DB::table('subscribers')->where('email', request()->email)->first();
-        if (!subscriber)
+        if (!$subscriber)
             Alert::toast(trans('general.already_subscribed'), 'success');
 
         $subscriber = \DB::table('subscribers')->insertOrIgnore([
