@@ -261,6 +261,8 @@ $menu = false ;
                             </li>
                         </ul>
                     </div>
+                </div>
+                <div class="categories-block-content">
                     <div class="categories-block">
                         <h4>main category name</h4>
                         <ul class="accordion">
@@ -285,8 +287,24 @@ $menu = false ;
                             <li>
                                 <a class="category-toggle" href="javascript:void(0);">category name 3</a>
                                 <ul class="inner">
-                                    <li><a href="#">sub category name</a></li>
-                                    <li><a href="#">sub category name</a></li>
+                                    <li>
+                                        <a href="#" class="category-toggle">Open Inner</a>
+                                        <ul class="inner">
+                                            <li><a href="#">sub category name</a></li>
+                                            <li><a href="#">sub category name</a></li>
+                                            <li><a href="#">sub category name</a></li>
+                                        </ul>
+                                    </li>
+
+                                    <li>
+                                        <a href="#" class="category-toggle">Open Inner #2</a>
+                                        <ul class="inner">
+                                            <li><a href="#">sub category name</a></li>
+                                            <li><a href="#">sub category name</a></li>
+                                            <li><a href="#">sub category name</a></li>
+                                        </ul>
+                                    </li>
+
                                     <li><a href="#">sub category name</a></li>
                                 </ul>
                             </li>
@@ -294,289 +312,23 @@ $menu = false ;
                             <li>
                                 <a class="category-toggle" href="javascript:void(0);">category name 4</a>
                                 <ul class="inner">
-                                    <li><a href="#">sub category name</a></li>
-                                    <li><a href="#">sub category name</a></li>
-                                    <li><a href="#">sub category name</a></li>
-                                </ul>
-                            </li>
-                        </ul>
-                    </div>
-                    <div class="categories-block">
-                        <h4>main category name</h4>
-                        <ul class="accordion">
-                            <li>
-                                <a class="category-toggle" href="javascript:void(0);">category name 1</a>
-                                <ul class="inner">
-                                    <li><a href="#">sub category name</a></li>
-                                    <li><a href="#">sub category name</a></li>
-                                    <li><a href="#">sub category name</a></li>
-                                </ul>
-                            </li>
+                                    <li>
+                                        <a href="#" class="category-toggle">category name</a>
+                                        <ul class="inner">
+                                            <li>
+                                                <a href="#" class="category-toggle">sub sub category name</a>
+                                                <ul class="inner">
+                                                    <li><a href="#">sub sub sub category name</a></li>
+                                                    <li><a href="#">sub sub sub category name</a></li>
+                                                    <li><a href="#">sub sub sub category name</a></li>
+                                                </ul>
+                                            </li>
+                                        </ul>
+                                    </li>
 
-                            <li>
-                                <a class="category-toggle" href="javascript:void(0);">category name 2</a>
-                                <ul class="inner">
-                                    <li><a href="#">sub category name</a></li>
-                                    <li><a href="#">sub category name</a></li>
-                                    <li><a href="#">sub category name</a></li>
-                                </ul>
-                            </li>
+                                    <li><a href="#">category name</a></li>
 
-                            <li>
-                                <a class="category-toggle" href="javascript:void(0);">category name 3</a>
-                                <ul class="inner">
-                                    <li><a href="#">sub category name</a></li>
-                                    <li><a href="#">sub category name</a></li>
-                                    <li><a href="#">sub category name</a></li>
-                                </ul>
-                            </li>
-
-                            <li>
-                                <a class="category-toggle" href="javascript:void(0);">category name 4</a>
-                                <ul class="inner">
-                                    <li><a href="#">sub category name</a></li>
-                                    <li><a href="#">sub category name</a></li>
-                                    <li><a href="#">sub category name</a></li>
-                                </ul>
-                            </li>
-                        </ul>
-                    </div>
-                    <div class="categories-block">
-                        <h4>main category name</h4>
-                        <ul class="accordion">
-                            <li>
-                                <a class="category-toggle" href="javascript:void(0);">category name 1</a>
-                                <ul class="inner">
-                                    <li><a href="#">sub category name</a></li>
-                                    <li><a href="#">sub category name</a></li>
-                                    <li><a href="#">sub category name</a></li>
-                                </ul>
-                            </li>
-
-                            <li>
-                                <a class="category-toggle" href="javascript:void(0);">category name 2</a>
-                                <ul class="inner">
-                                    <li><a href="#">sub category name</a></li>
-                                    <li><a href="#">sub category name</a></li>
-                                    <li><a href="#">sub category name</a></li>
-                                </ul>
-                            </li>
-
-                            <li>
-                                <a class="category-toggle" href="javascript:void(0);">category name 3</a>
-                                <ul class="inner">
-                                    <li><a href="#">sub category name</a></li>
-                                    <li><a href="#">sub category name</a></li>
-                                    <li><a href="#">sub category name</a></li>
-                                </ul>
-                            </li>
-
-                            <li>
-                                <a class="category-toggle" href="javascript:void(0);">category name 4</a>
-                                <ul class="inner">
-                                    <li><a href="#">sub category name</a></li>
-                                    <li><a href="#">sub category name</a></li>
-                                    <li><a href="#">sub category name</a></li>
-                                </ul>
-                            </li>
-                        </ul>
-                    </div>
-                    <div class="categories-block">
-                        <h4>main category name</h4>
-                        <ul class="accordion">
-                            <li>
-                                <a class="category-toggle" href="javascript:void(0);">category name 1</a>
-                                <ul class="inner">
-                                    <li><a href="#">sub category name</a></li>
-                                    <li><a href="#">sub category name</a></li>
-                                    <li><a href="#">sub category name</a></li>
-                                </ul>
-                            </li>
-
-                            <li>
-                                <a class="category-toggle" href="javascript:void(0);">category name 2</a>
-                                <ul class="inner">
-                                    <li><a href="#">sub category name</a></li>
-                                    <li><a href="#">sub category name</a></li>
-                                    <li><a href="#">sub category name</a></li>
-                                </ul>
-                            </li>
-
-                            <li>
-                                <a class="category-toggle" href="javascript:void(0);">category name 3</a>
-                                <ul class="inner">
-                                    <li><a href="#">sub category name</a></li>
-                                    <li><a href="#">sub category name</a></li>
-                                    <li><a href="#">sub category name</a></li>
-                                </ul>
-                            </li>
-
-                            <li>
-                                <a class="category-toggle" href="javascript:void(0);">category name 4</a>
-                                <ul class="inner">
-                                    <li><a href="#">sub category name</a></li>
-                                    <li><a href="#">sub category name</a></li>
-                                    <li><a href="#">sub category name</a></li>
-                                </ul>
-                            </li>
-                        </ul>
-                    </div>
-                    <div class="categories-block">
-                        <h4>main category name</h4>
-                        <ul class="accordion">
-                            <li>
-                                <a class="category-toggle" href="javascript:void(0);">category name 1</a>
-                                <ul class="inner">
-                                    <li><a href="#">sub category name</a></li>
-                                    <li><a href="#">sub category name</a></li>
-                                    <li><a href="#">sub category name</a></li>
-                                </ul>
-                            </li>
-
-                            <li>
-                                <a class="category-toggle" href="javascript:void(0);">category name 2</a>
-                                <ul class="inner">
-                                    <li><a href="#">sub category name</a></li>
-                                    <li><a href="#">sub category name</a></li>
-                                    <li><a href="#">sub category name</a></li>
-                                </ul>
-                            </li>
-
-                            <li>
-                                <a class="category-toggle" href="javascript:void(0);">category name 3</a>
-                                <ul class="inner">
-                                    <li><a href="#">sub category name</a></li>
-                                    <li><a href="#">sub category name</a></li>
-                                    <li><a href="#">sub category name</a></li>
-                                </ul>
-                            </li>
-
-                            <li>
-                                <a class="category-toggle" href="javascript:void(0);">category name 4</a>
-                                <ul class="inner">
-                                    <li><a href="#">sub category name</a></li>
-                                    <li><a href="#">sub category name</a></li>
-                                    <li><a href="#">sub category name</a></li>
-                                </ul>
-                            </li>
-                        </ul>
-                    </div>
-                    <div class="categories-block">
-                        <h4>main category name</h4>
-                        <ul class="accordion">
-                            <li>
-                                <a class="category-toggle" href="javascript:void(0);">category name 1</a>
-                                <ul class="inner">
-                                    <li><a href="#">sub category name</a></li>
-                                    <li><a href="#">sub category name</a></li>
-                                    <li><a href="#">sub category name</a></li>
-                                </ul>
-                            </li>
-
-                            <li>
-                                <a class="category-toggle" href="javascript:void(0);">category name 2</a>
-                                <ul class="inner">
-                                    <li><a href="#">sub category name</a></li>
-                                    <li><a href="#">sub category name</a></li>
-                                    <li><a href="#">sub category name</a></li>
-                                </ul>
-                            </li>
-
-                            <li>
-                                <a class="category-toggle" href="javascript:void(0);">category name 3</a>
-                                <ul class="inner">
-                                    <li><a href="#">sub category name</a></li>
-                                    <li><a href="#">sub category name</a></li>
-                                    <li><a href="#">sub category name</a></li>
-                                </ul>
-                            </li>
-
-                            <li>
-                                <a class="category-toggle" href="javascript:void(0);">category name 4</a>
-                                <ul class="inner">
-                                    <li><a href="#">sub category name</a></li>
-                                    <li><a href="#">sub category name</a></li>
-                                    <li><a href="#">sub category name</a></li>
-                                </ul>
-                            </li>
-                        </ul>
-                    </div>
-                    <div class="categories-block">
-                        <h4>main category name</h4>
-                        <ul class="accordion">
-                            <li>
-                                <a class="category-toggle" href="javascript:void(0);">category name 1</a>
-                                <ul class="inner">
-                                    <li><a href="#">sub category name</a></li>
-                                    <li><a href="#">sub category name</a></li>
-                                    <li><a href="#">sub category name</a></li>
-                                </ul>
-                            </li>
-
-                            <li>
-                                <a class="category-toggle" href="javascript:void(0);">category name 2</a>
-                                <ul class="inner">
-                                    <li><a href="#">sub category name</a></li>
-                                    <li><a href="#">sub category name</a></li>
-                                    <li><a href="#">sub category name</a></li>
-                                </ul>
-                            </li>
-
-                            <li>
-                                <a class="category-toggle" href="javascript:void(0);">category name 3</a>
-                                <ul class="inner">
-                                    <li><a href="#">sub category name</a></li>
-                                    <li><a href="#">sub category name</a></li>
-                                    <li><a href="#">sub category name</a></li>
-                                </ul>
-                            </li>
-
-                            <li>
-                                <a class="category-toggle" href="javascript:void(0);">category name 4</a>
-                                <ul class="inner">
-                                    <li><a href="#">sub category name</a></li>
-                                    <li><a href="#">sub category name</a></li>
-                                    <li><a href="#">sub category name</a></li>
-                                </ul>
-                            </li>
-                        </ul>
-                    </div>
-                    <div class="categories-block">
-                        <h4>main category name</h4>
-                        <ul class="accordion">
-                            <li>
-                                <a class="category-toggle" href="javascript:void(0);">category name 1</a>
-                                <ul class="inner">
-                                    <li><a href="#">sub category name</a></li>
-                                    <li><a href="#">sub category name</a></li>
-                                    <li><a href="#">sub category name</a></li>
-                                </ul>
-                            </li>
-
-                            <li>
-                                <a class="category-toggle" href="javascript:void(0);">category name 2</a>
-                                <ul class="inner">
-                                    <li><a href="#">sub category name</a></li>
-                                    <li><a href="#">sub category name</a></li>
-                                    <li><a href="#">sub category name</a></li>
-                                </ul>
-                            </li>
-
-                            <li>
-                                <a class="category-toggle" href="javascript:void(0);">category name 3</a>
-                                <ul class="inner">
-                                    <li><a href="#">sub category name</a></li>
-                                    <li><a href="#">sub category name</a></li>
-                                    <li><a href="#">sub category name</a></li>
-                                </ul>
-                            </li>
-
-                            <li>
-                                <a class="category-toggle" href="javascript:void(0);">category name 4</a>
-                                <ul class="inner">
-                                    <li><a href="#">sub category name</a></li>
-                                    <li><a href="#">sub category name</a></li>
-                                    <li><a href="#">sub category name</a></li>
+                                    <li><a href="#">category name</a></li>
                                 </ul>
                             </li>
                         </ul>
@@ -742,10 +494,252 @@ $menu = false ;
                         </ul>
                     </div>
                 </div>
+                <div class="categories-block-content">
+                    <div class="categories-block">
+                        <h4>main category name</h4>
+                        <ul class="accordion">
+                            <li>
+                                <a class="category-toggle" href="javascript:void(0);">category name 1</a>
+                                <ul class="inner">
+                                    <li><a href="#">sub category name</a></li>
+                                    <li><a href="#">sub category name</a></li>
+                                    <li><a href="#">sub category name</a></li>
+                                </ul>
+                            </li>
 
+                            <li>
+                                <a class="category-toggle" href="javascript:void(0);">category name 2</a>
+                                <ul class="inner">
+                                    <li><a href="#">sub category name</a></li>
+                                    <li><a href="#">sub category name</a></li>
+                                    <li><a href="#">sub category name</a></li>
+                                </ul>
+                            </li>
 
+                            <li>
+                                <a class="category-toggle" href="javascript:void(0);">category name 3</a>
+                                <ul class="inner">
+                                    <li><a href="#">sub category name</a></li>
+                                    <li><a href="#">sub category name</a></li>
+                                    <li><a href="#">sub category name</a></li>
+                                </ul>
+                            </li>
+
+                            <li>
+                                <a class="category-toggle" href="javascript:void(0);">category name 4</a>
+                                <ul class="inner">
+                                    <li><a href="#">sub category name</a></li>
+                                    <li><a href="#">sub category name</a></li>
+                                    <li><a href="#">sub category name</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="categories-block">
+                        <h4>main category name</h4>
+                        <ul class="accordion">
+                            <li>
+                                <a class="category-toggle" href="javascript:void(0);">category name 1</a>
+                                <ul class="inner">
+                                    <li><a href="#">sub category name</a></li>
+                                    <li><a href="#">sub category name</a></li>
+                                    <li><a href="#">sub category name</a></li>
+                                </ul>
+                            </li>
+
+                            <li>
+                                <a class="category-toggle" href="javascript:void(0);">category name 2</a>
+                                <ul class="inner">
+                                    <li><a href="#">sub category name</a></li>
+                                    <li><a href="#">sub category name</a></li>
+                                    <li><a href="#">sub category name</a></li>
+                                </ul>
+                            </li>
+
+                            <li>
+                                <a class="category-toggle" href="javascript:void(0);">category name 3</a>
+                                <ul class="inner">
+                                    <li><a href="#">sub category name</a></li>
+                                    <li><a href="#">sub category name</a></li>
+                                    <li><a href="#">sub category name</a></li>
+                                </ul>
+                            </li>
+
+                            <li>
+                                <a class="category-toggle" href="javascript:void(0);">category name 4</a>
+                                <ul class="inner">
+                                    <li><a href="#">sub category name</a></li>
+                                    <li><a href="#">sub category name</a></li>
+                                    <li><a href="#">sub category name</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="categories-block">
+                        <h4>main category name</h4>
+                        <ul class="accordion">
+                            <li>
+                                <a class="category-toggle" href="javascript:void(0);">category name 1</a>
+                                <ul class="inner">
+                                    <li><a href="#">sub category name</a></li>
+                                    <li><a href="#">sub category name</a></li>
+                                    <li><a href="#">sub category name</a></li>
+                                </ul>
+                            </li>
+
+                            <li>
+                                <a class="category-toggle" href="javascript:void(0);">category name 2</a>
+                                <ul class="inner">
+                                    <li><a href="#">sub category name</a></li>
+                                    <li><a href="#">sub category name</a></li>
+                                    <li><a href="#">sub category name</a></li>
+                                </ul>
+                            </li>
+
+                            <li>
+                                <a class="category-toggle" href="javascript:void(0);">category name 3</a>
+                                <ul class="inner">
+                                    <li><a href="#">sub category name</a></li>
+                                    <li><a href="#">sub category name</a></li>
+                                    <li><a href="#">sub category name</a></li>
+                                </ul>
+                            </li>
+
+                            <li>
+                                <a class="category-toggle" href="javascript:void(0);">category name 4</a>
+                                <ul class="inner">
+                                    <li><a href="#">sub category name</a></li>
+                                    <li><a href="#">sub category name</a></li>
+                                    <li><a href="#">sub category name</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="categories-block-content">
+                    <div class="categories-block">
+                        <h4>main category name</h4>
+                        <ul class="accordion">
+                            <li>
+                                <a class="category-toggle" href="javascript:void(0);">category name 1</a>
+                                <ul class="inner">
+                                    <li><a href="#">sub category name</a></li>
+                                    <li><a href="#">sub category name</a></li>
+                                    <li><a href="#">sub category name</a></li>
+                                </ul>
+                            </li>
+
+                            <li>
+                                <a class="category-toggle" href="javascript:void(0);">category name 2</a>
+                                <ul class="inner">
+                                    <li><a href="#">sub category name</a></li>
+                                    <li><a href="#">sub category name</a></li>
+                                    <li><a href="#">sub category name</a></li>
+                                </ul>
+                            </li>
+
+                            <li>
+                                <a class="category-toggle" href="javascript:void(0);">category name 3</a>
+                                <ul class="inner">
+                                    <li><a href="#">sub category name</a></li>
+                                    <li><a href="#">sub category name</a></li>
+                                    <li><a href="#">sub category name</a></li>
+                                </ul>
+                            </li>
+
+                            <li>
+                                <a class="category-toggle" href="javascript:void(0);">category name 4</a>
+                                <ul class="inner">
+                                    <li><a href="#">sub category name</a></li>
+                                    <li><a href="#">sub category name</a></li>
+                                    <li><a href="#">sub category name</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="categories-block">
+                        <h4>main category name</h4>
+                        <ul class="accordion">
+                            <li>
+                                <a class="category-toggle" href="javascript:void(0);">category name 1</a>
+                                <ul class="inner">
+                                    <li><a href="#">sub category name</a></li>
+                                    <li><a href="#">sub category name</a></li>
+                                    <li><a href="#">sub category name</a></li>
+                                </ul>
+                            </li>
+
+                            <li>
+                                <a class="category-toggle" href="javascript:void(0);">category name 2</a>
+                                <ul class="inner">
+                                    <li><a href="#">sub category name</a></li>
+                                    <li><a href="#">sub category name</a></li>
+                                    <li><a href="#">sub category name</a></li>
+                                </ul>
+                            </li>
+
+                            <li>
+                                <a class="category-toggle" href="javascript:void(0);">category name 3</a>
+                                <ul class="inner">
+                                    <li><a href="#">sub category name</a></li>
+                                    <li><a href="#">sub category name</a></li>
+                                    <li><a href="#">sub category name</a></li>
+                                </ul>
+                            </li>
+
+                            <li>
+                                <a class="category-toggle" href="javascript:void(0);">category name 4</a>
+                                <ul class="inner">
+                                    <li><a href="#">sub category name</a></li>
+                                    <li><a href="#">sub category name</a></li>
+                                    <li><a href="#">sub category name</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="categories-block">
+                        <h4>main category name</h4>
+                        <ul class="accordion">
+                            <li>
+                                <a class="category-toggle" href="javascript:void(0);">category name 1</a>
+                                <ul class="inner">
+                                    <li><a href="#">sub category name</a></li>
+                                    <li><a href="#">sub category name</a></li>
+                                    <li><a href="#">sub category name</a></li>
+                                </ul>
+                            </li>
+
+                            <li>
+                                <a class="category-toggle" href="javascript:void(0);">category name 2</a>
+                                <ul class="inner">
+                                    <li><a href="#">sub category name</a></li>
+                                    <li><a href="#">sub category name</a></li>
+                                    <li><a href="#">sub category name</a></li>
+                                </ul>
+                            </li>
+
+                            <li>
+                                <a class="category-toggle" href="javascript:void(0);">category name 3</a>
+                                <ul class="inner">
+                                    <li><a href="#">sub category name</a></li>
+                                    <li><a href="#">sub category name</a></li>
+                                    <li><a href="#">sub category name</a></li>
+                                </ul>
+                            </li>
+
+                            <li>
+                                <a class="category-toggle" href="javascript:void(0);">category name 4</a>
+                                <ul class="inner">
+                                    <li><a href="#">sub category name</a></li>
+                                    <li><a href="#">sub category name</a></li>
+                                    <li><a href="#">sub category name</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
             </div>
         </div>
+    </div>
 </main>
 
 
