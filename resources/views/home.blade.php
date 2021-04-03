@@ -202,10 +202,7 @@ $menu = true ;
                                     </li>
                                     @endforeach
                                 </ul>
-                                <a href="#" class="cat-more">
-                                    {{__('general.others')}}
-                                    <i class="fa fa-angle-right hvr-icon"></i>
-                                </a>
+
                             </div>
                         </div>
                     </div>
@@ -1582,4 +1579,3 @@ $.ajax({
 </script>
 
 @endpush
-
