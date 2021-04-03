@@ -24,18 +24,22 @@ use Lang;
 
 class SettingsController extends Controller
 {
-    
-   public function privacy(){
-       return view('settings.privacy');
-   }
-   
-   public function about(){
-       return view('settings.about');
-   }
-   public function terms(){
-       return view('settings.terms');
-   }
-   
 
-  
+    public function privacy()
+    {
+        return view('settings.privacy');
+    }
+
+    public function about()
+    {
+        return view('settings.about');
+    }
+    public function terms()
+    {
+        return view('settings.terms');
+    }
+    public function terms()
+    {
+        return view('settings.contact');
+    }
 }
