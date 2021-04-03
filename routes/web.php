@@ -182,7 +182,7 @@ Route::get('about', 'web\SettingsController@about');
 Route::get('terms', 'web\SettingsController@terms');
 Route::get('privacy', 'web\SettingsController@privacy');
 Route::get('contact', 'web\SettingsController@contact');
-Route::get('contact', 'web\SettingsController@do_contact');
+Route::post('contact', 'web\SettingsController@do_contact');
 
 
 
