@@ -1230,7 +1230,7 @@ footer.main-footer.col-xs-12 {
     position: absolute;
     right: -5px;
     top: -5px;
-    z-index: 1;
+    z-index: 10;
     overflow: hidden;
     width: 75px;
     height: 75px;
@@ -1320,7 +1320,7 @@ footer.main-footer.col-xs-12 {
 .offer-badge span {
     color: #fff;
     font-family: pop-semibold;
-    font-size: 16px;
+    font-size: 14px;
     /* transform: rotate(-45deg); */
     display: inline-block;
     position: relative;
@@ -2208,8 +2208,8 @@ footer.main-footer.col-xs-12 {
 }
 
 .box-filter {
-    text-align: right;
-    margin-bottom: 30px
+    text-align: center;
+    margin-bottom: 30px;
 }
 
 .box-filter .nav-tabs {
@@ -2224,16 +2224,22 @@ footer.main-footer.col-xs-12 {
 }
 
 .box-filter .nav-tabs li a {
-    border: 0 !important;
+    /* border: 0 !important; */
     margin: 0;
     position: relative;
     color: #333;
-    transition: all .3s
+    transition: all .3s;
+    padding: 8px 20px;
+    border-radius: 5px;
+    border: 1px solid #666;
 }
 
-.box-filter .nav-tabs li.active a {
-    color: #139feb;
-    transition: all .3s
+.box-filter .nav-tabs li.active a,
+.box-filter .nav-tabs li a:hover {
+    color: #fff;
+    transition: all .3s;
+    background: #139feb;
+    border: 1px solid #139feb;
 }
 
 .box-filter h4 {
@@ -2244,7 +2250,7 @@ footer.main-footer.col-xs-12 {
 .sup-v .cardo .btn-border {
     padding: 0 20px
 }
-
+/*
 .box-filter .nav-tabs li a:before {
     width: 20px;
     height: 20px;
@@ -2271,7 +2277,14 @@ footer.main-footer.col-xs-12 {
     color: #fff;
     border-color: #139feb
 }
-
+*/
+.box-filter .nav-tabs li.active a:before {
+    font-size: 11px;
+    transition: all .3s;
+    background-color: #139feb;
+    color: #fff;
+    border-color: #139feb
+}
 .cat-sidebar .cat-head {
     margin-bottom: 30px
 }
@@ -2460,6 +2473,7 @@ footer.main-footer.col-xs-12 {
     border-radius: 5px;
     background-size: cover
 }
+
 /*
 .all .slider .item-box:after {
     width: 100%;
@@ -2573,10 +2587,12 @@ footer.main-footer.col-xs-12 {
     background-size: cover;
     background-position: center
 }
-.all .slider-two .item a{
+
+.all .slider-two .item a {
     display: block;
     height: 100%;
 }
+
 .all .slider-two .item.active {
     border: solid 3px #73cddf
 }
@@ -2658,7 +2674,8 @@ footer.main-footer.col-xs-12 {
 .all .offer-badge {
     position: absolute;
     left: 0;
-    top: 0
+    top: 0;
+    z-index: 10;
 }
 
 .all .offer-badge span {
@@ -2671,10 +2688,12 @@ footer.main-footer.col-xs-12 {
     object-fit: scale-down;
 
 }
-.all .slider .item-box a{
+
+.all .slider .item-box a {
     display: block;
     height: 100%;
 }
+
 .all .slider-two .item img {
     width: 100%;
     height: 100%;
@@ -2700,14 +2719,21 @@ footer.main-footer.col-xs-12 {
 }
 
 .prod-extra a {
-    width: 35px;
-    height: 35px;
-    line-height: 35px;
+    width: 30px;
+    height: 30px;
+    line-height: 32px;
     display: inline-block;
     text-align: center;
-    color: #333;
+    color: #fff;
     border-radius: 100%;
-    margin: 0 2px
+    margin: 0 4px;
+    background: #139feb;
+    font-size: 14px;
+}
+
+.prod-extra li:first-child {
+    position: relative;
+    right: -14px;
 }
 
 .social.shares {
@@ -2753,7 +2779,7 @@ footer.main-footer.col-xs-12 {
 }
 
 .product-top .prod-data .rating i {
-    font-size: 20px;
+    font-size: 17px;
     margin: 0 -1px;
     color: #d0d0d0
 }
@@ -2763,7 +2789,7 @@ footer.main-footer.col-xs-12 {
 }
 
 .product-top .prod-data .author {
-    margin-bottom: 20px;
+    margin-bottom: 12px;
     display: table;
     width: 100%
 }
@@ -2788,7 +2814,7 @@ footer.main-footer.col-xs-12 {
 }
 
 .product-top .prod-data .desc {
-    margin-bottom: 20px
+    margin-bottom: 12px
 }
 
 .product-top .prod-data .desc p {
@@ -2798,13 +2824,13 @@ footer.main-footer.col-xs-12 {
 }
 
 .product-top .prod-data .price {
-    margin-bottom: 20px
+    margin-bottom: 12px
 }
 
 .product-top .prod-data .price span {
     font-family: pop-semibold;
-    font-size: 30px;
-    margin-right: 20px
+    font-size: 22px;
+    margin-right: 0
 }
 
 .product-top .prod-data .price .old {
@@ -3077,10 +3103,12 @@ button.close:hover {
     object-fit: scale-down;
     object-position: center
 }
-.reqs-wrap .block .inner .item a{
+
+.reqs-wrap .block .inner .item a {
     display: block;
     height: 100%;
 }
+
 .reqs-wrap .block .inner .author {
     display: inline-block
 }
@@ -4465,7 +4493,8 @@ button.close:hover {
 }
 
 .sign-wrap .form-group:last-of-type {
-    margin: 0
+    margin: 0 auto;
+    text-align: center;
 }
 
 .sign-wrap .form-group .form-control {
@@ -4478,9 +4507,25 @@ button.close:hover {
 }
 
 .sign-wrap .form-group .btn {
-    height: 50px;
-    width: 100%;
-    margin-bottom: 20px
+    height: auto;
+    width: 99%;
+    margin: 0 auto 20px;
+    text-align: center;
+    font-size: 15px;
+    padding: 10px 30px;
+    line-height: inherit;
+    color: #fff;
+    font-weight: 700;
+    background-color: #139feb;
+    border: 1px solid #139feb;
+    transition: all .3s ease-in;
+}
+
+.sign-wrap .form-group .btn:hover,
+.sign-wrap .form-group .btn:focus {
+    color: #139feb;
+    background-color: transparent !important;
+    border: 1px solid #139feb;
 }
 
 .sign-wrap .form-group p {
@@ -6581,4 +6626,36 @@ textarea {
 
 .supp-btns a:hover span {
     color: #fff;
+}
+
+.rel-slider .product-grid {
+    margin: 0 8px 25px;
+}
+
+.product-top {
+    padding-bottom: 35px;
+    border-bottom: 1px solid #eee;
+}
+
+.product-middle,
+.product-table-p {
+    padding: 60px 0;
+}
+
+.product-table-p thead,
+.product-price-p thead {
+    background: #139feb;
+    color: #fff;
+}
+
+.product-table-p thead>tr>th,
+.product-price-p thead>tr>th {
+    color: #fff;
+    border-bottom-width: 1px;
+    text-align: center;
+}
+
+.product-table-p .table>tbody>tr>td,
+.product-price-p .table>tbody>tr>td {
+    text-align: center;
 }

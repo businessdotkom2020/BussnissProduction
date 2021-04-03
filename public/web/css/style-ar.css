@@ -708,7 +708,7 @@ a, li, span, p, button{
 }
 
 .box-filter {
-    text-align: left
+    /* text-align: left */
 }
 
 .ribbon {
@@ -1023,4 +1023,8 @@ a, li, span, p, button{
 }
 .rate-stars .stars{
     direction: ltr;
+}
+.prod-extra li:first-child{
+    right: auto;
+    left: -14px;
 }

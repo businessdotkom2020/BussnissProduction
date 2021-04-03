@@ -74,16 +74,24 @@ $menu = false ;
                     <div class="name">
                         <h3>{{$product->getTranslatedAttribute('name',\App::getLocale())}}</h3>
                         <div class="prod-extra">
+                            <ul>
+                                <li>
+                                    <a href="javascript:void(0)" id="fav-{{$product->id}}"
+                                        class="fav-{{$product->id}} fav-pro {{$product->isFavorited() ? 'fav-active' : null  }}"
+                                        onclick="favtoggle({{$product->id }},{{Auth::user() ? Auth::user()->id : null}})">
+                                        <i class="fa fa-heart"></i>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="javascript:void(0)" class="op-social">
+                                        <i class="fa fa-share-alt"></i>
+                                    </a>
+                                </li>
+                            </ul>
 
-                            <a href="javascript:void(0)" id="fav-{{$product->id}}"
-                                class="fav-{{$product->id}} fav-pro {{$product->isFavorited() ? 'fav-active' : null  }}"
-                                onclick="favtoggle({{$product->id }},{{Auth::user() ? Auth::user()->id : null}})">
-                                <i class="fa fa-heart"></i>
-                            </a>
 
-                            <a href="javascript:void(0)" class="op-social">
-                                <i class="fa fa-share-alt"></i>
-                            </a>
+
+
                         </div>
                     </div>
                     <div class="social shares">
@@ -158,28 +166,37 @@ $menu = false ;
                     </div>
                 </div>
             </div>
-            <div class="col-xs-6">
-                <table class="table">
+            <div class="product-table-p  col-xs-12 col-md-6 ">
+                <div class="table-responsive">
+                    <table class="table table-bordered ">
+
+                        <thead>
+                            <tr>
+                                <th>العنوان</th>
+                                <th>القيمة</th>
+                            </tr>
+                        </thead>
+
+                        <tbody>
 
 
-                    <tbody>
+                            @foreach($product->options as $option)
+                            <tr>
+
+                                <td>{{  $option->attribute ? $option->attribute->getTranslatedAttribute('name',\App::getLocale()) : null }}
+                                </td>
+                                <td>{{ $option->value ? $option->value->getTranslatedAttribute('value',\App::getLocale()) : null }}
+                                </td>
 
 
-                        @foreach($product->options as $option)
-                        <tr>
+                            </tr>
+                            @endforeach
+                        </tbody>
+                    </table>
+                </div>
 
-                            <td>{{  $option->attribute ? $option->attribute->getTranslatedAttribute('name',\App::getLocale()) : null }}
-                            </td>
-                            <td>{{ $option->value ? $option->value->getTranslatedAttribute('value',\App::getLocale()) : null }}
-                            </td>
-
-
-                        </tr>
-                        @endforeach
-                    </tbody>
-                </table>
             </div>
-            <div class="product-middle col-xs-12">
+            <div class="product-middle col-md-6 col-xs-12">
                 <ul class="nav-tabs">
                     <li class="active">
                         <a href="#" data-toggle="tab" data-target="#t1">@lang('general.pricing_plans')</a>
@@ -192,6 +209,7 @@ $menu = false ;
                 </ul>
                 <div class="tab-content">
                     <div class="tab-pane fade active in" id="t1">
+                        <!--
                         <ul>
                             @foreach($product->prices as $price)
                             <li>
@@ -201,6 +219,32 @@ $menu = false ;
                             </li>
                             @endforeach
                         </ul>
+                        -->
+
+                        <div class="product-price-p table-responsive">
+                            <table class="table table-bordered">
+
+                                <thead>
+                                    <tr>
+                                        <th>من</th>
+                                        <th>الي</th>
+                                        <th>السعر</th>
+                                    </tr>
+                                </thead>
+
+                                <tbody>
+                                    @foreach($product->prices as $price)
+                                    <tr>
+
+                                        <td>@lang('general.from') {{$price->quantity_from}} @lang('general.to')</td>
+                                        <td>{{$price->quantity_to}}</td>
+                                        <td> <span>{{$price->price}} l.e</span></td>
+
+                                    </tr>
+                                    @endforeach
+                                </tbody>
+                            </table>
+                        </div>
                     </div>
                     <div class="tab-pane fade" id="t2">
 
@@ -273,7 +317,7 @@ $menu = false ;
 
                         @foreach($related__store_products as $product)
 
-                        <div class="col-md-2 col-sm-3 col-xs-6">
+                        <div class="">
                             <div class="product-grid">
                                 <div class="product-image">
                                     <a href="{{url('product/'.$product->id)}}" class="image">
@@ -364,7 +408,7 @@ $menu = false ;
 
                         @foreach($related_products as $product)
 
-                        <div class="col-md-2 col-sm-3 col-xs-6">
+                        <div class="">
                             <div class="product-grid">
                                 <div class="product-image">
                                     <a href="{{url('product/'.$product->id)}}" class="image">
