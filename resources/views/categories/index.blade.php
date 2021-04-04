@@ -34,7 +34,7 @@ $menu = false ;
 
                 <div class="col-md-3">
                     <div class="categories-block">
-                        <h4>main category name</h4>
+                        <h4>{{$category->getTranslatedAttribute('name',\App::getLocale())}}</h4>
                         <ul class="accordion">
                             <li>
                                 <a class="category-toggle" href="javascript:void(0);">category name 1</a>
