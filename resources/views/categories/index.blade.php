@@ -43,10 +43,10 @@ $menu = false ;
                                 <a class="category-toggle"
                                     href="javascript:void(0);">{{$subCategory->getTranslatedAttribute('name',\App::getLocale())}}</a>
                                 <ul class="inner">
-                                    @foreach ($category->children as $subCategory)
+                                    @foreach ($category->children as $SubSubCategory)
 
                                     <li><a
-                                            href="#">{{$subCategory->getTranslatedAttribute('name',\App::getLocale())}}</a>
+                                            href="{{url('category/'.$SubSubCategory->id)}}">{{$SubSubCategory->getTranslatedAttribute('name',\App::getLocale())}}</a>
                                     </li>
 
                                     @endforeach
