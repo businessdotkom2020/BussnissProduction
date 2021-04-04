@@ -172,7 +172,7 @@
                             @endforeach
 
                             <li class="">
-                                <a href="{{url('/all-categories')}}">
+                                <a href="{{url('/categories')}}">
                                     <img src="{{url('/storage/categories/category_logo.png')}}" alt="">
                                     {{__('general.others')}}
                                 </a>

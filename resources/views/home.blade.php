@@ -99,7 +99,7 @@ $menu = true ;
                 <li>
                     <a href="{{url('category/'.$category->id)}}">
                         <img src="{{url('storage/'.$category->image)}}" alt="">
-                        {{$category->getTranslatedAttribute('name',\App::getLocale())}}
+
                     </a>
                 </li>
                 @endforeach
@@ -172,7 +172,7 @@ $menu = true ;
                 <div class="col-md-12">
                     <div class="g-head">
                         <h3>TOP <span>CATEGORIES</span>OF THE MONTH </h3>
-                        <a href="#" class="more">@lang('general.view_all')</a>
+                        <a href="{{url('categories')}}" class="more">@lang('general.view_all')</a>
                     </div>
                 </div>
 
