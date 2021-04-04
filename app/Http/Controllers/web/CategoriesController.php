@@ -41,8 +41,8 @@ class CategoriesController extends Controller
 
     public function index()
     {
-
-        return view('categories.index');
+        $categories = Category::whereNull('parent_id')->get();
+        return view('categories.index', compact('categories'));
     }
     public function search(Request $request)
     {
