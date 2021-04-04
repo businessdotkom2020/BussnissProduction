@@ -36,71 +36,20 @@ $menu = false ;
                     <div class="categories-block">
                         <h4>{{$category->getTranslatedAttribute('name',\App::getLocale())}}</h4>
                         <ul class="accordion">
+
+                            @foreach ($category->children as $subCategory)
+
                             <li>
-                                <a class="category-toggle" href="javascript:void(0);">category name 1</a>
+                                <a class="category-toggle"
+                                    href="javascript:void(0);">{{$subCategory->getTranslatedAttribute('name',\App::getLocale())}}</a>
                                 <ul class="inner">
                                     <li><a href="#">sub category name</a></li>
                                     <li><a href="#">sub category name</a></li>
                                     <li><a href="#">sub category name</a></li>
                                 </ul>
                             </li>
+                            @endforeach
 
-                            <li>
-                                <a class="category-toggle" href="javascript:void(0);">category name 2</a>
-                                <ul class="inner">
-                                    <li><a href="#">sub category name</a></li>
-                                    <li><a href="#">sub category name</a></li>
-                                    <li><a href="#">sub category name</a></li>
-                                </ul>
-                            </li>
-
-                            <li>
-                                <a class="category-toggle" href="javascript:void(0);">category name 3</a>
-                                <ul class="inner">
-                                    <li>
-                                        <a href="#" class="category-toggle">Open Inner</a>
-                                        <ul class="inner">
-                                            <li><a href="#">sub category name</a></li>
-                                            <li><a href="#">sub category name</a></li>
-                                            <li><a href="#">sub category name</a></li>
-                                        </ul>
-                                    </li>
-
-                                    <li>
-                                        <a href="#" class="category-toggle">Open Inner #2</a>
-                                        <ul class="inner">
-                                            <li><a href="#">sub category name</a></li>
-                                            <li><a href="#">sub category name</a></li>
-                                            <li><a href="#">sub category name</a></li>
-                                        </ul>
-                                    </li>
-
-                                    <li><a href="#">sub category name</a></li>
-                                </ul>
-                            </li>
-
-                            <li>
-                                <a class="category-toggle" href="javascript:void(0);">category name 4</a>
-                                <ul class="inner">
-                                    <li>
-                                        <a href="#" class="category-toggle">category name</a>
-                                        <ul class="inner">
-                                            <li>
-                                                <a href="#" class="category-toggle">sub sub category name</a>
-                                                <ul class="inner">
-                                                    <li><a href="#">sub sub sub category name</a></li>
-                                                    <li><a href="#">sub sub sub category name</a></li>
-                                                    <li><a href="#">sub sub sub category name</a></li>
-                                                </ul>
-                                            </li>
-                                        </ul>
-                                    </li>
-
-                                    <li><a href="#">category name</a></li>
-
-                                    <li><a href="#">category name</a></li>
-                                </ul>
-                            </li>
                         </ul>
                     </div>
                 </div>
