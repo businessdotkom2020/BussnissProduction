@@ -6683,12 +6683,12 @@ textarea {
     top: -48px;
 }
 
-.h-slider .owl-carousel .owl-dot {
+.h-slider.owl-carousel .owl-dot {
     background: #282828;
     width: 22px;
     height: 4px;
 }
 
-.h-slider .owl-carousel .owl-dot.active {
+.h-slider.owl-carousel .owl-dot.active {
     background: #139feb;
 }
