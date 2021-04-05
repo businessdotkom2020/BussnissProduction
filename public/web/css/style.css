@@ -6684,11 +6684,33 @@ textarea {
 }
 
 .h-slider.owl-carousel .owl-dot {
-    background: #282828;
+    background: #282828c7;
     width: 22px;
-    height: 4px;
+    height: 5px;
+    margin: 0 4px;
+    border-radius: 2px;
 }
 
 .h-slider.owl-carousel .owl-dot.active {
     background: #139feb;
+}
+
+.h-slider.owl-carousel .owl-nav button.owl-next,
+.h-slider.owl-carousel .owl-nav button.owl-prev {
+    width: 20px;
+    height: 20px;
+    font-size: 20px;
+}
+
+.h-slider.owl-carousel .owl-nav button.owl-next span,
+.h-slider.owl-carousel .owl-nav button.owl-prev span {
+    display: none;
+}
+
+.h-slider.owl-carousel .owl-nav button.owl-prev {
+    left: 30px;
+}
+
+.h-slider.owl-carousel .owl-nav button.owl-next {
+    right: 30px;
 }
