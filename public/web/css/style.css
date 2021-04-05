@@ -6724,5 +6724,5 @@ textarea {
 }
 .suppliers-register-f .multi_step_form .select2.select2-container.select2-container--default.select2-container--above,
 .suppliers-register-f .multi_step_form .select2.select2-container.select2-container--default.select2-container--focus{
-    display: none !important;
+    /* display: none !important; */
 }
