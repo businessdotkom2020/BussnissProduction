@@ -6714,3 +6714,14 @@ textarea {
 .h-slider.owl-carousel .owl-nav button.owl-next {
     right: 30px;
 }
+
+.suppliers-register-f .multi_step_form .select2-container--default.select2-container .select2-selection--multiple {
+    min-height: 42px;
+    border-radius: 5px
+}
+.suppliers-register-f .multi_step_form .select2-container {
+    width: 100% !important;
+}
+.suppliers-register-f .multi_step_form .select2.select2-container.select2-container--default.select2-container--above{
+    display: none;
+}
