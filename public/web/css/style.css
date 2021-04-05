@@ -1587,6 +1587,8 @@ footer.main-footer.col-xs-12 {
 .s-block {
     transition: all .4s ease-in;
     border: 1px solid #f4f4f4;
+    border-radius: 10px;
+    overflow: hidden;
 }
 
 .s-block .s-data p i.active {
@@ -1599,7 +1601,6 @@ footer.main-footer.col-xs-12 {
 }
 
 .s-block:hover .s-img {
-
     transition: all .3s;
     transform: scale(1.05)
 }
