@@ -125,7 +125,7 @@ $(document).ready(function () {
 
 
     $(".h-slider").owlCarousel({
-        nav: false,
+        nav: true,
         loop: true,
         dots: true,
         autoplay: 5000,

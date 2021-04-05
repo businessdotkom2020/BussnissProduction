@@ -4918,7 +4918,7 @@ button.close:hover {
     background-color: #999;
     overflow: hidden;
     position: relative;
-    height: 270px;
+    height: 250px;
 }
 
 .product-grid .product-image a.image {
@@ -6673,4 +6673,22 @@ textarea {
 .product-table-p .table>tbody>tr>td,
 .product-price-p .table>tbody>tr>td {
     text-align: center;
+}
+
+
+/****************************************************/
+.h-slider .owl-dots {
+    text-align: center;
+    position: relative;
+    top: -48px;
+}
+
+.h-slider .owl-carousel .owl-dot {
+    background: #282828;
+    width: 22px;
+    height: 4px;
+}
+
+.h-slider .owl-carousel .owl-dot.active {
+    background: #139feb;
 }
