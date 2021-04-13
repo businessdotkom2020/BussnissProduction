@@ -47,7 +47,7 @@
 
                         <span>@lang('general.remember_me')</span>
                     </label>
-                    <a href="#">@lang('general.forget_password')</a>
+                    <a href="{{url('forget/password')}}">@lang('general.forget_password')</a>
                 </div>
                 <div class="form-group">
                     <button type="submit" class="btn">@lang('general.login')</button>
