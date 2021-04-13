@@ -44,7 +44,6 @@
                         <div class="alert" style="color:#a94442">{{ $message }}</div>
                         @enderror
 
-
                         <span>@lang('general.remember_me')</span>
                     </label>
                     <a href="{{url('forget/password')}}">@lang('general.forget_password')</a>
