@@ -95,7 +95,7 @@ $menu = false ;
                 </div>
                 <div class="form-group">
                     <button type="submit" class="btn">@lang('general.register')</button>
-                    <p>@lang('general.login_text')<a href="{{url('login')}}">@lang('general.login')</a></p>
+                    <p> @lang('general.login_text') <a href="{{url('login')}}"> @lang('general.login') </a></p>
                 </div>
             </form>
         </div>
