@@ -546,12 +546,12 @@ function addPrice() {
                      <ul>
                          <li>
                              <label for="r1d">
-                                 <input type="radio" id="r1d" value="1" name="product_condition">
+                                 <input type="radio" id="r1d" {{$product->product_condition == 'new' ? ' checked' : '' }} value="1" name="product_condition">
                                  <span>@lang('general.new') </span> </label>
                          </li>
                          <li>
                              <label for="r2d">
-                                 <input type="radio" id="r2d" value="0" name="product_condition">
+                                 <input type="radio" id="r2d" {{$product->product_condition != 'new' ? ' checked' : '' }} value="0" name="product_condition">
                                  <span>@lang('general.used') </span> </label>
                          </li>
                      </ul>
