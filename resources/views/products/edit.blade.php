@@ -475,11 +475,12 @@ function addPrice() {
                  <div class="form-group col-md-6 col-xs-12">
                      <h4>@lang('general.sub_categories')</h4>
                      <select id="subcategory" required name="sub_category_id" class="form-control">
-                         <!-- <option selected disabled>@lang('general.sub_categories')</option> -->
-                         @foreach($SubCategories as $SubCategory)
+                         @forelse ($SubCategories as $SubCategory)
                          <option value="{{$SubCategory->id}}" {{$SubCategory->sub_category_id == $SubCategory->id ? 'selected' : ''}}>
                              {{$SubCategory->getTranslatedAttribute('name',\App::getLocale())}}
                          </option>
+                         @empty
+                         <option selected disabled>@lang('general.sub_categories')</option>
                          @endforeach
                      </select>
                      @error('sub_category_id')
@@ -493,7 +494,14 @@ function addPrice() {
                  <div class="form-group col-md-6 col-xs-12">
                      <h4>@lang('general.sub_sub_categories')</h4>
                      <select id="subsubcategory" required name="category_id" class="form-control">
+                         @forelse ($SubSubCategories as $SubSubCategory)
+                         <option value="{{$SubSubCategory->id}}" {{$SubSubCategory->sub_category_id == $SubCategory->id ? 'selected' : ''}}>
+                             {{$SubSubCategory->getTranslatedAttribute('name',\App::getLocale())}}
+                         </option>
+                         @empty
                          <option selected disabled>@lang('general.sub_sub_categories')</option>
+                         @endforeach
+
                      </select>
                      @error('category_id')
                      <div class="alert" style="color:#a94442">{{ $message }}</div>
