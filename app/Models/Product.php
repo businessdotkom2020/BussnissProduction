@@ -105,25 +105,25 @@ class Product extends Model
         return (int)$this->reviews()->average('stars');
     }
 
-    public function getMainCategoryIdAttribute()
-    {
-        if ($category = Category::find($this->id)) {
-            if (!$category->parent_id) {
-                return $category->id;
-            }
+    // public function getMainCategoryIdAttribute()
+    // {
+    //     if ($category = Category::find($this->id)) {
+    //         if (!$category->parent_id) {
+    //             return $category->id;
+    //         }
 
-            if ($parent_category = Category::find($category->parent_id)) {
-                if (!$parent_category->parent_id) {
-                    return $parent_category->id;
-                }
+    //         if ($parent_category = Category::find($category->parent_id)) {
+    //             if (!$parent_category->parent_id) {
+    //                 return $parent_category->id;
+    //             }
 
 
-                if ($main_category = Category::find($parent_category->parent_id)) {
-                    return $main_category->id;
-                }
-            }
-        }
-    }
+    //             if ($main_category = Category::find($parent_category->parent_id)) {
+    //                 return $main_category->id;
+    //             }
+    //         }
+    //     }
+    // }
 
     public function owner()
     {
