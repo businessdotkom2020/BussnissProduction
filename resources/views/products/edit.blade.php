@@ -500,7 +500,7 @@ function addPrice() {
                          </option>
                          @empty
                          <option selected disabled>@lang('general.sub_sub_categories')</option>
-                         @endforeach
+                         @endforelse
 
                      </select>
                      @error('category_id')
