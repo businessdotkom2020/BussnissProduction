@@ -4,7 +4,7 @@ namespace App\Http\Controllers\web;
 
 use App\Http\Controllers\Controller;
 use App\Http\Requests\Auth\RegisterUsersRequest;
-use App\Models\{User, Product, ProductPrice};
+use App\Models\{User, Product, ProductPrice,Category};
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Hash;
 use RealRashid\SweetAlert\Facades\Alert;
