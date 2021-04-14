@@ -630,7 +630,7 @@ function addPrice() {
                              </div>
                          </div>
                          @else
-                         <div class="s-item col-md-4 col-sm-6 col-xs-12">
+                         <div class="s-item col-md-3 col-sm-6 col-xs-12">
                              <div class="file-upload-wrapper">
                                  <input type="file" name="images[]" id="input-file-max-fs" class="file-upload" data-max-file-size="5M" />
                              </div>
