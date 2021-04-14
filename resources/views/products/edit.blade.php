@@ -596,13 +596,14 @@ function addPrice() {
                      <div class="s-item col-md-4 col-sm-6 col-xs-12">
                      </div>
                      <div class="s-item col-md-4 col-sm-6 col-xs-12">
-                         <div class="file-upload-wrapper">
+                         <div class="prof-img">
                              <label>
                                  <i class="fa fa-camera"></i>
                                  <input name="image" type="file" onchange="document.getElementById('blah').src = window.URL.createObjectURL(this.files[0])">
                                  <img src="{{$product->DefaultImage}}" id="blah" alt="your image">
                              </label>
                          </div>
+
                      </div>
                      <div class="s-item col-md-4 col-sm-6 col-xs-12">
                      </div>
