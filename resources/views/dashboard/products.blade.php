@@ -38,7 +38,7 @@ $menu = false ;
         <br>
 
         @foreach(\App\Models\Product::where('user_id',\Auth::id())->get() as $product)
-        <div class="block b-product col-md-3 col-sm-6 col-xs-12">
+        <!-- <div class="block b-product col-md-3 col-sm-6 col-xs-12">
             <div class="inner">
                 <div class="i-img">
                     <a href="javascript:void(0)" id="fav-{{$product->id}}"
@@ -100,7 +100,74 @@ $menu = false ;
 
                 </div>
             </div>
-        </div>
+        </div> -->
+        <div class="col-md-2 col-sm-3 col-xs-6">
+                    <div class="product-grid">
+                        <div class="product-image">
+                            <a href="{{url('product/'.$product->id)}}" class="image">
+                                <img class="pic-1" src="{{url('storage/'.$product->image)}}">
+                                <img class="pic-2" src="{{url('storage/'.(json_decode($product->images))[0])}}">
+                            </a>
+                            @if ($product->sale_price)
+                            <span
+                                class="product-discount-label">{{ number_format((($product->price - $product->sale_price)*100) /$product->price,0) }}%</span>
+                            @endif
+
+                            <ul class="product-links">
+                                <li><a href="{{url('product/'.$product->id)}}" data-tip="Compare"><i
+                                            class="fa fa-random"></i></a></li>
+                                <li><a href="{{url('product/'.$product->id)}}" data-tip="Add to Wishlist"><i
+                                            class="fa fa-heart"></i></a></li>
+                                {{-- <li><a href="#" data-tip="Quick View"><i class="fa fa-search"></i></a></li> --}}
+                                {{-- <li><a href="#" data-tip="Add to Cart"><i class="fa fa-shopping-cart"></i></a></li> --}}
+                            </ul>
+                        </div>
+                        <div class="product-content">
+                            <h3 class="title"><a
+                                    href="{{url('product/'.$product->id)}}">{{$product->getTranslatedAttribute('name',\App::getLocale())}}</a>
+                            </h3>
+                            <div class="price">
+                                @if ($product->sale_price)
+                                <span>{{$product->price}}</span>
+                                {{$product->sale_price}}
+                                @else
+                                {{$product->price}}
+
+                                @endif
+                            </div>
+                            <div class="c-data">
+                                <p>
+                                    @php
+                                    $rating = $product->average_rating ;
+                                    @endphp
+
+                                    @foreach(range(1,5) as $i)
+                                    @if($rating >0)
+                                    @if($rating > 0.5)
+                                    <i class="fa fa-star active"></i>
+                                    @elseif($rating < 0.5 && $rating> 0)
+                                        <i class="fas fa-star-half"></i>
+                                        @endif
+                                        @else
+                                        <i class="fa fa-star"></i>
+                                        @endif
+                                        @php $rating--; @endphp
+
+                                        @endforeach
+
+
+
+
+                                </p>
+                            </div>
+                            <a class="btn h-pro-btn" href="#" data-toggle="modal"
+                                data-target="#contact_{{$product->user_id}}"
+                                target="_blank">@lang('general.contact_supplier')</a>
+                        </div>
+                    </div>
+                </div>
+
+        
         @endforeach
 
 
