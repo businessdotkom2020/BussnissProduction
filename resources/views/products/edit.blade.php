@@ -13,19 +13,7 @@ $menu = false ;
 
                 <h3 class="update-header">@lang('general.product_main_details')</h3>
                 <br>
-
-
-
-                <div class="form-group col-md-6 col-xs-12">
-                    <h4>Product Name(en)</h4>
-                    <input name="name_en" type="text" class="form-control"
-                        value="{{$product->getTranslatedAttribute('name','en')}}">
-                </div>
-                <div class="form-group col-md-6 col-xs-12">
-                    <h4>Product Name (ar)</h4>
-                    <input name="name_ar" type="text" class="form-control"
-                        value="{{$product->getTranslatedAttribute('name','ar')}}">
-                </div>
+ 
                 <div class="form-group col-md-6 col-xs-12">
                     <h4>@lang('general.categories')</h4>
                     <select id="category" name="category_ids" class="form-control">
@@ -360,36 +348,7 @@ function selectoption(select_id,selectObject) {
 
 
 }
-function addChild() {
-  var parent = document.getElementById('parent');
-//   var newChild = '<p>Child ' + childNumber + '</p>';
-  var newChild = `
-            <div class="form-group col-md-6 col-xs-12">
-
-                              <select id="optselect`+childNumber+`"  onchange="selectoption(`+childNumber+`,this)"  name="options[`+childNumber+`][attribute_id]" class=" optselect form-control">
-                  @foreach(\App\Models\Attribute::get() as $category)
-                  <option value="{{$category->id}}">{{$category->getTranslatedAttribute('name',\App::getLocale())}}</option>
-                  @endforeach
-               </select>
-
-            </div>
-
-                        <div class="form-group col-md-6 col-xs-12">
-               <select id="valueselect`+childNumber+`"  name="options[`+childNumber+`][values_id]" class=" optselect form-control select-nosearch" multiple>
-                  <!--<option selected disabled>@lang('general.categories')</option>-->
-
-
-               </select>
-            </div>
-
-            `;
-  parent.insertAdjacentHTML('beforeend', newChild);
-  childNumber++;
-
-
-      $('select').niceSelect();
-}
-
+ 
 
 function addPrice() {
   var parent = document.getElementById('prices');

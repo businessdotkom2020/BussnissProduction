@@ -28,8 +28,43 @@ class Product extends Model
         return 'slug';
     }
 
-    
-    
+
+
+    public function getCreatedAtAttribute($date)
+    {
+        return  $date ? \Carbon\Carbon::parse($date)->format('H:i Y/m/d') : '19:17 2021/01/25';
+    }
+
+
+    public function getUpdatedAtAttribute($date)
+    {
+        return  $date ? \Carbon\Carbon::parse($date)->format('H:i Y/m/d') : '19:17 2021/01/25';
+    }
+
+    public function getDefaultImageAttribute()
+    {
+        return url('storage/' . $this->image);
+    }
+
+    public function getImageAttribute($value)
+    {
+
+        $isExists = Storage::exists('public/' . $value);
+        $status_list = array(
+
+            '/products/product_image819748.jpg',
+            '/products/product_image819952.png',
+            '/products/product_image1017553.png',
+            '/products/product_image1116640.png',
+            '/products/product_image1318544.jpg',
+
+        );
+        if (is_null($value) || empty($value)  || !$isExists) {
+            return $status_list[rand(0, 4)];
+        }
+        return $value;
+    }
+
 
     public function getImagesAttribute($value)
     {
