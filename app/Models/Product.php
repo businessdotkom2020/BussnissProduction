@@ -14,7 +14,7 @@ class Product extends Model
 {
     use Favoritable, Reviewable, CanBeScoped, Translatable;
     protected $translatable = ['name', 'description'];
-    protected $appends = ['average_rating', 'MainCategoryId', 'supplier_average_rating', 'DefaultImage'];
+    protected $appends = ['average_rating', 'supplier_average_rating', 'DefaultImage'];
     protected $fillable = [
         'user_id',
         'main_category_id',
