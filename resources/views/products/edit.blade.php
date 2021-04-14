@@ -623,7 +623,7 @@ function addPrice() {
                              <div class="prof-img file-upload-wrapper">
                                  <label>
                                      <i class="fa fa-camera"></i>
-                                     <input type="hidden" class="file-upload" name="images[]" value="{{json_decode($product->images)[$i]}}">
+                                     <input type="hidden" name="images[]" value="{{json_decode($product->images)[$i]}}">
                                      <input name="images[]" class="file-upload" type="file" onchange="document.getElementById('blah{{$i}}').src = window.URL.createObjectURL(this.files[0])">
                                      <img src="{{  url('storage/'.json_decode($product->images)[$i]) }}" id="blah{{$i}}" alt="your image">
                                  </label>
