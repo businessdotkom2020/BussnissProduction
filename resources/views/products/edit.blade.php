@@ -620,7 +620,7 @@ function addPrice() {
 
                      @for ($i = 0; $i < 8; $i++) @if(isset(json_decode($product->images)[$i]))
                          <div class="s-item col-md-3 col-sm-6 col-xs-12">
-                             <div class="prof-img file-upload-wrapper">
+                             <div class="prof-img file-upload-wrapper file-upload">
                                  <label>
                                      <i class="fa fa-camera"></i>
                                      <input type="hidden" name="images[]" value="{{json_decode($product->images)[$i]}}">
