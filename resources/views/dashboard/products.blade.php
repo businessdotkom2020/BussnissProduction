@@ -38,40 +38,55 @@ $menu = false ;
         <br>
 
         @foreach(\App\Models\Product::where('user_id',\Auth::id())->get() as $product)
-        <div class="block b-product col-md-3 col-sm-6 col-xs-12">
+           <!-- <div class="block b-product col-md-3 col-sm-6 col-xs-12">
             <div class="inner">
                 <div class="i-img">
                     <a href="javascript:void(0)" id="fav-{{$product->id}}"
-                        class="fav-{{$product->id}} fav-pro {{$product->isFavorited() ? 'fav-active' : null  }}"
-                        onclick="favtoggle({{$product->id }},{{Auth::user() ? Auth::user()->id : null}})">
-                        <i class="fa fa-heart"></i>
-                    </a>
+	@@ -100,73 +100,7 @@ class="title">{{$product->getTranslatedAttribute('name',\App::getLocale())}}</a>
 
-                    <a href="{{url('product/'.$product->id.'/edit')}}" style="left: auto;right: 10px;" class="fav-pro">
-                        <i class="fa fa-edit"></i>
-                    </a>
-                    <a href="{{url('product/'.$product->id.'/delete')}}"
-                        style="left: auto;right: 10px;margin-top: 50px;" class="fav-pro">
-                        <i class="fa fa-trash"></i>
-                    </a>
-
-                    <a href="{{url('product/'.$product->id)}}" class="img-hold">
-
-                        <img src="{{ url('storage/'.$product->image)}}" alt="">
-                        @if(isset(json_decode($product->images)[0]))
-                        <img src="{{ url('storage/'.json_decode($product->images)[0])}}" class="sec-img" alt="">
-                        @endif
-
-                    </a>
                 </div>
-                <div class="i-data">
-                    <a href="{{url('product/'.$product->id)}}"
-                        class="title">{{$product->getTranslatedAttribute('name',\App::getLocale())}}</a>
-                    <div class="cardo" style="flex-grow: 1;padding:0px">
-                        <div class="c-inner" style="text-align: right;">
+            </div>
+        </div> -->
+        <div class="col-md-2 col-sm-3 col-xs-6">
+                    <div class="product-grid">
+                        <div class="product-image">
+                            <a href="{{url('product/'.$product->id)}}" class="image">
+                                <img class="pic-1" src="{{url('storage/'.$product->image)}}">
+                                <img class="pic-2" src="{{url('storage/'.(json_decode($product->images))[0])}}">
+                            </a>
+                            @if ($product->sale_price)
+                            <span
+                                class="product-discount-label">{{ number_format((($product->price - $product->sale_price)*100) /$product->price,0) }}%</span>
+                            @endif
+
+                            <ul class="product-links">
+                                <li><a href="{{url('product/'.$product->id)}}" data-tip="Compare"><i
+                                            class="fa fa-random"></i></a></li>
+                                <li><a href="{{url('product/'.$product->id)}}" data-tip="Add to Wishlist"><i
+                                            class="fa fa-heart"></i></a></li>
+                                {{-- <li><a href="#" data-tip="Quick View"><i class="fa fa-search"></i></a></li> --}}
+                                {{-- <li><a href="#" data-tip="Add to Cart"><i class="fa fa-shopping-cart"></i></a></li> --}}
+                            </ul>
+                        </div>
+                        <div class="product-content">
+                            <h3 class="title"><a
+                                    href="{{url('product/'.$product->id)}}">{{$product->getTranslatedAttribute('name',\App::getLocale())}}</a>
+                            </h3>
+                            <div class="price">
+                                @if ($product->sale_price)
+                                <span>{{$product->price}}</span>
+                                {{$product->sale_price}}
+                                @else
+                                {{$product->price}}
+
+                                @endif
+                            </div>
                             <div class="c-data">
                                 <p>
-                                    @php $rating = $product->average_rating ; @endphp
+                                    @php
+                                    $rating = $product->average_rating ;
+                                    @endphp
+
                                     @foreach(range(1,5) as $i)
                                     @if($rating >0)
                                     @if($rating > 0.5)
@@ -86,21 +101,16 @@ $menu = false ;
 
                                         @endforeach
 
+
+
+
                                 </p>
                             </div>
+                            <a class="btn h-pro-btn" href="{{url('product/'.$product->id.'/edit')}}" target="_blank">@lang('general.edit')</a>
+                            <a class="btn h-pro-btn" href="{{url('product/'.$product->id.'/delete')}}" >@lang('general.delete')</a>
                         </div>
                     </div>
-
-                    <a class="title">{{$product->sale_price  ? $product->sale_price : $product->price  }}
-                        l.e</a>
-
-                    @if($product->sale_price)
-                    <span class="{{$product->sale_price ? 'old' : ''}}">{{$product->price}} l.e</span>
-                    @endif
-
                 </div>
-            </div>
-        </div>
         @endforeach
 
 
