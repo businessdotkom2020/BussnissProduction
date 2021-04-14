@@ -481,7 +481,7 @@ function addPrice() {
                          </option>
                          @empty
                          <option selected disabled>@lang('general.sub_categories')</option>
-                         @endforeach
+                         @endforelse
                      </select>
                      @error('sub_category_id')
                      <div class="alert" style="color:#a94442">{{ $message }}</div>
