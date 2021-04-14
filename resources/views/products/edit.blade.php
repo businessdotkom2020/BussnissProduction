@@ -461,7 +461,7 @@ function addPrice() {
                      <select id="category" name="main_category_id" class="form-control">
                          @foreach($MainCategories as $Maincategory)
                          <option value="{{$Maincategory->id}}" {{$product->main_category_id == $Maincategory->id ? 'selected' : ''}}>
-                             {{$Maincategory->getTranslatedAttribute('name',\App::getLocale())}} {{$product->main_category_id}}
+                             {{$Maincategory->getTranslatedAttribute('name',\App::getLocale())}}
                          </option>
                          @endforeach
                      </select>
@@ -495,7 +495,7 @@ function addPrice() {
                      <h4>@lang('general.sub_sub_categories')</h4>
                      <select id="subsubcategory" required name="category_id" class="form-control">
                          @forelse ($SubSubCategories as $SubSubCategory)
-                         <option value="{{$SubSubCategory->id}}" {{$product->category_id == $SubCategory->id ? 'selected' : ''}}>
+                         <option value="{{$SubSubCategory->id}}" {{$product->category_id == $SubSubCategory->id ? 'selected' : ''}}>
                              {{$SubSubCategory->getTranslatedAttribute('name',\App::getLocale())}}
                          </option>
                          @empty
