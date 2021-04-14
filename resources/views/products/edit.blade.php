@@ -515,7 +515,7 @@ function addPrice() {
                      <select id="brand" required name="brand_id" id="city" class="form-control">
                          <option selected disabled>@lang('general.brand')</option>
                          @foreach(\App\Models\Brand::get() as $brand)
-                         <option value="{{$brand->id}}">{{$brand->name}}</option>
+                         <option {{$product->brand_id == $brand->id ? 'selected' : ''}} value="{{$brand->id}}">{{$brand->name}}</option>
                          @endforeach
                      </select>
                      @error('brand_id')
