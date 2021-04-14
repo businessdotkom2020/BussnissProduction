@@ -531,7 +531,7 @@ function addPrice() {
                      <select id="tag" required name="tag_id" id="city" class="form-control">
                          <option selected disabled>@lang('general.tag')</option>
                          @foreach(\App\Models\Tag::get() as $tag)
-                         <option value="{{$tag->id}}">{{$tag->name}}</option>
+                         <option value="{{$tag->id}}" {{$product->tag_id == $tag->id ? 'selected' : ''}}>{{$tag->name}}</option>
                          @endforeach
                      </select>
                      @error('tag_id')
