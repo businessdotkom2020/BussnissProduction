@@ -566,14 +566,14 @@ function addPrice() {
 
                  <div class="form-group col-md-12 col-xs-12">
                      <h4>@lang('general.description_en') </h4>
-                     <textarea name="description_en" class="form-control"></textarea>
+                     <textarea name="description_en" class="form-control">{{$product->getTranslatedAttribute('description','en')}}</textarea>
                      @error('description_en')
                      <div class="alert" style="color:#a94442">{{ $message }}</div>
                      @enderror
                  </div>
                  <div class="form-group col-md-12 col-xs-12">
                      <h4>@lang('general.description_ar') </h4>
-                     <textarea name="description" class="form-control"></textarea>
+                     <textarea name="description" class="form-control">{{$product->getTranslatedAttribute('description','ar')}}</textarea>
                      @error('description_ar')
                      <div class="alert" style="color:#a94442">{{ $message }}</div>
                      @enderror
