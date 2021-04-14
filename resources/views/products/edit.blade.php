@@ -619,11 +619,11 @@ function addPrice() {
                      <h4>@lang('general.product_addional_image') </h4>
 
                      @for ($i = 0; $i < 8; $i++) @if(isset(json_decode($product->images)[$i]))
+
                          <div class="s-item col-md-3 col-sm-6 col-xs-12">
                              <div class="prof-img file-upload-wrapper">
                                  <label>
                                      <i class="fa fa-camera"></i>
-                                     <input type="hidden" name="images[]" value="{{json_decode($product->images)[$i]}}">
                                      <input name="images[]" class="file-upload" type="file" onchange="document.getElementById('blah{{$i}}').src = window.URL.createObjectURL(this.files[0])">
                                      <img src="{{  url('storage/'.json_decode($product->images)[$i]) }}" id="blah{{$i}}" alt="your image">
                                  </label>
