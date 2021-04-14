@@ -6736,3 +6736,7 @@ textarea {
 .suppliers-register-f .prof-img {
     float: unset;
 }
+.multi_step_form #msform fieldset {
+    position: relative;
+    transform: unset;
+}
