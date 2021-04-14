@@ -476,7 +476,7 @@ function addPrice() {
                      <h4>@lang('general.sub_categories')</h4>
                      <select id="subcategory" required name="sub_category_id" class="form-control">
                          @forelse ($SubCategories as $SubCategory)
-                         <option value="{{$SubCategory->id}}" {{$SubCategory->sub_category_id == $SubCategory->id ? 'selected' : ''}}>
+                         <option value="{{$SubCategory->id}}" {{$product->sub_category_id == $SubCategory->id ? 'selected' : ''}}>
                              {{$SubCategory->getTranslatedAttribute('name',\App::getLocale())}}
                          </option>
                          @empty
@@ -495,7 +495,7 @@ function addPrice() {
                      <h4>@lang('general.sub_sub_categories')</h4>
                      <select id="subsubcategory" required name="category_id" class="form-control">
                          @forelse ($SubSubCategories as $SubSubCategory)
-                         <option value="{{$SubSubCategory->id}}" {{$SubSubCategory->category_id == $SubCategory->id ? 'selected' : ''}}>
+                         <option value="{{$SubSubCategory->id}}" {{$product->category_id == $SubCategory->id ? 'selected' : ''}}>
                              {{$SubSubCategory->getTranslatedAttribute('name',\App::getLocale())}}
                          </option>
                          @empty
