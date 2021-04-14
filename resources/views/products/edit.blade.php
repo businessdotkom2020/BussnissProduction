@@ -461,7 +461,7 @@ function addPrice() {
                      <select id="category" name="main_category_id" class="form-control">
                          @foreach($MainCategories as $Maincategory)
                          <option value="{{$Maincategory->id}}" {{$product->main_category_id == $Maincategory->id ? 'selected' : ''}}>
-                             {{$Maincategory->getTranslatedAttribute('name',\App::getLocale())}}
+                             {{$Maincategory->getTranslatedAttribute('name',\App::getLocale())}} {{$product->main_category_id}}
                          </option>
                          @endforeach
                      </select>
