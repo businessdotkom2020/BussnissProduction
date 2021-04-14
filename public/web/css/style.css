@@ -6732,3 +6732,7 @@ textarea {
 .suppliers-register-f .select2-container--default .select2-selection--single {
     display: none;
 }
+
+.suppliers-register-f .prof-img {
+    float: unset;
+}
