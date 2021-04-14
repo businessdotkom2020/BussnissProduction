@@ -596,14 +596,13 @@ function addPrice() {
                      <div class="s-item col-md-4 col-sm-6 col-xs-12">
                      </div>
                      <div class="s-item col-md-4 col-sm-6 col-xs-12">
-                         <div class="prof-img">
+                         <div class="file-upload-wrapper">
                              <label>
                                  <i class="fa fa-camera"></i>
                                  <input name="image" type="file" onchange="document.getElementById('blah').src = window.URL.createObjectURL(this.files[0])">
                                  <img src="{{$product->DefaultImage}}" id="blah" alt="your image">
                              </label>
                          </div>
-
                      </div>
                      <div class="s-item col-md-4 col-sm-6 col-xs-12">
                      </div>
@@ -618,39 +617,31 @@ function addPrice() {
 
                  <div class="form-group col-md-12 col-xs-12">
                      <h4>@lang('general.product_addional_image') </h4>
-                     <div class="s-item col-md-4 col-sm-6 col-xs-12">
-                         <div class="file-upload-wrapper">
-                             <input type="file" name="images[]" id="input-file-max-fs" class="file-upload" data-max-file-size="5M" />
+
+                     @for ($i = 0; $i < 6; $i++) @if(isset(json_decode($product->images)[$i]))
+                         <div class="s-item col-md-4 col-sm-6 col-xs-12">
+                             <div class="prof-img">
+                                 <label>
+                                     <i class="fa fa-camera"></i>
+                                     <input type="hidden" name="images[]" value="{{json_decode($product->images)[$i]}}">
+                                     <input name="images[]" type="file" onchange="document.getElementById('blah{{$i}}').src = window.URL.createObjectURL(this.files[0])">
+                                     <img src="{{  url('storage/'.json_decode($product->images)[$i]) }}" id="blah{{$i}}" alt="your image">
+                                 </label>
+                             </div>
                          </div>
-                     </div>
-                     <div class="s-item col-md-4 col-sm-6 col-xs-12">
-                         <div class="file-upload-wrapper">
-                             <input type="file" name="images[]" id="input-file-max-fs" class="file-upload" data-max-file-size="5M" />
+                         @else
+                         <div class="s-item col-md-4 col-sm-6 col-xs-12">
+                             <div class="file-upload-wrapper">
+                                 <input type="file" name="images[]" id="input-file-max-fs" class="file-upload" data-max-file-size="5M" />
+                             </div>
                          </div>
-                     </div>
-                     <div class="s-item col-md-4 col-sm-6 col-xs-12">
-                         <div class="file-upload-wrapper">
-                             <input type="file" name="images[]" id="input-file-max-fs" class="file-upload" data-max-file-size="5M" />
-                         </div>
-                     </div>
-                     <div class="s-item col-md-4 col-sm-6 col-xs-12">
-                         <div class="file-upload-wrapper">
-                             <input type="file" name="images[]" id="input-file-max-fs" class="file-upload" data-max-file-size="5M" />
-                         </div>
-                     </div>
-                     <div class="s-item col-md-4 col-sm-6 col-xs-12">
-                         <div class="file-upload-wrapper">
-                             <input type="file" name="images[]" id="input-file-max-fs" class="file-upload" data-max-file-size="5M" />
-                         </div>
-                     </div>
-                     <div class="s-item col-md-4 col-sm-6 col-xs-12">
-                         <div class="file-upload-wrapper">
-                             <input type="file" name="images[]" id="input-file-max-fs" class="file-upload" data-max-file-size="5M" />
-                         </div>
-                     </div>
-                     @error('images')
-                     <div class="alert" style="color:#a94442">{{ $message }}</div>
-                     @enderror
+                         @endif
+                         @endfor
+
+
+                         @error('images')
+                         <div class="alert" style="color:#a94442">{{ $message }}</div>
+                         @enderror
                  </div>
 
                  {{-- ************************* End Images  ************************************** --}}
