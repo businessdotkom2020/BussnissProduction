@@ -596,7 +596,7 @@ function addPrice() {
                      <div class="s-item col-md-4 col-sm-6 col-xs-12">
                      </div>
                      <div class="s-item col-md-4 col-sm-6 col-xs-12">
-                         <div class="file-upload-wrapper">
+                         <div class="file-upload-wrapper prof-img">
                              <label>
                                  <i class="fa fa-camera"></i>
                                  <input name="image" type="file" onchange="document.getElementById('blah').src = window.URL.createObjectURL(this.files[0])">
@@ -618,8 +618,8 @@ function addPrice() {
                  <div class="form-group col-md-12 col-xs-12">
                      <h4>@lang('general.product_addional_image') </h4>
 
-                     @for ($i = 0; $i < 6; $i++) @if(isset(json_decode($product->images)[$i]))
-                         <div class="s-item col-md-4 col-sm-6 col-xs-12">
+                     @for ($i = 0; $i < 8; $i++) @if(isset(json_decode($product->images)[$i]))
+                         <div class="s-item col-md-3 col-sm-6 col-xs-12">
                              <div class="prof-img file-upload-wrapper">
                                  <label>
                                      <i class="fa fa-camera"></i>
