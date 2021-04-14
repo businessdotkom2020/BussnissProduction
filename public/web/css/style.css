@@ -6738,8 +6738,8 @@ textarea {
 }
 
 .suppliers-register-f .multi_step_form #msform fieldset {
-    position: relative;
-    transform: unset;
+    position: relative !important;
+    transform: unset !important;
 }
 /* 
 .suppliers-register-f .prof-img label {
