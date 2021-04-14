@@ -439,7 +439,7 @@ function addPrice() {
 
                  <div class="form-group col-md-6 col-xs-12">
                      <h4> @lang('general.product_name_en') </h4>
-                     <input name="name" value="{{$product->getTranslatedAttribute('description','en')}}" required type="text" class="form-control">
+                     <input name="name" value="{{$product->getTranslatedAttribute('name','en')}}" required type="text" class="form-control">
                      @error('name_en')
                      <div class="alert" style="color:#a94442">{{ $message }}</div>
                      @enderror
@@ -448,7 +448,7 @@ function addPrice() {
 
                  <div class="form-group col-md-6 col-xs-12">
                      <h4>@lang('general.product_name_ar')</h4>
-                     <input name="name_ar" value="{{$product->getTranslatedAttribute('description','en')}}" required type="text" class="form-control">
+                     <input name="name_ar" value="{{$product->getTranslatedAttribute('name','ar')}}" required type="text" class="form-control">
                      @error('name_ar')
                      <div class="alert" style="color:#a94442">{{ $message }}</div>
                      @enderror
