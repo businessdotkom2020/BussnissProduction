@@ -16,6 +16,8 @@
     float: left;
     border-radius: 10px;
     overflow: hidden;
+    width: 290px;
+    height: 300px;
 }
 
 .prof-img img {
