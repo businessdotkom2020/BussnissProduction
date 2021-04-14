@@ -17,6 +17,8 @@ class Product extends Model
     protected $appends = ['average_rating', 'MainCategoryId', 'supplier_average_rating', 'DefaultImage'];
     protected $fillable = [
         'user_id',
+        'main_category_id',
+        'sub_category_id',
         'category_id',
         'name',
         'description',

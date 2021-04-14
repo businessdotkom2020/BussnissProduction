@@ -460,14 +460,14 @@ $menu = false ;
 
                 <div class="form-group col-md-6 col-xs-12">
                     <h4>@lang('general.main_categories')</h4>
-                    <select id="category" name="category_ids" class="form-control">
-                        @foreach(\App\Models\Category::whereNull('parent_id')->get() as $category)
-                        <option value="{{$category->id}}">
+                    <select id="category" name="main_category_id" class="form-control">
+                        @foreach(\App\Models\Category::whereNull('parent_id')->get() as $Maincategory)
+                        <option value="{{$category->id}}" {{$product->main_category_id == $Maincategory->id ? 'selected' : ''}}>
                             {{$category->getTranslatedAttribute('name',\App::getLocale())}}
                         </option>
                         @endforeach
                     </select>
-                    @error('category_ids')
+                    @error('main_category_id')
                     <div class="alert" style="color:#a94442">{{ $message }}</div>
                     @enderror
                 </div>
@@ -478,8 +478,13 @@ $menu = false ;
                     <h4>@lang('general.sub_categories')</h4>
                     <select id="subcategory" required name="sub_category_id" class="form-control">
                         <option selected disabled>@lang('general.sub_categories')</option>
+                    @foreach(\App\Models\Category::whereNull('parent_id')->get() as $Maincategory)
+                        <option value="{{$category->id}}" {{$product->main_category_id == $Maincategory->id ? 'selected' : ''}}>
+                            {{$category->getTranslatedAttribute('name',\App::getLocale())}}
+                        </option>
+                        @endforeach
                     </select>
-                    @error('sub_categories')
+                    @error('sub_category_id')
                     <div class="alert" style="color:#a94442">{{ $message }}</div>
                     @enderror
                 </div>
