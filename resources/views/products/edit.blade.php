@@ -460,8 +460,8 @@ function addPrice() {
                      <h4>@lang('general.main_categories')</h4>
                      <select id="category" name="main_category_id" class="form-control">
                          @foreach($MainCategories as $Maincategory)
-                         <option value="{{$category->id}}" {{$product->main_category_id == $Maincategory->id ? 'selected' : ''}}>
-                             {{$category->getTranslatedAttribute('name',\App::getLocale())}}
+                         <option value="{{$Maincategory->id}}" {{$product->main_category_id == $Maincategory->id ? 'selected' : ''}}>
+                             {{$Maincategory->getTranslatedAttribute('name',\App::getLocale())}}
                          </option>
                          @endforeach
                      </select>
@@ -476,9 +476,9 @@ function addPrice() {
                      <h4>@lang('general.sub_categories')</h4>
                      <select id="subcategory" required name="sub_category_id" class="form-control">
                          <option selected disabled>@lang('general.sub_categories')</option>
-                         @foreach(\App\Models\Category::whereNull('parent_id')->get() as $Maincategory)
-                         <option value="{{$category->id}}" {{$product->main_category_id == $Maincategory->id ? 'selected' : ''}}>
-                             {{$category->getTranslatedAttribute('name',\App::getLocale())}}
+                         @foreach($SubCategories as $SubCategory)
+                         <option value="{{$SubCategory->id}}" {{$SubCategory->sub_category_id == $SubCategory->id ? 'selected' : ''}}>
+                             {{$SubCategory->getTranslatedAttribute('name',\App::getLocale())}}
                          </option>
                          @endforeach
                      </select>
