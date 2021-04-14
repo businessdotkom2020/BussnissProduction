@@ -425,8 +425,10 @@ $menu = false ;
 <main class="main-content col-xs-12">
     <div class="add-req-wrap col-xs-12">
         <div class="container">
-            <form action="{{route('ProductSave')}}" method="POST" enctype="multipart/form-data">
+        <form action="{{route('ProductUpdate',['product_id'=> $product->id])}}" method="POST"
+                enctype="multipart/form-data">
                 @csrf
+
                 @foreach ($errors->all() as $error)
                 <li>{{ $error }}</li>
                 @endforeach
@@ -439,7 +441,7 @@ $menu = false ;
 
                 <div class="form-group col-md-6 col-xs-12">
                     <h4> @lang('general.product_name_en') </h4>
-                    <input name="name" required type="text" class="form-control">
+                    <input name="name" value="{{$product->getTranslatedAttribute('description','en')}}" required type="text" class="form-control">
                     @error('name_en')
                     <div class="alert" style="color:#a94442">{{ $message }}</div>
                     @enderror
@@ -448,7 +450,7 @@ $menu = false ;
 
                 <div class="form-group col-md-6 col-xs-12">
                     <h4>@lang('general.product_name_ar')</h4>
-                    <input name="name_ar" required type="text" class="form-control">
+                    <input name="name_ar" value="{{$product->getTranslatedAttribute('description','en')}}" required type="text" class="form-control">
                     @error('name_ar')
                     <div class="alert" style="color:#a94442">{{ $message }}</div>
                     @enderror
