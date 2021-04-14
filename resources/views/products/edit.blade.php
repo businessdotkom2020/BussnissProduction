@@ -597,7 +597,9 @@ function addPrice() {
                      </div>
                      <div class="s-item col-md-4 col-sm-6 col-xs-12">
                          <div class="file-upload-wrapper">
-                             <input type="file" name="image" id="input-file-max-fs" class="file-upload" data-max-file-size="5M" />
+                             <input type="file" onchange="document.getElementById('blah').src = window.URL.createObjectURL(this.files[0])" name="image" id="input-file-max-fs" class="file-upload" data-max-file-size="5M" />
+                             <img src="{{$product->DefaultImage}}" id="blah" alt="your image">
+
                          </div>
                      </div>
                      <div class="s-item col-md-4 col-sm-6 col-xs-12">
