@@ -475,7 +475,7 @@ function addPrice() {
                  <div class="form-group col-md-6 col-xs-12">
                      <h4>@lang('general.sub_categories')</h4>
                      <select id="subcategory" required name="sub_category_id" class="form-control">
-                         <option selected disabled>@lang('general.sub_categories')</option>
+                         <!-- <option selected disabled>@lang('general.sub_categories')</option> -->
                          @foreach($SubCategories as $SubCategory)
                          <option value="{{$SubCategory->id}}" {{$SubCategory->sub_category_id == $SubCategory->id ? 'selected' : ''}}>
                              {{$SubCategory->getTranslatedAttribute('name',\App::getLocale())}}
