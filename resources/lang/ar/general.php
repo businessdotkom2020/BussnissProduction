@@ -127,6 +127,8 @@ return [
     'product_price_list' =>  ' قائمة أسعار المنتج  ',
     'product_condition' =>  ' حالة المنتج',
     'product_attributes' =>  ' سمات المنتج',
+    'edit' =>  'تعديل',
+    'delete' =>  'حذف',
 
 
 
