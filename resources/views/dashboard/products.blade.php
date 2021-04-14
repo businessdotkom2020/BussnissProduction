@@ -163,6 +163,9 @@ $menu = false ;
                             <a class="btn h-pro-btn" href="#" data-toggle="modal"
                                 data-target="#contact_{{$product->user_id}}"
                                 target="_blank">@lang('general.contact_supplier')</a>
+                            <a class="btn h-pro-btn" href="#" data-toggle="modal"
+                                data-target="#contact_{{$product->user_id}}"
+                                target="_blank">@lang('general.contact_supplier')</a>
                         </div>
                     </div>
                 </div>
