@@ -6719,10 +6719,16 @@ textarea {
     min-height: 42px;
     border-radius: 5px
 }
+
 .suppliers-register-f .multi_step_form .select2-container {
     width: 100% !important;
 }
+
 .suppliers-register-f .multi_step_form .select2.select2-container.select2-container--default.select2-container--above,
-.suppliers-register-f .multi_step_form .select2.select2-container.select2-container--default.select2-container--focus{
+.suppliers-register-f .multi_step_form .select2.select2-container.select2-container--default.select2-container--focus {
     /* display: none !important; */
+}
+
+.suppliers-register-f .select2-container--default .select2-selection--single {
+    display: none;
 }
