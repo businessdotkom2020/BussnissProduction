@@ -749,7 +749,7 @@ function addPrice() {
                  </div>
                  <br>
                  <div id="parent">
-                     @foreach($product->options as $option)
+                     @forelse($product->options as $option)
                      <div class="form-group col-md-6 col-xs-12">
                          <select id="optselect1" onchange="selectoption(1,this)" name="options[{{$loop->index}}][attribute_id]" class="form-control">
                              @foreach(\App\Models\Attribute::get() as $attribute)
@@ -766,7 +766,27 @@ function addPrice() {
                              </option>
                          </select>
                      </div>
-                     @endforeach
+                     @empty
+                     <div class="form-group col-md-6 col-xs-12">
+                         <select id="optselect1" onchange="selectoption(1,this)" name="options[0][attribute_id]" class="form-control">
+                             <option selected disabled>@lang('general.choose_attribute')</option>
+
+                             @foreach(\App\Models\Attribute::get() as $attribute)
+                             <option value="{{$attribute->id}}">
+                                 {{$attribute->getTranslatedAttribute('name',\App::getLocale())}}
+                             </option>
+                             @endforeach
+                         </select>
+                     </div>
+                     <div class="form-group col-md-5 col-xs-12">
+                         <select id="valueselect1" required name="options[0][values_id]" class="form-control">
+                             <option selected disabled>@lang('general.choose_attribute_value')</option>
+                         </select>
+                     </div>
+
+
+
+                     @forelse
 
                      @error('options')
                      <div class="alert" style="color:#a94442">{{ $message }}</div>
