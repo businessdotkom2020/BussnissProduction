@@ -751,7 +751,7 @@ function addPrice() {
                  <div id="parent">
                      @forelse($product->options as $option)
                      <div class="form-group col-md-6 col-xs-12">
-                         <select id="optselect1" onchange="selectoption({{$option->attribute_id}},this)" name="options[{{$loop->index}}][attribute_id]" class="form-control">
+                         <select id="optselect{{$option->attribute_id}}" onchange="selectoption({{$option->attribute_id}},this)" name="options[{{$loop->index}}][attribute_id]" class="form-control">
                              @foreach(\App\Models\Attribute::get() as $attribute)
                              <option {{$attribute->id == $option->attribute_id ? 'selected' : ''}} value="{{$attribute->id}}">
                                  {{$attribute->getTranslatedAttribute('name',\App::getLocale())}}
@@ -760,7 +760,7 @@ function addPrice() {
                          </select>
                      </div>
                      <div class="form-group col-md-6 col-xs-12">
-                         <select id="valueselect1" required name="options[{{$loop->index}}][values_id]" class="form-control">
+                         <select id="valueselect{{$option->attribute_id}}" required name="options[{{$loop->index}}][values_id]" class="form-control">
                              <option selected value="{{$option->value_id}}">
                                  {{\App\Models\AttributeValue::find($option->value_id)->getTranslatedAttribute('value',\App::getLocale())}}
                              </option>
@@ -783,8 +783,6 @@ function addPrice() {
                              <option selected disabled>@lang('general.choose_attribute_value')</option>
                          </select>
                      </div>
-
-
 
                      @endforelse
 
