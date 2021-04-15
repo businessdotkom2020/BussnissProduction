@@ -686,10 +686,7 @@ function addPrice() {
                  <br>
                  <div id="prices">
 
-                     @forelse($product->prices as $price)
 
-
-                     @forelse
 
                      <!-- <div class="form-group col-md-5 col-xs-12">
                          <h4>@lang('general.price')</h4>
