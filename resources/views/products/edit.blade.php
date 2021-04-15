@@ -750,8 +750,8 @@ function addPrice() {
                  <br>
                  <div id="parent">
                      @forelse($product->options as $option)
-                     <div class="form-group col-md-6 col-xs-12">
-                         <select id="attribute_attribute_{{$loop->index}}" onchange="selectoption({{$option->attribute_id}},this)" name="options[{{$loop->index}}][attribute_id]" class="form-control">
+                     <div id="attribute_attribute_{{$loop->index}}" class="form-group col-md-6 col-xs-12">
+                         <select onchange="selectoption({{$option->attribute_id}},this)" name="options[{{$loop->index}}][attribute_id]" class="form-control">
                              @foreach(\App\Models\Attribute::get() as $attribute)
                              <option {{$attribute->id == $option->attribute_id ? 'selected' : ''}} value="{{$attribute->id}}">
                                  {{$attribute->getTranslatedAttribute('name',\App::getLocale())}}
@@ -759,8 +759,8 @@ function addPrice() {
                              @endforeach
                          </select>
                      </div>
-                     <div class="form-group col-md-5 col-xs-12">
-                         <select id="attribute_value_{{$loop->index}}" required name="options[{{$loop->index}}][values_id]" class="form-control">
+                     <div id="attribute_value_{{$loop->index}}" class="form-group col-md-5 col-xs-12">
+                         <select required name="options[{{$loop->index}}][values_id]" class="form-control">
                              <option selected value="{{$option->value_id}}">
                                  {{\App\Models\AttributeValue::find($option->value_id)->getTranslatedAttribute('value',\App::getLocale())}}
                              </option>
