@@ -786,7 +786,7 @@ function addPrice() {
 
 
 
-                     @forelse
+                     @endforelse
 
                      @error('options')
                      <div class="alert" style="color:#a94442">{{ $message }}</div>
