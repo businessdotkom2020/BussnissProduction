@@ -31,7 +31,7 @@ class ProductsController extends Controller
         $lang = \Config::get('voyager.multilingual')['locales'];
         $lang = array_values(array_diff($lang, array(\Config::get('voyager.multilingual')['default'])));
 
-        $product =  Product::with('options', 'prices')->find($product_id);
+        $product =  Product::with('options')->find($product_id);
         $MainCategories =  Category::whereNull('parent_id')->get();
         $SubCategories = Category::whereIn('parent_id', $MainCategories->pluck('id'))->get();
         $SubSubCategories = Category::whereIn('parent_id', $SubCategories->pluck('id'))->get();
