@@ -813,8 +813,8 @@ function addPrice() {
  <script src="{{ asset('/web/js/amir-upload-files.js')}}"></script>
  <script src="{{ asset('/web/js/select2.full.min.js')}}"></script>
  <script>
-     var childNumber = '{{ count($product->options)}}';
-     var childNumberprice = '{{ count($product->prices)}}';
+     var childNumber = <?php echo count($product->options) + 1 ?>;
+     var childNumberprice = <?php echo count($product->prices) + 1 ?>;
 
      function selectoption(select_id, selectObject) {
 
