@@ -759,7 +759,7 @@ function addPrice() {
                              @endforeach
                          </select>
                      </div>
-                     <div class="form-group col-md-6 col-xs-12">
+                     <div class="form-group col-md-5 col-xs-12">
                          <select id="valueselect{{$option->attribute_id}}" required name="options[{{$loop->index}}][values_id]" class="form-control">
                              <option selected value="{{$option->value_id}}">
                                  {{\App\Models\AttributeValue::find($option->value_id)->getTranslatedAttribute('value',\App::getLocale())}}
