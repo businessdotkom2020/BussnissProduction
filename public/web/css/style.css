@@ -6773,7 +6773,7 @@ textarea {
 .contact-con .col-md-6:last-child::before {
     content: '';
     position: absolute;
-    right: -20px;
+    left: -20px;
     top: 0;
     width: 1px;
     height: 100%;
