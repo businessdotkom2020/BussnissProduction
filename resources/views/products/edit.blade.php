@@ -728,27 +728,6 @@ function addPrice() {
 
                      @endforelse
 
-                     <!-- <div class="form-group col-md-5 col-xs-12">
-                         <h4>@lang('general.price')</h4>
-                         <input name="prices[0][price]" type="text" class="form-control">
-                     </div>
-                     <div class="form-group col-md-3 col-xs-12">
-                         <h4>@lang('general.quantity_from')</h4>
-                         <input name="prices[0][quantity_from]" type="number" class="form-control">
-                     </div>
-
-                     <div class="form-group col-md-3 col-xs-12">
-                         <h4>@lang('general.quantity_to')</h4>
-                         <input name="prices[0][quantity_to]" type="number" class="form-control">
-                     </div>
-                     <div class="form-group col-md-1 col-xs-12">
-
-                     </div>
-                     @error('product_price_list')
-                     <div class="alert" style="color:#a94442">{{ $message }}</div>
-                     @enderror -->
-
-
                  </div>
 
                  <div style="text-align: center;" class="form-group col-md-12 col-xs-12">
@@ -770,23 +749,24 @@ function addPrice() {
                  </div>
                  <br>
                  <div id="parent">
+                     @foreach($product->options as $option)
                      <div class="form-group col-md-6 col-xs-12">
-                         <select id="optselect1" onchange="selectoption(1,this)" name="options[0][attribute_id]" class="form-control">
-                             <option selected disabled>@lang('general.choose_attribute')</option>
-
+                         <select id="optselect1" onchange="selectoption(1,this)" name="options[{{$loop->index}}][attribute_id]" class="form-control">
                              @foreach(\App\Models\Attribute::get() as $attribute)
-                             <option value="{{$attribute->id}}">
+                             <option {{$attribute->id == $option->attribute_id ? 'selected' : ''}} value="{{$attribute->id}}">
                                  {{$attribute->getTranslatedAttribute('name',\App::getLocale())}}
                              </option>
                              @endforeach
                          </select>
                      </div>
-                     <div class="form-group col-md-5 col-xs-12">
-                         <select id="valueselect1" required name="options[0][values_id]" class="form-control">
-                             <option selected disabled>@lang('general.choose_attribute_value')</option>
+                     <div class="form-group col-md-6 col-xs-12">
+                         <select id="valueselect1" required name="options[{{$loop->index}}][values_id]" class="form-control">
+                             <option selected value="{{$option->value_id}}">
+                                 {{\App\Models\AttributeValue::find($option->value_id)->getTranslatedAttribute('value',\App::getLocale())}}
+                             </option>
                          </select>
                      </div>
-
+                     @endforeach
 
                      @error('options')
                      <div class="alert" style="color:#a94442">{{ $message }}</div>

@@ -314,11 +314,7 @@ class ProductsController extends Controller
             }
         }
 
-
         $product->images = json_encode($images);
-
-
-
 
         if ($image = ($request->file('image'))) {
 
@@ -327,12 +323,7 @@ class ProductsController extends Controller
             $product->image = 'products/' . $file_name;
         }
 
-
-
-
         $product->update();
-
-
 
         ProductPrice::where('product_id', $product_id)->delete();
 
