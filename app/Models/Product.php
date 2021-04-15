@@ -162,7 +162,7 @@ class Product extends Model
 
     public function prices()
     {
-        return $this->hasMany(ProductPrice::class, 'product_id')->select(['id', 'price', 'quantity_from', 'quantity_to']);
+        return $this->hasMany(ProductPrice::class, 'product_id');
     }
 
     public function options()
