@@ -6750,17 +6750,17 @@ textarea {
 .contact-page{
     padding: 70px 0;
 }
-.contact-con{
-  padding: 40px 20px;
-  margin: 0;
-  background-color: #fff;
-  border-radius: 5px;
-  padding: 40px 20px;
-  background-color: #fff;
-  border-radius: 5px;
-  -webkit-box-shadow: 0px 10px 10px 0px rgb(222 222 222 / 14%);
-  -moz-box-shadow: 0px 10px 10px 0px rgb(222 222 222 / 14%);
-  box-shadow: 0px 10px 10px 0px rgb(222 222 222 / 14%);
+.contact-con {
+    padding: 40px 20px;
+    margin: 0;
+    background-color: #fff;
+    border-radius: 5px;
+    padding: 40px 20px;
+    background-color: #fff;
+    border-radius: 5px;
+    -webkit-box-shadow: 8px 10px 15px 10px rgb(222 222 222 / 20%);
+    -moz-box-shadow: 8px 10px 15px 10px rgb(222 222 222 / 20%);
+    box-shadow: 8px 10px 15px 10px rgb(222 222 222 / 20%);
 }
 .contact-con .col-md-6:last-child{
   position: relative;
@@ -6777,17 +6777,23 @@ textarea {
 }
 .contact-con h3{
   font-size: 22px;
-  font-family: C-SB;
-  color: #3B3B3B;
+  color: #000;
   margin: 0 0 30px;
+  font-weight: 700;
 }
 .contact-info{
   margin-bottom: 30px;
 }
 .contact-info li{
-  margin-bottom: 12px;
+  margin-bottom: 17px;
 }
-.contact-info span{
+.contact-info li h4{
+    font-size: 18px;
+    color: #000;
+    margin: 0 0 10px;
+    font-weight: 700;
+}
+.contact-info li span{
   display: inline-block;
 }
 .contact-info .c-icon{

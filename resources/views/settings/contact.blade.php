@@ -19,30 +19,32 @@ $menu = false ;
                 <h3>بيانات التواصل</h3>
                 <ul class="list-unstyled">
                   <li>
-                    <span class="c-icon"><i class="fas fa-phone"></i></span>
-                    <div class="c-con">
-                      <span>800-140-1000</span>
-                    </div>
+                    <h4>Work With Us</h4>
+                    <span>Send your CV to our email: career@martfury.com</span>
                   </li>
                   <li>
-                    <span class="c-icon"><i class="fas fa-fax"></i></span>
-                    <div class="c-con">
-                      <span>فاكس</span>
-                      <span>800-140-1000</span>
-                    </div>
+                    <h4>Headquarters</h4>
+                    <span>17 Queen St, Southbank, Melbourne 10560, Australia</span>
                   </li>
                   <li>
-                    <span class="c-icon"><i class="fas fa-envelope"></i></span>
-                    <div class="c-con">
-                      <span>info@websitename.com</span>
-                    </div>
+                    <h4>Contact Directly</h4>
+                    <span>contact@info.com</span>
+                    <span>(+004) 912-3548-07</span>
                   </li>
-                  <li class="loc">
-                    <span class="c-icon"><i class="fas fa-map-marker-alt"></i></span>
-                    <div class="c-con">
-                      <span>السعودية - الرياض شارع التعاون 3625</span>
-                      
-                    </div>
+                  <li>
+                    <h4>Vendor Support</h4>
+                    <span>contact@info.com</span>
+                    <span>(+004) 912-3548-07</span>
+                  </li>
+                  <li>
+                    <h4>Media Relations</h4>
+                    <span>contact@info.com</span>
+                    <span>(+004) 912-3548-07</span>
+                  </li>
+                  <li>
+                    <h4>Customer Service</h4>
+                    <span>contact@info.com</span>
+                    <span>(+004) 912-3548-07</span>
                   </li>
                 </ul>
               </div>
@@ -52,22 +54,19 @@ $menu = false ;
                 <h3>تواصل معنا الان</h3>
                 <form action="#" method="">
                   <div class="form-group">  
-                      <input type="text" class="form-control" placeholder="اسم العميل">
-                  </div>
-                  <div class="form-group">
-                    <input type="text" class="form-control" placeholder="اسم المشروع">
-                  </div>
-                  <div class="form-group">
-                      <input type="number" class="form-control" placeholder="رقم الجوال">
+                      <input type="text" class="form-control" placeholder="الاسم">
                   </div>
                   <div class="form-group">
                       <input type="email" class="form-control" placeholder="البريد الالكتروني">
                   </div>
                   <div class="form-group">
-                      <textarea class="form-control" placeholder="اكتب رسالتك هنا" rows="5"></textarea>
+                      <input type="number" class="form-control" placeholder="رقم الجوال">
+                  </div>
+                  <div class="form-group">
+                      <textarea class="form-control" placeholder="رسالة" rows="5"></textarea>
                   </div>
                   <div class="">
-                      <button class="submit" type="submit" class="">ارسال</button>
+                      <button class="submit" type="submit" class="">ارسل رسالة</button>
                   </div>
                    
                   
