@@ -7,7 +7,7 @@ $menu = false ;
 
 
 
-
+<div class="clearfix"></div>
   <!-- Start Page-Content -->
   <section class="page-content contact-page">
     <div class="container">
