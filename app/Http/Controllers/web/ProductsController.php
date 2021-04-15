@@ -31,14 +31,14 @@ class ProductsController extends Controller
         $lang = \Config::get('voyager.multilingual')['locales'];
         $lang = array_values(array_diff($lang, array(\Config::get('voyager.multilingual')['default'])));
 
-        $product =  Product::with(['options', 'prices'])->find($product_id);
+        $product =  Product::with('options')->find($product_id);
         $MainCategories =  Category::whereNull('parent_id')->get();
         $SubCategories = Category::whereIn('parent_id', $MainCategories->pluck('id'))->get();
         $SubSubCategories = Category::whereIn('parent_id', $SubCategories->pluck('id'))->get();
 
         $related_products = Product::where([['category_id', $product->category_id], ['id', '!=', $product->id]])->get();
         $related__store_products = Product::where([['user_id', $product->user_id], ['id', '!=', $product->id]])->get();
-        return $product->prices;
+
         return view('products.edit', compact(
             'product',
             'related_products',
