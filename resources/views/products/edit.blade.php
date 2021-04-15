@@ -687,18 +687,7 @@ function addPrice() {
                  <div id="prices">
 
                      @forelse($product->prices as $price)
-                     <div class="form-group col-md-6 col-xs-12">
-                         <h4>Price</h4>
-                         <input value="{{$price->price}}" name="prices[{{$loop->index}}][price]" type="text" class="form-control">
-                     </div>
-                     <div class="form-group col-md-3 col-xs-12">
-                         <h4>Quantity From</h4>
-                         <input value="{{$price->quantity_from}}" name="prices[{{$loop->index}}][quantity_from]" type="text" class="form-control">
-                     </div>
-                     <div class="form-group col-md-3 col-xs-12">
-                         <h4>Quantity To</h4>
-                         <input value="{{$price->quantity_to}}" name="prices[{{$loop->index}}][quantity_to]" type="text" class="form-control">
-                     </div>
+
                      @empty
                      <div class="form-group col-md-5 col-xs-12">
                          <h4>@lang('general.price')</h4>
