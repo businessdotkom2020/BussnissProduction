@@ -6745,3 +6745,150 @@ textarea {
 .suppliers-register-f .prof-img label {
     height: 300px;
 } */
+/*************************************************************************************/
+/********************************* contact  ******************************/
+.contact-con{
+  padding: 40px 20px;
+  margin: 0;
+  background-color: #fff;
+  border-radius: 5px;
+  padding: 40px 20px;
+  background-color: #fff;
+  border-radius: 5px;
+  -webkit-box-shadow: 0px 10px 10px 0px rgb(222 222 222 / 14%);
+  -moz-box-shadow: 0px 10px 10px 0px rgb(222 222 222 / 14%);
+  box-shadow: 0px 10px 10px 0px rgb(222 222 222 / 14%);
+}
+.contact-con .col-md-6:last-child{
+  position: relative;
+
+}
+.contact-con .col-md-6:last-child::before{
+  content: '';
+  position: absolute;
+  right: -20px;
+  top: 0;
+  width: 1px;
+  height: 100%;
+  background-color: #b2b2b242;
+}
+.contact-con h3{
+  font-size: 22px;
+  font-family: C-SB;
+  color: #3B3B3B;
+  margin: 0 0 30px;
+}
+.contact-info{
+  margin-bottom: 30px;
+}
+.contact-info li{
+  margin-bottom: 12px;
+}
+.contact-info span{
+  display: inline-block;
+}
+.contact-info .c-icon{
+  width: 23px;
+  font-size: 20px;
+  background: #F47321;
+  -webkit-background-clip: text;
+  -moz-background-clip: text;
+  background-clip: text;
+ -webkit-text-fill-color:transparent;
+}
+.contact-info .c-con{
+  display: inline-block;
+  width: calc(100% - 33px);
+}
+.contact-info .c-con span{
+  margin:  0 5px;
+  font-size: 16px;
+  font-family: C-SB;
+  color: #616161;
+}
+.contact-info .loc .c-icon{
+  position: relative;
+  top: 0;
+}
+.contact-info .loc .c-con span {
+  width: 70%;
+  line-height: 25px;
+}
+
+/*********** contact-form **************/
+.contact-form .form-control {
+  display: block;
+  width: 100%;
+  height: 45px;
+  padding: 12px;
+  font-size: 13px;
+  line-height: 1.42857143;
+  color: #272727;
+  background-color: transparent;
+  background-image: none;
+  border: 1px solid #cccccc87;
+  border-radius: 5px;
+  -webkit-box-shadow: unset;
+  box-shadow: unset;
+  -webkit-transition: unset;
+  transition: all .24 ease-in;
+  -o-transition: border-color ease-in-out .15s,box-shadow ease-in-out .15s;
+  transition: border-color ease-in-out .15s,box-shadow ease-in-out .15s;
+}
+.contact-form textarea{
+  padding: 12px 42px;
+  height: unset !important;
+  transition: all .4s ease-in;
+  border: 1px solid #cccccc38 !important;
+}
+.contact-form textarea:focus{
+  border: 1px solid #F47321 !important;
+}
+.contact-form input:focus,
+.contact-form .form-control:focus{
+  background-color: transparent !important;
+  box-shadow: unset !important;
+  border-color: #F47321;
+}
+.contact-form form .form-group{
+  position: relative;
+  margin-bottom: 15px;
+}
+.contact-form .submit{
+  padding: 9px 40px;
+  font-size: 16px;
+  box-shadow: unset;
+  border-radius: 5px;
+  color: #fff;
+  border: 0;
+  transition: all .4s ease-in;
+  background: #F47321;
+  border: 1px solid #F47321;
+}
+.contact-form .submit:hover,
+.contact-form .submit:focus{
+  color: #F47321;
+  background: transparent;
+}
+/*****************/
+.contact-form input::-webkit-outer-spin-button,
+.contact-form input::-webkit-inner-spin-button {
+    /* display: none; <- Crashes Chrome on hover */
+    -webkit-appearance: none;
+    margin: 0; /* <-- Apparently some margin are still there even though it's hidden */
+}
+
+.contact-form input[type=number] {
+    -moz-appearance:textfield; /* Firefox */
+}
+.map{
+  margin-top: 40px;
+  height: 450px;
+  border-radius: 5px;
+  overflow: hidden;
+}
+.map iframe{
+  width: 100%;
+  height: 100%;
+}
+/******************************************************************************/
