@@ -751,7 +751,7 @@ function addPrice() {
                  <div id="parent">
                      @forelse($product->options as $option)
                      <div class="form-group col-md-6 col-xs-12">
-                         <select id="optselect1" onchange="selectoption(1,this)" name="options[{{$loop->index}}][attribute_id]" class="form-control">
+                         <select id="optselect1" onchange="selectoption({{$option->attribute_id}},this)" name="options[{{$loop->index}}][attribute_id]" class="form-control">
                              @foreach(\App\Models\Attribute::get() as $attribute)
                              <option {{$attribute->id == $option->attribute_id ? 'selected' : ''}} value="{{$attribute->id}}">
                                  {{$attribute->getTranslatedAttribute('name',\App::getLocale())}}
@@ -819,10 +819,6 @@ function addPrice() {
      var childNumberprice = 2;
 
      function selectoption(select_id, selectObject) {
-         console.log(select_id);
-         console.log(selectObject.value);
-
-
 
          $.ajax({
              type: "get",
