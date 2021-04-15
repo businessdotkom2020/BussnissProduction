@@ -6747,6 +6747,9 @@ textarea {
 } */
 /*************************************************************************************/
 /********************************* contact  ******************************/
+.contact-page{
+    padding: 70px 0;
+}
 .contact-con{
   padding: 40px 20px;
   margin: 0;
@@ -6790,7 +6793,7 @@ textarea {
 .contact-info .c-icon{
   width: 23px;
   font-size: 20px;
-  background: #F47321;
+  background: #139FEB;
   -webkit-background-clip: text;
   -moz-background-clip: text;
   background-clip: text;
@@ -6842,13 +6845,13 @@ textarea {
   border: 1px solid #cccccc38 !important;
 }
 .contact-form textarea:focus{
-  border: 1px solid #F47321 !important;
+  border: 1px solid #139FEB !important;
 }
 .contact-form input:focus,
 .contact-form .form-control:focus{
   background-color: transparent !important;
   box-shadow: unset !important;
-  border-color: #F47321;
+  border-color: #139FEB;
 }
 .contact-form form .form-group{
   position: relative;
@@ -6862,12 +6865,12 @@ textarea {
   color: #fff;
   border: 0;
   transition: all .4s ease-in;
-  background: #F47321;
-  border: 1px solid #F47321;
+  background: #139FEB;
+  border: 1px solid #139FEB;
 }
 .contact-form .submit:hover,
 .contact-form .submit:focus{
-  color: #F47321;
+  color: #139FEB;
   background: transparent;
 }
 /*****************/
