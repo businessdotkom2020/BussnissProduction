@@ -701,7 +701,7 @@ function addPrice() {
                          <input value="{{$price->quantity_to}}" name="prices[{{$loop->index}}][quantity_to]" type="text" class="form-control">
                      </div>
                      <div id="list_delete_{{$loop->index}}" class="form-group col-md-1 col-xs-12">
-                         <button type="button" onclick="deletePrice(` + childNumberprice + `);" style="padding: 10px; background: #d9534f!important; border: none; margin-top: 35px;"><i style=" color: white;" class=" fa fa-trash" aria-hidden="true"></i>
+                         <button type="button" onclick="deletePrice({{$loop->index}});" style="padding: 10px; background: #d9534f!important; border: none; margin-top: 35px;"><i style=" color: white;" class=" fa fa-trash" aria-hidden="true"></i>
                          </button>
                      </div>
                      @error('product_price_list')
