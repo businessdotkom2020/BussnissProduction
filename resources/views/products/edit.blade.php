@@ -688,7 +688,7 @@ function addPrice() {
 
                      @forelse($product->prices as $price)
 
-
+                     @if(!$result->isEmpty())
                      <div class="form-group col-md-6 col-xs-12">
                          <h4>Price</h4>
                          <input value="{{$price->price}}" name="prices[{{$loop->index}}][price]" type="text" class="form-control">
@@ -701,7 +701,13 @@ function addPrice() {
                          <h4>Quantity To</h4>
                          <input value="{{$price->quantity_to}}" name="prices[{{$loop->index}}][quantity_to]" type="text" class="form-control">
                      </div>
-                     @empty
+
+
+                     @error('product_price_list')
+                     <div class="alert" style="color:#a94442">{{ $message }}</div>
+                     @enderror
+
+                     @else
                      <div class="form-group col-md-5 col-xs-12">
                          <h4>@lang('general.price')</h4>
                          <input name="prices[0][price]" type="text" class="form-control">
@@ -718,9 +724,9 @@ function addPrice() {
                      <div class="form-group col-md-1 col-xs-12">
 
                      </div>
-                     @error('product_price_list')
-                     <div class="alert" style="color:#a94442">{{ $message }}</div>
-                     @enderror
+                     @endif
+
+
                      @forelse
 
                      <!-- <div class="form-group col-md-5 col-xs-12">
