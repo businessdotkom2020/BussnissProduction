@@ -688,19 +688,22 @@ function addPrice() {
 
                      @forelse($product->prices as $price)
 
-                     <div class="form-group col-md-6 col-xs-12">
-                         <h4>Price</h4>
+                     <div id="list_price_{{$loop->index}}" class="form-group col-md-5 col-xs-12">
+                         <h4>@lang('general.price')</h4>
                          <input value="{{$price->price}}" name="prices[{{$loop->index}}][price]" type="text" class="form-control">
                      </div>
-                     <div class="form-group col-md-3 col-xs-12">
-                         <h4>Quantity From</h4>
+                     <div id="list_quantity_from_{{$loop->index}}" class="form-group col-md-3 col-xs-12">
+                         <h4>@lang('general.quantity_from')</h4>
                          <input value="{{$price->quantity_from}}" name="prices[{{$loop->index}}][quantity_from]" type="text" class="form-control">
                      </div>
-                     <div class="form-group col-md-3 col-xs-12">
-                         <h4>Quantity To</h4>
+                     <div id="list_quantity_to_{{$loop->index}}" class="form-group col-md-3 col-xs-12">
+                         <h4>@lang('general.quantity_to')</h4>
                          <input value="{{$price->quantity_to}}" name="prices[{{$loop->index}}][quantity_to]" type="text" class="form-control">
                      </div>
-
+                     <div id="list_delete_{{$loop->index}}" class="form-group col-md-1 col-xs-12">
+                         <button type="button" onclick="deletePrice(` + childNumberprice + `);" style="padding: 10px; background: #d9534f!important; border: none; margin-top: 35px;"><i style=" color: white;" class=" fa fa-trash" aria-hidden="true"></i>
+                         </button>
+                     </div>
                      @error('product_price_list')
                      <div class="alert" style="color:#a94442">{{ $message }}</div>
                      @enderror
@@ -934,9 +937,6 @@ function addPrice() {
 
 
      function deleteAttribute(number) {
-
-
-
          var attribute_attribute = document.getElementById("attribute_attribute_" + number);
          attribute_attribute.remove();
 
@@ -945,10 +945,8 @@ function addPrice() {
 
          var attribute_delete = document.getElementById("attribute_delete_" + number);
          attribute_delete.remove();
-
      }
- </script>
- <script>
+
      $('#category').change(function() {
 
          var cid = $(this).val();
@@ -972,6 +970,7 @@ function addPrice() {
              });
          }
      });
+
      $('#subcategory').change(function() {
          var sid = $(this).val();
          if (sid) {
