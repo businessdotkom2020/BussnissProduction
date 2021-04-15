@@ -5,7 +5,18 @@ $menu = false ;
 @section('content')
 
 
-
+<div class="overlay-s"></div>
+<div class="jumpo col-xs-12" style="background-image: url({{ asset('/web/images/cover.jpg')}})">
+    <div class="container">
+        <h3>اتصل بنا</h3>
+        <ul>
+            <li>
+                <a href="{{url('/')}}">@lang('general.home')</a>
+            </li>
+            <li>اتصل بنا</li>
+        </ul>
+    </div>
+</div>
 
 <div class="clearfix"></div>
   <!-- Start Page-Content -->
@@ -68,8 +79,6 @@ $menu = false ;
                   <div class="">
                       <button class="submit" type="submit" class="">ارسل رسالة</button>
                   </div>
-                   
-                  
 
               </form>
               </div>

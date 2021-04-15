@@ -1028,3 +1028,7 @@ a, li, span, p, button{
     right: auto;
     left: -14px;
 }
+.contact-con .col-md-6:last-child::before{
+    right: -20px;
+    left: auto;
+}
