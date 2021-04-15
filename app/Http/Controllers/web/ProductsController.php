@@ -38,6 +38,7 @@ class ProductsController extends Controller
 
         $related_products = Product::where([['category_id', $product->category_id], ['id', '!=', $product->id]])->get();
         $related__store_products = Product::where([['user_id', $product->user_id], ['id', '!=', $product->id]])->get();
+        return $product->prices;
         return view('products.edit', compact(
             'product',
             'related_products',
