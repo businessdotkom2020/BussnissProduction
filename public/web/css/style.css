@@ -6925,6 +6925,17 @@ textarea {
     .contact-con .col-md-6:last-child::before {
         display: none;
     }
+    .contact-form .submit {
+        padding: 9px 30px;
+        font-size: 15px;
+    }
 }
 
 /******************************************************************************/
+.suppliers-register-f .prof-img {
+    float: unset;
+    margin: 0 auto 25px;
+}
+.multi_step_form #msform fieldset .form-group {
+    margin: 0 auto 16px;
+}
