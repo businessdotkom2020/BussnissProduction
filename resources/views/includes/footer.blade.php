@@ -9,7 +9,7 @@
             <div class="f-item  f-logo-item col-md-3 col-sm-3 col-xs-12">
                 <img src="{{ asset('/web/images/splash_logo.png')}}" alt="">
             </div>
-            <div class="f-item col-md-2 col-md-offset-1  col-sm-3 col-xs-12">
+            <!-- <div class="f-item col-md-2 col-md-offset-1  col-sm-3 col-xs-12">
                 <h4>{{__('general.my_profile')}}</h4>
                 <ul>
                     <li>
@@ -22,7 +22,7 @@
                         <a href="{{url('/')}}">{{__('general.notifications')}}</a>
                     </li>
                 </ul>
-            </div>
+            </div> -->
             <div class="f-item col-md-3 col-sm-3 col-xs-12">
                 <h4>@lang('general.fast_links')</h4>
                 <ul>
