@@ -197,8 +197,7 @@ $menu = true ;
                                     @foreach (\App\Models\Category::where('parent_id',$category->id)->limit(4)->get() as
                                     $sub_category)
                                     <li>
-                                        <a
-                                            href="{{url('category/'.$sub_category->id)}}">{{$sub_category->getTranslatedAttribute('name',\App::getLocale())}}</a>
+                                        <a href="{{url('category/'.$sub_category->id)}}">{{$sub_category->getTranslatedAttribute('name',\App::getLocale())}}</a>
                                     </li>
                                     @endforeach
                                 </ul>
@@ -324,22 +323,19 @@ $menu = true ;
                                 <img class="pic-2" src="{{url('storage/'.(json_decode($product->images))[0])}}">
                             </a>
                             @if ($product->sale_price)
-                            <span
-                                class="product-discount-label">{{ number_format((($product->price - $product->sale_price)*100) /$product->price,0) }}%</span>
+                            <span class="product-discount-label">{{ number_format((($product->price - $product->sale_price)*100) /$product->price,0) }}%</span>
                             @endif
 
                             <ul class="product-links">
-                                <li><a href="{{url('product/'.$product->id)}}" data-tip="Compare"><i
-                                            class="fa fa-random"></i></a></li>
-                                <li><a href="{{url('product/'.$product->id)}}" data-tip="Add to Wishlist"><i
-                                            class="fa fa-heart"></i></a></li>
+                                <!-- <li><a href="{{url('product/'.$product->id)}}" data-tip="Compare"><i
+                                            class="fa fa-random"></i></a></li> -->
+                                <li><a href="{{url('product/'.$product->id)}}" data-tip="Add to Wishlist"><i class="fa fa-heart"></i></a></li>
                                 {{-- <li><a href="#" data-tip="Quick View"><i class="fa fa-search"></i></a></li> --}}
                                 {{-- <li><a href="#" data-tip="Add to Cart"><i class="fa fa-shopping-cart"></i></a></li> --}}
                             </ul>
                         </div>
                         <div class="product-content">
-                            <h3 class="title"><a
-                                    href="{{url('product/'.$product->id)}}">{{$product->getTranslatedAttribute('name',\App::getLocale())}}</a>
+                            <h3 class="title"><a href="{{url('product/'.$product->id)}}">{{$product->getTranslatedAttribute('name',\App::getLocale())}}</a>
                             </h3>
                             <div class="price">
                                 @if ($product->sale_price)
@@ -375,9 +371,7 @@ $menu = true ;
 
                                 </p>
                             </div>
-                            <a class="btn h-pro-btn" href="#" data-toggle="modal"
-                                data-target="#contact_{{$product->user_id}}"
-                                target="_blank">@lang('general.contact_supplier')</a>
+                            <a class="btn h-pro-btn" href="#" data-toggle="modal" data-target="#contact_{{$product->user_id}}" target="_blank">@lang('general.contact_supplier')</a>
                         </div>
                     </div>
                 </div>
@@ -732,9 +726,7 @@ $menu = true ;
                                 </a>
 
                                 <ul class="social">
-                                    <li><a href="#" data-tip="Quick View" data-toggle="modal"
-                                            data-target="#contact_{{$request->user_id}}" target="_blank"><i
-                                                class="fa fa-eye"></i></a></li>
+                                    <li><a href="#" data-tip="Quick View" data-toggle="modal" data-target="#contact_{{$request->user_id}}" target="_blank"><i class="fa fa-eye"></i></a></li>
                                 </ul>
                             </div>
                             <div class="request-content">
@@ -742,9 +734,7 @@ $menu = true ;
                                         {{$product->getTranslatedAttribute('name',\App::getLocale())}}</a>
                                 </h3>
                                 <div class="request-de">
-                                    <a class="add-to-cart" href="{{url('request/'.$product->id)}}"
-                                        data-tip="add-to-cart" data-toggle="modal"
-                                        data-target="#contact_{{$request->user_id}}" target="_blank">
+                                    <a class="add-to-cart" href="{{url('request/'.$product->id)}}" data-tip="add-to-cart" data-toggle="modal" data-target="#contact_{{$request->user_id}}" target="_blank">
                                         @lang('general.contact_supplier')
 
                                     </a>
@@ -900,8 +890,7 @@ $menu = true ;
                                 @if(!Auth::check() || \Auth::user()->canFollow($supplier) &&
                                 \Auth::user()->id !=
                                 $supplier->id)
-                                <a href="javascript:void(0)" id="followtoggle_{{$supplier->id}}"
-                                    onclick="followtoggle({{$supplier->id }})" class="btn ">
+                                <a href="javascript:void(0)" id="followtoggle_{{$supplier->id}}" onclick="followtoggle({{$supplier->id }})" class="btn ">
                                     <i id="followicon_{{$supplier->id}}" class="fa fa-plus"></i>
                                     <span>
                                         Follow
@@ -910,8 +899,7 @@ $menu = true ;
                                 @elseif(Auth::check() && !\Auth::user()->canFollow($supplier) &&
                                 \Auth::user()->id
                                 != $supplier->id)
-                                <a href="javascript:void(0)" id="followtoggle_{{$supplier->id}}"
-                                    onclick="followtoggle({{$supplier->id }})" class="btn following">
+                                <a href="javascript:void(0)" id="followtoggle_{{$supplier->id}}" onclick="followtoggle({{$supplier->id }})" class="btn following">
                                     <i id="followicon_{{$supplier->id}}" class="fa fa-check"></i>
                                     <span>
                                         following
@@ -1052,8 +1040,7 @@ $menu = true ;
                                 </ul>
                             </div>
                             <div class="product-content">
-                                <h3 class="title"><a
-                                        href="{{url('request/'.$product->id)}}">{{$product->getTranslatedAttribute('name',\App::getLocale())}}</a>
+                                <h3 class="title"><a href="{{url('request/'.$product->id)}}">{{$product->getTranslatedAttribute('name',\App::getLocale())}}</a>
                                 </h3>
                                 <div class="price">
                                     @if ($product->sale_price)
@@ -1086,9 +1073,7 @@ $menu = true ;
 
                                     </p>
                                 </div>
-                                <a class="btn h-offers-btn" href="#" data-toggle="modal"
-                                    data-target="#contact_{{$product->user_id}}"
-                                    target="_blank">@lang('general.contact_supplier')</a>
+                                <a class="btn h-offers-btn" href="#" data-toggle="modal" data-target="#contact_{{$product->user_id}}" target="_blank">@lang('general.contact_supplier')</a>
 
                             </div>
                         </div>
@@ -1172,8 +1157,7 @@ $menu = true ;
 
                                     @endforeach
                             </p>
-                            <a class="btn" href="#" data-toggle="modal" data-target="#contact_{{$service->user_id}}"
-                                target="_blank">@lang('general.contact_supplier')</a>
+                            <a class="btn" href="#" data-toggle="modal" data-target="#contact_{{$service->user_id}}" target="_blank">@lang('general.contact_supplier')</a>
                         </div>
                     </div>
                 </div>
@@ -1200,8 +1184,7 @@ $menu = true ;
                 <div class="supp-card">
                     <h3>@lang('general.contact_supplier')</h3>
                     <div class="c-img">
-                        <img src="{{$owner->store_image ? url('storage/'.$owner->avatar) : asset('/web/images/marks/1.png')}}"
-                            alt="">
+                        <img src="{{$owner->store_image ? url('storage/'.$owner->avatar) : asset('/web/images/marks/1.png')}}" alt="">
                     </div>
                     <h4>{{$owner->name}}</h4>
                     <p>
@@ -1442,7 +1425,7 @@ $menu = true ;
                 user_id: user_id
             },
 
-            success: function (result) {
+            success: function(result) {
 
 
                 if (result.class) {
@@ -1487,7 +1470,6 @@ $menu = true ;
         });
 
     }
-
 </script>
 
 
@@ -1501,7 +1483,7 @@ $menu = true ;
         skin: "round"
     });
 
-    $('.op-filter').click(function () {
+    $('.op-filter').click(function() {
         $('.cat-sidebar .widget').slideToggle();
     });
 
@@ -1510,72 +1492,73 @@ $menu = true ;
 
     function followtoggle(follower_id) {
 
-var token = '{{ Session::token() }}';
+        var token = '{{ Session::token() }}';
 
 
 
-$.ajax({
+        $.ajax({
 
 
 
-    type: 'POST',
+            type: 'POST',
 
-    url: '{!!URL::to('user_follow')!!}',
+            url: '{!!URL::to('
+            user_follow ')!!}',
 
-    data: {
-        follower_id: follower_id,
-        _token: token
-    },
+            data: {
+                follower_id: follower_id,
+                _token: token
+            },
 
-    success: function(result) {
+            success: function(result) {
 
-        if (result.class) {
-            $("#followtoggle_" + follower_id).toggleClass(result.class);
-            $("#followicon_" + follower_id).toggleClass(result.icon);
-            $("#followicon_" + follower_id).addClass(result.icon).removeClass(result.old_icon)
-            $("#followtoggle_" + follower_id + " span").text(result.but_status);
+                if (result.class) {
+                    $("#followtoggle_" + follower_id).toggleClass(result.class);
+                    $("#followicon_" + follower_id).toggleClass(result.icon);
+                    $("#followicon_" + follower_id).addClass(result.icon).removeClass(result.old_icon)
+                    $("#followtoggle_" + follower_id + " span").text(result.but_status);
 
-        }
+                }
 
 
 
-        const Toast = Swal.mixin({
+                const Toast = Swal.mixin({
 
-            toast: true,
+                    toast: true,
 
-            position: 'top-end',
+                    position: 'top-end',
 
-            showConfirmButton: false,
+                    showConfirmButton: false,
 
-            timer: 6000,
+                    timer: 6000,
 
-            timerProgressBar: true,
+                    timerProgressBar: true,
 
-            onOpen: (toast) => {
+                    onOpen: (toast) => {
 
-                toast.addEventListener('mouseenter', Swal.stopTimer)
+                        toast.addEventListener('mouseenter', Swal.stopTimer)
 
-                toast.addEventListener('mouseleave', Swal.resumeTimer)
+                        toast.addEventListener('mouseleave', Swal.resumeTimer)
+
+                    }
+
+                })
+
+
+
+                Toast.fire({
+
+                    icon: 'success',
+
+                    title: result.message
+
+                })
 
             }
 
-        })
-
-
-
-        Toast.fire({
-
-            icon: 'success',
-
-            title: result.message
-
-        })
+        });
 
     }
-
-});
-
-}
 </script>
 
 @endpush
