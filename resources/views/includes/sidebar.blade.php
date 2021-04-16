@@ -60,8 +60,7 @@
             <div class="search-g">
                 <form action="{{url('search')}}" method="get">
                     <div class="form-group">
-                        <input type="search" name="keyword" class="form-control"
-                            placeholder="{{__('general.search_products')}}">
+                        <input type="search" name="keyword" class="form-control" placeholder="{{__('general.search_products')}}">
                         <select class="form-control">
                             <option selected disabled>{{__('general.select_category')}}</option>
                             @foreach (\App\Models\Category::whereNull('parent_id')->get() as $category)
@@ -204,7 +203,7 @@
                     <a href="{{url('privacy')}}">{{__('general.privacy')}}</a>
                 </li>
                 <li>
-                    <a href="#">{{__('general.contact_us')}}</a>
+                    <a href="{{url('contact')}}">{{__('general.contact_us')}}</a>
                 </li>
             </ul>
             <div class="reqs">
@@ -253,7 +252,7 @@
                         <a href="{{url('privacy')}}">@lang('general.privacy')</a>
                     </li>
                     <li>
-                        <a href="#">@lang('general.contact_us')</a></a>
+                        <a href="{{url('contact')}}">@lang('general.contact_us')</a></a>
                     </li>
                 </ul>
             </div>

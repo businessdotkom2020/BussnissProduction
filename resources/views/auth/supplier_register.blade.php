@@ -39,7 +39,7 @@ $menu = false ;
                 <form id="msform">
                     <!-- Tittle -->
                     <div class="tittle">
-                        <h2>Verification Process</h2>
+                        <h2>@lang('general.supplier_new_account')</h2>
                         <p>In order to use this service, you have to complete this verification process</p>
                     </div>
                     <!-- progressbar -->
@@ -62,8 +62,7 @@ $menu = false ;
                                     </div>
                                     <label>
                                         <i class="fa fa-camera"></i>
-                                        <input name="store_background" type="file"
-                                            onchange="document.getElementById('blah').src = window.URL.createObjectURL(this.files[0])">
+                                        <input name="store_background" type="file" onchange="document.getElementById('blah').src = window.URL.createObjectURL(this.files[0])">
 
                                         <img src="{{ asset('/web/images/cover.jpg')}}" id="blah" alt="your image">
                                     </label>
@@ -80,10 +79,8 @@ $menu = false ;
                                     <label>
                                         <i class="fa fa-camera"></i>
 
-                                        <input name="store_image" type="file"
-                                            onchange="document.getElementById('blah1').src = window.URL.createObjectURL(this.files[0])">
-                                        <img src="{{ url('storage/users/default_company.png')}}" id="blah1"
-                                            alt="your image">
+                                        <input name="store_image" type="file" onchange="document.getElementById('blah1').src = window.URL.createObjectURL(this.files[0])">
+                                        <img src="{{ url('storage/users/default_company.png')}}" id="blah1" alt="your image">
                                     </label>
                                     @error('store_image')
                                     <div class="alert" style="color:#a94442">{{ $message }}</div>
@@ -99,19 +96,18 @@ $menu = false ;
                         <div class="form-row">
                             <div class="form-group col-md-6 col-xs-12">
                                 <h4 style="font-size:15px">@lang('general.supplier_name')</h4>
-                                <input type="text" required name="supplier_name"
-                                    placeholder="@lang('general.supplier_name')" class="form-control">
+                                <input type="text" required name="supplier_name" placeholder="@lang('general.supplier_name')" class="form-control">
                             </div>
 
                             <div class="form-group col-md-6 col-xs-12">
                                 <h4 style="font-size:15px">@lang('general.categories')</h4>
 
-                                <select required name="category_ids[]" class="form-control select-nosearch"
-                                    placeholde="@lang('general.categories')" multiple>
+                                <select required name="category_ids[]" class="form-control select-nosearch" placeholde="@lang('general.categories')" multiple>
                                     <!-- <option selected disabled>@lang('general.categories')</option> -->
                                     @foreach(\App\Models\Category::whereNull('parent_id')->get() as $category)
                                     <option value="{{$category->id}}">
-                                        {{$category->getTranslatedAttribute('name',\App::getLocale())}}</option>
+                                        {{$category->getTranslatedAttribute('name',\App::getLocale())}}
+                                    </option>
                                     @endforeach
                                 </select>
 
@@ -121,36 +117,31 @@ $menu = false ;
                             </div>
 
                             <div class="form-group col-md-6 col-xs-12">
-                                <input type="email" required name="email" placeholder="@lang('general.email')"
-                                    class="form-control">
+                                <input type="email" required name="email" placeholder="@lang('general.email')" class="form-control">
                                 @error('email')
                                 <div class="alert" style="color:#a94442">{{ $message }}</div>
                                 @enderror
                             </div>
                             <div class="form-group col-md-6 col-xs-12">
-                                <input type="text" required name="mobile" placeholder="@lang('general.mobile')"
-                                    class="form-control">
+                                <input type="text" required name="mobile" placeholder="@lang('general.mobile')" class="form-control">
                                 @error('mobile')
                                 <div class="alert" style="color:#a94442">{{ $message }}</div>
                                 @enderror
                             </div>
                             <div class="form-group col-md-12 col-xs-12">
-                                <input type="text" required name="hot_number" placeholder="@lang('general.hot_line')"
-                                    class="form-control">
+                                <input type="text" required name="hot_number" placeholder="@lang('general.hot_line')" class="form-control">
                                 @error('hot_line')
                                 <div class="alert" style="color:#a94442">{{ $message }}</div>
                                 @enderror
                             </div>
                             <div class="form-group col-md-6 col-xs-12">
-                                <input type="password" required name="password" placeholder="@lang('general.password')"
-                                    class="form-control">
+                                <input type="password" required name="password" placeholder="@lang('general.password')" class="form-control">
                                 @error('password')
                                 <div class="alert" style="color:#a94442">{{ $message }}</div>
                                 @enderror
                             </div>
                             <div class="form-group col-md-6 col-xs-12">
-                                <input type="password" required name="password_confirmation"
-                                    placeholder="@lang('general.password_confirmation')" class="form-control">
+                                <input type="password" required name="password_confirmation" placeholder="@lang('general.password_confirmation')" class="form-control">
                                 @error('password_confirmation')
                                 <div class="alert" style="color:#a94442">{{ $message }}</div>
                                 @enderror
@@ -199,23 +190,20 @@ $menu = false ;
 
                             </div>
                             <div class="form-group col-md-12 col-xs-12">
-                                <input required type="text" name="street_nom" placeholder="@lang('general.street_num')"
-                                    class="form-control">
+                                <input required type="text" name="street_nom" placeholder="@lang('general.street_num')" class="form-control">
                                 @error('street_nom')
                                 <div class="alert" style="color:#a94442">{{ $message }}</div>
                                 @enderror
                             </div>
 
                             <div class="form-group col-md-12 col-xs-12">
-                                <input required type="text" name="zip_code" placeholder="@lang('general.zip_code')"
-                                    class="form-control">
+                                <input required type="text" name="zip_code" placeholder="@lang('general.zip_code')" class="form-control">
                                 @error('zip_code')
                                 <div class="alert" style="color:#a94442">{{ $message }}</div>
                                 @enderror
                             </div>
                             <div class="form-group col-md-12 col-xs-12">
-                                <input required type="text" name="address" placeholder="@lang('general.address_spec')"
-                                    class="form-control">
+                                <input required type="text" name="address" placeholder="@lang('general.address_spec')" class="form-control">
                                 @error('address_spec')
                                 <div class="alert" style="color:#a94442">{{ $message }}</div>
                                 @enderror
@@ -243,24 +231,21 @@ $menu = false ;
                                     <div class="col-md-4 col-xs-12 m10_b">
 
                                         <button id="current_location" onclick="getLocation()">
-                                            @lang('general.current_location')<i class="fa fa-location-arrow"
-                                                aria-hidden="true"></i></button>
+                                            @lang('general.current_location')<i class="fa fa-location-arrow" aria-hidden="true"></i></button>
                                     </div>
 
                                     <div class="col-md-6 col-xs-12 ">
 
                                         <div class="form-group">
                                             <label for="">Lat</label>
-                                            <input type="text" oninput="initMap()" value="31.3540494"
-                                                class="form-control input-sm" name="lat" id="lat">
+                                            <input type="text" oninput="initMap()" value="31.3540494" class="form-control input-sm" name="lat" id="lat">
                                         </div>
                                     </div>
                                     <div class="col-md-6 col-xs-12 ">
 
                                         <div class="form-group">
                                             <label for="">Lng</label>
-                                            <input type="text" oninput="initMap()" value="31.6841419"
-                                                class="form-control input-sm" name="lng" id="lng">
+                                            <input type="text" oninput="initMap()" value="31.6841419" class="form-control input-sm" name="lng" id="lng">
                                         </div>
                                     </div>
 
@@ -414,9 +399,7 @@ $menu = false ;
 
 
 
-<script
-    src="https://maps.googleapis.com/maps/api/js?key={{ env('GOOGLE_MAPS_API_KEY') }}&libraries=places&callback=initMap"
-    async defer></script>
+<script src="https://maps.googleapis.com/maps/api/js?key={{ env('GOOGLE_MAPS_API_KEY') }}&libraries=places&callback=initMap" async defer></script>
 <!--<script src="https://maps.googleapis.com/maps/api/js?key={{ env('GOOGLE_MAPS_API_KEY') }}&libraries=places&callback=initialize" async defer></script>-->
 <!--<script src="https://maps.googleapis.com/maps/api/js?key=&callback=initMap" async defer></script>-->
 
@@ -443,19 +426,19 @@ $menu = false ;
     }
 
 
-    $('#country').change(function () {
+    $('#country').change(function() {
         console.log('asa');
         var cid = $(this).val();
         if (cid) {
             $.ajax({
                 type: "get",
                 url: " /getStates/" + cid,
-                success: function (res) {
+                success: function(res) {
                     if (res) {
                         $("#state").empty();
                         $("#city").empty();
                         $("#state").append('<option>Select State</option>');
-                        $.each(res, function (key, value) {
+                        $.each(res, function(key, value) {
                             $("#state").append('<option value="' + key + '">' + value +
                                 '</option>');
                         });
@@ -467,17 +450,17 @@ $menu = false ;
             });
         }
     });
-    $('#state').change(function () {
+    $('#state').change(function() {
         var sid = $(this).val();
         if (sid) {
             $.ajax({
                 type: "get",
                 url: "/getCities/" + sid,
-                success: function (res) {
+                success: function(res) {
                     if (res) {
                         $("#city").empty();
                         $("#city").append('<option>Select City</option>');
-                        $.each(res, function (key, value) {
+                        $.each(res, function(key, value) {
                             $("#city").append('<option value="' + key + '">' + value +
                                 '</option>');
                         });
@@ -489,6 +472,5 @@ $menu = false ;
             });
         }
     });
-
 </script>
 @endpush
