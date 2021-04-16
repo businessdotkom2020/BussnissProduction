@@ -40,13 +40,13 @@ $menu = false ;
                     <!-- Tittle -->
                     <div class="tittle">
                         <h2>@lang('general.supplier_new_account')</h2>
-                        <p>In order to use this service, you have to complete this verification process</p>
+                        <p>@lang('general.register_text')</p>
                     </div>
                     <!-- progressbar -->
                     <ul id="progressbar">
-                        <li class="active">Verify Phone</li>
-                        <li>Upload Documents</li>
-                        <li>Security Questions</li>
+                        <li class="active">@lang('general.register_procces_1')</li>
+                        <li>@lang('general.register_procces_2')</li>
+                        <li>@lang('general.register_procces_3')</li>
                     </ul>
                     <!-- fieldsets -->
                     <fieldset>

@@ -129,6 +129,10 @@ return [
     'product_attributes' =>  ' سمات المنتج',
     'edit' =>  'تعديل',
     'delete' =>  'حذف',
+    'register_text' =>  'من أجل استخدام موقعنا و عرض منتجاتك و خدماتك يجب عليك التسجيل معنا',
+    'register_procces_1' =>  'صور و لوجو التاجر',
+    'register_procces_2' =>  'المعلومات الرئيسية',
+    'register_procces_3' =>  'معلومات المكان و الخريطة',
 
 
 
