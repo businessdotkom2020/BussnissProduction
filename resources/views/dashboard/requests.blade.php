@@ -28,51 +28,58 @@ $menu = false ;
 
 
         <div class="form-group col-md-12 col-xs-12" style="text-align: center;margin-top: 15px;margin-bottom: 15px;">
-            <button onclick="window.location='{{ url('request/new') }}'" type="submit" class="btn">Add Request <i
-                    class="fa fa-plus"></i></button>
+            <button onclick="window.location='{{ url('request/new') }}'" type="submit" class="btn">Add Request <i class="fa fa-plus"></i></button>
         </div>
 
 
         @foreach(\App\Models\Request::where('user_id',\Auth::id())->get() as $request)
-        <div class="block b-product col-md-3 col-sm-6 col-xs-12">
-            <div class="inner">
-                <div class="i-img">
-                    <a href="javascript:void(0)" class="fav-pro">
-                        <i class="fa fa-heart"></i>
+        <div class="item">
+            <div class="request-grid">
+                <div class="request-image">
+                    <a href="#" class="image">
+                        <img class="pic-1" src="{{ url('storage/'.(json_decode($request->images))[0])}}">
+                        <img class="pic-2" src="{{ url('storage/'.(json_decode($request->images))[0])}}">
                     </a>
 
-                    <a href="{{url('request/'.$request->id.'/delete')}}" style="left: auto;right: 10px;"
-                        class="fav-pro">
-                        <i class="fa fa-trash"></i>
-                    </a>
-
-                    <a href="{{url('request/'.$request->id)}}" class="img-hold">
-                        @if(isset(json_decode($request->images)[0]))
-                        <img src="{{ url('storage/'.json_decode($request->images)[0])}}" alt="">
-                        @endif
-
-                        @if(isset(json_decode($request->images)[1]))
-                        <img src="{{ url('storage/'.json_decode($request->images)[1])}}" class="sec-img" alt="">
-                        @endif
-
-                    </a>
+                    <ul class="social">
+                        <li><a href="#" data-tip="Quick View" data-toggle="modal" data-target="#contact_{{$request->user_id}}" target="_blank"><i class="fa fa-eye"></i></a></li>
+                    </ul>
                 </div>
-                <div class="i-data">
-                    <a href="{{url('request/'.$request->id)}}"
-                        class="title">{{$request->getTranslatedAttribute('name',\App::getLocale())}}</a>
-                    <p>{{str_limit($request->getTranslatedAttribute('description',\App::getLocale()), 110)}}</p>
-                    <p>
-                        <i class="fa fa-star active"></i>
-                        <i class="fa fa-star active"></i>
-                        <i class="fa fa-star active"></i>
-                        <i class="fa fa-star active"></i>
-                        <i class="fa fa-star active"></i>
-                    </p>
+                <div class="request-content">
+                    <h3 class="title"><a href="{{url('request/'.$product->id)}}">
+                            {{$request->getTranslatedAttribute('name',\App::getLocale())}}</a>
+                    </h3>
+                    <div class="request-de">
+                        <a class="add-to-cart" href="{{url('request/'.$product->id)}}" data-tip="add-to-cart" data-toggle="modal" data-target="#contact_{{$request->user_id}}" target="_blank">
+                            @lang('general.contact_supplier')
 
+                        </a>
+                        <ul class="rating list-inline">
+
+                            @php $rating = $request->average_rating ; @endphp
+                            @foreach(range(1,5) as $i)
+                            @if($rating >0)
+                            @if($rating > 0.5)
+                            <i class="fa fa-star"></i>
+                            @elseif($rating < 0.5 && $rating> 0)
+                                <i class="fas fa-star-half"></i>
+                                @endif
+                                @else
+                                <i class="fa fa-star disable"></i>
+                                @endif
+                                @php $rating--; @endphp
+
+                                @endforeach
+
+
+
+                        </ul>
+                    </div>
 
                 </div>
             </div>
         </div>
+
         @endforeach
 
 

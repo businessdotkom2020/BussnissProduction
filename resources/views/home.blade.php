@@ -731,7 +731,7 @@ $menu = true ;
                             </div>
                             <div class="request-content">
                                 <h3 class="title"><a href="{{url('request/'.$product->id)}}">
-                                        {{$product->getTranslatedAttribute('name',\App::getLocale())}}</a>
+                                        {{$request->getTranslatedAttribute('name',\App::getLocale())}}</a>
                                 </h3>
                                 <div class="request-de">
                                     <a class="add-to-cart" href="{{url('request/'.$product->id)}}" data-tip="add-to-cart" data-toggle="modal" data-target="#contact_{{$request->user_id}}" target="_blank">
