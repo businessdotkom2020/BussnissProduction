@@ -33,10 +33,10 @@ $menu = false ;
         <div class="g-body col-xs-12">
 
 
-            <div class="latest-requests-slider owl-carousel owl-theme">
+            <div class="latest-requests-slider ">
 
                 @foreach(\App\Models\Request::where('user_id',\Auth::id())->get() as $request)
-                <div class="item">
+                <div class="col-md-3">
                     <div class="request-grid">
                         <div class="request-image">
                             <a href="#" class="image">
