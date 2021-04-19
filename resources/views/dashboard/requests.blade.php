@@ -33,7 +33,7 @@ $menu = false ;
         <div class="g-body col-xs-12">
 
 
-            <div class="latest-requests-slider ">
+            <div class="latest- -slider ">
 
                 @foreach(\App\Models\Request::where('user_id',\Auth::id())->get() as $request)
                 <div class="col-md-3">
