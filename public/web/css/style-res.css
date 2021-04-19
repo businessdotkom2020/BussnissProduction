@@ -605,6 +605,10 @@
     .product-wrap {
         padding: 40px 0 10px;
     }
+    .reqs-wrap.reqs-single .block {
+        margin-bottom: 15px;
+    }
+
 }
 
 
