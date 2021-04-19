@@ -153,6 +153,9 @@ $menu = false ;
                                         <label class="star star-1" for="star-1"></label>
 
                                     </div>
+                                    <p>
+                                        برجاء اضافه تقييم قبل التعليق
+                                    </p>
                                 </div>
 
                                 <textarea class="form-control" name="comment"

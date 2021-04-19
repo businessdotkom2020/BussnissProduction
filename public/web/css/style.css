@@ -3146,8 +3146,8 @@ button.close:hover {
 }
 
 .reqs-wrap .block .inner .time {
-    float: right;
-    padding-top: 5px
+    float: unset;
+    padding-top: 15px
 }
 
 .reqs-wrap .block .inner .time span {
@@ -6957,4 +6957,18 @@ textarea {
 }
 .reqs-wrap .cardo {
     padding: 15px 0;
+}
+.reqs-wrap.reqs-single .req-form {
+    margin-bottom: 30px;
+    background: #fff;
+    padding: 25px;
+}
+.reqs-wrap .cardo .c-inner {
+    margin-bottom: 10px;
+    display: inline-block;
+    float: left;
+}
+.reqs-wrap .cardo a.btn{
+    float: right;
+    font-size: 14px;
 }

@@ -1032,3 +1032,9 @@ a, li, span, p, button{
     right: -20px;
     left: auto;
 }
+.reqs-wrap .cardo .c-inner {
+    float: right;
+}
+.reqs-wrap .cardo a.btn{
+    float: left;
+}
