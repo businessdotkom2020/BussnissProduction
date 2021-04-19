@@ -3146,8 +3146,8 @@ button.close:hover {
 }
 
 .reqs-wrap .block .inner .time {
-    float: unset;
-    padding-top: 15px
+    float: unset !important;
+    padding-top: 17px
 }
 
 .reqs-wrap .block .inner .time span {
