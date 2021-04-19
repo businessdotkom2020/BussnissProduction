@@ -46,11 +46,11 @@ $menu = false ;
                     </ul>
                 </div>
                 <div class="request-content">
-                    <h3 class="title"><a href="{{url('request/'.$product->id)}}">
+                    <h3 class="title"><a href="{{url('request/'.$request->id)}}">
                             {{$request->getTranslatedAttribute('name',\App::getLocale())}}</a>
                     </h3>
                     <div class="request-de">
-                        <a class="add-to-cart" href="{{url('request/'.$product->id)}}" data-tip="add-to-cart" data-toggle="modal" data-target="#contact_{{$request->user_id}}" target="_blank">
+                        <a class="add-to-cart" href="{{url('request/'.$request->id)}}" data-tip="add-to-cart" data-toggle="modal" data-target="#contact_{{$request->user_id}}" target="_blank">
                             @lang('general.contact_supplier')
 
                         </a>
