@@ -6955,3 +6955,6 @@ textarea {
 .reqs-wrap .cardo .btn:focus{
     background-color: #139feb !important;
 }
+.reqs-wrap .cardo {
+    padding: 15px 0;
+}
