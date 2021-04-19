@@ -3139,7 +3139,7 @@ button.close:hover {
 
 .reqs-wrap .block .inner .author a {
     color: #333;
-    font-size: 17px;
+    font-size: 20px;
     display: inline-block;
     vertical-align: middle;
     transition: all .3s
@@ -6971,4 +6971,7 @@ textarea {
 .reqs-wrap .cardo a.btn{
     float: right;
     font-size: 14px;
+}
+.reqs-wrap .rate-stars {
+    text-align: center !important;
 }
