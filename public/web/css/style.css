@@ -1493,7 +1493,7 @@ footer.main-footer.col-xs-12 {
 
 .cardo .c-inner .c-data p i {
     color: #e8e8e8;
-    margin: 0 -1px;
+    margin: 0;
     font-size: 17px
 }
 
@@ -3090,7 +3090,8 @@ button.close:hover {
     position: absolute;
     left: -25px;
     top: -25px;
-    background-color: #f3981e;
+    /* background-color: #f3981e; */
+    background-color: #139feb;
     color: #fff;
     padding: 5px 35px 5px 10px;
     font-size: 16px
@@ -3146,7 +3147,7 @@ button.close:hover {
 
 .reqs-wrap .block .inner .time {
     float: right;
-    padding-top: 15px
+    padding-top: 5px
 }
 
 .reqs-wrap .block .inner .time span {
@@ -6941,4 +6942,16 @@ textarea {
 }
 .sign-wrap .form-group label span:before{
     display: none;
+}
+
+
+.reqs-wrap .cardo .c-inner{
+    margin-bottom: 10px;
+}
+.reqs-wrap .block .inner{
+    margin-bottom: 30px;
+}
+.reqs-wrap .cardo .btn:hover,
+.reqs-wrap .cardo .btn:focus{
+    background-color: #139feb !important;
 }
