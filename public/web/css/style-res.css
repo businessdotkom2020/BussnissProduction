@@ -608,6 +608,13 @@
     .reqs-wrap.reqs-single .block {
         margin-bottom: 15px;
     }
+    .reqs-wrap .block .inner .time{
+        float: unset !important;
+    }
+    .reqs-wrap .cardo .c-inner {
+        float: unset !important;
+        display: block;
+    }
 
 }
 
