@@ -241,7 +241,7 @@ $menu = false ;
 
 @endsection
 
-
+@push('scripts')
 <script> 
     $("#req-f-btn").click(function (e) {
         if ($("[type=radio]").not(':checked')[0]){
