@@ -244,7 +244,7 @@ $menu = false ;
 @push('scripts')
 <script> 
     $("#req-f-btn").click(function (e) {
-        if ($("[type=radio]").not(':checked')[0]){
+        if ($('.stars input[value="Yes"]:checked')){
             e.preventDefault();
             e.stopPropagation();
             alert(' برجاء اضافه تقييم قبل التعليق');
