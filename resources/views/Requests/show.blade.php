@@ -78,7 +78,7 @@ $menu = false ;
                                         </p>
                                     </div>
                                 </div>
-                                <div class="col-xs-3">
+                                <div class="col-xs-6">
                                     <a class="btn" href="{{url('supplier/'.$req->user_id)}}" target="_blank">@lang('general.contact_supplier')</a>
                                 </div>
 
