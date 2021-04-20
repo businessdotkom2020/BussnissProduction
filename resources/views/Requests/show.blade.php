@@ -47,43 +47,43 @@ $menu = false ;
                         </div>
                         <div class="i-middle col-xs-12">
                             <div class="req-nname col-xs-12">
-                                
-                            </div>
-                            <div class="author">
-                                <img src="{{url('storage/'.$req->user->avatar)}}" alt="">
-                                <span>{{ $req->user->name}}</span>
-                            </div>
-                            <div class="req-p-nname">
                                 <a href="#">{{$req->name}}</a>
                             </div>
-                            <div class="cardo">
-                                <div class="c-inner" style="text-align: ;">
-                                    <div class="c-data">
-                                        <p>
-                                            @php $rating = $req->average_rating ; @endphp
-                                            @foreach(range(1,5) as $i)
-                                            @if($rating >0)
-                                            @if($rating > 0.5)
-                                            <i class="fa fa-star active"></i>
-                                            @elseif($rating < 0.5 && $rating> 0)
-                                                <i class="fas fa-star-half"></i>
-                                                @endif
-                                                @else
-                                                <i class="fa fa-star"></i>
-                                                @endif
-                                                @php $rating--; @endphp
 
-                                                @endforeach
+                            <div class="col-md-4 col-sm-4 col-xs-12">
+                                <div class="author">
+                                    <img src="{{url('storage/'.$req->user->avatar)}}" alt="">
+                                    <span>{{ $req->user->name}}</span>
+                                </div>
+                            </div>
+                            <div class="col-md-4 col-sm-4 col-xs-12">
+                                <div class="cardo">
+                                    <div class="c-inner" style="text-align: ;">
+                                        <div class="c-data">
+                                            <p>
+                                                @php $rating = $req->average_rating ; @endphp
+                                                @foreach(range(1,5) as $i)
+                                                @if($rating >0)
+                                                @if($rating > 0.5)
+                                                <i class="fa fa-star active"></i>
+                                                @elseif($rating < 0.5 && $rating> 0)
+                                                    <i class="fas fa-star-half"></i>
+                                                    @endif
+                                                    @else
+                                                    <i class="fa fa-star"></i>
+                                                    @endif
+                                                    @php $rating--; @endphp
 
-                                        </p>
+                                                    @endforeach
+
+                                            </p>
+                                        </div>
                                     </div>
                                 </div>
-                                
-                                    <a class="btn" href="{{url('supplier/'.$req->user_id)}}" target="_blank">@lang('general.contact_supplier')</a>
-                                
-
                             </div>
-
+                            <div class="col-md-4 col-sm-4 col-xs-12">
+                                    <a class="btn" href="{{url('supplier/'.$req->user_id)}}" target="_blank">@lang('general.contact_supplier')</a>
+                            </div>
 
                         </div>
                         <div class="i-footer col-xs-12">
