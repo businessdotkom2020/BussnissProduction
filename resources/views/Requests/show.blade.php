@@ -237,12 +237,9 @@ $menu = false ;
     $('#req-f-btn').on('click', function () {
         var rating = $("input[name=rating]:checked").attr('value');
         var review = $('#review').val();
-        if (rating == '0') {
+        if (rating == [0]) {
             $('.error').html('Please select rating');
-        } else if (review == '') {
-            $('.error').html('Please enter review');
-        } else if (review.length <= 2 || review.legth >= 250) {
-            $('.error').html('Please enter review in less than 250 Characters');
+        
         } else {
             // $('.error').html('');
             // alert(rating + '|' + name + '|' + review);
