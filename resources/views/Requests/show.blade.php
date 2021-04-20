@@ -46,13 +46,14 @@ $menu = false ;
                             </div>
                         </div>
                         <div class="i-middle col-xs-12">
+                            <div class="req-nname">
+                                <a href="#">{{$req->name}}</a>
+                            </div>
                             <div class="author">
                                 <img src="{{url('storage/'.$req->user->avatar)}}" alt="">
                                 <span>{{ $req->user->name}}</span>
                             </div>
-                            <div class="req-nname">
-                                <a href="#">{{$req->name}}</a>
-                            </div>
+
                             <div class="cardo">
                                 <div class="c-inner" style="text-align: right;">
                                     <div class="c-data">
