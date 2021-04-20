@@ -75,14 +75,11 @@ $menu = false ;
                                         </p>
                                     </div>
                                 </div>
-                                <!-- <a class="btn" href="{{url('supplier/'.$req->user_id)}}" target="_blank">@lang('general.contact_supplier')</a> -->
+                                <a class="btn" href="{{url('supplier/'.$req->user_id)}}" target="_blank">@lang('general.contact_supplier')</a>
 
                             </div>
 
 
-                            <div class="time">
-                                <span>{{$req->created_at ? $req->created_at : null}}</span>
-                            </div>
                         </div>
                         <div class="i-footer col-xs-12">
                             <div class="title">
@@ -111,8 +108,11 @@ $menu = false ;
                                         share with linkedin
                                     </a>
                                 </div>
-                                <a class="btn" href="{{url('supplier/'.$req->user_id)}}" target="_blank">@lang('general.contact_supplier')</a>
+                                <!-- <a class="btn" href="{{url('supplier/'.$req->user_id)}}" target="_blank">@lang('general.contact_supplier')</a> -->
 
+                                <div class="time">
+                                    <span>{{$req->created_at ? $req->created_at : null}}</span>
+                                </div>
                             </div>
                         </div>
                     </div>
