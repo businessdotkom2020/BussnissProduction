@@ -152,7 +152,7 @@ $menu = false ;
 
                                 <textarea class="form-control" name="comment" placeholder="@lang('general.add_review')" id='review'></textarea>
                                 <span class='error'>error Msg</span>
-                                
+
                                 <button type="submit" class="btn" id="req-f-btn">@lang('general.add_review')</button>
                             </div>
                         </form>
@@ -232,9 +232,7 @@ $menu = false ;
 
 @push('scripts')
 <script>
-
-
-    $('#req-f-btn').on('click', function () {
+    $('#req-f-btn').on('click', function() {
         var rating = $("input[name=rating]:checked").attr('value');
         var review = $('#review').val();
         if (rating == '0') {
@@ -250,8 +248,6 @@ $menu = false ;
             $('.rating-success').addClass('active');
         }
     })
-
-
 </script>
 
 
