@@ -126,6 +126,13 @@ $menu = false ;
                                 <a class="btn" href="{{url('supplier/'.$req->user_id)}}"
                                     target="_blank">@lang('general.contact_supplier')</a>
 
+<<<<<<< HEAD
+=======
+
+                                <div class="time">
+                                    <span>{{$req->created_at ? $req->created_at : null}}</span>
+                                </div>
+>>>>>>> 724b40bcb919e73e7638439759a9b73421283f15
                             </div>
                         </div>
                     </div>
