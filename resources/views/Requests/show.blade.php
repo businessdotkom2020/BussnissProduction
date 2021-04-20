@@ -236,4 +236,19 @@ $menu = false ;
     });
 </script>
 
+<!-- 
+$('#req-f-btn').on('click',function(){
+        var rating = $("input[name=stars]:checked").attr('value');
+
+        if(rating == '0'){
+            $('.error').html('Please select rating');
+
+        
+        }else{
+            $('.error').html('');       
+            alert(stars+'|'+name+'|'+review);
+            $('.rating-form').hide();
+            $('.rating-success').addClass('active');
+        }
+        }) -->
 @endpush
