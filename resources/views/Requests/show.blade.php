@@ -46,15 +46,15 @@ $menu = false ;
                             </div>
                         </div>
                         <div class="i-middle col-xs-12">
-                            <div class="req-nname">
+                            <div class="req-nname col-xs-12">
                                 <a href="#">{{$req->name}}</a>
                             </div>
-                            <div class="author">
+                            <div class="author col-xs-3">
                                 <img src="{{url('storage/'.$req->user->avatar)}}" alt="">
                                 <span>{{ $req->user->name}}</span>
                             </div>
 
-                            <div class="cardo">
+                            <div class="cardo col-xs-3">
                                 <div class="c-inner" style="text-align: right;">
                                     <div class="c-data">
                                         <p>
@@ -76,7 +76,9 @@ $menu = false ;
                                         </p>
                                     </div>
                                 </div>
-                                <a class="btn" href="{{url('supplier/'.$req->user_id)}}" target="_blank">@lang('general.contact_supplier')</a>
+                                <div class="col-xs-3">
+                                    <a class="btn" href="{{url('supplier/'.$req->user_id)}}" target="_blank">@lang('general.contact_supplier')</a>
+                                </div>
 
                             </div>
 
