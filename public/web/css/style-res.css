@@ -616,9 +616,12 @@
         float: unset !important;
         display: block;
     }
+    .reqs-wrap .cardo .c-inner11{
+        margin: 0;
+    }
     .reqs-wrap .req-p-btn,
     .reqs-wrap .cardo .c-inner11 {
-        /* text-align: unset !important; */
+        text-align: center !important;
     }
 
 }
