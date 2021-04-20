@@ -7004,3 +7004,15 @@ textarea {
     display: inline-block;
     float: left;
 }
+.req-nname{
+    text-align: center;
+}
+.req-nname a{
+    color: #333;
+    font-size: 18px;
+    line-height: 1.5;
+    transition: all .3s ease-in;
+}
+.req-nname a:hover{
+    color: #139feb;
+}
