@@ -49,6 +49,9 @@ $menu = false ;
                         <div class="i-middle col-xs-12">
                             <div class="author">
                                 <img src="{{url('storage/'.$req->user->avatar)}}" alt="">
+                                <span>اسم التاجر يكتب هنا</span>
+                            </div>
+                            <div class="req-nname">
                                 <a href="#">{{$req->name}}</a>
                             </div>
                             <div class="cardo">
@@ -160,7 +163,7 @@ $menu = false ;
 
                                 <textarea class="form-control" name="comment"
                                     placeholder="@lang('general.add_review')"></textarea>
-                                <button type="submit" class="btn">@lang('general.add_review')</button>
+                                <button type="submit" class="btn" id="req-f-btn">@lang('general.add_review')</button>
                             </div>
                         </form>
                     </div>
@@ -237,3 +240,17 @@ $menu = false ;
 
 
 @endsection
+
+
+<script> 
+    $("#req-f-btn").click(function (e) {
+        if ($("[type=radio]").not(':checked')[0]){
+            e.preventDefault();
+            e.stopPropagation();
+            alert(' برجاء اضافه تقييم قبل التعليق');
+
+        }//end if
+    });
+</script>
+
+@endpush
