@@ -7006,7 +7006,9 @@ textarea {
 }
 .req-nname{
     text-align: center;
-    margin: 12px 0;
+    margin: 12px 0 17px;
+    border-bottom: 1px solid #f1f1f1;
+    padding-bottom: 7px;
 }
 .req-nname a{
     color: #333;
