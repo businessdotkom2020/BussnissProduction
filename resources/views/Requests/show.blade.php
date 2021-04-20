@@ -58,7 +58,7 @@ $menu = false ;
                             </div>
                             <div class="col-md-4 col-sm-4 col-xs-12">
                                 <div class="cardo">
-                                    <div class="c-inner" style="text-align: ;">
+                                    <div class="c-inner c-inner11" style="text-align: ;">
                                         <div class="c-data">
                                             <p>
                                                 @php $rating = $req->average_rating ; @endphp
@@ -81,7 +81,7 @@ $menu = false ;
                                     </div>
                                 </div>
                             </div>
-                            <div class="col-md-4 col-sm-4 col-xs-12">
+                            <div class="col-md-4 col-sm-4 col-xs-12 req-p-btn">
                                     <a class="btn" href="{{url('supplier/'.$req->user_id)}}" target="_blank">@lang('general.contact_supplier')</a>
                             </div>
 

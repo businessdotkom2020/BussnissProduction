@@ -6956,8 +6956,8 @@ textarea {
     margin-bottom: 30px;
 }
 
-.reqs-wrap .cardo .btn:hover,
-.reqs-wrap .cardo .btn:focus {
+.reqs-wrap .req-p-btn .btn:hover,
+.reqs-wrap .req-p-btn .btn:focus {
     background-color: #139feb !important;
 }
 
@@ -6971,10 +6971,10 @@ textarea {
     padding: 25px;
 }
 
-.reqs-wrap .cardo .c-inner {
+.reqs-wrap .cardo .c-inner11 {
     margin-bottom: 10px;
-    display: inline-block;
-    float: left;
+    display: block;
+    float: center;
 }
 
 .reqs-wrap .cardo a.btn {
