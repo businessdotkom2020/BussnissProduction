@@ -143,12 +143,14 @@ $menu = false ;
                                         <label class="star star-1" for="star-1"></label>
 
                                     </div>
-                                    <p>
+                                    <!-- <p>
                                         برجاء اضافه تقييم قبل التعليق
-                                    </p>
+                                    </p> -->
                                 </div>
 
-                                <textarea class="form-control" name="comment" placeholder="@lang('general.add_review')"></textarea>
+                                <textarea class="form-control" name="comment" placeholder="@lang('general.add_review')" id='review'></textarea>
+                                <span class='error'>error Msg</span>
+                                
                                 <button type="submit" class="btn" id="req-f-btn">@lang('general.add_review')</button>
                             </div>
                         </form>
