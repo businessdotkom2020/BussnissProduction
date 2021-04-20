@@ -110,6 +110,7 @@ $menu = false ;
                                 </div>
                                 <!-- <a class="btn" href="{{url('supplier/'.$req->user_id)}}" target="_blank">@lang('general.contact_supplier')</a> -->
 
+
                                 <div class="time">
                                     <span>{{$req->created_at ? $req->created_at : null}}</span>
                                 </div>
