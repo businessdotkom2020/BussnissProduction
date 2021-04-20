@@ -3240,7 +3240,9 @@ button.close:hover {
 .reqs-wrap.reqs-single .req-form {
     margin-bottom: 50px
 }
-
+.reqs-wrap.reqs-single .req-comments {
+    padding: 0 15px;
+}
 .reqs-wrap.reqs-single .req-comments .req-head {
     margin-bottom: 30px
 }
