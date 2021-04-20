@@ -149,7 +149,7 @@ $menu = false ;
                                 </div>
 
                                 <textarea class="form-control" name="comment" placeholder="@lang('general.add_review')" id='review'></textarea>
-                                <span class='error'>error Msg</span>
+                                <div class='error'></div>
                                 
                                 <button type="submit" class="btn" id="req-f-btn">@lang('general.add_review')</button>
                             </div>
