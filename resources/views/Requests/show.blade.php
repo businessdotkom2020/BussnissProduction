@@ -113,6 +113,7 @@ $menu = false ;
                                 </div>
                                 <!-- <a class="btn" href="{{url('supplier/'.$req->user_id)}}" target="_blank">@lang('general.contact_supplier')</a> -->
 
+
                                 <div class="time">
                                     <span>{{$req->created_at ? $req->created_at : null}}</span>
                                 </div>
@@ -149,17 +150,10 @@ $menu = false ;
                                     </p> -->
                                 </div>
 
-                                <<<<<<< HEAD <textarea class="form-control" name="comment" placeholder="@lang('general.add_review')" id='review'></textarea>
-                                    <<<<<<< HEAD <span class='error'>error Msg</span>
-
-                                        =======
-                                        =======
-                                        <textarea class="form-control" name="comment" placeholder="@lang('general.add_review')" id=''></textarea>
-                                        >>>>>>> efe8facc4c8b4d4e64bd3cec641f9c26dfde7cc3
-                                        <div class='error'></div>
-
-                                        >>>>>>> 40198b90c65aed2e50a85d08d46643784a9b0567
-                                        <button type="submit" class="btn" id="req-f-btn">@lang('general.add_review')</button>
+                                <textarea class="form-control" name="comment" placeholder="@lang('general.add_review')" id=''></textarea>
+                                <div class='error'></div>
+                                
+                                <button type="submit" class="btn" id="req-f-btn">@lang('general.add_review')</button>
                             </div>
                         </form>
                     </div>
@@ -238,15 +232,14 @@ $menu = false ;
 
 @push('scripts')
 <script>
-    $('#req-f-btn').on('click', function() {
+
+
+    $('#req-f-btn').on('click', function () {
         var rating = $("input[name=rating]:checked").attr('value');
-        var review = $('#review').val();
+        
         if (rating == '0') {
             $('.error').html('Please select rating');
-        } else if (review == '') {
-            $('.error').html('Please enter review');
-        } else if (review.length <= 2 || review.legth >= 250) {
-            $('.error').html('Please enter review in less than 250 Characters');
+        
         } else {
             // $('.error').html('');
             // alert(rating + '|' + name + '|' + review);
@@ -254,6 +247,8 @@ $menu = false ;
             // $('.rating-success').addClass('active');
         }
     })
+
+
 </script>
 
 
