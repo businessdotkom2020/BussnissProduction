@@ -150,7 +150,7 @@ $menu = false ;
                                     </p> -->
                                 </div>
 
-                                <textarea class="form-control" name="comment" placeholder="@lang('general.add_review')" id='review'></textarea>
+                                <textarea class="form-control" name="comment" placeholder="@lang('general.add_review')" id=''></textarea>
                                 <div class='error'></div>
                                 
                                 <button type="submit" class="btn" id="req-f-btn">@lang('general.add_review')</button>
@@ -244,10 +244,10 @@ $menu = false ;
         } else if (review.length <= 2 || review.legth >= 250) {
             $('.error').html('Please enter review in less than 250 Characters');
         } else {
-            $('.error').html('');
-            alert(rating + '|' + name + '|' + review);
-            $('.rating-form').hide();
-            $('.rating-success').addClass('active');
+            // $('.error').html('');
+            // alert(rating + '|' + name + '|' + review);
+            // $('.rating-form').hide();
+            // $('.rating-success').addClass('active');
         }
     })
 
