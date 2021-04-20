@@ -7006,10 +7006,11 @@ textarea {
 }
 .req-nname{
     text-align: center;
+    margin: 12px 0;
 }
 .req-nname a{
     color: #333;
-    font-size: 18px;
+    font-size: 20px;
     line-height: 1.5;
     transition: all .3s ease-in;
 }
