@@ -2948,7 +2948,8 @@ footer.main-footer.col-xs-12 {
 .rev-item .r-data p {
     color: #a2a2a2;
     font-family: pop-light;
-    font-size: 13px
+    font-size: 13px;
+    padding: 5px 0;
 }
 
 input.star {
@@ -6960,7 +6961,12 @@ textarea {
 .reqs-wrap .req-p-btn .btn:focus {
     background-color: #139feb !important;
 }
-
+.reqs-wrap .req-p-btn{
+    text-align: right;
+}
+.reqs-wrap .req-p-btn a{
+    font-size: 14px;
+}
 .reqs-wrap .cardo {
     padding: 15px 0;
 }
@@ -6990,4 +6996,11 @@ textarea {
     padding-left: 20px;
     color: red;
     font-size: 12px;
+}
+
+
+.reqs-wrap .cardo.comm {
+    padding: 0;
+    display: inline-block;
+    float: left;
 }

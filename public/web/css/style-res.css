@@ -608,7 +608,8 @@
     .reqs-wrap.reqs-single .block {
         margin-bottom: 15px;
     }
-    .reqs-wrap .block .inner .time{
+    .reqs-wrap .block .inner .time,
+    .reqs-wrap .req-p-btn{
         float: unset !important;
     }
     .reqs-wrap .cardo .c-inner {

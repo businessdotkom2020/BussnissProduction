@@ -1038,3 +1038,6 @@ a, li, span, p, button{
 .reqs-wrap .cardo a.btn{
     /* float: left; */
 }
+.reqs-wrap .req-p-btn{
+    text-align: left;
+}

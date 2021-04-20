@@ -191,7 +191,7 @@ $menu = false ;
                                 </div>
 
 
-                                <div class="cardo">
+                                <div class="cardo comm">
                                     <div class="c-inner" style="text-align: right;">
                                         <div class="c-data">
                                             <p>
