@@ -47,15 +47,17 @@ $menu = false ;
                         </div>
                         <div class="i-middle col-xs-12">
                             <div class="req-nname col-xs-12">
-                                <a href="#">{{$req->name}}</a>
+                                
                             </div>
-                            <div class="author col-xs-3">
+                            <div class="author">
                                 <img src="{{url('storage/'.$req->user->avatar)}}" alt="">
                                 <span>{{ $req->user->name}}</span>
                             </div>
-
-                            <div class="cardo col-xs-3">
-                                <div class="c-inner" style="text-align: right;">
+                            <div class="req-p-nname">
+                                <a href="#">{{$req->name}}</a>
+                            </div>
+                            <div class="cardo">
+                                <div class="c-inner" style="text-align: ;">
                                     <div class="c-data">
                                         <p>
                                             @php $rating = $req->average_rating ; @endphp
@@ -145,9 +147,9 @@ $menu = false ;
                                         <label class="star star-1" for="star-1"></label>
 
                                     </div>
-                                    <!-- <p>
+                                    <p>
                                         برجاء اضافه تقييم قبل التعليق
-                                    </p> -->
+                                    </p>
                                 </div>
 
                                 <textarea class="form-control" name="comment" placeholder="@lang('general.add_review')" id=''></textarea>
