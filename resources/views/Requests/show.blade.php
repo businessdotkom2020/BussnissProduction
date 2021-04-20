@@ -135,7 +135,7 @@ $menu = false ;
 
                     <div class="req-form col-md-12 col-xs-12">
                         <form action="{{route('add_product_review',['type' => 'request','id' => $req->id])}}"
-                            method="POST">
+                            method="POST" class="rating-form">
                             @csrf
 
                             <div class="form-group">
@@ -144,25 +144,28 @@ $menu = false ;
                                     <div class="stars">
 
                                         <input value="1" class="star star-5" id="star-5" type="radio" required
-                                            name="stars" />
+                                            name="rating" />
                                         <label class="star star-5" for="star-5"></label>
-                                        <input value="2" class="star star-4" id="star-4" type="radio" name="stars" />
+                                        <input value="2" class="star star-4" id="star-4" type="radio" name="rating" />
                                         <label class="star star-4" for="star-4"></label>
-                                        <input value="3" class="star star-3" id="star-3" type="radio" name="stars" />
+                                        <input value="3" class="star star-3" id="star-3" type="radio" name="rating" />
                                         <label class="star star-3" for="star-3"></label>
-                                        <input value="4" class="star star-2" id="star-2" type="radio" name="stars" />
+                                        <input value="4" class="star star-2" id="star-2" type="radio" name="rating" />
                                         <label class="star star-2" for="star-2"></label>
-                                        <input value="5" class="star star-1" id="star-1" type="radio" name="stars" />
+                                        <input value="5" class="star star-1" id="star-1" type="radio" name="rating" />
                                         <label class="star star-1" for="star-1"></label>
 
                                     </div>
-                                    <p>
+                                    <!-- <p>
                                         برجاء اضافه تقييم قبل التعليق
-                                    </p>
+                                    </p> -->
                                 </div>
 
-                                <textarea class="form-control" name="comment"
-                                    placeholder="@lang('general.add_review')"></textarea>
+                                <textarea class="form-control" name="comment" placeholder="@lang('general.add_review')"
+                                    id='review'></textarea>
+
+
+                                <span class='error'>error Msg</span>
                                 <button type="submit" class="btn" id="req-f-btn">@lang('general.add_review')</button>
                             </div>
                         </form>
@@ -242,33 +245,45 @@ $menu = false ;
 @endsection
 
 @push('scripts')
-<script> 
+<script>
     // $("#req-f-btn").click(function (e) {
-    //     if ($('.stars input[value="Yes"]:checked')){
+    //     if ($("[type=radio]").not(':checked')[0]) {
     //         e.preventDefault();
-    //         e.stopPropagation();
+    //         //e.stopPropagation();
     //         alert(' برجاء اضافه تقييم قبل التعليق');
 
-    //     }//end if
+    //     } //end if
     // });
 
 
 
 
-    $('#req-f-btn').on('click',function(){
-        var rating = $("input[name=stars]:checked").attr('value');
 
-        if(rating == '0'){
-            alert(' برجاء اضافه تقييم قبل التعليق');
 
-        
-        }else{
-            // $('.error').html('');       
-            // alert(rating+'|'+name+'|'+review);
-            // $('.rating-form').hide();
-            // $('.rating-success').addClass('active');
+
+
+    $('#req-f-btn').on('click', function () {
+        var rating = $("input[name=rating]:checked").attr('value');
+        var review = $('#review').val();
+        if (rating == '0') {
+            $('.error').html('Please select rating');
+
+        } else if (name == '') {
+            $('.error').html('Please enter name');
+        } else if (name.length <= 2 || name.legth >= 50) {
+            $('.error').html('Please enter name in less than 50 Characters');
+        } else if (review == '') {
+            $('.error').html('Please enter review');
+        } else if (review.length <= 2 || review.legth >= 250) {
+            $('.error').html('Please enter review in less than 250 Characters');
+        } else {
+            $('.error').html('');
+            alert(rating + '|' + name + '|' + review);
+            $('.rating-form').hide();
+            $('.rating-success').addClass('active');
         }
-        })
+    })
+
 </script>
 
 @endpush
