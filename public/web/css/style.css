@@ -6926,6 +6926,7 @@ textarea {
     .contact-con .col-md-6:last-child::before {
         display: none;
     }
+
     .contact-form .submit {
         padding: 9px 30px;
         font-size: 15px;
@@ -6937,41 +6938,56 @@ textarea {
     float: unset;
     margin: 0 auto 25px;
 }
+
 .multi_step_form #msform fieldset .form-group {
     margin: 0 auto 16px;
 }
-.sign-wrap .form-group label span:before{
+
+.sign-wrap .form-group label span:before {
     display: none;
 }
 
 
-.reqs-wrap .cardo .c-inner{
+.reqs-wrap .cardo .c-inner {
     margin-bottom: 10px;
 }
-.reqs-wrap .block .inner{
+
+.reqs-wrap .block .inner {
     margin-bottom: 30px;
 }
+
 .reqs-wrap .cardo .btn:hover,
-.reqs-wrap .cardo .btn:focus{
+.reqs-wrap .cardo .btn:focus {
     background-color: #139feb !important;
 }
+
 .reqs-wrap .cardo {
     padding: 15px 0;
 }
+
 .reqs-wrap.reqs-single .req-form {
     margin-bottom: 30px;
     background: #fff;
     padding: 25px;
 }
+
 .reqs-wrap .cardo .c-inner {
     margin-bottom: 10px;
     display: inline-block;
     float: left;
 }
-.reqs-wrap .cardo a.btn{
+
+.reqs-wrap .cardo a.btn {
     float: right;
     font-size: 14px;
 }
+
 .reqs-wrap .rate-stars {
     text-align: center !important;
+}
+
+.reqs-wrap .error {
+    padding-left: 20px;
+    color: red;
+    font-size: 12px;
 }
