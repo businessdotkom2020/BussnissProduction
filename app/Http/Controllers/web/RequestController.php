@@ -113,11 +113,12 @@ class RequestController extends Controller
                 }
             }
 
-            $product->images = json_encode($images);
+            $req->images = json_encode($images);
 
             $req->save();
             return redirect()->route('servicess.index')->with('done', 'Added Successfully ....');
         } catch (\Exception $e) {
+            return $e;
             return redirect()->back()->with('error', 'Error Try Again !!');
         }
     }
