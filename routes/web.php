@@ -153,8 +153,8 @@ Route::get('requests', 'web\RequestController@index');
 Route::get('request/new', 'web\RequestController@create')->middleware('auth');
 Route::post('request/new', 'web\RequestController@post')->name('RequestSave')->middleware('auth');
 Route::post('/request_favorite', 'web\RequestController@favorite')->name('request.favorite');
-Route::get('request/{request_id}', 'web\RequestController@show');
-Route::get('request/{request_id}/edit', 'web\RequestController@edit');
+Route::get('request/{request_id}', 'web\RequestController@show')->name('dash.req');
+Route::get('request/{request_id}/edit', 'web\RequestController@edit')->name('dash.req.edit');
 Route::post('request/{request_id}/update', 'web\RequestController@update')->name('RequestUpdate')->middleware('auth');
 
 
