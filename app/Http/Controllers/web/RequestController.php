@@ -88,7 +88,7 @@ class RequestController extends Controller
     public function update(Request $request, $id)
     {
         try {
-            $req = Req::find($id);
+            $req = $request;
             $req->name = $request->name;
             $req->user_id = $request->user_id;
             $req->description = $request->description;

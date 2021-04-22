@@ -424,7 +424,8 @@ function addPrice() {
  <main class="main-content col-xs-12">
      <div class="add-req-wrap col-xs-12">
          <div class="container">
-             <form action="{{route('ProductUpdate',['product_id'=> $product->id])}}" method="POST" enctype="multipart/form-data">
+             <form action="{{route('ProductUpdate',['product_id'=> $product->id])}}" method="POST"
+                 enctype="multipart/form-data">
                  @csrf
 
                  @foreach ($errors->all() as $error)
@@ -439,7 +440,8 @@ function addPrice() {
 
                  <div class="form-group col-md-6 col-xs-12">
                      <h4> @lang('general.product_name_en') </h4>
-                     <input name="name" value="{{$product->getTranslatedAttribute('name','en')}}" required type="text" class="form-control">
+                     <input name="name" value="{{$product->getTranslatedAttribute('name','en')}}" required type="text"
+                         class="form-control">
                      @error('name_en')
                      <div class="alert" style="color:#a94442">{{ $message }}</div>
                      @enderror
@@ -448,7 +450,8 @@ function addPrice() {
 
                  <div class="form-group col-md-6 col-xs-12">
                      <h4>@lang('general.product_name_ar')</h4>
-                     <input name="name_ar" value="{{$product->getTranslatedAttribute('name','ar')}}" required type="text" class="form-control">
+                     <input name="name_ar" value="{{$product->getTranslatedAttribute('name','ar')}}" required
+                         type="text" class="form-control">
                      @error('name_ar')
                      <div class="alert" style="color:#a94442">{{ $message }}</div>
                      @enderror
@@ -460,7 +463,8 @@ function addPrice() {
                      <h4>@lang('general.main_categories')</h4>
                      <select id="category" name="main_category_id" class="form-control">
                          @foreach($MainCategories as $Maincategory)
-                         <option value="{{$Maincategory->id}}" {{$product->main_category_id == $Maincategory->id ? 'selected' : ''}}>
+                         <option value="{{$Maincategory->id}}"
+                             {{$product->main_category_id == $Maincategory->id ? 'selected' : ''}}>
                              {{$Maincategory->getTranslatedAttribute('name',\App::getLocale())}}
                          </option>
                          @endforeach
@@ -476,7 +480,8 @@ function addPrice() {
                      <h4>@lang('general.sub_categories')</h4>
                      <select id="subcategory" required name="sub_category_id" class="form-control">
                          @forelse ($SubCategories as $SubCategory)
-                         <option value="{{$SubCategory->id}}" {{$product->sub_category_id == $SubCategory->id ? 'selected' : ''}}>
+                         <option value="{{$SubCategory->id}}"
+                             {{$product->sub_category_id == $SubCategory->id ? 'selected' : ''}}>
                              {{$SubCategory->getTranslatedAttribute('name',\App::getLocale())}}
                          </option>
                          @empty
@@ -495,7 +500,8 @@ function addPrice() {
                      <h4>@lang('general.sub_sub_categories')</h4>
                      <select id="subsubcategory" required name="category_id" class="form-control">
                          @forelse ($SubSubCategories as $SubSubCategory)
-                         <option value="{{$SubSubCategory->id}}" {{$product->category_id == $SubSubCategory->id ? 'selected' : ''}}>
+                         <option value="{{$SubSubCategory->id}}"
+                             {{$product->category_id == $SubSubCategory->id ? 'selected' : ''}}>
                              {{$SubSubCategory->getTranslatedAttribute('name',\App::getLocale())}}
                          </option>
                          @empty
@@ -515,7 +521,8 @@ function addPrice() {
                      <select id="brand" required name="brand_id" id="city" class="form-control">
                          <option selected disabled>@lang('general.brand')</option>
                          @foreach(\App\Models\Brand::get() as $brand)
-                         <option {{$product->brand_id == $brand->id ? 'selected' : ''}} value="{{$brand->id}}">{{$brand->name}}</option>
+                         <option {{$product->brand_id == $brand->id ? 'selected' : ''}} value="{{$brand->id}}">
+                             {{$brand->name}}</option>
                          @endforeach
                      </select>
                      @error('brand_id')
@@ -531,7 +538,8 @@ function addPrice() {
                      <select id="tag" required name="tag_id" id="city" class="form-control">
                          <option selected disabled>@lang('general.tag')</option>
                          @foreach(\App\Models\Tag::get() as $tag)
-                         <option value="{{$tag->id}}" {{$product->tag_id == $tag->id ? 'selected' : ''}}>{{$tag->name}}</option>
+                         <option value="{{$tag->id}}" {{$product->tag_id == $tag->id ? 'selected' : ''}}>{{$tag->name}}
+                         </option>
                          @endforeach
                      </select>
                      @error('tag_id')
@@ -546,12 +554,16 @@ function addPrice() {
                      <ul>
                          <li>
                              <label for="r1d">
-                                 <input type="radio" id="r1d" {{$product->product_condition == 'new' ? ' checked' : '' }} value="1" name="product_condition">
+                                 <input type="radio" id="r1d"
+                                     {{$product->product_condition == 'new' ? ' checked' : '' }} value="1"
+                                     name="product_condition">
                                  <span>@lang('general.new') </span> </label>
                          </li>
                          <li>
                              <label for="r2d">
-                                 <input type="radio" id="r2d" {{$product->product_condition != 'new' ? ' checked' : '' }} value="0" name="product_condition">
+                                 <input type="radio" id="r2d"
+                                     {{$product->product_condition != 'new' ? ' checked' : '' }} value="0"
+                                     name="product_condition">
                                  <span>@lang('general.used') </span> </label>
                          </li>
                      </ul>
@@ -566,14 +578,16 @@ function addPrice() {
 
                  <div class="form-group col-md-12 col-xs-12">
                      <h4>@lang('general.description_en') </h4>
-                     <textarea name="description_en" class="form-control">{{$product->getTranslatedAttribute('description','en')}}</textarea>
+                     <textarea name="description_en"
+                         class="form-control">{{$product->getTranslatedAttribute('description','en')}}</textarea>
                      @error('description_en')
                      <div class="alert" style="color:#a94442">{{ $message }}</div>
                      @enderror
                  </div>
                  <div class="form-group col-md-12 col-xs-12">
                      <h4>@lang('general.description_ar') </h4>
-                     <textarea name="description" class="form-control">{{$product->getTranslatedAttribute('description','ar')}}</textarea>
+                     <textarea name="description"
+                         class="form-control">{{$product->getTranslatedAttribute('description','ar')}}</textarea>
                      @error('description_ar')
                      <div class="alert" style="color:#a94442">{{ $message }}</div>
                      @enderror
@@ -599,7 +613,8 @@ function addPrice() {
                          <div class="file-upload-wrapper prof-img">
                              <label>
                                  <i class="fa fa-camera"></i>
-                                 <input name="image" type="file" onchange="document.getElementById('blah').src = window.URL.createObjectURL(this.files[0])">
+                                 <input name="image" type="file"
+                                     onchange="document.getElementById('blah').src = window.URL.createObjectURL(this.files[0])">
                                  <img src="{{$product->DefaultImage}}" id="blah" alt="your image">
                              </label>
                          </div>
@@ -618,30 +633,7 @@ function addPrice() {
                  <div class="form-group col-md-12 col-xs-12">
                      <h4>@lang('general.product_addional_image') </h4>
 
-                     @for ($i = 0; $i < 8; $i++) @if(isset(json_decode($product->images)[$i]))
 
-                         <div class="s-item col-md-3 col-sm-6 col-xs-12">
-                             <div class="prof-img file-upload-wrapper">
-                                 <label>
-                                     <i class="fa fa-camera"></i>
-                                     <input name="images[]" type="file" onchange="document.getElementById('blah{{$i}}').src = window.URL.createObjectURL(this.files[0])">
-                                     <img src="{{  url('storage/'.json_decode($product->images)[$i]) }}" id="blah{{$i}}" alt="your image">
-                                 </label>
-                             </div>
-                         </div>
-                         @else
-                         <div class="s-item col-md-3 col-sm-6 col-xs-12">
-                             <div class="file-upload-wrapper">
-                                 <input type="file" name="images[]" id="input-file-max-fs" class="file-upload" data-max-file-size="5M" />
-                             </div>
-                         </div>
-                         @endif
-                         @endfor
-
-
-                         @error('images')
-                         <div class="alert" style="color:#a94442">{{ $message }}</div>
-                         @enderror
                  </div>
 
                  {{-- ************************* End Images  ************************************** --}}
@@ -680,7 +672,8 @@ function addPrice() {
                  {{-- ************************* Start Price List ******************************* --}}
 
 
-                 <h3 class="update-header">@lang('general.product_price_list') <small> @lang('general.optional') </small>
+                 <h3 class="update-header">@lang('general.product_price_list') <small> @lang('general.optional')
+                     </small>
                  </h3>
 
                  <br>
@@ -690,18 +683,23 @@ function addPrice() {
 
                      <div id="list_price_{{$loop->index}}" class="form-group col-md-5 col-xs-12">
                          <h4>@lang('general.price')</h4>
-                         <input value="{{$price->price}}" name="prices[{{$loop->index}}][price]" type="text" class="form-control">
+                         <input value="{{$price->price}}" name="prices[{{$loop->index}}][price]" type="text"
+                             class="form-control">
                      </div>
                      <div id="list_quantity_from_{{$loop->index}}" class="form-group col-md-3 col-xs-12">
                          <h4>@lang('general.quantity_from')</h4>
-                         <input value="{{$price->quantity_from}}" name="prices[{{$loop->index}}][quantity_from]" type="text" class="form-control">
+                         <input value="{{$price->quantity_from}}" name="prices[{{$loop->index}}][quantity_from]"
+                             type="text" class="form-control">
                      </div>
                      <div id="list_quantity_to_{{$loop->index}}" class="form-group col-md-3 col-xs-12">
                          <h4>@lang('general.quantity_to')</h4>
-                         <input value="{{$price->quantity_to}}" name="prices[{{$loop->index}}][quantity_to]" type="text" class="form-control">
+                         <input value="{{$price->quantity_to}}" name="prices[{{$loop->index}}][quantity_to]" type="text"
+                             class="form-control">
                      </div>
                      <div id="list_delete_{{$loop->index}}" class="form-group col-md-1 col-xs-12">
-                         <button type="button" onclick="deletePrice({{$loop->index}});" style="padding: 10px; background: #d9534f!important; border: none; margin-top: 35px;"><i style=" color: white;" class=" fa fa-trash" aria-hidden="true"></i>
+                         <button type="button" onclick="deletePrice({{$loop->index}});"
+                             style="padding: 10px; background: #d9534f!important; border: none; margin-top: 35px;"><i
+                                 style=" color: white;" class=" fa fa-trash" aria-hidden="true"></i>
                          </button>
                      </div>
                      @error('product_price_list')
@@ -751,9 +749,11 @@ function addPrice() {
                  <div id="parent">
                      @forelse($product->options as $option)
                      <div id="attribute_attribute_{{$loop->index}}" class="form-group col-md-6 col-xs-12">
-                         <select onchange="selectoption({{$option->attribute_id}},this)" name="options[{{$loop->index}}][attribute_id]" class="form-control">
+                         <select onchange="selectoption({{$option->attribute_id}},this)"
+                             name="options[{{$loop->index}}][attribute_id]" class="form-control">
                              @foreach(\App\Models\Attribute::get() as $attribute)
-                             <option {{$attribute->id == $option->attribute_id ? 'selected' : ''}} value="{{$attribute->id}}">
+                             <option {{$attribute->id == $option->attribute_id ? 'selected' : ''}}
+                                 value="{{$attribute->id}}">
                                  {{$attribute->getTranslatedAttribute('name',\App::getLocale())}}
                              </option>
                              @endforeach
@@ -768,12 +768,15 @@ function addPrice() {
                      </div>
 
                      <div id="attribute_delete_{{$loop->index}}" class="form-group col-md-1 col-xs-12">
-                         <button type="button" onclick="deleteAttribute({{$loop->index}});" style="padding: 10px; background: #d9534f!important; border: none; margin-top: 10px;"><i style=" color: white;" class=" fa fa-trash" aria-hidden="true"></i>
+                         <button type="button" onclick="deleteAttribute({{$loop->index}});"
+                             style="padding: 10px; background: #d9534f!important; border: none; margin-top: 10px;"><i
+                                 style=" color: white;" class=" fa fa-trash" aria-hidden="true"></i>
                          </button>
                      </div>
                      @empty
                      <div class="form-group col-md-6 col-xs-12">
-                         <select id="optselect1" onchange="selectoption(1,this)" name="options[0][attribute_id]" class="form-control">
+                         <select id="optselect1" onchange="selectoption(1,this)" name="options[0][attribute_id]"
+                             class="form-control">
                              <option selected disabled>@lang('general.choose_attribute')</option>
 
                              @foreach(\App\Models\Attribute::get() as $attribute)
@@ -796,7 +799,8 @@ function addPrice() {
                      @enderror
                  </div>
                  <div style="text-align: center;" class="form-group col-md-12 col-xs-12">
-                     <button type="button" onclick="addChild();" class="btn">@lang('general.add_product_attributes')</button>
+                     <button type="button" onclick="addChild();"
+                         class="btn">@lang('general.add_product_attributes')</button>
                  </div>
                  <div class="form-group col-md-12 col-xs-12">
                  </div>
@@ -818,38 +822,41 @@ function addPrice() {
  <script src="{{ asset('/web/js/amir-upload-files.js')}}"></script>
  <script src="{{ asset('/web/js/select2.full.min.js')}}"></script>
  <script>
-     var childNumber = <?php echo count($product->options) + 1 ?>;
-     var childNumberprice = <?php echo count($product->prices) + 1 ?>;
+var childNumber = <?php echo count($product->options) + 1 ?>;
+var childNumberprice = <?php echo count($product->prices) + 1 ?>;
 
-     function selectoption(select_id, selectObject) {
+function selectoption(select_id, selectObject) {
 
-         $.ajax({
-             type: "get",
-             url: " /getValues/" + selectObject.value,
-             success: function(res) {
-                 if (res) {
+    $.ajax({
+        type: "get",
+        url: " /getValues/" + selectObject.value,
+        success: function(res) {
+            if (res) {
 
-                     $("#valueselect" + select_id).empty();
-                     $("#valueselect" + select_id).append("<option selected disabled>@lang('general.choose_attribute')</option>");
-                     $.each(res, function(key, value) {
-                         $("#valueselect" + select_id).append('<option value="' + key + '">' + value + '</option>');
-                     });
-                     $('#valueselect' + select_id).niceSelect('update');
+                $("#valueselect" + select_id).empty();
+                $("#valueselect" + select_id).append(
+                    "<option selected disabled>@lang('general.choose_attribute')</option>");
+                $.each(res, function(key, value) {
+                    $("#valueselect" + select_id).append('<option value="' + key + '">' + value +
+                        '</option>');
+                });
+                $('#valueselect' + select_id).niceSelect('update');
 
-                 }
-             }
+            }
+        }
 
-         });
+    });
 
-     }
+}
 
-     function addChild() {
-         var parent = document.getElementById('parent');
-         //   var newChild = '<p>Child ' + childNumber + '</p>';
-         var newChild = `
+function addChild() {
+    var parent = document.getElementById('parent');
+    //   var newChild = '<p>Child ' + childNumber + '</p>';
+    var newChild = `
            <div  id="attribute_attribute_` + childNumber + `" class="form-group col-md-6 col-xs-12">
 
-                             <select id="optselect` + childNumber + `"  onchange="selectoption(` + childNumber + `,this)"  name="options[` + childNumberprice + `][attribute_id]" class=" optselect form-control">
+                             <select id="optselect` + childNumber + `"  onchange="selectoption(` + childNumber +
+        `,this)"  name="options[` + childNumberprice + `][attribute_id]" class=" optselect form-control">
                                 <option selected disabled>@lang('general.choose_attribute')</option>
 
                  @foreach(\App\Models\Attribute::get() as $category)
@@ -875,18 +882,18 @@ function addPrice() {
                         </button>
                     </div>
            `;
-         parent.insertAdjacentHTML('beforeend', newChild);
-         childNumber++;
+    parent.insertAdjacentHTML('beforeend', newChild);
+    childNumber++;
 
 
-         $('select').niceSelect();
-     }
+    $('select').niceSelect();
+}
 
 
-     function addPrice() {
-         var parent = document.getElementById('prices');
-         //   var newChild = '<p>Child ' + childNumber + '</p>';
-         var newChild = `
+function addPrice() {
+    var parent = document.getElementById('prices');
+    //   var newChild = '<p>Child ' + childNumber + '</p>';
+    var newChild = `
 
             <div id="list_price_` + childNumberprice + `" class="form-group col-md-5 col-xs-12">
               <h4>@lang('general.price')</h4>
@@ -909,85 +916,88 @@ function addPrice() {
         </div>
 
            `;
-         parent.insertAdjacentHTML('beforeend', newChild);
-         childNumberprice++;
+    parent.insertAdjacentHTML('beforeend', newChild);
+    childNumberprice++;
 
 
-         $('select').niceSelect();
-     }
+    $('select').niceSelect();
+}
 
-     function deletePrice(number) {
+function deletePrice(number) {
 
-         var list_price = document.getElementById("list_price_" + number);
-         list_price.remove();
+    var list_price = document.getElementById("list_price_" + number);
+    list_price.remove();
 
-         var list_quantity_to = document.getElementById("list_quantity_to_" + number);
-         list_quantity_to.remove();
+    var list_quantity_to = document.getElementById("list_quantity_to_" + number);
+    list_quantity_to.remove();
 
-         var list_quantity_from = document.getElementById("list_quantity_from_" + number);
-         list_quantity_from.remove();
+    var list_quantity_from = document.getElementById("list_quantity_from_" + number);
+    list_quantity_from.remove();
 
-         var list_delete = document.getElementById("list_delete_" + number);
-         list_delete.remove();
+    var list_delete = document.getElementById("list_delete_" + number);
+    list_delete.remove();
 
-     }
+}
 
 
-     function deleteAttribute(number) {
-         var attribute_attribute = document.getElementById("attribute_attribute_" + number);
-         attribute_attribute.remove();
+function deleteAttribute(number) {
+    var attribute_attribute = document.getElementById("attribute_attribute_" + number);
+    attribute_attribute.remove();
 
-         var attribute_value = document.getElementById("attribute_value_" + number);
-         attribute_value.remove();
+    var attribute_value = document.getElementById("attribute_value_" + number);
+    attribute_value.remove();
 
-         var attribute_delete = document.getElementById("attribute_delete_" + number);
-         attribute_delete.remove();
-     }
+    var attribute_delete = document.getElementById("attribute_delete_" + number);
+    attribute_delete.remove();
+}
 
-     $('#category').change(function() {
+$('#category').change(function() {
 
-         var cid = $(this).val();
-         if (cid) {
-             $.ajax({
-                 type: "get",
-                 url: " /getSub/" + cid,
-                 success: function(res) {
-                     if (res) {
-                         $("#subcategory").empty();
-                         $("#subsubcategory").empty();
-                         $("#subcategory").append("<option>@lang('general.sub_categories')</option>");
-                         $.each(res, function(key, value) {
-                             $("#subcategory").append('<option value="' + key + '">' + value + '</option>');
-                         });
-                         $('#subcategory').niceSelect('update');
+    var cid = $(this).val();
+    if (cid) {
+        $.ajax({
+            type: "get",
+            url: " /getSub/" + cid,
+            success: function(res) {
+                if (res) {
+                    $("#subcategory").empty();
+                    $("#subsubcategory").empty();
+                    $("#subcategory").append("<option>@lang('general.sub_categories')</option>");
+                    $.each(res, function(key, value) {
+                        $("#subcategory").append('<option value="' + key + '">' + value +
+                            '</option>');
+                    });
+                    $('#subcategory').niceSelect('update');
 
-                     }
-                 }
+                }
+            }
 
-             });
-         }
-     });
+        });
+    }
+});
 
-     $('#subcategory').change(function() {
-         var sid = $(this).val();
-         if (sid) {
-             $.ajax({
-                 type: "get",
-                 url: "/getSubSub/" + sid,
-                 success: function(res) {
-                     if (res) {
-                         $("#subsubcategory").empty();
-                         $("#subsubcategory").append("<option>@lang('general.sub_sub_categories')</option>");
-                         $.each(res, function(key, value) {
-                             $("#subsubcategory").append('<option value="' + key + '">' + value + '</option>');
-                         });
-                         $('#subsubcategory').niceSelect('update');
+$('#subcategory').change(function() {
+    var sid = $(this).val();
+    if (sid) {
+        $.ajax({
+            type: "get",
+            url: "/getSubSub/" + sid,
+            success: function(res) {
+                if (res) {
+                    $("#subsubcategory").empty();
+                    $("#subsubcategory").append(
+                        "<option>@lang('general.sub_sub_categories')</option>");
+                    $.each(res, function(key, value) {
+                        $("#subsubcategory").append('<option value="' + key + '">' + value +
+                            '</option>');
+                    });
+                    $('#subsubcategory').niceSelect('update');
 
-                     }
-                 }
+                }
+            }
 
-             });
-         }
-     });
+        });
+    }
+});
  </script>
  @endpush
