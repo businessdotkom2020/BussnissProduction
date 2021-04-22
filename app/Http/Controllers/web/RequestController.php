@@ -118,6 +118,7 @@ class RequestController extends Controller
 
             return redirect()->url('dashboard.requests');
         } catch (\Exception $e) {
+            return $e;
             return redirect()->back()->with('error', 'Error Try Again !!');
         }
     }
