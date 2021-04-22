@@ -28,7 +28,8 @@ $menu = false ;
 
 
         <div class="form-group col-md-12 col-xs-12" style="text-align: center;margin-top: 15px;margin-bottom: 15px;">
-            <button onclick="window.location='{{ url('request/new') }}'" type="submit" class="btn">Add Request <i class="fa fa-plus"></i></button>
+            <button onclick="window.location='{{ url('request/new') }}'" type="submit" class="btn">Add Request <i
+                    class="fa fa-plus"></i></button>
         </div>
         <div class="g-body col-xs-12">
 
@@ -49,9 +50,13 @@ $menu = false ;
                                     <a href="{{url('request/'.$request->id)}}" target="_blank">
                                         <i class="fa fa-eye"></i>
                                     </a>
+                                </li>
+                                <li>
                                     <a href="{{url('request/'.$request->id)}}" target="_blank">
                                         <i class="fa fa-edit"></i>
                                     </a>
+                                </li>
+                                <li>
                                     <a href="{{url('request/'.$request->id)}}" target="_blank">
                                         <i class="fa fa-trash-alt"></i>
                                     </a>
@@ -63,7 +68,7 @@ $menu = false ;
                                     {{$request->getTranslatedAttribute('name',\App::getLocale())}}</a>
                             </h3>
                             <div class="request-de">
-         
+
                                 <ul class="rating list-inline">
 
                                     @php $rating = $request->average_rating ; @endphp
