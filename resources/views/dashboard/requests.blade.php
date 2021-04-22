@@ -45,7 +45,17 @@ $menu = false ;
                             </a>
 
                             <ul class="social">
-                                <li><a href="#" data-tip="Quick View" data-toggle="modal" data-target="#contact_{{$request->user_id}}" target="_blank"><i class="fa fa-eye"></i></a></li>
+                                <li>
+                                    <a href="{{url('request/'.$request->id)}}" target="_blank">
+                                        <i class="fa fa-eye"></i>
+                                    </a>
+                                    <a href="{{url('request/'.$request->id)}}" target="_blank">
+                                        <i class="fa fa-edit"></i>
+                                    </a>
+                                    <a href="{{url('request/'.$request->id)}}" target="_blank">
+                                        <i class="fa fa-trash-alt"></i>
+                                    </a>
+                                </li>
                             </ul>
                         </div>
                         <div class="request-content">
