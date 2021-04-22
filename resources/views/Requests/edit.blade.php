@@ -42,39 +42,45 @@ $menu = false ;
                     <h4>@lang('general.request_images')</h4>
 
 
-                    @foreach (json_decode($request->images) as $image)
-                    <div class="prof-img s-item col-md-4 col-sm-6 col-xs-12">
-                        <div style="height: 200px; margin-top: 2px;">
-                            <label>
-                                <i class="fa fa-camera"></i>
-                                <input type="file"
-                                    onchange="document.getElementById('image_item{{$loop->index}}').src=window.URL.createObjectURL(this.files[0])">
-                                <img src="{{url('storage/'.$image)}}" id="image_item{{$loop->index}}" alt="your image">
-                            </label>
-                        </div>
-                    </div>
-                    @endforeach
+                    @for ($i = 0; $i < 8; $i++) @if(isset(json_decode($request->images)[$i]))
 
-                    @for ($i = count(json_decode($request->images)); $i < 6; $i++) <div
-                        class="s-item col-md-4 col-sm-6 col-xs-12">
-                        <div class="file-upload-wrapper">
-                            <input type="file" name="images[]" id="input-file-max-fs" class="file-upload"
-                                data-max-file-size="5M" />
+                        <div class="s-item col-md-3 col-sm-6 col-xs-12">
+                            <div class="prof-img file-upload-wrapper">
+                                <label>
+                                    <i class="fa fa-camera"></i>
+                                    <input name="images[]" type="file"
+                                        onchange="document.getElementById('blah{{$i}}').src = window.URL.createObjectURL(this.files[0])">
+                                    <img src="{{  url('storage/'.json_decode($request->images)[$i]) }}" id="blah{{$i}}"
+                                        alt="your image">
+                                </label>
+                            </div>
                         </div>
+                        @else
+                        <div class="s-item col-md-3 col-sm-6 col-xs-12">
+                            <div class="file-upload-wrapper">
+                                <input type="file" name="images[]" id="input-file-max-fs" class="file-upload"
+                                    data-max-file-size="5M" />
+                            </div>
+                        </div>
+                        @endif
+                        @endfor
+
+
+                        @error('images')
+                        <div class="alert" style="color:#a94442">{{ $message }}</div>
+                        @enderror
+
+
+
+                        @error('images')
+                        <div class="alert" style="color:#a94442">{{ $message }}</div>
+                        @enderror
                 </div>
-                @endfor
-
-
-
-                @error('images')
-                <div class="alert" style="color:#a94442">{{ $message }}</div>
-                @enderror
+                <div class="form-group col-md-12 col-xs-12">
+                    <button type="submit" class="btn">@lang('general.add_rquest')</button>
+                </div>
+            </form>
         </div>
-        <div class="form-group col-md-12 col-xs-12">
-            <button type="submit" class="btn">@lang('general.add_rquest')</button>
-        </div>
-        </form>
-    </div>
     </div>
 </main>
 
