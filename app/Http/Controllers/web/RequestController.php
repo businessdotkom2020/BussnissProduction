@@ -114,12 +114,10 @@ class RequestController extends Controller
                 }
                 $req->images = json_encode($images);
             }
-
-
             $req->save();
-            return redirect()->route('servicess.index')->with('done', 'Added Successfully ....');
+
+            return redirect()->url('dashboard.requests');
         } catch (\Exception $e) {
-            return $e;
             return redirect()->back()->with('error', 'Error Try Again !!');
         }
     }
