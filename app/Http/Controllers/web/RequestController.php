@@ -112,9 +112,9 @@ class RequestController extends Controller
                         array_push($images, $img_url);
                     }
                 }
+                $req->images = json_encode($images);
             }
 
-            $req->images = json_encode($images);
 
             $req->save();
             return redirect()->route('servicess.index')->with('done', 'Added Successfully ....');
