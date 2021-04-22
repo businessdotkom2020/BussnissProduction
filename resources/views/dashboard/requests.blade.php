@@ -58,7 +58,7 @@ $menu = false ;
                                 </li>
                                 <li>
                                     <a data-tip="Quick View" href="{{url('request/'.$request->id)}}" target="_blank">
-                                        <i class="fa fa-edit"></i>
+                                        <i class="fa fa-trash-o"></i>
                                     </a>
                                 </li>
 
