@@ -92,7 +92,6 @@ class RequestController extends Controller
             $req = Request::find($id);
             $req->name = $request->name;
             $req->name = $request->name;
-            $req->user_id = $request->user_id;
             $req->description = $request->description;
             $req->category_id = $request->category_id;
 
