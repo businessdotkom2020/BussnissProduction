@@ -94,7 +94,7 @@ class RequestController extends Controller
             $req->description = $request->description;
             $req->category_id = $request->category_id;
 
-            if ($request->hasFile('images')) {
+            if (Request()->hasFile('images')) {
                 $images = [];
 
                 foreach ($request->images as $image) {
