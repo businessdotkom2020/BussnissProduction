@@ -633,7 +633,33 @@ function addPrice() {
                  <div class="form-group col-md-12 col-xs-12">
                      <h4>@lang('general.product_addional_image') </h4>
 
+                     @for ($i = 0; $i < 8; $i++) @if(isset(json_decode($product->images)[$i]))
 
+                         <div class="s-item col-md-3 col-sm-6 col-xs-12">
+                             <div class="prof-img file-upload-wrapper">
+                                 <label>
+                                     <i class="fa fa-camera"></i>
+                                     <input name="images[]" type="file"
+                                         onchange="document.getElementById('blah{{$i}}').src = window.URL.createObjectURL(this.files[0])">
+                                     <img src="{{  url('storage/'.json_decode($product->images)[$i]) }}" id="blah{{$i}}"
+                                         alt="your image">
+                                 </label>
+                             </div>
+                         </div>
+                         @else
+                         <div class="s-item col-md-3 col-sm-6 col-xs-12">
+                             <div class="file-upload-wrapper">
+                                 <input type="file" name="images[]" id="input-file-max-fs" class="file-upload"
+                                     data-max-file-size="5M" />
+                             </div>
+                         </div>
+                         @endif
+                         @endfor
+
+
+                         @error('images')
+                         <div class="alert" style="color:#a94442">{{ $message }}</div>
+                         @enderror
                  </div>
 
                  {{-- ************************* End Images  ************************************** --}}
