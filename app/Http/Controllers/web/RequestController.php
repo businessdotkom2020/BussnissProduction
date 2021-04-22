@@ -88,6 +88,7 @@ class RequestController extends Controller
     public function update(Request $request, $id)
     {
         try {
+            return request()->all();
             $req = $request;
             $req->name = $request->name;
             $req->user_id = $request->user_id;
