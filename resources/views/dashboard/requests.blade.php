@@ -47,17 +47,22 @@ $menu = false ;
 
                             <ul class="social">
                                 <li>
-                                    <a data-tip="Quick View" href="{{url('request/'.$request->id)}}" target="_blank">
+                                    <a data-tip="Quick View"
+                                        href="{{route('dash.req' ,['request_id'=> $request->id ])}}" target="_blank">
                                         <i class="fa fa-eye"></i>
                                     </a>
                                 </li>
                                 <li>
-                                    <a data-tip="Quick View" href="{{url('request/'.$request->id)}}" target="_blank">
+                                    <a data-tip="Quick View"
+                                        href="{{route('dash.req.edit' ,['request_id'=> $request->id ])}}"
+                                        target="_blank">
                                         <i class="fa fa-edit"></i>
                                     </a>
                                 </li>
                                 <li>
-                                    <a data-tip="Quick View" href="{{url('request/'.$request->id)}}" target="_blank">
+                                    <a data-tip="Quick View"
+                                        href="{{route('dash.req.edit' ,['request_id'=> $request->id ])}}"
+                                        target="_blank">
                                         <i class="fa fa-trash-o"></i>
                                     </a>
                                 </li>
