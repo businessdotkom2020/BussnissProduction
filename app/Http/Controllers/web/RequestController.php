@@ -10,6 +10,7 @@ use App\Models\Category;
 use App\Models\Product;
 use App\Models\Service;
 use App\Models\Request;
+use Illuminate\Http\Request as req;
 
 use App\Http\Resources\ParentCategoryResource;
 use App\Http\Resources\MainCategoryResource;
@@ -85,16 +86,17 @@ class RequestController extends Controller
     }
 
 
-    public function update(Request $request, $id)
+    public function update(req $request, $id)
     {
         try {
-            $req = $request;
+            $req = Request::find($id);
+            $req->name = $request->name;
             $req->name = $request->name;
             $req->user_id = $request->user_id;
             $req->description = $request->description;
             $req->category_id = $request->category_id;
 
-            if (Request()->hasFile('images')) {
+            if ($request->hasFile('images')) {
                 $images = [];
 
                 foreach ($request->images as $image) {
