@@ -44,11 +44,11 @@ Route::get('/dashboard', function () {
 
 Route::get('/dashboard/products', function () {
     return view('dashboard.products');
-});
+})->name('dash.products');
 
 Route::get('/dashboard/requests', function () {
     return view('dashboard.requests');
-});
+})->name('dash.requests');
 
 Route::get('/dashboard/services', function () {
     return view('dashboard.services');

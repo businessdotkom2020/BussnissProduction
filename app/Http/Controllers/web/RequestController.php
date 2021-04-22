@@ -116,9 +116,8 @@ class RequestController extends Controller
             }
             $req->save();
 
-            return redirect()->url('dashboard.requests');
+            return redirect()->route('dash.requests');
         } catch (\Exception $e) {
-            return $e;
             return redirect()->back()->with('error', 'Error Try Again !!');
         }
     }
