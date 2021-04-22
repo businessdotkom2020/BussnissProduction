@@ -47,18 +47,18 @@ $menu = false ;
 
                             <ul class="social">
                                 <li>
-                                    <a href="{{url('request/'.$request->id)}}" target="_blank">
+                                    <a data-tip="Quick View" href="{{url('request/'.$request->id)}}" target="_blank">
                                         <i class="fa fa-eye"></i>
                                     </a>
                                 </li>
                                 <li>
-                                    <a href="{{url('request/'.$request->id)}}" target="_blank">
+                                    <a data-tip="Quick View" href="{{url('request/'.$request->id)}}" target="_blank">
                                         <i class="fa fa-edit"></i>
                                     </a>
                                 </li>
                                 <li>
-                                    <a href="{{url('request/'.$request->id)}}" target="_blank">
-                                        <i class="fa fa-trash-alt"></i>
+                                    <a data-tip="Quick View" href="{{url('request/'.$request->id)}}" target="_blank">
+                                        <i class="fas fa-trash-alt"></i>
                                     </a>
                                 </li>
                             </ul>
