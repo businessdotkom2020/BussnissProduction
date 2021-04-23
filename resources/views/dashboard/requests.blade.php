@@ -13,7 +13,7 @@ $menu = false ;
         <h3>@lang('general.requests')</h3>
         <ul>
             <li>
-                <a href="{{url('/')}}">@lang('general.home')</a>
+                <a href="{{url('/dashboard')}}">@lang('general.dashboard')</a>
             </li>
             <li>@lang('general.requests')</li>
         </ul>

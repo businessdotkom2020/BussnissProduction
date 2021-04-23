@@ -133,6 +133,7 @@ return [
     'register_procces_1' =>  'صور و لوجو التاجر',
     'register_procces_2' =>  'المعلومات الرئيسية',
     'register_procces_3' =>  'معلومات المكان و الخريطة',
+    'dashboard' =>  'لوحة التحكم',
 
 
 
