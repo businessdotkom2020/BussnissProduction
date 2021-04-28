@@ -416,7 +416,7 @@ $menu = false ;
 
 
 <script
-    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD6ZXzYu6qFLZZJmHSEvY6vqVrZAWwLm_s&libraries=places&callback=initMap"
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDQDrPyAqqeIgxE_bCzi8lWQJXXWGtKUwE&libraries=places&callback=initMap"
     async defer></script>
 <!--<script src="https://maps.googleapis.com/maps/api/js?key={{ env('GOOGLE_MAPS_API_KEY') }}&libraries=places&callback=initialize" async defer></script>-->
 <!--<script src="https://maps.googleapis.com/maps/api/js?key=&callback=initMap" async defer></script>-->
