@@ -155,6 +155,7 @@
       }
 
       var x = document.getElementById("map");
+      $(document).ready(function(){
 
 function getLocation() {
     if (navigator.geolocation) {
@@ -176,3 +177,4 @@ function showPosition(position) {
 
 
 }
+});
