@@ -180,3 +180,10 @@
                               'Error: Your browser doesn\'t support geolocation.');
         infoWindow.open(map);
       }
+
+
+
+      
+function goToMyLocation() {
+  map.setCenter(myLocation);
+}

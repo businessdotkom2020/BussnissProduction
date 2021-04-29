@@ -338,6 +338,27 @@ $menu = false ;
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js"></script>
 
 <script>
+var x = document.getElementById("map");
+
+function getLocation() {
+    if (navigator.geolocation) {
+        navigator.geolocation.getCurrentPosition(showPosition);
+    } else {
+        x.innerHTML = "Geolocation is not supported by this browser.";
+    }
+}
+
+
+function showPosition(position) {
+
+    map.setCenter(position);
+    // x.innerHTML = "Latitude: " + position.coords.latitude +
+    // "<br>Longitude: " + position.coords.longitude;
+
+
+}
+
+
 $('#country').change(function() {
     var cid = $(this).val();
     if (cid) {
