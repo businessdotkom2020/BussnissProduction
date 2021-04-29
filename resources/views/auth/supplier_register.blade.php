@@ -331,24 +331,10 @@ $menu = false ;
 <!--<script src="https://maps.googleapis.com/maps/api/js?key={{ env('GOOGLE_MAPS_API_KEY') }}&libraries=places&callback=initialize" async defer></script>-->
 <!--<script src="https://maps.googleapis.com/maps/api/js?key=&callback=initMap" async defer></script>-->
 
-
-
-
 <!-- mayada -->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js"></script>
 
 <script>
-var x = document.getElementById("map");
-
-function getLocation() {
-    if (navigator.geolocation) {
-        navigator.geolocation.getCurrentPosition(showPosition);
-    } else {
-        x.innerHTML = "Geolocation is not supported by this browser.";
-    }
-}
-
-
 function showPosition(position) {
 
     map.setCenter(position);
