@@ -199,7 +199,7 @@
         // map.setCenter(position);
 
         var map = new google.maps.Map(document.getElementById('map'), {
-          center: {lat: parseFloat(document.getElementById("lat").value), lng: parseFloat(document.getElementById("lng").value)},
+          center: {lat: parseFloat(position.coords.latitude), lng: parseFloat(position.coords.longitude)},
           zoom: 13
         });
     
