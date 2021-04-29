@@ -196,10 +196,12 @@
       function showPosition(position) {
 
         console.log(position);
-        map.setCenter(position);
-        // x.innerHTML = "Latitude: " + position.coords.latitude +
-        // "<br>Longitude: " + position.coords.longitude;
-    
+        // map.setCenter(position);
+
+        var map = new google.maps.Map(document.getElementById('map'), {
+          center: {lat: parseFloat(document.getElementById("lat").value), lng: parseFloat(document.getElementById("lng").value)},
+          zoom: 13
+        });
     
     }
 
