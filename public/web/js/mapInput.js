@@ -192,7 +192,15 @@
           }
       }
       
-      
+      function showPosition(position) {
+
+        map.setCenter(position);
+        console.log(position);
+        // x.innerHTML = "Latitude: " + position.coords.latitude +
+        // "<br>Longitude: " + position.coords.longitude;
+    
+    
+    }
 function goToMyLocation() {
   map.setCenter(myLocation);
 }
