@@ -335,16 +335,6 @@ $menu = false ;
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js"></script>
 
 <script>
-function showPosition(position) {
-
-    map.setCenter(position);
-    // x.innerHTML = "Latitude: " + position.coords.latitude +
-    // "<br>Longitude: " + position.coords.longitude;
-
-
-}
-
-
 $('#country').change(function() {
     var cid = $(this).val();
     if (cid) {
