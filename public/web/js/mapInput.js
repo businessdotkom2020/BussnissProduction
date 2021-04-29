@@ -153,3 +153,26 @@
                               'Error: Your browser doesn\'t support geolocation.');
         infoWindow.open(map);
       }
+
+      var x = document.getElementById("map");
+
+function getLocation() {
+    if (navigator.geolocation) {
+        navigator.geolocation.getCurrentPosition(showPosition);
+    } else {
+        x.innerHTML = "Geolocation is not supported by this browser.";
+    }
+}
+
+
+function showPosition(position) {
+
+  map.setCenter(position);
+
+
+    // map.setCenter(position);
+    // x.innerHTML = "Latitude: " + position.coords.latitude +
+    //     "<br>Longitude: " + position.coords.longitude;
+
+
+}
