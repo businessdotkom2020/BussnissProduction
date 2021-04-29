@@ -348,9 +348,22 @@ function getLocation() {
     }
 }
 
+
 function showPosition(position) {
-    x.innerHTML = "Latitude: " + position.coords.latitude +
-        "<br>Longitude: " + position.coords.longitude;
+
+    var map = new google.maps.Map(document.getElementById('map'), {
+        center: {
+            lat: parseFloat(position.coords.latitude),
+            lng: parseFloat(position.coords.longitude)
+        },
+        zoom: 13
+    });
+
+    // map.setCenter(position);
+    // x.innerHTML = "Latitude: " + position.coords.latitude +
+    //     "<br>Longitude: " + position.coords.longitude;
+
+
 }
 
 
