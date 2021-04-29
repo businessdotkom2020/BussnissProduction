@@ -243,7 +243,7 @@ $menu = false ;
                                     </div>
                                     <div class="col-md-4 col-xs-12 m10_b">
 
-                                        <button id="current_location" onclick="getLocation()">
+                                        <button id="current_location" type="button" onclick="getLocation()">
                                             @lang('general.current_location')<i class="fa fa-location-arrow"
                                                 aria-hidden="true"></i></button>
                                     </div>
