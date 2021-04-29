@@ -319,7 +319,6 @@ $menu = false ;
 
 
 @push('scripts')
-@parent
 
 <script src="{{ asset('/web/js/select2.full.min.js')}}"></script>
 <script src="{{ asset('/web/js/mapInput.js')}}"></script>
