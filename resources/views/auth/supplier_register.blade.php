@@ -338,7 +338,7 @@ $menu = false ;
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js"></script>
 
 <script>
-var x = document.getElementById("demo");
+var x = document.getElementById("map");
 
 function getLocation() {
     if (navigator.geolocation) {
@@ -355,7 +355,6 @@ function showPosition(position) {
 
 
 $('#country').change(function() {
-    console.log('asa');
     var cid = $(this).val();
     if (cid) {
         $.ajax({
