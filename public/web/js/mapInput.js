@@ -15,7 +15,7 @@
         const locationButton = document.createElement("button");
         locationButton.type = "button";
         locationButton.className = "map_button";
-        locationButton.textContent = current_location;
+        locationButton.textContent = "Pan to Current Location";
         locationButton.classList.add("custom-map-control-button");
         map.controls[google.maps.ControlPosition.TOP_CENTER].push(locationButton);
         locationButton.addEventListener("click", () => {
