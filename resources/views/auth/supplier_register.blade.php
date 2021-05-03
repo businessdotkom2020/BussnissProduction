@@ -321,6 +321,9 @@ $menu = false ;
 @push('scripts')
 
 <script src="{{ asset('/web/js/select2.full.min.js')}}"></script>
+<script>
+    var current_location = {{ trans('general.current_location') }};
+</script>
 <script src="{{ asset('/web/js/mapInput.js')}}"></script>
 
 
@@ -328,14 +331,12 @@ $menu = false ;
 <script
     src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBcP3JChqWSCHtsjW4e_Ug8h0htjiIhcHw&libraries=places&callback=initMap"
     async defer></script>
-<!--<script src="https://maps.googleapis.com/maps/api/js?key={{ env('GOOGLE_MAPS_API_KEY') }}&libraries=places&callback=initialize" async defer></script>-->
-<!--<script src="https://maps.googleapis.com/maps/api/js?key=&callback=initMap" async defer></script>-->
 
 <!-- mayada -->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js"></script>
 
 <script>
-$('#country').change(function() {
+    $('#country').change(function() {
     var cid = $(this).val();
     if (cid) {
         $.ajax({
