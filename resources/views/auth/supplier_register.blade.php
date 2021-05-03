@@ -112,6 +112,9 @@ $menu = false ;
                                 <h4 style="font-size:15px">@lang('general.supplier_name')</h4>
                                 <input type="text" required name="supplier_name"
                                     placeholder="@lang('general.supplier_name')" class="form-control">
+                                @error('supplier_name')
+                                <div class="alert" style="color:#a94442">{{ $message }}</div>
+                                @enderror
                             </div>
 
                             <div class="form-group col-md-6 col-xs-12">
