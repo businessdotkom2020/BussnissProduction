@@ -13,6 +13,8 @@
 
         infoWindow = new google.maps.InfoWindow();
         const locationButton = document.createElement("button");
+        locationButton.type = "button";
+        locationButton.className = "map_button";
         locationButton.textContent = "Pan to Current Location";
         locationButton.classList.add("custom-map-control-button");
         map.controls[google.maps.ControlPosition.TOP_CENTER].push(locationButton);
@@ -39,7 +41,7 @@
             handleLocationError(false, infoWindow, map.getCenter());
           }
         });
-        
+
   var clickmarker = new google.maps.Marker({
      draggable: true
  });
