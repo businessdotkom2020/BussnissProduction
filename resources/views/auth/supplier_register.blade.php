@@ -36,7 +36,7 @@ $menu = false ;
 
             <!-- Multi step form -->
             <section class="multi_step_form">
-                <form id="msform">
+                <form id="msform" action="{{url('register/supplier')}}" method="POST" enctype="multipart/form-data">
                     <!-- Tittle -->
                     <div class="tittle">
                         <h2>@lang('general.supplier_new_account')</h2>
