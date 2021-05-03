@@ -319,6 +319,9 @@ $menu = false ;
 
 
 @push('scripts')
+<script>
+    var current_location = {{ trans('general.current_location') }};
+</script>
 
 <script src="{{ asset('/web/js/select2.full.min.js')}}"></script>
 <script src="{{ asset('/web/js/mapInput.js')}}"></script>
