@@ -14,9 +14,8 @@
         infoWindow = new google.maps.InfoWindow();
         const locationButton = document.createElement("button");
         locationButton.type = "button";
-        locationButton.className = "map_button";
         locationButton.textContent = current_location;
-        locationButton.classList.add("custom-map-control-button");
+        locationButton.classList.add("btn btn-primary");
         map.controls[google.maps.ControlPosition.TOP_CENTER].push(locationButton);
         locationButton.addEventListener("click", () => {
           // Try HTML5 geolocation.
