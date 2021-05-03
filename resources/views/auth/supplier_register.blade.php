@@ -234,14 +234,19 @@ $menu = false ;
                                 </div>
                                 <div class="rate-stars">
 
-                                    <div class="col-md-12 col-xs-12 m10_b">
+                                    <div class="col-md-8 col-xs-12 m10_b">
 
                                         <div id="pac-container">
                                             <input id="pac-input" type="text" placeholder="Enter a location">
                                         </div>
 
                                     </div>
+                                    <div class="col-md-4 col-xs-12 m10_b">
 
+                                        <button id="current_location" type="button" onclick="getLocation()">
+                                            @lang('general.current_location')<i class="fa fa-location-arrow"
+                                                aria-hidden="true"></i></button>
+                                    </div>
 
                                     <div class="col-md-6 col-xs-12 ">
 
@@ -316,9 +321,6 @@ $menu = false ;
 @push('scripts')
 
 <script src="{{ asset('/web/js/select2.full.min.js')}}"></script>
-<script>
-    var current_location = {{ trans('general.current_location') }};
-</script>
 <script src="{{ asset('/web/js/mapInput.js')}}"></script>
 
 
