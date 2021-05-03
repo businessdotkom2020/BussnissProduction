@@ -320,7 +320,7 @@ $menu = false ;
 
 @push('scripts')
 <script>
-    var current_location = {{ trans('general.current_location') }};
+    var current_location = @json( __('general.current_location') );
 </script>
 
 <script src="{{ asset('/web/js/select2.full.min.js')}}"></script>
