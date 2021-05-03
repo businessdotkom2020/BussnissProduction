@@ -73,7 +73,7 @@ use App\Http\Requests\RessetPassword;
     }
     public function do_register_supplier(WebRegisterSupplierRequest $request)
     {
-
+return request()->all();
 
         $user = new User();
         $user->name       = Request()->supplier_name;

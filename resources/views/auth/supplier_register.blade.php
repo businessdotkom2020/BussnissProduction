@@ -34,6 +34,16 @@ $menu = false ;
     <div class="sign-wrap sup-wrap suppliers-register-f col-xs-12">
         <div class="container">
 
+            @if ($errors->any())
+            <div class="alert alert-danger">
+                <ul>
+                    @foreach ($errors->all() as $error)
+                    <li>{{ $error }}</li>
+                    @endforeach
+                </ul>
+            </div>
+            @endif
+
             <!-- Multi step form -->
             <section class="multi_step_form">
                 <form id="msform" action="{{url('register/supplier')}}" method="POST" enctype="multipart/form-data">
