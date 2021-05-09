@@ -319,7 +319,7 @@ $menu = false ;
 
 
 
-            <div class="stepwizard-cont">
+            <!-- <div class="stepwizard-cont">
 <div class="stepwizard">
     <div class="stepwizard-row setup-panel">
         <div class="stepwizard-step">
@@ -378,7 +378,7 @@ $menu = false ;
         </div>
     </div>
 </form>
-</div>
+</div> -->
 
 
 
