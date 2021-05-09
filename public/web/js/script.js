@@ -473,7 +473,7 @@ $(document).ready(function () {
 
     var navListItems = $('div.setup-panel div a'),
             allWells = $('.setup-content'),
-            allNextBtn = $('.next11');
+            allNextBtn = $('.next.action-button');
 
     allWells.hide();
 
