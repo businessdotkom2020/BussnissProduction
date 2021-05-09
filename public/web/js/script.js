@@ -471,8 +471,8 @@ $(document).ready(function () {
 
 $(document).ready(function () {
 
-    var navListItems = $('div.setup-panel div a'),
-            allWells = $('.setup-content'),
+    var navListItems = $('.multi_step_form progressbar li'),
+            allWells = $('fieldset'),
             allNextBtn = $('.next.action-button');
 
     allWells.hide();
@@ -510,7 +510,7 @@ $(document).ready(function () {
             nextStepWizard.removeAttr('disabled').trigger('click');
     });
 
-    $('div.setup-panel div a.btn-primary').trigger('click');
+    $('.multi_step_form .next.action-button').trigger('click');
 });
 /****************************************************/
 // category page
