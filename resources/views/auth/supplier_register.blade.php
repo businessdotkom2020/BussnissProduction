@@ -65,7 +65,7 @@ $menu = false ;
                         <div class="form-row">
                             <div class="form-group col-xs-12">
 
-                                <div class="prof-img">
+                                <div class="prof-img error-va-img">
                                     <div class="prof-change-btn">
                                         <label>
                                             <span> @lang('general.cheange')</span>
@@ -81,8 +81,9 @@ $menu = false ;
                                     @error('store_background')
                                     <div class="alert" style="color:#a94442">{{ $message }}</div>
                                     @enderror
+                                    <span class="error-msg">من فضلك اختر صوره أولاً</span>
                                 </div>
-                                <div class="prof-img pic">
+                                <div class="prof-img pic error-va-img">
                                     <div class="prof-change-btn">
                                         <label>
                                             <span>@lang('general.cheange_profile_image')</span>
@@ -99,6 +100,7 @@ $menu = false ;
                                     @error('store_image')
                                     <div class="alert" style="color:#a94442">{{ $message }}</div>
                                     @enderror
+                                    <span class="error-msg">من فضلك اختر صوره أولاً</span>
                                 </div>
                             </div>
                         </div>
