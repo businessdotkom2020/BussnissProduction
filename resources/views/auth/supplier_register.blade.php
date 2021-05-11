@@ -113,16 +113,17 @@ $menu = false ;
                             <div class="form-group col-md-6 col-xs-12">
                                 <h4 style="font-size:15px">@lang('general.supplier_name')</h4>
                                 <input type="text" required name="supplier_name"
-                                    placeholder="@lang('general.supplier_name')" class="form-control">
+                                    placeholder="@lang('general.supplier_name')" class="form-control error-va">
                                 @error('supplier_name')
                                 <div class="alert" style="color:#a94442">{{ $message }}</div>
                                 @enderror
+                                <span class="error-msg">هذا الحقل مطلوب.</span>
                             </div>
 
                             <div class="form-group col-md-6 col-xs-12">
                                 <h4 style="font-size:15px">@lang('general.categories')</h4>
 
-                                <select required name="category_ids[]" class="form-control select-nosearch"
+                                <select required name="category_ids[]" class="form-control select-nosearch error-va"
                                     placeholde="@lang('general.categories')" multiple>
                                     <!-- <option selected disabled>@lang('general.categories')</option> -->
                                     @foreach(\App\Models\Category::whereNull('parent_id')->get() as $category)
@@ -131,7 +132,7 @@ $menu = false ;
                                     </option>
                                     @endforeach
                                 </select>
-
+                                <span class="error-msg">هذا الحقل مطلوب.</span>
                                 @error('category_ids')
                                 <div class="alert" style="color:#a94442">{{ $message }}</div>
                                 @enderror
@@ -139,38 +140,43 @@ $menu = false ;
 
                             <div class="form-group col-md-6 col-xs-12">
                                 <input type="email" required name="email" placeholder="@lang('general.email')"
-                                    class="form-control">
+                                    class="form-control error-va">
                                 @error('email')
                                 <div class="alert" style="color:#a94442">{{ $message }}</div>
                                 @enderror
+                                <span class="error-msg">هذا الحقل مطلوب.</span>
                             </div>
                             <div class="form-group col-md-6 col-xs-12">
                                 <input type="text" required name="mobile" placeholder="@lang('general.mobile')"
-                                    class="form-control">
+                                    class="form-control error-va">
                                 @error('mobile')
                                 <div class="alert" style="color:#a94442">{{ $message }}</div>
                                 @enderror
+                                <span class="error-msg">هذا الحقل مطلوب.</span>
                             </div>
                             <div class="form-group col-md-12 col-xs-12">
                                 <input type="text" required name="hot_number" placeholder="@lang('general.hot_line')"
-                                    class="form-control">
+                                    class="form-control error-va">
                                 @error('hot_line')
                                 <div class="alert" style="color:#a94442">{{ $message }}</div>
                                 @enderror
+                                <span class="error-msg">هذا الحقل مطلوب.</span>
                             </div>
                             <div class="form-group col-md-6 col-xs-12">
                                 <input type="password" required name="password" placeholder="@lang('general.password')"
-                                    class="form-control">
+                                    class="form-control error-va">
                                 @error('password')
                                 <div class="alert" style="color:#a94442">{{ $message }}</div>
                                 @enderror
+                                <span class="error-msg">هذا الحقل مطلوب.</span>
                             </div>
                             <div class="form-group col-md-6 col-xs-12">
                                 <input type="password" required name="password_confirmation"
-                                    placeholder="@lang('general.password_confirmation')" class="form-control">
+                                    placeholder="@lang('general.password_confirmation')" class="form-control error-va">
                                 @error('password_confirmation')
                                 <div class="alert" style="color:#a94442">{{ $message }}</div>
                                 @enderror
+                                <span class="error-msg">هذا الحقل مطلوب.</span>
                             </div>
                         </div>
                         <div class="clearfix"></div>
@@ -181,7 +187,7 @@ $menu = false ;
                         <h3>@lang('general.localization_info')</h3>
                         <div class="form-row">
                             <div class="form-group col-md-4 col-xs-12">
-                                <select required id="country" name="country_id" class="form-control">
+                                <select required id="country" name="country_id" class="form-control error-va">
                                     <option selected disabled>@lang('general.country')</option>
 
                                     @foreach (\App\Models\Country::get() as $country)
@@ -193,50 +199,52 @@ $menu = false ;
                                 @error('country_id')
                                 <div class="alert" style="color:#a94442">{{ $message }}</div>
                                 @enderror
-
+                                <span class="error-msg">هذا الحقل مطلوب.</span>
                             </div>
                             <div class="form-group col-md-4 col-xs-12">
-                                <select required name="state_id" id="state" class="form-control">
+                                <select required name="state_id" id="state" class="form-control error-va">
                                     <option selected disabled>@lang('general.state')</option>
                                 </select>
 
                                 @error('state_id')
                                 <div class="alert" style="color:#a94442">{{ $message }}</div>
                                 @enderror
-
+                                <span class="error-msg">هذا الحقل مطلوب.</span>
                             </div>
                             <div class="form-group col-md-4 col-xs-12">
-                                <select required name="city_id" id="city" class="form-control">
+                                <select required name="city_id" id="city" class="form-control error-va">
                                     <option selected disabled>@lang('general.city')</option>
                                 </select>
 
                                 @error('city_id')
                                 <div class="alert" style="color:#a94442">{{ $message }}</div>
                                 @enderror
-
+                                <span class="error-msg">هذا الحقل مطلوب.</span>
                             </div>
                             <div class="form-group col-md-12 col-xs-12">
                                 <input required type="text" name="street_nom" placeholder="@lang('general.street_num')"
-                                    class="form-control">
+                                    class="form-control error-va">
                                 @error('street_nom')
                                 <div class="alert" style="color:#a94442">{{ $message }}</div>
                                 @enderror
+                                <span class="error-msg">هذا الحقل مطلوب.</span>
                             </div>
 
                             <div class="form-group col-md-12 col-xs-12">
                                 <input required type="text" name="zip_code" placeholder="@lang('general.zip_code')"
-                                    class="form-control">
+                                    class="form-control error-va">
                                 @error('zip_code')
                                 <div class="alert" style="color:#a94442">{{ $message }}</div>
                                 @enderror
+                                <span class="error-msg">هذا الحقل مطلوب.</span>
                             </div>
                             <div class="form-group col-md-12 col-xs-12">
                                 <input required type="text" name="address" placeholder="@lang('general.address_spec')"
-                                    class="form-control">
+                                    class="form-control error-va">
                                 @error('address_spec')
                                 <div class="alert" style="color:#a94442">{{ $message }}</div>
                                 @enderror
-
+                                <span class="error-msg">هذا الحقل مطلوب.</span>
                             </div>
                             <div class="form-group col-md-12 col-xs-12">
                                 <!--<input type="text" placeholder="@lang('general.map_location')" class="form-control">-->
@@ -321,66 +329,6 @@ $menu = false ;
 
 
 
-            <!-- <div class="stepwizard-cont">
-<div class="stepwizard">
-    <div class="stepwizard-row setup-panel">
-        <div class="stepwizard-step">
-            <a href="#step-1" type="button" class="btn btn-primary btn-circle">1</a>
-            <p>Step 1</p>
-        </div>
-        <div class="stepwizard-step">
-            <a href="#step-2" type="button" class="btn btn-default btn-circle" disabled="disabled">2</a>
-            <p>Step 2</p>
-        </div>
-        <div class="stepwizard-step">
-            <a href="#step-3" type="button" class="btn btn-default btn-circle" disabled="disabled">3</a>
-            <p>Step 3</p>
-        </div>
-    </div>
-</div>
-<form role="form">
-    <div class="row setup-content" id="step-1">
-        <div class="col-xs-12">
-            <div class="col-md-12">
-                <h3> Step 1</h3>
-                <div class="form-group">
-                    <label class="control-label">First Name</label>
-                    <input  maxlength="100" type="text" required="required" class="form-control" placeholder="Enter First Name"  />
-                </div>
-                <div class="form-group">
-                    <label class="control-label">Last Name</label>
-                    <input maxlength="100" type="text" required="required" class="form-control" placeholder="Enter Last Name" />
-                </div>
-                <button class="btn btn-primary nextBtn btn-lg pull-right" type="button" >Next</button>
-            </div>
-        </div>
-    </div>
-    <div class="row setup-content" id="step-2">
-        <div class="col-xs-12">
-            <div class="col-md-12">
-                <h3> Step 2</h3>
-                <div class="form-group">
-                    <label class="control-label">Company Name</label>
-                    <input maxlength="200" type="text" required="required" class="form-control" placeholder="Enter Company Name" />
-                </div>
-                <div class="form-group">
-                    <label class="control-label">Company Address</label>
-                    <input maxlength="200" type="text" required="required" class="form-control" placeholder="Enter Company Address"  />
-                </div>
-                <button class="btn btn-primary nextBtn btn-lg pull-right" type="button" >Next</button>
-            </div>
-        </div>
-    </div>
-    <div class="row setup-content" id="step-3">
-        <div class="col-xs-12">
-            <div class="col-md-12">
-                <h3> Step 3</h3>
-                <button class="btn btn-success btn-lg pull-right" type="submit">Finish!</button>
-            </div>
-        </div>
-    </div>
-</form>
-</div> -->
 
 
 
