@@ -167,7 +167,8 @@ $(".select-nosearch").select2({
 
       let name = $("input[name=name]").val();
       let email = $("input[name=email]").val();
-      let mobile_number = $("input[name=hot_number]").val();
+      let mobile = $("input[name=mobile]").val();
+      let hot_number = $("input[name=hot_number]").val();
       let categories = $("input[name=categories]").val();
       let _token   = $('meta[name="csrf-token"]').attr('content');
 
