@@ -169,7 +169,7 @@ $(".select-nosearch").select2({
       let email = $("input[name=email]").val();
       let mobile = $("input[name=mobile]").val();
       let hot_number = $("input[name=hot_number]").val();
-      let categories = $("select[name=category_ids]").val();
+      let categories = document.getElementById("category_ids").value;
       let _token   = $('meta[name="csrf-token"]').attr('content');
 
 function ValidateStepOne() {

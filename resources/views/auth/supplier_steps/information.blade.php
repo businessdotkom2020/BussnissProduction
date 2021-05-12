@@ -40,7 +40,7 @@
         <div class="form-group col-md-12 col-xs-12">
             <h4 style="font-size:15px">@lang('general.categories')</h4>
 
-            <select required name="category_ids[]" class="form-control select-nosearch error-input"
+            <select id="category_ids" required name="category_ids[]" class="form-control select-nosearch error-input"
                 placeholde="@lang('general.categories')" multiple>\
                 @foreach(\App\Models\Category::whereNull('parent_id')->get() as $category)
                 <option value="{{$category->id}}">
