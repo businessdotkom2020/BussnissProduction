@@ -41,8 +41,7 @@
             <h4 style="font-size:15px">@lang('general.categories')</h4>
 
             <select required name="category_ids[]" class="form-control select-nosearch error-va"
-                placeholde="@lang('general.categories')" multiple>
-                <!-- <option selected disabled>@lang('general.categories')</option> -->
+                placeholde="@lang('general.categories')" multiple>\
                 @foreach(\App\Models\Category::whereNull('parent_id')->get() as $category)
                 <option value="{{$category->id}}">
                     {{$category->getTranslatedAttribute('name',\App::getLocale())}}
