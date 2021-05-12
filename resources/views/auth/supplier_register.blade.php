@@ -381,7 +381,7 @@ $('#state').change(function() {
 });
 
 $(".select-nosearch").select2({
-    placeholder:  @lang('general.categories') ,
+    placeholder: "{{ __('general.categories') }}";,
     allowClear: true
 });
 
