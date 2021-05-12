@@ -335,7 +335,7 @@ $('#state').change(function() {
 });
 
 $(".select-nosearch").select2({
-    placeholder: "{{ __('general.categories') }}",
+    placeholder: "  {{ __('general.categories') }}  ",
     allowClear: true
 });
 
