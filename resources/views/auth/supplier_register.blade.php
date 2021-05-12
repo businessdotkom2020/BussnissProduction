@@ -60,23 +60,74 @@ $menu = false ;
                         <li>@lang('general.register_procces_3')</li>
                     </ul>
                     <!-- fieldsets -->
+<<<<<<< HEAD
 
+=======
+                    <fieldset>
+                        <h3>@lang('general.background_image')</h3>
+                        <div class="form-row">
+                            <div class="form-group col-xs-12">
+
+                                <div class="prof-img error-va-img">
+                                    <div class="prof-change-btn">
+                                        <label>
+                                            <span> @lang('general.cheange')</span>
+                                        </label>
+                                    </div>
+                                    <label>
+                                        <i class="fa fa-camera"></i>
+                                        <input name="store_background" type="file"
+                                            onchange="document.getElementById('blah').src = window.URL.createObjectURL(this.files[0])">
+
+                                        <img src="{{ asset('/web/images/cover.jpg')}}" id="blah" alt="your image">
+                                    </label>
+                                    @error('store_background')
+                                    <div class="alert" style="color:#a94442">{{ $message }}</div>
+                                    @enderror
+                                    <span class="error-msg">من فضلك اختر صوره أولاً</span>
+                                </div>
+                                <div class="prof-img pic error-va-img">
+                                    <div class="prof-change-btn">
+                                        <label>
+                                            <span>@lang('general.cheange_profile_image')</span>
+                                        </label>
+                                    </div>
+                                    <label>
+                                        <i class="fa fa-camera"></i>
+
+                                        <input name="store_image" type="file"
+                                            onchange="document.getElementById('blah1').src = window.URL.createObjectURL(this.files[0])">
+                                        <img src="{{ url('storage/users/default_company.png')}}" id="blah1"
+                                            alt="your image">
+                                    </label>
+                                    @error('store_image')
+                                    <div class="alert" style="color:#a94442">{{ $message }}</div>
+                                    @enderror
+                                    <span class="error-msg">من فضلك اختر صوره أولاً</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="clearfix"></div>
+                        <button type="button" class="next action-button next11">التالي</button>
+                    </fieldset>
+>>>>>>> 276d87d433d9229da29bee6658759bbebe7eeafd
                     <fieldset>
                         <h3>@lang('general.main_information')</h3>
                         <div class="form-row">
                             <div class="form-group col-md-6 col-xs-12">
                                 <h4 style="font-size:15px">@lang('general.supplier_name')</h4>
                                 <input type="text" required name="supplier_name"
-                                    placeholder="@lang('general.supplier_name')" class="form-control">
+                                    placeholder="@lang('general.supplier_name')" class="form-control error-va">
                                 @error('supplier_name')
                                 <div class="alert" style="color:#a94442">{{ $message }}</div>
                                 @enderror
+                                <span class="error-msg">هذا الحقل مطلوب.</span>
                             </div>
 
                             <div class="form-group col-md-6 col-xs-12">
                                 <h4 style="font-size:15px">@lang('general.categories')</h4>
 
-                                <select required name="category_ids[]" class="form-control select-nosearch"
+                                <select required name="category_ids[]" class="form-control select-nosearch error-va"
                                     placeholde="@lang('general.categories')" multiple>
                                     <!-- <option selected disabled>@lang('general.categories')</option> -->
                                     @foreach(\App\Models\Category::whereNull('parent_id')->get() as $category)
@@ -85,7 +136,7 @@ $menu = false ;
                                     </option>
                                     @endforeach
                                 </select>
-
+                                <span class="error-msg">هذا الحقل مطلوب.</span>
                                 @error('category_ids')
                                 <div class="alert" style="color:#a94442">{{ $message }}</div>
                                 @enderror
@@ -93,38 +144,43 @@ $menu = false ;
 
                             <div class="form-group col-md-6 col-xs-12">
                                 <input type="email" required name="email" placeholder="@lang('general.email')"
-                                    class="form-control">
+                                    class="form-control error-va">
                                 @error('email')
                                 <div class="alert" style="color:#a94442">{{ $message }}</div>
                                 @enderror
+                                <span class="error-msg">هذا الحقل مطلوب.</span>
                             </div>
                             <div class="form-group col-md-6 col-xs-12">
                                 <input type="text" required name="mobile" placeholder="@lang('general.mobile')"
-                                    class="form-control">
+                                    class="form-control error-va">
                                 @error('mobile')
                                 <div class="alert" style="color:#a94442">{{ $message }}</div>
                                 @enderror
+                                <span class="error-msg">هذا الحقل مطلوب.</span>
                             </div>
                             <div class="form-group col-md-12 col-xs-12">
                                 <input type="text" required name="hot_number" placeholder="@lang('general.hot_line')"
-                                    class="form-control">
+                                    class="form-control error-va">
                                 @error('hot_line')
                                 <div class="alert" style="color:#a94442">{{ $message }}</div>
                                 @enderror
+                                <span class="error-msg">هذا الحقل مطلوب.</span>
                             </div>
                             <div class="form-group col-md-6 col-xs-12">
                                 <input type="password" required name="password" placeholder="@lang('general.password')"
-                                    class="form-control">
+                                    class="form-control error-va">
                                 @error('password')
                                 <div class="alert" style="color:#a94442">{{ $message }}</div>
                                 @enderror
+                                <span class="error-msg">هذا الحقل مطلوب.</span>
                             </div>
                             <div class="form-group col-md-6 col-xs-12">
                                 <input type="password" required name="password_confirmation"
-                                    placeholder="@lang('general.password_confirmation')" class="form-control">
+                                    placeholder="@lang('general.password_confirmation')" class="form-control error-va">
                                 @error('password_confirmation')
                                 <div class="alert" style="color:#a94442">{{ $message }}</div>
                                 @enderror
+                                <span class="error-msg">هذا الحقل مطلوب.</span>
                             </div>
                         </div>
                         <div class="clearfix"></div>
@@ -182,7 +238,7 @@ $menu = false ;
                         <h3>@lang('general.localization_info')</h3>
                         <div class="form-row">
                             <div class="form-group col-md-4 col-xs-12">
-                                <select required id="country" name="country_id" class="form-control">
+                                <select required id="country" name="country_id" class="form-control error-va">
                                     <option selected disabled>@lang('general.country')</option>
 
                                     @foreach (\App\Models\Country::get() as $country)
@@ -194,50 +250,52 @@ $menu = false ;
                                 @error('country_id')
                                 <div class="alert" style="color:#a94442">{{ $message }}</div>
                                 @enderror
-
+                                <span class="error-msg">هذا الحقل مطلوب.</span>
                             </div>
                             <div class="form-group col-md-4 col-xs-12">
-                                <select required name="state_id" id="state" class="form-control">
+                                <select required name="state_id" id="state" class="form-control error-va">
                                     <option selected disabled>@lang('general.state')</option>
                                 </select>
 
                                 @error('state_id')
                                 <div class="alert" style="color:#a94442">{{ $message }}</div>
                                 @enderror
-
+                                <span class="error-msg">هذا الحقل مطلوب.</span>
                             </div>
                             <div class="form-group col-md-4 col-xs-12">
-                                <select required name="city_id" id="city" class="form-control">
+                                <select required name="city_id" id="city" class="form-control error-va">
                                     <option selected disabled>@lang('general.city')</option>
                                 </select>
 
                                 @error('city_id')
                                 <div class="alert" style="color:#a94442">{{ $message }}</div>
                                 @enderror
-
+                                <span class="error-msg">هذا الحقل مطلوب.</span>
                             </div>
                             <div class="form-group col-md-12 col-xs-12">
                                 <input required type="text" name="street_nom" placeholder="@lang('general.street_num')"
-                                    class="form-control">
+                                    class="form-control error-va">
                                 @error('street_nom')
                                 <div class="alert" style="color:#a94442">{{ $message }}</div>
                                 @enderror
+                                <span class="error-msg">هذا الحقل مطلوب.</span>
                             </div>
 
                             <div class="form-group col-md-12 col-xs-12">
                                 <input required type="text" name="zip_code" placeholder="@lang('general.zip_code')"
-                                    class="form-control">
+                                    class="form-control error-va">
                                 @error('zip_code')
                                 <div class="alert" style="color:#a94442">{{ $message }}</div>
                                 @enderror
+                                <span class="error-msg">هذا الحقل مطلوب.</span>
                             </div>
                             <div class="form-group col-md-12 col-xs-12">
                                 <input required type="text" name="address" placeholder="@lang('general.address_spec')"
-                                    class="form-control">
+                                    class="form-control error-va">
                                 @error('address_spec')
                                 <div class="alert" style="color:#a94442">{{ $message }}</div>
                                 @enderror
-
+                                <span class="error-msg">هذا الحقل مطلوب.</span>
                             </div>
                             <div class="form-group col-md-12 col-xs-12">
                                 <!--<input type="text" placeholder="@lang('general.map_location')" class="form-control">-->
@@ -318,6 +376,14 @@ $menu = false ;
                 </form>
             </section>
             <!-- End Multi step form -->
+
+
+
+
+
+
+
+
 
 
         </div>
