@@ -3240,9 +3240,11 @@ button.close:hover {
 .reqs-wrap.reqs-single .req-form {
     margin-bottom: 50px
 }
+
 .reqs-wrap.reqs-single .req-comments {
     padding: 0 15px;
 }
+
 .reqs-wrap.reqs-single .req-comments .req-head {
     margin-bottom: 30px
 }
@@ -6417,11 +6419,11 @@ textarea {
 }
 
 .multi_step_form #msform #progressbar li:nth-child(3):before {
-    content: "\f041";
+    content: "\f083";
 }
 
 .multi_step_form #msform #progressbar li:before {
-    content: "\f083";
+    content: "\f041";
     font: normal normal normal 14px/1 FontAwesome;
     width: 50px;
     height: 50px;
@@ -6964,12 +6966,15 @@ textarea {
 .reqs-wrap .req-p-btn .btn:focus {
     background-color: #139feb !important;
 }
-.reqs-wrap .req-p-btn{
+
+.reqs-wrap .req-p-btn {
     text-align: right;
 }
-.reqs-wrap .req-p-btn a{
+
+.reqs-wrap .req-p-btn a {
     font-size: 14px;
 }
+
 .reqs-wrap .cardo {
     padding: 15px 0;
 }
@@ -7007,19 +7012,22 @@ textarea {
     display: inline-block;
     float: left;
 }
-.req-nname{
+
+.req-nname {
     text-align: center;
     margin: 12px 0 17px;
     border-bottom: 1px solid #f1f1f1;
     padding-bottom: 7px;
 }
-.req-nname a{
+
+.req-nname a {
     color: #333;
     font-size: 20px;
     line-height: 1.5;
     transition: all .3s ease-in;
 }
-.req-nname a:hover{
+
+.req-nname a:hover {
     color: #139feb;
 }
 
@@ -7029,13 +7037,15 @@ textarea {
 
 
 
-.error-va{
+.error-va {
     border: 1px solid #f00;
 }
-.error-msg{
+
+.error-msg {
     color: #f00;
 }
-.suppliers-register-f .prof-img .error-msg{
+
+.suppliers-register-f .prof-img .error-msg {
     color: red;
     display: block;
     position: relative;
