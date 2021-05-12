@@ -7049,7 +7049,7 @@ textarea {
 }
 
 .error-input {
-    border: 2px solid red;
+    border: 1px solid red !important;
 }
 
 .suppliers-register-f .prof-img .error-msg {
