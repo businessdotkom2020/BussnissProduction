@@ -182,7 +182,7 @@ function ValidateStepOne() {
             email:email,
             mobile:mobile,
             hot_number:hot_number,
-            categoreis:categoreis,
+            categories:categories,
             _token: _token
         },
         success:function(response){
