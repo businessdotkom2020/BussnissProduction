@@ -410,7 +410,7 @@ $('#state').change(function() {
 });
 
 $(".select-nosearch").select2({
-    placeholder: "Select a state",
+    placeholder: "{{ __('datatable.sweet_alert_cancel_button_text') }}",
     allowClear: true
 });
 
