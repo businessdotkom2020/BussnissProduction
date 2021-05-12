@@ -60,7 +60,7 @@ $menu = false ;
                         <li>@lang('general.register_procces_1')</li>
                     </ul>
                     <!-- fieldsets -->
-                    @include('auth.information')
+                    @include('auth.supplier_steps.information')
 
 
                     <fieldset>
