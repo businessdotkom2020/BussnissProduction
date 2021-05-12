@@ -15,7 +15,6 @@
     <link rel="stylesheet" href="{{ asset('/web/css/style.css')}}">
     <link rel="stylesheet" href="{{ asset('/web/css/last.css')}}">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.css">
-    <link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css" rel="stylesheet" />
 
     @if (\App::getLocale() == 'ar')
 
@@ -84,8 +83,6 @@
     <script src="{{ asset('/web/js/aos.js')}}"></script>
     <script src="{{ asset('/web/js/ion.rangeSlider.min.js')}}"></script>
     <script src="{{ asset('/web/js/script.js')}}"></script>
-    <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
-
     @stack('scripts')
 
 </body>
