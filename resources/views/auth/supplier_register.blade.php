@@ -55,8 +55,8 @@ $menu = false ;
                     </div>
                     <!-- progressbar -->
                     <ul id="progressbar">
-                        <li class="active">@lang('general.register_procces_1')</li>
                         <li>@lang('general.register_procces_2')</li>
+                        <li class="active">@lang('general.register_procces_1')</li>
                         <li>@lang('general.register_procces_3')</li>
                     </ul>
                     <!-- fieldsets -->
