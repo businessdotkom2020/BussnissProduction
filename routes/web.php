@@ -108,6 +108,11 @@ Route::middleware('guest')->group(function () {
     // Register Suppliers
     Route::get('register/supplier', 'web\AuthController@show_register_supplier_form');
     Route::post('register/supplier', 'web\AuthController@do_register_supplier')->name('do.supplier.register');
+    Route::post('register/supplier', 'web\AuthController@do_register_supplier')->name('do.supplier.register');
+
+    Route::post('ValidateStepOne', 'web\AuthController@ValidateStepOne');
+    // Route::post('ValidateStepOne', 'web\AuthController@ValidateStepOne');
+    // Route::post('ValidateStepOne', 'web\AuthController@ValidateStepOne');
     // Register Suppliers
     Route::get('forget/password', 'web\AuthController@show_forget_password_form');
     Route::post('forget/password', 'web\AuthController@do_forget_password_supplier')->name('do.forget_password');

@@ -10,6 +10,7 @@ $menu = false ;
 <link rel="stylesheet" href="{{ asset('/web/css/custom-register.css')}}"> -->
 <link rel="stylesheet" href="{{ asset('/web/css/custom-register-supplier.css')}}">
 <!-- <link rel="stylesheet" href="{{ asset('/web/css/custom-register.css')}}">   -->
+<meta name="csrf-token" content="{{ csrf_token() }}" />
 
 @endpush
 
@@ -164,71 +165,34 @@ $(".select-nosearch").select2({
 });
 
 
+      let name = $("input[name=name]").val();
+      let email = $("input[name=email]").val();
+      let mobile_number = $("input[name=hot_number]").val();
+      let categories = $("input[name=categories]").val();
+      let _token   = $('meta[name="csrf-token"]').attr('content');
+
 function ValidateStepOne() {
     console.log('as');
-
+    $.ajax({
+        url: "/ValidateStepOne" ,
+        type:"POST",
+        data:{
+            name:name,
+            email:email,
+            mobile:mobile,
+            hot_number:hot_number,
+            categoreis:categoreis,
+            _token: _token
+        },
+        success:function(response){
+          console.log(response);
+          if(response) {
+            $('.success').text(response.success);
+            $("#ajaxform")[0].reset();
+          }
+        },
+       });
 }
  
- 
-		$('.next').live('click', function () {					
-
-			var link = $(this);
-			if(validateName() & validateEmail())
-			{
-				var link = $(this);
-			
-				$.ajax({
-					url : 'load.php',
-					data: '',
-					type: 'GET',
-					cache: 'false',
-					beforeSend: function () {
-						link.addClass('loading');					
-					},
-					
-					success: function(data) {
-						link.removeClass('loading');
-						$('#button').css('display','none');		
-						$('#success').css('display','block');
-							  
-					},
-					error:function(x,e){
-						if(x.status==0)
-						{
-							alert('You are offline!!\n Please Check Your Network.');
-						}
-						else if(x.status==404)
-						{
-							alert('Requested URL not found.');
-						}
-						else if(x.status==500)
-						{
-							alert('Internel Server Error.');
-						}
-						else if(e=='parsererror')
-						{
-							alert('Error.\nParsing JSON Request failed.');
-						}
-						else if(e=='timeout')
-						{
-							alert('Request Time out.');
-						}
-						else 
-						{
-							alert('Unknow Error.\n'+x.responseText);
-						}
-					}		
-				});
-				
-				return true
-			}
-			else
-			{
-				return false;
-			}
-		});
-
-	
-
 </script>
 @endpush

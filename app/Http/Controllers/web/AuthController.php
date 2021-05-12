@@ -12,6 +12,7 @@ use Auth;
 use Illuminate\Validation\ValidationException;
 use App\Http\Requests\Auth\RegisterSuppliersRequestFirstStep;
 use App\Http\Requests\Auth\RegisterSuppliersRequestSecondStep;
+use App\Http\Requests\Auth\ValidateStepOneWeb;
 use App\Http\Requests\WebRegisterSupplierRequest;
 use App\Http\Requests\SendRessetEmail;
 use App\Notifications\PasswordResetRequest;
@@ -24,6 +25,15 @@ use App\Http\Requests\RessetPassword;
     {
         return view('auth.register');
     }
+
+
+    public function ValidateStepOne(ValidateStepOneWeb $request)
+    {
+        return $validated = $request->validated();
+
+    }
+
+
     public function show_register_supplier_form()
     {
         return view('auth.supplier_register');
