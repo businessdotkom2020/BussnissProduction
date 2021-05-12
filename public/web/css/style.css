@@ -7046,7 +7046,10 @@ textarea {
 
 .ml450 {
     margin-left: 450px;
+}
 
+.error-input {
+    border: 2px solid red;
 }
 
 .suppliers-register-f .prof-img .error-msg {
