@@ -6415,11 +6415,11 @@ textarea {
 }
 
 .multi_step_form #msform #progressbar li:nth-child(2):before {
-    content: "\f083";
+    content: "\f041";
 }
 
 .multi_step_form #msform #progressbar li:nth-child(3):before {
-    content: "\f041";
+    content: "\f083";
 }
 
 .multi_step_form #msform #progressbar li:before {
