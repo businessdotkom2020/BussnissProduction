@@ -154,5 +154,113 @@ $(".select-nosearch").select2({
 });
 
 
+var value = $('.next').val();
+ 	
+        
+		//On blur
+		name.blur(validateName);
+		email.blur(validateEmail);
+		
+		//On key press
+		name.keyup(validateName);
+		email.keyup(validateEmail);
+		
+  		email.blur(validateEmail);
+ 
+		$('#button a').live('click', function () {					
+			
+			var link = $(this);
+			if(validateName() & validateEmail())
+			{
+				var link = $(this);
+			
+				$.ajax({
+					url : 'load.php',
+					data: '',
+					type: 'GET',
+					cache: 'false',
+					beforeSend: function () {
+						link.addClass('loading');					
+					},
+					
+					success: function(data) {
+						link.removeClass('loading');
+						$('#button').css('display','none');		
+						$('#success').css('display','block');
+							  
+					},
+					error:function(x,e){
+						if(x.status==0)
+						{
+							alert('You are offline!!\n Please Check Your Network.');
+						}
+						else if(x.status==404)
+						{
+							alert('Requested URL not found.');
+						}
+						else if(x.status==500)
+						{
+							alert('Internel Server Error.');
+						}
+						else if(e=='parsererror')
+						{
+							alert('Error.\nParsing JSON Request failed.');
+						}
+						else if(e=='timeout')
+						{
+							alert('Request Time out.');
+						}
+						else 
+						{
+							alert('Unknow Error.\n'+x.responseText);
+						}
+					}		
+				});
+				
+				return true
+			}
+			else
+			{
+				return false;
+			}
+		});
+		//validation functions
+		function validateEmail(){
+			//testing regular expression
+			var a = $("#email").val();
+			var filter = /^[a-zA-Z0-9]+[a-zA-Z0-9_.-]+[a-zA-Z0-9_-]+@[a-zA-Z0-9]+[a-zA-Z0-9.-]+[a-zA-Z0-9]+.[a-z]{2,4}$/;
+			//if it's valid email
+			if(filter.test(a)){
+				email.removeClass("error");
+				emailInfo.text("Valid E-mail please, you will need it to log in!");
+				emailInfo.removeClass("error");
+				return true;
+			}
+			//if it's NOT valid
+			else{
+				email.addClass("error");
+				emailInfo.text("Stop cowboy! Type a valid e-mail please :P");
+				emailInfo.addClass("error");
+				return false;
+			}
+		}
+		function validateName(){
+			//if it's NOT valid
+			if(name.val().length < 4){
+				name.addClass("error");
+				nameInfo.text("We want names with more than 3 letters!");
+				nameInfo.addClass("error");
+				return false;
+			}
+			//if it's valid
+			else{
+				name.removeClass("error");
+				nameInfo.text("What's your name?");
+				nameInfo.removeClass("error");
+				return true;
+			}
+		}
+	});
+
 </script>
 @endpush
