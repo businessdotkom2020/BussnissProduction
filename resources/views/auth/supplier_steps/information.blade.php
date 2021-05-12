@@ -48,7 +48,7 @@
                 </option>
                 @endforeach
             </select>
-            <span class="error-msg">هذا الحقل مطلوب.</span>
+            <span class="error-msg ml100">هذا الحقل مطلوب.</span>
             @error('category_ids')
             <div class="alert" style="color:#a94442">{{ $message }}</div>
             @enderror

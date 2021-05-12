@@ -7044,6 +7044,11 @@ textarea {
     text-align: right;
 }
 
+.ml100 {
+    margin-left: 200px;
+
+}
+
 .suppliers-register-f .prof-img .error-msg {
     color: red;
     display: block;
