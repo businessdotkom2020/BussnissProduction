@@ -164,11 +164,13 @@ $(".select-nosearch").select2({
 });
 
 
-        
+function ValidateStepOne() {
+    console.log('as');
+
+}
  
  
 		$('.next').live('click', function () {					
-            console.log('as');
 
 			var link = $(this);
 			if(validateName() & validateEmail())
