@@ -167,6 +167,7 @@ var fields = ["supplier_name", "email", "mobile","hot_number","mobile","category
 function ValidateStepOne() {
     
     $.each( fields, function( field, index ) {
+        console.log(field);
         $('#'+field).removeClass("error-input");
 
         $('.'+field+'_err').text('');
