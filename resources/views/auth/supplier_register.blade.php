@@ -178,10 +178,7 @@ function ValidateStepOne() {
         },
         success:function(response){
           console.log(response);
-          if(response) {
-            $('.success').text(response.success);
-            $("#ajaxform")[0].reset();
-          }
+       
 
           console.log(data.error)
                     if($.isEmptyObject(data.error)){
