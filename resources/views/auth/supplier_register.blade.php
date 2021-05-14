@@ -156,11 +156,11 @@ $(".select-nosearch").select2({
 });
 
 
-      let name = $("input[name=name]").val();
-      let email = $("input[name=email]").val();
-      let mobile = $("input[name=mobile]").val();
-      let hot_number = $("input[name=hot_number]").val();
-      let categories = document.getElementById("category_ids").value;
+      let name_value = $("input[name=name]").val();
+      let email_value = $("input[name=email]").val();
+      let mobile_value = $("input[name=mobile]").val();
+      let hot_number_value = $("input[name=hot_number]").val();
+      let categories_value = document.getElementById("category_ids").value;
       let _token   = $('meta[name="csrf-token"]').attr('content');
 
 function ValidateStepOne() {
@@ -169,27 +169,26 @@ function ValidateStepOne() {
         url: "/ValidateStepOne" ,
         type:"POST",
         data:{
-            name:name,
-            email:email,
-            mobile:mobile,
-            hot_number:hot_number,
-            categories:categories,
+            name:name_value,
+            email:email_value,
+            mobile:mobile_value,
+            hot_number:hot_number_value,
+            categories:categories_value,
             _token: _token
         },
         success:function(data){
-          console.log(data);
-       
-
-          console.log(data.error)
-                    if($.isEmptyObject(data.error)){
-                        alert(data.success);
-                    }else{
-                        printErrorMsg(data.error);
-                    }
+ 
+            if($.isEmptyObject(data.error)){
+                alert(data.success);
+            }else{
+                printErrorMsg(data.error);
+            }
         },
        });
 }
  
+var name = document.getElementById("name");
+var email = document.getElementById("email");
 
  
 function printErrorMsg (msg) {
@@ -197,6 +196,8 @@ function printErrorMsg (msg) {
             console.log(key);
               $('.'+key+'_err').text(value);
             });
+            $('#'+key).classList.add("error-input");
+
         }
 
 </script>

@@ -7037,16 +7037,12 @@ textarea {
 }
 
 .error-msg {
-    margin-left: 150px;
     color: #fc2b2b;
     font-size: 11px;
     font-style: italic;
     text-align: right;
 }
 
-.ml450 {
-    margin-left: 450px;
-}
 
 .error-input {
     border: 1px solid red !important;
