@@ -156,6 +156,22 @@ $(".select-nosearch").select2({
 });
 
 
+
+
+
+ 
+
+var fields = ["supplier_name", "email", "mobile","hot_number","mobile","category_ids","password","password_confirmation"];
+
+
+function ValidateStepOne() {
+    
+    $.each( fields, function( field, index ) {
+        $('#'+field).removeClass("error-input");
+
+        $('.'+field+'_err').text('');
+    });
+
     let supplier_name_value = $("input[name=name]").val();
     let email_value = $("input[name=email]").val();
     let mobile_value = $("input[name=mobile]").val();
@@ -166,25 +182,7 @@ $(".select-nosearch").select2({
     let _token   = $('meta[name="csrf-token"]').attr('content');
 
 
-var supplier_name =  document.getElementById("supplier_name");
-var email = document.getElementById("email");
-var mobile = document.getElementById("mobile");
-var hot_number = document.getElementById("hot_number");
-var emobilemail = document.getElementById("mobile");
-var category_ids = document.getElementById("category_ids");
-var password = document.getElementById("password");
-var password_confirmation = document.getElementById("password_confirmation");
 
-var fields = ["supplier_name", "email", "mobile","hot_number","mobile","category_ids","password","password_confirmation"];
-
-
-function ValidateStepOne() {
-
-    $.each( fields, function( field, index ) {
-        $('#'+field).removeClass("error-input");
-
-        $('.'+field+'_err').text('');
-    });
     
     $.ajax({
         url: "/ValidateStepOne" ,
