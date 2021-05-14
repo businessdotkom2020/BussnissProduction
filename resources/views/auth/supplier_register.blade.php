@@ -190,7 +190,7 @@ function ValidateStepOne() {
         url: "/ValidateStepOne" ,
         type:"POST",
         data:{
-            supplier_name_value:supplier_name_value,
+            supplier_name:supplier_name_value,
             email:email_value,
             mobile:mobile_value,
             hot_number:hot_number_value,
