@@ -176,8 +176,8 @@ function ValidateStepOne() {
             categories:categories,
             _token: _token
         },
-        success:function(response){
-          console.log(response);
+        success:function(data){
+          console.log(data);
        
 
           console.log(data.error)
