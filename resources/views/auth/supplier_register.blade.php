@@ -196,8 +196,7 @@ function printErrorMsg (msg) {
             console.log(key);
               $('.'+key+'_err').text(value);
             });
-            $('#'+key).classList.add("error-input");
-
+            document.getElementById(key).classList.add("error-input")
         }
 
 </script>
