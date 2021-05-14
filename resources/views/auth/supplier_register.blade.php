@@ -175,12 +175,12 @@ function ValidateStepOne() {
     let email_value = $("input[name=email]").val();
     let mobile_value = $("input[name=mobile]").val();
     let hot_number_value = $("input[name=hot_number]").val();
-    let categories_value = document.getElementById("category_ids").value;
+    var categories_value =  $('#category_ids').val();;
     let password_value = document.getElementById("password").value;
     let password_confirmation_value = document.getElementById("password_confirmation").value;
     let _token   = $('meta[name="csrf-token"]').attr('content');
 
-
+console.log(categories_value);
 
     
     $.ajax({
