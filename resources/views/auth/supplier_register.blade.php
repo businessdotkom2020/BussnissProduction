@@ -202,7 +202,7 @@ function ValidateStepOne() {
         success:function(data){
             console.log(data);
             if($.isEmptyObject(data.error)){
-                alert(data.success);
+                console.log(data.success);
             }else{
                 console.log(data.error);
                 printErrorMsg(data.error);
