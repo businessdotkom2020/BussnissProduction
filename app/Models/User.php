@@ -32,7 +32,7 @@ class User extends \TCG\Voyager\Models\User
 
 
     protected $fillable = [
-        'name', 'email', 'password', 'type', 'mobile', 'country_id', 'social_auth_type', 'social_id'
+        'name', 'email', 'password', 'type', 'mobile', 'country_id', 'social_auth_type', 'social_id','supplier_name'
     ];
     protected $appends = ['average_rating', 'followers_count', 'is_followed'];
 
