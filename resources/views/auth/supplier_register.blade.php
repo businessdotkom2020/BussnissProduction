@@ -181,15 +181,13 @@ function ValidateStepOne() {
             if($.isEmptyObject(data.error)){
                 alert(data.success);
             }else{
+                console.log(data.error);
                 printErrorMsg(data.error);
             }
         },
        });
 }
  
-var name = document.getElementById("name");
-var email = document.getElementById("email");
-
  
 function printErrorMsg (msg) {
             $.each( msg, function( key, value ) {

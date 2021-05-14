@@ -18,7 +18,7 @@
             @error('email')
             <div class="alert" style="color:#a94442">{{ $message }}</div>
             @enderror
-            <span class="error-msg">هذا الحقل مطلوب.</span>
+            <span class="error-msg email_err">هذا الحقل مطلوب.</span>
         </div>
         <div class="form-group col-md-6 col-xs-12">
             <input type="text" required name="mobile" placeholder="@lang('general.mobile')" class="form-control">
