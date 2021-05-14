@@ -156,15 +156,36 @@ $(".select-nosearch").select2({
 });
 
 
-      let name_value = $("input[name=name]").val();
-      let email_value = $("input[name=email]").val();
-      let mobile_value = $("input[name=mobile]").val();
-      let hot_number_value = $("input[name=hot_number]").val();
-      let categories_value = document.getElementById("category_ids").value;
-      let _token   = $('meta[name="csrf-token"]').attr('content');
+    let name_value = $("input[name=name]").val();
+    let email_value = $("input[name=email]").val();
+    let mobile_value = $("input[name=mobile]").val();
+    let hot_number_value = $("input[name=hot_number]").val();
+    let categories_value = document.getElementById("category_ids").value;
+    let password_value = document.getElementById("password").value;
+    let password_confirmation_value = document.getElementById("password_confirmation").value;
+    let _token   = $('meta[name="csrf-token"]').attr('content');
+
+
+var name =  document.getElementById("supplier_name");
+var email = document.getElementById("email");
+var mobile = document.getElementById("mobile");
+var hot_number = document.getElementById("hot_number");
+var emobilemail = document.getElementById("mobile");
+var category_ids = document.getElementById("category_ids");
+var password = document.getElementById("password");
+var password_confirmation = document.getElementById("password_confirmation");
+
+var fruits = ["supplier_name", "email", "mobile","hot_number","mobile","category_ids","password","password_confirmation"];
+
 
 function ValidateStepOne() {
-    console.log('as');
+
+    $.each( fruits, function( field, index ) {
+        $('#'+field).removeClass("error-input");
+
+        $('.'+field+'_err').text('');
+    });
+    
     $.ajax({
         url: "/ValidateStepOne" ,
         type:"POST",
@@ -174,6 +195,8 @@ function ValidateStepOne() {
             mobile:mobile_value,
             hot_number:hot_number_value,
             categories:categories_value,
+            password:password_value,
+            password_confirmation:password_confirmation_value,
             _token: _token
         },
         success:function(data){
@@ -188,6 +211,8 @@ function ValidateStepOne() {
        });
 }
  
+
+
  
 function printErrorMsg (msg) {
             $.each( msg, function( key, value ) {
