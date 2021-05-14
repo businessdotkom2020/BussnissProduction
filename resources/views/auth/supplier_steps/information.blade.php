@@ -25,6 +25,8 @@
             <span class="error-msg email_err"></span>
         </div>
         <div class="form-group col-md-6 col-xs-12">
+            <h4 style="font-size:15px">@lang('general.mobile')</h4>
+
             <input type="text" required name="mobile" placeholder="@lang('general.mobile')" class="form-control">
             @error('mobile')
             <div class="alert" style="color:#a94442">{{ $message }}</div>
@@ -32,6 +34,8 @@
             <span class="error-msg"></span>
         </div>
         <div class="form-group col-md-6 col-xs-12">
+            <h4 style="font-size:15px">@lang('general.hot_line')</h4>
+
             <input type="text" required name="hot_number" placeholder="@lang('general.hot_line')" class="form-control">
             @error('hot_line')
             <div class="alert" style="color:#a94442">{{ $message }}</div>
@@ -56,6 +60,8 @@
             @enderror
         </div>
         <div class="form-group col-md-6 col-xs-12">
+            <h4 style="font-size:15px">@lang('general.password')</h4>
+
             <input type="password" required name="password" placeholder="@lang('general.password')"
                 class="form-control">
             @error('password')
@@ -64,6 +70,8 @@
             <span class="error-msg"></span>
         </div>
         <div class="form-group col-md-6 col-xs-12">
+            <h4 style="font-size:15px">@lang('general.password_confirmation')</h4>
+
             <input type="password" required name="password_confirmation"
                 placeholder="@lang('general.password_confirmation')" class="form-control">
             @error('password_confirmation')
