@@ -39,6 +39,7 @@ use Validator;
             "category_ids"    => "required|array|min:1",
             "category_ids.*"  => "required|string|distinct|min:1|exists:categories,id",
             'password'        => 'required|min:6|max:20|confirmed',
+            'password_confirmation'        => 'required',
         ]);
 
         if ($validator->passes()) {
