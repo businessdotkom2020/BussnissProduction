@@ -2,6 +2,8 @@
     <h3>@lang('general.main_information')</h3>
     <div class="form-row">
         <div class="form-group col-md-6 col-xs-12">
+            <h4 style="font-size:15px">@lang('general.supplier_name')</h4>
+
             <input type="text" id="supplier_name" required name="supplier_name"
                 placeholder="@lang('general.supplier_name')" class="form-control">
             @error('supplier_name')
@@ -13,6 +15,8 @@
 
 
         <div class="form-group col-md-6 col-xs-12">
+            <h4 style="font-size:15px">@lang('general.email')</h4>
+
             <input type="email" id="email" required name="email" placeholder="@lang('general.email')"
                 class="form-control">
             @error('email')
