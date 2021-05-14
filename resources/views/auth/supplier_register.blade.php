@@ -191,7 +191,7 @@ console.log(categories_value);
             email:email_value,
             mobile:mobile_value,
             hot_number:hot_number_value,
-            categories:categories_value,
+            category_ids:categories_value,
             password:password_value,
             password_confirmation:password_confirmation_value,
             _token: _token
