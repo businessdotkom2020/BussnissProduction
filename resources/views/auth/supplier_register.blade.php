@@ -76,15 +76,6 @@ $menu = false ;
             </section>
             <!-- End Multi step form -->
 
-
-
-
-
-
-
-
-
-
         </div>
     </div>
 </main>
@@ -202,5 +193,14 @@ function ValidateStepOne() {
        });
 }
  
+
+ 
+function printErrorMsg (msg) {
+            $.each( msg, function( key, value ) {
+            console.log(key);
+              $('.'+key+'_err').text(value);
+            });
+        }
+
 </script>
 @endpush

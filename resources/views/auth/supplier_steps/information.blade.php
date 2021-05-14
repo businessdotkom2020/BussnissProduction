@@ -7,7 +7,7 @@
             @error('supplier_name')
             <div class="alert" style="color:#a94442">{{ $message }}</div>
             @enderror
-            <span class="error-msg">هذا الحقل مطلوب.</span>
+            <span class="error-msg supplier_name_err">هذا الحقل مطلوب.</span>
         </div>
 
 
@@ -34,7 +34,7 @@
             @error('hot_line')
             <div class="alert" style="color:#a94442">{{ $message }}</div>
             @enderror
-            <span class="error-msg">هذا الحقل مطلوب.</span>
+            <span class="error-msg hot_number_err">هذا الحقل مطلوب.</span>
         </div>
 
         <div class="form-group col-md-12 col-xs-12">
@@ -48,9 +48,9 @@
                 </option>
                 @endforeach
             </select>
-            <span class="error-msg ml450">هذا الحقل مطلوب.</span>
+            <span class="error-msg ml450 category_ids_err">هذا الحقل مطلوب.</span>
             @error('category_ids')
-            <div class="alert" style="color:#a94442">{{ $message }}</div>
+            <div class="alert category_ids_err" style="color:#a94442">{{ $message }}</div>
             @enderror
         </div>
         <div class="form-group col-md-6 col-xs-12">
