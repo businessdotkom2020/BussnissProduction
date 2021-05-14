@@ -200,7 +200,7 @@ function ValidateStepOne() {
             _token: _token
         },
         success:function(data){
- 
+            console.log(data);
             if($.isEmptyObject(data.error)){
                 alert(data.success);
             }else{
