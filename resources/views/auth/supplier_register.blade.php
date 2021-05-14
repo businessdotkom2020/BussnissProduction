@@ -193,7 +193,7 @@ var email = document.getElementById("email");
  
 function printErrorMsg (msg) {
             $.each( msg, function( key, value ) {
-                $('#'+key).classList.add("error-input");
+                $('#'+key).addClass("error-input");
 
               $('.'+key+'_err').text(value);
             });
