@@ -156,7 +156,7 @@ $(".select-nosearch").select2({
 });
 
 
-    let name_value = $("input[name=name]").val();
+    let supplier_name_value = $("input[name=name]").val();
     let email_value = $("input[name=email]").val();
     let mobile_value = $("input[name=mobile]").val();
     let hot_number_value = $("input[name=hot_number]").val();
@@ -166,7 +166,7 @@ $(".select-nosearch").select2({
     let _token   = $('meta[name="csrf-token"]').attr('content');
 
 
-var name =  document.getElementById("supplier_name");
+var supplier_name =  document.getElementById("supplier_name");
 var email = document.getElementById("email");
 var mobile = document.getElementById("mobile");
 var hot_number = document.getElementById("hot_number");
@@ -175,12 +175,12 @@ var category_ids = document.getElementById("category_ids");
 var password = document.getElementById("password");
 var password_confirmation = document.getElementById("password_confirmation");
 
-var fruits = ["supplier_name", "email", "mobile","hot_number","mobile","category_ids","password","password_confirmation"];
+var fields = ["supplier_name", "email", "mobile","hot_number","mobile","category_ids","password","password_confirmation"];
 
 
 function ValidateStepOne() {
 
-    $.each( fruits, function( field, index ) {
+    $.each( fields, function( field, index ) {
         $('#'+field).removeClass("error-input");
 
         $('.'+field+'_err').text('');
@@ -190,7 +190,7 @@ function ValidateStepOne() {
         url: "/ValidateStepOne" ,
         type:"POST",
         data:{
-            name:name_value,
+            supplier_name_value:supplier_name_value,
             email:email_value,
             mobile:mobile_value,
             hot_number:hot_number_value,
