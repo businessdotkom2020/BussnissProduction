@@ -172,7 +172,7 @@ function ValidateStepOne() {
         $('.'+field+'_err').text('');
     });
 
-    let supplier_name_value = $("input[name=name]").val();
+    let supplier_name_value = $("input[name=supplier_name]").val();
     let email_value = $("input[name=email]").val();
     let mobile_value = $("input[name=mobile]").val();
     let hot_number_value = $("input[name=hot_number]").val();
