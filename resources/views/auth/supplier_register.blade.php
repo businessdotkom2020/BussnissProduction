@@ -168,9 +168,9 @@ function ValidateStepOne() {
     
     $.each( fields, function( field, index ) {
         console.log(field);
-        $('#'+field).removeClass("error-input");
+        $('#'+index).removeClass("error-input");
 
-        $('.'+field+'_err').text('');
+        $('.'+index+'_err').text('');
     });
 
     let supplier_name_value = $("input[name=supplier_name]").val();
