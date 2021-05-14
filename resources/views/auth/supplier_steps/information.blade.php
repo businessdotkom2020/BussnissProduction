@@ -31,7 +31,7 @@
             @error('mobile')
             <div class="alert" style="color:#a94442">{{ $message }}</div>
             @enderror
-            <span class="error-msg"></span>
+            <span class="error-msg mobile_err"></span>
         </div>
         <div class="form-group col-md-6 col-xs-12">
             <h4 style="font-size:15px">@lang('general.hot_line')</h4>
@@ -67,7 +67,7 @@
             @error('password')
             <div class="alert" style="color:#a94442">{{ $message }}</div>
             @enderror
-            <span class="error-msg"></span>
+            <span class="error-msg password_ids_err"></span>
         </div>
         <div class="form-group col-md-6 col-xs-12">
             <h4 style="font-size:15px">@lang('general.password_confirmation')</h4>
@@ -77,7 +77,7 @@
             @error('password_confirmation')
             <div class="alert" style="color:#a94442">{{ $message }}</div>
             @enderror
-            <span class="error-msg"></span>
+            <span class="error-msg password_confirmation_ids_err"></span>
         </div>
     </div>
     <div class="clearfix"></div>
