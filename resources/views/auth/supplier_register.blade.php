@@ -191,6 +191,13 @@ function ValidateStepOne() {
             $('.success').text(response.success);
             $("#ajaxform")[0].reset();
           }
+
+          console.log(data.error)
+                    if($.isEmptyObject(data.error)){
+                        alert(data.success);
+                    }else{
+                        printErrorMsg(data.error);
+                    }
         },
        });
 }

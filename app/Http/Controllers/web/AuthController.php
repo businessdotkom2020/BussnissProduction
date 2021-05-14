@@ -18,6 +18,7 @@ use App\Http\Requests\SendRessetEmail;
 use App\Notifications\PasswordResetRequest;
 use App\Models\PasswordReset;
 use App\Http\Requests\RessetPassword;
+use Validator;
 
  class AuthController extends Controller
 {
@@ -29,6 +30,25 @@ use App\Http\Requests\RessetPassword;
 
     public function ValidateStepOne(ValidateStepOneWeb $request)
     {
+
+        $validator = Validator::make($request->all(), [
+            'supplier_name'   => 'required|min:5|max:20|',
+            'email'           => 'required|email|unique:users,email',
+            'mobile'          => 'required|string|min:9|max:20|unique:users,mobile',
+            'hot_number'      => 'required|string|min:4|max:20|unique:users,hot_number',
+            "category_ids"    => "required|array|min:1",
+            "category_ids.*"  => "required|string|distinct|min:1|exists:categories,id",
+            'password'        => 'required|min:6|max:20|confirmed',
+        ]);
+
+        if ($validator->passes()) {
+
+            return response()->json(['success'=>'Added new records.']);
+			
+        }
+
+        return response()->json(['error'=>$validator->errors()]);
+
         return $validated = $request->validated();
 
     }
