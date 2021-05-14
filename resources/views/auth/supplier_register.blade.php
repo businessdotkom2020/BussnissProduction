@@ -165,7 +165,7 @@ var fields = ["supplier_name", "email", "mobile","hot_number","mobile","category
 
 
 function ValidateStepOne() {
-    
+
     $.each( fields, function( field, index ) {
         $('#'+field).removeClass("error-input");
 
@@ -188,8 +188,8 @@ function ValidateStepOne() {
         url: "/ValidateStepOne" ,
         type:"POST",
         data:{
-            supplier_name:supplier_name_value,
             email:email_value,
+            supplier_name:email_value,
             mobile:mobile_value,
             hot_number:hot_number_value,
             categories:categories_value,
