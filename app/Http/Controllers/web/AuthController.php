@@ -30,7 +30,7 @@ use Validator;
 
     public function ValidateStepOne(ValidateStepOneWeb $request)
     {
-
+return request()->all();
         $validator = Validator::make($request->all(), [
             'supplier_name'   => 'required|min:5|max:20|',
             'email'           => 'required|email|unique:users,email',
