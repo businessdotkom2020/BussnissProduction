@@ -545,6 +545,9 @@ function ValidateStepOne() {
                 // verificationForm();
                 $(".next").trigger("click");
 
+                const element = document.querySelector('element');
+                element.click();
+
             } else {
                 console.log(data.error);
                 printErrorMsg(data.error);
@@ -563,7 +566,7 @@ function verificationForm() {
     $(".next").click(function () {
         if (animating) return false;
         animating = true;
-
+        console.log('Step!Finished');
         current_fs = $(this).parent();
         next_fs = $(this).parent().next();
 
