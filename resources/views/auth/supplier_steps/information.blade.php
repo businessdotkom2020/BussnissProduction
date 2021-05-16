@@ -83,8 +83,6 @@
         </div>
     </div>
     <div class="clearfix"></div>
-    <button type="button" class="action-button previous previous_button">رجوع</button>
-    <button type="submit" class="action-button">@lang('general.register')</button>
-    {{-- <button type="button" class="action-button previous previous_button">السابق</button>
-    <button type="button" onclick="ValidateStepOne()" class="next action-button">التالي</button> --}}
+    <button type="button" class="action-button previous previous_button">السابق</button>
+    <button type="button" onclick="ValidateStepOne()" class="next action-button">التالي</button>
 </fieldset>
