@@ -564,8 +564,11 @@ function verificationForm() {
         if (animating) return false;
         animating = true;
 
-        current_fs = $(this).parent();
-        next_fs = $(this).parent().next();
+        // current_fs = $(this).parent();
+        // next_fs = $(this).parent().next();
+
+        current_fs = document.getElementById("information_form");
+        next_fs = document.getElementById("location_form");
 
         console.log('current' + current_fs);
         console.log(next_fs);
