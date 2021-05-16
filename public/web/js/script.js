@@ -543,7 +543,7 @@ function ValidateStepOne() {
             if ($.isEmptyObject(data.error)) {
                 console.log('success');
                 // verificationForm();
-                $(".next").trigger("click");
+
                 var firstStepValidation = true; //flag to prevent quick multi-click glitches
                 var firststepbutton = document.getElementById("firststepbutton");
 
