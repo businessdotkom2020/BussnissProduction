@@ -567,7 +567,7 @@ function verificationForm() {
     function nextstep() {
         if (animating) return false;
         animating = true;
-
+        console.log('vichawy')
         current_fs = $(this).parent();
         next_fs = $(this).parent().next();
 
