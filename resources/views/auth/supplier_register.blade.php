@@ -227,8 +227,9 @@ function printErrorMsg (msg) {
         var animating; //flag to prevent quick multi-click glitches
 
         console.log('Steps');
-
+        
         $(".next").click(function () {
+            console.log('Steps');
             if (animating) return false;
             animating = true;
 
