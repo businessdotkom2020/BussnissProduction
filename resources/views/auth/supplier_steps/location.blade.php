@@ -1,4 +1,4 @@
-<fieldset id="location_form">
+<fieldset">
     <h3>@lang('general.localization_info')</h3>
     <div class="form-row">
         <div class="form-group col-md-4 col-xs-12">
@@ -136,5 +136,6 @@
     <div class="clearfix"></div>
 
     <button type="button" class="action-button previous previous_button">السابق</button>
-    <button id="firststepbutton" type="button" onclick="ValidateStepOne()" class="next action-button">التالي</button>
-</fieldset>
+    <button id="location_form_button" type="button" onclick="ValidateStepOne()"
+        class="next action-button">التالي</button>
+    </fieldset>
