@@ -542,7 +542,7 @@ function ValidateStepOne() {
             console.log(data);
             if ($.isEmptyObject(data.error)) {
                 console.log('success');
-                verificationForm().nextstep();
+                nextstepform();
                 // verificationForm();
                 // $(".next").trigger("click");
 
@@ -553,6 +553,9 @@ function ValidateStepOne() {
         },
     });
 }
+
+
+var nextstepform;
 
 //* Form js
 function verificationForm() {
@@ -649,6 +652,8 @@ function verificationForm() {
     $(".submit").click(function () {
         return false;
     })
+
+    nextstepform = nextstep;
 };
 
 
