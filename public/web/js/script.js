@@ -135,7 +135,7 @@ $(document).ready(function () {
     });
 
 
-    
+
 
     $(".latest-requests-slider").owlCarousel({
         nav: false,
@@ -205,7 +205,7 @@ $(document).ready(function () {
 
 
 
-    
+
 
     $(".i-slider").owlCarousel({
         nav: false,
@@ -348,15 +348,16 @@ $(document).ready(function () {
     }
 
 
-    
+
     //* Form js
-    function verificationForm(){
+    function verificationForm() {
         //jQuery time
         var current_fs, next_fs, previous_fs; //fieldsets
         var left, opacity, scale; //fieldset properties which we will animate
         var animating; //flag to prevent quick multi-click glitches
 
         $(".next").click(function () {
+            console.log('step');
             if (animating) return false;
             animating = true;
 
@@ -444,25 +445,25 @@ $(document).ready(function () {
         $(".submit").click(function () {
             return false;
         })
-    }; 
-    
+    };
+
     //* Add Phone no select
-    function phoneNoselect(){
-        if ( $('#msform').length ){   
-            $("#phone").intlTelInput(); 
-            $("#phone").intlTelInput("setNumber", "+880"); 
+    function phoneNoselect() {
+        if ($('#msform').length) {
+            $("#phone").intlTelInput();
+            $("#phone").intlTelInput("setNumber", "+880");
         };
-    }; 
+    };
     //* Select js
-    function nice_Select(){
-        if ( $('.product_select').length ){ 
+    function nice_Select() {
+        if ($('.product_select').length) {
             $('select').niceSelect();
         };
-    }; 
-    /*Function Calls*/  
-    verificationForm ();
-    phoneNoselect ();
-    nice_Select ();
+    };
+    /*Function Calls*/
+    verificationForm();
+    phoneNoselect();
+    nice_Select();
 });
 
 
@@ -473,15 +474,15 @@ $(document).ready(function () {
 $(document).ready(function () {
 
     var navListItems = $('div.setup-panel div a'),
-            allWells = $('.setup-content'),
-            allNextBtn = $('.nextBtn');
+        allWells = $('.setup-content'),
+        allNextBtn = $('.nextBtn');
 
     allWells.hide();
 
     navListItems.click(function (e) {
         e.preventDefault();
         var $target = $($(this).attr('href')),
-                $item = $(this);
+            $item = $(this);
 
         if (!$item.hasClass('disabled')) {
             navListItems.removeClass('btn-primary').addClass('btn-default');
@@ -492,7 +493,7 @@ $(document).ready(function () {
         }
     });
 
-    allNextBtn.click(function(){
+    allNextBtn.click(function () {
         var curStep = $(this).closest(".setup-content"),
             curStepBtn = curStep.attr("id"),
             nextStepWizard = $('div.setup-panel div a[href="#' + curStepBtn + '"]').parent().next().children("a"),
@@ -500,8 +501,8 @@ $(document).ready(function () {
             isValid = true;
 
         $(".form-group").removeClass("has-error");
-        for(var i=0; i<curInputs.length; i++){
-            if (!curInputs[i].validity.valid){
+        for (var i = 0; i < curInputs.length; i++) {
+            if (!curInputs[i].validity.valid) {
                 isValid = false;
                 $(curInputs[i]).closest(".form-group").addClass("has-error");
             }
