@@ -542,6 +542,7 @@ function ValidateStepOne() {
             console.log(data);
             if ($.isEmptyObject(data.error)) {
                 console.log('success');
+                nextstep();
                 // verificationForm();
                 // $(".next").trigger("click");
 
@@ -560,7 +561,7 @@ function verificationForm() {
     var left, opacity, scale; //fieldset properties which we will animate
     var animating; //flag to prevent quick multi-click glitches
 
-    $(".next").click(function () {
+    function nextstep() {
         if (animating) return false;
         animating = true;
 
@@ -601,7 +602,7 @@ function verificationForm() {
             //this comes from the custom easing plugin
             easing: 'easeInOutBack'
         });
-    });
+    };
 
     $(".previous").click(function () {
         if (animating) return false;
