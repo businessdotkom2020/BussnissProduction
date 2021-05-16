@@ -1,4 +1,4 @@
-<fieldset>
+<fieldset id="location_form">
     <h3>@lang('general.localization_info')</h3>
     <div class="form-row">
         <div class="form-group col-md-4 col-xs-12">

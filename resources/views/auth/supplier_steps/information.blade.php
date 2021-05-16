@@ -1,4 +1,4 @@
-<fieldset>
+<fieldset id="information_form">
     <h3>@lang('general.main_information')</h3>
     <div class="form-row">
         <div class="form-group col-md-6 col-xs-12">
@@ -83,6 +83,6 @@
         </div>
     </div>
     <div class="clearfix"></div>
-    <button type="button" onclick="ValidateStepOne()" class="  action-button next11">التالي</button>
+    <button type="button" class="  action-button next11">التالي</button>
 
 </fieldset>
