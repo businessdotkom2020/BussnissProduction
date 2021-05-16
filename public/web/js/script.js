@@ -545,9 +545,9 @@ function ValidateStepOne() {
                 // verificationForm();
                 $(".next").trigger("click");
                 var firstStepValidation = true; //flag to prevent quick multi-click glitches
+                var firststepbutton = document.getElementById("firststepbutton");
 
-                const element = document.querySelector('firststepbutton');
-                element.click();
+                firststepbutton.click();
 
             } else {
                 console.log(data.error);
