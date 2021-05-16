@@ -197,7 +197,9 @@ function ValidateStepOne() {
         success:function(data){
             console.log(data);
             if($.isEmptyObject(data.error)){
-                console.log(data.success);
+                console.log('success');
+                verificationForm();
+
             }else{
                 console.log(data.error);
                 printErrorMsg(data.error);
