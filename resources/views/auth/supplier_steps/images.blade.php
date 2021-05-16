@@ -40,5 +40,6 @@
         </div>
     </div>
     <div class="clearfix"></div>
-    <button type="button" class="next action-button next11">التالي</button>
+    <button type="button" class="action-button previous previous_button">رجوع</button>
+    <button type="submit" class="action-button">@lang('general.register')</button>
 </fieldset>
