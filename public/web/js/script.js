@@ -547,3 +547,116 @@ $('.category-toggle').click(function (e) {
     //     $(this).toggleClass("active").siblings().removeClass("active");
     // })
 });
+
+
+$('#country').change(function () {
+    var cid = $(this).val();
+    if (cid) {
+        $.ajax({
+            type: "get",
+            url: " /getStates/" + cid,
+            success: function (res) {
+                if (res) {
+                    $("#state").empty();
+                    $("#city").empty();
+                    $("#state").append('<option>Select State</option>');
+                    $.each(res, function (key, value) {
+                        $("#state").append('<option value="' + key + '">' + value +
+                            '</option>');
+                    });
+                    $('#state').niceSelect('update');
+
+                }
+            }
+
+        });
+    }
+});
+$('#state').change(function () {
+    var sid = $(this).val();
+    if (sid) {
+        $.ajax({
+            type: "get",
+            url: "/getCities/" + sid,
+            success: function (res) {
+                if (res) {
+                    $("#city").empty();
+                    $("#city").append('<option>Select City</option>');
+                    $.each(res, function (key, value) {
+                        $("#city").append('<option value="' + key + '">' + value +
+                            '</option>');
+                    });
+                    $('#city').niceSelect('update');
+
+                }
+            }
+
+        });
+    }
+});
+
+
+$(".select-nosearch").select2({
+    placeholder: "  {{ __('general.categories') }}  ",
+    allowClear: true
+});
+
+var fields = ["supplier_name", "email", "mobile", "hot_number", "mobile", "category_ids", "password", "password_confirmation"];
+
+
+function ValidateStepOne() {
+
+    $.each(fields, function (index, field) {
+        $('#' + field).removeClass("error-input");
+        $('.' + field + '_err').text('');
+    });
+
+    let supplier_name_value = $("input[name=supplier_name]").val();
+    let email_value = $("input[name=email]").val();
+    let mobile_value = $("input[name=mobile]").val();
+    let hot_number_value = $("input[name=hot_number]").val();
+    var categories_value = $('#category_ids').val();;
+    let password_value = document.getElementById("password").value;
+    let password_confirmation_value = document.getElementById("password_confirmation").value;
+    let _token = $('meta[name="csrf-token"]').attr('content');
+
+
+    $.ajax({
+        url: "/ValidateStepOne",
+        type: "POST",
+        data: {
+            supplier_name: supplier_name_value,
+            email: email_value,
+            mobile: mobile_value,
+            hot_number: hot_number_value,
+            category_ids: categories_value,
+            password: password_value,
+            password_confirmation: password_confirmation_value,
+            _token: _token
+        },
+        success: function (data) {
+            console.log(data);
+            if ($.isEmptyObject(data.error)) {
+                console.log('success');
+                // verificationForm();
+                $(".next").trigger("click");
+
+            } else {
+                console.log(data.error);
+                printErrorMsg(data.error);
+            }
+        },
+    });
+}
+
+
+
+
+function printErrorMsg(msg) {
+    $.each(msg, function (key, value) {
+        $('#' + key).addClass("error-input");
+
+        $('.' + key + '_err').text(value);
+    });
+
+}
