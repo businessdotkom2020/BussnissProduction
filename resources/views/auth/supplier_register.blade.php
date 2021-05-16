@@ -92,7 +92,6 @@ $menu = false ;
 
 <script src="{{ asset('/web/js/select2.full.min.js')}}"></script>
 <script src="{{ asset('/web/js/mapInput.js')}}"></script>
-<script src="{{ asset('/web/js/script.js')}}"></script>
 
 
 
@@ -220,4 +219,7 @@ function printErrorMsg (msg) {
         }
 
 </script>
+
+<script src="{{ asset('/web/js/script.js')}}"></script>
+
 @endpush
