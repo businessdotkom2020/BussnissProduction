@@ -92,6 +92,7 @@ $menu = false ;
 
 <script src="{{ asset('/web/js/select2.full.min.js')}}"></script>
 <script src="{{ asset('/web/js/mapInput.js')}}"></script>
+<script src="{{ asset('/web/js/script.js')}}"></script>
 
 
 
@@ -179,8 +180,6 @@ function ValidateStepOne() {
     let password_value = document.getElementById("password").value;
     let password_confirmation_value = document.getElementById("password_confirmation").value;
     let _token   = $('meta[name="csrf-token"]').attr('content');
-
-console.log(categories_value);
 
     
     $.ajax({
