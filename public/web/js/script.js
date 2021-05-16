@@ -542,7 +542,7 @@ function ValidateStepOne() {
             console.log(data);
             if ($.isEmptyObject(data.error)) {
                 console.log('success');
-                nextstep();
+                verificationForm().nextstep();
                 // verificationForm();
                 // $(".next").trigger("click");
 
