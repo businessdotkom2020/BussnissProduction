@@ -568,8 +568,8 @@ function verificationForm() {
         if (animating) return false;
         animating = true;
         console.log('vichawy')
-        current_fs = $(this).parent();
-        next_fs = $(this).parent().next();
+        current_fs = 1;
+        next_fs = 2;
 
         //activate next step on progressbar using the index of next_fs
         $("#progressbar li").eq($("fieldset").index(next_fs)).addClass("active");
