@@ -155,12 +155,6 @@ $(".select-nosearch").select2({
     allowClear: true
 });
 
-
-
-
-
- 
-
 var fields = ["supplier_name", "email", "mobile","hot_number","mobile","category_ids","password","password_confirmation"];
 
 
@@ -323,6 +317,8 @@ function printErrorMsg (msg) {
             return false;
         })
     };
+    
+    verificationForm();
 
 </script>
 
