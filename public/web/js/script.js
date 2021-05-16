@@ -542,9 +542,9 @@ function ValidateStepOne() {
             console.log(data);
             if ($.isEmptyObject(data.error)) {
                 console.log('success');
-                nextstepform();
+                verificationForm().nextstep();
                 // verificationForm();
-                // $(".next").trigger("click");
+                $(".next").trigger("click");
 
             } else {
                 console.log(data.error);
@@ -553,9 +553,6 @@ function ValidateStepOne() {
         },
     });
 }
-
-
-var nextstepform;
 
 //* Form js
 function verificationForm() {
@@ -567,9 +564,12 @@ function verificationForm() {
     function nextstep() {
         if (animating) return false;
         animating = true;
-        console.log('vichawy')
-        current_fs = 1;
-        next_fs = 2;
+
+        current_fs = $(this).parent();
+        next_fs = $(this).parent().next();
+        console.log(current_fs);
+        console.log(next_fs);
+
 
         //activate next step on progressbar using the index of next_fs
         $("#progressbar li").eq($("fieldset").index(next_fs)).addClass("active");
@@ -652,8 +652,6 @@ function verificationForm() {
     $(".submit").click(function () {
         return false;
     })
-
-    nextstepform = nextstep;
 };
 
 
