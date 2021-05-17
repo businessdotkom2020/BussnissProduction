@@ -11,7 +11,7 @@
                 @endforeach
             </select>
 
-            <span class="error-msg ml450 category_ids_err"></span>
+            <span class="error-msg  state_id_err"></span>
 
         </div>
 
@@ -22,7 +22,7 @@
                 <option selected disabled>@lang('general.state')</option>
             </select>
 
-            <span class="error-msg ml450 category_ids_err"></span>
+            <span class="error-msg  city_id_err"></span>
 
         </div>
 
@@ -33,7 +33,7 @@
                 <option selected disabled>@lang('general.city')</option>
             </select>
 
-            <span class="error-msg ml450 category_ids_err"></span>
+            <span class="error-msg  country_id_err"></span>
 
         </div>
 
@@ -43,7 +43,7 @@
             <input required type="text" name="street_nom" placeholder="@lang('general.street_num')"
                 class="form-control error-va">
 
-            <span class="error-msg ml450 category_ids_err"></span>
+            <span class="error-msg  street_nom_err"></span>
 
         </div>
 
@@ -53,21 +53,19 @@
         <div class="form-group col-md-6 col-xs-12">
             <input required type="text" name="zip_code" placeholder="@lang('general.zip_code')"
                 class="form-control error-va">
-            @error('zip_code')
-            <div class="alert" style="color:#a94442">{{ $message }}</div>
-            @enderror
-            <span class="error-msg">هذا الحقل مطلوب.</span>
+
+            <span class="error-msg  zip_code_err"></span>
+
         </div>
 
         {{--  Address Spec Input  --}}
 
         <div class="form-group col-md-12 col-xs-12">
-            <input required type="text" name="address" placeholder="@lang('general.address_spec')"
-                class="form-control error-va">
-            @error('address_spec')
-            <div class="alert" style="color:#a94442">{{ $message }}</div>
-            @enderror
-            <span class="error-msg">هذا الحقل مطلوب.</span>
+            <textarea required type="text" name="address" placeholder="@lang('general.address_spec')"
+                class="form-control error-va"></textarea>
+
+            <span class="error-msg  address_err"></span>
+
         </div>
 
         {{--  Map Input  --}}
@@ -112,5 +110,5 @@
     <div class="clearfix"></div>
 
     <button type="button" class="action-button previous previous_button">السابق</button>
-    <button type="button" onclick="ValidateStepOTwo()" class="next action-button">التالي</button>
+    <button type="button" onclick="ValidateStepTwo()" class="next action-button">التالي</button>
 </fieldset>
