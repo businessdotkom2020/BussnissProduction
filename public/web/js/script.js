@@ -544,7 +544,7 @@ function ValidateStepOne() {
                 console.log('success');
                 // verificationForm();
                 // $(".next").trigger("click");
-                initValidation.validate();
+                verificationForm.NextStep();
 
             } else {
                 console.log(data.error);
