@@ -573,6 +573,9 @@ function verificationForm() {
         current_fs = $("#" + current_step_id);
         next_fs = $("#" + next_step_id);
 
+        console.log(current_fs);
+        console.log(next_fs);
+
         //activate next step on progressbar using the index of next_fs
         $("#progressbar li").eq($("fieldset").index(next_fs)).addClass("active");
 
