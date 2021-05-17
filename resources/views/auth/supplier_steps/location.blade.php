@@ -136,5 +136,5 @@
     <div class="clearfix"></div>
 
     <button type="button" class="action-button previous previous_button">السابق</button>
-    <button type="button" class="next action-button">التالي</button>
+    <button type="button" id="location_form_button" class="next action-button">التالي</button>
 </fieldset>
