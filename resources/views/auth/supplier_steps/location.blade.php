@@ -4,7 +4,7 @@
 
         {{--  Country Input  --}}
         <div class="form-group col-md-4 col-xs-12">
-            <select required id="country" name="country_id" class="form-control error-va">
+            <select required id="country_id" name="country_id" class="form-control error-va">
                 <option selected disabled>@lang('general.country')</option>
                 @foreach (\App\Models\Country::get() as $country)
                 <option value="{{$country->id}}">{{$country->name}}</option>
@@ -18,7 +18,7 @@
         {{--  State Input  --}}
 
         <div class="form-group col-md-4 col-xs-12">
-            <select required name="state_id" id="state" class="form-control error-va">
+            <select required name="state_id" id="state_id" class="form-control error-va">
                 <option selected disabled>@lang('general.state')</option>
             </select>
 
@@ -29,7 +29,7 @@
         {{--  City Input  --}}
 
         <div class="form-group col-md-4 col-xs-12">
-            <select required name="city_id" id="city" class="form-control error-va">
+            <select required name="city_id" id="city_id" class="form-control error-va">
                 <option selected disabled>@lang('general.city')</option>
             </select>
 
@@ -40,7 +40,7 @@
         {{--  street_nom Input  --}}
 
         <div class="form-group col-md-6 col-xs-12">
-            <input required type="text" name="street_nom" placeholder="@lang('general.street_num')"
+            <input id="street_nom" required type="text" name="street_nom" placeholder="@lang('general.street_num')"
                 class="form-control error-va">
 
             <span class="error-msg  street_nom_err"></span>
@@ -51,7 +51,7 @@
 
 
         <div class="form-group col-md-6 col-xs-12">
-            <input required type="text" name="zip_code" placeholder="@lang('general.zip_code')"
+            <input id="zip_code" required type="text" name="zip_code" placeholder="@lang('general.zip_code')"
                 class="form-control error-va">
 
             <span class="error-msg  zip_code_err"></span>
@@ -61,7 +61,7 @@
         {{--  Address Spec Input  --}}
 
         <div class="form-group col-md-12 col-xs-12">
-            <textarea required type="text" name="address" placeholder="@lang('general.address_spec')"
+            <textarea id="address" required type="text" name="address" placeholder="@lang('general.address_spec')"
                 class="form-control error-va"></textarea>
 
             <span class="error-msg  address_err"></span>

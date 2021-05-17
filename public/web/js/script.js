@@ -453,7 +453,7 @@ $('.category-toggle').click(function (e) {
 });
 
 
-$('#country').change(function () {
+$('#country_id').change(function () {
     var cid = $(this).val();
     if (cid) {
         $.ajax({
@@ -461,14 +461,14 @@ $('#country').change(function () {
             url: " /getStates/" + cid,
             success: function (res) {
                 if (res) {
-                    $("#state").empty();
-                    $("#city").empty();
-                    $("#state").append('<option>Select State</option>');
+                    $("#state_id").empty();
+                    $("#city_id").empty();
+                    $("#state_id").append('<option>Select State</option>');
                     $.each(res, function (key, value) {
-                        $("#state").append('<option value="' + key + '">' + value +
+                        $("#state_id").append('<option value="' + key + '">' + value +
                             '</option>');
                     });
-                    $('#state').niceSelect('update');
+                    $('#state_id').niceSelect('update');
 
                 }
             }
@@ -476,7 +476,7 @@ $('#country').change(function () {
         });
     }
 });
-$('#state').change(function () {
+$('#state_id').change(function () {
     var sid = $(this).val();
     if (sid) {
         $.ajax({
@@ -484,13 +484,13 @@ $('#state').change(function () {
             url: "/getCities/" + sid,
             success: function (res) {
                 if (res) {
-                    $("#city").empty();
-                    $("#city").append('<option>Select City</option>');
+                    $("#city_id").empty();
+                    $("#city_id").append('<option>Select City</option>');
                     $.each(res, function (key, value) {
-                        $("#city").append('<option value="' + key + '">' + value +
+                        $("#city_id").append('<option value="' + key + '">' + value +
                             '</option>');
                     });
-                    $('#city').niceSelect('update');
+                    $('#city_id').niceSelect('update');
 
                 }
             }
