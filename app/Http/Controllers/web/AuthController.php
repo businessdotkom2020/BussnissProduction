@@ -52,7 +52,7 @@ use Validator;
         return $validated = $request->validated();
 
     }
-    public function ValidateStepTow(Request $request)
+    public function ValidateStepTwo(Request $request)
     {
         $validator = Validator::make($request->all(), [
             'state_id'        => 'required|exists:states,id',
