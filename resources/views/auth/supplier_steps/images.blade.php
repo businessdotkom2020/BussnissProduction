@@ -1,4 +1,4 @@
-<fieldset id="images_form">
+<fieldset>
     <h3>@lang('general.background_image')</h3>
     <div class="form-row">
         <div class="form-group col-xs-12">
