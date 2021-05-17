@@ -577,7 +577,9 @@ function verificationForm() {
         $("#progressbar li").eq($("fieldset").index(next_fs)).addClass("active");
 
         //show the next fieldset
-        next_fs.show();
+        // next_fs.show();
+        $("#location_form").show();
+
         //hide the current fieldset with style
         current_fs.animate({
             opacity: 0
