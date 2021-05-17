@@ -83,6 +83,7 @@
         </div>
     </div>
     <div class="clearfix"></div>
-    <button type="button" onclick="ValidateStepOne()" class="  action-button next11">التالي</button>
+    <button type="button" id="information_form_button" onclick="ValidateStepOne()"
+        class="  action-button next11">التالي</button>
 
 </fieldset>
