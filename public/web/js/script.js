@@ -573,7 +573,7 @@ function ValidateStepTwo() {
     var zip_code_value = $('#zip_code').val();
     let address_value = document.getElementById("address").value;
     let lat_value = document.getElementById("lat").value;
-    let lang_value = document.getElementById("lang").value;
+    let lang_value = document.getElementById("lng").value;
     let _token = $('meta[name="csrf-token"]').attr('content');
 
 
