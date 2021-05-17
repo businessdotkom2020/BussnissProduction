@@ -568,7 +568,7 @@ function verificationForm() {
         // next_fs = $(this).parent().next();
 
         current_fs = $("#information_form");
-        next_fs = document.getElementById("location_form");
+        next_fs = $("#location_form");
 
         console.log('current' + current_fs);
         console.log('next_fs' + next_fs);
