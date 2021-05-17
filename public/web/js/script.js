@@ -505,10 +505,10 @@ $(".select-nosearch").select2({
     allowClear: true
 });
 
-var fields = ["supplier_name", "email", "mobile", "hot_number", "mobile", "category_ids", "password", "password_confirmation"];
 
 
 function ValidateStepOne() {
+    var fields = ["supplier_name", "email", "hot_number", "mobile", "category_ids", "password", "password_confirmation"];
 
     $.each(fields, function (index, field) {
         $('#' + field).removeClass("error-input");
@@ -559,18 +559,21 @@ function ValidateStepOne() {
 
 function ValidateStepTwo() {
 
+    var fields = ["state_id", "city_id", "country_id", "street_nom", "zip_code", "address", "lat", "lang"];
+
     $.each(fields, function (index, field) {
         $('#' + field).removeClass("error-input");
         $('.' + field + '_err').text('');
     });
 
-    let supplier_name_value = $("input[name=supplier_name]").val();
-    let email_value = $("input[name=email]").val();
-    let mobile_value = $("input[name=mobile]").val();
-    let hot_number_value = $("input[name=hot_number]").val();
-    var categories_value = $('#category_ids').val();;
-    let password_value = document.getElementById("password").value;
-    let password_confirmation_value = document.getElementById("password_confirmation").value;
+    let country_id_value = $("input[name=country_id]").val();
+    let state_id_value = $("input[name=state_id]").val();
+    let city_value = $("input[name=city_id]").val();
+    let street_nom_value = $("input[name=street_nom]").val();
+    var zip_code_value = $('#zip_code').val();
+    let address_value = document.getElementById("address").value;
+    let lat_value = document.getElementById("lat").value;
+    let lang_value = document.getElementById("lang").value;
     let _token = $('meta[name="csrf-token"]').attr('content');
 
 
@@ -578,13 +581,14 @@ function ValidateStepTwo() {
         url: "/ValidateStepTwo",
         type: "POST",
         data: {
-            supplier_name: supplier_name_value,
-            email: email_value,
-            mobile: mobile_value,
-            hot_number: hot_number_value,
-            category_ids: categories_value,
-            password: password_value,
-            password_confirmation: password_confirmation_value,
+            country_id: country_id_value,
+            state_id: state_id_value,
+            city_id: city_value,
+            street_nom: street_nom_value,
+            zip_code: zip_code_value,
+            address: address_value,
+            lat: lat_value,
+            lang: lang_value,
             _token: _token
         },
         success: function (data) {
