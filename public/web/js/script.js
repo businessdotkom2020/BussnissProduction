@@ -564,15 +564,13 @@ function verificationForm() {
         if (animating) return false;
         animating = true;
 
-        // current_fs = $(this).parent();
-        // next_fs = $(this).parent().next();
+        current_fs = $(this).parent();
+        next_fs = $(this).parent().next();
 
-        current_fs = document.getElementById("information_form_button").parentElement;
-        next_fs = document.getElementById("location_form_button").parentElement;
+
 
         console.log('current' + current_fs);
         console.log('next_fs' + next_fs);
-        console.log('current By Id' + document.getElementById("information_form"));
 
         //activate next step on progressbar using the index of next_fs
         $("#progressbar li").eq($("fieldset").index(next_fs)).addClass("active");
