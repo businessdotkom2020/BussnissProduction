@@ -542,9 +542,11 @@ function ValidateStepOne() {
             console.log(data);
             if ($.isEmptyObject(data.error)) {
                 console.log('success');
-                // verificationForm();
-                // $(".next").trigger("click");
-                verificationForm.NextStep();
+
+                var current_step_id = "information_form";
+                var next_step_id = "location_form";
+
+                verificationForm.NextStep(current_step_id, next_step_id);
 
             } else {
                 console.log(data.error);
@@ -561,22 +563,22 @@ function verificationForm() {
     var left, opacity, scale; //fieldset properties which we will animate
     var animating; //flag to prevent quick multi-click glitches
 
-    function NextStep() {
+    function NextStep(current_step_id, next_step_id) {
         if (animating) return false;
         animating = true;
 
         // current_fs = $(this).parent();
         // next_fs = $(this).parent().next();
 
-        current_fs = $("#information_form");
-        next_fs = $("#location_form");
+        current_fs = $("#" + current_step_id);
+        next_fs = $("#" + next_step_id);
 
         //activate next step on progressbar using the index of next_fs
         $("#progressbar li").eq($("fieldset").index(next_fs)).addClass("active");
 
         //show the next fieldset
         // next_fs.show();
-        $("#location_form").show();
+        $("#" + current_step_id).show();
 
         //hide the current fieldset with style
         current_fs.animate({
