@@ -543,7 +543,8 @@ function ValidateStepOne() {
             if ($.isEmptyObject(data.error)) {
                 console.log('success');
                 // verificationForm();
-                $(".next").trigger("click");
+                // $(".next").trigger("click");
+                initValidation.validate();
 
             } else {
                 console.log(data.error);
@@ -560,7 +561,7 @@ function verificationForm() {
     var left, opacity, scale; //fieldset properties which we will animate
     var animating; //flag to prevent quick multi-click glitches
 
-    $(".next").click(function () {
+    function NextStep() {
         if (animating) return false;
         animating = true;
 
@@ -569,9 +570,6 @@ function verificationForm() {
 
         current_fs = $("#information_form");
         next_fs = $("#location_form");
-
-        console.log('current' + current_fs);
-        console.log('next_fs' + next_fs);
 
         //activate next step on progressbar using the index of next_fs
         $("#progressbar li").eq($("fieldset").index(next_fs)).addClass("active");
@@ -609,7 +607,7 @@ function verificationForm() {
             //this comes from the custom easing plugin
             easing: 'easeInOutBack'
         });
-    });
+    };
 
     $(".previous").click(function () {
         if (animating) return false;
@@ -652,6 +650,9 @@ function verificationForm() {
             easing: 'easeInOutBack'
         });
     });
+
+    verificationForm.NextStep = NextStep;
+
 
     $(".submit").click(function () {
         return false;
