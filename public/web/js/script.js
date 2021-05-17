@@ -556,6 +556,55 @@ function ValidateStepOne() {
     });
 }
 
+
+function ValidateStepTwo() {
+
+    $.each(fields, function (index, field) {
+        $('#' + field).removeClass("error-input");
+        $('.' + field + '_err').text('');
+    });
+
+    let supplier_name_value = $("input[name=supplier_name]").val();
+    let email_value = $("input[name=email]").val();
+    let mobile_value = $("input[name=mobile]").val();
+    let hot_number_value = $("input[name=hot_number]").val();
+    var categories_value = $('#category_ids').val();;
+    let password_value = document.getElementById("password").value;
+    let password_confirmation_value = document.getElementById("password_confirmation").value;
+    let _token = $('meta[name="csrf-token"]').attr('content');
+
+
+    $.ajax({
+        url: "/ValidateStepTwo",
+        type: "POST",
+        data: {
+            supplier_name: supplier_name_value,
+            email: email_value,
+            mobile: mobile_value,
+            hot_number: hot_number_value,
+            category_ids: categories_value,
+            password: password_value,
+            password_confirmation: password_confirmation_value,
+            _token: _token
+        },
+        success: function (data) {
+            console.log(data);
+            if ($.isEmptyObject(data.error)) {
+                console.log('success');
+
+                var current_step_id = "location_form";
+                var next_step_id = "Images_form";
+
+                verificationForm.NextStep(current_step_id, next_step_id);
+
+            } else {
+                console.log(data.error);
+                printErrorMsg(data.error);
+            }
+        },
+    });
+}
+
 //* Form js
 function verificationForm() {
     //jQuery time

@@ -111,6 +111,7 @@ Route::middleware('guest')->group(function () {
     Route::post('register/supplier', 'web\AuthController@do_register_supplier')->name('do.supplier.register');
 
     Route::post('ValidateStepOne', 'web\AuthController@ValidateStepOne');
+    Route::post('ValidateStepTwo', 'web\AuthController@ValidateStepTwo');
     // Route::post('ValidateStepOne', 'web\AuthController@ValidateStepOne');
     // Route::post('ValidateStepOne', 'web\AuthController@ValidateStepOne');
     // Register Suppliers

@@ -32,13 +32,45 @@ use Validator;
     {
         $validator = Validator::make($request->all(), [
             'supplier_name'   => 'required|min:5|max:20|',
-            // 'email'           => 'required|email|unique:users,email',
-            // 'mobile'          => 'required|string|min:9|max:20|unique:users,mobile',
-            // 'hot_number'      => 'required|string|min:4|max:20|unique:users,hot_number',
-            // "category_ids"    => "required|array|min:1",
-            // "category_ids.*"  => "required|string|distinct|min:1|exists:categories,id",
-            // 'password'        => 'required|min:6|max:20|confirmed',
-            // 'password_confirmation'        => 'required',
+            'email'           => 'required|email|unique:users,email',
+            'mobile'          => 'required|string|min:9|max:20|unique:users,mobile',
+            'hot_number'      => 'required|string|min:4|max:20|unique:users,hot_number',
+            "category_ids"    => "required|array|min:1",
+            "category_ids.*"  => "required|string|distinct|min:1|exists:categories,id",
+            'password'        => 'required|min:6|max:20|confirmed',
+            'password_confirmation'        => 'required',
+        ]);
+
+        if ($validator->passes()) {
+
+            return response()->json(['success'=>'Added new records.']);
+			
+        }
+
+        return response()->json(['error'=>$validator->errors()]);
+
+        return $validated = $request->validated();
+
+    }
+    public function ValidateStepTow(Request $request)
+    {
+        $validator = Validator::make($request->all(), [
+            'supplier_name'   => 'required|min:5|max:20|',
+            'email'           => 'required|email|unique:users,email',
+            'mobile'          => 'required|string|min:9|max:20|unique:users,mobile',
+            'hot_number'      => 'required|string|min:4|max:20|unique:users,hot_number',
+            "category_ids"    => "required|array|min:1",
+            "category_ids.*"  => "required|string|distinct|min:1|exists:categories,id",
+            'password'        => 'required|min:6|max:20|confirmed',
+
+            'state_id'        => 'required|exists:states,id',
+            'city_id'         => 'required|exists:cities,id',
+            'country_id'      => 'required|exists:countries,id',
+            "street_nom"      => "required|string",
+            "zip_code"        => "required|string",
+            "address"         => "required|string",
+            "lat"             => "required|string",
+            "lang"            => "required|string",
         ]);
 
         if ($validator->passes()) {
