@@ -580,6 +580,7 @@ function verificationForm() {
         // next_fs.show();
         $("#" + current_step_id).show();
 
+
         //hide the current fieldset with style
         current_fs.animate({
             opacity: 0
