@@ -463,7 +463,7 @@ $('#country_id').change(function () {
                 if (res) {
                     $("#state_id").empty();
                     $("#city_id").empty();
-                    $("#state_id").append('<option disabled>' + select_state + '</option>');
+                    $("#state_id").append('<option selected disabled>' + select_state + '</option>');
                     $.each(res, function (key, value) {
                         $("#state_id").append('<option value="' + key + '">' + value +
                             '</option>');
@@ -485,7 +485,7 @@ $('#state_id').change(function () {
             success: function (res) {
                 if (res) {
                     $("#city_id").empty();
-                    $("#city_id").append('<option disabled>' + select_city + '</option>');
+                    $("#city_id").append('<option selected disabled>' + select_city + '</option>');
                     $.each(res, function (key, value) {
                         $("#city_id").append('<option value="' + key + '">' + value +
                             '</option>');
