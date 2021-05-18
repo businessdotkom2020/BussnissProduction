@@ -54,6 +54,7 @@ use Validator;
     }
     public function ValidateStepTwo(Request $request)
     {
+        return request()->all();
         $validator = Validator::make($request->all(), [
             'state_id'        => 'required|exists:states,id',
             'city_id'         => 'required|exists:cities,id',
