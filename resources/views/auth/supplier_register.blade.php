@@ -87,7 +87,9 @@ $menu = false ;
 
 @push('scripts')
 <script>
-    var current_location = @json( __('general.current_location') );
+    var select_city = @json( __('general.select_city') );
+    var select_state = @json( __('general.select_state') );
+ 
 </script>
 
 <script type="text/javascript" src="{{ asset('/web/js/select2.full.min.js')}}"></script>

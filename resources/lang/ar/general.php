@@ -134,7 +134,11 @@ return [
     'register_procces_2' =>  'المعلومات الرئيسية',
     'register_procces_3' =>  'معلومات المكان و الخريطة',
     'dashboard' =>  'لوحة التحكم',
-
+    'enter_location' =>  'أدخل العنوان',
+    'enter_location' =>  'أدخل العنوان',
+    'select_city' =>  'إختر المدينة',
+    'select_state' =>  'إختر المحافظة',
+ 
 
 
     'product_name_ar' =>  '(عربي) إسم المنتج ',

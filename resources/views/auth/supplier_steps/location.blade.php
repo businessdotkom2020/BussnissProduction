@@ -79,7 +79,7 @@
                 <div class="col-md-12 col-xs-12 m10_b">
 
                     <div id="pac-container">
-                        <input id="pac-input" type="text" placeholder="Enter a location">
+                        <input id="pac-input" type="text" placeholder="@lang('general.enter_location')">
                     </div>
 
                 </div>
