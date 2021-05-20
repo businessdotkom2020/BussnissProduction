@@ -654,6 +654,7 @@ $('#msform').submit(function (e) {
                 console.log('success');
                 event.returnValue = true;
                 $("#msform").submit();
+                return true;
 
             } else {
                 console.log(data.error);
