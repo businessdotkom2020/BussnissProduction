@@ -650,11 +650,9 @@ $('#msform').submit(function (e) {
         success: function (data) {
             console.log(data);
             if ($.isEmptyObject(data.error)) {
-                console.log('success');
                 $("#msform").submit();
-
             } else {
-                console.log(data.error);
+                e.preventDefault();
                 printErrorMsg(data.error);
             }
         },
