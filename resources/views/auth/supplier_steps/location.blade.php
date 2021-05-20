@@ -4,14 +4,14 @@
 
         {{--  Country Input  --}}
         <div class="form-group col-md-4 col-xs-12">
-            <select required id="country_id" name="country_id" class="form-control error-va">
+            <select required id="country_id" class="form-control error-va">
                 <option selected disabled>@lang('general.country')</option>
                 @foreach (\App\Models\Country::get() as $country)
                 <option value="{{$country->id}}">{{$country->name}}</option>
                 @endforeach
             </select>
-
-            <span class="error-msg  state_id_err"></span>
+            <input type="hidden" name="country_id" id="country_id_value">
+            <span class="error-msg  country_id_err"></span>
 
         </div>
 
@@ -21,7 +21,7 @@
             <select required name="state_id" id="state_id" class="form-control error-va">
                 <option selected disabled>@lang('general.state')</option>
             </select>
-
+            <input type="hidden" name="state_id" id="state_id_value">
             <span class="error-msg  city_id_err"></span>
 
         </div>
@@ -32,8 +32,8 @@
             <select required name="city_id" id="city_id" class="form-control error-va">
                 <option selected disabled>@lang('general.city')</option>
             </select>
-
-            <span class="error-msg  country_id_err"></span>
+            <input type="hidden" name="country_id" id="city_id_value">
+            <span class="error-msg  city_id_err"></span>
 
         </div>
 
