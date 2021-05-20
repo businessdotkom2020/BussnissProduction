@@ -630,6 +630,7 @@ $.ajaxSetup({
 });
 
 $('#msform').submit(function (e) {
+    e.preventDefault(); //or event.returnValue = false;
 
     var fields = ["store_background", "store_image"];
 
