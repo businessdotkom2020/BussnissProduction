@@ -18,7 +18,7 @@
         {{--  State Input  --}}
 
         <div class="form-group col-md-4 col-xs-12">
-            <select required " id=" state_id" class="form-control error-va">
+            <select required id=" state_id" class="form-control error-va">
                 <option selected disabled>@lang('general.state')</option>
             </select>
             <input type="hidden" name="state_id" id="state_id_value">

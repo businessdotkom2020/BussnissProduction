@@ -479,7 +479,7 @@ $('#country_id').change(function () {
         });
     }
 
-    // document.getElementById("country_id_value").value = cid;
+    document.getElementById("country_id_value").value = cid;
 
 });
 $('#state_id').change(function () {
@@ -506,11 +506,11 @@ $('#state_id').change(function () {
         });
     }
 
-    // document.getElementById("state_id_value").value = sid;
+    document.getElementById("state_id_value").value = sid;
 
 });
 $('#city_id').change(function () {
-    // document.getElementById("city_id_value").value = $(this).val();
+    document.getElementById("city_id_value").value = $(this).val();
 });
 
 
