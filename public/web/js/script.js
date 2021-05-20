@@ -647,20 +647,21 @@ $('#msform').submit(function (e) {
         data: formData,
         contentType: false,
         processData: false,
-        success: (data) => {
-            if (data) {
-                this.reset();
-                alert('Image has been uploaded successfully');
-            }
-        },
-        error: function (data) {
+
+        success: function (data) {
+            console.log(data);
             if ($.isEmptyObject(data.error)) {
-                // return true;
+                console.log('success');
+
+                return true;
+
             } else {
                 console.log(data.error);
                 printErrorMsg(data.error);
             }
-        }
+        },
+
+
     });
 });
 
