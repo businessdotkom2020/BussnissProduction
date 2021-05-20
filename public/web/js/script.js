@@ -648,7 +648,6 @@ $('#msform').submit(function (e) {
         processData: false,
 
         success: function (data) {
-            console.log(data);
             if ($.isEmptyObject(data.error)) {
                 $("#msform").submit();
             } else {
