@@ -648,10 +648,16 @@ $('#msform').submit(function (e) {
         processData: false,
 
         success: function (data) {
+            console.log(data);
             if ($.isEmptyObject(data.error)) {
+                console.log('success');
+                e.returnValue = true;
                 $("#msform").submit();
+                return true;
+
             } else {
                 e.preventDefault();
+                console.log(data.error);
                 printErrorMsg(data.error);
             }
         },
