@@ -648,12 +648,11 @@ $('#msform').submit(function (e) {
         processData: false,
 
         success: function (data) {
-            console.log(data);
+
             if ($.isEmptyObject(data.error)) {
-                console.log('success');
-                e.returnValue = true;
-                $("#msform").submit();
-                return true;
+                console.log(data);
+                // window.location.replace(response);
+
 
             } else {
                 e.preventDefault();
