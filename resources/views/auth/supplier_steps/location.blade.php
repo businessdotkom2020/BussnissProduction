@@ -87,15 +87,13 @@
                 <div class="col-md-6 col-xs-12 ">
 
                     <div class="form-group">
-                        <input type="hidden" oninput="initMap()" value="31.3540494" class="form-control input-sm"
-                            name="lat" id="lat">
+                        <input type="hidden" oninput="initMap()" class="form-control input-sm" name="lat" id="lat">
                     </div>
                 </div>
                 <div class="col-md-6 col-xs-12 ">
 
                     <div class="form-group">
-                        <input type="hidden" oninput="initMap()" value="31.6841419" class="form-control input-sm"
-                            name="lng" id="lng">
+                        <input type="hidden" oninput="initMap()" class="form-control input-sm" name="lng" id="lng">
                     </div>
                 </div>
 
@@ -103,6 +101,8 @@
             </div>
             <div class="rate-form">
                 <div id="map" style="width:100%;height:330px; "></div>
+                <span class="error-msg  lat_err"></span>
+
             </div>
         </div>
 

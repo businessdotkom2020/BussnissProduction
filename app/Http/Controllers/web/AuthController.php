@@ -62,7 +62,7 @@ use Validator;
             "zip_code"        => "required|string",
             "address"         => "required|string",
             "lat"             => "required|string",
-            "lang"            => "required|string",
+            // "lang"            => "required|string",
         ]);
 
         if ($validator->passes()) {

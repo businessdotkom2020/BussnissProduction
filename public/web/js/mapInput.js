@@ -8,8 +8,10 @@
 
         var map = new google.maps.Map(document.getElementById('map'), {
             center: {
-                lat: parseFloat(document.getElementById("lat").value),
-                lng: parseFloat(document.getElementById("lng").value)
+                // lat: parseFloat(document.getElementById("lat").value),
+                // lng: parseFloat(document.getElementById("lng").value)
+                lat: 31.3540494,
+                lng: 31.6841419
             },
             zoom: 13
         });
