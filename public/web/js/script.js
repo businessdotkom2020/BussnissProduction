@@ -652,7 +652,7 @@ $('#msform').submit(function (e) {
 
             if ($.isEmptyObject(data.error)) {
                 console.log(data);
-                window.location.replace(data);
+                // window.location.replace(data);
 
 
             } else {
