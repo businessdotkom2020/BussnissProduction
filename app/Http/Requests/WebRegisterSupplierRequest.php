@@ -41,6 +41,9 @@ class WebRegisterSupplierRequest extends FormRequest
             // "lat"             => "required|string",
             // "lang"            => "required|string",
             "zip_code"        => "required|string",
+
+            'store_background' => 'required|image',
+            'store_image' => 'required|image',
         ];
     }
 }
