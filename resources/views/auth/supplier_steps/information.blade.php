@@ -6,9 +6,7 @@
 
             <input type="text" id="supplier_name" required name="supplier_name"
                 placeholder="@lang('general.supplier_name')" class="form-control">
-            @error('supplier_name')
-            <div class="alert" style="color:#a94442">{{ $message }}</div>
-            @enderror
+
             <span class="error-msg supplier_name_err"></span>
         </div>
 

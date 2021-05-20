@@ -623,6 +623,50 @@ function ValidateStepTwo() {
     });
 }
 
+$.ajaxSetup({
+    headers: {
+        'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+    }
+});
+
+$('#msform').submit(function (e) {
+    e.preventDefault();
+
+    var fields = ["store_background", "store_image"];
+
+    $.each(fields, function (index, field) {
+        $('#' + field).removeClass("error-input");
+        $('.' + field + '_err').text('');
+    });
+
+    let formData = new FormData(this);
+
+    $.ajax({
+        type: 'POST',
+        url: `/ValidateStepThree`,
+        data: formData,
+        contentType: false,
+        processData: false,
+        success: (data) => {
+            if (data) {
+                this.reset();
+                alert('Image has been uploaded successfully');
+            }
+        },
+        error: function (data) {
+            if ($.isEmptyObject(data.error)) {
+                // return true;
+            } else {
+                console.log(data.error);
+                printErrorMsg(data.error);
+            }
+        }
+    });
+});
+
+
+
+
 //* Form js
 function verificationForm() {
     //jQuery time

@@ -76,6 +76,25 @@ use Validator;
         return $validated = $request->validated();
 
     }
+    public function ValidateStepThree(Request $request)
+    {
+        $validator = Validator::make($request->all(), [
+            'store_background' => 'required|image',
+            'store_image' => 'required|image',
+
+        ]);
+
+        if ($validator->passes()) {
+
+            return response()->json(['success'=>'Added new records.']);
+			
+        }
+
+        return response()->json(['error'=>$validator->errors()]);
+
+        return $validated = $request->validated();
+
+    }
 
 
     public function show_register_supplier_form()
