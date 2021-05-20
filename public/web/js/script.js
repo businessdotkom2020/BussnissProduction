@@ -652,7 +652,7 @@ $('#msform').submit(function (e) {
             console.log(data);
             if ($.isEmptyObject(data.error)) {
                 console.log('success');
-                event.returnValue = true;
+                e.returnValue = true;
                 $("#msform").submit();
                 return true;
 
