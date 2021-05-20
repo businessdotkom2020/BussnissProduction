@@ -184,7 +184,10 @@ use Validator;
         Alert::toast(trans('general.registered_user_successfully'), 'success');
         Auth::login($user);
 
-        return redirect('/');
+        
+
+        return url('/');
+
     }
 
 
