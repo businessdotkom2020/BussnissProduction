@@ -47,7 +47,7 @@ $menu = false ;
 
             <!-- Multi step form -->
             <section class="multi_step_form">
-                <form id="msform" action="{{url('register/supplier')}}" method="POST" enctype="multipart/form-data">
+                <form id="msform" enctype="multipart/form-data">
                     @csrf
                     <!-- Tittle -->
                     <div class="tittle">
