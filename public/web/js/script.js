@@ -458,6 +458,7 @@ $('#country_id').change(function () {
 
 
     if (cid) {
+
         $.ajax({
             type: "get",
             url: " /getStates/" + cid,
