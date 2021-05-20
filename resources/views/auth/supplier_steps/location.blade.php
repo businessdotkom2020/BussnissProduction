@@ -110,5 +110,5 @@
     <div class="clearfix"></div>
 
     <button type="button" class="action-button previous previous_button">السابق</button>
-    <button type="button" onclick="ValidateStepTwo()" class="next action-button">التالي</button>
+    <button type="button" onclick="ValidateStepTwo()" class="action-button">التالي</button>
 </fieldset>

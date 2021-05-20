@@ -455,6 +455,7 @@ $('.category-toggle').click(function (e) {
 
 $('#country_id').change(function () {
     var cid = $(this).val();
+    console.log(cid);
     if (cid) {
         $.ajax({
             type: "get",
@@ -478,6 +479,8 @@ $('#country_id').change(function () {
 });
 $('#state_id').change(function () {
     var sid = $(this).val();
+    console.log(sid);
+
     if (sid) {
         $.ajax({
             type: "get",
