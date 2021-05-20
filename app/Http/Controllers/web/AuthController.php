@@ -144,7 +144,7 @@ use Validator;
 
         return redirect('/');
     }
-    public function do_register_supplier()
+    public function do_register_supplier(Request $request)
     {
 
         $validator = Validator::make($request->all(), [
