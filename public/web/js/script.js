@@ -630,7 +630,6 @@ $.ajaxSetup({
 });
 
 $('#msform').submit(function (e) {
-    e.preventDefault();
 
     var fields = ["store_background", "store_image"];
 
@@ -652,9 +651,7 @@ $('#msform').submit(function (e) {
             console.log(data);
             if ($.isEmptyObject(data.error)) {
                 console.log('success');
-                e.returnValue = true;
                 $("#msform").submit();
-                return true;
 
             } else {
                 console.log(data.error);
