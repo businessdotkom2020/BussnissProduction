@@ -138,7 +138,7 @@ use Validator;
     }
 
     
-    public function do_login()
+    public function do_login(Request $request)
     {
         $this->validateLogin($request); 
 
