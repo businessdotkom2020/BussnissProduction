@@ -25,9 +25,10 @@
             <form action="{{route('do_login')}}" method="post">
                 @csrf
                 <div class="form-group">
-                    <input type="text" name="email" required placeholder="@lang('general.email')" class="form-control">
+                    <input type="text" name="username" required placeholder="@lang('general.email')"
+                        class="form-control">
 
-                    @error('email')
+                    @error('username')
                     <div class="alert" style="color:#a94442">{{ $message }}</div>
                     @enderror
 
@@ -51,8 +52,8 @@
                 <div class="form-group">
                     <button type="submit" class="btn"> @lang('general.login')</button>
                     <p>@lang('general.register_text') <a href="{{url('register')}}"> @lang('general.here') </a>
-                         @lang('general.or') <a
-                            href="{{url('register/supplier')}}"> @lang('general.register_as_supplier')</a></p>
+                        @lang('general.or') <a href="{{url('register/supplier')}}">
+                            @lang('general.register_as_supplier')</a></p>
                 </div>
             </form>
         </div>
