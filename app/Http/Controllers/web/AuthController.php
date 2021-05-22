@@ -8,7 +8,7 @@ use App\Models\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Hash;
 use RealRashid\SweetAlert\Facades\Alert;
-use Auth;
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Validation\ValidationException;
 use App\Http\Requests\Auth\RegisterSuppliersRequestFirstStep;
 use App\Http\Requests\Auth\RegisterSuppliersRequestSecondStep;
@@ -106,10 +106,45 @@ use Validator;
     {
         return view('auth.login');
     }
+
+    /**
+     * Check if UserName is Email or Mobile
+     *
+     * @param  \Illuminate\Http\Request  $request
+     * @return void
+     *
+     * @throws \Illuminate\Validation\ValidationException
+     */
+    public function username()
+    {
+        $field = (filter_var(request()->username, FILTER_VALIDATE_EMAIL) ) ? 'email' : 'mobile';
+        return $field;
+    }
+
+            
+    /**
+     * Validate the user login request.
+     *
+     * @param  \Illuminate\Http\Request  $request
+     * @return void
+     *
+     * @throws \Illuminate\Validation\ValidationException
+     */
+    protected function validateLogin(Request $request)
+    {
+        $request->validate([
+            'username' => 'required|exists:users,'.$this->username(),
+        ]);
+    }
+
+    
     public function do_login()
     {
-        if (Auth::attempt(['email' => Request()->email, 'password' => Request()->password])) {
-            Alert::toast(trans('general.logged_user_successfully'), 'success');
+        $this->validateLogin($request); 
+
+
+        if (Auth::attempt([$this->username() => $request->username, 'password' => $request->password],$request->remember_me ? true : false)) {
+                     Alert::toast(trans('general.logged_user_successfully'), 'success');
 
             return redirect('/');
         }
@@ -127,7 +162,7 @@ use Validator;
             'email' => $request->email,
             'mobile' => $request->mobile,
             'country_id' => $request->country_id,
-            'password' => Hash::make($request->password),
+            'password' => $request->password,
         ]);
 
         if ($request->file('image')) {
