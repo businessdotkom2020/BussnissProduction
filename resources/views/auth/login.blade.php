@@ -40,7 +40,7 @@
                 </div>
                 <div class="form-group">
                     <label>
-                        <input type="checkbox">
+                        <input type="checkbox" class="form-control">
                         @error('password')
                         <div class="alert" style="color:#a94442">{{ $message }}</div>
                         @enderror
