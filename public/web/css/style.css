@@ -4788,12 +4788,12 @@ button.close:hover {
 }
 
 .sign-wrap form .ito-h .prof-img.pic {
-    width: 170px;
-    height: 170px;
+    width: 200px;
+    height: 200px;
     border-radius: 100%;
     overflow: hidden;
-    box-shadow: 0 0 0 5px #f9f9f9;
-    background-color: #fff;
+    /* box-shadow: 0 0 0 5px #f9f9f9;
+    background-color: #fff; */
     margin: 20px 0
 }
 
