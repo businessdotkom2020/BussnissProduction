@@ -31,11 +31,15 @@ $menu = false ;
                         <div class="prof-img pic">
                             <label>
                                 <i class="fa fa-camera"></i>
-                                <span>@lang('general.cheange')</span>
-                                <input type="file" name="image" onchange="document.getElementById('blah1').src = window.URL.createObjectURL(this.files[0])">
-                                {{-- <img src="{{ asset('/web/images/default-avatar.png')}}" id="blah1" alt="your image"> --}}
-                                <img src="https://invplatform.com/images/faces/male/default.png" id="blah1" alt="your image">
+                                <input type="file" name="image"
+                                    onchange="document.getElementById('blah1').src = window.URL.createObjectURL(this.files[0])">
+                                {{-- <img src="{{ asset('/web/images/default-avatar.png')}}" id="blah1" alt="your
+                                image"> --}}
+                                <img src="https://invplatform.com/images/faces/male/default.png" id="blah1"
+                                    alt="your image">
                             </label>
+                            <span>@lang('general.cheange')</span>
+
                             @error('image')
                             <div class="alert" style="color:#a94442">{{ $message }}</div>
                             @enderror
@@ -45,21 +49,23 @@ $menu = false ;
                 <div class="col-lg-4"></div>
 
                 <div class="form-group">
-                    <input type="text" name="name" required placeholder="@lang('general.full_name')" class="form-control">
+                    <input type="text" name="name" required placeholder="@lang('general.full_name')"
+                        class="form-control">
                     @error('name')
-                        <div class="alert" style="color:#a94442">{{ $message }}</div>
+                    <div class="alert" style="color:#a94442">{{ $message }}</div>
                     @enderror
                 </div>
                 <div class="form-group">
-                    <input type="mobile" name="mobile" required placeholder="@lang('general.mobile')" class="form-control">
+                    <input type="mobile" name="mobile" required placeholder="@lang('general.mobile')"
+                        class="form-control">
                     @error('mobile')
-                        <div class="alert" style="color:#a94442">{{ $message }}</div>
+                    <div class="alert" style="color:#a94442">{{ $message }}</div>
                     @enderror
                 </div>
                 <div class="form-group">
                     <input type="email" name="email" required placeholder="@lang('general.email')" class="form-control">
                     @error('email')
-                        <div class="alert" style="color:#a94442">{{ $message }}</div>
+                    <div class="alert" style="color:#a94442">{{ $message }}</div>
                     @enderror
                 </div>
 
@@ -73,23 +79,25 @@ $menu = false ;
                     </select>
 
                     @error('country_id')
-                        <div class="alert" style="color:#a94442">{{ $message }}</div>
+                    <div class="alert" style="color:#a94442">{{ $message }}</div>
                     @enderror
                 </div>
 
 
                 <div class="form-group">
-                    <input type="password" name="password" required placeholder="@lang('general.password')" class="form-control">
+                    <input type="password" name="password" required placeholder="@lang('general.password')"
+                        class="form-control">
 
                     @error('password')
-                        <div class="alert" style="color:#a94442">{{ $message }}</div>
+                    <div class="alert" style="color:#a94442">{{ $message }}</div>
                     @enderror
                 </div>
                 <div class="form-group">
-                    <input type="password" name="password_confirmation" required placeholder=" @lang('general.password_confirmation')" class="form-control">
+                    <input type="password" name="password_confirmation" required
+                        placeholder=" @lang('general.password_confirmation')" class="form-control">
 
                     @error('password_confirmation')
-                        <div class="alert" style="color:#a94442">{{ $message }}</div>
+                    <div class="alert" style="color:#a94442">{{ $message }}</div>
                     @enderror
 
                 </div>
