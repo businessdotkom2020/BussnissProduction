@@ -125,7 +125,6 @@ $menu = false ;
         padding: 10px;
         margin: 0 20px 0 0;
     }
-
 </style>
 
 @endpush
@@ -330,7 +329,7 @@ $menu = false ;
                 <div class="tab-content col-xs-12">
                     <div class="tab-pane fade active in" id="product_view">
                         <div class="g-body col-xs-12 product-p-search">
-                            <div class="col-md-4 col-sm-4 col-xs-6">
+                            <div class="col-md-3 col-sm-4 col-xs-6">
                                 <div class="product-grid">
                                     <div class="product-image">
                                         <a href="#" class="image">
@@ -364,7 +363,7 @@ $menu = false ;
                                     </div>
                                 </div>
                             </div>
-                            <div class="col-md-4 col-sm-4 col-xs-6">
+                            <div class="col-md-3 col-sm-4 col-xs-6">
                                 <div class="product-grid">
                                     <div class="product-image">
                                         <a href="#" class="image">
@@ -398,7 +397,7 @@ $menu = false ;
                                     </div>
                                 </div>
                             </div>
-                            <div class="col-md-4 col-sm-4 col-xs-6">
+                            <div class="col-md-3 col-sm-4 col-xs-6">
                                 <div class="product-grid">
                                     <div class="product-image">
                                         <a href="#" class="image">
@@ -432,7 +431,7 @@ $menu = false ;
                                     </div>
                                 </div>
                             </div>
-                            <div class="col-md-4 col-sm-4 col-xs-6">
+                            <div class="col-md-3 col-sm-4 col-xs-6">
                                 <div class="product-grid">
                                     <div class="product-image">
                                         <a href="#" class="image">
@@ -466,7 +465,7 @@ $menu = false ;
                                     </div>
                                 </div>
                             </div>
-                            <div class="col-md-4 col-sm-4 col-xs-6">
+                            <div class="col-md-3 col-sm-4 col-xs-6">
                                 <div class="product-grid">
                                     <div class="product-image">
                                         <a href="#" class="image">
@@ -500,7 +499,7 @@ $menu = false ;
                                     </div>
                                 </div>
                             </div>
-                            <div class="col-md-4 col-sm-4 col-xs-6">
+                            <div class="col-md-3 col-sm-4 col-xs-6">
                                 <div class="product-grid">
                                     <div class="product-image">
                                         <a href="#" class="image">
@@ -699,7 +698,7 @@ $menu = false ;
                     -->
 
                         <div class="g-body col-xs-12 supplier-p-search">
-                        <div class="col-md-4 col-sm-4 col-xs-12">
+                            <div class="col-md-4 col-sm-4 col-xs-12">
                                 <div class="h-supplier-box cardo text-center">
                                     <span>
                                         <a href="https://businessdotcom.net/supplier/216">
@@ -727,9 +726,9 @@ $menu = false ;
                                                     Follow
                                                 </span>
                                             </a>
-                                            <a href="#"  class="btn sh-pro-s">
+                                            <a href="#" class="btn sh-pro-s">
                                                 <span>
-                                                    مشاهده جميع المنتجات 
+                                                    مشاهده جميع المنتجات
                                                 </span>
                                             </a>
                                         </div>
@@ -764,9 +763,9 @@ $menu = false ;
                                                     Follow
                                                 </span>
                                             </a>
-                                            <a href="#"  class="btn sh-pro-s">
+                                            <a href="#" class="btn sh-pro-s">
                                                 <span>
-                                                    مشاهده جميع المنتجات 
+                                                    مشاهده جميع المنتجات
                                                 </span>
                                             </a>
                                         </div>
@@ -801,9 +800,9 @@ $menu = false ;
                                                     Follow
                                                 </span>
                                             </a>
-                                            <a href="#"  class="btn sh-pro-s">
+                                            <a href="#" class="btn sh-pro-s">
                                                 <span>
-                                                    مشاهده جميع المنتجات 
+                                                    مشاهده جميع المنتجات
                                                 </span>
                                             </a>
                                         </div>
@@ -838,9 +837,9 @@ $menu = false ;
                                                     Follow
                                                 </span>
                                             </a>
-                                            <a href="#"  class="btn sh-pro-s">
+                                            <a href="#" class="btn sh-pro-s">
                                                 <span>
-                                                    مشاهده جميع المنتجات 
+                                                    مشاهده جميع المنتجات
                                                 </span>
                                             </a>
                                         </div>
@@ -875,9 +874,9 @@ $menu = false ;
                                                     Follow
                                                 </span>
                                             </a>
-                                            <a href="#"  class="btn sh-pro-s">
+                                            <a href="#" class="btn sh-pro-s">
                                                 <span>
-                                                    مشاهده جميع المنتجات 
+                                                    مشاهده جميع المنتجات
                                                 </span>
                                             </a>
                                         </div>
@@ -912,9 +911,9 @@ $menu = false ;
                                                     Follow
                                                 </span>
                                             </a>
-                                            <a href="#"  class="btn sh-pro-s">
+                                            <a href="#" class="btn sh-pro-s">
                                                 <span>
-                                                    مشاهده جميع المنتجات 
+                                                    مشاهده جميع المنتجات
                                                 </span>
                                             </a>
                                         </div>
