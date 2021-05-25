@@ -6100,7 +6100,7 @@ textarea {
     position: relative;
     padding-top: 50px;
     min-height: 820px;
-    max-width: 810px;
+    max-width: 100%;
     margin: 0 auto;
     background: #ffffff;
     z-index: 1;
