@@ -520,9 +520,19 @@ $(".select-nosearch").select2({
 });
 
 
+var fields = ["supplier_name", "email", "hot_number", "mobile", "category_ids", "password", "password_confirmation"];
+
+$.each(fields, function (index, field) {
+    $('#' + field).on('keyup', function() {
+        $('#' + field).removeClass("error-input");
+        $('.' + field + '_err').text('');
+   })
+
+});
 
 function ValidateStepOne() {
     var fields = ["supplier_name", "email", "hot_number", "mobile", "category_ids", "password", "password_confirmation"];
+
 
     $.each(fields, function (index, field) {
         $('#' + field).removeClass("error-input");
