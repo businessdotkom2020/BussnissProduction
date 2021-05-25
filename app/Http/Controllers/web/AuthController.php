@@ -63,7 +63,12 @@ use Validator;
             "address"         => "required|string",
             "lat"             => "required|string",
             // "lang"            => "required|string",
-        ]);
+        ],
+        [
+            'lat.required' => trans('general.map_validation'),
+        ]
+    
+    );
 
         if ($validator->passes()) {
 

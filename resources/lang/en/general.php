@@ -106,5 +106,6 @@ return [
     'product_price_list' =>  'Product Price List ',
     'product_condition' =>  'Product Condition',
     'product_attributes' =>  '  Product Attributes',
+    'map_validation' =>  'Map Location is Required',
 
 ];

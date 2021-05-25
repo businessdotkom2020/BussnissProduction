@@ -520,7 +520,23 @@ $(".select-nosearch").select2({
 });
 
 
-var fields = ["supplier_name", "email", "hot_number", "mobile", "category_ids", "password", "password_confirmation"];
+var fields = [
+    "supplier_name",
+    "email",
+    "hot_number", 
+    "mobile", 
+    "category_ids", 
+    "password", 
+    "password_confirmation" ,
+    "state_id",
+    "city_id", 
+    "country_id", 
+    "street_nom", 
+    "zip_code", 
+    "address", 
+    "lat", 
+    "lang"
+];
 
 $.each(fields, function (index, field) {
     $('#' + field).on('keyup', function() {
