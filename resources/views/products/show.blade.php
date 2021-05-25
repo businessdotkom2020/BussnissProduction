@@ -19,7 +19,6 @@ $menu = false ;
                 <a
                     href="{{url('category/'.$product->category_id)}}">{{$product->category->getTranslatedAttribute('name',\App::getLocale())}}</a>
             </li>
-            <li>{{Str::limit($product->getTranslatedAttribute('name',\App::getLocale()),35)}}</li>
         </ul>
     </div>
 </div>
@@ -167,8 +166,16 @@ $menu = false ;
                 </div>
             </div>
             <div class="product-table-p  col-xs-12 col-md-6 ">
-                <div class="table-responsive">
-                    <table class="table table-bordered ">
+                <ul class="nav-tabs">
+                    <li class="active">
+                        <a href="#" data-toggle="tab" data-target="#t15">@lang('general.pricing_plans')</a>
+                    </li>
+
+
+
+                </ul>
+                <div class="tab-content">
+                    <div class="tab-pane fade active in" id="t15">
 
                         <thead>
                             <tr>
@@ -192,24 +199,24 @@ $menu = false ;
                             </tr>
                             @endforeach
                         </tbody>
-                    </table>
+                        </table>
+                    </div>
+
                 </div>
+                <div class="product-middle col-md-6 col-xs-12">
+                    <ul class="nav-tabs">
+                        <li class="active">
+                            <a href="#" data-toggle="tab" data-target="#t1">@lang('general.pricing_plans')</a>
+                        </li>
 
-            </div>
-            <div class="product-middle col-md-6 col-xs-12">
-                <ul class="nav-tabs">
-                    <li class="active">
-                        <a href="#" data-toggle="tab" data-target="#t1">@lang('general.pricing_plans')</a>
-                    </li>
+                        <li>
+                            <a href="#" data-toggle="tab" data-target="#t2">@lang('general.reviews')</a>
+                        </li>
 
-                    <li>
-                        <a href="#" data-toggle="tab" data-target="#t2">@lang('general.reviews')</a>
-                    </li>
-
-                </ul>
-                <div class="tab-content">
-                    <div class="tab-pane fade active in" id="t1">
-                        <!--
+                    </ul>
+                    <div class="tab-content">
+                        <div class="tab-pane fade active in" id="t1">
+                            <!--
                         <ul>
                             @foreach($product->prices as $price)
                             <li>
@@ -221,59 +228,143 @@ $menu = false ;
                         </ul>
                         -->
 
-                        <div class="product-price-p table-responsive">
-                            <table class="table table-bordered">
+                            <div class="product-price-p table-responsive">
+                                <table class="table table-bordered">
 
-                                <thead>
-                                    <tr>
-                                        <th>من</th>
-                                        <th>الي</th>
-                                        <th>السعر</th>
-                                    </tr>
-                                </thead>
+                                    <thead>
+                                        <tr>
+                                            <th>من</th>
+                                            <th>الي</th>
+                                            <th>السعر</th>
+                                        </tr>
+                                    </thead>
 
-                                <tbody>
-                                    @foreach($product->prices as $price)
-                                    <tr>
+                                    <tbody>
+                                        @foreach($product->prices as $price)
+                                        <tr>
 
-                                        <td>@lang('general.from') {{$price->quantity_from}} @lang('general.to')</td>
-                                        <td>{{$price->quantity_to}}</td>
-                                        <td> <span>{{$price->price}} l.e</span></td>
+                                            <td>@lang('general.from') {{$price->quantity_from}} @lang('general.to')</td>
+                                            <td>{{$price->quantity_to}}</td>
+                                            <td> <span>{{$price->price}} l.e</span></td>
 
-                                    </tr>
-                                    @endforeach
-                                </tbody>
-                            </table>
+                                        </tr>
+                                        @endforeach
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                        <div class="tab-pane fade" id="t2">
+
+                            @foreach($product->reviews as $review)
+
+                            <div class="rev-item col-md-7 col-xs-12">
+
+                                <div class="r-img">
+                                    <img src="{{url('storage/'.$review->owner->avatar)}}" alt="">
+
+                                </div>
+                                @auth
+                                @if(\Auth::user()->id == $review->user_id)
+                                <a href="{{url('review/'.$review->id.'/delete')}}" style="    float: inline-end;"><i
+                                        class="fa fa-trash" aria-hidden="true"></i></a>
+                                @endif
+                                @endauth
+                                <div class="r-data">
+
+                                    <div>
+                                        <a href="{{url('supplier/'.$review->user_id)}}">{{$review->owner->name}}</a>
+                                    </div>
+
+
+                                    <div class="cardo">
+                                        <div class="c-inner" style="text-align: right;">
+                                            <div class="c-data">
+                                                <p>
+                                                    @php $rating = $review->stars ; @endphp
+                                                    @foreach(range(1,5) as $i)
+                                                    @if($rating >0)
+                                                    @if($rating > 0.5)
+                                                    <i class="fa fa-star active"></i>
+                                                    @elseif($rating < 0.5 && $rating> 0)
+                                                        <i class="fas fa-star-half"></i>
+                                                        @endif
+                                                        @else
+                                                        <i class="fa fa-star"></i>
+                                                        @endif
+                                                        @php $rating--; @endphp
+
+                                                        @endforeach
+
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <p>{{$review->comment}}</p>
+                                </div>
+                            </div>
+
+                            @endforeach
+
+
                         </div>
                     </div>
-                    <div class="tab-pane fade" id="t2">
+                </div>
+                @if(count($related_products))
 
-                        @foreach($product->reviews as $review)
+                <div class="related-s col-xs-12">
 
-                        <div class="rev-item col-md-7 col-xs-12">
-
-                            <div class="r-img">
-                                <img src="{{url('storage/'.$review->owner->avatar)}}" alt="">
-
-                            </div>
-                            @auth
-                            @if(\Auth::user()->id == $review->user_id)
-                            <a href="{{url('review/'.$review->id.'/delete')}}" style="    float: inline-end;"><i
-                                    class="fa fa-trash" aria-hidden="true"></i></a>
-                            @endif
-                            @endauth
-                            <div class="r-data">
-
-                                <div>
-                                    <a href="{{url('supplier/'.$review->user_id)}}">{{$review->owner->name}}</a>
-                                </div>
+                    <div class="g-head col-xs-12">
+                        <h3>@lang('general.related_store') <span class="f-r">@lang('general.products')</span></h3>
+                        <!--<a href="#" class="more">@lang('general.view_all')</a>-->
+                    </div>
+                    <div class="g-body col-xs-12">
+                        <div class="rel-slider owl-theme owl-carousel">
 
 
-                                <div class="cardo">
-                                    <div class="c-inner" style="text-align: right;">
+                            @foreach($related__store_products as $product)
+
+                            <div class="">
+                                <div class="product-grid">
+                                    <div class="product-image">
+                                        <a href="{{url('product/'.$product->id)}}" class="image">
+                                            <img class="pic-1" src="{{url('storage/'.$product->image)}}">
+                                            <img class="pic-2"
+                                                src="{{url('storage/'.(json_decode($product->images))[0])}}">
+                                        </a>
+                                        @if ($product->sale_price)
+                                        <span
+                                            class="product-discount-label">{{ number_format((($product->price - $product->sale_price)*100) /$product->price,0) }}%</span>
+                                        @endif
+
+                                        <ul class="product-links">
+                                            <li><a href="{{url('product/'.$product->id)}}" data-tip="Compare"><i
+                                                        class="fa fa-random"></i></a></li>
+                                            <li><a href="{{url('product/'.$product->id)}}" data-tip="Add to Wishlist"><i
+                                                        class="fa fa-heart"></i></a></li>
+                                            {{-- <li><a href="#" data-tip="Quick View"><i class="fa fa-search"></i></a></li> --}}
+                                            {{-- <li><a href="#" data-tip="Add to Cart"><i class="fa fa-shopping-cart"></i></a></li> --}}
+                                        </ul>
+                                    </div>
+                                    <div class="product-content">
+                                        <h3 class="title"><a
+                                                href="{{url('product/'.$product->id)}}">{{$product->getTranslatedAttribute('name',\App::getLocale())}}</a>
+                                        </h3>
+                                        <div class="price">
+                                            @if ($product->sale_price)
+                                            <span>{{$product->price}}</span>
+                                            {{$product->sale_price}}
+                                            @else
+                                            {{$product->price}}
+
+                                            @endif
+                                        </div>
                                         <div class="c-data">
                                             <p>
-                                                @php $rating = $review->stars ; @endphp
+                                                @php
+                                                $rating = $product->average_rating ;
+                                                @endphp
+
                                                 @foreach(range(1,5) as $i)
                                                 @if($rating >0)
                                                 @if($rating > 0.5)
@@ -288,204 +379,121 @@ $menu = false ;
 
                                                     @endforeach
 
+
+
+
                                             </p>
                                         </div>
+                                        <a class="btn h-pro-btn" href="#" data-toggle="modal"
+                                            data-target="#contact_{{$product->user_id}}"
+                                            target="_blank">@lang('general.contact_supplier')</a>
                                     </div>
                                 </div>
-
-                                <p>{{$review->comment}}</p>
                             </div>
+                                 @endforeach
+
+
+
                         </div>
-
-                        @endforeach
-
-
                     </div>
+
+
                 </div>
-            </div>
-            @if(count($related_products))
+                @endif
 
-            <div class="related-s col-xs-12">
+                @if(count($related_products))
 
-                <div class="g-head col-xs-12">
-                    <h3>@lang('general.related_store') <span class="f-r">@lang('general.products')</span></h3>
-                    <!--<a href="#" class="more">@lang('general.view_all')</a>-->
-                </div>
-                <div class="g-body col-xs-12">
-                    <div class="rel-slider owl-theme owl-carousel">
+                <div class="related-s col-xs-12">
+
+                    <div class="g-head col-xs-12">
+                        <h3>@lang('general.related') <span class="f-r">@lang('general.products')</span></h3>
+                        <!--<a href="#" class="more">@lang('general.view_all')</a>-->
+                    </div>
+                    <div class="g-body col-xs-12">
+                        <div class="rel-slider owl-theme owl-carousel">
 
 
-                        @foreach($related__store_products as $product)
+                            @foreach($related_products as $product)
 
-                        <div class="">
-                            <div class="product-grid">
-                                <div class="product-image">
-                                    <a href="{{url('product/'.$product->id)}}" class="image">
-                                        <img class="pic-1" src="{{url('storage/'.$product->image)}}">
-                                        <img class="pic-2" src="{{url('storage/'.(json_decode($product->images))[0])}}">
-                                    </a>
-                                    @if ($product->sale_price)
-                                    <span
-                                        class="product-discount-label">{{ number_format((($product->price - $product->sale_price)*100) /$product->price,0) }}%</span>
-                                    @endif
-
-                                    <ul class="product-links">
-                                        <li><a href="{{url('product/'.$product->id)}}" data-tip="Compare"><i
-                                                    class="fa fa-random"></i></a></li>
-                                        <li><a href="{{url('product/'.$product->id)}}" data-tip="Add to Wishlist"><i
-                                                    class="fa fa-heart"></i></a></li>
-                                        {{-- <li><a href="#" data-tip="Quick View"><i class="fa fa-search"></i></a></li> --}}
-                                        {{-- <li><a href="#" data-tip="Add to Cart"><i class="fa fa-shopping-cart"></i></a></li> --}}
-                                    </ul>
-                                </div>
-                                <div class="product-content">
-                                    <h3 class="title"><a
-                                            href="{{url('product/'.$product->id)}}">{{$product->getTranslatedAttribute('name',\App::getLocale())}}</a>
-                                    </h3>
-                                    <div class="price">
+                            <div class="">
+                                <div class="product-grid">
+                                    <div class="product-image">
+                                        <a href="{{url('product/'.$product->id)}}" class="image">
+                                            <img class="pic-1" src="{{url('storage/'.$product->image)}}">
+                                            <img class="pic-2"
+                                                src="{{url('storage/'.(json_decode($product->images))[0])}}">
+                                        </a>
                                         @if ($product->sale_price)
-                                        <span>{{$product->price}}</span>
-                                        {{$product->sale_price}}
-                                        @else
-                                        {{$product->price}}
-
+                                        <span
+                                            class="product-discount-label">{{ number_format((($product->price - $product->sale_price)*100) /$product->price,0) }}%</span>
                                         @endif
+
+                                        <ul class="product-links">
+                                            <li><a href="{{url('product/'.$product->id)}}" data-tip="Compare"><i
+                                                        class="fa fa-random"></i></a></li>
+                                            <li><a href="{{url('product/'.$product->id)}}" data-tip="Add to Wishlist"><i
+                                                        class="fa fa-heart"></i></a></li>
+                                            {{-- <li><a href="#" data-tip="Quick View"><i class="fa fa-search"></i></a></li> --}}
+                                            {{-- <li><a href="#" data-tip="Add to Cart"><i class="fa fa-shopping-cart"></i></a></li> --}}
+                                        </ul>
                                     </div>
-                                    <div class="c-data">
-                                        <p>
-                                            @php
-                                            $rating = $product->average_rating ;
-                                            @endphp
+                                    <div class="product-content">
+                                        <h3 class="title"><a
+                                                href="{{url('product/'.$product->id)}}">{{$product->getTranslatedAttribute('name',\App::getLocale())}}</a>
+                                        </h3>
+                                        <div class="price">
+                                            @if ($product->sale_price)
+                                            <span>{{$product->price}}</span>
+                                            {{$product->sale_price}}
+                                            @else
+                                            {{$product->price}}
 
-                                            @foreach(range(1,5) as $i)
-                                            @if($rating >0)
-                                            @if($rating > 0.5)
-                                            <i class="fa fa-star active"></i>
-                                            @elseif($rating < 0.5 && $rating> 0)
-                                                <i class="fas fa-star-half"></i>
-                                                @endif
-                                                @else
-                                                <i class="fa fa-star"></i>
-                                                @endif
-                                                @php $rating--; @endphp
+                                            @endif
+                                        </div>
+                                        <div class="c-data">
+                                            <p>
+                                                @php
+                                                $rating = $product->average_rating ;
+                                                @endphp
 
-                                                @endforeach
+                                                @foreach(range(1,5) as $i)
+                                                @if($rating >0)
+                                                @if($rating > 0.5)
+                                                <i class="fa fa-star active"></i>
+                                                @elseif($rating < 0.5 && $rating> 0)
+                                                    <i class="fas fa-star-half"></i>
+                                                    @endif
+                                                    @else
+                                                    <i class="fa fa-star"></i>
+                                                    @endif
+                                                    @php $rating--; @endphp
+
+                                                    @endforeach
 
 
 
 
-                                        </p>
+                                            </p>
+                                        </div>
+                                        <a class="btn h-pro-btn" href="#" data-toggle="modal"
+                                            data-target="#contact_{{$product->user_id}}"
+                                            target="_blank">@lang('general.contact_supplier')</a>
                                     </div>
-                                    <a class="btn h-pro-btn" href="#" data-toggle="modal"
-                                        data-target="#contact_{{$product->user_id}}"
-                                        target="_blank">@lang('general.contact_supplier')</a>
                                 </div>
                             </div>
-                        </div>
-                        <<<<<<< HEAD=======>>>>>>> 71f98d3a0fdf6e3cbfb2150076db5c83e4c4ca00
+
                             @endforeach
 
 
 
-                    </div>
-                </div>
-
-
-            </div>
-            @endif
-
-            @if(count($related_products))
-
-            <div class="related-s col-xs-12">
-
-                <div class="g-head col-xs-12">
-                    <h3>@lang('general.related') <span class="f-r">@lang('general.products')</span></h3>
-                    <!--<a href="#" class="more">@lang('general.view_all')</a>-->
-                </div>
-                <div class="g-body col-xs-12">
-                    <div class="rel-slider owl-theme owl-carousel">
-
-
-                        @foreach($related_products as $product)
-
-                        <div class="">
-                            <div class="product-grid">
-                                <div class="product-image">
-                                    <a href="{{url('product/'.$product->id)}}" class="image">
-                                        <img class="pic-1" src="{{url('storage/'.$product->image)}}">
-                                        <img class="pic-2" src="{{url('storage/'.(json_decode($product->images))[0])}}">
-                                    </a>
-                                    @if ($product->sale_price)
-                                    <span
-                                        class="product-discount-label">{{ number_format((($product->price - $product->sale_price)*100) /$product->price,0) }}%</span>
-                                    @endif
-
-                                    <ul class="product-links">
-                                        <li><a href="{{url('product/'.$product->id)}}" data-tip="Compare"><i
-                                                    class="fa fa-random"></i></a></li>
-                                        <li><a href="{{url('product/'.$product->id)}}" data-tip="Add to Wishlist"><i
-                                                    class="fa fa-heart"></i></a></li>
-                                        {{-- <li><a href="#" data-tip="Quick View"><i class="fa fa-search"></i></a></li> --}}
-                                        {{-- <li><a href="#" data-tip="Add to Cart"><i class="fa fa-shopping-cart"></i></a></li> --}}
-                                    </ul>
-                                </div>
-                                <div class="product-content">
-                                    <h3 class="title"><a
-                                            href="{{url('product/'.$product->id)}}">{{$product->getTranslatedAttribute('name',\App::getLocale())}}</a>
-                                    </h3>
-                                    <div class="price">
-                                        @if ($product->sale_price)
-                                        <span>{{$product->price}}</span>
-                                        {{$product->sale_price}}
-                                        @else
-                                        {{$product->price}}
-
-                                        @endif
-                                    </div>
-                                    <div class="c-data">
-                                        <p>
-                                            @php
-                                            $rating = $product->average_rating ;
-                                            @endphp
-
-                                            @foreach(range(1,5) as $i)
-                                            @if($rating >0)
-                                            @if($rating > 0.5)
-                                            <i class="fa fa-star active"></i>
-                                            @elseif($rating < 0.5 && $rating> 0)
-                                                <i class="fas fa-star-half"></i>
-                                                @endif
-                                                @else
-                                                <i class="fa fa-star"></i>
-                                                @endif
-                                                @php $rating--; @endphp
-
-                                                @endforeach
-
-
-
-
-                                        </p>
-                                    </div>
-                                    <a class="btn h-pro-btn" href="#" data-toggle="modal"
-                                        data-target="#contact_{{$product->user_id}}"
-                                        target="_blank">@lang('general.contact_supplier')</a>
-                                </div>
-                            </div>
                         </div>
-
-                        @endforeach
-
-
-
                     </div>
+
+
                 </div>
-
-
+                @endif
             </div>
-            @endif
         </div>
-    </div>
 </main>
 
 
