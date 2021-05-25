@@ -165,41 +165,46 @@ $menu = false ;
                     </div>
                 </div>
             </div>
-            <div class="product-table-p  col-xs-12 col-md-6 ">
+
+
+            <div class="product-middle col-md-6 col-xs-12">
                 <ul class="nav-tabs">
+
                     <li class="active">
-                        <a href="#" data-toggle="tab" data-target="#t15">@lang('general.pricing_plans')</a>
+                        <a href="#" data-toggle="tab" data-target="#option_values">@lang('general.pricing_plans')</a>
                     </li>
-
-
 
                 </ul>
                 <div class="tab-content">
-                    <div class="tab-pane fade active in" id="t15">
-
-                        <thead>
-                            <tr>
-                                <th>العنوان</th>
-                                <th>القيمة</th>
-                            </tr>
-                        </thead>
-
-                        <tbody>
+                    <div class="tab-pane fade active in" id="option_values">
 
 
-                            @foreach($product->options as $option)
-                            <tr>
+                        <div class="product-price-p table-responsive">
+                            <table class="table table-bordered">
 
-                                <td>{{  $option->attribute ? $option->attribute->getTranslatedAttribute('name',\App::getLocale()) : null }}
-                                </td>
-                                <td>{{ $option->value ? $option->value->getTranslatedAttribute('value',\App::getLocale()) : null }}
-                                </td>
+                                <thead>
+                                    <tr>
+                                        <th>العنوان</th>
+                                        <th>القيمة</th>
+                                    </tr>
+                                </thead>
+
+                                <tbody>
+
+                                    @foreach($product->options as $option)
+                                    <tr>
+
+                                        <td>{{  $option->attribute ? $option->attribute->getTranslatedAttribute('name',\App::getLocale()) : null }}
+                                        </td>
+                                        <td>{{ $option->value ? $option->value->getTranslatedAttribute('value',\App::getLocale()) : null }}
+                                        </td>
 
 
-                            </tr>
-                            @endforeach
-                        </tbody>
-                        </table>
+                                    </tr>
+                                    @endforeach
+                                </tbody>
+                            </table>
+                        </div>
                     </div>
 
                 </div>
@@ -218,17 +223,6 @@ $menu = false ;
                 </ul>
                 <div class="tab-content">
                     <div class="tab-pane fade active in" id="t1">
-                        <!--
-                        <ul>
-                            @foreach($product->prices as $price)
-                            <li>
-                                @lang('general.from') {{$price->quantity_from}} @lang('general.to')
-                                {{$price->quantity_to}}
-                                <span>{{$price->price}} l.e</span>
-                            </li>
-                            @endforeach
-                        </ul>
-                        -->
 
                         <div class="product-price-p table-responsive">
                             <table class="table table-bordered">
@@ -313,113 +307,8 @@ $menu = false ;
                 </div>
             </div>
 
-            <div class="product-middle col-md-6 col-xs-12">
-                <ul class="nav-tabs">
-                    <li class="active">
-                        <a href="#" data-toggle="tab" data-target="#t1">@lang('general.pricing_plans')</a>
-                    </li>
-
-                    <li>
-                        <a href="#" data-toggle="tab" data-target="#t2">@lang('general.reviews')</a>
-                    </li>
-
-                </ul>
-                <div class="tab-content">
-                    <div class="tab-pane fade active in" id="t1">
-                        <!--
-                        <ul>
-                            @foreach($product->prices as $price)
-                            <li>
-                                @lang('general.from') {{$price->quantity_from}} @lang('general.to')
-                                {{$price->quantity_to}}
-                                <span>{{$price->price}} l.e</span>
-                            </li>
-                            @endforeach
-                        </ul>
-                        -->
-
-                        <div class="product-price-p table-responsive">
-                            <table class="table table-bordered">
-
-                                <thead>
-                                    <tr>
-                                        <th>من</th>
-                                        <th>الي</th>
-                                        <th>السعر</th>
-                                    </tr>
-                                </thead>
-
-                                <tbody>
-                                    @foreach($product->prices as $price)
-                                    <tr>
-
-                                        <td>@lang('general.from') {{$price->quantity_from}} @lang('general.to')</td>
-                                        <td>{{$price->quantity_to}}</td>
-                                        <td> <span>{{$price->price}} l.e</span></td>
-
-                                    </tr>
-                                    @endforeach
-                                </tbody>
-                            </table>
-                        </div>
-                    </div>
-                    <div class="tab-pane fade" id="t2">
-
-                        @foreach($product->reviews as $review)
-
-                        <div class="rev-item col-md-7 col-xs-12">
-
-                            <div class="r-img">
-                                <img src="{{url('storage/'.$review->owner->avatar)}}" alt="">
-
-                            </div>
-                            @auth
-                            @if(\Auth::user()->id == $review->user_id)
-                            <a href="{{url('review/'.$review->id.'/delete')}}" style="    float: inline-end;"><i
-                                    class="fa fa-trash" aria-hidden="true"></i></a>
-                            @endif
-                            @endauth
-                            <div class="r-data">
-
-                                <div>
-                                    <a href="{{url('supplier/'.$review->user_id)}}">{{$review->owner->name}}</a>
-                                </div>
 
 
-                                <div class="cardo">
-                                    <div class="c-inner" style="text-align: right;">
-                                        <div class="c-data">
-                                            <p>
-                                                @php $rating = $review->stars ; @endphp
-                                                @foreach(range(1,5) as $i)
-                                                @if($rating >0)
-                                                @if($rating > 0.5)
-                                                <i class="fa fa-star active"></i>
-                                                @elseif($rating < 0.5 && $rating> 0)
-                                                    <i class="fas fa-star-half"></i>
-                                                    @endif
-                                                    @else
-                                                    <i class="fa fa-star"></i>
-                                                    @endif
-                                                    @php $rating--; @endphp
-
-                                                    @endforeach
-
-                                            </p>
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <p>{{$review->comment}}</p>
-                            </div>
-                        </div>
-
-                        @endforeach
-
-
-                    </div>
-                </div>
-            </div>
             @if(count($related_products))
 
             <div class="related-s col-xs-12">
