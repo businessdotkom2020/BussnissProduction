@@ -138,6 +138,9 @@ return [
     'enter_location' =>  'أدخل العنوان',
     'select_city' =>  'إختر المدينة',
     'select_state' =>  'إختر المحافظة',
+    'specifications' =>  'المواصفات',
+    'map_validation' =>  'يجب إختيار مكانك على الخريطه',
+
  
 
 

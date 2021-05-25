@@ -168,10 +168,10 @@ $menu = false ;
 
 
             <div class="product-middle col-md-6 col-xs-12">
-                <ul class="nav-tabs">
+                <ul class="nav-tabs text-center">
 
                     <li class="active">
-                        <a href="#" data-toggle="tab" data-target="#option_values">@lang('general.pricing_plans')</a>
+                        <a href="#" data-toggle="tab" data-target="#option_values">@lang('general.specifications')</a>
                     </li>
 
                 </ul>
