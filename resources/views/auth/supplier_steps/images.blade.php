@@ -3,7 +3,7 @@
     <div class="form-row">
         <div class="form-group col-xs-12">
 
-            <div class="prof-img">
+            <div class="prof-img background-image-cover">
                 <div class="prof-change-btn">
                     <label>
                         <span> @lang('general.cheange')</span>

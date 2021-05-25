@@ -70,7 +70,9 @@
     right: 0;
     top: 0;
 }
-
+.background-image-cover{
+    width: 100%;
+}
 .ubranch {
     border: 2px solid #139FEB;
     border-radius: 15px;

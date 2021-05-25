@@ -25,7 +25,7 @@
         <div class="form-group col-md-6 col-xs-12">
             <h4 style="font-size:15px">@lang('general.mobile')</h4>
 
-            <input type="text" id="mobile" required name="mobile" placeholder="@lang('general.mobile')"
+            <input type="number" id="mobile" required name="mobile" placeholder="@lang('general.mobile')"
                 class="form-control">
             @error('mobile')
             <div class="alert" style="color:#a94442">{{ $message }}</div>
@@ -35,7 +35,7 @@
         <div class="form-group col-md-6 col-xs-12">
             <h4 style="font-size:15px">@lang('general.hot_line')</h4>
 
-            <input type="text" id="hot_number" required name="hot_number" placeholder="@lang('general.hot_line')"
+            <input type="number" id="hot_number" required name="hot_number" placeholder="@lang('general.hot_line')"
                 class="form-control">
             @error('hot_line')
             <div class="alert" style="color:#a94442">{{ $message }}</div>

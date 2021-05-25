@@ -513,6 +513,7 @@ $('#city_id').change(function () {
     document.getElementById("city_id_value").value = $(this).val();
 });
 
+ 
 
 $(".select-nosearch").select2({
     placeholder: "  {{ __('general.categories') }}  ",
