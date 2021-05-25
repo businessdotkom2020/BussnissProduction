@@ -326,6 +326,7 @@ $menu = false ;
                         </li>
                     </ul>
                 </div>
+
                 <div class="tab-content col-xs-12">
                     <div class="tab-pane fade active in" id="product_view">
                         <div class="g-body col-xs-12 product-p-search">
