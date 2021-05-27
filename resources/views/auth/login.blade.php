@@ -19,7 +19,7 @@
         </ul>
     </div>
 </div>
-<main class="main-content col-xs-12">
+<main class="main-content login-ppage col-xs-12">
     <div class="sign-wrap col-xs-12">
         <div class="container">
             <form action="{{route('do_login')}}" method="post">
@@ -39,13 +39,16 @@
                         class="form-control">
                 </div>
                 <div class="form-group">
-                    <label>
-                        <input type="checkbox">
+                    <label class="check-data">
+                        <!-- <input type="checkbox">
                         @error('password')
                         <div class="alert" style="color:#a94442">{{ $message }}</div>
                         @enderror
-
-                        <span>@lang('general.remember_me')</span>
+                        <span>@lang('general.remember_me')</span> -->
+                        
+                            تذكرنى  
+                            <input type="checkbox" checked="checked">
+                            <span class="checkmark-d"></span>
                     </label>
                     <a href="{{url('forget/password')}}">@lang('general.forget_password')</a>
                 </div>
