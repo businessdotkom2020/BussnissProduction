@@ -46,9 +46,12 @@
                         @enderror
                         <span>@lang('general.remember_me')</span> -->
                         
-                            تذكرنى  
-                            <input type="checkbox" checked="checked">
-                            <span class="checkmark-d"></span>
+                                @lang('general.remember_me')
+                                <input type="checkbox" checked="checked">
+                                <span class="checkmark-d"></span>
+                            @error('password')
+                                <div class="alert" style="color:#a94442">{{ $message }}</div>
+                            @enderror
                     </label>
                     <a href="{{url('forget/password')}}">@lang('general.forget_password')</a>
                 </div>
