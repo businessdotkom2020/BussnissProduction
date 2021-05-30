@@ -7056,3 +7056,75 @@ textarea {
     z-index: 10;
     font-size: 16px;
 }
+
+
+
+/**************************************************************/
+.login-ppage .check-data {
+    color: #000;
+    display: inline-block;
+    position: relative;
+    padding-right: 30px;
+    margin-bottom: 0;
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: 600;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    margin-top: 0;
+}
+
+.login-ppage .check-data input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    height: 0;
+    width: 0;
+}
+
+.login-ppage .checkmark-d {
+    position: absolute;
+    top: 0px;
+    right: 0;
+    height: 20px;
+    width: 20px;
+    background-color: #fff;
+    border-radius: 0px;
+    border: 1px solid #7070703d;
+}
+
+.login-ppage .check-data:hover input~.checkmark-d {
+    background-color: #fff;
+}
+
+.login-ppage .check-data input:checked~.checkmark-d {
+    background-color: transparent;
+    border: 1px solid #7070703d;
+    color: #139feb;
+}
+
+.login-ppage .checkmark-d:after {
+    content: "";
+    position: absolute;
+    display: none;
+}
+
+.login-ppage .check-data input:checked~.checkmark-d:after {
+    display: block;
+}
+
+.login-ppage .check-data .checkmark-d:after {
+    left: 7px;
+    top: 3px;
+    width: 5px;
+    height: 10px;
+    border: solid #139feb;
+    border-width: 0 3px 3px 0;
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg);
+}
+
+/**************************************************************/
