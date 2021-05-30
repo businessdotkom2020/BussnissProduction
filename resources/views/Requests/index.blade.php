@@ -158,7 +158,7 @@ $menu = false ;
                             <a href="{{url('request/'.$request->id)}}" class="image">
 
                                 @foreach (json_decode($request->images) as $image)
-                                <img class="pic-{{$loop->iteratio}}" src="{{url('storage/'.$image)}}">
+                                <img class="pic-{{$loop->iteration}}" src="{{url('storage/'.$image)}}">
                                 @endforeach
 
                                 @if ($loop->iteration == 2 )
