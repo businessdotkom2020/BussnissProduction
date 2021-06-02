@@ -32454,89 +32454,8 @@ blockquote cite:before {
     border: 1px solid #e2e4e7;
     border-radius: 4px
 }
-
-:root {
-    --mf-primary-color: #fcb800;
-    --mf-dark-color: #000;
-    --mf-light-color: #fff;
-    --mf-gray-color: #666;
-    --mf-background-primary-color: #fcb800;
-    --mf-background-primary-text-color: #000;
-    --mf-background-light-color: #fff;
-    --mf-border-primary-color: #fcb800
-}
  
  
-a img {
-    border: none
-}
-
-img {
-    max-width: 100%
-}
-
-img.loaded {
-    height: auto
-}
-
-img:not(.lazy) {
-    height: auto
-}
-
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-    font-weight: 700;
-    font-family: work sans, Arial, sans-serif;
-    line-height: 1.2;
-    color: var(--mf-dark-color)
-}
-
-h1 {
-    font-size: 36px
-}
-
-h2 {
-    font-size: 30px
-}
-
-h3 {
-    font-size: 24px
-}
-
-h4 {
-    font-size: 18px
-}
-
-h5 {
-    font-size: 14px
-}
-
-h6 {
-    font-size: 12px
-}
-
-ul {
-    list-style-type: square;
-    padding-left: 20px
-}
-
-ol {
-    padding-left: 20px
-}
-
-li {
-    margin-bottom: 7px
-}
-
-p {
-    margin-bottom: 1.7em;
-    margin-top: 0
-}
-
 .martfury-modal {
     position: fixed;
     top: 0;
