@@ -162,7 +162,7 @@ $menu = false ;
                                 @endforeach
 
                                 @if ($loop->iteration == 2 )
-                                @break
+                                    @break
 
                                 @endif
 

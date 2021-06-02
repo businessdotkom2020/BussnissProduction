@@ -493,53 +493,56 @@ $menu = false ;
 
 </script>
 <script>
-    $('#category').change(function(){
+    <script src="{{ asset('/web/js/script.js')}}">
+</script>
 
-   var cid = $(this).val();
-   if(cid){
-   $.ajax({
-    type:"get",
-    url:" /getSub/"+cid,
-    success:function(res)
-    {
-         if(res)
-         {
-             $("#subcategory").empty();
-             $("#subsubcategory").empty();
-             $("#subcategory").append("<option>@lang('general.sub_categories')</option>");
-             $.each(res,function(key,value){
-                 $("#subcategory").append('<option value="'+key+'">'+value+'</option>');
-             });
-                     $('#subcategory').niceSelect('update');
+$('#category').change(function(){
 
-         }
-    }
+var cid = $(this).val();
+if(cid){
+$.ajax({
+type:"get",
+url:" /getSub/"+cid,
+success:function(res)
+{
+if(res)
+{
+$("#subcategory").empty();
+$("#subsubcategory").empty();
+$("#subcategory").append("<option>@lang('general.sub_categories')</option>");
+$.each(res,function(key,value){
+$("#subcategory").append('<option value="'+key+'">'+value+'</option>');
+});
+$('#subcategory').niceSelect('update');
 
-   });
-   }
-   });
-   $('#subcategory').change(function(){
-   var sid = $(this).val();
-   if(sid){
-   $.ajax({
-    type:"get",
-    url:"/getSubSub/"+sid,
-    success:function(res)
-    {
-         if(res)
-         {
-             $("#subsubcategory").empty();
-             $("#subsubcategory").append("<option>@lang('general.sub_sub_categories')</option>");
-             $.each(res,function(key,value){
-                 $("#subsubcategory").append('<option value="'+key+'">'+value+'</option>');
-             });
-           $('#subsubcategory').niceSelect('update');
+}
+}
 
-         }
-    }
+});
+}
+});
+$('#subcategory').change(function(){
+var sid = $(this).val();
+if(sid){
+$.ajax({
+type:"get",
+url:"/getSubSub/"+sid,
+success:function(res)
+{
+if(res)
+{
+$("#subsubcategory").empty();
+$("#subsubcategory").append("<option>@lang('general.sub_sub_categories')</option>");
+$.each(res,function(key,value){
+$("#subsubcategory").append('<option value="'+key+'">'+value+'</option>');
+});
+$('#subsubcategory').niceSelect('update');
 
-   });
-   }
-   });
+}
+}
+
+});
+}
+});
 </script>
 @endpush
