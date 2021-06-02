@@ -26,7 +26,7 @@ $menu = false ;
 
                 @include('auth.supplier_steps.images')
 
-                
+
                 {{-- ******************************* Start Name  ************************************** --}}
 
                 <div class="form-group col-md-6 col-xs-12">
@@ -553,4 +553,10 @@ $('#subsubcategory').niceSelect('update');
 }
 });
 </script>
+
+<!-- mayada -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js"></script>
+
+
+<script src="{{ asset('/web/js/script.js')}}"></script>
 @endpush
