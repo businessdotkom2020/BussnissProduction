@@ -4,6 +4,8 @@ $menu = false ;
 @endphp
 @push('styles')
 <link rel="stylesheet" href="{{ asset('/web/css/products_custom.css')}}">
+<link rel="stylesheet" href="{{ asset('/web/css/custom-register-supplier.css')}}">
+
 @endpush
 @section('content')
 <main class="main-content col-xs-12">
