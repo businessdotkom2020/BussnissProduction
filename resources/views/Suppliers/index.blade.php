@@ -2,8 +2,11 @@
 @php
 $menu = false ;
 @endphp
-  <link rel="stylesheet" href="{{ asset('/web/css/custom-supplier.css')}}"> 
 
+@push('styles')
+<link rel="stylesheet" href="{{ asset('/web/css/custom-supplier.css')}}">
+
+@endpush
 @section('content')
 
 <div class="overlay-s"></div>
