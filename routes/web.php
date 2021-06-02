@@ -222,7 +222,7 @@ Route::get('locale/{locale}', function ($locale) {
     Session::put('locale', $locale);
     return redirect()->back();
 });
-Route::get('spam/', function ($locale) {
+Route::get('spam', function () {
      return view('Suppliers.spam');
 });
 
