@@ -19,6 +19,14 @@ $menu = false ;
                 <br>
 
 
+
+                @include('auth.supplier_steps.information')
+
+                @include('auth.supplier_steps.location')
+
+                @include('auth.supplier_steps.images')
+
+                
                 {{-- ******************************* Start Name  ************************************** --}}
 
                 <div class="form-group col-md-6 col-xs-12">
