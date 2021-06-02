@@ -21,12 +21,36 @@ $menu = false ;
                 <br>
 
 
+            <!-- Multi step form -->
+            <section class="multi_step_form">
+                <form id="msform" enctype="multipart/form-data">
+                    @csrf
+                    <!-- Tittle -->
+                    <div class="tittle">
+                        <h2>@lang('general.supplier_new_account')</h2>
+                        <p>@lang('general.register_text')</p>
+                    </div>
+                    <!-- progressbar -->
+                    <ul id="progressbar">
+                        <li class="active">@lang('general.register_procces_2')</li>
+                        <li>@lang('general.register_procces_3')</li>
+                        <li>@lang('general.register_procces_1')</li>
+                    </ul>
+                    <!-- fieldsets -->
 
-                @include('auth.supplier_steps.information')
 
-                @include('auth.supplier_steps.location')
+                    @include('auth.supplier_steps.information')
 
-                @include('auth.supplier_steps.images')
+                    @include('auth.supplier_steps.location')
+
+                    @include('auth.supplier_steps.images')
+
+
+
+
+                </form>
+            </section>
+            <!-- End Multi step form -->
 
 
                 {{-- ******************************* Start Name  ************************************** --}}
