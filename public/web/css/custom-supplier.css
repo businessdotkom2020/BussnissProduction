@@ -26418,14 +26418,7 @@ Modified icons to fit ionicon’s grid from original.*/
     font-style: normal
 }
 
-.fa {
-    display: inline-block;
-    font: normal normal normal 14px/1 FontAwesome;
-    font-size: inherit;
-    text-rendering: auto;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale
-}
+ 
 
 .fa-lg {
     font-size: 1.33333333em;
@@ -66950,24 +66943,8 @@ div.media-sidebar a.edit-attachment {
 /*!* Font Awesome 4.7.0 by @davegandy - http://fontawesome.io - @fontawesome
 * License - http://fontawesome.io/license (Font: SIL OFL 1.1, CSS: MIT License)*/
 
-@font-face {
-    font-family: fontawesome;
-    src: url(../fonts/fonts-fontawesome-webfont.eot);
-    src: url(../fonts/fonts-fontawesome-webfont.eot) format('embedded-opentype'), url(../fonts/fonts-fontawesome-webfont.woff2) format('woff2'), url(../fonts/fonts-fontawesome-webfont.woff) format('woff'), url(../fonts/fonts-fontawesome-webfont.ttf) format('truetype'), url(../fonts/fonts-fontawesome-webfont.svg) format('svg');
-    font-weight: 400;
-    font-style: normal;
-    font-display: optional
-}
-
-.fa {
-    display: inline-block;
-    font: normal normal normal 14px/1 FontAwesome;
-    font-size: inherit;
-    text-rendering: auto;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale
-}
-
+ 
+ 
 .fa-lg {
     font-size: 1.33333333em;
     line-height: .75em;
