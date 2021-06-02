@@ -35501,31 +35501,8 @@ blockquote cite:before {
     --mf-background-light-color: #fff;
     --mf-border-primary-color: #fcb800
 }
-
-body {
-    color: #666;
-    font-size: 14px;
-    font-family: work sans, Arial, sans-serif;
-    line-height: 1.6;
-    background: #fff;
-    word-wrap: break-word
-}
-
-a {
-    transition: .5s;
-    color: #06c;
-    text-decoration: none
-}
-
-a:hover {
-    text-decoration: none;
-    color: var(--mf-primary-color)
-}
-
-a:focus {
-    text-decoration: none
-}
-
+ 
+ 
 a img {
     border: none
 }
