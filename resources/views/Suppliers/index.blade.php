@@ -2,6 +2,7 @@
 @php
 $menu = false ;
 @endphp
+  <link rel="stylesheet" href="{{ asset('/web/css/custom-supplier.css')}}"> 
 
 @section('content')
 
