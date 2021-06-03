@@ -22,7 +22,7 @@ $menu = false ;
     </div>
 </div>
 <main class="main-content col-xs-12">
-    <div class="reqs-wrap col-xs-12">
+    <div class="reqs-wrap col-xs-12 fffback">
         <div class="container">
 
 

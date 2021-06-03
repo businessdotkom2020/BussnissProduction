@@ -2933,6 +2933,9 @@ html {
 #dokan-seller-listing-wrap.grid-view .store-content.default-store-banner {
     background: 0 0;
 }
+.fffback{
+    background: #fff;
+}
 #dokan-seller-listing-wrap.grid-view .store-content .store-data-container {
     padding: 5px 20px;
 }
