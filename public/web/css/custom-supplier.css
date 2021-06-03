@@ -2926,7 +2926,9 @@ html {
     width: 100%;
     height: 100%;
     background: rgba(0, 0, 0, 0.45);
-    color: #fff;
+    color: #fff;    
+    margin-top: 30px;
+
 }
 #dokan-seller-listing-wrap.grid-view .store-content.default-store-banner {
     background: 0 0;
@@ -3050,6 +3052,22 @@ html {
     top: -15px;
     left: 25%;
 }
+.dokan-seller-rating{
+    color: white; margin-top: 20px;
+}
+.store-address{
+    color: white; 
+}
+.street_1{
+    color: white; 
+}
+.country{
+    color: white; 
+}
+.store-phone{
+    color: white; 
+}
+
 #dokan-seller-listing-wrap.list-view .dokan-seller-wrap .dokan-single-seller .store-wrapper .store-content .store-data-container .store-data .dokan-seller-rating[class]:before {
     font-family: star;
 }
