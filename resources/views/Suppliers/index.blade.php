@@ -499,10 +499,7 @@ $menu = false ;
 
 </script>
 
-<script
-  src="https://code.jquery.com/jquery-1.12.4.js"
-  integrity="sha256-Qw82+bXyGq6MydymqBxNPYTaUXXq7c8v3CwiYwLLNXU="
-  crossorigin="anonymous"></script>
+
 <script type="text/javascript">
     /* <![CDATA[ */
     var martfuryData = {"direction":"false","ajax_url":"https:\/\/demo2.drfuri.com\/martfury\/wp-admin\/admin-ajax.php","wc_ajax_url":"\/martfury\/?wc-ajax=%%endpoint%%","nonce":"bc2e829604","days":"days","hours":"hours","minutes":"minutes","seconds":"seconds","add_to_cart_ajax":"1","search_content_type":"product","nl_days":"1","nl_seconds":"0","ajax_search":"1","quantity_ajax":"","product_gallery":"1","added_to_cart_notice":{"added_to_cart_text":"has been added to your cart.","added_to_cart_texts":"have been added to your cart.","cart_view_text":"View Cart","cart_view_link":"https:\/\/demo2.drfuri.com\/martfury\/cart\/","cart_notice_auto_hide":3000},"added_to_wishlist_notice":{"added_to_wishlist_text":"has been added to your wishlist.","added_to_wishlist_texts":"have been added to your wishlist.","wishlist_view_text":"View Wishlist","wishlist_view_link":"https:\/\/demo2.drfuri.com\/martfury\/wishlist\/","wishlist_notice_auto_hide":3000}};
