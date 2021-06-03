@@ -498,7 +498,11 @@ $menu = false ;
     }
 
 </script>
-
+<script type="text/javascript">
+    /* <![CDATA[ */
+    var martfuryData = {"direction":"false","ajax_url":"https:\/\/demo2.drfuri.com\/martfury\/wp-admin\/admin-ajax.php","wc_ajax_url":"\/martfury\/?wc-ajax=%%endpoint%%","nonce":"bc2e829604","days":"days","hours":"hours","minutes":"minutes","seconds":"seconds","add_to_cart_ajax":"1","search_content_type":"product","nl_days":"1","nl_seconds":"0","ajax_search":"1","quantity_ajax":"","product_gallery":"1","added_to_cart_notice":{"added_to_cart_text":"has been added to your cart.","added_to_cart_texts":"have been added to your cart.","cart_view_text":"View Cart","cart_view_link":"https:\/\/demo2.drfuri.com\/martfury\/cart\/","cart_notice_auto_hide":3000},"added_to_wishlist_notice":{"added_to_wishlist_text":"has been added to your wishlist.","added_to_wishlist_texts":"have been added to your wishlist.","wishlist_view_text":"View Wishlist","wishlist_view_link":"https:\/\/demo2.drfuri.com\/martfury\/wishlist\/","wishlist_notice_auto_hide":3000}};
+    /* ]]> */
+</script>
 <script>
     window.lazyLoadOptions={elements_selector:"img[data-lazy-src],.rocket-lazyload,iframe[data-lazy-src]",data_src:"lazy-src",data_srcset:"lazy-srcset",data_sizes:"lazy-sizes",class_loading:"lazyloading",class_loaded:"lazyloaded",threshold:300,callback_loaded:function(element){if(element.tagName==="IFRAME"&&element.dataset.rocketLazyload=="fitvidscompatible"){if(element.classList.contains("lazyloaded")){if(typeof window.jQuery!="undefined"){if(jQuery.fn.fitVids){jQuery(element).parent().fitVids()}}}}}};window.addEventListener('LazyLoad::Initialized',function(e){var lazyLoadInstance=e.detail.instance;if(window.MutationObserver){var observer=new MutationObserver(function(mutations){var image_count=0;var iframe_count=0;var rocketlazy_count=0;mutations.forEach(function(mutation){for(i=0;i<mutation.addedNodes.length;i++){if(typeof mutation.addedNodes[i].getElementsByTagName!=='function'){continue}
     if(typeof mutation.addedNodes[i].getElementsByClassName!=='function'){continue}
