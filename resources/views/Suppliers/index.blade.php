@@ -505,7 +505,7 @@ $menu = false ;
     images=mutation.addedNodes[i].getElementsByTagName('img');is_image=mutation.addedNodes[i].tagName=="IMG";iframes=mutation.addedNodes[i].getElementsByTagName('iframe');is_iframe=mutation.addedNodes[i].tagName=="IFRAME";rocket_lazy=mutation.addedNodes[i].getElementsByClassName('rocket-lazyload');image_count+=images.length;iframe_count+=iframes.length;rocketlazy_count+=rocket_lazy.length;if(is_image){image_count+=1}
     if(is_iframe){iframe_count+=1}}});if(image_count>0||iframe_count>0||rocketlazy_count>0){lazyLoadInstance.update()}});var b=document.getElementsByTagName("body")[0];var config={childList:!0,subtree:!0};observer.observe(b,config)}},!1)
 </script>
-<script data-no-minify="1" async src="{{ asset('/web/js/lazyload.min')}}"></script>
+<script data-no-minify="1" async src="{{ asset('/web/js/lazyload.min.js')}}"></script>
 
 
 <script src="{{ asset('/web/js/custom_supplier.js')}}"></script>
