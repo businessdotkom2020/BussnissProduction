@@ -7187,3 +7187,25 @@ textarea {
     width: 100%;
 }
 /*****************************************************/
+.product_list_widget{
+
+}
+.product_list_widget li img{
+    width: 90px;
+    height: 90px;
+    vertical-align: top;
+}
+.product_list_widget .product-grid{
+    display: inline-block;
+    border: 0;
+    text-align: start;
+    width: calc(100% - 100px);
+}
+.product_list_widget .product-grid  .title {
+    margin: 0 0 5px;
+}
+.product_list_widget .product-grid .title a {
+    height: 40px;
+    line-height: 21px;
+    overflow: hidden;
+}
