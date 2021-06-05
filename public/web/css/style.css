@@ -7128,3 +7128,27 @@ textarea {
 }
 
 /**************************************************************/
+
+.pro-wishlist-compare{
+
+}
+.pro-wishlist-compare ul {
+
+}
+.pro-wishlist-compare li a{
+
+}
+.pro-wishlist-compare li a span{
+    display: inline-block;
+    padding: 0 4px;
+}
+.pro-ul-dis{
+
+}
+.pro-ul-dis li{
+    position: relative;
+}
+.pro-ul-dis li::after{
+    content: '';
+    position: absolute;
+}

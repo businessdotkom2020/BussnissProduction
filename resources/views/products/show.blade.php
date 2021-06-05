@@ -147,12 +147,35 @@ $menu = false ;
                     <div class="desc">
                         <p>{{$product->getTranslatedAttribute('description',\App::getLocale())}}</p>
                     </div>
+                    <div class="pro-wishlist-compare">
+                        <ul>
+                            <li>
+                                <a href="#">
+                                    <i class="far fa-heart"></i>
+                                    <span></span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <i class="far fa-heart"></i>
+                                    <span></span>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="pro-ul-dis">
+                        <ul>
+                            <li>Wireless</li>
+                            <li>Motion Sensing</li>
+                            <li>Compatible with Several Consoles/Games</li>
+                            <li>Enough Action Buttons</li>
+                            <li>Ergonomic</li>
+                        </ul>
+                    </div>
                     <div class="price">
                         @if($product->sale_price)
                         <span>{{$product->sale_price}} l.e</span>
                         @endif
-
-                        <br>
                         <span class="{{$product->sale_price ? 'old' : ''}}">{{$product->price}} l.e</span>
                     </div>
                     <div class="controls">
