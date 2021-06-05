@@ -582,16 +582,16 @@ $menu = false ;
                                 </div>
                             </div>
                             <div class="tab-pane fade" id="t3">
-                                <div class=" review-tab col-md-12 col-xs-12">
-                                    <div class="col-md-6 col-xs-12">
+                                <div class=" review-tab row">
+                                    <div class="col-md-5 col-xs-12">
                                     </div>
-                                    <div class="col-md-6 col-xs-12">
+                                    <div class="col-md-7 col-xs-12">
                                         <div class="req-form login-ppage">
                                             <h3>Be the first to review “Game Console Controller + USB 3.0 Cable”</h3>
                                             <form action="" method="">
                                                 <div class="form-group row">
-                                                    <label for="" class="col-md-4 col-xs-12">Your Rating</label>
-                                                    <div class="rate-stars col-md-8 col-xs-12">
+                                                    <label for="" class="col-md-3 col-xs-12">Your Rating</label>
+                                                    <div class="rate-stars col-md-9 col-xs-12">
                                                         <div class="stars">
                                                             <input value="1" class="star star-5" id="star-5"
                                                                 type="radio" required name="rating" />
