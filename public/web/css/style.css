@@ -7225,3 +7225,21 @@ textarea {
 .related-block.col-md-3.col-xs-12{
     padding: 0 15px;
 }
+.single-brands{
+    border-top: 1px solid #ddd;
+    border-bottom: 1px solid #ddd;
+    padding-top: 15px;
+    margin-bottom: 50px;
+}
+.single-brands .owl-carousel .owl-nav button.owl-next {
+    right: 0px;
+}
+.single-brands .owl-carousel .owl-nav button.owl-prev {
+    left: 0px;
+}
+.single-brands .owl-carousel .owl-nav button.owl-next,
+.single-brands .owl-carousel .owl-nav button.owl-prev {
+    top: 38%;
+    width: 15px;
+    height: 15px;
+}
