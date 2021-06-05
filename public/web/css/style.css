@@ -7266,3 +7266,11 @@ textarea {
     border: 1px solid #ddd;
     padding: 2.5em;
 }
+.product-specification{
+
+}
+.product-specification h3{
+    font-size: 1.286em;
+    line-height: 1.043em;
+    margin-bottom: 1em;
+}
