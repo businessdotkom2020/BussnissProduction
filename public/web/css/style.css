@@ -7243,3 +7243,26 @@ textarea {
     width: 15px;
     height: 15px;
 }
+.pro-description{
+
+}
+.pro-description img {
+    max-width: 100%;
+    height: auto;
+}
+.pro-description p{
+    margin-bottom: 2.857em;
+    color: #919090;
+}
+.pro-description p:last-child{
+    margin-bottom: 0; 
+}
+.product-middle .nav-tabs {
+    text-align: center;
+    margin: 0 auto;
+}
+.product-middle .tab-content>.tab-pane {
+    border-radius: 1em;
+    border: 1px solid #ddd;
+    padding: 2.5em;
+}

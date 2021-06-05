@@ -408,6 +408,9 @@ $menu = false ;
                     <div class="product-middle col-xs-12">
                         <ul class="nav-tabs">
                             <li class="active">
+                                <a href="#" data-toggle="tab" data-target="#t0">Description</a>
+                            </li>
+                            <li class="">
                                 <a href="#" data-toggle="tab" data-target="#t1">@lang('general.pricing_plans')</a>
                             </li>
 
@@ -417,6 +420,53 @@ $menu = false ;
 
                         </ul>
                         <div class="tab-content">
+                            <div class="tab-pane fade active in" id="t0">
+                                <div class="pro-description">
+                                    <p>
+                                        <img src="https://electro.madrasthemes.com/wp-content/uploads/2016/03/overview_hero_title_2x-1024x346.png"
+                                            alt="">
+                                    </p>
+                                    <p>
+                                        <img src="https://electro.madrasthemes.com/wp-content/uploads/2016/03/overview_hero_2x-e1459776153284-1024x430.jpg"
+                                            alt="">
+                                    </p>
+                                    <p>
+                                        A groundbreaking Retina display. Powerful dual-core and quad-core Intel
+                                        processors. Fast flash storage. High-performance graphics. Great built-in apps.
+                                        And now in the 13-inch model, a revolutionary new Force Touch trackpad and even
+                                        longer battery life.1 Whatever you can imagine, MacBook Pro with Retina display
+                                        gives you the power to create.
+                                    </p>
+                                    <p>
+                                        The design of MacBook Pro packs a lot of power into not a lot of space. Because
+                                        we believe that high performance shouldn’t come at the expense of portability.
+                                        And despite being so compact, the new 13-inch and 15-inch MacBook Pro with
+                                        Retina display models now deliver up to 10 hours and nine hours of battery life,
+                                        respectively — an hour more than the previous models.
+                                    </p>
+                                    <p>
+                                        <img src="https://demo.madrasthemes.com/demo-2/wp-content/uploads/sites/7/2016/03/hero_large_2x.jpg"
+                                            alt="">
+                                    </p>
+                                    <p>
+                                        With Multi-Touch in OS X, you can use realistic gestures like swiping or
+                                        pinching to switch between apps, navigate your content and get the most out of
+                                        your desktop space.
+
+
+                                    </p>
+                                    <p>
+                                        The new Force Touch trackpad takes all the capabilities of Multi-Touch and adds
+                                        force sensors that detect subtle differences in the amount of downward pressure
+                                        you apply. This lets you have a deeper connection to your content, bringing more
+                                        functionality to your fingertip. It also introduces haptic feedback to MacBook
+                                        Pro — allowing you to not just see what’s happening on the screen, but to feel
+                                        it.
+
+
+                                    </p>
+                                </div>
+                            </div>
                             <div class="tab-pane fade active in" id="t1">
 
                                 <div class="product-price-p table-responsive">
