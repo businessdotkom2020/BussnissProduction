@@ -1238,7 +1238,7 @@ $menu = false ;
                 </div>
                 <div class="related-block col-md-3 col-xs-12">
                     <div class="single-prod-ad">
-                        <img src="https://electro.madrasthemes.com/wp-content/uploads/2016/02/shop-sidebar-ad-banner.jpg"
+                        <img src="https://electro.madrasthemes.com/wp-content/uploads/2019/04/footer-widget-img-01.jpg"
                             alt="img">
                     </div>
                 </div>
