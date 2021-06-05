@@ -32,21 +32,21 @@ $menu = false ;
                             <li>
                                 <a class="category-toggle" href="#">اكسسوارات سيارات</a>
                                 <ul class="inner">
-                                    <li><a href="#">اكسسوارات سيارات</a></li>
-                                    <li><a href="#">قطع غيار سيارات</a></li>
-                                    <li><a href="#">صيانة و ديكور سيارات</a>
+                                    <li><a href="#">اكسسوارات سيارات<span>(12)</span></a></li>
+                                    <li><a href="#">قطع غيار سيارات<span>(12)</span></a></li>
+                                    <li><a href="#">صيانة و ديكور سيارات<span>(12)</span></a>
                                     </li>
-                                    <li><a href="#">معدات أمان</a></li>
-                                    <li><a href="#">كماليات موتوسيكلات</a></li>
-                                    <li><a href="#">قطع غيار أخري</a></li>
-                                    <li><a href="#">الرياض</a></li>
+                                    <li><a href="#">معدات أمان<span>(12)</span></a></li>
+                                    <li><a href="#">كماليات موتوسيكلات<span>(12)</span></a></li>
+                                    <li><a href="#">قطع غيار أخري<span>(12)</span></a></li>
+                                    <li><a href="#">الرياض<span>(12)</span></a></li>
                                 </ul>
                             </li>
                             <li>
-                                <a class="category-toggle22" href="#">قطع غيار سيارات <span>12</span></a>
+                                <a class="category-toggle22" href="#">قطع غيار سيارات <span>(12)</span></a>
                             </li>
                             <li>
-                                <a class="category-toggle22" href="#">قطع غيار سيارات <span>12</span></a>
+                                <a class="category-toggle22" href="#">قطع غيار سيارات <span>(12)</span></a>
                             </li>
                         </ul>
                     </div>

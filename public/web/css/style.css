@@ -7145,8 +7145,8 @@ textarea {
     font-size: 16px;
 }
 .pro-ul-dis{
-    padding: 15px 0;
-    margin: 15px 0;
+    padding: 0 15px;
+    margin: 13px 0;
 }
 .pro-ul-dis li{
     position: relative;
@@ -7164,4 +7164,25 @@ textarea {
     right: auto;
     top: 8px;
     left: 0;
+}
+.single-prod-ul.categories-block .accordion {
+    padding: 8px 0;
+}
+.single-prod-ul.categories-block ul li {
+    border-bottom: 1px solid #dddddd63;
+    padding: 10px;
+}
+.single-prod-ul.categories-block ul li:last-child{
+    border-bottom: 0;
+}
+.single-prod-ul.categories-block ul li a{
+    color: #181818;
+}
+.single-prod-ul.categories-block ul li a span{
+    color: #181818;
+    display: inline-block;
+    margin: 0 4px;
+}
+.single-prod-ad img{
+    width: 100%;
 }
