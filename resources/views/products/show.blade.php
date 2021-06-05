@@ -583,6 +583,76 @@ $menu = false ;
                             </div>
                             <div class="tab-pane fade" id="t3">
 
+                                <div class="col-md-6 col-xs-12">
+                                </div>
+                                <div class="col-md-6 col-xs-12">
+                                    <div class="req-form col-md-12 col-xs-12">
+                                        <h3>Be the first to review “Game Console Controller + USB 3.0 Cable”</h3>
+                                        <form action="https://businessdotcom.net/review/request/410/addReview"
+                                            method="POST">
+                                            <div class="form-group row">
+                                                <label for="" class="col-md-3 col-xs-12">Your Rating</label>
+                                                <div class="rate-stars col-md-9 col-xs-12">
+                                                    <div class="stars">
+                                                        <input value="1" class="star star-5" id="star-5" type="radio"
+                                                            required name="rating" />
+                                                        <label class="star star-5" for="star-5"></label>
+                                                        <input value="2" class="star star-4" id="star-4" type="radio"
+                                                            name="rating" />
+                                                        <label class="star star-4" for="star-4"></label>
+                                                        <input value="3" class="star star-3" id="star-3" type="radio"
+                                                            name="rating" />
+                                                        <label class="star star-3" for="star-3"></label>
+                                                        <input value="4" class="star star-2" id="star-2" type="radio"
+                                                            name="rating" />
+                                                        <label class="star star-2" for="star-2"></label>
+                                                        <input value="5" class="star star-1" id="star-1" type="radio"
+                                                            name="rating" />
+                                                        <label class="star star-1" for="star-1"></label>
+                                                    </div>
+                                                </div>
+                                                <div class="form-group row">
+                                                    <label for="" class="col-md-3 col-xs-12">Your Review</label>
+                                                    <div class="rate-stars col-md-9 col-xs-12">
+                                                        <textarea class="form-control" name="comment"
+                                                            placeholder="Add Review" id=''>
+                                                        </textarea>
+                                                    </div>
+                                                </div>
+                                                <div class="form-group row">
+                                                    <label for="" class="col-md-3 col-xs-12">Name</label>
+                                                    <div class="rate-stars col-md-9 col-xs-12">
+                                                        <input class="form-control" type="text" name=""
+                                                            placeholder="Name" id=''>
+                                                    </div>
+                                                </div>
+                                                <div class="form-group row">
+                                                    <label for="" class="col-md-3 col-xs-12">Email</label>
+                                                    <div class="rate-stars col-md-9 col-xs-12">
+                                                        <input class="form-control" type="mail" name=""
+                                                            placeholder="Email" id=''>
+                                                    </div>
+                                                </div>
+                                                <div class="form-group row">
+                                                    <label class="check-data col-md-12 col-xs-12">
+
+                                                        Save my name, email, and website in this browser for the next
+                                                        time I comment.
+                                                        <input type="checkbox" checked="checked">
+                                                        <span class="checkmark-d"></span>
+                                                    </label>
+                                                    
+                                                </div>
+                                                <div class='error'></div>
+                                                <button type="submit" class="btn" id="req-f-btn">Add Review</button>
+                                            </div>
+                                        </form>
+                                    </div>
+                                </div>
+
+
+
+                                <!--
                                 @foreach($product->reviews as $review)
 
                                 <div class="rev-item col-md-7 col-xs-12">
@@ -633,7 +703,7 @@ $menu = false ;
                                 </div>
 
                                 @endforeach
-
+                                -->
 
                             </div>
                         </div>
