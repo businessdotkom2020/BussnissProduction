@@ -694,415 +694,426 @@ $menu = false ;
 
 
             <div class="related-s single-brands col-xs-12">
-                <div class="rel-slider owl-theme owl-carousel">
-                    <div class="single-brand-s owl-theme owl-carousel">
-                        <div class="item">
-                            <div class="single-brand-img">
-                                <a href="#"><img src="https://electro.madrasthemes.com/wp-content/uploads/2021/03/themeforest1.png" alt=""></a>
-                            </div>
+                <div class="single-brand-s owl-theme owl-carousel">
+                    <div class="item">
+                        <div class="single-brand-img">
+                            <a href="#"><img
+                                    src="https://electro.madrasthemes.com/wp-content/uploads/2021/03/themeforest1.png"
+                                    alt=""></a>
                         </div>
-                        <div class="item">
-                            <div class="single-brand-img">
-                                <a href="#"><img src="https://electro.madrasthemes.com/wp-content/uploads/2021/03/themeforest1.png" alt=""></a>
-                            </div>
+                    </div>
+                    <div class="item">
+                        <div class="single-brand-img">
+                            <a href="#"><img
+                                    src="https://electro.madrasthemes.com/wp-content/uploads/2021/03/themeforest1.png"
+                                    alt=""></a>
                         </div>
-                        <div class="item">
-                            <div class="single-brand-img">
-                                <a href="#"><img src="https://electro.madrasthemes.com/wp-content/uploads/2021/03/themeforest1.png" alt=""></a>
-                            </div>
+                    </div>
+                    <div class="item">
+                        <div class="single-brand-img">
+                            <a href="#"><img
+                                    src="https://electro.madrasthemes.com/wp-content/uploads/2021/03/themeforest1.png"
+                                    alt=""></a>
                         </div>
-                        <div class="item">
-                            <div class="single-brand-img">
-                                <a href="#"><img src="https://electro.madrasthemes.com/wp-content/uploads/2021/03/themeforest1.png" alt=""></a>
-                            </div>
+                    </div>
+                    <div class="item">
+                        <div class="single-brand-img">
+                            <a href="#"><img
+                                    src="https://electro.madrasthemes.com/wp-content/uploads/2021/03/themeforest1.png"
+                                    alt=""></a>
                         </div>
-                        <div class="item">
-                            <div class="single-brand-img">
-                                <a href="#"><img src="https://electro.madrasthemes.com/wp-content/uploads/2021/03/themeforest1.png" alt=""></a>
-                            </div>
+                    </div>
+                    <div class="item">
+                        <div class="single-brand-img">
+                            <a href="#"><img
+                                    src="https://electro.madrasthemes.com/wp-content/uploads/2021/03/themeforest1.png"
+                                    alt=""></a>
                         </div>
-                        <div class="item">
-                            <div class="single-brand-img">
-                                <a href="#"><img src="https://electro.madrasthemes.com/wp-content/uploads/2021/03/themeforest1.png" alt=""></a>
-                            </div>
+                    </div>
+                    <div class="item">
+                        <div class="single-brand-img">
+                            <a href="#"><img
+                                    src="https://electro.madrasthemes.com/wp-content/uploads/2021/03/themeforest1.png"
+                                    alt=""></a>
                         </div>
                     </div>
                 </div>
-
-
-
-                <div class="single-related-blocks col-xs-12">
-                    <div class="related-block col-md-3 col-xs-12">
-                        <div class="g-head">
-                            <h3>Featured Products</h3>
-                        </div>
-                        <ul class="product_list_widget">
-                            <li>
-                                <a href="#">
-                                    <img src="https://electro.madrasthemes.com/wp-content/uploads/2016/03/GoldPhone-300x300.png"
-                                        alt="img">
-                                </a>
-                                <div class="product_list-info product-grid">
-                                    <h3 class="title"><a href="#">Tablet Thin EliteBook Revolve 810 G6</a></h3>
-                                    <div class="price">
-                                        <span>1700</span>
-                                        1400
-                                    </div>
-                                    <div class="c-data">
-                                        <p>
-                                            <i class="fa fa-star active"></i>
-                                            <i class="fa fa-star active"></i>
-                                            <i class="fa fa-star"></i>
-                                            <i class="fa fa-star"></i>
-                                            <i class="fa fa-star"></i>
-                                        </p>
-                                    </div>
-                                </div>
-                            </li>
-                            <li>
-                                <a href="#">
-                                    <img src="https://electro.madrasthemes.com/wp-content/uploads/2016/03/GoldPhone-300x300.png"
-                                        alt="img">
-                                </a>
-                                <div class="product_list-info product-grid">
-                                    <h3 class="title"><a href="#">Tablet Thin EliteBook Revolve 810 G6</a></h3>
-                                    <div class="price">
-                                        <span>1700</span>
-                                        1400
-                                    </div>
-                                    <div class="c-data">
-                                        <p>
-                                            <i class="fa fa-star active"></i>
-                                            <i class="fa fa-star active"></i>
-                                            <i class="fa fa-star"></i>
-                                            <i class="fa fa-star"></i>
-                                            <i class="fa fa-star"></i>
-                                        </p>
-                                    </div>
-                                </div>
-                            </li>
-                            <li>
-                                <a href="#">
-                                    <img src="https://electro.madrasthemes.com/wp-content/uploads/2016/03/GoldPhone-300x300.png"
-                                        alt="img">
-                                </a>
-                                <div class="product_list-info product-grid">
-                                    <h3 class="title"><a href="#">Tablet Thin EliteBook Revolve 810 G6</a></h3>
-                                    <div class="price">
-                                        <span>1700</span>
-                                        1400
-                                    </div>
-                                    <div class="c-data">
-                                        <p>
-                                            <i class="fa fa-star active"></i>
-                                            <i class="fa fa-star active"></i>
-                                            <i class="fa fa-star"></i>
-                                            <i class="fa fa-star"></i>
-                                            <i class="fa fa-star"></i>
-                                        </p>
-                                    </div>
-                                </div>
-                            </li>
-                            <li>
-                                <a href="#">
-                                    <img src="https://electro.madrasthemes.com/wp-content/uploads/2016/03/GoldPhone-300x300.png"
-                                        alt="img">
-                                </a>
-                                <div class="product_list-info product-grid">
-                                    <h3 class="title"><a href="#">Tablet Thin EliteBook Revolve 810 G6</a></h3>
-                                    <div class="price">
-                                        <span>1700</span>
-                                        1400
-                                    </div>
-                                    <div class="c-data">
-                                        <p>
-                                            <i class="fa fa-star active"></i>
-                                            <i class="fa fa-star active"></i>
-                                            <i class="fa fa-star"></i>
-                                            <i class="fa fa-star"></i>
-                                            <i class="fa fa-star"></i>
-                                        </p>
-                                    </div>
-                                </div>
-                            </li>
-                            <li>
-                                <a href="#">
-                                    <img src="https://electro.madrasthemes.com/wp-content/uploads/2016/03/GoldPhone-300x300.png"
-                                        alt="img">
-                                </a>
-                                <div class="product_list-info product-grid">
-                                    <h3 class="title"><a href="#">Tablet Thin EliteBook Revolve 810 G6</a></h3>
-                                    <div class="price">
-                                        <span>1700</span>
-                                        1400
-                                    </div>
-                                    <div class="c-data">
-                                        <p>
-                                            <i class="fa fa-star active"></i>
-                                            <i class="fa fa-star active"></i>
-                                            <i class="fa fa-star"></i>
-                                            <i class="fa fa-star"></i>
-                                            <i class="fa fa-star"></i>
-                                        </p>
-                                    </div>
-                                </div>
-                            </li>
-
-
-                        </ul>
-                    </div>
-                    <div class="related-block col-md-3 col-xs-12">
-                        <div class="g-head">
-                            <h3>Top Selling Products</h3>
-                        </div>
-                        <ul class="product_list_widget">
-                            <li>
-                                <a href="#">
-                                    <img src="https://electro.madrasthemes.com/wp-content/uploads/2016/03/GoldPhone-300x300.png"
-                                        alt="img">
-                                </a>
-                                <div class="product_list-info product-grid">
-                                    <h3 class="title"><a href="#">Tablet Thin EliteBook Revolve 810 G6</a></h3>
-                                    <div class="price">
-                                        <span>1700</span>
-                                        1400
-                                    </div>
-                                    <div class="c-data">
-                                        <p>
-                                            <i class="fa fa-star active"></i>
-                                            <i class="fa fa-star active"></i>
-                                            <i class="fa fa-star"></i>
-                                            <i class="fa fa-star"></i>
-                                            <i class="fa fa-star"></i>
-                                        </p>
-                                    </div>
-                                </div>
-                            </li>
-                            <li>
-                                <a href="#">
-                                    <img src="https://electro.madrasthemes.com/wp-content/uploads/2016/03/GoldPhone-300x300.png"
-                                        alt="img">
-                                </a>
-                                <div class="product_list-info product-grid">
-                                    <h3 class="title"><a href="#">Tablet Thin EliteBook Revolve 810 G6</a></h3>
-                                    <div class="price">
-                                        <span>1700</span>
-                                        1400
-                                    </div>
-                                    <div class="c-data">
-                                        <p>
-                                            <i class="fa fa-star active"></i>
-                                            <i class="fa fa-star active"></i>
-                                            <i class="fa fa-star"></i>
-                                            <i class="fa fa-star"></i>
-                                            <i class="fa fa-star"></i>
-                                        </p>
-                                    </div>
-                                </div>
-                            </li>
-                            <li>
-                                <a href="#">
-                                    <img src="https://electro.madrasthemes.com/wp-content/uploads/2016/03/GoldPhone-300x300.png"
-                                        alt="img">
-                                </a>
-                                <div class="product_list-info product-grid">
-                                    <h3 class="title"><a href="#">Tablet Thin EliteBook Revolve 810 G6</a></h3>
-                                    <div class="price">
-                                        <span>1700</span>
-                                        1400
-                                    </div>
-                                    <div class="c-data">
-                                        <p>
-                                            <i class="fa fa-star active"></i>
-                                            <i class="fa fa-star active"></i>
-                                            <i class="fa fa-star"></i>
-                                            <i class="fa fa-star"></i>
-                                            <i class="fa fa-star"></i>
-                                        </p>
-                                    </div>
-                                </div>
-                            </li>
-                            <li>
-                                <a href="#">
-                                    <img src="https://electro.madrasthemes.com/wp-content/uploads/2016/03/GoldPhone-300x300.png"
-                                        alt="img">
-                                </a>
-                                <div class="product_list-info product-grid">
-                                    <h3 class="title"><a href="#">Tablet Thin EliteBook Revolve 810 G6</a></h3>
-                                    <div class="price">
-                                        <span>1700</span>
-                                        1400
-                                    </div>
-                                    <div class="c-data">
-                                        <p>
-                                            <i class="fa fa-star active"></i>
-                                            <i class="fa fa-star active"></i>
-                                            <i class="fa fa-star"></i>
-                                            <i class="fa fa-star"></i>
-                                            <i class="fa fa-star"></i>
-                                        </p>
-                                    </div>
-                                </div>
-                            </li>
-                            <li>
-                                <a href="#">
-                                    <img src="https://electro.madrasthemes.com/wp-content/uploads/2016/03/GoldPhone-300x300.png"
-                                        alt="img">
-                                </a>
-                                <div class="product_list-info product-grid">
-                                    <h3 class="title"><a href="#">Tablet Thin EliteBook Revolve 810 G6</a></h3>
-                                    <div class="price">
-                                        <span>1700</span>
-                                        1400
-                                    </div>
-                                    <div class="c-data">
-                                        <p>
-                                            <i class="fa fa-star active"></i>
-                                            <i class="fa fa-star active"></i>
-                                            <i class="fa fa-star"></i>
-                                            <i class="fa fa-star"></i>
-                                            <i class="fa fa-star"></i>
-                                        </p>
-                                    </div>
-                                </div>
-                            </li>
-
-
-                        </ul>
-                    </div>
-                    <div class="related-block col-md-3 col-xs-12">
-                        <div class="g-head">
-                            <h3>On-sale Products</h3>
-                        </div>
-                        <ul class="product_list_widget">
-                            <li>
-                                <a href="#">
-                                    <img src="https://electro.madrasthemes.com/wp-content/uploads/2016/03/GoldPhone-300x300.png"
-                                        alt="img">
-                                </a>
-                                <div class="product_list-info product-grid">
-                                    <h3 class="title"><a href="#">Tablet Thin EliteBook Revolve 810 G6</a></h3>
-                                    <div class="price">
-                                        <span>1700</span>
-                                        1400
-                                    </div>
-                                    <div class="c-data">
-                                        <p>
-                                            <i class="fa fa-star active"></i>
-                                            <i class="fa fa-star active"></i>
-                                            <i class="fa fa-star"></i>
-                                            <i class="fa fa-star"></i>
-                                            <i class="fa fa-star"></i>
-                                        </p>
-                                    </div>
-                                </div>
-                            </li>
-                            <li>
-                                <a href="#">
-                                    <img src="https://electro.madrasthemes.com/wp-content/uploads/2016/03/GoldPhone-300x300.png"
-                                        alt="img">
-                                </a>
-                                <div class="product_list-info product-grid">
-                                    <h3 class="title"><a href="#">Tablet Thin EliteBook Revolve 810 G6</a></h3>
-                                    <div class="price">
-                                        <span>1700</span>
-                                        1400
-                                    </div>
-                                    <div class="c-data">
-                                        <p>
-                                            <i class="fa fa-star active"></i>
-                                            <i class="fa fa-star active"></i>
-                                            <i class="fa fa-star"></i>
-                                            <i class="fa fa-star"></i>
-                                            <i class="fa fa-star"></i>
-                                        </p>
-                                    </div>
-                                </div>
-                            </li>
-                            <li>
-                                <a href="#">
-                                    <img src="https://electro.madrasthemes.com/wp-content/uploads/2016/03/GoldPhone-300x300.png"
-                                        alt="img">
-                                </a>
-                                <div class="product_list-info product-grid">
-                                    <h3 class="title"><a href="#">Tablet Thin EliteBook Revolve 810 G6</a></h3>
-                                    <div class="price">
-                                        <span>1700</span>
-                                        1400
-                                    </div>
-                                    <div class="c-data">
-                                        <p>
-                                            <i class="fa fa-star active"></i>
-                                            <i class="fa fa-star active"></i>
-                                            <i class="fa fa-star"></i>
-                                            <i class="fa fa-star"></i>
-                                            <i class="fa fa-star"></i>
-                                        </p>
-                                    </div>
-                                </div>
-                            </li>
-                            <li>
-                                <a href="#">
-                                    <img src="https://electro.madrasthemes.com/wp-content/uploads/2016/03/GoldPhone-300x300.png"
-                                        alt="img">
-                                </a>
-                                <div class="product_list-info product-grid">
-                                    <h3 class="title"><a href="#">Tablet Thin EliteBook Revolve 810 G6</a></h3>
-                                    <div class="price">
-                                        <span>1700</span>
-                                        1400
-                                    </div>
-                                    <div class="c-data">
-                                        <p>
-                                            <i class="fa fa-star active"></i>
-                                            <i class="fa fa-star active"></i>
-                                            <i class="fa fa-star"></i>
-                                            <i class="fa fa-star"></i>
-                                            <i class="fa fa-star"></i>
-                                        </p>
-                                    </div>
-                                </div>
-                            </li>
-                            <li>
-                                <a href="#">
-                                    <img src="https://electro.madrasthemes.com/wp-content/uploads/2016/03/GoldPhone-300x300.png"
-                                        alt="img">
-                                </a>
-                                <div class="product_list-info product-grid">
-                                    <h3 class="title"><a href="#">Tablet Thin EliteBook Revolve 810 G6</a></h3>
-                                    <div class="price">
-                                        <span>1700</span>
-                                        1400
-                                    </div>
-                                    <div class="c-data">
-                                        <p>
-                                            <i class="fa fa-star active"></i>
-                                            <i class="fa fa-star active"></i>
-                                            <i class="fa fa-star"></i>
-                                            <i class="fa fa-star"></i>
-                                            <i class="fa fa-star"></i>
-                                        </p>
-                                    </div>
-                                </div>
-                            </li>
-
-
-                        </ul>
-                    </div>
-                    <div class="related-block col-md-3 col-xs-12">
-                        <div class="single-prod-ad">
-                            <img src="https://electro.madrasthemes.com/wp-content/uploads/2016/02/shop-sidebar-ad-banner.jpg"
-                                alt="img">
-                        </div>
-                    </div>
-                </div>
-
-
-
-
-
             </div>
+
+
+
+            <div class="single-related-blocks col-xs-12">
+                <div class="related-block col-md-3 col-xs-12">
+                    <div class="g-head">
+                        <h3>Featured Products</h3>
+                    </div>
+                    <ul class="product_list_widget">
+                        <li>
+                            <a href="#">
+                                <img src="https://electro.madrasthemes.com/wp-content/uploads/2016/03/GoldPhone-300x300.png"
+                                    alt="img">
+                            </a>
+                            <div class="product_list-info product-grid">
+                                <h3 class="title"><a href="#">Tablet Thin EliteBook Revolve 810 G6</a></h3>
+                                <div class="price">
+                                    <span>1700</span>
+                                    1400
+                                </div>
+                                <div class="c-data">
+                                    <p>
+                                        <i class="fa fa-star active"></i>
+                                        <i class="fa fa-star active"></i>
+                                        <i class="fa fa-star"></i>
+                                        <i class="fa fa-star"></i>
+                                        <i class="fa fa-star"></i>
+                                    </p>
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <img src="https://electro.madrasthemes.com/wp-content/uploads/2016/03/GoldPhone-300x300.png"
+                                    alt="img">
+                            </a>
+                            <div class="product_list-info product-grid">
+                                <h3 class="title"><a href="#">Tablet Thin EliteBook Revolve 810 G6</a></h3>
+                                <div class="price">
+                                    <span>1700</span>
+                                    1400
+                                </div>
+                                <div class="c-data">
+                                    <p>
+                                        <i class="fa fa-star active"></i>
+                                        <i class="fa fa-star active"></i>
+                                        <i class="fa fa-star"></i>
+                                        <i class="fa fa-star"></i>
+                                        <i class="fa fa-star"></i>
+                                    </p>
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <img src="https://electro.madrasthemes.com/wp-content/uploads/2016/03/GoldPhone-300x300.png"
+                                    alt="img">
+                            </a>
+                            <div class="product_list-info product-grid">
+                                <h3 class="title"><a href="#">Tablet Thin EliteBook Revolve 810 G6</a></h3>
+                                <div class="price">
+                                    <span>1700</span>
+                                    1400
+                                </div>
+                                <div class="c-data">
+                                    <p>
+                                        <i class="fa fa-star active"></i>
+                                        <i class="fa fa-star active"></i>
+                                        <i class="fa fa-star"></i>
+                                        <i class="fa fa-star"></i>
+                                        <i class="fa fa-star"></i>
+                                    </p>
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <img src="https://electro.madrasthemes.com/wp-content/uploads/2016/03/GoldPhone-300x300.png"
+                                    alt="img">
+                            </a>
+                            <div class="product_list-info product-grid">
+                                <h3 class="title"><a href="#">Tablet Thin EliteBook Revolve 810 G6</a></h3>
+                                <div class="price">
+                                    <span>1700</span>
+                                    1400
+                                </div>
+                                <div class="c-data">
+                                    <p>
+                                        <i class="fa fa-star active"></i>
+                                        <i class="fa fa-star active"></i>
+                                        <i class="fa fa-star"></i>
+                                        <i class="fa fa-star"></i>
+                                        <i class="fa fa-star"></i>
+                                    </p>
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <img src="https://electro.madrasthemes.com/wp-content/uploads/2016/03/GoldPhone-300x300.png"
+                                    alt="img">
+                            </a>
+                            <div class="product_list-info product-grid">
+                                <h3 class="title"><a href="#">Tablet Thin EliteBook Revolve 810 G6</a></h3>
+                                <div class="price">
+                                    <span>1700</span>
+                                    1400
+                                </div>
+                                <div class="c-data">
+                                    <p>
+                                        <i class="fa fa-star active"></i>
+                                        <i class="fa fa-star active"></i>
+                                        <i class="fa fa-star"></i>
+                                        <i class="fa fa-star"></i>
+                                        <i class="fa fa-star"></i>
+                                    </p>
+                                </div>
+                            </div>
+                        </li>
+
+
+                    </ul>
+                </div>
+                <div class="related-block col-md-3 col-xs-12">
+                    <div class="g-head">
+                        <h3>Top Selling Products</h3>
+                    </div>
+                    <ul class="product_list_widget">
+                        <li>
+                            <a href="#">
+                                <img src="https://electro.madrasthemes.com/wp-content/uploads/2016/03/GoldPhone-300x300.png"
+                                    alt="img">
+                            </a>
+                            <div class="product_list-info product-grid">
+                                <h3 class="title"><a href="#">Tablet Thin EliteBook Revolve 810 G6</a></h3>
+                                <div class="price">
+                                    <span>1700</span>
+                                    1400
+                                </div>
+                                <div class="c-data">
+                                    <p>
+                                        <i class="fa fa-star active"></i>
+                                        <i class="fa fa-star active"></i>
+                                        <i class="fa fa-star"></i>
+                                        <i class="fa fa-star"></i>
+                                        <i class="fa fa-star"></i>
+                                    </p>
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <img src="https://electro.madrasthemes.com/wp-content/uploads/2016/03/GoldPhone-300x300.png"
+                                    alt="img">
+                            </a>
+                            <div class="product_list-info product-grid">
+                                <h3 class="title"><a href="#">Tablet Thin EliteBook Revolve 810 G6</a></h3>
+                                <div class="price">
+                                    <span>1700</span>
+                                    1400
+                                </div>
+                                <div class="c-data">
+                                    <p>
+                                        <i class="fa fa-star active"></i>
+                                        <i class="fa fa-star active"></i>
+                                        <i class="fa fa-star"></i>
+                                        <i class="fa fa-star"></i>
+                                        <i class="fa fa-star"></i>
+                                    </p>
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <img src="https://electro.madrasthemes.com/wp-content/uploads/2016/03/GoldPhone-300x300.png"
+                                    alt="img">
+                            </a>
+                            <div class="product_list-info product-grid">
+                                <h3 class="title"><a href="#">Tablet Thin EliteBook Revolve 810 G6</a></h3>
+                                <div class="price">
+                                    <span>1700</span>
+                                    1400
+                                </div>
+                                <div class="c-data">
+                                    <p>
+                                        <i class="fa fa-star active"></i>
+                                        <i class="fa fa-star active"></i>
+                                        <i class="fa fa-star"></i>
+                                        <i class="fa fa-star"></i>
+                                        <i class="fa fa-star"></i>
+                                    </p>
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <img src="https://electro.madrasthemes.com/wp-content/uploads/2016/03/GoldPhone-300x300.png"
+                                    alt="img">
+                            </a>
+                            <div class="product_list-info product-grid">
+                                <h3 class="title"><a href="#">Tablet Thin EliteBook Revolve 810 G6</a></h3>
+                                <div class="price">
+                                    <span>1700</span>
+                                    1400
+                                </div>
+                                <div class="c-data">
+                                    <p>
+                                        <i class="fa fa-star active"></i>
+                                        <i class="fa fa-star active"></i>
+                                        <i class="fa fa-star"></i>
+                                        <i class="fa fa-star"></i>
+                                        <i class="fa fa-star"></i>
+                                    </p>
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <img src="https://electro.madrasthemes.com/wp-content/uploads/2016/03/GoldPhone-300x300.png"
+                                    alt="img">
+                            </a>
+                            <div class="product_list-info product-grid">
+                                <h3 class="title"><a href="#">Tablet Thin EliteBook Revolve 810 G6</a></h3>
+                                <div class="price">
+                                    <span>1700</span>
+                                    1400
+                                </div>
+                                <div class="c-data">
+                                    <p>
+                                        <i class="fa fa-star active"></i>
+                                        <i class="fa fa-star active"></i>
+                                        <i class="fa fa-star"></i>
+                                        <i class="fa fa-star"></i>
+                                        <i class="fa fa-star"></i>
+                                    </p>
+                                </div>
+                            </div>
+                        </li>
+
+
+                    </ul>
+                </div>
+                <div class="related-block col-md-3 col-xs-12">
+                    <div class="g-head">
+                        <h3>On-sale Products</h3>
+                    </div>
+                    <ul class="product_list_widget">
+                        <li>
+                            <a href="#">
+                                <img src="https://electro.madrasthemes.com/wp-content/uploads/2016/03/GoldPhone-300x300.png"
+                                    alt="img">
+                            </a>
+                            <div class="product_list-info product-grid">
+                                <h3 class="title"><a href="#">Tablet Thin EliteBook Revolve 810 G6</a></h3>
+                                <div class="price">
+                                    <span>1700</span>
+                                    1400
+                                </div>
+                                <div class="c-data">
+                                    <p>
+                                        <i class="fa fa-star active"></i>
+                                        <i class="fa fa-star active"></i>
+                                        <i class="fa fa-star"></i>
+                                        <i class="fa fa-star"></i>
+                                        <i class="fa fa-star"></i>
+                                    </p>
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <img src="https://electro.madrasthemes.com/wp-content/uploads/2016/03/GoldPhone-300x300.png"
+                                    alt="img">
+                            </a>
+                            <div class="product_list-info product-grid">
+                                <h3 class="title"><a href="#">Tablet Thin EliteBook Revolve 810 G6</a></h3>
+                                <div class="price">
+                                    <span>1700</span>
+                                    1400
+                                </div>
+                                <div class="c-data">
+                                    <p>
+                                        <i class="fa fa-star active"></i>
+                                        <i class="fa fa-star active"></i>
+                                        <i class="fa fa-star"></i>
+                                        <i class="fa fa-star"></i>
+                                        <i class="fa fa-star"></i>
+                                    </p>
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <img src="https://electro.madrasthemes.com/wp-content/uploads/2016/03/GoldPhone-300x300.png"
+                                    alt="img">
+                            </a>
+                            <div class="product_list-info product-grid">
+                                <h3 class="title"><a href="#">Tablet Thin EliteBook Revolve 810 G6</a></h3>
+                                <div class="price">
+                                    <span>1700</span>
+                                    1400
+                                </div>
+                                <div class="c-data">
+                                    <p>
+                                        <i class="fa fa-star active"></i>
+                                        <i class="fa fa-star active"></i>
+                                        <i class="fa fa-star"></i>
+                                        <i class="fa fa-star"></i>
+                                        <i class="fa fa-star"></i>
+                                    </p>
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <img src="https://electro.madrasthemes.com/wp-content/uploads/2016/03/GoldPhone-300x300.png"
+                                    alt="img">
+                            </a>
+                            <div class="product_list-info product-grid">
+                                <h3 class="title"><a href="#">Tablet Thin EliteBook Revolve 810 G6</a></h3>
+                                <div class="price">
+                                    <span>1700</span>
+                                    1400
+                                </div>
+                                <div class="c-data">
+                                    <p>
+                                        <i class="fa fa-star active"></i>
+                                        <i class="fa fa-star active"></i>
+                                        <i class="fa fa-star"></i>
+                                        <i class="fa fa-star"></i>
+                                        <i class="fa fa-star"></i>
+                                    </p>
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <img src="https://electro.madrasthemes.com/wp-content/uploads/2016/03/GoldPhone-300x300.png"
+                                    alt="img">
+                            </a>
+                            <div class="product_list-info product-grid">
+                                <h3 class="title"><a href="#">Tablet Thin EliteBook Revolve 810 G6</a></h3>
+                                <div class="price">
+                                    <span>1700</span>
+                                    1400
+                                </div>
+                                <div class="c-data">
+                                    <p>
+                                        <i class="fa fa-star active"></i>
+                                        <i class="fa fa-star active"></i>
+                                        <i class="fa fa-star"></i>
+                                        <i class="fa fa-star"></i>
+                                        <i class="fa fa-star"></i>
+                                    </p>
+                                </div>
+                            </div>
+                        </li>
+
+
+                    </ul>
+                </div>
+                <div class="related-block col-md-3 col-xs-12">
+                    <div class="single-prod-ad">
+                        <img src="https://electro.madrasthemes.com/wp-content/uploads/2016/02/shop-sidebar-ad-banner.jpg"
+                            alt="img">
+                    </div>
+                </div>
+            </div>
+
+
+
+
+
         </div>
+    </div>
 </main>
 
 

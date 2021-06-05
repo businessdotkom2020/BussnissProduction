@@ -7220,3 +7220,8 @@ textarea {
     line-height: 21px;
     overflow: hidden;
 }
+
+
+.related-block.col-md-3.col-xs-12{
+    padding: 0 15px;
+}
