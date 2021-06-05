@@ -7274,3 +7274,19 @@ textarea {
     line-height: 1.043em;
     margin-bottom: 1em;
 }
+.product-specification .table>tbody>tr>td, 
+.product-specification .table>tbody>tr>th, 
+.product-specification .table>tfoot>tr>td, 
+.product-specification .table>tfoot>tr>th, 
+.product-specification .table>thead>tr>td, 
+.product-specification .table>thead>tr>th {
+    padding: 10px;
+    line-height: 1.42857143;
+    vertical-align: middle;
+    border-top: 0px;
+    border-bottom: 1px solid #dddddda3;
+    color: #333;
+}
+.product-specification .table>thead>tr>td:first-child{
+    width: 30%;
+}
