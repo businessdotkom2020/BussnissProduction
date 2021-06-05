@@ -584,6 +584,9 @@ $menu = false ;
                             <div class="tab-pane fade" id="t3">
                                 <div class=" review-tab row">
                                     <div class="col-md-5 col-xs-12">
+                                        <div class="total-rev">
+                                            <h3>Based on 0 reviews</h3>
+                                        </div>
                                     </div>
                                     <div class="col-md-7 col-xs-12">
                                         <div class="req-form login-ppage">
