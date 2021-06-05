@@ -134,6 +134,32 @@ $(document).ready(function () {
         items: 1
     });
 
+    $(".single-brand-s").owlCarousel({
+        nav: true,
+        loop: true,
+        navText: ["", ""],
+        dots: true,
+        autoplay: 5000,
+        items: 5,
+        autoplayHoverPause: true,
+        center: true,
+        responsiveClass: true,
+        responsive: {
+            0: {
+                items: 1
+            },
+            600: {
+                items: 3
+            },
+            991: {
+                items: 4
+            },
+            1000: {
+                items: 5
+            }
+        }
+    });
+
 
 
 

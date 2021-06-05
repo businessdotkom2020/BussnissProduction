@@ -5090,6 +5090,10 @@ button.close:hover {
 .product-grid .title a {
     color: #333;
     transition: all 0.3s ease 0s;
+    height: 40px;
+    overflow: hidden;
+    line-height: 20px;
+
 }
 
 .product-grid .title a:hover {
@@ -7187,6 +7191,10 @@ textarea {
     width: 100%;
 }
 /*****************************************************/
+.product-middle-con {
+    margin: 40px 0;
+}
+
 .product_list_widget{
 
 }
