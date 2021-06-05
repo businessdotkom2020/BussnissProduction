@@ -26,34 +26,7 @@
     <div class="product-wrap col-xs-12">
         <div class="container">
             <div class="product-top col-xs-12">
-                <div class="single-prod-cat col-md-3 col-xs-12">
-                    <div class="single-prod-ul categories-block">
-                            <ul class="accordion">
-                                <li>
-                                    <a class="category-toggle" href="#">اكسسوارات سيارات</a>
-                                    <ul class="inner">
-                                        <li><a href="#">اكسسوارات سيارات</a></li>
-                                        <li><a href="#">قطع غيار سيارات</a></li>
-                                        <li><a href="#">صيانة و ديكور سيارات</a>
-                                        </li>
-                                        <li><a href="#">معدات أمان</a></li>
-                                        <li><a href="#">كماليات موتوسيكلات</a></li>
-                                        <li><a href="#">قطع غيار أخري</a></li>
-                                        <li><a href="#">الرياض</a></li>
-                                    </ul>
-                                </li>
-                                <li>
-                                    <a class="category-toggle22" href="#">قطع غيار سيارات <span>12</span></a>
-                                </li>
-                                <li>
-                                    <a class="category-toggle22" href="#">قطع غيار سيارات <span>12</span></a>
-                                </li>
-                            </ul>
-                    </div>
-                    <div class="single-prod-ad">
-                        <img src="https://electro.madrasthemes.com/wp-content/uploads/2016/02/shop-sidebar-ad-banner.jpg" alt="img">
-                    </div>
-                </div>
+                
                 <div class="prod-img col-md-4 col-xs-12">
                     <div class="all">
                         <div class="ribbon"><span>@lang('general.new')</span></div>
