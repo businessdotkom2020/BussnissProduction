@@ -26,7 +26,35 @@
     <div class="product-wrap col-xs-12">
         <div class="container">
             <div class="product-top col-xs-12">
-                
+                <div class="single-prod-cat col-md-3 col-xs-12">
+                    <div class="single-prod-ul categories-block">
+                        <ul class="accordion">
+                            <li>
+                                <a class="category-toggle" href="#">اكسسوارات سيارات</a>
+                                <ul class="inner">
+                                    <li><a href="#">اكسسوارات سيارات</a></li>
+                                    <li><a href="#">قطع غيار سيارات</a></li>
+                                    <li><a href="#">صيانة و ديكور سيارات</a>
+                                    </li>
+                                    <li><a href="#">معدات أمان</a></li>
+                                    <li><a href="#">كماليات موتوسيكلات</a></li>
+                                    <li><a href="#">قطع غيار أخري</a></li>
+                                    <li><a href="#">الرياض</a></li>
+                                </ul>
+                            </li>
+                            <li>
+                                <a class="category-toggle22" href="#">قطع غيار سيارات <span>12</span></a>
+                            </li>
+                            <li>
+                                <a class="category-toggle22" href="#">قطع غيار سيارات <span>12</span></a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="single-prod-ad">
+                        <img src="https://electro.madrasthemes.com/wp-content/uploads/2016/02/shop-sidebar-ad-banner.jpg"
+                            alt="img">
+                    </div>
+                </div>
                 <div class="prod-img col-md-4 col-xs-12">
                     <div class="all">
                         <div class="ribbon"><span>@lang('general.new')</span></div>
@@ -270,7 +298,7 @@
             </div>@if(count($related_products)) <div class="related-s col-xs-12">
                 <div class="g-head col-xs-12">
                     <h3>@lang('general.related_store') <span class="f-r">@lang('general.products')</span></h3>
-                    < !--<a href="#" class="more">@lang('general.view_all')</a>-->
+                    <!--<a href="#" class="more">@lang('general.view_all')</a>-->
                 </div>
                 <div class="g-body col-xs-12">
                     <div class="rel-slider owl-theme owl-carousel">@foreach($related__store_products as $product) <div
@@ -349,7 +377,7 @@
             </div>@endif @if(count($related_products)) <div class="related-s col-xs-12">
                 <div class="g-head col-xs-12">
                     <h3>@lang('general.related') <span class="f-r">@lang('general.products')</span></h3>
-                    < !--<a href="#" class="more">@lang('general.view_all')</a>-->
+                    <!--<a href="#" class="more">@lang('general.view_all')</a>-->
                 </div>
                 <div class="g-body col-xs-12">
                     <div class="rel-slider owl-theme owl-carousel">@foreach($related_products as $product) <div
@@ -459,11 +487,11 @@
                 </div>
             </div>
         </div>
-        < !-- /.modal-content -->
+        <!-- /.modal-content -->
     </div>
-    < !-- /.modal-dialog -->
+    <!-- /.modal-dialog -->
 </div>
-< !-- /.modal -->@endsection @push('scripts') <script>
+<!-- /.modal -->@endsection @push('scripts') <script>
         function favtoggle(product_id, user_id) {
 
             var token = '{{ Session::token() }}';
