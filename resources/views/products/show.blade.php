@@ -220,6 +220,102 @@ $menu = false ;
 
             <div class="product-middle-con col-xs-12">
                 <div class="product-middle-side col-md-3 col-xs-12">
+                    <div class="g-head">
+                        <h3>Latest Products</h3>
+                    </div>
+                    <div class="product-middle-sideb">
+                        <ul class="product_list_widget">
+                            <li>
+                                <a
+                                    href="https://electro.madrasthemes.com/product/notebook-black-spire-v-nitro-vn7-591g/">
+                                    <img width="300" height="300"
+                                        src="https://electro.madrasthemes.com/wp-content/uploads/2016/03/GoldPhone-300x300.png"
+                                        class="attachment-woocommerce_thumbnail size-woocommerce_thumbnail" alt=""
+                                        loading="lazy"
+                                        srcset="https://electro.madrasthemes.com/wp-content/uploads/2016/03/GoldPhone-300x300.png 300w, https://electro.madrasthemes.com/wp-content/uploads/2016/03/GoldPhone-150x150.png 150w, https://electro.madrasthemes.com/wp-content/uploads/2016/03/GoldPhone-100x100.png 100w"
+                                        sizes="(max-width: 300px) 100vw, 300px"> <span class="product-title">Notebook
+                                        Black Spire V Nitro VN7-591G</span>
+                                </a>
+                                <div class="star-rating" role="img" aria-label="Rated 5.00 out of 5"><span
+                                        style="width:100%">Rated <strong class="rating">5.00</strong> out of 5</span>
+                                </div>
+                                <span class="electro-price"><ins><span
+                                            class="woocommerce-Price-amount amount"><bdi><span
+                                                    class="woocommerce-Price-currencySymbol">$</span>1,999.00</bdi></span></ins>
+                                    <del><span class="woocommerce-Price-amount amount"><bdi><span
+                                                    class="woocommerce-Price-currencySymbol">$</span>2,299.00</bdi></span></del></span>
+                            </li>
+                            <li>
+                                <a
+                                    href="https://electro.madrasthemes.com/product/tablet-thin-elitebook-revolve-810-g6/">
+                                    <img width="300" height="300"
+                                        src="https://electro.madrasthemes.com/wp-content/uploads/2016/03/redPhone-300x300.png"
+                                        class="attachment-woocommerce_thumbnail size-woocommerce_thumbnail" alt=""
+                                        loading="lazy"
+                                        srcset="https://electro.madrasthemes.com/wp-content/uploads/2016/03/redPhone-300x300.png 300w, https://electro.madrasthemes.com/wp-content/uploads/2016/03/redPhone-150x150.png 150w, https://electro.madrasthemes.com/wp-content/uploads/2016/03/redPhone-100x100.png 100w"
+                                        sizes="(max-width: 300px) 100vw, 300px"> <span class="product-title">Tablet Thin
+                                        EliteBook Revolve 810 G6</span>
+                                </a>
+                                <div class="star-rating" role="img" aria-label="Rated 4.33 out of 5"><span
+                                        style="width:86.6%">Rated <strong class="rating">4.33</strong> out of 5</span>
+                                </div>
+                                <span class="electro-price"><span class="woocommerce-Price-amount amount"><bdi><span
+                                                class="woocommerce-Price-currencySymbol">$</span>1,300.00</bdi></span></span>
+                            </li>
+                            <li>
+                                <a
+                                    href="https://electro.madrasthemes.com/product/notebook-widescreen-z51-70-40k6013upb/">
+                                    <img width="300" height="300"
+                                        src="https://electro.madrasthemes.com/wp-content/uploads/2016/03/sam2-300x300.png"
+                                        class="attachment-woocommerce_thumbnail size-woocommerce_thumbnail" alt=""
+                                        loading="lazy"
+                                        srcset="https://electro.madrasthemes.com/wp-content/uploads/2016/03/sam2-300x300.png 300w, https://electro.madrasthemes.com/wp-content/uploads/2016/03/sam2-150x150.png 150w, https://electro.madrasthemes.com/wp-content/uploads/2016/03/sam2-100x100.png 100w"
+                                        sizes="(max-width: 300px) 100vw, 300px"> <span class="product-title">Notebook
+                                        Widescreen Z51-70 40K6013UPB</span>
+                                </a>
+                                <div class="star-rating" role="img" aria-label="Rated 4.33 out of 5"><span
+                                        style="width:86.6%">Rated <strong class="rating">4.33</strong> out of 5</span>
+                                </div>
+                                <span class="electro-price"><span class="woocommerce-Price-amount amount"><bdi><span
+                                                class="woocommerce-Price-currencySymbol">$</span>1,100.00</bdi></span></span>
+                            </li>
+                            <li>
+                                <a href="https://electro.madrasthemes.com/product/notebook-purple-g952vx-t7008t/">
+                                    <img width="300" height="300"
+                                        src="https://electro.madrasthemes.com/wp-content/uploads/2016/03/one1plus-300x300.png"
+                                        class="attachment-woocommerce_thumbnail size-woocommerce_thumbnail" alt=""
+                                        loading="lazy"
+                                        srcset="https://electro.madrasthemes.com/wp-content/uploads/2016/03/one1plus-300x300.png 300w, https://electro.madrasthemes.com/wp-content/uploads/2016/03/one1plus-150x150.png 150w, https://electro.madrasthemes.com/wp-content/uploads/2016/03/one1plus-100x100.png 100w"
+                                        sizes="(max-width: 300px) 100vw, 300px"> <span class="product-title">Notebook
+                                        Purple G952VX-T7008T</span>
+                                </a>
+                                <div class="star-rating" role="img" aria-label="Rated 3.67 out of 5"><span
+                                        style="width:73.4%">Rated <strong class="rating">3.67</strong> out of 5</span>
+                                </div>
+                                <span class="electro-price"><span class="woocommerce-Price-amount amount"><bdi><span
+                                                class="woocommerce-Price-currencySymbol">$</span>2,780.00</bdi></span></span>
+                            </li>
+                            <li>
+                                <a href="https://electro.madrasthemes.com/product/laptop-yoga-21-80jh0035ge-w8-1/">
+                                    <img width="300" height="300"
+                                        src="https://electro.madrasthemes.com/wp-content/uploads/2016/03/sam2-300x300.png"
+                                        class="attachment-woocommerce_thumbnail size-woocommerce_thumbnail" alt=""
+                                        loading="lazy"
+                                        srcset="https://electro.madrasthemes.com/wp-content/uploads/2016/03/sam2-300x300.png 300w, https://electro.madrasthemes.com/wp-content/uploads/2016/03/sam2-150x150.png 150w, https://electro.madrasthemes.com/wp-content/uploads/2016/03/sam2-100x100.png 100w"
+                                        sizes="(max-width: 300px) 100vw, 300px"> <span class="product-title">Laptop Yoga
+                                        21 80JH0035GE W8.1</span>
+                                </a>
+                                <div class="star-rating" role="img" aria-label="Rated 4.67 out of 5"><span
+                                        style="width:93.4%">Rated <strong class="rating">4.67</strong> out of 5</span>
+                                </div>
+                                <span class="electro-price"><ins><span
+                                            class="woocommerce-Price-amount amount"><bdi><span
+                                                    class="woocommerce-Price-currencySymbol">$</span>150.00</bdi></span></ins>
+                                    <del><span class="woocommerce-Price-amount amount"><bdi><span
+                                                    class="woocommerce-Price-currencySymbol">$</span>200.00</bdi></span></del></span>
+                            </li>
+                        </ul>
+                    </div>
                 </div>
                 <div class="product-middle col-md-9 col-xs-12">
                     <div class="product-middle-tabs-con">

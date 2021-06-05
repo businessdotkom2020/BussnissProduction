@@ -7186,3 +7186,115 @@ textarea {
 .single-prod-ad img{
     width: 100%;
 }
+/*****************************************************/
+.product_list_widget {
+    list-style: none;
+    padding-left: 0;
+    margin-bottom: 0
+}
+
+.product_list_widget>li {
+    margin-bottom: 2.143em
+}
+
+.product_list_widget>li::after {
+    display: block;
+    clear: both;
+    content: ""
+}
+
+.product_list_widget>li>a:focus,
+.product_list_widget>li>a:hover {
+    color: #000;
+    text-decoration: none
+}
+
+.product_list_widget>li:last-child {
+    margin-bottom: 0
+}
+
+.product_list_widget .product-title {
+    color: #0062bd;
+    font-weight: 700;
+    font-size: 1em;
+    display: block;
+    line-height: 1.2em
+}
+
+.product_list_widget a {
+    color: #0062bd;
+    font-weight: 700
+}
+
+.product_list_widget .wp-post-image,
+.product_list_widget img {
+    width: 75px;
+    height: 75px;
+    margin-right: 20px;
+    float: left
+}
+
+.product_list_widget .electro-price {
+    margin-top: 1.667em;
+    display: block;
+    margin-left: 95px
+}
+
+.product_list_widget .star-rating+.electro-price {
+    margin-top: 0
+}
+
+.product_list_widget .amount {
+    display: inline-block;
+    font-size: 1.071em
+}
+
+.product_list_widget del,
+.product_list_widget del .amount {
+    color: #919090
+}
+
+.product_list_widget del .amount {
+    text-decoration: line-through;
+    font-size: .928em
+}
+
+.product_list_widget ins .amount {
+    font-size: 1.071em
+}
+
+.product_list_widget .star-rating {
+    margin: 8px 0
+}
+
+.product_list_widget .star-rating+.amount,
+.product_list_widget .star-rating+del+ins>.amount,
+.product_list_widget .star-rating+del>.amount {
+    margin-top: 0
+}
+
+.product_list_widget.cart_list {
+    margin-bottom: 1rem
+}
+
+.product_list_widget .mini_cart_item .remove {
+    float: right;
+    color: #e00
+}
+
+.product_list_widget .mini_cart_item a:nth-child(2) {
+    line-height: 1.286em;
+    font-size: 1em
+}
+
+.product_list_widget .mini_cart_item .quantity {
+    display: block
+}
+
+.product_list_widget .mini_cart_item .quantity .amount {
+    margin-top: 0
+}
+
+.product_list_widget .mini_cart_item .variation-Vendor {
+    display: none
+}
