@@ -7195,6 +7195,9 @@ textarea {
     height: 90px;
     vertical-align: top;
 }
+.product_list_widget li a{
+    display: inline;
+}
 .product_list_widget .product-grid{
     display: inline-block;
     border: 0;
