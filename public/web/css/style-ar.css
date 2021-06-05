@@ -1041,3 +1041,7 @@ a, li, span, p, button{
 .reqs-wrap .req-p-btn{
     text-align: left;
 }
+.pro-ul-dis li::after{
+    left: auto;
+    right: 0;
+}
