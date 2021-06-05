@@ -586,7 +586,7 @@ $menu = false ;
                                 <div class="col-md-6 col-xs-12">
                                 </div>
                                 <div class="col-md-6 col-xs-12">
-                                    <div class="req-form">
+                                    <div class="req-form login-ppage">
                                         <h3>Be the first to review “Game Console Controller + USB 3.0 Cable”</h3>
                                         <form action="" method="">
                                             <div class="form-group row">
