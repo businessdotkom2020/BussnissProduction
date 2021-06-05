@@ -612,23 +612,23 @@ $menu = false ;
                                                     </div>
                                                 </div>
                                                 <div class="form-group row">
-                                                    <label for="" class="col-md-4 col-xs-12">Your Review</label>
-                                                    <div class="rate-stars col-md-8 col-xs-12">
+                                                    <label for="" class="col-md-3 col-xs-12">Your Review</label>
+                                                    <div class="rate-stars col-md-9 col-xs-12">
                                                         <textarea class="form-control" name="comment"
                                                             placeholder="Add Review" id=''>
                                                         </textarea>
                                                     </div>
                                                 </div>
                                                 <div class="form-group row">
-                                                    <label for="" class="col-md-4 col-xs-12">Name</label>
-                                                    <div class="rate-stars col-md-8 col-xs-12">
+                                                    <label for="" class="col-md-3 col-xs-12">Name</label>
+                                                    <div class="rate-stars col-md-9 col-xs-12">
                                                         <input class="form-control" type="text" name=""
                                                             placeholder="Name" id=''>
                                                     </div>
                                                 </div>
                                                 <div class="form-group row">
-                                                    <label for="" class="col-md-4 col-xs-12">Email</label>
-                                                    <div class="rate-stars col-md-8 col-xs-12">
+                                                    <label for="" class="col-md-3 col-xs-12">Email</label>
+                                                    <div class="rate-stars col-md-9 col-xs-12">
                                                         <input class="form-control" type="mail" name=""
                                                             placeholder="Email" id=''>
                                                     </div>
