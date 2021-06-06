@@ -7432,8 +7432,8 @@ textarea {
     color: #fff;
 }
 /*********************************************/
-.rel-slider .owl-carousel .owl-nav button.owl-next,
-.rel-slider .owl-carousel .owl-nav button.owl-prev {
+.related-s .owl-carousel .owl-nav button.owl-next,
+.related-s .owl-carousel .owl-nav button.owl-prev {
     width: 25px !important;
     height: 25px !important;
 }

@@ -108,7 +108,7 @@ $(document).ready(function () {
         autoplay: 5000,
         items: 4,
         autoplayHoverPause: true,
-        center: true,
+        //center: true,
         responsiveClass: true,
         responsive: {
             0: {
