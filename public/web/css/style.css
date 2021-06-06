@@ -7457,7 +7457,7 @@ textarea {
 .no-review-comment p{
     color: #333e48;
     background-color: #fed700;
-    padding: 1em 1.5em;
+    padding: 13px 15px;
     margin: 2.618em 0;
     margin-left: 0;
     border-radius: 2px;
@@ -7480,7 +7480,7 @@ textarea {
 .review-comment-block .description p{
     color: #333e48bd;
     font-size: 16px;
-    margin: 12px 0;
+    margin: 11px 0;
     line-height: 23px;
     font-weight: 500;
 }
