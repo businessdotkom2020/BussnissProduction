@@ -586,6 +586,26 @@ $menu = false ;
                                     <div class="col-md-5 col-xs-12">
                                         <div class="total-rev">
                                             <h3>Based on 0 reviews</h3>
+                                                <h2>0.0 <span>overall</span></h2>
+                                            <div class="progress-con">
+                        <div class="progres-info1">
+                          <h4>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                          </h4>
+                        </div>
+                        <div class="progress">
+                            <div class="progress-bar" role="progressbar" style="width: 100%" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"></div>
+                          </div>
+                          <div class="progres-info2">
+                            <h4>100%</h4>
+                          </div>
+                      </div>
+
+
                                         </div>
                                     </div>
                                     <div class="col-md-7 col-xs-12">
