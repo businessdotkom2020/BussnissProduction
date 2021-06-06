@@ -216,6 +216,8 @@ $menu = false ;
                         @endif
                     </div>
                 </div>
+
+                
             </div>
 
             <div class="product-middle-con col-xs-12">
@@ -744,6 +746,31 @@ $menu = false ;
                                                 <button type="submit" class="btn" id="req-f-btn">Add Review</button>
                                         </div>
                                         </form>
+                                    </div>
+                                    <div class="review-comment col-md-12 col-xs-12">
+                                        <div class="no-review-comment">
+                                            <p>There are no reviews yet.</p>
+                                        </div>
+                                        <div class="review-comment-block product-grid">
+                                            <div class="c-data">
+                                                <p>
+                                                    <i class="fa fa-star active"></i>
+                                                    <i class="fa fa-star active"></i>
+                                                    <i class="fa fa-star"></i>
+                                                    <i class="fa fa-star"></i>
+                                                    <i class="fa fa-star"></i>
+                                                </p>
+                                            </div>
+                                            <div class="description">
+                                                <p>Fusce vitae nibh mi. Integer posuere, libero et ullamcorper facilisis, enim eros tincidunt orci, eget vestibulum sapien nisi ut leo. Cras finibus vel est ut mollis. Donec luctus condimentum ante et euismod.</p>
+                                                <h5> 
+                                                    Peter Wargner
+                                                    <span>– </span>
+                                                    <span>April 5, 2016</span>
+                                                </h5>
+                                            </div>
+                                            
+                                        </div>
                                     </div>
                                 </div>
                             </div>

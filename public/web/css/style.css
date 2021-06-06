@@ -1298,8 +1298,8 @@ footer.main-footer.col-xs-12 {
 }
 
 .offer-badge {
-    width: 70px;
-    height: 70px;
+    width: auto;
+    height: auto;
     z-index: 1;
     position: absolute
 }
@@ -1321,17 +1321,17 @@ footer.main-footer.col-xs-12 {
     color: #fff;
     font-family: pop-semibold;
     font-size: 14px;
-    /* transform: rotate(-45deg); */
     display: inline-block;
     position: relative;
     top: 13px;
     left: -8px;
     background: red;
-    width: 55px;
-    height: 55px;
-    line-height: 55px;
-    border-radius: 100%;
+    width: auto;
+    height: auto;
+    line-height: initial;
+    border-radius: 5px;
     text-align: center;
+    padding: 6px 10px;
 }
 
 .fav-pro {
@@ -2451,7 +2451,9 @@ footer.main-footer.col-xs-12 {
     width: 100%;
     height: auto;
     display: inline-block;
-    position: relative
+    position: relative;
+    border: 2px solid #ececec;
+    border-radius: 5px;
 }
 
 .all .slider {
@@ -7447,6 +7449,37 @@ textarea {
 
 .tab-pane .review-tab .form-group {
     margin-bottom: 15px;
+}
+/****************************************************/
+.no-review-comment{
+
+}
+.no-review-comment p{
+    color: #333e48;
+    background-color: #fed700;
+    padding: 1em 1.618em;
+    margin-bottom: 2.618em;
+    margin-left: 0;
+    border-radius: 2px;
+    color: #fff;
+    clear: both;
+    border-left: .618em solid rgba(0,0,0,.15);
+}
+.review-comment-block{
+
+}
+.review-comment-block .description p{
+    color: #333e48;
+    font-size: 16px;
+    margin: 12px 0;
+}
+.review-comment-block h5{
+    color: #333e48;
+    font-weight: bold;
+    font-size: 16px;
+}
+.review-comment-block h5 span{
+    font-size: 16px;
 }
 
 @media screen and (max-width: 767px){
