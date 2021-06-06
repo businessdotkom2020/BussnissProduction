@@ -7263,9 +7263,8 @@ textarea {
 .single-brands .owl-carousel .owl-nav button.owl-prev {
     left: 0px !important;
 }
-
-.related-s .single-brands .owl-carousel .owl-nav button.owl-next,
-.related-s .single-brands .owl-carousel .owl-nav button.owl-prev {
+.single-brands .owl-carousel .owl-nav button.owl-next,
+.single-brands .owl-carousel .owl-nav button.owl-prev {
     top: 38% !important;
     width: 15px !important;
     height: 15px !important;
