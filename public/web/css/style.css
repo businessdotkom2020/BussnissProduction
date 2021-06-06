@@ -7266,11 +7266,13 @@ textarea {
 
 .related-s .single-brands .owl-carousel .owl-nav button.owl-next,
 .related-s .single-brands .owl-carousel .owl-nav button.owl-prev {
-    top: 38%;
-    width: 15px;
-    height: 15px;
+    top: 38% !important;
+    width: 15px !important;
+    height: 15px !important;
 }
-
+.single-brand-img{
+    text-align: center;
+}
 .pro-description {}
 
 .pro-description img {
@@ -7477,11 +7479,11 @@ textarea {
     .related-s .owl-carousel .owl-nav button.owl-next {
         right: -8px;
     }
-    .single-brands .owl-carousel .owl-nav button.owl-next {
+    .related-s .single-brands .owl-carousel .owl-nav button.owl-next {
         right: 0px !important;
     }
     
-    .single-brands .owl-carousel .owl-nav button.owl-prev {
+    .related-s .single-brands .owl-carousel .owl-nav button.owl-prev {
         left: 0px !important;
     }
     .product-top {
