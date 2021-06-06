@@ -7198,7 +7198,13 @@ textarea {
 .single-prod-ad img {
     width: 100%;
 }
+.related-s .owl-carousel .owl-nav button.owl-next {
+    right: -35px !important;
+}
 
+.related-s .owl-carousel .owl-nav button.owl-prev {
+    left: -35px !important;
+}
 /*****************************************************/
 .product-middle-con {
     margin: 40px 0;
@@ -7434,8 +7440,8 @@ textarea {
 /*********************************************/
 .related-s .owl-carousel .owl-nav button.owl-next,
 .related-s .owl-carousel .owl-nav button.owl-prev {
-    width: 25px !important;
-    height: 25px !important;
+    width: 25px;
+    height: 25px;
 }
 .tab-pane .review-tab .form-group {
     margin-bottom: 15px;
