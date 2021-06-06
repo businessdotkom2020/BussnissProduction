@@ -7256,11 +7256,11 @@ textarea {
     margin-bottom: 50px;
 }
 
-.related-s .single-brands .owl-carousel .owl-nav button.owl-next {
+.single-brands .owl-carousel .owl-nav button.owl-next {
     right: 0px !important;
 }
 
-.related-s .single-brands .owl-carousel .owl-nav button.owl-prev {
+.single-brands .owl-carousel .owl-nav button.owl-prev {
     left: 0px !important;
 }
 
@@ -7476,6 +7476,13 @@ textarea {
     }
     .related-s .owl-carousel .owl-nav button.owl-next {
         right: -8px;
+    }
+    .single-brands .owl-carousel .owl-nav button.owl-next {
+        right: 0px !important;
+    }
+    
+    .single-brands .owl-carousel .owl-nav button.owl-prev {
+        left: 0px !important;
     }
     .product-top {
 
