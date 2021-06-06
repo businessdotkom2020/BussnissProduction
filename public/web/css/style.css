@@ -7437,7 +7437,7 @@ textarea {
     width: 25px !important;
     height: 25px !important;
 }
-.review-tab .tab-pane .form-group {
+.tab-pane .review-tab .form-group {
     margin-bottom: 15px;
 }
 
@@ -7471,6 +7471,12 @@ textarea {
         right: -8px;
     }
     .product-top {
-        
+
     }
+    .pro-description p {
+        margin-bottom: 12px;
+    } 
+    .product-specification .table-responsive {
+        border: 0 !important;
+    }   
 }
