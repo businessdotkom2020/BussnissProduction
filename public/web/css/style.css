@@ -7205,6 +7205,11 @@ textarea {
 .related-s .owl-carousel .owl-nav button.owl-prev {
     left: -35px !important;
 }
+.related-s .owl-carousel .owl-nav button.owl-next,
+.related-s .owl-carousel .owl-nav button.owl-prev {
+    width: 25px;
+    height: 25px;
+}
 /*****************************************************/
 .product-middle-con {
     margin: 40px 0;
@@ -7251,16 +7256,16 @@ textarea {
     margin-bottom: 50px;
 }
 
-.single-brands .owl-carousel .owl-nav button.owl-next {
+.single-brands .related-s .owl-carousel .owl-nav button.owl-next {
     right: 0px !important;
 }
 
-.single-brands .owl-carousel .owl-nav button.owl-prev {
+.single-brands .related-s .owl-carousel .owl-nav button.owl-prev {
     left: 0px !important;
 }
 
-.single-brands .owl-carousel .owl-nav button.owl-next,
-.single-brands .owl-carousel .owl-nav button.owl-prev {
+.single-brands .related-s .owl-carousel .owl-nav button.owl-next,
+.single-brands .related-s .owl-carousel .owl-nav button.owl-prev {
     top: 38%;
     width: 15px;
     height: 15px;
@@ -7438,11 +7443,7 @@ textarea {
     color: #fff;
 }
 /*********************************************/
-.related-s .owl-carousel .owl-nav button.owl-next,
-.related-s .owl-carousel .owl-nav button.owl-prev {
-    width: 25px;
-    height: 25px;
-}
+
 .tab-pane .review-tab .form-group {
     margin-bottom: 15px;
 }
