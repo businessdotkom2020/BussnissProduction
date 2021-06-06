@@ -7353,7 +7353,19 @@ textarea {
     line-height: 26px;
     margin: 0 0 25px 0;
 }
+/***********************************/
+.total-rev{
 
+}
+.total-rev h2{
+    font-size: 35px;
+    font-weight: bold;
+    margin-bottom: 10px
+}
+.total-rev h2 span{
+    display: block;
+    font-size: 15px;
+}
 .progress-con h4 {
     margin: 0;
     font-size: 14px;
