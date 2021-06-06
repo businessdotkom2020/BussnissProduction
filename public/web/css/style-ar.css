@@ -1045,3 +1045,7 @@ a, li, span, p, button{
     left: auto;
     right: 0;
 }
+.no-review-comment p{
+    border-left: 0;
+    border-right: .618em solid rgba(0,0,0,.15);
+}

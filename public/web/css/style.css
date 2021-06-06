@@ -7457,29 +7457,43 @@ textarea {
 .no-review-comment p{
     color: #333e48;
     background-color: #fed700;
-    padding: 1em 1.618em;
-    margin-bottom: 2.618em;
+    padding: 1em 1.5em;
+    margin: 2.618em 0;
     margin-left: 0;
     border-radius: 2px;
     color: #fff;
     clear: both;
     border-left: .618em solid rgba(0,0,0,.15);
+    font-size: 15px;
 }
 .review-comment-block{
-
+    border: 0;
+    border-bottom: 1px solid #eee !important;
+    padding-bottom: 22px;
+    margin-bottom: 25px;
+    text-align: start;
+}
+.review-comment-block:last-child{
+    border-bottom: 0px !important;  
+    padding-bottom: 0;
 }
 .review-comment-block .description p{
-    color: #333e48;
+    color: #333e48bd;
     font-size: 16px;
     margin: 12px 0;
+    line-height: 23px;
+    font-weight: 500;
 }
 .review-comment-block h5{
     color: #333e48;
     font-weight: bold;
-    font-size: 16px;
+    font-size: 17px;
 }
 .review-comment-block h5 span{
+    display: inline-block;
+    color: #333e48bd;
     font-size: 16px;
+    font-weight: 400;
 }
 
 @media screen and (max-width: 767px){
