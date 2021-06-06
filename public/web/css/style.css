@@ -7451,6 +7451,14 @@ textarea {
 .tab-pane .review-tab .form-group {
     margin-bottom: 15px;
 }
+.ribbon span {
+    font-size: 14px;
+    width: auto;
+    height: auto;
+    line-height: inherit;
+    border-radius: 6px;
+    padding: 5px 10px;
+}
 /****************************************************/
 .no-review-comment{
 
