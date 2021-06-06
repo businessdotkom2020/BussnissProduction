@@ -7376,10 +7376,12 @@ textarea {
     width: 25%;
 }
 
-.progres-info1 h4 {
+.progres-info1 h4 i.fa.fa-star {
     color: #ffcd00;
 }
-
+.progres-info1 h4 i.fa.fa-star-o {
+    color: #c7c7c7;
+}
 .progress {
     display: inline-block;
     width: 55%;
