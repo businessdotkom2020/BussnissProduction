@@ -106,7 +106,7 @@ $(document).ready(function () {
         navText: ["", ""],
         dots: true,
         autoplay: 5000,
-        items: 4.5,
+        items: 4,
         autoplayHoverPause: true,
         center: true,
         responsiveClass: true,
@@ -118,7 +118,7 @@ $(document).ready(function () {
                 items: 2
             },
             1000: {
-                items: 4.5
+                items: 4
             }
         }
     });

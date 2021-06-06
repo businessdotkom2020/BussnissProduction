@@ -7434,6 +7434,6 @@ textarea {
 /*********************************************/
 .rel-slider .owl-carousel .owl-nav button.owl-next,
 .rel-slider .owl-carousel .owl-nav button.owl-prev {
-    width: 25px;
-    height: 25px;
+    width: 25px !important;
+    height: 25px !important;
 }
