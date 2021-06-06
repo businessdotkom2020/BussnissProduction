@@ -810,7 +810,7 @@ $menu = false ;
             </div>
 
 
-        
+        </div>
 
 
         @if(count($related_products))
@@ -1418,7 +1418,7 @@ $menu = false ;
 
 
     </div>
-    </div>
+    
 </main>
 
 
