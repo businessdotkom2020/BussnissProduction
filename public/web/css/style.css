@@ -7359,6 +7359,7 @@ textarea {
 
 .review-tab .btn {
     color: #fff;
+    border-color: #139feb;
     background-color: #139feb !important;
 }
 
@@ -7456,7 +7457,7 @@ textarea {
 }
 .no-review-comment p{
     color: #333e48;
-    background-color: #fed700;
+    background-color: #139feb;
     padding: 13px 15px;
     margin: 2.618em 0;
     margin-left: 0;
