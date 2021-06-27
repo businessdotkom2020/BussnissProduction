@@ -1041,3 +1041,11 @@ a, li, span, p, button{
 .reqs-wrap .req-p-btn{
     text-align: left;
 }
+.pro-ul-dis li::after{
+    left: auto;
+    right: 0;
+}
+.no-review-comment p{
+    border-left: 0;
+    border-right: .618em solid rgba(0,0,0,.15);
+}

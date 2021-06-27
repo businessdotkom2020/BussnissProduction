@@ -106,9 +106,9 @@ $(document).ready(function () {
         navText: ["", ""],
         dots: true,
         autoplay: 5000,
-        items: 4.5,
+        items: 4,
         autoplayHoverPause: true,
-        center: true,
+        //center: true,
         responsiveClass: true,
         responsive: {
             0: {
@@ -118,7 +118,7 @@ $(document).ready(function () {
                 items: 2
             },
             1000: {
-                items: 4.5
+                items: 4
             }
         }
     });
@@ -132,6 +132,32 @@ $(document).ready(function () {
         animateIn: 'fadeIn',
         animateOut: 'fadeOut',
         items: 1
+    });
+
+    $(".single-brand-s").owlCarousel({
+        nav: true,
+        loop: true,
+        navText: ["", ""],
+        dots: true,
+        autoplay: 5000,
+        items: 5,
+        autoplayHoverPause: true,
+        center: true,
+        responsiveClass: true,
+        responsive: {
+            0: {
+                items: 1
+            },
+            600: {
+                items: 3
+            },
+            991: {
+                items: 4
+            },
+            1000: {
+                items: 5
+            }
+        }
     });
 
 

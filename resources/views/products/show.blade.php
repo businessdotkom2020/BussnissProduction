@@ -26,7 +26,36 @@ $menu = false ;
     <div class="product-wrap col-xs-12">
         <div class="container">
             <div class="product-top col-xs-12">
-                <div class="prod-img col-md-5 col-xs-12">
+                <div class="single-prod-cat col-md-3 col-xs-12">
+                    <div class="single-prod-ul categories-block">
+                        <ul class="accordion">
+                            <li>
+                                <a class="category-toggle" href="#">اكسسوارات سيارات</a>
+                                <ul class="inner">
+                                    <li><a href="#">اكسسوارات سيارات<span>(12)</span></a></li>
+                                    <li><a href="#">قطع غيار سيارات<span>(12)</span></a></li>
+                                    <li><a href="#">صيانة و ديكور سيارات<span>(12)</span></a>
+                                    </li>
+                                    <li><a href="#">معدات أمان<span>(12)</span></a></li>
+                                    <li><a href="#">كماليات موتوسيكلات<span>(12)</span></a></li>
+                                    <li><a href="#">قطع غيار أخري<span>(12)</span></a></li>
+                                    <li><a href="#">الرياض<span>(12)</span></a></li>
+                                </ul>
+                            </li>
+                            <li>
+                                <a class="category-toggle22" href="#">قطع غيار سيارات <span>(12)</span></a>
+                            </li>
+                            <li>
+                                <a class="category-toggle22" href="#">قطع غيار سيارات <span>(12)</span></a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="single-prod-ad">
+                        <img src="https://electro.madrasthemes.com/wp-content/uploads/2016/02/shop-sidebar-ad-banner.jpg"
+                            alt="img">
+                    </div>
+                </div>
+                <div class="prod-img col-md-4 col-xs-12">
                     <div class="all">
                         <div class="ribbon">
                             <span>@lang('general.new')</span>
@@ -69,7 +98,7 @@ $menu = false ;
                         </div>
                     </div>
                 </div>
-                <div class="prod-data col-md-7 col-xs-12">
+                <div class="prod-data col-md-5 col-xs-12">
                     <div class="name">
                         <h3>{{$product->getTranslatedAttribute('name',\App::getLocale())}}</h3>
                         <div class="prod-extra">
@@ -147,12 +176,35 @@ $menu = false ;
                     <div class="desc">
                         <p>{{$product->getTranslatedAttribute('description',\App::getLocale())}}</p>
                     </div>
+                    <div class="pro-wishlist-compare">
+                        <ul class="list-inline">
+                            <li>
+                                <a href="#">
+                                    <i class="fa fa-heart-o"></i>
+                                    <span>Wishlist</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <i class="fa fa-exchange"></i>
+                                    <span>Compare</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="pro-ul-dis">
+                        <ul>
+                            <li>Wireless</li>
+                            <li>Motion Sensing</li>
+                            <li>Compatible with Several Consoles/Games</li>
+                            <li>Enough Action Buttons</li>
+                            <li>Ergonomic</li>
+                        </ul>
+                    </div>
                     <div class="price">
                         @if($product->sale_price)
                         <span>{{$product->sale_price}} l.e</span>
                         @endif
-
-                        <br>
                         <span class="{{$product->sale_price ? 'old' : ''}}">{{$product->price}} l.e</span>
                     </div>
                     <div class="controls">
@@ -164,148 +216,689 @@ $menu = false ;
                         @endif
                     </div>
                 </div>
+
+                
             </div>
 
-
-            <div class="product-middle col-md-6 col-xs-12">
-                <ul class="nav-tabs text-center">
-
-                    <li class="active">
-                        <a href="#" data-toggle="tab" data-target="#option_values">@lang('general.specifications')</a>
-                    </li>
-
-                </ul>
-                <div class="tab-content">
-                    <div class="tab-pane fade active in" id="option_values">
-
-
-                        <div class="product-price-p table-responsive">
-                            <table class="table table-bordered">
-
-                                <thead>
-                                    <tr>
-                                        <th>العنوان</th>
-                                        <th>القيمة</th>
-                                    </tr>
-                                </thead>
-
-                                <tbody>
-
-                                    @foreach($product->options as $option)
-                                    <tr>
-
-                                        <td>{{  $option->attribute ? $option->attribute->getTranslatedAttribute('name',\App::getLocale()) : null }}
-                                        </td>
-                                        <td>{{ $option->value ? $option->value->getTranslatedAttribute('value',\App::getLocale()) : null }}
-                                        </td>
-
-
-                                    </tr>
-                                    @endforeach
-                                </tbody>
-                            </table>
-                        </div>
+            <div class="product-middle-con col-xs-12">
+                <div class="product-middle-side col-md-3 col-xs-12">
+                    <div class="g-head">
+                        <h3>Latest Products</h3>
                     </div>
-
-                </div>
-            </div>
-
-            <div class="product-middle col-md-6 col-xs-12">
-                <ul class="nav-tabs">
-                    <li class="active">
-                        <a href="#" data-toggle="tab" data-target="#t1">@lang('general.pricing_plans')</a>
-                    </li>
-
-                    <li>
-                        <a href="#" data-toggle="tab" data-target="#t2">@lang('general.reviews')</a>
-                    </li>
-
-                </ul>
-                <div class="tab-content">
-                    <div class="tab-pane fade active in" id="t1">
-
-                        <div class="product-price-p table-responsive">
-                            <table class="table table-bordered">
-
-                                <thead>
-                                    <tr>
-                                        <th>من</th>
-                                        <th>الي</th>
-                                        <th>السعر</th>
-                                    </tr>
-                                </thead>
-
-                                <tbody>
-                                    @foreach($product->prices as $price)
-                                    <tr>
-
-                                        <td>@lang('general.from') {{$price->quantity_from}} @lang('general.to')</td>
-                                        <td>{{$price->quantity_to}}</td>
-                                        <td> <span>{{$price->price}} l.e</span></td>
-
-                                    </tr>
-                                    @endforeach
-                                </tbody>
-                            </table>
-                        </div>
-                    </div>
-                    <div class="tab-pane fade" id="t2">
-
-                        @foreach($product->reviews as $review)
-
-                        <div class="rev-item col-md-7 col-xs-12">
-
-                            <div class="r-img">
-                                <img src="{{url('storage/'.$review->owner->avatar)}}" alt="">
-
-                            </div>
-                            @auth
-                            @if(\Auth::user()->id == $review->user_id)
-                            <a href="{{url('review/'.$review->id.'/delete')}}" style="    float: inline-end;"><i
-                                    class="fa fa-trash" aria-hidden="true"></i></a>
-                            @endif
-                            @endauth
-                            <div class="r-data">
-
-                                <div>
-                                    <a href="{{url('supplier/'.$review->user_id)}}">{{$review->owner->name}}</a>
+                    <div class="product-middle-sideb">
+                        <ul class="product_list_widget">
+                            <li>
+                                <a href="#">
+                                    <img src="https://electro.madrasthemes.com/wp-content/uploads/2016/03/GoldPhone-300x300.png"
+                                        alt="img">
+                                </a>
+                                <div class="product_list-info product-grid">
+                                    <h3 class="title"><a href="#">Tablet Thin EliteBook Revolve 810 G6</a></h3>
+                                    <div class="price">
+                                        <span>1700</span>
+                                        1400
+                                    </div>
+                                    <div class="c-data">
+                                        <p>
+                                            <i class="fa fa-star active"></i>
+                                            <i class="fa fa-star active"></i>
+                                            <i class="fa fa-star"></i>
+                                            <i class="fa fa-star"></i>
+                                            <i class="fa fa-star"></i>
+                                        </p>
+                                    </div>
                                 </div>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <img src="https://electro.madrasthemes.com/wp-content/uploads/2016/03/GoldPhone-300x300.png"
+                                        alt="img">
+                                </a>
+                                <div class="product_list-info product-grid">
+                                    <h3 class="title"><a href="#">Tablet Thin EliteBook Revolve 810 G6</a></h3>
+                                    <div class="price">
+                                        <span>1700</span>
+                                        1400
+                                    </div>
+                                    <div class="c-data">
+                                        <p>
+                                            <i class="fa fa-star active"></i>
+                                            <i class="fa fa-star active"></i>
+                                            <i class="fa fa-star"></i>
+                                            <i class="fa fa-star"></i>
+                                            <i class="fa fa-star"></i>
+                                        </p>
+                                    </div>
+                                </div>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <img src="https://electro.madrasthemes.com/wp-content/uploads/2016/03/GoldPhone-300x300.png"
+                                        alt="img">
+                                </a>
+                                <div class="product_list-info product-grid">
+                                    <h3 class="title"><a href="#">Tablet Thin EliteBook Revolve 810 G6</a></h3>
+                                    <div class="price">
+                                        <span>1700</span>
+                                        1400
+                                    </div>
+                                    <div class="c-data">
+                                        <p>
+                                            <i class="fa fa-star active"></i>
+                                            <i class="fa fa-star active"></i>
+                                            <i class="fa fa-star"></i>
+                                            <i class="fa fa-star"></i>
+                                            <i class="fa fa-star"></i>
+                                        </p>
+                                    </div>
+                                </div>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <img src="https://electro.madrasthemes.com/wp-content/uploads/2016/03/GoldPhone-300x300.png"
+                                        alt="img">
+                                </a>
+                                <div class="product_list-info product-grid">
+                                    <h3 class="title"><a href="#">Tablet Thin EliteBook Revolve 810 G6</a></h3>
+                                    <div class="price">
+                                        <span>1700</span>
+                                        1400
+                                    </div>
+                                    <div class="c-data">
+                                        <p>
+                                            <i class="fa fa-star active"></i>
+                                            <i class="fa fa-star active"></i>
+                                            <i class="fa fa-star"></i>
+                                            <i class="fa fa-star"></i>
+                                            <i class="fa fa-star"></i>
+                                        </p>
+                                    </div>
+                                </div>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <img src="https://electro.madrasthemes.com/wp-content/uploads/2016/03/GoldPhone-300x300.png"
+                                        alt="img">
+                                </a>
+                                <div class="product_list-info product-grid">
+                                    <h3 class="title"><a href="#">Tablet Thin EliteBook Revolve 810 G6</a></h3>
+                                    <div class="price">
+                                        <span>1700</span>
+                                        1400
+                                    </div>
+                                    <div class="c-data">
+                                        <p>
+                                            <i class="fa fa-star active"></i>
+                                            <i class="fa fa-star active"></i>
+                                            <i class="fa fa-star"></i>
+                                            <i class="fa fa-star"></i>
+                                            <i class="fa fa-star"></i>
+                                        </p>
+                                    </div>
+                                </div>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <img src="https://electro.madrasthemes.com/wp-content/uploads/2016/03/GoldPhone-300x300.png"
+                                        alt="img">
+                                </a>
+                                <div class="product_list-info product-grid">
+                                    <h3 class="title"><a href="#">Tablet Thin EliteBook Revolve 810 G6</a></h3>
+                                    <div class="price">
+                                        <span>1700</span>
+                                        1400
+                                    </div>
+                                    <div class="c-data">
+                                        <p>
+                                            <i class="fa fa-star active"></i>
+                                            <i class="fa fa-star active"></i>
+                                            <i class="fa fa-star"></i>
+                                            <i class="fa fa-star"></i>
+                                            <i class="fa fa-star"></i>
+                                        </p>
+                                    </div>
+                                </div>
+                            </li>
+
+                        </ul>
+                    </div>
+                </div>
+                <div class="product-middle col-md-9 col-xs-12">
+                    <div class="product-middle-tabs-con">
+                        <ul class="nav-tabs text-center">
+
+                            <li class="active">
+                                <a href="#" data-toggle="tab"
+                                    data-target="#option_values">@lang('general.specifications')</a>
+                            </li>
+
+                        </ul>
+                        <div class="tab-content">
+                            <div class="tab-pane fade active in" id="option_values">
 
 
-                                <div class="cardo">
-                                    <div class="c-inner" style="text-align: right;">
-                                        <div class="c-data">
-                                            <p>
-                                                @php $rating = $review->stars ; @endphp
-                                                @foreach(range(1,5) as $i)
-                                                @if($rating >0)
-                                                @if($rating > 0.5)
-                                                <i class="fa fa-star active"></i>
-                                                @elseif($rating < 0.5 && $rating> 0)
-                                                    <i class="fas fa-star-half"></i>
-                                                    @endif
-                                                    @else
+                                <div class="product-price-p table-responsive">
+                                    <table class="table table-bordered">
+
+                                        <thead>
+                                            <tr>
+                                                <th>العنوان</th>
+                                                <th>القيمة</th>
+                                            </tr>
+                                        </thead>
+
+                                        <tbody>
+
+                                            @foreach($product->options as $option)
+                                            <tr>
+
+                                                <td>{{  $option->attribute ? $option->attribute->getTranslatedAttribute('name',\App::getLocale()) : null }}
+                                                </td>
+                                                <td>{{ $option->value ? $option->value->getTranslatedAttribute('value',\App::getLocale()) : null }}
+                                                </td>
+
+
+                                            </tr>
+                                            @endforeach
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                    <div class="product-middle col-xs-12">
+                        <ul class="nav-tabs">
+                            <li class="active">
+                                <a href="#" data-toggle="tab" data-target="#t0">Description</a>
+                            </li>
+                            <li class="">
+                                <a href="#" data-toggle="tab" data-target="#t1">Specification</a>
+                            </li>
+                            <li class="">
+                                <a href="#" data-toggle="tab" data-target="#t2">@lang('general.pricing_plans')</a>
+                            </li>
+
+                            <li>
+                                <a href="#" data-toggle="tab" data-target="#t3">@lang('general.reviews')</a>
+                            </li>
+
+                        </ul>
+                        <div class="tab-content">
+                            <div class="tab-pane fade active in" id="t0">
+                                <div class="pro-description">
+                                    <p>
+                                        <img src="https://electro.madrasthemes.com/wp-content/uploads/2016/03/overview_hero_title_2x-1024x346.png"
+                                            alt="">
+                                    </p>
+                                    <p>
+                                        <img src="https://electro.madrasthemes.com/wp-content/uploads/2016/03/overview_hero_2x-e1459776153284-1024x430.jpg"
+                                            alt="">
+                                    </p>
+                                    <p>
+                                        A groundbreaking Retina display. Powerful dual-core and quad-core Intel
+                                        processors. Fast flash storage. High-performance graphics. Great built-in apps.
+                                        And now in the 13-inch model, a revolutionary new Force Touch trackpad and even
+                                        longer battery life.1 Whatever you can imagine, MacBook Pro with Retina display
+                                        gives you the power to create.
+                                    </p>
+                                    <p>
+                                        The design of MacBook Pro packs a lot of power into not a lot of space. Because
+                                        we believe that high performance shouldn’t come at the expense of portability.
+                                        And despite being so compact, the new 13-inch and 15-inch MacBook Pro with
+                                        Retina display models now deliver up to 10 hours and nine hours of battery life,
+                                        respectively — an hour more than the previous models.
+                                    </p>
+                                    <p>
+                                        <img src="https://demo.madrasthemes.com/demo-2/wp-content/uploads/sites/7/2016/03/hero_large_2x.jpg"
+                                            alt="">
+                                    </p>
+                                    <p>
+                                        With Multi-Touch in OS X, you can use realistic gestures like swiping or
+                                        pinching to switch between apps, navigate your content and get the most out of
+                                        your desktop space.
+
+
+                                    </p>
+                                    <p>
+                                        The new Force Touch trackpad takes all the capabilities of Multi-Touch and adds
+                                        force sensors that detect subtle differences in the amount of downward pressure
+                                        you apply. This lets you have a deeper connection to your content, bringing more
+                                        functionality to your fingertip. It also introduces haptic feedback to MacBook
+                                        Pro — allowing you to not just see what’s happening on the screen, but to feel
+                                        it.
+
+
+                                    </p>
+                                </div>
+                            </div>
+
+                            <div class="tab-pane fade" id="t1">
+
+                                <div class="product-specification table-responsive">
+                                    <h3>Technical Specifications</h3>
+                                    <table class="table">
+                                        <tbody>
+                                            <tr>
+                                                <td>Brand</td>
+                                                <td>Apple</td>
+                                            </tr>
+                                            <tr>
+                                                <td>Item Height</td>
+                                                <td>18 Millimeters</td>
+                                            </tr>
+                                            <tr>
+                                                <td>Item Width</td>
+                                                <td>31.4 Centimeters</td>
+                                            </tr>
+                                            <tr>
+                                                <td>Screen Size</td>
+                                                <td>13 Inches</td>
+                                            </tr>
+                                            <tr class="size-weight">
+                                                <td>Item Weight</td>
+                                                <td>1.6 Kg</td>
+                                            </tr>
+                                            <tr class="size-weight">
+                                                <td>Product Dimensions</td>
+                                                <td>21.9 x 31.4 x 1.8 cm</td>
+                                            </tr>
+                                            <tr class="item-model-number">
+                                                <td>Item model number</td>
+                                                <td>MF841HN/A</td>
+                                            </tr>
+                                            <tr>
+                                                <td>Processor Brand</td>
+                                                <td>Intel</td>
+                                            </tr>
+                                            <tr>
+                                                <td>Processor Type</td>
+                                                <td>Core i5</td>
+                                            </tr>
+                                            <tr>
+                                                <td>Processor Speed</td>
+                                                <td>2.9 GHz</td>
+                                            </tr>
+                                            <tr>
+                                                <td>RAM Size</td>
+                                                <td>8 GB</td>
+                                            </tr>
+                                            <tr>
+                                                <td>Hard Drive Size</td>
+                                                <td>512 GB</td>
+                                            </tr>
+                                            <tr>
+                                                <td>Hard Disk Technology</td>
+                                                <td>Solid State Drive</td>
+                                            </tr>
+                                            <tr>
+                                                <td>Graphics Coprocessor</td>
+                                                <td>Intel Integrated Graphics</td>
+                                            </tr>
+                                            <tr>
+                                                <td>Graphics Card Description</td>
+                                                <td>Integrated Graphics Card</td>
+                                            </tr>
+                                            <tr>
+                                                <td>Hardware Platform</td>
+                                                <td>Mac</td>
+                                            </tr>
+                                            <tr>
+                                                <td>Operating System</td>
+                                                <td>Mac OS</td>
+                                            </tr>
+                                            <tr>
+                                                <td>Average Battery Life (in hours)</td>
+                                                <td>9</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                            <div class="tab-pane fade" id="t2">
+
+                                <div class="product-price-p table-responsive">
+                                    <table class="table table-bordered">
+
+                                        <thead>
+                                            <tr>
+                                                <th>من</th>
+                                                <th>الي</th>
+                                                <th>السعر</th>
+                                            </tr>
+                                        </thead>
+
+                                        <tbody>
+                                            @foreach($product->prices as $price)
+                                            <tr>
+
+                                                <td>@lang('general.from') {{$price->quantity_from}} @lang('general.to')
+                                                </td>
+                                                <td>{{$price->quantity_to}}</td>
+                                                <td> <span>{{$price->price}} l.e</span></td>
+
+                                            </tr>
+                                            @endforeach
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                            <div class="tab-pane fade" id="t3">
+                                <div class=" review-tab row">
+                                    <div class="col-md-5 col-xs-12">
+                                        <div class="total-rev">
+                                            <h3>Based on 0 reviews</h3>
+                                            <h2>0.0 <span>overall</span></h2>
+                                            <div class="progress-con">
+                                                <div class="progres-info1">
+                                                    <h4>
+                                                        <i class="fa fa-star"></i>
+                                                        <i class="fa fa-star"></i>
+                                                        <i class="fa fa-star"></i>
+                                                        <i class="fa fa-star"></i>
+                                                        <i class="fa fa-star"></i>
+                                                    </h4>
+                                                </div>
+                                                <div class="progress">
+                                                    <div class="progress-bar" role="progressbar" style="width: 100%"
+                                                        aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"></div>
+                                                </div>
+                                                <div class="progres-info2">
+                                                    <h4>100%</h4>
+                                                </div>
+                                            </div>
+                                            <div class="progress-con">
+                                                <div class="progres-info1">
+                                                    <h4>
+                                                        <i class="fa fa-star"></i>
+                                                        <i class="fa fa-star"></i>
+                                                        <i class="fa fa-star"></i>
+                                                        <i class="fa fa-star-o"></i>
+                                                        <i class="fa fa-star-o"></i>
+                                                    </h4>
+                                                </div>
+                                                <div class="progress">
+                                                    <div class="progress-bar" role="progressbar" style="width: 60%"
+                                                        aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"></div>
+                                                </div>
+                                                <div class="progres-info2">
+                                                    <h4>60%</h4>
+                                                </div>
+                                            </div>
+                                            <div class="progress-con">
+                                                <div class="progres-info1">
+                                                    <h4>
+                                                        <i class="fa fa-star"></i>
+                                                        <i class="fa fa-star"></i>
+                                                        <i class="fa fa-star-o"></i>
+                                                        <i class="fa fa-star-o"></i>
+                                                        <i class="fa fa-star-o"></i>
+                                                    </h4>
+                                                </div>
+                                                <div class="progress">
+                                                    <div class="progress-bar" role="progressbar" style="width: 30%"
+                                                        aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"></div>
+                                                </div>
+                                                <div class="progres-info2">
+                                                    <h4>30%</h4>
+                                                </div>
+                                            </div>
+                                            <div class="progress-con">
+                                                <div class="progres-info1">
+                                                    <h4>
+                                                        <i class="fa fa-star"></i>
+                                                        <i class="fa fa-star-o"></i>
+                                                        <i class="fa fa-star-o"></i>
+                                                        <i class="fa fa-star-o"></i>
+                                                        <i class="fa fa-star-o"></i>
+                                                    </h4>
+                                                </div>
+                                                <div class="progress">
+                                                    <div class="progress-bar" role="progressbar" style="width: 10%"
+                                                        aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"></div>
+                                                </div>
+                                                <div class="progres-info2">
+                                                    <h4>10%</h4>
+                                                </div>
+                                            </div>
+                                            <div class="progress-con">
+                                                <div class="progres-info1">
+                                                    <h4>
+                                                        <i class="fa fa-star-o"></i>
+                                                        <i class="fa fa-star-o"></i>
+                                                        <i class="fa fa-star-o"></i>
+                                                        <i class="fa fa-star-o"></i>
+                                                        <i class="fa fa-star-o"></i>
+                                                    </h4>
+                                                </div>
+                                                <div class="progress">
+                                                    <div class="progress-bar" role="progressbar" style="width: 0%"
+                                                        aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"></div>
+                                                </div>
+                                                <div class="progres-info2">
+                                                    <h4>0%</h4>
+                                                </div>
+                                            </div>
+
+
+
+
+
+                                        </div>
+                                    </div>
+                                    <div class="col-md-7 col-xs-12">
+                                        <div class="req-form login-ppage">
+                                            <h3>Be the first to review “Game Console Controller + USB 3.0 Cable”</h3>
+                                            <form action="" method="">
+                                                <div class="form-group row">
+                                                    <label for="" class="col-md-3 col-xs-12">Your Rating</label>
+                                                    <div class="rate-stars col-md-9 col-xs-12">
+                                                        <div class="stars">
+                                                            <input value="1" class="star star-5" id="star-5"
+                                                                type="radio" required name="rating" />
+                                                            <label class="star star-5" for="star-5"></label>
+                                                            <input value="2" class="star star-4" id="star-4"
+                                                                type="radio" name="rating" />
+                                                            <label class="star star-4" for="star-4"></label>
+                                                            <input value="3" class="star star-3" id="star-3"
+                                                                type="radio" name="rating" />
+                                                            <label class="star star-3" for="star-3"></label>
+                                                            <input value="4" class="star star-2" id="star-2"
+                                                                type="radio" name="rating" />
+                                                            <label class="star star-2" for="star-2"></label>
+                                                            <input value="5" class="star star-1" id="star-1"
+                                                                type="radio" name="rating" />
+                                                            <label class="star star-1" for="star-1"></label>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="form-group row">
+                                                    <label for="" class="col-md-3 col-xs-12">Your Review</label>
+                                                    <div class="rate-stars col-md-9 col-xs-12">
+                                                        <textarea class="form-control" name="comment"
+                                                            placeholder="Add Review" id=''>
+                                                        </textarea>
+                                                    </div>
+                                                </div>
+                                                <div class="form-group row">
+                                                    <label for="" class="col-md-3 col-xs-12">Name</label>
+                                                    <div class="rate-stars col-md-9 col-xs-12">
+                                                        <input class="form-control" type="text" name=""
+                                                            placeholder="Name" id=''>
+                                                    </div>
+                                                </div>
+                                                <div class="form-group row">
+                                                    <label for="" class="col-md-3 col-xs-12">Email</label>
+                                                    <div class="rate-stars col-md-9 col-xs-12">
+                                                        <input class="form-control" type="mail" name=""
+                                                            placeholder="Email" id=''>
+                                                    </div>
+                                                </div>
+                                                <div class="form-group row">
+                                                    <label class="check-data col-md-12 col-xs-12">
+                                                        Save my name, email, and website in this browser for the next
+                                                        time I comment.
+                                                        <input type="checkbox" checked="checked">
+                                                        <span class="checkmark-d"></span>
+                                                    </label>
+
+                                                </div>
+                                                <button type="submit" class="btn" id="req-f-btn">Add Review</button>
+                                        </div>
+                                        </form>
+                                    </div>
+                                    <div class="review-comment col-md-12 col-xs-12">
+                                        
+                                        <div class="no-review-comment">
+                                            <p>There are no reviews yet.</p>
+                                        </div>
+
+                                        <div class="review-comment-block product-grid">
+                                            <div class="c-data">
+                                                <p>
+                                                    <i class="fa fa-star active"></i>
+                                                    <i class="fa fa-star active"></i>
                                                     <i class="fa fa-star"></i>
-                                                    @endif
-                                                    @php $rating--; @endphp
-
-                                                    @endforeach
-
-                                            </p>
+                                                    <i class="fa fa-star"></i>
+                                                    <i class="fa fa-star"></i>
+                                                </p>
+                                            </div>
+                                            <div class="description">
+                                                <p>Fusce vitae nibh mi. Integer posuere, libero et ullamcorper facilisis, enim eros tincidunt orci, eget vestibulum sapien nisi ut leo. Cras finibus vel est ut mollis. Donec luctus condimentum ante et euismod.</p>
+                                                <h5> 
+                                                    Peter Wargner
+                                                    <span>– </span>
+                                                    <span>April 5, 2016</span>
+                                                </h5>
+                                            </div>
+                                            
+                                        </div>
+                                        <div class="review-comment-block product-grid">
+                                            <div class="c-data">
+                                                <p>
+                                                    <i class="fa fa-star active"></i>
+                                                    <i class="fa fa-star active"></i>
+                                                    <i class="fa fa-star"></i>
+                                                    <i class="fa fa-star"></i>
+                                                    <i class="fa fa-star"></i>
+                                                </p>
+                                            </div>
+                                            <div class="description">
+                                                <p>Fusce vitae nibh mi. Integer posuere, libero et ullamcorper facilisis, enim eros tincidunt orci, eget vestibulum sapien nisi ut leo. Cras finibus vel est ut mollis. Donec luctus condimentum ante et euismod.</p>
+                                                <h5> 
+                                                    Peter Wargner
+                                                    <span>– </span>
+                                                    <span>April 5, 2016</span>
+                                                </h5>
+                                            </div>
+                                            
+                                        </div>
+                                        <div class="review-comment-block product-grid">
+                                            <div class="c-data">
+                                                <p>
+                                                    <i class="fa fa-star active"></i>
+                                                    <i class="fa fa-star active"></i>
+                                                    <i class="fa fa-star"></i>
+                                                    <i class="fa fa-star"></i>
+                                                    <i class="fa fa-star"></i>
+                                                </p>
+                                            </div>
+                                            <div class="description">
+                                                <p>Fusce vitae nibh mi. Integer posuere, libero et ullamcorper facilisis, enim eros tincidunt orci, eget vestibulum sapien nisi ut leo. Cras finibus vel est ut mollis. Donec luctus condimentum ante et euismod.</p>
+                                                <h5> 
+                                                    Peter Wargner
+                                                    <span>– </span>
+                                                    <span>April 5, 2016</span>
+                                                </h5>
+                                            </div>
+                                            
+                                        </div>
+                                        <div class="review-comment-block product-grid">
+                                            <div class="c-data">
+                                                <p>
+                                                    <i class="fa fa-star active"></i>
+                                                    <i class="fa fa-star active"></i>
+                                                    <i class="fa fa-star"></i>
+                                                    <i class="fa fa-star"></i>
+                                                    <i class="fa fa-star"></i>
+                                                </p>
+                                            </div>
+                                            <div class="description">
+                                                <p>Fusce vitae nibh mi. Integer posuere, libero et ullamcorper facilisis, enim eros tincidunt orci, eget vestibulum sapien nisi ut leo. Cras finibus vel est ut mollis. Donec luctus condimentum ante et euismod.</p>
+                                                <h5> 
+                                                    Peter Wargner
+                                                    <span>– </span>
+                                                    <span>April 5, 2016</span>
+                                                </h5>
+                                            </div>
+                                            
                                         </div>
                                     </div>
                                 </div>
-
-                                <p>{{$review->comment}}</p>
                             </div>
+
+
+
+
+                            <!--
+                                @foreach($product->reviews as $review)
+
+                                <div class="rev-item col-md-7 col-xs-12">
+
+                                    <div class="r-img">
+                                        <img src="{{url('storage/'.$review->owner->avatar)}}" alt="">
+
+                                    </div>
+                                    @auth
+                                    @if(\Auth::user()->id == $review->user_id)
+                                    <a href="{{url('review/'.$review->id.'/delete')}}" style="    float: inline-end;"><i
+                                            class="fa fa-trash" aria-hidden="true"></i></a>
+                                    @endif
+                                    @endauth
+                                    <div class="r-data">
+
+                                        <div>
+                                            <a href="{{url('supplier/'.$review->user_id)}}">{{$review->owner->name}}</a>
+                                        </div>
+
+
+                                        <div class="cardo">
+                                            <div class="c-inner" style="text-align: right;">
+                                                <div class="c-data">
+                                                    <p>
+                                                        @php $rating = $review->stars ; @endphp
+                                                        @foreach(range(1,5) as $i)
+                                                        @if($rating >0)
+                                                        @if($rating > 0.5)
+                                                        <i class="fa fa-star active"></i>
+                                                        @elseif($rating < 0.5 && $rating> 0)
+                                                            <i class="fas fa-star-half"></i>
+                                                            @endif
+                                                            @else
+                                                            <i class="fa fa-star"></i>
+                                                            @endif
+                                                            @php $rating--; @endphp
+
+                                                            @endforeach
+
+                                                    </p>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <p>{{$review->comment}}</p>
+                                    </div>
+                                </div>
+
+                                @endforeach
+                                -->
+
                         </div>
-
-                        @endforeach
-
-
                     </div>
                 </div>
             </div>
+
+
 
 
 
@@ -489,6 +1082,430 @@ $menu = false ;
 
             </div>
             @endif
+
+
+
+
+
+            <div class="related-s single-brands col-xs-12">
+                <div class="single-brand-s owl-theme owl-carousel">
+                    <div class="item">
+                        <div class="single-brand-img">
+                            <a href="#"><img
+                                    src="https://electro.madrasthemes.com/wp-content/uploads/2021/03/themeforest1.png"
+                                    alt=""></a>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="single-brand-img">
+                            <a href="#"><img
+                                    src="https://electro.madrasthemes.com/wp-content/uploads/2021/03/themeforest1.png"
+                                    alt=""></a>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="single-brand-img">
+                            <a href="#"><img
+                                    src="https://electro.madrasthemes.com/wp-content/uploads/2021/03/themeforest1.png"
+                                    alt=""></a>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="single-brand-img">
+                            <a href="#"><img
+                                    src="https://electro.madrasthemes.com/wp-content/uploads/2021/03/themeforest1.png"
+                                    alt=""></a>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="single-brand-img">
+                            <a href="#"><img
+                                    src="https://electro.madrasthemes.com/wp-content/uploads/2021/03/themeforest1.png"
+                                    alt=""></a>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="single-brand-img">
+                            <a href="#"><img
+                                    src="https://electro.madrasthemes.com/wp-content/uploads/2021/03/themeforest1.png"
+                                    alt=""></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+
+            <div class="single-related-blocks col-xs-12">
+                <div class="related-block col-md-3 col-xs-12">
+                    <div class="g-head">
+                        <h3>Featured Products</h3>
+                    </div>
+                    <ul class="product_list_widget">
+                        <li>
+                            <a href="#">
+                                <img src="https://electro.madrasthemes.com/wp-content/uploads/2016/03/GoldPhone-300x300.png"
+                                    alt="img">
+                            </a>
+                            <div class="product_list-info product-grid">
+                                <h3 class="title"><a href="#">Tablet Thin EliteBook Revolve 810 G6</a></h3>
+                                <div class="price">
+                                    <span>1700</span>
+                                    1400
+                                </div>
+                                <div class="c-data">
+                                    <p>
+                                        <i class="fa fa-star active"></i>
+                                        <i class="fa fa-star active"></i>
+                                        <i class="fa fa-star"></i>
+                                        <i class="fa fa-star"></i>
+                                        <i class="fa fa-star"></i>
+                                    </p>
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <img src="https://electro.madrasthemes.com/wp-content/uploads/2016/03/GoldPhone-300x300.png"
+                                    alt="img">
+                            </a>
+                            <div class="product_list-info product-grid">
+                                <h3 class="title"><a href="#">Tablet Thin EliteBook Revolve 810 G6</a></h3>
+                                <div class="price">
+                                    <span>1700</span>
+                                    1400
+                                </div>
+                                <div class="c-data">
+                                    <p>
+                                        <i class="fa fa-star active"></i>
+                                        <i class="fa fa-star active"></i>
+                                        <i class="fa fa-star"></i>
+                                        <i class="fa fa-star"></i>
+                                        <i class="fa fa-star"></i>
+                                    </p>
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <img src="https://electro.madrasthemes.com/wp-content/uploads/2016/03/GoldPhone-300x300.png"
+                                    alt="img">
+                            </a>
+                            <div class="product_list-info product-grid">
+                                <h3 class="title"><a href="#">Tablet Thin EliteBook Revolve 810 G6</a></h3>
+                                <div class="price">
+                                    <span>1700</span>
+                                    1400
+                                </div>
+                                <div class="c-data">
+                                    <p>
+                                        <i class="fa fa-star active"></i>
+                                        <i class="fa fa-star active"></i>
+                                        <i class="fa fa-star"></i>
+                                        <i class="fa fa-star"></i>
+                                        <i class="fa fa-star"></i>
+                                    </p>
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <img src="https://electro.madrasthemes.com/wp-content/uploads/2016/03/GoldPhone-300x300.png"
+                                    alt="img">
+                            </a>
+                            <div class="product_list-info product-grid">
+                                <h3 class="title"><a href="#">Tablet Thin EliteBook Revolve 810 G6</a></h3>
+                                <div class="price">
+                                    <span>1700</span>
+                                    1400
+                                </div>
+                                <div class="c-data">
+                                    <p>
+                                        <i class="fa fa-star active"></i>
+                                        <i class="fa fa-star active"></i>
+                                        <i class="fa fa-star"></i>
+                                        <i class="fa fa-star"></i>
+                                        <i class="fa fa-star"></i>
+                                    </p>
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <img src="https://electro.madrasthemes.com/wp-content/uploads/2016/03/GoldPhone-300x300.png"
+                                    alt="img">
+                            </a>
+                            <div class="product_list-info product-grid">
+                                <h3 class="title"><a href="#">Tablet Thin EliteBook Revolve 810 G6</a></h3>
+                                <div class="price">
+                                    <span>1700</span>
+                                    1400
+                                </div>
+                                <div class="c-data">
+                                    <p>
+                                        <i class="fa fa-star active"></i>
+                                        <i class="fa fa-star active"></i>
+                                        <i class="fa fa-star"></i>
+                                        <i class="fa fa-star"></i>
+                                        <i class="fa fa-star"></i>
+                                    </p>
+                                </div>
+                            </div>
+                        </li>
+
+
+                    </ul>
+                </div>
+                <div class="related-block col-md-3 col-xs-12">
+                    <div class="g-head">
+                        <h3>Top Selling Products</h3>
+                    </div>
+                    <ul class="product_list_widget">
+                        <li>
+                            <a href="#">
+                                <img src="https://electro.madrasthemes.com/wp-content/uploads/2016/03/GoldPhone-300x300.png"
+                                    alt="img">
+                            </a>
+                            <div class="product_list-info product-grid">
+                                <h3 class="title"><a href="#">Tablet Thin EliteBook Revolve 810 G6</a></h3>
+                                <div class="price">
+                                    <span>1700</span>
+                                    1400
+                                </div>
+                                <div class="c-data">
+                                    <p>
+                                        <i class="fa fa-star active"></i>
+                                        <i class="fa fa-star active"></i>
+                                        <i class="fa fa-star"></i>
+                                        <i class="fa fa-star"></i>
+                                        <i class="fa fa-star"></i>
+                                    </p>
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <img src="https://electro.madrasthemes.com/wp-content/uploads/2016/03/GoldPhone-300x300.png"
+                                    alt="img">
+                            </a>
+                            <div class="product_list-info product-grid">
+                                <h3 class="title"><a href="#">Tablet Thin EliteBook Revolve 810 G6</a></h3>
+                                <div class="price">
+                                    <span>1700</span>
+                                    1400
+                                </div>
+                                <div class="c-data">
+                                    <p>
+                                        <i class="fa fa-star active"></i>
+                                        <i class="fa fa-star active"></i>
+                                        <i class="fa fa-star"></i>
+                                        <i class="fa fa-star"></i>
+                                        <i class="fa fa-star"></i>
+                                    </p>
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <img src="https://electro.madrasthemes.com/wp-content/uploads/2016/03/GoldPhone-300x300.png"
+                                    alt="img">
+                            </a>
+                            <div class="product_list-info product-grid">
+                                <h3 class="title"><a href="#">Tablet Thin EliteBook Revolve 810 G6</a></h3>
+                                <div class="price">
+                                    <span>1700</span>
+                                    1400
+                                </div>
+                                <div class="c-data">
+                                    <p>
+                                        <i class="fa fa-star active"></i>
+                                        <i class="fa fa-star active"></i>
+                                        <i class="fa fa-star"></i>
+                                        <i class="fa fa-star"></i>
+                                        <i class="fa fa-star"></i>
+                                    </p>
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <img src="https://electro.madrasthemes.com/wp-content/uploads/2016/03/GoldPhone-300x300.png"
+                                    alt="img">
+                            </a>
+                            <div class="product_list-info product-grid">
+                                <h3 class="title"><a href="#">Tablet Thin EliteBook Revolve 810 G6</a></h3>
+                                <div class="price">
+                                    <span>1700</span>
+                                    1400
+                                </div>
+                                <div class="c-data">
+                                    <p>
+                                        <i class="fa fa-star active"></i>
+                                        <i class="fa fa-star active"></i>
+                                        <i class="fa fa-star"></i>
+                                        <i class="fa fa-star"></i>
+                                        <i class="fa fa-star"></i>
+                                    </p>
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <img src="https://electro.madrasthemes.com/wp-content/uploads/2016/03/GoldPhone-300x300.png"
+                                    alt="img">
+                            </a>
+                            <div class="product_list-info product-grid">
+                                <h3 class="title"><a href="#">Tablet Thin EliteBook Revolve 810 G6</a></h3>
+                                <div class="price">
+                                    <span>1700</span>
+                                    1400
+                                </div>
+                                <div class="c-data">
+                                    <p>
+                                        <i class="fa fa-star active"></i>
+                                        <i class="fa fa-star active"></i>
+                                        <i class="fa fa-star"></i>
+                                        <i class="fa fa-star"></i>
+                                        <i class="fa fa-star"></i>
+                                    </p>
+                                </div>
+                            </div>
+                        </li>
+
+
+                    </ul>
+                </div>
+                <div class="related-block col-md-3 col-xs-12">
+                    <div class="g-head">
+                        <h3>On-sale Products</h3>
+                    </div>
+                    <ul class="product_list_widget">
+                        <li>
+                            <a href="#">
+                                <img src="https://electro.madrasthemes.com/wp-content/uploads/2016/03/GoldPhone-300x300.png"
+                                    alt="img">
+                            </a>
+                            <div class="product_list-info product-grid">
+                                <h3 class="title"><a href="#">Tablet Thin EliteBook Revolve 810 G6</a></h3>
+                                <div class="price">
+                                    <span>1700</span>
+                                    1400
+                                </div>
+                                <div class="c-data">
+                                    <p>
+                                        <i class="fa fa-star active"></i>
+                                        <i class="fa fa-star active"></i>
+                                        <i class="fa fa-star"></i>
+                                        <i class="fa fa-star"></i>
+                                        <i class="fa fa-star"></i>
+                                    </p>
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <img src="https://electro.madrasthemes.com/wp-content/uploads/2016/03/GoldPhone-300x300.png"
+                                    alt="img">
+                            </a>
+                            <div class="product_list-info product-grid">
+                                <h3 class="title"><a href="#">Tablet Thin EliteBook Revolve 810 G6</a></h3>
+                                <div class="price">
+                                    <span>1700</span>
+                                    1400
+                                </div>
+                                <div class="c-data">
+                                    <p>
+                                        <i class="fa fa-star active"></i>
+                                        <i class="fa fa-star active"></i>
+                                        <i class="fa fa-star"></i>
+                                        <i class="fa fa-star"></i>
+                                        <i class="fa fa-star"></i>
+                                    </p>
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <img src="https://electro.madrasthemes.com/wp-content/uploads/2016/03/GoldPhone-300x300.png"
+                                    alt="img">
+                            </a>
+                            <div class="product_list-info product-grid">
+                                <h3 class="title"><a href="#">Tablet Thin EliteBook Revolve 810 G6</a></h3>
+                                <div class="price">
+                                    <span>1700</span>
+                                    1400
+                                </div>
+                                <div class="c-data">
+                                    <p>
+                                        <i class="fa fa-star active"></i>
+                                        <i class="fa fa-star active"></i>
+                                        <i class="fa fa-star"></i>
+                                        <i class="fa fa-star"></i>
+                                        <i class="fa fa-star"></i>
+                                    </p>
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <img src="https://electro.madrasthemes.com/wp-content/uploads/2016/03/GoldPhone-300x300.png"
+                                    alt="img">
+                            </a>
+                            <div class="product_list-info product-grid">
+                                <h3 class="title"><a href="#">Tablet Thin EliteBook Revolve 810 G6</a></h3>
+                                <div class="price">
+                                    <span>1700</span>
+                                    1400
+                                </div>
+                                <div class="c-data">
+                                    <p>
+                                        <i class="fa fa-star active"></i>
+                                        <i class="fa fa-star active"></i>
+                                        <i class="fa fa-star"></i>
+                                        <i class="fa fa-star"></i>
+                                        <i class="fa fa-star"></i>
+                                    </p>
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <img src="https://electro.madrasthemes.com/wp-content/uploads/2016/03/GoldPhone-300x300.png"
+                                    alt="img">
+                            </a>
+                            <div class="product_list-info product-grid">
+                                <h3 class="title"><a href="#">Tablet Thin EliteBook Revolve 810 G6</a></h3>
+                                <div class="price">
+                                    <span>1700</span>
+                                    1400
+                                </div>
+                                <div class="c-data">
+                                    <p>
+                                        <i class="fa fa-star active"></i>
+                                        <i class="fa fa-star active"></i>
+                                        <i class="fa fa-star"></i>
+                                        <i class="fa fa-star"></i>
+                                        <i class="fa fa-star"></i>
+                                    </p>
+                                </div>
+                            </div>
+                        </li>
+
+
+                    </ul>
+                </div>
+                <div class="related-block col-md-3 col-xs-12">
+                    <div class="single-prod-ad">
+                        <img src="https://electro.madrasthemes.com/wp-content/uploads/2019/04/footer-widget-img-01.jpg"
+                            alt="img">
+                    </div>
+                </div>
+            </div>
+
+
+
+
+
         </div>
     </div>
 </main>
