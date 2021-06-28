@@ -194,8 +194,8 @@ class AuthUsersController extends BaseController
 
     public function login(LoginRequest $request)
     {
-        $lang = (request('lang')) ? request('lang') : \App::getLocale();
-        \App::setLocale($lang);
+
+        
         if (is_numeric($request->get('email'))) {
             $credentials =  ['mobile' => $request->get('email'), 'password' => $request->get('password')];
         } elseif (filter_var($request->get('email'), FILTER_VALIDATE_EMAIL)) {
