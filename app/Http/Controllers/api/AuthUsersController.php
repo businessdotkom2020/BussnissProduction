@@ -218,7 +218,6 @@ class AuthUsersController extends BaseController
         }
  
 
-        $user           = Request()->user();
         $tokenResult    = $user->createToken('Personal Access Token');
         $token          = $tokenResult->token;
 
