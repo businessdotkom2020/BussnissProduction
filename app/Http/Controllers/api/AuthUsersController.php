@@ -24,6 +24,7 @@ use App\Models\City;
 use App\Models\State;
 use App\Http\Resources\UserResource;
 use Lang;
+use Illuminate\Support\Facades\Hash;
 
 use App\Http\Resources\StoreContactResource;
 
@@ -201,8 +202,11 @@ class AuthUsersController extends BaseController
         } elseif (filter_var($request->get('email'), FILTER_VALIDATE_EMAIL)) {
             $credentials =  ['email' => $request->get('email'), 'password' => $request->get('password')];
         }
-        return $credentials;
-        if (!$token = auth()->attempt($credentials)) {
+
+        $user = User::where('email', $request->get('email'))->orwhere('mobile', $request->get('email'))->first();
+
+        // Check password
+        if(!$user || !Hash::check($request->get('password'), $user->password)) {
             return response()->json([
                 'status' => false,
                 'code' => 422,
@@ -212,6 +216,7 @@ class AuthUsersController extends BaseController
                 ]
             ], 422);
         }
+ 
 
         $user           = Request()->user();
         $tokenResult    = $user->createToken('Personal Access Token');
