@@ -201,7 +201,7 @@ class AuthUsersController extends BaseController
         } elseif (filter_var($request->get('email'), FILTER_VALIDATE_EMAIL)) {
             $credentials =  ['email' => $request->get('email'), 'password' => $request->get('password')];
         }
-
+        return $credentials;
         if (!$token = auth()->attempt($credentials)) {
             return response()->json([
                 'status' => false,
