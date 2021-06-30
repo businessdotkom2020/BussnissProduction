@@ -31,6 +31,26 @@ Route::get('/test_image_2', function () {
 
     return view('home');
 });
+Route::get('/currency', function () {
+    currency()->create([
+        'name' => '[E.G. جنيه]',
+        'code' => 'EGP',
+        'symbol' => 'EGP',
+        'format' =>  trans('currency.egp') .'1,0.00',
+        'exchange_rate' => 15.67000000,
+        'active' => 1,
+    ]);
+    currency()->create([
+        'name' => 'U.S. Dollar',
+        'code' => 'USD',
+        'symbol' => '$',
+        'format' => '$1,0.00',
+        'exchange_rate' => 1.00000000,
+        'active' => 1,
+    ]);
+
+    return 'Currency Created';
+});
 
 
 
