@@ -19,7 +19,7 @@ class ProductResource extends ProductIndexResource
 
         $lang = (request('lang')) ? request('lang') : \App::getLocale();
         $currency_code = (request('currency')) ? request('currency') : currency()->config('default');
-        $price = currency($this->price, $from = 'USD', $to = $currency_code, $format = true);
+        $price = currency(floatval($this->price), $from = 'USD', $to = $currency_code, $format = true);
         return [
             'id'           => $this->id,
             'category'     => $this->category ? $this->category->name : null,
