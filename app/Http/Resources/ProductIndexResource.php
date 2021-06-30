@@ -16,7 +16,7 @@ class ProductIndexResource extends JsonResource
     {
         $lang = (request('lang')) ? request('lang') : \App::getLocale();
         $currency_code = (request('currency')) ? request('currency') : currency()->config('default');
-        $price = currency(floatval($this->price), $from = 'USD', $to = $currency_code, $format = true);
+        $price = currency(12.5, $from = 'USD', $to = $currency_code, $format = true);
         return [
             'id'          => $this->id,
             'name' => $this->getTranslatedAttribute('name',$lang),
