@@ -33,9 +33,10 @@ class Product extends Model
     public function getPriceAttribute($price)
     {
         $currency_code =  \Session::get('currency') ? \Session::get('currency')  : currency()->config('default') ;
-        $price =  currency(12.5, $from = 'USD', $to = $currency_code, $format = true);
-        return floatval($price);
-    }
+
+        if(request('currency')) $currency_code = request('currency') ; 
+        return  currency(12.5, $from = 'USD', $to = $currency_code, $format = false);
+     }
 
     public function getCreatedAtAttribute($date)
     {

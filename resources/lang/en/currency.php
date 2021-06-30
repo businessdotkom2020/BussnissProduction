@@ -13,7 +13,7 @@ return [
     |
     */
 
-    'egp' => 'EGP',
-    'usd' => 'USD',
+    'EGP' => 'Egyptian Pound',
+    'USD' => 'Dollar',
 
 ];
