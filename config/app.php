@@ -177,6 +177,7 @@ return [
         Barryvdh\Debugbar\ServiceProvider::class,
         RealRashid\SweetAlert\SweetAlertServiceProvider::class,
         Spatie\Permission\PermissionServiceProvider::class,
+        \Torann\Currency\CurrencyServiceProvider::class,
 
     ],
 
@@ -230,6 +231,7 @@ return [
         'View' => Illuminate\Support\Facades\View::class,
         'Debugbar' => Barryvdh\Debugbar\Facade::class,
         'Alert' => RealRashid\SweetAlert\Facades\Alert::class,
+        'Currency' => \Torann\Currency\Facades\Currency::class,
 
     ],
 
