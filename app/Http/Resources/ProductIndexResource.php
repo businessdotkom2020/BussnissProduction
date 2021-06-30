@@ -14,16 +14,17 @@ class ProductIndexResource extends JsonResource
      */
     public function toArray($request)
     {
-                $lang = (request('lang')) ? request('lang') : \App::getLocale();
-
+        $lang = (request('lang')) ? request('lang') : \App::getLocale();
+        $currency_code = (request('currency')) ? request('currency') : currency()->config('default');
+        $price = currency($this->price, $from = 'USD', $to = $currency_code, $format = true);
         return [
             'id'          => $this->id,
             'name' => $this->getTranslatedAttribute('name',$lang),
             'image'        => url('storage/'.($this->image)),
-            'price'       => $this->price,
+            'price'        => $price,
+            'currency'        => $currency_code,
             'seen_cont'       =>5,
-            'price_currency_type'        => 'usd',
-
+ 
             'is_favorite'  => $this->isFavorited(),
             // 'sale_value'     => (($this->sale_price/$this->price) * 100) .'%',
             'sale_value'     => number_format((($this->sale_price/$this->price) * 100) ,2)  .'%',

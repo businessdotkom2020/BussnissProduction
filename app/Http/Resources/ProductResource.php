@@ -18,7 +18,8 @@ class ProductResource extends ProductIndexResource
     {
 
         $lang = (request('lang')) ? request('lang') : \App::getLocale();
-
+        $currency_code = (request('currency')) ? request('currency') : currency()->config('default');
+        $price = currency($this->price, $from = 'USD', $to = $currency_code, $format = true);
         return [
             'id'           => $this->id,
             'category'     => $this->category ? $this->category->name : null,
@@ -27,8 +28,8 @@ class ProductResource extends ProductIndexResource
             'image'        => url('storage/' . ($this->image)),
             'gallery'      => $this->images(),
             'is_favorite'  => $this->isFavorited(),
-            'price'        => $this->price,
-            'price_currency_type'        => 'usd',
+            'price'        => $price,
+            'currency'        => $currency_code,
             'seen_cont'       =>5,
 
             'store_id'        => $this->owner ? $this->owner->id : null,

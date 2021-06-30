@@ -30,7 +30,11 @@ class Product extends Model
         return 'slug';
     }
 
-
+    public function getPriceAttribute($price)
+    {
+        $currency_code =  \Session::get('currency') ? \Session::get('currency')  : currency()->config('default') ;
+        return currency($price, $from = 'USD', $to = $currency_code, $format = true);
+    }
 
     public function getCreatedAtAttribute($date)
     {
@@ -182,15 +186,5 @@ class Product extends Model
         return $this->morphTo(User::class, 'favouriteable');
     }
 
-    public static function categoryIdRelationship($id)
-    {
-
-        // return
-        // 	self::where('products.id', '=', $id)
-        // 		->select('products.category_id', 'sub_categories.id as sub_category_id', 'main_categories.id as main_category_id')
-        // 			->join('categories', 'products.category_id', '=', 'categories.id')
-        // 				->join('sub_categories', 'categories.sub_category_id', '=', 'sub_categories.id')
-        // 					->join('main_categories', 'sub_categories.main_category_id', '=', 'main_categories.id')
-        // 						->first();
-    }
+ 
 }

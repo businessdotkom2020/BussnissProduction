@@ -127,9 +127,6 @@ Route::middleware('guest')->group(function () {
 Route::post('/user_follow', 'web\SuppliersController@togglefollow')->name('user_follow');
 Route::post('review/{type}/{id}/addReview', 'web\ReviewsController@add_Review')->name('add_product_review');
 
-Route::get('log', function () {
-    \Auth::loginUsingId(216);
-});
 
 Route::get('/getStates/{id}', 'web\AuthController@getStates')->name('findstate');
 Route::get('/getCities/{id}', 'web\AuthController@getCities')->name('findcity');
