@@ -35,7 +35,7 @@ class BranchesController extends BaseController
     }
     public function branches_list()
     {
-        return response()->json(['status' => false,'code' => 422, Branch::where('user_id',Request()->user()->id)->select('id','name')->get()],422);
+        return response()->json(['status' => false,'code' => 422,'data' => Branch::where('user_id',Request()->user()->id)->select('id','name')->get()],422);
     }
 
         public function post(AddBranshRequest $request){
