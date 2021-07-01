@@ -33,6 +33,10 @@ class BranchesController extends BaseController
     {
         return  new BranshesCollection(Branch::where('user_id',Request()->user()->id)->paginate(10));
     }
+    public function branches_list()
+    {
+        return response()->json(['status' => false,'code' => 422, Branch::select('id','name')->get()],422);
+    }
 
         public function post(AddBranshRequest $request){
             $branch = new Branch;

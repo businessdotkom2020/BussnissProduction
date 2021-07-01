@@ -237,6 +237,7 @@ Route::group(['middleware' => 'auth:api'], function () {
 Route::get('auth/categories', 'api\CategoryController@auth_categories');
 Route::get('brands/list', 'api\CategoryController@brands_list');
 Route::get('tags/list', 'api\CategoryController@tags_list');
+Route::get('/branches/list', 'api\BranchesController@branches_list');
 
 Route::get('main/categories', 'api\CategoryController@auth_categories');
 Route::get('sub/categories/{id}', 'api\CategoryController@sub_add_categories');
