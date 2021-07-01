@@ -146,7 +146,7 @@ Route::get('client/{client_id}/details', 'api\ClientController@show');
 Route::group(['middleware' => 'auth:api'], function () {
 
     Route::get('/branches/list', 'api\BranchesController@branches_list');
-    Route::get('/branche/{branch_id}/products', 'api\BranchesController@branche_products');
+    Route::get('/branch/{branch_id}/products', 'api\BranchesController@branche_products');
 
     Route::get('my-notifications', 'api\NotificationsController@index');
     Route::get('notification/{notification_id}', 'api\NotificationsController@show');
