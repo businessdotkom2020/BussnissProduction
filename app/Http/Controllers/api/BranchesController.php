@@ -41,7 +41,7 @@ class BranchesController extends BaseController
     }
     public function branche_products($branch_id)
     {
-        return new ProductIndexCollection(Product::where('branch_id',$branch_id)->paginate(10));
+        return new ProductIndexCollection(Product::where('branch_id',$branch_id)->get());
     }
 
         public function post(AddBranshRequest $request){
