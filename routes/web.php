@@ -6,7 +6,7 @@
 // } else {
 //     URL::forceScheme('https');
 // }
-// URL::forceScheme('https');
+URL::forceScheme('https');
 /*
 
 |--------------------------------------------------------------------------
