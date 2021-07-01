@@ -132,6 +132,7 @@ Route::get('user/{user_id}/contact', 'api\UsersController@contact_consumer');
 Route::get('supplier/{user_id}/contact', 'api\UsersController@contact_store');
 Route::get('service/{id}/contact', 'api\UsersController@contact_service');
 Route::get('supplier/{supplier_id}/details', 'api\StoresController@show_factory');
+Route::get('/branch/{branch_id}/products', 'api\BranchesController@branche_products');
 
 
 
@@ -146,7 +147,6 @@ Route::get('client/{client_id}/details', 'api\ClientController@show');
 Route::group(['middleware' => 'auth:api'], function () {
 
     Route::get('/branches/list', 'api\BranchesController@branches_list');
-    Route::get('/branch/{branch_id}/products', 'api\BranchesController@branche_products');
 
     Route::get('my-notifications', 'api\NotificationsController@index');
     Route::get('notification/{notification_id}', 'api\NotificationsController@show');
