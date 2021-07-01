@@ -145,6 +145,7 @@ Route::get('client/{client_id}/details', 'api\ClientController@show');
 // Auth Routes Sign Up || Log in || Log out || Resset Password
 Route::group(['middleware' => 'auth:api'], function () {
 
+    Route::get('/branches/list', 'api\BranchesController@branches_list');
 
     Route::get('my-notifications', 'api\NotificationsController@index');
     Route::get('notification/{notification_id}', 'api\NotificationsController@show');
@@ -237,7 +238,6 @@ Route::group(['middleware' => 'auth:api'], function () {
 Route::get('auth/categories', 'api\CategoryController@auth_categories');
 Route::get('brands/list', 'api\CategoryController@brands_list');
 Route::get('tags/list', 'api\CategoryController@tags_list');
-Route::get('/branches/list', 'api\BranchesController@branches_list');
 
 Route::get('main/categories', 'api\CategoryController@auth_categories');
 Route::get('sub/categories/{id}', 'api\CategoryController@sub_add_categories');
