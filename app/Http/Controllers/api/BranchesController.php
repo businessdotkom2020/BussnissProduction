@@ -22,10 +22,12 @@ use App\Http\Requests\AddBranshRequest;
 use App\Http\Resources\CountryResource;
 use App\Http\Resources\BranshesResource;
 use App\Http\Resources\collections\BranshesCollection;
+use App\Http\Resources\collections\ProductIndexCollection;
 use App\Models\Country;
 use App\Models\City;
 use App\Models\State;
 use App\Models\Branch;
+use App\Models\Product;
 
 class BranchesController extends BaseController
 {
@@ -36,6 +38,10 @@ class BranchesController extends BaseController
     public function branches_list()
     {
         return response()->json(['status' => false,'code' => 422,'data' => Branch::where('user_id',Request()->user()->id)->select('id','name')->get()],422);
+    }
+    public function branche_products($branch_id)
+    {
+        return new ProductIndexCollection(Product::where('branch_id',$branch_id)->paginate(10));
     }
 
         public function post(AddBranshRequest $request){
