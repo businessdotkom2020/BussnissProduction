@@ -18,8 +18,12 @@ class ProductResource extends ProductIndexResource
     {
 
         $lang = (request('lang')) ? request('lang') : \App::getLocale();
-        $currency_code = (request('currency')) ? request('currency') : currency()->config('default');
-        $price = currency(floatval($this->price), $from = 'USD', $to = $currency_code, $format = true);
+        \App::setlocale($lang);
+
+        $currency_code =  \Session::get('currency') ? \Session::get('currency')  : currency()->config('default') ;
+
+        if(request('currency')) $currency_code = request('currency') ; 
+        
         return [
             'id'           => $this->id,
             'category'     => $this->category ? $this->category->name : null,
@@ -28,15 +32,15 @@ class ProductResource extends ProductIndexResource
             'image'        => url('storage/' . ($this->image)),
             'gallery'      => $this->images(),
             'is_favorite'  => $this->isFavorited(),
-            'price'        => $price,
-            'currency'        => $currency_code,
+            'price'        => $this->price,
+            'currency'        => trans('currency.'.$currency_code) ,
             'seen_cont'       =>5,
 
             'store_id'        => $this->owner ? $this->owner->id : null,
             'sale_price'   => $this->sale_price,
             // 'sale_value'   =>  ((float)$this->sale_price* (float)$this->price / 100 ) .'%',
             'sale_value'   => (($this->sale_price / $this->price) * 100) . '%',
-            'price_list'   => $this->prices,
+            'price_list'   => PriceListResource::collection($this->prices),
             'options'      => attributesIndexResource::collection($this->options),
             'supplier'     => $this->owner ? $this->owner->name : null,
             'rating'       => 4.5,
