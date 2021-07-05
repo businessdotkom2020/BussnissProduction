@@ -727,7 +727,8 @@ $menu = false ;
                             </nav>
                         </div>
                         <div class="header-right">
-                            <a href="#" class="d-xl-show"><i class="w-icon-map-marker mr-1"></i>Track Order</a>
+                            <a href="#" class="d-xl-show"><img
+                                    src="https://img.icons8.com/ios/50/000000/holding-box.png" /></i>Track Order</a>
                             <a href="#"><i class="w-icon-sale"></i>Daily Deals</a>
                         </div>
                     </div>
