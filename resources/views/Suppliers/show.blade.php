@@ -2229,9 +2229,11 @@ $menu = false ;
 
 
                                 <div class="tab-pane" id="tab2-4">
-                                    <div id="map"></div>
 
                                     <div class="row cols-lg-2 cols-md-2 cols-sm-2 cols-1 mt-4">
+                                        <div id="map"></div>
+
+
                                         <div class="store-wrap mb-4">
                                             <div class="store store-grid">
                                                 <div class="store-header">
