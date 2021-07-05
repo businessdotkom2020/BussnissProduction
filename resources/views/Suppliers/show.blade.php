@@ -39,7 +39,7 @@ $menu = false ;
                                     src="http://nouthemes.net/html/martfury/img/vendor/vendor-store.jpg" alt=""></div>
                             <div class="ps-block__container">
                                 <div class="ps-block__header">
-                                    <h4> {{ $supplier->name }}  </h4>
+                                    <h4> {{ $supplier->name }} </h4>
                                     <p>
                                         @php $rating = $supplier->average_rating ; @endphp
                                         @foreach(range(1,5) as $i)
@@ -1924,9 +1924,8 @@ Toast.fire({
 
 
 
-<script src="{{ asset('plugins/jquery.min.js')}}"></script>
-<script src="{{ asset('plugins/nouislider/nouislider.min.js')}}"></script>
-<script src="{{ asset('plugins/popper.min.js')}}"></script>
+
+
 <script src="{{ asset('plugins/owl-carousel/owl.carousel.min.js')}}"></script>
 <script src="{{ asset('plugins/bootstrap/js/bootstrap.min.js')}}"></script>
 <script src="{{ asset('plugins/imagesloaded.pkgd.min.js')}}"></script>
