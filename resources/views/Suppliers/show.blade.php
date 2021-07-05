@@ -972,7 +972,7 @@ $menu = false ;
                                 <div class="tab-pane active" id="tab2-1">
                                     <div class="shop-default-banner banner d-flex align-items-center mb-5 br-xs"
                                         style="background-image: url(assets/images/shop/banner1.jpg); background-color: #FFC74E;    padding: 17.4em 8.7em 10.6em;">
-                                        <div id="branches_map" style="position: initial;overflow: inherit;"></div>
+                                        <div id="map" style="position: initial;overflow: inherit;"></div>
 
                                     </div>
                                     <div class="product-wrapper row cols-md-4 cols-sm-2 cols-2">
@@ -3449,39 +3449,8 @@ Toast.fire({
 
 
 
-<script>
-    var map;
+<script type="text/javascript" src="{{ asset('/web/js/mapInput.js')}}"></script>
 
-function initMap() {
-
-
-    var map = new google.maps.Map(document.getElementById('branches_map'), {
-        center: {
-            // lat: parseFloat(document.getElementById("lat").value),
-            // lng: parseFloat(document.getElementById("lng").value)
-            lat: 31.3540494,
-            lng: 31.6841419
-        },
-        zoom: 13
-    });
-
-
-    var clickmarker = new google.maps.Marker({
-        draggable: true
-    });
-
- 
-    google.maps.event.trigger(map, 'resize');
-map.setZoom( map.getZoom() );
- 
-}
-setTimeout(function(){
-
-    setTimeout(function(){
-        initMap();
-    },300);
-},300);
-</script>
 
 <script async
     src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBcP3JChqWSCHtsjW4e_Ug8h0htjiIhcHw&callback=initMap">
