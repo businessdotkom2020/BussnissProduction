@@ -727,9 +727,14 @@ $menu = false ;
                             </nav>
                         </div>
                         <div class="header-right">
-                            <a href="#" class="d-xl-show"><img
-                                    src="https://img.icons8.com/ios/50/000000/holding-box.png" /></i>Track Order</a>
-                            <a href="#"><i class="w-icon-sale"></i>Daily Deals</a>
+                            <a href="#" class="d-xl-show">
+                                <img src="https://img.icons8.com/ios/50/000000/holding-box.png"
+                                    style="width: 20px; margin-right: 5px; margin-left: 5px; " /></i>Create Request</a>
+                            <a href="#">
+                                <img src="https://img.icons8.com/pastel-glyph/64/000000/box--v3.png"
+                                    style="width: 20px; margin-right: 5px; margin-left: 5px; " /></i>Create Product</a>
+
+                            </i>Daily Deals</a>
                         </div>
                     </div>
                 </div>
