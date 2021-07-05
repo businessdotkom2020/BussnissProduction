@@ -9,7 +9,7 @@ $menu = false ;
 
 <style>
     #map {
-        position: fixed !important;
+        position: initial !important;
         height: 100% !important;
         width: 100% !important;
     }
