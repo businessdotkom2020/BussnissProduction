@@ -60,6 +60,7 @@
 
 
 
+        @include('includes.app_footer')
 
 
         @yield('content')
