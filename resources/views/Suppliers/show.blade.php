@@ -3474,6 +3474,7 @@ function initMap() {
 
  
 }
+initMap();
 
 </script>
 
