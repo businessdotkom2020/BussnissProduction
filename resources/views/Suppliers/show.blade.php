@@ -3443,9 +3443,7 @@ Toast.fire({
 <script src="{{ asset('vendor/main.min.js')}}"></script>
 
 
-<script async
-    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBcP3JChqWSCHtsjW4e_Ug8h0htjiIhcHw&callback=initMap">
-</script>
+
 <script>
     map = new google.maps.Map(document.getElementById('map'), {
   center: {lat: -34.397, lng: 150.644},
@@ -3453,5 +3451,7 @@ Toast.fire({
 });
 
 </script>
-
+<script async
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBcP3JChqWSCHtsjW4e_Ug8h0htjiIhcHw&callback=initMap">
+</script>
 @endpush
