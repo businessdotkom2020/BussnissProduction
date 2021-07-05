@@ -734,7 +734,7 @@ $menu = false ;
                                 <img src="https://img.icons8.com/pastel-glyph/64/000000/box--v3.png"
                                     style="width: 20px; margin-right: 5px; margin-left: 5px; " /></i>Create Product</a>
 
-                            </i>Daily Deals</a>
+
                         </div>
                     </div>
                 </div>
