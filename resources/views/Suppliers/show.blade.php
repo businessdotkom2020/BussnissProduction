@@ -99,7 +99,7 @@ $menu = false ;
                 <div class="header-left mr-md-4">
                     <a href="#" class="mobile-menu-toggle  w-icon-hamburger">
                     </a>
-                    <a href="demo1.html" class="logo ml-lg-0">
+                    <a href="{{url('/')}}" class="logo ml-lg-0">
                         <img src="{{ asset('/web/images/logo.png')}}" alt="logo" width="240" height="45">
                     </a>
                     <form method="get" action="#"
