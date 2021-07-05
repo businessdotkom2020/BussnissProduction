@@ -14,7 +14,7 @@ $menu = false ;
         };
         (function (d) {
             var wf = d.createElement('script'), s = d.scripts[0];
-            wf.src = 'assets/js/webfont.js';
+            wf.src = {{ asset('vendor//webfont.js')}};
             wf.async = true;
             s.parentNode.insertBefore(wf, s);
         })(document);
@@ -1016,12 +1016,13 @@ $menu = false ;
                     <div class="main-content">
                         <div class="store store-banner mb-4">
                             <figure class="store-media">
-                                <img src="https://portotheme.com/html/wolmart/assets/images/vendor/dokan/1.jpg" alt="Vendor" width="930" height="446"
-                                    style="background-color: #414960;">
+                                <img src="https://portotheme.com/html/wolmart/assets/images/vendor/dokan/1.jpg"
+                                    alt="Vendor" width="930" height="446" style="background-color: #414960;">
                             </figure>
                             <div class="store-content">
                                 <figure class="seller-brand">
-                                    <img src="https://portotheme.com/html/wolmart/assets/images/vendor/brand/1.jpg" alt="Brand" width="80" height="80">
+                                    <img src="https://portotheme.com/html/wolmart/assets/images/vendor/brand/1.jpg"
+                                        alt="Brand" width="80" height="80">
                                 </figure>
                                 <h4 class="store-title">Vendor 1</h4>
                                 <ul class="seller-info-list list-style-none mb-6">
