@@ -1501,8 +1501,9 @@ $menu = false ;
                                             <div class="store store-grid">
                                                 <div class="store-header">
                                                     <figure class="store-banner">
-                                                        <img src="assets/images/vendor/dokan/2.jpg" alt="Vendor"
-                                                            width="400" height="194" style="background-color: #6C6C6C">
+                                                        <img src="https://portotheme.com/html/wolmart/assets/images/vendor/dokan/2.jpg"
+                                                            alt="Vendor" width="400" height="194"
+                                                            style="background-color: #6C6C6C">
                                                     </figure>
                                                 </div>
                                                 <!-- End of Store Header -->
@@ -1529,8 +1530,8 @@ $menu = false ;
                                                 <!-- End of Store Content -->
                                                 <div class="store-footer">
                                                     <figure class="seller-brand">
-                                                        <img src="assets/images/vendor/brand/2.jpg" alt="Brand"
-                                                            width="80" height="80">
+                                                        <img src="https://portotheme.com/html/wolmart/assets/images/vendor/brand/2.jpg"
+                                                            alt="Brand" width="80" height="80">
                                                     </figure>
                                                     <a href="vendor-dokan-store.html"
                                                         class="btn btn-dark btn-link btn-underline btn-icon-right btn-visit">Visit
@@ -1544,8 +1545,9 @@ $menu = false ;
                                             <div class="store store-grid">
                                                 <div class="store-header">
                                                     <figure class="store-banner">
-                                                        <img src="assets/images/vendor/dokan/3.jpg" alt="Vendor"
-                                                            width="400" height="194" style="background-color: #A891BF">
+                                                        <img src="https://portotheme.com/html/wolmart/assets/images/vendor/dokan/3.jpg"
+                                                            alt="Vendor" width="400" height="194"
+                                                            style="background-color: #A891BF">
                                                     </figure>
                                                 </div>
                                                 <!-- End of Store Header -->
@@ -1572,8 +1574,8 @@ $menu = false ;
                                                 <!-- End of Store Content -->
                                                 <div class="store-footer">
                                                     <figure class="seller-brand">
-                                                        <img src="assets/images/vendor/brand/3.jpg" alt="Brand"
-                                                            width="80" height="80">
+                                                        <img src="https://portotheme.com/html/wolmart/assets/images/vendor/brand/3.jpg"
+                                                            alt="Brand" width="80" height="80">
                                                     </figure>
                                                     <a href="vendor-dokan-store.html"
                                                         class="btn btn-dark btn-link btn-underline btn-icon-right btn-visit">Visit
@@ -1587,8 +1589,9 @@ $menu = false ;
                                             <div class="store store-grid">
                                                 <div class="store-header">
                                                     <figure class="store-banner">
-                                                        <img src="assets/images/vendor/dokan/4.jpg" alt="Vendor"
-                                                            width="400" height="194" style="background-color: #28292D">
+                                                        <img src="https://portotheme.com/html/wolmart/assets/images/vendor/dokan/4.jpg"
+                                                            alt="Vendor" width="400" height="194"
+                                                            style="background-color: #28292D">
                                                     </figure>
                                                 </div>
                                                 <!-- End of Store Header -->
@@ -1615,8 +1618,8 @@ $menu = false ;
                                                 <!-- End of Store Content -->
                                                 <div class="store-footer">
                                                     <figure class="seller-brand">
-                                                        <img src="assets/images/vendor/brand/4.jpg" alt="Brand"
-                                                            width="80" height="80">
+                                                        <img src="https://portotheme.com/html/wolmart/assets/images/vendor/brand/4.jpg"
+                                                            alt="Brand" width="80" height="80">
                                                     </figure>
                                                     <a href="vendor-dokan-store.html"
                                                         class="btn btn-dark btn-link btn-underline btn-icon-right btn-visit">Visit
@@ -1630,8 +1633,9 @@ $menu = false ;
                                             <div class="store store-grid">
                                                 <div class="store-header">
                                                     <figure class="store-banner">
-                                                        <img src="assets/images/vendor/dokan/5.jpg" alt="Vendor"
-                                                            width="400" height="194" style="background-color: #7E7D7B">
+                                                        <img src="https://portotheme.com/html/wolmart/assets/images/vendor/dokan/5.jpg"
+                                                            alt="Vendor" width="400" height="194"
+                                                            style="background-color: #7E7D7B">
                                                     </figure>
                                                 </div>
                                                 <!-- End of Store Header -->
@@ -1659,8 +1663,8 @@ $menu = false ;
                                                 <!-- End of Store Content -->
                                                 <div class="store-footer">
                                                     <figure class="seller-brand">
-                                                        <img src="assets/images/vendor/brand/5.jpg" alt="Brand"
-                                                            width="80" height="80">
+                                                        <img src="https://portotheme.com/html/wolmart/assets/images/vendor/brand/5.jpg"
+                                                            alt="Brand" width="80" height="80">
                                                     </figure>
                                                     <a href="vendor-dokan-store.html"
                                                         class="btn btn-dark btn-link btn-underline btn-icon-right btn-visit">Visit
@@ -1674,8 +1678,9 @@ $menu = false ;
                                             <div class="store store-grid">
                                                 <div class="store-header">
                                                     <figure class="store-banner">
-                                                        <img src="assets/images/vendor/dokan/6.jpg" alt="Vendor"
-                                                            width="400" height="194" style="background-color: #5B5B62">
+                                                        <img src="https://portotheme.com/html/wolmart/assets/images/vendor/dokan/6.jpg"
+                                                            alt="Vendor" width="400" height="194"
+                                                            style="background-color: #5B5B62">
                                                     </figure>
                                                 </div>
                                                 <!-- End of Store Header -->
@@ -1702,8 +1707,8 @@ $menu = false ;
                                                 <!-- End of Store Content -->
                                                 <div class="store-footer">
                                                     <figure class="seller-brand">
-                                                        <img src="assets/images/vendor/brand/6.jpg" alt="Brand"
-                                                            width="80" height="80">
+                                                        <img src="https://portotheme.com/html/wolmart/assets/images/vendor/brand/6.jpg"
+                                                            alt="Brand" width="80" height="80">
                                                     </figure>
                                                     <a href="vendor-dokan-store.html"
                                                         class="btn btn-dark btn-link btn-underline btn-icon-right btn-visit">Visit
