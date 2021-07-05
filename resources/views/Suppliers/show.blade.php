@@ -6,10 +6,10 @@ $menu = false ;
 
 
 @push('styles')
- 
 
-    <script>
-        WebFontConfig = {
+
+<script>
+    WebFontConfig = {
             google: { families: ['Poppins:400,500,600,700'] }
         };
         (function (d) {
@@ -18,22 +18,22 @@ $menu = false ;
             wf.async = true;
             s.parentNode.insertBefore(wf, s);
         })(document);
-    </script>
+</script>
 
-    <link rel="preload" href="{{ asset('vendor/fontawesome-free/webfonts/fa-regular-400.woff2')}}" as="font" type="font/woff2"
-        crossorigin="anonymous">
-    <link rel="preload" href="{{ asset('vendor/fontawesome-free/webfonts/fa-solid-900.woff2')}}" as="font" type="font/woff2"
-        crossorigin="anonymous">
+<link rel="preload" href="{{ asset('vendor/fontawesome-free/webfonts/fa-regular-400.woff2')}}" as="font"
+    type="font/woff2" crossorigin="anonymous">
+<link rel="preload" href="{{ asset('vendor/fontawesome-free/webfonts/fa-solid-900.woff2')}}" as="font" type="font/woff2"
+    crossorigin="anonymous">
 
-    <link rel="stylesheet" type="text/css" href="{{ asset('vendor/fontawesome-free/css/all.min.css')}}">
-    <link rel="stylesheet" type="text/css" href="{{ asset('vendor/animate/animate.min.css')}}">
-    <link rel="stylesheet" type="text/css" href="{{ asset('vendor/owl-carousel/owl.carousel.min.css')}}">
-    <link rel="stylesheet" type="text/css" href="{{ asset('vendor/animate/animate.min.css')}}">
-    <link rel="stylesheet" type="text/css" href="{{ asset('vendor/magnific-popup/magnific-popup.min.css')}}">
-    <link rel="stylesheet" type="text/css" href="{{ asset('vendor/css/style.min.css')}}">
+<link rel="stylesheet" type="text/css" href="{{ asset('vendor/fontawesome-free/css/all.min.css')}}">
+<link rel="stylesheet" type="text/css" href="{{ asset('vendor/animate/animate.min.css')}}">
+<link rel="stylesheet" type="text/css" href="{{ asset('vendor/owl-carousel/owl.carousel.min.css')}}">
+<link rel="stylesheet" type="text/css" href="{{ asset('vendor/animate/animate.min.css')}}">
+<link rel="stylesheet" type="text/css" href="{{ asset('vendor/magnific-popup/magnific-popup.min.css')}}">
+<link rel="stylesheet" type="text/css" href="{{ asset('vendor/style.min.css')}}">
 
 
-<link rel="stylesheet" href="{{ asset('/web/css/supplier_page.css')}}">
+
 
 @endpush
 
