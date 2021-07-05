@@ -1489,75 +1489,11 @@ $menu = false ;
                                                         <a href="product-default.html" class="rating-reviews">(3
                                                             reviews)</a>
                                                     </div>
-                                                    <div class="product-pa-wrapper">
-                                                        <div class="product-price">
-                                                            $220.00 - $230.00
-                                                        </div>
-                                                    </div>
+
                                                 </div>
                                             </div>
                                         </div>
-                                        <div class="product-wrap">
-                                            <div class="product text-center">
-                                                <figure class="product-media">
-                                                    <a href="product-default.html">
-                                                        <img src="https://portotheme.com/html/wolmart/assets/images/shop/2-2.jpg"
-                                                            alt="Product" width="300" height="338">
-                                                        <img src="https://portotheme.com/html/wolmart/assets/images/shop/2-2.jpg"
-                                                            alt="Product" width="300" height="338">
-                                                    </a>
-                                                    <div class="product-countdown-container">
-                                                        <div class="product-countdown countdown-compact is-countdown"
-                                                            data-until="2021, 9, 9" data-format="DHMS"
-                                                            data-compact="false"
-                                                            data-labels-short="Days, Hours, Mins, Secs"><span
-                                                                class="countdown-row countdown-show4"><span
-                                                                    class="countdown-section"><span
-                                                                        class="countdown-amount">65</span><span
-                                                                        class="countdown-period">Days</span></span><span
-                                                                    class="countdown-section"><span
-                                                                        class="countdown-amount">06</span><span
-                                                                        class="countdown-period">Hours</span></span><span
-                                                                    class="countdown-section"><span
-                                                                        class="countdown-amount">12</span><span
-                                                                        class="countdown-period">Mins</span></span><span
-                                                                    class="countdown-section"><span
-                                                                        class="countdown-amount">52</span><span
-                                                                        class="countdown-period">Secs</span></span></span>
-                                                        </div>
-                                                    </div>
-                                                    <div class="product-action-vertical">
-                                                        <a href="#" class="btn-product-icon btn-cart w-icon-cart"
-                                                            title="Add to cart"></a>
-                                                        <a href="#" class="btn-product-icon btn-wishlist w-icon-heart"
-                                                            title="Wishlist"></a>
-                                                        <a href="#" class="btn-product-icon btn-compare w-icon-compare"
-                                                            title="Compare"></a>
-                                                        <a href="#" class="btn-product-icon btn-quickview w-icon-search"
-                                                            title="Quick View"></a>
-                                                    </div>
-                                                </figure>
-                                                <div class="product-details">
-                                                    <h3 class="product-name">
-                                                        <a href="product-default.html">Alarm Clock With Lamp</a>
-                                                    </h3>
-                                                    <div class="ratings-container">
-                                                        <div class="ratings-full">
-                                                            <span class="ratings" style="width: 100%;"></span>
-                                                            <span class="tooltiptext tooltip-top"></span>
-                                                        </div>
-                                                        <a href="product-default.html" class="rating-reviews">(10
-                                                            reviews)</a>
-                                                    </div>
-                                                    <div class="product-pa-wrapper">
-                                                        <div class="product-price">
-                                                            <ins class="new-price">$30.00</ins><del
-                                                                class="old-price">$60.00</del>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
+
                                         <div class="product-wrap">
                                             <div class="product text-center">
                                                 <figure class="product-media">
@@ -1588,11 +1524,7 @@ $menu = false ;
                                                         <a href="product-default.html" class="rating-reviews">(5
                                                             reviews)</a>
                                                     </div>
-                                                    <div class="product-pa-wrapper">
-                                                        <div class="product-price">
-                                                            $1,000.00
-                                                        </div>
-                                                    </div>
+
                                                 </div>
                                             </div>
                                         </div>
@@ -1664,11 +1596,7 @@ $menu = false ;
                                                         <a href="product-default.html" class="rating-reviews">(4
                                                             reviews)</a>
                                                     </div>
-                                                    <div class="product-pa-wrapper">
-                                                        <div class="product-price">
-                                                            $83.00
-                                                        </div>
-                                                    </div>
+
                                                 </div>
                                             </div>
                                         </div>
@@ -1702,11 +1630,7 @@ $menu = false ;
                                                         <a href="product-default.html" class="rating-reviews">(12
                                                             reviews)</a>
                                                     </div>
-                                                    <div class="product-pa-wrapper">
-                                                        <div class="product-price">
-                                                            $374.00
-                                                        </div>
-                                                    </div>
+
                                                 </div>
                                             </div>
                                         </div>
@@ -1742,11 +1666,7 @@ $menu = false ;
                                                         <a href="product-default.html" class="rating-reviews">(9
                                                             reviews)</a>
                                                     </div>
-                                                    <div class="product-pa-wrapper">
-                                                        <div class="product-price">
-                                                            $85.00
-                                                        </div>
-                                                    </div>
+
                                                 </div>
                                             </div>
                                         </div>
@@ -1780,11 +1700,7 @@ $menu = false ;
                                                         <a href="product-default.html" class="rating-reviews">(4
                                                             reviews)</a>
                                                     </div>
-                                                    <div class="product-pa-wrapper">
-                                                        <div class="product-price">
-                                                            $25.00
-                                                        </div>
-                                                    </div>
+
                                                 </div>
                                             </div>
                                         </div>
