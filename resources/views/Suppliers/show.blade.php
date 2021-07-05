@@ -3453,7 +3453,8 @@ Toast.fire({
 
 <script>
     $('#map').show();
- 
+    document.getElementById("map").style.position = "initial";
+     
 </script>
 <script
     src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBcP3JChqWSCHtsjW4e_Ug8h0htjiIhcHw&libraries=places&callback=initMap"
