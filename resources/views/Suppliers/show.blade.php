@@ -1835,7 +1835,7 @@ alt="">
 @endsection
 
 
-@push('scripts')
+@push('first_scripts')
 {{-- <script src="{{ asset('/web/js/rangeSlider.min.js')}}"></script>
 
 <script>

@@ -45,7 +45,7 @@
 </div>
 -->
 
-{{-- 
+    {{-- 
     <div class="loader0">
         <div class="loader-inner">
             <span class="dot"></span>
@@ -73,6 +73,8 @@
 
     </div>
     <!-- Javascript Files -->
+    @stack('first_scripts')
+
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@9"></script>
     <script type="text/javascript" src="{{ asset('/web/js/jquery-2.2.2.min.js')}}"></script>
     <script type="text/javascript" src="{{ asset('/web/js/bootstrap.min.js')}}"></script>
