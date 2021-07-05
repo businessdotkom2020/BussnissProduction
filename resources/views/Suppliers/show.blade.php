@@ -39,7 +39,7 @@ $menu = false ;
                                     src="http://nouthemes.net/html/martfury/img/vendor/vendor-store.jpg" alt=""></div>
                             <div class="ps-block__container">
                                 <div class="ps-block__header">
-                                    <h4>Digitalworld us</h4>
+                                    <h4> {{ $supplier->name }}  </h4>
                                     <p>
                                         @php $rating = $supplier->average_rating ; @endphp
                                         @foreach(range(1,5) as $i)
