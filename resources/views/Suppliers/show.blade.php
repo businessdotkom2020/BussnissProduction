@@ -807,13 +807,27 @@ $menu = false ;
                                         <h3 class="widget-title"><span>Store Time</span><span class="toggle-btn"></span>
                                         </h3>
                                         <ul class="widget-body">
-                                            <li><label>Sunday</label></li>
-                                            <li><label>Monday</label></li>
-                                            <li><label>Tuesday</label></li>
-                                            <li><label>Wednesday</label></li>
-                                            <li><label>Thursday</label></li>
-                                            <li><label>Friday</label></li>
-                                            <li><label>Saturday</label></li>
+                                            <li>
+                                                <span>Monday:</span>9:00 - 10:00 pm
+                                            </li>
+                                            <li>
+                                                <span>Tuesday:</span>9:00 - 10:00 pm
+                                            </li>
+                                            <li>
+                                                <span>Wednesday:</span>9:00 - 10:00 pm
+                                            </li>
+                                            <li>
+                                                <span>Thursday:</span>9:00 - 2:00 pm
+                                            </li>
+                                            <li>
+                                                <span>Friday:</span>9:00 - 10:00 pm
+                                            </li>
+                                            <li>
+                                                <span>Saturday:</span>9:00 - 10:00 pm
+                                            </li>
+                                            <li>
+                                                <span>Sunday:</span>9:00 - 10:00 pm
+                                            </li>
                                         </ul>
                                     </div>
 
