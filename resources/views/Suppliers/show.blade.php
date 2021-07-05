@@ -3451,13 +3451,14 @@ Toast.fire({
 
 <script type="text/javascript" src="{{ asset('/web/js/branches_map.js')}}"></script>
 
-<script> 
+<script>
     $('#map').show();
     google.maps.event.trigger(map, 'resize');
 
 </script>
+<script
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBcP3JChqWSCHtsjW4e_Ug8h0htjiIhcHw&libraries=places&callback=initMap"
+    async defer></script>
 
-<script async
-    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBcP3JChqWSCHtsjW4e_Ug8h0htjiIhcHw&callback=initMap">
-</script>
+
 @endpush
