@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <!-- Css Files -->
-
+    {{-- 
     <link rel="stylesheet" href="{{ asset('/web/css/jquery.fancybox.min.css')}}">
     <link rel="stylesheet" href="{{ asset('/web/css/style.css')}}">
     <link rel="stylesheet" href="{{ asset('/web/css/last.css')}}">
@@ -26,7 +26,7 @@
     <link rel="stylesheet" href="{{ asset('/web/css/custom-general.css')}}">
 
     <!-- Favicons -->
-    <link rel="shortcut icon" href="{{ asset('/web/images/faveicon.png')}}">
+    <link rel="shortcut icon" href="{{ asset('/web/images/faveicon.png')}}"> --}}
     @stack('styles')
 
 </head>
