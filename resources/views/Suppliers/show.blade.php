@@ -1699,7 +1699,7 @@ $menu = false ;
 
                                                         <iframe
                                                             src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d109079.28871609831!2d31.798747272019444!3d31.311268392527154!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14f9dc33c907c06b%3A0xa98a32626bb2919c!2z2YHYp9ix2LPZg9mI2LHYjCDYr9mF2YrYp9i3!5e0!3m2!1sar!2seg!4v1625514870066!5m2!1sar!2seg"
-                                                            width="194" height="450" style="border:0;"
+                                                            width="450" height="194" style="border:0;"
                                                             allowfullscreen="" loading="lazy"></iframe>
                                                     </figure>
                                                 </div>
