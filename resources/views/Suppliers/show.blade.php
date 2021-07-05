@@ -3453,8 +3453,7 @@ Toast.fire({
 
 <script>
     $('#map').show();
-    google.maps.event.trigger(map, 'resize');
-
+ 
 </script>
 <script
     src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBcP3JChqWSCHtsjW4e_Ug8h0htjiIhcHw&libraries=places&callback=initMap"
