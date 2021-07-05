@@ -67,174 +67,193 @@ $menu = false ;
                         <a class="sidebar-close" href="#"><i class="close-icon"></i></a>
                         <a href="#" class="sidebar-toggle"><i class="fas fa-chevron-right"></i></a>
                         <div class="sidebar-content">
-                            <div class="pin-wrapper" style="height: 2121.76px;"><div class="sticky-sidebar" style="border-bottom: 0px none rgb(102, 102, 102); width: 280px;">
-                                <div class="widget widget-collapsible widget-categories">
-                                    <h3 class="widget-title"><span>All Categories</span><span class="toggle-btn"></span></h3>
-                                    <ul class="widget-body filter-items search-ul">
-                                        <li><a href="#">Clothing</a></li>
-                                        <li><a href="#">Computers</a></li>
-                                        <li><a href="#">Electronics</a></li>
-                                        <li><a href="#">Fashion</a></li>
-                                        <li><a href="#">Furniture</a></li>
-                                        <li><a href="#">Games</a></li>
-                                        <li><a href="#">Kitchen</a></li>
-                                        <li><a href="#">Shoes</a></li>
-                                        <li><a href="#">Sports</a></li>
-                                    </ul>
-                                </div>
-                                <!-- End of Widget -->
-                                <div class="widget widget-collapsible widget-contact">
-                                    <h3 class="widget-title"><span>Contact Vendor</span><span class="toggle-btn"></span></h3>
-                                    <div class="widget-body">
-                                        <input type="text" class="form-control" name="name" id="name" placeholder="Your Name">
-                                        <input type="text" class="form-control" name="email" id="email_1" placeholder="you@example.com">
-                                        <textarea name="message" maxlength="1000" cols="25" rows="6" placeholder="Type your messsage..." class="form-control" required="required"></textarea>
-                                        <a href="#" class="btn btn-dark btn-rounded">Send Message</a>
+                            <div class="pin-wrapper" style="height: 2121.76px;">
+                                <div class="sticky-sidebar"
+                                    style="border-bottom: 0px none rgb(102, 102, 102); width: 280px;">
+                                    <div class="widget widget-collapsible widget-categories">
+                                        <h3 class="widget-title"><span>All Categories</span><span
+                                                class="toggle-btn"></span></h3>
+                                        <ul class="widget-body filter-items search-ul">
+                                            <li><a href="#">Clothing</a></li>
+                                            <li><a href="#">Computers</a></li>
+                                            <li><a href="#">Electronics</a></li>
+                                            <li><a href="#">Fashion</a></li>
+                                            <li><a href="#">Furniture</a></li>
+                                            <li><a href="#">Games</a></li>
+                                            <li><a href="#">Kitchen</a></li>
+                                            <li><a href="#">Shoes</a></li>
+                                            <li><a href="#">Sports</a></li>
+                                        </ul>
                                     </div>
-                                </div>
-                                <!-- End of Widget -->
-                                <div class="widget widget-collapsible widget-time">
-                                    <h3 class="widget-title"><span>Store Time</span><span class="toggle-btn"></span></h3>
-                                    <ul class="widget-body">
-                                        <li><label>Sunday</label></li>
-                                        <li><label>Monday</label></li>
-                                        <li><label>Tuesday</label></li>
-                                        <li><label>Wednesday</label></li>
-                                        <li><label>Thursday</label></li>
-                                        <li><label>Friday</label></li>
-                                        <li><label>Saturday</label></li>
-                                    </ul>
-                                </div>
-                                <!-- End of Widget -->
-                                <div class="widget widget-collapsible widget-products">
-                                    <h3 class="widget-title"><span>Best Selling</span><span class="toggle-btn"></span></h3>
-                                    <div class="widget-body">
-                                        <div class="product product-widget">
-                                            <figure class="product-media">
-                                                <a href="product-default.html">
-                                                    <img src="assets/images/shop/1.jpg" alt="Product" width="100" height="106">
-                                                </a>
-                                            </figure>
-                                            <div class="product-details">
-                                                <h4 class="product-name">
-                                                    <a href="product-default.html">3D Television</a>
-                                                </h4>
-                                                <div class="ratings-container">
-                                                    <div class="ratings-full">
-                                                        <span class="ratings" style="width: 80%;"></span>
-                                                        <span class="tooltiptext tooltip-top"></span>
-                                                    </div>
-                                                </div>
-                                                <div class="product-price">$220.00</div>
-                                            </div>
-                                        </div>
-                                        <div class="product product-widget">
-                                            <figure class="product-media">
-                                                <a href="product-default.html">
-                                                    <img src="assets/images/shop/2-1.jpg" alt="Product" width="100" height="106">
-                                                </a>
-                                            </figure>
-                                            <div class="product-details">
-                                                <h4 class="product-name">
-                                                    <a href="product-default.html">Alarm Clock With Lamp</a>
-                                                </h4>
-                                                <div class="ratings-container">
-                                                    <div class="ratings-full">
-                                                        <span class="ratings" style="width: 80%;"></span>
-                                                        <span class="tooltiptext tooltip-top"></span>
-                                                    </div>
-                                                </div>
-                                                <div class="product-price">
-                                                    <ins class="new-price">$30.00</ins><del class="old-price">$60.00</del>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="product product-widget">
-                                            <figure class="product-media">
-                                                <a href="product-default.html">
-                                                    <img src="assets/images/shop/3.jpg" alt="Product" width="100" height="106">
-                                                </a>
-                                            </figure>
-                                            <div class="product-details">
-                                                <h4 class="product-name">
-                                                    <a href="product-default.html">Apple Laptop</a>
-                                                </h4>
-                                                <div class="ratings-container">
-                                                    <div class="ratings-full">
-                                                        <span class="ratings" style="width: 60%;"></span>
-                                                        <span class="tooltiptext tooltip-top"></span>
-                                                    </div>
-                                                </div>
-                                                <div class="product-price">$1,000.00</div>
-                                            </div>
+                                    <!-- End of Widget -->
+                                    <div class="widget widget-collapsible widget-contact">
+                                        <h3 class="widget-title"><span>Contact Vendor</span><span
+                                                class="toggle-btn"></span></h3>
+                                        <div class="widget-body">
+                                            <input type="text" class="form-control" name="name" id="name"
+                                                placeholder="Your Name">
+                                            <input type="text" class="form-control" name="email" id="email_1"
+                                                placeholder="you@example.com">
+                                            <textarea name="message" maxlength="1000" cols="25" rows="6"
+                                                placeholder="Type your messsage..." class="form-control"
+                                                required="required"></textarea>
+                                            <a href="#" class="btn btn-dark btn-rounded">Send Message</a>
                                         </div>
                                     </div>
-                                </div>
-                                <!-- End of Widget -->
-                                <div class="widget widget-collapsible widget-products">
-                                    <h3 class="widget-title"><span>Top Rated</span><span class="toggle-btn"></span></h3>
-                                    <div class="widget-body">
-                                        <div class="product product-widget">
-                                            <figure class="product-media">
-                                                <a href="product-default.html">
-                                                    <img src="assets/images/shop/12.jpg" alt="Product" width="100" height="106">
-                                                </a>
-                                            </figure>
-                                            <div class="product-details">
-                                                <h4 class="product-name">
-                                                    <a href="product-default.html">Classic Simple Backpack</a>
-                                                </h4>
-                                                <div class="ratings-container">
-                                                    <div class="ratings-full">
-                                                        <span class="ratings" style="width: 100%;"></span>
-                                                        <span class="tooltiptext tooltip-top"></span>
+                                    <!-- End of Widget -->
+                                    <div class="widget widget-collapsible widget-time">
+                                        <h3 class="widget-title"><span>Store Time</span><span class="toggle-btn"></span>
+                                        </h3>
+                                        <ul class="widget-body">
+                                            <li><label>Sunday</label></li>
+                                            <li><label>Monday</label></li>
+                                            <li><label>Tuesday</label></li>
+                                            <li><label>Wednesday</label></li>
+                                            <li><label>Thursday</label></li>
+                                            <li><label>Friday</label></li>
+                                            <li><label>Saturday</label></li>
+                                        </ul>
+                                    </div>
+                                    <!-- End of Widget -->
+                                    <div class="widget widget-collapsible widget-products">
+                                        <h3 class="widget-title"><span>Best Selling</span><span
+                                                class="toggle-btn"></span></h3>
+                                        <div class="widget-body">
+                                            <div class="product product-widget">
+                                                <figure class="product-media">
+                                                    <a href="product-default.html">
+                                                        <img src="assets/images/shop/1.jpg" alt="Product" width="100"
+                                                            height="106">
+                                                    </a>
+                                                </figure>
+                                                <div class="product-details">
+                                                    <h4 class="product-name">
+                                                        <a href="product-default.html">3D Television</a>
+                                                    </h4>
+                                                    <div class="ratings-container">
+                                                        <div class="ratings-full">
+                                                            <span class="ratings" style="width: 80%;"></span>
+                                                            <span class="tooltiptext tooltip-top"></span>
+                                                        </div>
                                                     </div>
+                                                    <div class="product-price">$220.00</div>
                                                 </div>
-                                                <div class="product-price">$85.00</div>
                                             </div>
-                                        </div>
-                                        <div class="product product-widget">
-                                            <figure class="product-media">
-                                                <a href="product-default.html">
-                                                    <img src="assets/images/shop/13.jpg" alt="Product" width="100" height="106">
-                                                </a>
-                                            </figure>
-                                            <div class="product-details">
-                                                <h4 class="product-name">
-                                                    <a href="product-default.html">Smart Watch</a>
-                                                </h4>
-                                                <div class="ratings-container">
-                                                    <div class="ratings-full">
-                                                        <span class="ratings" style="width: 100%;"></span>
-                                                        <span class="tooltiptext tooltip-top"></span>
+                                            <div class="product product-widget">
+                                                <figure class="product-media">
+                                                    <a href="product-default.html">
+                                                        <img src="assets/images/shop/2-1.jpg" alt="Product" width="100"
+                                                            height="106">
+                                                    </a>
+                                                </figure>
+                                                <div class="product-details">
+                                                    <h4 class="product-name">
+                                                        <a href="product-default.html">Alarm Clock With Lamp</a>
+                                                    </h4>
+                                                    <div class="ratings-container">
+                                                        <div class="ratings-full">
+                                                            <span class="ratings" style="width: 80%;"></span>
+                                                            <span class="tooltiptext tooltip-top"></span>
+                                                        </div>
+                                                    </div>
+                                                    <div class="product-price">
+                                                        <ins class="new-price">$30.00</ins><del
+                                                            class="old-price">$60.00</del>
                                                     </div>
                                                 </div>
-                                                <div class="product-price">$90.00</div>
                                             </div>
-                                        </div>
-                                        <div class="product product-widget">
-                                            <figure class="product-media">
-                                                <a href="product-default.html">
-                                                    <img src="assets/images/shop/20.jpg" alt="Product" width="100" height="106">
-                                                </a>
-                                            </figure>
-                                            <div class="product-details">
-                                                <h4 class="product-name">
-                                                    <a href="product-default.html">Pencil Case</a>
-                                                </h4>
-                                                <div class="ratings-container">
-                                                    <div class="ratings-full">
-                                                        <span class="ratings" style="width: 100%;"></span>
-                                                        <span class="tooltiptext tooltip-top"></span>
+                                            <div class="product product-widget">
+                                                <figure class="product-media">
+                                                    <a href="product-default.html">
+                                                        <img src="assets/images/shop/3.jpg" alt="Product" width="100"
+                                                            height="106">
+                                                    </a>
+                                                </figure>
+                                                <div class="product-details">
+                                                    <h4 class="product-name">
+                                                        <a href="product-default.html">Apple Laptop</a>
+                                                    </h4>
+                                                    <div class="ratings-container">
+                                                        <div class="ratings-full">
+                                                            <span class="ratings" style="width: 60%;"></span>
+                                                            <span class="tooltiptext tooltip-top"></span>
+                                                        </div>
                                                     </div>
+                                                    <div class="product-price">$1,000.00</div>
                                                 </div>
-                                                <div class="product-price">$54.00</div>
                                             </div>
                                         </div>
                                     </div>
+                                    <!-- End of Widget -->
+                                    <div class="widget widget-collapsible widget-products">
+                                        <h3 class="widget-title"><span>Top Rated</span><span class="toggle-btn"></span>
+                                        </h3>
+                                        <div class="widget-body">
+                                            <div class="product product-widget">
+                                                <figure class="product-media">
+                                                    <a href="product-default.html">
+                                                        <img src="assets/images/shop/12.jpg" alt="Product" width="100"
+                                                            height="106">
+                                                    </a>
+                                                </figure>
+                                                <div class="product-details">
+                                                    <h4 class="product-name">
+                                                        <a href="product-default.html">Classic Simple Backpack</a>
+                                                    </h4>
+                                                    <div class="ratings-container">
+                                                        <div class="ratings-full">
+                                                            <span class="ratings" style="width: 100%;"></span>
+                                                            <span class="tooltiptext tooltip-top"></span>
+                                                        </div>
+                                                    </div>
+                                                    <div class="product-price">$85.00</div>
+                                                </div>
+                                            </div>
+                                            <div class="product product-widget">
+                                                <figure class="product-media">
+                                                    <a href="product-default.html">
+                                                        <img src="assets/images/shop/13.jpg" alt="Product" width="100"
+                                                            height="106">
+                                                    </a>
+                                                </figure>
+                                                <div class="product-details">
+                                                    <h4 class="product-name">
+                                                        <a href="product-default.html">Smart Watch</a>
+                                                    </h4>
+                                                    <div class="ratings-container">
+                                                        <div class="ratings-full">
+                                                            <span class="ratings" style="width: 100%;"></span>
+                                                            <span class="tooltiptext tooltip-top"></span>
+                                                        </div>
+                                                    </div>
+                                                    <div class="product-price">$90.00</div>
+                                                </div>
+                                            </div>
+                                            <div class="product product-widget">
+                                                <figure class="product-media">
+                                                    <a href="product-default.html">
+                                                        <img src="assets/images/shop/20.jpg" alt="Product" width="100"
+                                                            height="106">
+                                                    </a>
+                                                </figure>
+                                                <div class="product-details">
+                                                    <h4 class="product-name">
+                                                        <a href="product-default.html">Pencil Case</a>
+                                                    </h4>
+                                                    <div class="ratings-container">
+                                                        <div class="ratings-full">
+                                                            <span class="ratings" style="width: 100%;"></span>
+                                                            <span class="tooltiptext tooltip-top"></span>
+                                                        </div>
+                                                    </div>
+                                                    <div class="product-price">$54.00</div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- End of Widget -->
                                 </div>
-                                <!-- End of Widget -->
-                            </div></div>
+                            </div>
                         </div>
                     </aside>
                     <!-- End of Sidebar -->
@@ -242,7 +261,8 @@ $menu = false ;
                     <div class="main-content">
                         <div class="store store-banner mb-4">
                             <figure class="store-media">
-                                <img src="assets/images/vendor/dokan/1.jpg" alt="Vendor" width="930" height="446" style="background-color: #414960;">
+                                <img src="assets/images/vendor/dokan/1.jpg" alt="Vendor" width="930" height="446"
+                                    style="background-color: #414960;">
                             </figure>
                             <div class="store-content">
                                 <figure class="seller-brand">
@@ -292,10 +312,14 @@ $menu = false ;
                                             <img src="assets/images/shop/1.jpg" alt="Product" width="300" height="338">
                                         </a>
                                         <div class="product-action-vertical">
-                                            <a href="#" class="btn-product-icon btn-cart w-icon-cart" title="Add to cart"></a>
-                                            <a href="#" class="btn-product-icon btn-wishlist w-icon-heart" title="Wishlist"></a>
-                                            <a href="#" class="btn-product-icon btn-compare w-icon-compare" title="Compare"></a>
-                                            <a href="#" class="btn-product-icon btn-quickview w-icon-search" title="Quick View"></a>
+                                            <a href="#" class="btn-product-icon btn-cart w-icon-cart"
+                                                title="Add to cart"></a>
+                                            <a href="#" class="btn-product-icon btn-wishlist w-icon-heart"
+                                                title="Wishlist"></a>
+                                            <a href="#" class="btn-product-icon btn-compare w-icon-compare"
+                                                title="Compare"></a>
+                                            <a href="#" class="btn-product-icon btn-quickview w-icon-search"
+                                                title="Quick View"></a>
                                         </div>
                                     </figure>
                                     <div class="product-details">
@@ -321,17 +345,38 @@ $menu = false ;
                                 <div class="product text-center">
                                     <figure class="product-media">
                                         <a href="product-default.html">
-                                            <img src="assets/images/shop/2-1.jpg" alt="Product" width="300" height="338">
-                                            <img src="assets/images/shop/2-2.jpg" alt="Product" width="300" height="338">
+                                            <img src="assets/images/shop/2-1.jpg" alt="Product" width="300"
+                                                height="338">
+                                            <img src="assets/images/shop/2-2.jpg" alt="Product" width="300"
+                                                height="338">
                                         </a>
                                         <div class="product-countdown-container">
-                                            <div class="product-countdown countdown-compact is-countdown" data-until="2021, 9, 9" data-format="DHMS" data-compact="false" data-labels-short="Days, Hours, Mins, Secs"><span class="countdown-row countdown-show4"><span class="countdown-section"><span class="countdown-amount">65</span><span class="countdown-period">Days</span></span><span class="countdown-section"><span class="countdown-amount">06</span><span class="countdown-period">Hours</span></span><span class="countdown-section"><span class="countdown-amount">30</span><span class="countdown-period">Mins</span></span><span class="countdown-section"><span class="countdown-amount">08</span><span class="countdown-period">Secs</span></span></span></div>
+                                            <div class="product-countdown countdown-compact is-countdown"
+                                                data-until="2021, 9, 9" data-format="DHMS" data-compact="false"
+                                                data-labels-short="Days, Hours, Mins, Secs"><span
+                                                    class="countdown-row countdown-show4"><span
+                                                        class="countdown-section"><span
+                                                            class="countdown-amount">65</span><span
+                                                            class="countdown-period">Days</span></span><span
+                                                        class="countdown-section"><span
+                                                            class="countdown-amount">06</span><span
+                                                            class="countdown-period">Hours</span></span><span
+                                                        class="countdown-section"><span
+                                                            class="countdown-amount">30</span><span
+                                                            class="countdown-period">Mins</span></span><span
+                                                        class="countdown-section"><span
+                                                            class="countdown-amount">08</span><span
+                                                            class="countdown-period">Secs</span></span></span></div>
                                         </div>
                                         <div class="product-action-vertical">
-                                            <a href="#" class="btn-product-icon btn-cart w-icon-cart" title="Add to cart"></a>
-                                            <a href="#" class="btn-product-icon btn-wishlist w-icon-heart" title="Wishlist"></a>
-                                            <a href="#" class="btn-product-icon btn-compare w-icon-compare" title="Compare"></a>
-                                            <a href="#" class="btn-product-icon btn-quickview w-icon-search" title="Quick View"></a>
+                                            <a href="#" class="btn-product-icon btn-cart w-icon-cart"
+                                                title="Add to cart"></a>
+                                            <a href="#" class="btn-product-icon btn-wishlist w-icon-heart"
+                                                title="Wishlist"></a>
+                                            <a href="#" class="btn-product-icon btn-compare w-icon-compare"
+                                                title="Compare"></a>
+                                            <a href="#" class="btn-product-icon btn-quickview w-icon-search"
+                                                title="Quick View"></a>
                                         </div>
                                     </figure>
                                     <div class="product-details">
@@ -360,10 +405,14 @@ $menu = false ;
                                             <img src="assets/images/shop/3.jpg" alt="Product" width="300" height="338">
                                         </a>
                                         <div class="product-action-vertical">
-                                            <a href="#" class="btn-product-icon btn-cart w-icon-cart" title="Add to cart"></a>
-                                            <a href="#" class="btn-product-icon btn-wishlist w-icon-heart" title="Wishlist"></a>
-                                            <a href="#" class="btn-product-icon btn-compare w-icon-compare" title="Compare"></a>
-                                            <a href="#" class="btn-product-icon btn-quickview w-icon-search" title="Quick View"></a>
+                                            <a href="#" class="btn-product-icon btn-cart w-icon-cart"
+                                                title="Add to cart"></a>
+                                            <a href="#" class="btn-product-icon btn-wishlist w-icon-heart"
+                                                title="Wishlist"></a>
+                                            <a href="#" class="btn-product-icon btn-compare w-icon-compare"
+                                                title="Compare"></a>
+                                            <a href="#" class="btn-product-icon btn-quickview w-icon-search"
+                                                title="Quick View"></a>
                                         </div>
                                     </figure>
                                     <div class="product-details">
@@ -392,10 +441,14 @@ $menu = false ;
                                             <img src="assets/images/shop/4.jpg" alt="Product" width="300" height="338">
                                         </a>
                                         <div class="product-action-vertical">
-                                            <a href="#" class="btn-product-icon btn-cart w-icon-cart" title="Add to cart"></a>
-                                            <a href="#" class="btn-product-icon btn-wishlist w-icon-heart" title="Wishlist"></a>
-                                            <a href="#" class="btn-product-icon btn-compare w-icon-compare" title="Compare"></a>
-                                            <a href="#" class="btn-product-icon btn-quickview w-icon-search" title="Quick View"></a>
+                                            <a href="#" class="btn-product-icon btn-cart w-icon-cart"
+                                                title="Add to cart"></a>
+                                            <a href="#" class="btn-product-icon btn-wishlist w-icon-heart"
+                                                title="Wishlist"></a>
+                                            <a href="#" class="btn-product-icon btn-compare w-icon-compare"
+                                                title="Compare"></a>
+                                            <a href="#" class="btn-product-icon btn-quickview w-icon-search"
+                                                title="Quick View"></a>
                                         </div>
                                     </figure>
                                     <div class="product-details">
@@ -424,10 +477,14 @@ $menu = false ;
                                             <img src="assets/images/shop/5.jpg" alt="Product" width="300" height="338">
                                         </a>
                                         <div class="product-action-vertical">
-                                            <a href="#" class="btn-product-icon btn-cart w-icon-cart" title="Add to cart"></a>
-                                            <a href="#" class="btn-product-icon btn-wishlist w-icon-heart" title="Wishlist"></a>
-                                            <a href="#" class="btn-product-icon btn-compare w-icon-compare" title="Compare"></a>
-                                            <a href="#" class="btn-product-icon btn-quickview w-icon-search" title="Quick View"></a>
+                                            <a href="#" class="btn-product-icon btn-cart w-icon-cart"
+                                                title="Add to cart"></a>
+                                            <a href="#" class="btn-product-icon btn-wishlist w-icon-heart"
+                                                title="Wishlist"></a>
+                                            <a href="#" class="btn-product-icon btn-compare w-icon-compare"
+                                                title="Compare"></a>
+                                            <a href="#" class="btn-product-icon btn-quickview w-icon-search"
+                                                title="Quick View"></a>
                                         </div>
                                     </figure>
                                     <div class="product-details">
@@ -456,10 +513,14 @@ $menu = false ;
                                             <img src="assets/images/shop/6.jpg" alt="Product" width="300" height="338">
                                         </a>
                                         <div class="product-action-vertical">
-                                            <a href="#" class="btn-product-icon btn-cart w-icon-cart" title="Add to cart"></a>
-                                            <a href="#" class="btn-product-icon btn-wishlist w-icon-heart" title="Wishlist"></a>
-                                            <a href="#" class="btn-product-icon btn-compare w-icon-compare" title="Compare"></a>
-                                            <a href="#" class="btn-product-icon btn-quickview w-icon-search" title="Quick View"></a>
+                                            <a href="#" class="btn-product-icon btn-cart w-icon-cart"
+                                                title="Add to cart"></a>
+                                            <a href="#" class="btn-product-icon btn-wishlist w-icon-heart"
+                                                title="Wishlist"></a>
+                                            <a href="#" class="btn-product-icon btn-compare w-icon-compare"
+                                                title="Compare"></a>
+                                            <a href="#" class="btn-product-icon btn-quickview w-icon-search"
+                                                title="Quick View"></a>
                                         </div>
                                     </figure>
                                     <div class="product-details">
@@ -485,14 +546,20 @@ $menu = false ;
                                 <div class="product text-center">
                                     <figure class="product-media">
                                         <a href="product-default.html">
-                                            <img src="assets/images/shop/7-1.jpg" alt="Product" width="300" height="338">
-                                            <img src="assets/images/shop/7-2.jpg" alt="Product" width="300" height="338">
+                                            <img src="assets/images/shop/7-1.jpg" alt="Product" width="300"
+                                                height="338">
+                                            <img src="assets/images/shop/7-2.jpg" alt="Product" width="300"
+                                                height="338">
                                         </a>
                                         <div class="product-action-vertical">
-                                            <a href="#" class="btn-product-icon btn-cart w-icon-cart" title="Add to cart"></a>
-                                            <a href="#" class="btn-product-icon btn-wishlist w-icon-heart" title="Wishlist"></a>
-                                            <a href="#" class="btn-product-icon btn-compare w-icon-compare" title="Compare"></a>
-                                            <a href="#" class="btn-product-icon btn-quickview w-icon-search" title="Quick View"></a>
+                                            <a href="#" class="btn-product-icon btn-cart w-icon-cart"
+                                                title="Add to cart"></a>
+                                            <a href="#" class="btn-product-icon btn-wishlist w-icon-heart"
+                                                title="Wishlist"></a>
+                                            <a href="#" class="btn-product-icon btn-compare w-icon-compare"
+                                                title="Compare"></a>
+                                            <a href="#" class="btn-product-icon btn-quickview w-icon-search"
+                                                title="Quick View"></a>
                                         </div>
                                     </figure>
                                     <div class="product-details">
@@ -521,10 +588,14 @@ $menu = false ;
                                             <img src="assets/images/shop/8.jpg" alt="Product" width="300" height="338">
                                         </a>
                                         <div class="product-action-vertical">
-                                            <a href="#" class="btn-product-icon btn-cart w-icon-cart" title="Add to cart"></a>
-                                            <a href="#" class="btn-product-icon btn-wishlist w-icon-heart" title="Wishlist"></a>
-                                            <a href="#" class="btn-product-icon btn-compare w-icon-compare" title="Compare"></a>
-                                            <a href="#" class="btn-product-icon btn-quickview w-icon-search" title="Quick View"></a>
+                                            <a href="#" class="btn-product-icon btn-cart w-icon-cart"
+                                                title="Add to cart"></a>
+                                            <a href="#" class="btn-product-icon btn-wishlist w-icon-heart"
+                                                title="Wishlist"></a>
+                                            <a href="#" class="btn-product-icon btn-compare w-icon-compare"
+                                                title="Compare"></a>
+                                            <a href="#" class="btn-product-icon btn-quickview w-icon-search"
+                                                title="Quick View"></a>
                                         </div>
                                     </figure>
                                     <div class="product-details">
@@ -553,10 +624,14 @@ $menu = false ;
                                             <img src="assets/images/shop/9.jpg" alt="Product" width="300" height="338">
                                         </a>
                                         <div class="product-action-vertical">
-                                            <a href="#" class="btn-product-icon btn-cart w-icon-cart" title="Add to cart"></a>
-                                            <a href="#" class="btn-product-icon btn-wishlist w-icon-heart" title="Wishlist"></a>
-                                            <a href="#" class="btn-product-icon btn-compare w-icon-compare" title="Compare"></a>
-                                            <a href="#" class="btn-product-icon btn-quickview w-icon-search" title="Quick View"></a>
+                                            <a href="#" class="btn-product-icon btn-cart w-icon-cart"
+                                                title="Add to cart"></a>
+                                            <a href="#" class="btn-product-icon btn-wishlist w-icon-heart"
+                                                title="Wishlist"></a>
+                                            <a href="#" class="btn-product-icon btn-compare w-icon-compare"
+                                                title="Compare"></a>
+                                            <a href="#" class="btn-product-icon btn-quickview w-icon-search"
+                                                title="Quick View"></a>
                                         </div>
                                     </figure>
                                     <div class="product-details">
@@ -585,10 +660,14 @@ $menu = false ;
                                             <img src="assets/images/shop/10.jpg" alt="Product" width="300" height="338">
                                         </a>
                                         <div class="product-action-vertical">
-                                            <a href="#" class="btn-product-icon btn-cart w-icon-cart" title="Add to cart"></a>
-                                            <a href="#" class="btn-product-icon btn-wishlist w-icon-heart" title="Wishlist"></a>
-                                            <a href="#" class="btn-product-icon btn-compare w-icon-compare" title="Compare"></a>
-                                            <a href="#" class="btn-product-icon btn-quickview w-icon-search" title="Quick View"></a>
+                                            <a href="#" class="btn-product-icon btn-cart w-icon-cart"
+                                                title="Add to cart"></a>
+                                            <a href="#" class="btn-product-icon btn-wishlist w-icon-heart"
+                                                title="Wishlist"></a>
+                                            <a href="#" class="btn-product-icon btn-compare w-icon-compare"
+                                                title="Compare"></a>
+                                            <a href="#" class="btn-product-icon btn-quickview w-icon-search"
+                                                title="Quick View"></a>
                                         </div>
                                     </figure>
                                     <div class="product-details">
@@ -614,14 +693,20 @@ $menu = false ;
                                 <div class="product text-center">
                                     <figure class="product-media">
                                         <a href="product-default.html">
-                                            <img src="assets/images/shop/11-1.jpg" alt="Product" width="300" height="338">
-                                            <img src="assets/images/shop/11-2.jpg" alt="Product" width="300" height="338">
+                                            <img src="assets/images/shop/11-1.jpg" alt="Product" width="300"
+                                                height="338">
+                                            <img src="assets/images/shop/11-2.jpg" alt="Product" width="300"
+                                                height="338">
                                         </a>
                                         <div class="product-action-vertical">
-                                            <a href="#" class="btn-product-icon btn-cart w-icon-cart" title="Add to cart"></a>
-                                            <a href="#" class="btn-product-icon btn-wishlist w-icon-heart" title="Wishlist"></a>
-                                            <a href="#" class="btn-product-icon btn-compare w-icon-compare" title="Compare"></a>
-                                            <a href="#" class="btn-product-icon btn-quickview w-icon-search" title="Quick View"></a>
+                                            <a href="#" class="btn-product-icon btn-cart w-icon-cart"
+                                                title="Add to cart"></a>
+                                            <a href="#" class="btn-product-icon btn-wishlist w-icon-heart"
+                                                title="Wishlist"></a>
+                                            <a href="#" class="btn-product-icon btn-compare w-icon-compare"
+                                                title="Compare"></a>
+                                            <a href="#" class="btn-product-icon btn-quickview w-icon-search"
+                                                title="Quick View"></a>
                                         </div>
                                     </figure>
                                     <div class="product-details">
@@ -650,10 +735,14 @@ $menu = false ;
                                             <img src="assets/images/shop/12.jpg" alt="Product" width="300" height="338">
                                         </a>
                                         <div class="product-action-vertical">
-                                            <a href="#" class="btn-product-icon btn-cart w-icon-cart" title="Add to cart"></a>
-                                            <a href="#" class="btn-product-icon btn-wishlist w-icon-heart" title="Wishlist"></a>
-                                            <a href="#" class="btn-product-icon btn-compare w-icon-compare" title="Compare"></a>
-                                            <a href="#" class="btn-product-icon btn-quickview w-icon-search" title="Quick View"></a>
+                                            <a href="#" class="btn-product-icon btn-cart w-icon-cart"
+                                                title="Add to cart"></a>
+                                            <a href="#" class="btn-product-icon btn-wishlist w-icon-heart"
+                                                title="Wishlist"></a>
+                                            <a href="#" class="btn-product-icon btn-compare w-icon-compare"
+                                                title="Compare"></a>
+                                            <a href="#" class="btn-product-icon btn-quickview w-icon-search"
+                                                title="Quick View"></a>
                                         </div>
                                     </figure>
                                     <div class="product-details">
@@ -1530,7 +1619,7 @@ alt="">
 @endsection
 
 
-@push('scripts')
+@push('first_scripts')
 {{-- <script src="{{ asset('/web/js/rangeSlider.min.js')}}"></script>
 
 <script>
