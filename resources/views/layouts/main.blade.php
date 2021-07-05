@@ -61,7 +61,6 @@
 
 
 
-        {{-- @include('includes.sidebar') --}}
 
         @yield('content')
 
