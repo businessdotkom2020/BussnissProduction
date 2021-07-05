@@ -1708,7 +1708,7 @@ $menu = false ;
                                                                         position: relative;
                                                                         text-align: right;
                                                                         height: 194px;
-                                                                        width: 400px;
+                                                                        width: 440px;
                                                                     }
                                                                 </style><a href="https://www.embedgooglemap.net"></a>
                                                                 <style>
@@ -1716,7 +1716,7 @@ $menu = false ;
                                                                         overflow: hidden;
                                                                         background: none !important;
                                                                         height: 194px;
-                                                                        width: 400px;
+                                                                        width: 440px;
                                                                     }
                                                                 </style>
                                                             </div>
