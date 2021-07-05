@@ -45,7 +45,7 @@
 </div>
 -->
 
-
+{{-- 
     <div class="loader0">
         <div class="loader-inner">
             <span class="dot"></span>
@@ -54,7 +54,7 @@
             </span><span class="dot dot3">
             </span><span class="dot dot4"></span>
         </div>
-    </div>
+    </div> --}}
 
     <div class="wrapper col-xs-12">
 
