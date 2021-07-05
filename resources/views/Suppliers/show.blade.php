@@ -3443,92 +3443,15 @@ Toast.fire({
 <script src="{{ asset('vendor/main.min.js')}}"></script>
 
 
-<script>
-    function initMap() {
-      var map = new google.maps.Map(document.getElementById('map'), {
-        zoom: 4,
-        center: {
-          lat: 47.852163,
-          lng: 16.526384
-        }
-      });
-  
-      var contentString1 = '<div id="content">' +
-        '<div id="siteNotice">' +
-        '</div>' +
-        '<h1>Caravan Salon</h1>' +
-        '<div>' +
-        '<p><b>Messe Düsseldorf, Arena-Straße, GERMANY, 40474 </b> <br> 25th Aug - 3rd Sept, 2017 <br> <a href="http://www.caravan-salon.com" target="_blank">http://www.caravan-salon.com/</a>    </p>' +
-        '</div>' +
-        '</div>';
-  
-      var infowindow1 = new google.maps.InfoWindow({
-        content: contentString1
-      });
-      // Caravan Salon
-      var marker1 = new google.maps.Marker({
-        position: {
-          lat: 51.263620,
-          lng: 6.735830
-        },
-        map: map
-      });
-  
-      marker1.addListener('click', function() {
-        infowindow1.open(map, marker1);
-      });
-  
-      var contentString2 = '<div id="content">' +
-        '<div id="siteNotice">' +
-        '</div>' +
-        '<h1 id="firstHeading" class="firstHeading">Thomas Gieger Pop up Caravans</h1>' +
-        '<div id="bodyContent">' +
-        '<p><b> Hummelbühel 569, 7000 Eisenstadt, Austria</b> <br> office@caravan-sharing.at <br> 00430 6769406043<br> <a href="http://www.caravan-sharing.at/" target="_blank">http://www.caravan-sharing.at/</a> </p>' +
-        '</div>' +
-        '</div>';
-  
-      var infowindow2 = new google.maps.InfoWindow({
-        content: contentString2
-      });
-      // Thomas Gieger 
-      var marker2 = new google.maps.Marker({
-        position: {
-          lat: 47.852163,
-          lng: 16.526384
-        },
-        map: map
-      });
-      marker2.addListener('click', function() {
-        infowindow2.open(map, marker2);
-      });
-  
-      var contentString3 = '<div id="content">' +
-        '<div id="siteNotice">' +
-        '</div>' +
-        '<h1>Camping and Caravaning Rostock 2017</h1>' +
-        '<div>' +
-        '<p><b> HanseMesse Rostock, Zur HanseMesse 1-2, 18106 Rostock, GERMANY </b> <br> 17th March - 19th March, 2017  </p>'
-      '</div>' +
-      '</div>';
-  
-      var infowindow3 = new google.maps.InfoWindow({
-        content: contentString3
-      });
-      // Camping and Caravaning Rostock 2017
-      var marker3 = new google.maps.Marker({
-        position: {
-          lat: 54.138845,
-          lng: 12.073279
-        },
-        map: map
-      });
-  
-      marker3.addListener('click', function() {
-        infowindow3.open(map, marker3);
-      });
-    }
+<script async
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBcP3JChqWSCHtsjW4e_Ug8h0htjiIhcHw&callback=initMap">
 </script>
-<script async defer src="https://maps.googleapis.com/maps/api/js?callback=initMap"></script>
+<script>
+    map = new google.maps.Map(document.getElementById('map'), {
+  center: {lat: -34.397, lng: 150.644},
+  zoom: 8
+});
 
+</script>
 
 @endpush
