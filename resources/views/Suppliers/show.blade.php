@@ -17,10 +17,10 @@ $menu = false ;
 <link rel="stylesheet" href="{{ asset('plugins/nouislider/nouislider.min.css')}}">
 <link rel="stylesheet" href="{{ asset('plugins/lightGallery-master/dist/css/lightgallery.min.css')}}">
 <link rel="stylesheet" href="{{ asset('plugins/jquery-bar-rating/dist/themes/fontawesome-stars.css')}}">
-<link rel="stylesheet" href="{{ asset('plugins/select2/dist/css/select2.min.css')}}">
 
 
-<link rel="stylesheet" href="{{ asset('/web/css/supplier_page.css')}}">    
+
+<link rel="stylesheet" href="{{ asset('/web/css/supplier_page.css')}}">
 
 @endpush
 
