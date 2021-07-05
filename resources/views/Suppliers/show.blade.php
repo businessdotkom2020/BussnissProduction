@@ -32,7 +32,7 @@ $menu = false ;
 <link rel="stylesheet" type="text/css" href="{{ asset('vendor/magnific-popup/magnific-popup.min.css')}}">
 <link rel="stylesheet" type="text/css" href="{{ asset('vendor/style.min.css')}}">
 
- 
+
 
 
 @endpush
@@ -3442,14 +3442,10 @@ Toast.fire({
 <!-- Main JS -->
 <script src="{{ asset('vendor/main.min.js')}}"></script>
 <script src="http://maps.google.com/maps/api/js"></script>
-  	<script src="https://cdnjs.cloudflare.com/ajax/libs/gmaps.js/0.4.24/gmaps.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gmaps.js/0.4.24/gmaps.js"></script>
+
 
 <script type="text/javascript">
-
-
-    var locations = <?php print_r(json_encode($locations)) ?>;
-
-
     var mymap = new GMaps({
       el: '#mymap',
       lat: 21.170240,
@@ -3457,19 +3453,16 @@ Toast.fire({
       zoom:6
     });
 
-
-    $.each( locations, function( index, value ){
-	    mymap.addMarker({
-	      lat: value.lat,
-	      lng: value.lng,
-	      title: value.city,
+    mymap.addMarker({
+	      lat: '54.138845',
+	      lng: '12.073279',
+	      title: 'value.city',
 	      click: function(e) {
-	        alert('This is '+value.city+', gujarat from India.');
+	        alert('This is '+'value.city'+', gujarat from India.');
 	      }
 	    });
-   });
+ 
 
-
-  </script>
+</script>
 
 @endpush
