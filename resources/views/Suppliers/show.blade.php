@@ -135,7 +135,6 @@ $menu = false ;
                     </div>
                     <a class="wishlist label-down link d-xs-show" href="wishlist.html">
                         <i class="w-icon-heart">
-                            <span class="cart-count">2</span>
                         </i>
                         <span class="wishlist-label d-lg-show">Wishlist</span>
                     </a>
@@ -145,7 +144,6 @@ $menu = false ;
                     </a>
                     <a href="#" class="cart-toggle label-down link">
                         <i class="w-icon-cart">
-                            <span class="cart-count">2</span>
                         </i>
                         <span class="cart-label">Cart</span>
                     </a>
