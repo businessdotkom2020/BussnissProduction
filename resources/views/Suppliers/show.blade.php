@@ -3471,7 +3471,8 @@ function initMap() {
     });
 
  
-
+    google.maps.event.trigger(map, 'resize');
+map.setZoom( map.getZoom() );
  
 }
 setTimeout(function(){
