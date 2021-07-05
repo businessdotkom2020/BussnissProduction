@@ -1458,7 +1458,7 @@ $menu = false ;
                                     </div>
                                 </div>
                                 <div class="tab-pane" id="tab2-2">
-                                    <div class="product-wrapper row cols-md-2 cols-sm-2 cols-2">
+                                    <div class="product-wrapper row cols-sm-3 cols-sm-2 cols-2">
                                         <div class="product-wrap">
                                             <div class="product text-center">
                                                 <figure class="product-media">
@@ -1558,11 +1558,7 @@ $menu = false ;
                                                         <a href="product-default.html" class="rating-reviews">(7
                                                             reviews)</a>
                                                     </div>
-                                                    <div class="product-pa-wrapper">
-                                                        <div class="product-price">
-                                                            $15.00
-                                                        </div>
-                                                    </div>
+
                                                 </div>
                                             </div>
                                         </div>
@@ -1734,11 +1730,7 @@ $menu = false ;
                                                         <a href="product-default.html" class="rating-reviews">(4
                                                             reviews)</a>
                                                     </div>
-                                                    <div class="product-pa-wrapper">
-                                                        <div class="product-price">
-                                                            $950.00
-                                                        </div>
-                                                    </div>
+
                                                 </div>
                                             </div>
                                         </div>
@@ -1772,11 +1764,7 @@ $menu = false ;
                                                         <a href="product-default.html" class="rating-reviews">(4
                                                             reviews)</a>
                                                     </div>
-                                                    <div class="product-pa-wrapper">
-                                                        <div class="product-price">
-                                                            $163.00
-                                                        </div>
-                                                    </div>
+
                                                 </div>
                                             </div>
                                         </div>
@@ -1812,11 +1800,7 @@ $menu = false ;
                                                         <a href="product-default.html" class="rating-reviews">(10
                                                             reviews)</a>
                                                     </div>
-                                                    <div class="product-pa-wrapper">
-                                                        <div class="product-price">
-                                                            $30.00
-                                                        </div>
-                                                    </div>
+
                                                 </div>
                                             </div>
                                         </div>
@@ -1850,11 +1834,7 @@ $menu = false ;
                                                         <a href="product-default.html" class="rating-reviews">(9
                                                             reviews)</a>
                                                     </div>
-                                                    <div class="product-pa-wrapper">
-                                                        <div class="product-price">
-                                                            $85.00
-                                                        </div>
-                                                    </div>
+
                                                 </div>
                                             </div>
                                         </div>
