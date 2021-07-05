@@ -2230,19 +2230,10 @@ $menu = false ;
 
                                 <div class="tab-pane" id="tab2-4">
 
-                                    <div id="map"></div>
                                     <div class="shop-default-banner banner d-flex align-items-center mb-5 br-xs"
                                         style="background-image: url(assets/images/shop/banner1.jpg); background-color: #FFC74E;">
-                                        <div class="banner-content">
-                                            <h4 class="banner-subtitle font-weight-bold">Accessories Collection</h4>
-                                            <h3
-                                                class="banner-title text-white text-uppercase font-weight-bolder ls-normal">
-                                                Smart Wrist
-                                                Watches</h3>
-                                            <a href="shop-banner-sidebar.html"
-                                                class="btn btn-dark btn-rounded btn-icon-right">Discover
-                                                Now<i class="w-icon-long-arrow-right"></i></a>
-                                        </div>
+                                        <div id="map"></div>
+
                                     </div>
                                     <div class="row cols-lg-2 cols-md-2 cols-sm-2 cols-1 mt-4">
 
