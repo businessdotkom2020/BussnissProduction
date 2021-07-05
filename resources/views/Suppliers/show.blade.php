@@ -810,76 +810,7 @@ $menu = false ;
                                             <li><label>Saturday</label></li>
                                         </ul>
                                     </div>
-                                    <!-- End of Widget -->
-                                    <div class="widget widget-collapsible widget-products">
-                                        <h3 class="widget-title"><span>Best Selling</span><span
-                                                class="toggle-btn"></span></h3>
-                                        <div class="widget-body">
-                                            <div class="product product-widget">
-                                                <figure class="product-media">
-                                                    <a href="product-default.html">
-                                                        <img src="https://portotheme.com/html/wolmart/assets/images/shop/1.jpg"
-                                                            alt="Product" width="100" height="106">
-                                                    </a>
-                                                </figure>
-                                                <div class="product-details">
-                                                    <h4 class="product-name">
-                                                        <a href="product-default.html">3D Television</a>
-                                                    </h4>
-                                                    <div class="ratings-container">
-                                                        <div class="ratings-full">
-                                                            <span class="ratings" style="width: 80%;"></span>
-                                                            <span class="tooltiptext tooltip-top"></span>
-                                                        </div>
-                                                    </div>
-                                                    <div class="product-price">$220.00</div>
-                                                </div>
-                                            </div>
-                                            <div class="product product-widget">
-                                                <figure class="product-media">
-                                                    <a href="product-default.html">
-                                                        <img src="assets/images/shop/2-1.jpg" alt="Product" width="100"
-                                                            height="106">
-                                                    </a>
-                                                </figure>
-                                                <div class="product-details">
-                                                    <h4 class="product-name">
-                                                        <a href="product-default.html">Alarm Clock With Lamp</a>
-                                                    </h4>
-                                                    <div class="ratings-container">
-                                                        <div class="ratings-full">
-                                                            <span class="ratings" style="width: 80%;"></span>
-                                                            <span class="tooltiptext tooltip-top"></span>
-                                                        </div>
-                                                    </div>
-                                                    <div class="product-price">
-                                                        <ins class="new-price">$30.00</ins><del
-                                                            class="old-price">$60.00</del>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="product product-widget">
-                                                <figure class="product-media">
-                                                    <a href="product-default.html">
-                                                        <img src="assets/images/shop/3.jpg" alt="Product" width="100"
-                                                            height="106">
-                                                    </a>
-                                                </figure>
-                                                <div class="product-details">
-                                                    <h4 class="product-name">
-                                                        <a href="product-default.html">Apple Laptop</a>
-                                                    </h4>
-                                                    <div class="ratings-container">
-                                                        <div class="ratings-full">
-                                                            <span class="ratings" style="width: 60%;"></span>
-                                                            <span class="tooltiptext tooltip-top"></span>
-                                                        </div>
-                                                    </div>
-                                                    <div class="product-price">$1,000.00</div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
+
                                     <!-- End of Widget -->
                                     <div class="widget widget-collapsible widget-products">
                                         <h3 class="widget-title"><span>Top Rated</span><span class="toggle-btn"></span>
@@ -888,7 +819,7 @@ $menu = false ;
                                             <div class="product product-widget">
                                                 <figure class="product-media">
                                                     <a href="product-default.html">
-                                                        <img src="assets/images/shop/12.jpg" alt="Product" width="100"
+                                                        <img src="https://portotheme.com/html/wolmart/assets/images/shop/12.jpg" alt="Product" width="100"
                                                             height="106">
                                                     </a>
                                                 </figure>
@@ -908,7 +839,7 @@ $menu = false ;
                                             <div class="product product-widget">
                                                 <figure class="product-media">
                                                     <a href="product-default.html">
-                                                        <img src="assets/images/shop/13.jpg" alt="Product" width="100"
+                                                        <img src="https://portotheme.com/html/wolmart/assets/images/shop/13.jpg" alt="Product" width="100"
                                                             height="106">
                                                     </a>
                                                 </figure>
@@ -928,7 +859,7 @@ $menu = false ;
                                             <div class="product product-widget">
                                                 <figure class="product-media">
                                                     <a href="product-default.html">
-                                                        <img src="assets/images/shop/20.jpg" alt="Product" width="100"
+                                                        <img src="https://portotheme.com/html/wolmart/assets/images/shop/20.jpg" alt="Product" width="100"
                                                             height="106">
                                                     </a>
                                                 </figure>
