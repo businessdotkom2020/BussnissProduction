@@ -35,7 +35,8 @@
                 <div class="col-lg-4 col-sm-6">
                     <div class="widget widget-about">
                         <a href="demo1.html" class="logo-footer">
-                            <img src="assets/images/logo_footer.png" alt="logo-footer" width="144" height="45" />
+                            <img src="{{ asset('/web/images/logo.png')}}" alt="logo-footer" width="240" height="45" />
+
                         </a>
                         <div class="widget-body">
                             <p class="widget-about-title">Got Question? Call us 24/7</p>
