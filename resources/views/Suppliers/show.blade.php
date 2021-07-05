@@ -1506,7 +1506,7 @@ $menu = false ;
                                                     </figure>
                                                     <a href="vendor-dokan-store.html"
                                                         class="btn btn-dark btn-link btn-underline btn-icon-right btn-visit">
-                                                        Visit Store<i class="w-icon-long-arrow-right"></i></a>
+                                                        Visit Branch<i class="w-icon-long-arrow-right"></i></a>
                                                 </div>
                                                 <!-- End of Store Footer -->
                                             </div>
@@ -1550,7 +1550,7 @@ $menu = false ;
                                                     </figure>
                                                     <a href="vendor-dokan-store.html"
                                                         class="btn btn-dark btn-link btn-underline btn-icon-right btn-visit">Visit
-                                                        Store<i class="w-icon-long-arrow-right"></i></a>
+                                                        Branch<i class="w-icon-long-arrow-right"></i></a>
                                                 </div>
                                                 <!-- End of Store Footer -->
                                             </div>
@@ -1594,7 +1594,7 @@ $menu = false ;
                                                     </figure>
                                                     <a href="vendor-dokan-store.html"
                                                         class="btn btn-dark btn-link btn-underline btn-icon-right btn-visit">Visit
-                                                        Store<i class="w-icon-long-arrow-right"></i></a>
+                                                        Branch<i class="w-icon-long-arrow-right"></i></a>
                                                 </div>
                                                 <!-- End of Store Footer -->
                                             </div>
@@ -1638,7 +1638,7 @@ $menu = false ;
                                                     </figure>
                                                     <a href="vendor-dokan-store.html"
                                                         class="btn btn-dark btn-link btn-underline btn-icon-right btn-visit">Visit
-                                                        Store<i class="w-icon-long-arrow-right"></i></a>
+                                                        Branch<i class="w-icon-long-arrow-right"></i></a>
                                                 </div>
                                                 <!-- End of Store Footer -->
                                             </div>
@@ -1683,7 +1683,7 @@ $menu = false ;
                                                     </figure>
                                                     <a href="vendor-dokan-store.html"
                                                         class="btn btn-dark btn-link btn-underline btn-icon-right btn-visit">Visit
-                                                        Store<i class="w-icon-long-arrow-right"></i></a>
+                                                        Branch<i class="w-icon-long-arrow-right"></i></a>
                                                 </div>
                                                 <!-- End of Store Footer -->
                                             </div>
@@ -1703,7 +1703,7 @@ $menu = false ;
                                                             allowfullscreen="" loading="lazy"></iframe>
                                                     </figure>
                                                 </div>
-                                          
+
                                                 <!-- End of Store Content -->
                                                 <div class="store-footer">
                                                     <figure class="seller-brand">
@@ -1712,7 +1712,7 @@ $menu = false ;
                                                     </figure>
                                                     <a href="vendor-dokan-store.html"
                                                         class="btn btn-dark btn-link btn-underline btn-icon-right btn-visit">Visit
-                                                        Store<i class="w-icon-long-arrow-right"></i></a>
+                                                        Branch<i class="w-icon-long-arrow-right"></i></a>
                                                 </div>
                                                 <!-- End of Store Footer -->
                                             </div>
