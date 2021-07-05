@@ -1460,7 +1460,7 @@ $menu = false ;
 
 
                                 <div class="tab-pane" id="tab2-2">
-                                    <div class="product-wrapper row cols-sm-5 cols-sm-2 cols-2">
+                                    <div class="product-wrapper row cols-sm-3 cols-sm-2 cols-2">
                                         <div class="product-wrap">
                                             <div class="product text-center">
                                                 <figure class="product-media">
@@ -1844,7 +1844,7 @@ $menu = false ;
                                 </div>
 
                                 <div class="tab-pane" id="tab2-3">
-                                    <div class="product-wrapper row cols-sm-3 cols-sm-2 cols-2">
+                                    <div class="product-wrapper row cols-sm-5 cols-sm-2 cols-2">
                                         <div class="product-wrap">
                                             <div class="product text-center">
                                                 <figure class="product-media">
