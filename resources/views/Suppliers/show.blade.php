@@ -3453,7 +3453,7 @@ Toast.fire({
 
 <script>
     $('#map').show();
-    document.getElementById("map").style.position = "initial";
+    $("#map").css("position","fixed !important");
      
 </script>
 <script
