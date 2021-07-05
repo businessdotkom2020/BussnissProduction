@@ -20,22 +20,7 @@ URL::forceScheme('https');
 */
 Route::get('/', 'web\HomeController@home');
 
-
-Route::get('/test_image_1', function () {
-    return \App\Models\Product::find(1123);
-
-    return view('home');
-});
-Route::get('/test_image_2', function () {
-    return \App\Models\Product::find(1126);
-
-    return view('home');
-});
-
-
-
-
-
+ 
 
 
 //////////////////// dashboard ///////////////////////////

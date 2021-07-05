@@ -35,17 +35,27 @@ $menu = false ;
                 <div class="ps-section__container">
                     <div class="ps-section__left">
                         <div class="ps-block--vendor">
-                            <div class="ps-block__thumbnail"><img src="http://nouthemes.net/html/martfury/img/vendor/vendor-store.jpg" alt=""></div>
+                            <div class="ps-block__thumbnail"><img
+                                    src="http://nouthemes.net/html/martfury/img/vendor/vendor-store.jpg" alt=""></div>
                             <div class="ps-block__container">
                                 <div class="ps-block__header">
                                     <h4>Digitalworld us</h4>
-                                    <select class="ps-rating" data-read-only="true">
-                                        <option value="1">1</option>
-                                        <option value="1">2</option>
-                                        <option value="1">3</option>
-                                        <option value="1">4</option>
-                                        <option value="2">5</option>
-                                    </select>
+                                    <p>
+                                        @php $rating = $supplier->average_rating ; @endphp
+                                        @foreach(range(1,5) as $i)
+                                        @if($rating >0)
+                                        @if($rating > 0.5)
+                                        <i class="fa fa-star active"></i>
+                                        @elseif($rating < 0.5 && $rating> 0)
+                                            <i class="fas fa-star-half"></i>
+                                            @endif
+                                            @else
+                                            <i class="fa fa-star"></i>
+                                            @endif
+                                            @php $rating--; @endphp
+
+                                            @endforeach
+                                    </p>
                                     <p><strong>85% Positive</strong> (562 rating)</p>
                                 </div><span class="ps-block__divider"></span>
                                 <div class="ps-block__content">
