@@ -3474,8 +3474,12 @@ function initMap() {
 
  
 }
-initMap();
+setTimeout(function(){
 
+    setTimeout(function(){
+        initMap();
+    },300);
+},300);
 </script>
 
 <script async
