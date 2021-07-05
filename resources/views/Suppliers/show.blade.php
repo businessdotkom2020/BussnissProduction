@@ -1703,27 +1703,7 @@ $menu = false ;
                                                             allowfullscreen="" loading="lazy"></iframe>
                                                     </figure>
                                                 </div>
-                                                <!-- End of Store Header -->
-                                                <div class="store-content">
-                                                    <h4 class="store-title">
-                                                        <a href="vendor-dokan-store.html" style=" color: blace; font-weight: bold; color: #1c0f0f; ">Vendor 6</a>
-                                                    </h4>
-                                                    <div class="ratings-container">
-                                                        <div class="ratings-full">
-                                                            <span class="ratings" style="width: 100%;"></span>
-                                                            <span class="tooltiptext tooltip-top"></span>
-                                                        </div>
-                                                    </div>
-                                                    <div class="store-address" style=" color: blace; font-weight: bold; color: #1c0f0f; ">
-                                                        Germany
-                                                    </div>
-                                                    <ul class="seller-info-list list-style-none">
-                                                        <li style=" color: blace; font-weight: bold; color: #1c0f0f; " class="store-phone">
-                                                            <a href="tel:123456789"><i
-                                                                    class="w-icon-phone"></i>123456789</a>
-                                                        </li>
-                                                    </ul>
-                                                </div>
+                                          
                                                 <!-- End of Store Content -->
                                                 <div class="store-footer">
                                                     <figure class="seller-brand">
