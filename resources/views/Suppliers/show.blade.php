@@ -1465,7 +1465,7 @@ $menu = false ;
                                         mollis. Ut justo.</p>
                                 </div>
                                 <div class="tab-pane" id="tab2-3">
-                                    <div class="row cols-lg-3 cols-md-2 cols-sm-2 cols-1 mt-4">
+                                    <div class="row cols-lg-2 cols-md-2 cols-sm-2 cols-1 mt-4">
                                         <div class="store-wrap mb-4">
                                             <div class="store store-grid">
                                                 <div class="store-header">
@@ -1693,9 +1693,35 @@ $menu = false ;
                                             <div class="store store-grid">
                                                 <div class="store-header">
                                                     <figure class="store-banner">
-                                                        <img src="https://portotheme.com/html/wolmart/assets/images/vendor/dokan/6.jpg"
+                                                        {{-- <img src="https://portotheme.com/html/wolmart/assets/images/vendor/dokan/6.jpg"
                                                             alt="Vendor" width="400" height="194"
-                                                            style="background-color: #5B5B62">
+                                                            style="background-color: #5B5B62"> --}}
+                                                        <div class="mapouter">
+                                                            <div class="gmap_canvas"><iframe width="400" height="194"
+                                                                    id="gmap_canvas"
+                                                                    src="https://maps.google.com/maps?q=Cairo&t=&z=13&ie=UTF8&iwloc=&output=embed"
+                                                                    frameborder="0" scrolling="no" marginheight="0"
+                                                                    marginwidth="0"></iframe><a
+                                                                    href="https://fmovies2.org"></a><br>
+                                                                <style>
+                                                                    .mapouter {
+                                                                        position: relative;
+                                                                        text-align: right;
+                                                                        height: 194px;
+                                                                        width: 400px;
+                                                                    }
+                                                                </style><a href="https://www.embedgooglemap.net"></a>
+                                                                <style>
+                                                                    .gmap_canvas {
+                                                                        overflow: hidden;
+                                                                        background: none !important;
+                                                                        height: 194px;
+                                                                        width: 400px;
+                                                                    }
+                                                                </style>
+                                                            </div>
+                                                        </div>
+
                                                     </figure>
                                                 </div>
                                                 <!-- End of Store Header -->
