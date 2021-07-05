@@ -38,7 +38,11 @@ $menu = false ;
 @endpush
 
 @section('content')
+<div class="shop-default-banner banner d-flex align-items-center mb-5 br-xs"
+    style="background-image: url(assets/images/shop/banner1.jpg); background-color: #FFC74E;    padding: 17.4em 8.7em 10.6em;">
+    <div id="map" style="position: initial;overflow: inherit;"></div>
 
+</div>
 <div class="page-wrapper">
     <!-- Start of Header -->
     <header class="header header-border">
@@ -970,11 +974,7 @@ $menu = false ;
                             </ul>
                             <div class="tab-content">
                                 <div class="tab-pane active" id="tab2-1">
-                                    <div class="shop-default-banner banner d-flex align-items-center mb-5 br-xs"
-                                        style="background-image: url(assets/images/shop/banner1.jpg); background-color: #FFC74E;    padding: 17.4em 8.7em 10.6em;">
-                                        <div id="map" style="position: initial;overflow: inherit;"></div>
 
-                                    </div>
                                     <div class="product-wrapper row cols-md-4 cols-sm-2 cols-2">
                                         <div class="product-wrap">
                                             <div class="product text-center">
