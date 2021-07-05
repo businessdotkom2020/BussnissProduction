@@ -2149,7 +2149,7 @@ Toast.fire({
 <script src="{{ asset('vendor/jquery.gmap/jquery.gmap.min.js')}}"></script>
 
 <!-- Main JS -->
-<script src="{{ asset('vendor/js/main.min.js')}}"></script>
+<script src="{{ asset('vendor/main.min.js')}}"></script>
 
 <script src="https://maps.googleapis.com/maps/api/js?key="></script>
 <script>
