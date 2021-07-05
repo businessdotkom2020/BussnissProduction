@@ -819,8 +819,8 @@ $menu = false ;
                                             <div class="product product-widget">
                                                 <figure class="product-media">
                                                     <a href="product-default.html">
-                                                        <img src="https://portotheme.com/html/wolmart/assets/images/shop/12.jpg" alt="Product" width="100"
-                                                            height="106">
+                                                        <img src="https://portotheme.com/html/wolmart/assets/images/shop/12.jpg"
+                                                            alt="Product" width="100" height="106">
                                                     </a>
                                                 </figure>
                                                 <div class="product-details">
@@ -839,8 +839,8 @@ $menu = false ;
                                             <div class="product product-widget">
                                                 <figure class="product-media">
                                                     <a href="product-default.html">
-                                                        <img src="https://portotheme.com/html/wolmart/assets/images/shop/13.jpg" alt="Product" width="100"
-                                                            height="106">
+                                                        <img src="https://portotheme.com/html/wolmart/assets/images/shop/13.jpg"
+                                                            alt="Product" width="100" height="106">
                                                     </a>
                                                 </figure>
                                                 <div class="product-details">
@@ -859,8 +859,8 @@ $menu = false ;
                                             <div class="product product-widget">
                                                 <figure class="product-media">
                                                     <a href="product-default.html">
-                                                        <img src="https://portotheme.com/html/wolmart/assets/images/shop/20.jpg" alt="Product" width="100"
-                                                            height="106">
+                                                        <img src="https://portotheme.com/html/wolmart/assets/images/shop/20.jpg"
+                                                            alt="Product" width="100" height="106">
                                                     </a>
                                                 </figure>
                                                 <div class="product-details">
@@ -2205,7 +2205,7 @@ alt="">
 
 
 
-<div class="modal fade" id="review-pop">
+{{-- <div class="modal fade" id="review-pop">
     <div class="modal-dialog">
         <div class="modal-content">
             <button type="button" class="close" data-dismiss="modal">&times;</button>
@@ -2216,38 +2216,37 @@ alt="">
 
                 <div class="rate-form">
                     <form action="{{route('add_product_review',['type' => 'supplier','id' => $supplier->id])}}"
-                        method="POST">
-                        @csrf
+method="POST">
+@csrf
 
 
-                        <div class="rate-stars">
-                            <div class="stars">
+<div class="rate-stars">
+    <div class="stars">
 
-                                <input class="star star-5" id="star-5" type="radio" value="1" name="stars" />
-                                <label class="star star-5" for="star-5"></label>
-                                <input class="star star-4" id="star-4" type="radio" value="2" name="stars" />
-                                <label class="star star-4" for="star-4"></label>
-                                <input class="star star-3" id="star-3" type="radio" value="3" name="stars" />
-                                <label class="star star-3" for="star-3"></label>
-                                <input class="star star-2" id="star-2" type="radio" value="4" name="stars" />
-                                <label class="star star-2" for="star-2"></label>
-                                <input class="star star-1" id="star-1" type="radio" value="5" name="stars" />
-                                <label class="star star-1" for="star-1"></label>
+        <input class="star star-5" id="star-5" type="radio" value="1" name="stars" />
+        <label class="star star-5" for="star-5"></label>
+        <input class="star star-4" id="star-4" type="radio" value="2" name="stars" />
+        <label class="star star-4" for="star-4"></label>
+        <input class="star star-3" id="star-3" type="radio" value="3" name="stars" />
+        <label class="star star-3" for="star-3"></label>
+        <input class="star star-2" id="star-2" type="radio" value="4" name="stars" />
+        <label class="star star-2" for="star-2"></label>
+        <input class="star star-1" id="star-1" type="radio" value="5" name="stars" />
+        <label class="star star-1" for="star-1"></label>
 
-                            </div>
-                        </div>
+    </div>
+</div>
 
-                        <div class="form-group">
-                            <textarea class="form-control" name="comment" required
-                                placeholder="@lang('general.add_your_review')"></textarea>
-                            <button type="submit" class="btn">@lang('general.add_review')</button>
-                        </div>
-                    </form>
-                </div>
-            </div>
-        </div><!-- /.modal-content -->
-    </div><!-- /.modal-dialog -->
-</div><!-- /.modal -->
+<div class="form-group">
+    <textarea class="form-control" name="comment" required placeholder="@lang('general.add_your_review')"></textarea>
+    <button type="submit" class="btn">@lang('general.add_review')</button>
+</div>
+</form>
+</div>
+</div>
+</div><!-- /.modal-content -->
+</div><!-- /.modal-dialog -->
+</div><!-- /.modal --> --}}
 
 
 @endsection
