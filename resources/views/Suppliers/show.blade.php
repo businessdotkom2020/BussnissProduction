@@ -936,6 +936,40 @@ $menu = false ;
                         </div>
                         <!-- End of Store Banner -->
 
+                        <div class="tab tab-nav-boxed tab-nav-underline">
+                            <ul class="nav nav-tabs" role="tablist">
+                                <li class="nav-item">
+                                    <a class="nav-link active" href="#tab2-1">Products</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="#tab2-2">Tab Success</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="#tab2-3">Tab Secondary</a>
+                                </li>
+                            </ul>
+                            <div class="tab-content">
+                                <div class="tab-pane active" id="tab2-1">
+                                    <p>Sed velit dignissim sodales ut eu sem integer. Pulvinar elementum integer enim
+                                        nquet. Pretium aenean pharetra magna ac placerat vestibulum lectus maurultrices.
+                                        Hac habitass latea dictumst volutpat. Pretium aenean pharetra magna ac quisque
+                                        sagittis purus sit. Im diet proin fermentum leo vel orci porta.</p>
+                                </div>
+                                <div class="tab-pane" id="tab2-2">
+                                    <p class="mb-0">Phasellus hendrerit. Pellentesque aliquet nibh nec urna. In nisi neque, aliquet
+                                        vel, dapibus id, mattis vel, nisi. Sed pretium, ligula sollicitudin laoreet
+                                        viverra, tortor libero sodales leo, eget blandit nunc tortor eu nibh. Nullam
+                                        mollis. Ut justo.</p>
+                                </div>
+                                <div class="tab-pane" id="tab2-3">
+                                    <p class="mb-0">Sed lectus. Praesent elementum hendrerit tortor. Sed semper lorem at felis. Vestibulum
+                                        volutpat, lacus a ultrices sagittis, mi neque euismod dui, eu pulvinar nunc
+                                        sapien ornare nisl. Phasellus pede arcu, dapibus eu, fermentum et, dapibus
+                                        sed, urna.</p>
+                                </div>
+                            </div>
+                        </div>
+
                         <h2 class="title vendor-product-title mb-4"><a href="#">Products</a></h2>
 
                         <div class="product-wrapper row cols-md-4 cols-sm-2 cols-2">
