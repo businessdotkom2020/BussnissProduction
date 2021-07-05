@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <!-- Css Files -->
-
+    {{-- 
     <link rel="stylesheet" href="{{ asset('/web/css/jquery.fancybox.min.css')}}">
     <link rel="stylesheet" href="{{ asset('/web/css/style.css')}}">
     <link rel="stylesheet" href="{{ asset('/web/css/last.css')}}">
@@ -26,7 +26,7 @@
     <link rel="stylesheet" href="{{ asset('/web/css/custom-general.css')}}">
 
     <!-- Favicons -->
-    <link rel="shortcut icon" href="{{ asset('/web/images/faveicon.png')}}">
+    <link rel="shortcut icon" href="{{ asset('/web/images/faveicon.png')}}"> --}}
     @stack('styles')
 
 </head>
@@ -45,7 +45,7 @@
 </div>
 -->
 
-{{-- 
+    {{-- 
     <div class="loader0">
         <div class="loader-inner">
             <span class="dot"></span>
@@ -61,7 +61,6 @@
 
 
 
-        @include('includes.sidebar')
 
         @yield('content')
 
@@ -73,7 +72,9 @@
 
     </div>
     <!-- Javascript Files -->
-    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@9"></script>
+    @stack('first_scripts')
+
+    {{-- <script src="https://cdn.jsdelivr.net/npm/sweetalert2@9"></script>
     <script type="text/javascript" src="{{ asset('/web/js/jquery-2.2.2.min.js')}}"></script>
     <script type="text/javascript" src="{{ asset('/web/js/bootstrap.min.js')}}"></script>
     <script type="text/javascript" src="{{ asset('/web/js/jquery.fancybox.min.js')}}"></script>
@@ -82,7 +83,7 @@
     <script type="text/javascript" src="{{ asset('/web/js/jquery.nice-select.min.js')}}"></script>
     <script type="text/javascript" src="{{ asset('/web/js/aos.js')}}"></script>
     <script type="text/javascript" src="{{ asset('/web/js/ion.rangeSlider.min.js')}}"></script>
-    <script type="text/javascript" src="{{ asset('/web/js/script.js')}}"></script>
+    <script type="text/javascript" src="{{ asset('/web/js/script.js')}}"></script> --}}
     @stack('scripts')
 
 </body>
