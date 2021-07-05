@@ -93,7 +93,7 @@ $menu = false ;
                     <a href="#" class="mobile-menu-toggle  w-icon-hamburger">
                     </a>
                     <a href="demo1.html" class="logo ml-lg-0">
-                        <img src="assets/images/logo.png" alt="logo" width="144" height="45">
+                        <img src="{{ asset('/web/images/logo.png')}}" alt="logo" width="144" height="45">
                     </a>
                     <form method="get" action="#"
                         class="header-search hs-expanded hs-round d-none d-md-flex input-wrapper">
