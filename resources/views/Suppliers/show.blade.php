@@ -970,8 +970,11 @@ $menu = false ;
                             </ul>
                             <div class="tab-content">
                                 <div class="tab-pane active" id="tab2-1">
-                                    <div id="branches_map" style="position: initial;overflow: inherit;"></div>
+                                    <div class="shop-default-banner banner d-flex align-items-center mb-5 br-xs"
+                                        style="background-image: url(assets/images/shop/banner1.jpg); background-color: #FFC74E;    padding: 17.4em 8.7em 10.6em;">
+                                        <div id="branches_map" style="position: initial;overflow: inherit;"></div>
 
+                                    </div>
                                     <div class="product-wrapper row cols-md-4 cols-sm-2 cols-2">
                                         <div class="product-wrap">
                                             <div class="product text-center">
@@ -2231,10 +2234,7 @@ $menu = false ;
 
                                 <div class="tab-pane" id="tab2-4">
 
-                                    <div class="shop-default-banner banner d-flex align-items-center mb-5 br-xs"
-                                        style="background-image: url(assets/images/shop/banner1.jpg); background-color: #FFC74E;    padding: 17.4em 8.7em 10.6em;">
 
-                                    </div>
                                     <div class="row cols-lg-2 cols-md-2 cols-sm-2 cols-1 mt-4">
 
                                         <div class="store-wrap mb-4">
