@@ -2232,7 +2232,7 @@ $menu = false ;
 
                                     <div class="shop-default-banner banner d-flex align-items-center mb-5 br-xs"
                                         style="background-image: url(assets/images/shop/banner1.jpg); background-color: #FFC74E;    padding: 17.4em 8.7em 10.6em;">
-                                        <div id="map" style="position: initial;overflow: inherit;"></div>
+                                        <div id="branches_map" style="position: initial;overflow: inherit;"></div>
 
                                     </div>
                                     <div class="row cols-lg-2 cols-md-2 cols-sm-2 cols-1 mt-4">
@@ -3455,7 +3455,7 @@ Toast.fire({
 function initMap() {
 
 
-    var map = new google.maps.Map(document.getElementById('map'), {
+    var map = new google.maps.Map(document.getElementById('branches_map'), {
         center: {
             // lat: parseFloat(document.getElementById("lat").value),
             // lng: parseFloat(document.getElementById("lng").value)
