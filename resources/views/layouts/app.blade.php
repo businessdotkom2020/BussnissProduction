@@ -60,14 +60,13 @@
 
 
 
-        @include('includes.app_footer')
 
 
         @yield('content')
 
 
 
-        @include('includes.footer')
+        @include('includes.app_footer')
 
 
 
