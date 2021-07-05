@@ -1928,7 +1928,6 @@ Toast.fire({
 <script src="{{ asset('plugins/slick-animation.min.js')}}"></script>
 <script src="{{ asset('plugins/lightGallery-master/dist/js/lightgallery-all.min.js')}}"></script>
 <script src="{{ asset('plugins/sticky-sidebar/dist/sticky-sidebar.min.js')}}"></script>
-<script src="{{ asset('plugins/select2/dist/js/select2.full.min.js')}}"></script>
 <script src="{{ asset('plugins/gmap3.min.js')}}"></script>
 <!-- custom scripts-->
 <script src="{{ asset('plugins/supplier.js')}}"></script>
