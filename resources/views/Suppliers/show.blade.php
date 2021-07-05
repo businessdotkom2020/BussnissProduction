@@ -1924,6 +1924,7 @@ Toast.fire({
 
 
 
+<script src="{{ asset('plugins/jquery.min.js')}}"></script>
 <script src="{{ asset('plugins/nouislider/nouislider.min.js')}}"></script>
 <script src="{{ asset('plugins/popper.min.js')}}"></script>
 <script src="{{ asset('plugins/owl-carousel/owl.carousel.min.js')}}"></script>
