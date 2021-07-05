@@ -7,6 +7,13 @@ $menu = false ;
 
 @push('styles')
 
+<style>
+    #map {
+        position: fixed !important;
+        height: 100% !important;
+        width: 100% !important;
+    }
+</style>
 
 <script>
     WebFontConfig = {
