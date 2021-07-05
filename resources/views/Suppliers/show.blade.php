@@ -100,7 +100,10 @@ $menu = false ;
                             </div>
                         </div>
                         <div class="ps-vendor-best-seller">
+                            <div class="ps-section__header">
+                                <h3>Best Seller items</h3>
 
+                            </div>
                             <div class="ps-section__content">
                                 <div class="owl-slider" id="vendor-bestseller" data-owl-auto="true" data-owl-loop="true"
                                     data-owl-speed="5000" data-owl-gap="0" data-owl-nav="false" data-owl-dots="false"
@@ -392,7 +395,7 @@ $menu = false ;
                                         <option>Sort by price: low to high</option>
                                         <option>Sort by price: high to low</option>
                                     </select>
-                                  
+
                                 </div>
                             </div>
                             <div class="ps-tabs">
@@ -706,7 +709,7 @@ $menu = false ;
                                         </ul>
                                     </div>
                                 </div>
-                             
+
                             </div>
                         </div>
                     </div>
