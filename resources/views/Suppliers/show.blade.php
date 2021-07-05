@@ -1914,22 +1914,22 @@ Toast.fire({
 
 
 
-<script src="plugins/jquery.min.js"></script>
-<script src="plugins/nouislider/nouislider.min.js"></script>
-<script src="plugins/popper.min.js"></script>
-<script src="plugins/owl-carousel/owl.carousel.min.js"></script>
-<script src="plugins/bootstrap/js/bootstrap.min.js"></script>
-<script src="plugins/imagesloaded.pkgd.min.js"></script>
-<script src="plugins/masonry.pkgd.min.js"></script>
-<script src="plugins/isotope.pkgd.min.js"></script>
-<script src="plugins/jquery.matchHeight-min.js"></script>
-<script src="plugins/slick/slick/slick.min.js"></script>
-<script src="plugins/jquery-bar-rating/dist/jquery.barrating.min.js"></script>
-<script src="plugins/slick-animation.min.js"></script>
-<script src="plugins/lightGallery-master/dist/js/lightgallery-all.min.js"></script>
-<script src="plugins/sticky-sidebar/dist/sticky-sidebar.min.js"></script>
-<script src="plugins/select2/dist/js/select2.full.min.js"></script>
-<script src="plugins/gmap3.min.js"></script>
+<script src="{{ asset('plugins/jquery.min.js')}}"></script>
+<script src="{{ asset('plugins/nouislider/nouislider.min.js')}}"></script>
+<script src="{{ asset('plugins/popper.min.js')}}"></script>
+<script src="{{ asset('plugins/owl-carousel/owl.carousel.min.js')}}"></script>
+<script src="{{ asset('plugins/bootstrap/js/bootstrap.min.js')}}"></script>
+<script src="{{ asset('plugins/imagesloaded.pkgd.min.js')}}"></script>
+<script src="{{ asset('plugins/masonry.pkgd.min.js')}}"></script>
+<script src="{{ asset('plugins/isotope.pkgd.min.js')}}"></script>
+<script src="{{ asset('plugins/jquery.matchHeight-min.js')}}"></script>
+<script src="{{ asset('plugins/slick/slick/slick.min.js')}}"></script>
+<script src="{{ asset('plugins/jquery-bar-rating/dist/jquery.barrating.min.js')}}"></script>
+<script src="{{ asset('plugins/slick-animation.min.js')}}"></script>
+<script src="{{ asset('plugins/lightGallery-master/dist/js/lightgallery-all.min.js')}}"></script>
+<script src="{{ asset('plugins/sticky-sidebar/dist/sticky-sidebar.min.js')}}"></script>
+<script src="{{ asset('plugins/select2/dist/js/select2.full.min.js')}}"></script>
+<script src="{{ asset('plugins/gmap3.min.js')}}"></script>
 <!-- custom scripts-->
-<script src="js/main.js"></script>
+<script src="{{ asset('plugins/supplier.js')}}"></script>
 @endpush
