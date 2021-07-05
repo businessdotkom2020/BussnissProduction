@@ -61,7 +61,7 @@
 
 
 
-        @include('includes.sidebar')
+        {{-- @include('includes.sidebar') --}}
 
         @yield('content')
 
@@ -75,7 +75,7 @@
     <!-- Javascript Files -->
     @stack('first_scripts')
 
-    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@9"></script>
+    {{-- <script src="https://cdn.jsdelivr.net/npm/sweetalert2@9"></script>
     <script type="text/javascript" src="{{ asset('/web/js/jquery-2.2.2.min.js')}}"></script>
     <script type="text/javascript" src="{{ asset('/web/js/bootstrap.min.js')}}"></script>
     <script type="text/javascript" src="{{ asset('/web/js/jquery.fancybox.min.js')}}"></script>
@@ -84,7 +84,7 @@
     <script type="text/javascript" src="{{ asset('/web/js/jquery.nice-select.min.js')}}"></script>
     <script type="text/javascript" src="{{ asset('/web/js/aos.js')}}"></script>
     <script type="text/javascript" src="{{ asset('/web/js/ion.rangeSlider.min.js')}}"></script>
-    <script type="text/javascript" src="{{ asset('/web/js/script.js')}}"></script>
+    <script type="text/javascript" src="{{ asset('/web/js/script.js')}}"></script> --}}
     @stack('scripts')
 
 </body>
