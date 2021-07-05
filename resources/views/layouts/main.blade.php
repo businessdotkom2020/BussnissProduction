@@ -11,19 +11,19 @@
 
     <!-- Css Files -->
 
-    <link rel="stylesheet" href="{{ asset('/web/css/jquery.fancybox.min.css')}}">
+    {{-- <link rel="stylesheet" href="{{ asset('/web/css/jquery.fancybox.min.css')}}">
     <link rel="stylesheet" href="{{ asset('/web/css/style.css')}}">
     <link rel="stylesheet" href="{{ asset('/web/css/last.css')}}">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.css"> --}}
 
     @if (\App::getLocale() == 'ar')
 
-    <link rel="stylesheet" href="{{ asset('/web/css/bootstrap-rtl.min.css')}}">
-    <link rel="stylesheet" href="{{ asset('/web/css/style-ar.css')}}">
+    {{-- <link rel="stylesheet" href="{{ asset('/web/css/bootstrap-rtl.min.css')}}">
+    <link rel="stylesheet" href="{{ asset('/web/css/style-ar.css')}}"> --}}
 
     @endif
-    <link rel="stylesheet" href="{{ asset('/web/css/style-res.css')}}">
-    <link rel="stylesheet" href="{{ asset('/web/css/custom-general.css')}}">
+    {{-- <link rel="stylesheet" href="{{ asset('/web/css/style-res.css')}}">
+    <link rel="stylesheet" href="{{ asset('/web/css/custom-general.css')}}"> --}}
 
     <!-- Favicons -->
     <link rel="shortcut icon" href="{{ asset('/web/images/faveicon.png')}}">
