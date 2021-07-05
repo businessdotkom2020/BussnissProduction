@@ -3449,7 +3449,7 @@ Toast.fire({
 
 
 
-<script type="text/javascript" src="{{ asset('/web/js/mapInput.js')}}"></script>
+<script type="text/javascript" src="{{ asset('/web/js/branches_map.js')}}"></script>
 
 
 <script async
