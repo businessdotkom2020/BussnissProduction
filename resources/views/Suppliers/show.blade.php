@@ -142,11 +142,7 @@ $menu = false ;
                         <i class="w-icon-compare"></i>
                         <span class="compare-label d-lg-show">Compare</span>
                     </a>
-                    <a href="#" class="cart-toggle label-down link">
-                        <i class="w-icon-cart">
-                        </i>
-                        <span class="cart-label">Cart</span>
-                    </a>
+                
 
                     <!-- End of Dropdown Box -->
                 </div>
