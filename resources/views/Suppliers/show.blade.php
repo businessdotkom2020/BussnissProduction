@@ -58,16 +58,16 @@ $menu = false ;
                     <!-- End of DropDown Menu -->
 
                     <div class="dropdown">
-                        <a href="#language"><img src="assets/images/flags/eng.png" alt="ENG Flag" width="14" height="8"
+                        <a href="#language"><img src="https://portotheme.com/html/wolmart/assets/images/flags/eng.png" alt="ENG Flag" width="14" height="8"
                                 class="dropdown-image"> ENG</a>
                         <div class="dropdown-box">
                             <a href="#ENG">
-                                <img src="assets/images/flags/eng.png" alt="ENG Flag" width="14" height="8"
+                                <img src="https://portotheme.com/html/wolmart/assets/images/flags/eng.png" alt="ENG Flag" width="14" height="8"
                                     class="dropdown-image">
                                 ENG
                             </a>
                             <a href="#FRA">
-                                <img src="assets/images/flags/fra.png" alt="FRA Flag" width="14" height="8"
+                                <img src="https://portotheme.com/html/wolmart/assets/images/flags/fra.png" alt="FRA Flag" width="14" height="8"
                                     class="dropdown-image">
                                 FRA
                             </a>
@@ -818,7 +818,7 @@ $menu = false ;
                                             <div class="product product-widget">
                                                 <figure class="product-media">
                                                     <a href="product-default.html">
-                                                        <img src="assets/images/shop/1.jpg" alt="Product" width="100"
+                                                        <img src="https://portotheme.com/html/wolmart/assets/images/shop/1.jpg" alt="Product" width="100"
                                                             height="106">
                                                     </a>
                                                 </figure>
@@ -1006,7 +1006,7 @@ $menu = false ;
                                 <div class="product text-center">
                                     <figure class="product-media">
                                         <a href="product-default.html">
-                                            <img src="assets/images/shop/1.jpg" alt="Product" width="300" height="338">
+                                            <img src="https://portotheme.com/html/wolmart/assets/images/shop/1.jpg" alt="Product" width="300" height="338">
                                         </a>
                                         <div class="product-action-vertical">
                                             <a href="#" class="btn-product-icon btn-cart w-icon-cart"
@@ -1042,9 +1042,9 @@ $menu = false ;
                                 <div class="product text-center">
                                     <figure class="product-media">
                                         <a href="product-default.html">
-                                            <img src="assets/images/shop/2-1.jpg" alt="Product" width="300"
+                                            <img src="https://portotheme.com/html/wolmart/assets/images/shop/2-2.jpg" alt="Product" width="300"
                                                 height="338">
-                                            <img src="assets/images/shop/2-2.jpg" alt="Product" width="300"
+                                            <img src="https://portotheme.com/html/wolmart/assets/images/shop/2-2.jpg" alt="Product" width="300"
                                                 height="338">
                                         </a>
                                         <div class="product-countdown-container">
