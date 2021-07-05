@@ -3441,8 +3441,11 @@ Toast.fire({
 
 <!-- Main JS -->
 <script src="{{ asset('vendor/main.min.js')}}"></script>
-<script src="https://maps.google.com/maps/api/js"></script>
+<script
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBcP3JChqWSCHtsjW4e_Ug8h0htjiIhcHw&libraries=places&callback=initMap"
+    async defer></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/gmaps.js/0.4.24/gmaps.js"></script>
+
 
 
 <script type="text/javascript">
