@@ -1181,6 +1181,283 @@
                 </div>
             </div>
             <!-- End of Banner Product Wrapper -->
+            <div class="title-link-wrapper mb-3">
+                <h2 class="title mb-0 pt-2 pb-2">Top Rated Services</h2>
+                <a href="shop-boxed-banner.html" class="mb-0">More Products<i class="w-icon-long-arrow-right"></i></a>
+            </div>
+            <div class="row grid banner-product-wrapper mb-6">
+                <div class="grid-item col-xl-5col3 col-lg-3 col-sm-8 col-12">
+                    <div class="banner banner-fixed br-sm">
+                        <figure>
+                            <img src="https://www.portotheme.com/html/wolmart/assets/images/demos/demo8/banner/1.jpg"
+                                alt="Banner" width="820" height="364" style="background-color: #EBEBEB;" />
+                        </figure>
+                        <div class="banner-content y-50">
+                            <h5 class="banner-subtitle text-capitalize font-weight-normal">Special Offers</h5>
+                            <h3 class="banner-title text-uppercase">Fashion Sale</h3>
+                            <div class="banner-price-info text-dark lh-1 ls-25">Up to <strong
+                                    class="text-secondary text-uppercase">40% Off</strong></div>
+                            <hr class="banner-divider bg-dark">
+                            <a href="demo8-shop.html" class="btn btn-dark btn-link btn-slide-right btn-icon-right">
+                                Start Shopping<i class="w-icon-long-arrow-right mb-1"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="grid-item col-xl-5col col-lg-3 col-sm-4 col-6">
+                    <div class="product product-simple text-center">
+                        <figure class="product-media">
+                            <a href="product-default.html">
+                                <img src="https://www.portotheme.com/html/wolmart/assets/images/demos/demo8/product/3-1.jpg"
+                                    alt="Product" width="260" height="291" />
+                            </a>
+                            <div class="product-action-vertical">
+                                <a href="#" class="btn-product-icon btn-wishlist w-icon-heart"
+                                    title="Add to wishlist"></a>
+                                <a href="#" class="btn-product-icon btn-compare w-icon-compare"
+                                    title="Add to Compare"></a>
+                            </div>
+                            <div class="product-action">
+                                <a href="#" class="btn-product btn-quickview" title="Quick View">Quick
+                                    View</a>
+                            </div>
+                        </figure>
+                        <div class="product-details">
+                            <h4 class="product-name"><a href="product-default.html">Comfortable Blanket</a></h4>
+                            <div class="product-pa-wrapper">
+                                <div class="product-price">
+                                    <ins class="new-price">$30.00 - $36.00</ins>
+                                </div>
+                                <div class="product-action">
+                                    <a href="#"
+                                        class="btn-cart btn-product btn btn-icon-right btn-link btn-underline">Add
+                                        To Cart</a>
+                                </div>
+                            </div>
+                            <div class="sold-by">
+                                Sold By: <a href="#">Vendor 1</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="grid-item col-xl-5col col-lg-3 col-sm-4 col-6">
+                    <div class="product product-simple text-center">
+                        <figure class="product-media">
+                            <a href="product-default.html">
+                                <img src="https://www.portotheme.com/html/wolmart/assets/images/demos/demo8/product/3-2.jpg"
+                                    alt="Product" width="260" height="291" />
+                            </a>
+                            <div class="product-action-vertical">
+                                <a href="#" class="btn-product-icon btn-wishlist w-icon-heart"
+                                    title="Add to wishlist"></a>
+                                <a href="#" class="btn-product-icon btn-compare w-icon-compare"
+                                    title="Add to Compare"></a>
+                            </div>
+                            <div class="product-action">
+                                <a href="#" class="btn-product btn-quickview" title="Quick View">Quick
+                                    View</a>
+                            </div>
+                        </figure>
+                        <div class="product-details">
+                            <h4 class="product-name"><a href="product-default.html">Men's T-Shirt</a></h4>
+                            <div class="product-pa-wrapper">
+                                <div class="product-price">
+                                    <ins class="new-price">$25.00 - $26.00</ins>
+                                </div>
+                                <div class="product-action">
+                                    <a href="#"
+                                        class="btn-cart btn-product btn btn-icon-right btn-link btn-underline">Add
+                                        To Cart</a>
+                                </div>
+                            </div>
+                            <div class="sold-by">
+                                Sold By: <a href="#">Vendor 4</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="grid-item col-xl-5col col-lg-3 col-sm-4 col-6">
+                    <div class="product product-simple text-center">
+                        <figure class="product-media">
+                            <a href="product-default.html">
+                                <img src="https://www.portotheme.com/html/wolmart/assets/images/demos/demo8/product/3-3.jpg"
+                                    alt="Product" width="260" height="291" />
+                            </a>
+                            <div class="product-action-vertical">
+                                <a href="#" class="btn-product-icon btn-wishlist w-icon-heart"
+                                    title="Add to wishlist"></a>
+                                <a href="#" class="btn-product-icon btn-compare w-icon-compare"
+                                    title="Add to Compare"></a>
+                            </div>
+                            <div class="product-action">
+                                <a href="#" class="btn-product btn-quickview" title="Quick View">Quick
+                                    View</a>
+                            </div>
+                        </figure>
+                        <div class="product-details">
+                            <h4 class="product-name"><a href="product-default.html">White Schoolbag</a></h4>
+                            <div class="product-pa-wrapper">
+                                <div class="product-price">
+                                    <ins class="new-price">$56.48</ins>
+                                </div>
+                                <div class="product-action">
+                                    <a href="#"
+                                        class="btn-cart btn-product btn btn-icon-right btn-link btn-underline">Add
+                                        To Cart</a>
+                                </div>
+                            </div>
+                            <div class="sold-by">
+                                Sold By: <a href="#">Vendor 3</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="grid-item col-xl-5col col-lg-3 col-sm-4 col-6">
+                    <div class="product product-simple text-center">
+                        <figure class="product-media">
+                            <a href="product-default.html">
+                                <img src="https://www.portotheme.com/html/wolmart/assets/images/demos/demo8/product/3-4.jpg"
+                                    alt="Product" width="260" height="291" />
+                            </a>
+                            <div class="product-action-vertical">
+                                <a href="#" class="btn-product-icon btn-wishlist w-icon-heart"
+                                    title="Add to wishlist"></a>
+                                <a href="#" class="btn-product-icon btn-compare w-icon-compare"
+                                    title="Add to Compare"></a>
+                            </div>
+                            <div class="product-action">
+                                <a href="#" class="btn-product btn-quickview" title="Quick View">Quick
+                                    View</a>
+                            </div>
+                        </figure>
+                        <div class="product-details">
+                            <h4 class="product-name"><a href="product-default.html">Chain Handle Umbrella</a></h4>
+                            <div class="product-pa-wrapper">
+                                <div class="product-price">
+                                    <ins class="new-price">$28.98</ins><del class="old-price">$32.62</del>
+                                </div>
+                                <div class="product-action">
+                                    <a href="#"
+                                        class="btn-cart btn-product btn btn-icon-right btn-link btn-underline">Add
+                                        To Cart</a>
+                                </div>
+                            </div>
+                            <div class="sold-by">
+                                Sold By: <a href="#">Vendor 3</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="grid-item col-xl-5col col-lg-3 col-sm-4 col-6">
+                    <div class="product product-simple text-center">
+                        <figure class="product-media">
+                            <a href="product-default.html">
+                                <img src="https://www.portotheme.com/html/wolmart/assets/images/demos/demo8/product/3-5.jpg"
+                                    alt="Product" width="260" height="291" />
+                            </a>
+                            <div class="product-action-vertical">
+                                <a href="#" class="btn-product-icon btn-wishlist w-icon-heart"
+                                    title="Add to wishlist"></a>
+                                <a href="#" class="btn-product-icon btn-compare w-icon-compare"
+                                    title="Add to Compare"></a>
+                            </div>
+                            <div class="product-action">
+                                <a href="#" class="btn-product btn-quickview" title="Quick View">Quick
+                                    View</a>
+                            </div>
+                        </figure>
+                        <div class="product-details">
+                            <h4 class="product-name"><a href="product-default.html">Men's Suede Belt</a></h4>
+                            <div class="product-pa-wrapper">
+                                <div class="product-price">
+                                    <ins class="new-price">$73.71</ins><del class="old-price">$78.04</del>
+                                </div>
+                                <div class="product-action">
+                                    <a href="#"
+                                        class="btn-cart btn-product btn btn-icon-right btn-link btn-underline">Add
+                                        To Cart</a>
+                                </div>
+                            </div>
+                            <div class="sold-by">
+                                Sold By: <a href="#">Vendor 2</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="grid-item col-xl-5col col-lg-3 col-sm-4 col-6">
+                    <div class="product product-simple text-center">
+                        <figure class="product-media">
+                            <a href="product-default.html">
+                                <img src="https://www.portotheme.com/html/wolmart/assets/images/demos/demo8/product/3-6.jpg"
+                                    alt="Product" width="260" height="291" />
+                            </a>
+                            <div class="product-action-vertical">
+                                <a href="#" class="btn-product-icon btn-wishlist w-icon-heart"
+                                    title="Add to wishlist"></a>
+                                <a href="#" class="btn-product-icon btn-compare w-icon-compare"
+                                    title="Add to Compare"></a>
+                            </div>
+                            <div class="product-action">
+                                <a href="#" class="btn-product btn-quickview" title="Quick View">Quick
+                                    View</a>
+                            </div>
+                        </figure>
+                        <div class="product-details">
+                            <h4 class="product-name"><a href="product-default.html">Men's Travel Bag</a></h4>
+                            <div class="product-pa-wrapper">
+                                <div class="product-price">
+                                    <ins class="new-price">$23.99</ins><del class="old-price">$25.68</del>
+                                </div>
+                                <div class="product-action">
+                                    <a href="#"
+                                        class="btn-cart btn-product btn btn-icon-right btn-link btn-underline">Add
+                                        To Cart</a>
+                                </div>
+                            </div>
+                            <div class="sold-by">
+                                Sold By: <a href="#">Vendor 3</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="grid-item col-xl-5col col-lg-3 col-sm-4 col-6">
+                    <div class="product product-simple text-center">
+                        <figure class="product-media">
+                            <a href="product-default.html">
+                                <img src="https://www.portotheme.com/html/wolmart/assets/images/demos/demo8/product/3-7.jpg"
+                                    alt="Product" width="260" height="291" />
+                            </a>
+                            <div class="product-action-vertical">
+                                <a href="#" class="btn-product-icon btn-wishlist w-icon-heart"
+                                    title="Add to wishlist"></a>
+                                <a href="#" class="btn-product-icon btn-compare w-icon-compare"
+                                    title="Add to Compare"></a>
+                            </div>
+                            <div class="product-action">
+                                <a href="#" class="btn-product btn-quickview" title="Quick View">Quick
+                                    View</a>
+                            </div>
+                        </figure>
+                        <div class="product-details">
+                            <h4 class="product-name"><a href="product-default.html">Grey Calotte</a></h4>
+                            <div class="product-pa-wrapper">
+                                <div class="product-price">
+                                    <ins class="new-price">$173.84</ins>
+                                </div>
+                                <div class="product-action">
+                                    <a href="#"
+                                        class="btn-cart btn-product btn btn-icon-right btn-link btn-underline">Add
+                                        To Cart</a>
+                                </div>
+                            </div>
+                            <div class="sold-by">
+                                Sold By: <a href="#">Vendor 5</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- End of Banner Product Wrapper -->
 
             <div class="title-link-wrapper mb-3">
                 <h2 class="title mb-0 pt-2 pb-2">Food &amp; Kitchen</h2>
