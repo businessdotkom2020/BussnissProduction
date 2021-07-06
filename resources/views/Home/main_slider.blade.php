@@ -1,6 +1,5 @@
 <div class="owl-carousel owl-theme owl-dot-inner animation-slider owl-loaded owl-drag" data-owl-options="{
         'nav': false,
-        'dotsEach':true,
         'dots': true
     }">
 
@@ -12,7 +11,7 @@
     <div class="owl-stage-outer">
         <div class="owl-stage"
             style="transform: translate3d(0px, 0px, 0px); transition: all 0s ease 0s; width: 3240px;">
-            <div class="owl-item f" style="width: 1080px;">
+            <div class="owl-item " style="width: 1080px;">
                 <div class="banner banner-fixed intro-slide intro-slide1 br-sm"
                     style="background-image: url(https://www.portotheme.com/html/wolmart/assets/images/demos/demo8/slides/slide-1.jpg); background-color: #E8EAEF;"
                     data-index="1">
@@ -81,8 +80,8 @@
     <div class="owl-nav disabled"><button type="button" role="presentation" class="owl-prev"><i
                 class="w-icon-angle-left"></i></button><button type="button" role="presentation" class="owl-next"><i
                 class="w-icon-angle-right"></i></button></div>
-    <div class="owl-dots"><button role="presentation" class="owl-dot active"><span></span></button><button
-            role="presentation" class="owl-dot"><span></span></button><button role="presentation"
-            class="owl-dot"><span></span></button></div>
+    <div class="owl-dots"><button role="presentation" class="owl-dot "><span></span></button><button role="presentation"
+            class="owl-dot"><span></span></button><button role="presentation" class="owl-dot"><span></span></button>
+    </div>
 </div>
 <!-- End of Owl Carousel -->
