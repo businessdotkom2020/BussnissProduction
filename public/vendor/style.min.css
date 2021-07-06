@@ -13049,6 +13049,10 @@ body .product-popup {
   transition: right 0.3s;
 }
 
+.intro-wrapper {
+  margin-left: 30rem;
+}
+
 /* Horizontal Menu */
 .horizontal-menu {
   margin-top: 15px;
