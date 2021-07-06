@@ -1,4 +1,5 @@
 <header class="header">
+    @include('includes.app_top_nav')
 
     <!-- End of Header Top -->
 
