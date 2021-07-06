@@ -41,7 +41,7 @@ class SettingsController extends Controller
     {
         return view('settings.contact');
     }
-    public function local($local)
+    public function locale($locale)
     {
         Session::put('locale', $locale);
         return redirect()->back();
