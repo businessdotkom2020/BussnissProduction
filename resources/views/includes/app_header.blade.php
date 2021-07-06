@@ -652,8 +652,7 @@
             <div class="container">
                 <div class="inner-wrap">
                     <div class="header-left">
-                        <div class="dropdown category-dropdown has-border {{Route::current()->getName() == 'home' ? "show-dropdown" : ""}}"
-                            data-visible="false">
+                        <div class="dropdown category-dropdown has-border {{Route::current()->getName() == 'home' ? "show-dropdown" : ""}}" data-visible="false">
                             <a href="#" class="category-toggle text-dark bg-white text-capitalize" role="button"
                                 data-toggle="dropdown" aria-haspopup="false" aria-expanded="false" data-display="static"
                                 title="Browse Categories">
@@ -1220,16 +1219,16 @@
                             </ul>
                         </nav>
                     </div>
-                    <div class="header-right">
-                        <a href="#" class="d-xl-show">
-                            <img src="https://img.icons8.com/ios/50/000000/holding-box.png"
-                                style="width: 20px; margin-right: 5px; margin-left: 5px; " /></i>Create Request</a>
-                        <a href="#">
-                            <img src="https://img.icons8.com/pastel-glyph/64/000000/box--v3.png"
-                                style="width: 20px; margin-right: 5px; margin-left: 5px; " /></i>Create Product</a>
+                            <div class="header-right">
+                            <a href="#" class="d-xl-show">
+                                <img src="https://img.icons8.com/ios/50/000000/holding-box.png"
+                                    style="width: 20px; margin-right: 5px; margin-left: 5px; " /></i>Create Request</a>
+                            <a href="#">
+                                <img src="https://img.icons8.com/pastel-glyph/64/000000/box--v3.png"
+                                    style="width: 20px; margin-right: 5px; margin-left: 5px; " /></i>Create Product</a>
 
 
-                    </div>
+                        </div>
                 </div>
             </div>
         </div>
