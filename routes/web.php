@@ -22,7 +22,7 @@ Route::get('/', 'web\HomeController@home');
 
 Route::get('/home', function () {
     return view('Home.index');
-});
+})->name('home');
 
 
 //////////////////// dashboard ///////////////////////////
