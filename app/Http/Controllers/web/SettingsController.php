@@ -20,6 +20,7 @@ use App\Http\Requests\AddReviewRequest;
 
 use RealRashid\SweetAlert\Facades\Alert;
 use Lang;
+use Session;
 
 class SettingsController extends Controller
 {
