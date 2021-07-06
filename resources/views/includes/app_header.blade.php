@@ -9,7 +9,8 @@
                 <a href="{{url('/')}}" class="mobile-menu-toggle  w-icon-hamburger">
                 </a>
                 <a href="{{url('/')}}" class="logo ml-lg-0">
-                    <img src="{{ asset('/web/images/logo.png')}}" alt="lo\go" width="144" height="45" />
+                    <img src="{{ asset('/web/images/logo.png')}}" style="width: 206px; margin-bottom: 10px;" alt="lo\go"
+                        width="144" height="45" />
                 </a>
                 <form method="get" action="#" class="input-wrapper header-search hs-expanded hs-round d-none d-md-flex">
                     <div class="select-box  ">
