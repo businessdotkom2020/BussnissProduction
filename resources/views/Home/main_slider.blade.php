@@ -1,7 +1,7 @@
 <div class="owl-carousel owl-theme owl-nav-inner owl-nav-md animation-slider owl-loaded owl-drag"
 data-owl-options="{
 'nav': true,
-'dots': false
+'dots': true
 }">
 
 <!-- End Of Intro Slide 1 -->
