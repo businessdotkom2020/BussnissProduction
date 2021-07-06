@@ -50,157 +50,21 @@ $menu = false ;
 
 <main class="main">
     <div class="intro-section">
-        <div class="owl-carousel owl-theme owl-nav-inner owl-dot-inner animation-slider owl-loaded owl-drag"
-            data-owl-options="{
-            'nav': false,
-            'dots': true,
-            'items': 1,
-            'autoplay': false,
-            'responsive': {
-                '1630': {
-                    'nav': true,
-                    'dots': false
-                }
-            }
-        }">
-
-            <!-- End of .intro-slide1 -->
-
-
-            <!-- End of .intro-slide2 -->
-
-
-            <!-- End of .intro-slide3 -->
-            <div class="owl-stage-outer">
-                <div class="owl-stage"
-                    style="transform: translate3d(-1519px, 0px, 0px); transition: all 0.7s ease 0s; width: 4558px;">
-                    <div class="owl-item" style="width: 1519.2px;">
-                        <div class="banner banner-fixed intro-slide intro-slide1"
-                            style="background-image: url(assets/images/demos/demo2/slides/slide-1.jpg); background-color: #f1f0f0;"
-                            data-index="1">
-                            <div class="container">
-                                <figure class="slide-image floating-item slide-animate" data-animation-options="{
-                        'name': 'fadeInDownShorter', 'duration': '1s'
-                    }" data-options="{'relativeInput':true,'clipRelativeInput':true,'invertX':true,'invertY':true}"
-                                    data-child-depth="0.2"
-                                    style="transform: translate3d(0px, 0px, 0px); transform-style: preserve-3d; backface-visibility: hidden; animation-duration: 1s; animation-delay: 0.2s;">
-                                    <img src="https://www.portotheme.com/html/wolmart/assets/images/demos/demo2/slides/ski.png"
-                                        alt="Ski" width="729" height="570" class="layer" data-depth="0.2"
-                                        style="position: relative; display: block; left: 0px; top: 0px; transform: translate3d(8.69484px, -10.7706px, 0px); transform-style: preserve-3d; backface-visibility: hidden;">
-                                </figure>
-                                <div class="banner-content text-right y-50 ml-auto">
-                                    <h5 class="banner-subtitle text-uppercase font-weight-bold mb-2 slide-animate"
-                                        data-animation-options="{
-                            'name': 'fadeInUpShorter', 'duration': '1s'
-                        }" style="animation-duration: 1s; animation-delay: 0.2s;">Deals And Promotions</h5>
-                                    <h3 class="banner-title ls-25 mb-6 slide-animate" data-animation-options="{
-                            'name': 'fadeInUpShorter', 'duration': '1s'
-                        }" style="animation-duration: 1s; animation-delay: 0.2s;">Fashion <span
-                                            class="text-primary">Skiwears</span> for the ardent Sports devotees
-                                    </h3>
-                                    <a href="shop-banner-sidebar.html"
-                                        class="btn btn-dark btn-outline btn-rounded btn-icon-right slide-animate"
-                                        data-animation-options="{
-                            'name': 'fadeInUpShorter', 'duration': '1s'
-                        }" style="animation-duration: 1s; animation-delay: 0.2s;">
-                                        Shop Now<i class="w-icon-long-arrow-right"></i></a>
-                                </div>
-                                <!-- End of .banner-content -->
-                            </div>
-                            <!-- End of .container -->
-                        </div>
-                    </div>
-                    <div class="owl-item active" style="width: 1519.2px;">
-                        <div class="banner banner-fixed intro-slide intro-slide2"
-                            style="background-image: url(assets/images/demos/demo2/slides/slide-2.jpg); background-color: #d9ddd9;"
-                            data-index="2">
-                            <div class="container">
-                                <figure class="slide-image floating-item slide-animate fadeInUpShorter show-content"
-                                    data-animation-options="{
-                        'name': 'fadeInUpShorter', 'duration': '1s'
-                    }" data-options="{'relativeInput':true,'clipRelativeInput':true,'invertX':true,'invertY':true}"
-                                    data-child-depth="0.2"
-                                    style="transform: translate3d(0px, 0px, 0px); transform-style: preserve-3d; backface-visibility: hidden; animation-duration: 1s; animation-delay: 0.2s;">
-                                    <img src="https://www.portotheme.com/html/wolmart/assets/images/demos/demo2/slides/woman.png"
-                                        alt="Ski" width="865" height="732" class="layer" data-depth="0.2"
-                                        style="position: relative; display: block; left: 0px; top: 0px; transform: translate3d(10.3169px, -13.8317px, 0px); transform-style: preserve-3d; backface-visibility: hidden;">
-                                </figure>
-                                <div class="banner-content y-50">
-                                    <h5 class="banner-subtitle text-uppercase font-weight-bold mb-2 slide-animate fadeInRightShorter show-content"
-                                        data-animation-options="{
-                            'name': 'fadeInRightShorter', 'duration': '1s', 'delay': '.5s'
-                        }" style="animation-duration: 1s; animation-delay: 0.5s;">News And Inspiration</h5>
-                                    <h3 class="banner-title ls-25 mb-2 text-uppercase lh-1 slide-animate fadeInRightShorter show-content"
-                                        data-animation-options="{
-                            'name': 'fadeInRightShorter', 'duration': '1s', 'delay': '.7s'
-                        }" style="animation-duration: 1s; animation-delay: 0.7s;">Natural Sound</h3>
-                                    <div class="banner-price-info font-weight-bold text-dark ls-25 slide-animate fadeInRightShorter show-content"
-                                        data-animation-options="{
-                            'name': 'fadeInRightShorter', 'duration': '1s', 'delay': '.9s'
-                        }" style="animation-duration: 1s; animation-delay: 0.9s;">Sale up to
-                                        <span class="text-primary font-weight-bolder text-uppercase ls-normal">30%
-                                            Off</span></div>
-                                    <p class="font-weight-normal text-default ls-25 slide-animate fadeInRightShorter show-content"
-                                        data-animation-options="{
-                            'name': 'fadeInRightShorter', 'duration': '1s', 'delay': '1.1s'
-                        }" style="animation-duration: 1s; animation-delay: 1.1s;">Free returns extended to 30 days
-                                        after delivery</p>
-                                    <a href="shop-banner-sidebar.html"
-                                        class="btn btn-dark btn-outline btn-rounded btn-icon-right slide-animate fadeInRightShorter show-content"
-                                        data-animation-options="{
-                            'name': 'fadeInRightShorter', 'duration': '1s', 'delay': '1.3s'
-                        }" style="animation-duration: 1s; animation-delay: 1.3s;">
-                                        Shop Now<i class="w-icon-long-arrow-right"></i></a>
-                                </div>
-                                <!-- End of .banner-content -->
-                            </div>
-                            <!-- End of .container -->
-                        </div>
-                    </div>
-                    <div class="owl-item" style="width: 1519.2px;">
-                        <div class="banner banner-fixed intro-slide intro-slide3"
-                            style="background-image: url(assets/images/demos/demo2/slides/slide-3.jpg); background-color: #d0cfcb;"
-                            data-index="3">
-                            <div class="container">
-                                <figure class="slide-image floating-item slide-animate" data-animation-options="{
-                        'name': 'fadeInRightShorter', 'duration': '1s'
-                    }" data-options="{'relativeInput':true,'clipRelativeInput':true,'invertX':true,'invertY':true}"
-                                    data-child-depth="0.2"
-                                    style="transform: translate3d(0px, 0px, 0px); transform-style: preserve-3d; backface-visibility: hidden;">
-                                    <img src="https://www.portotheme.com/html/wolmart/assets/images/demos/demo2/slides/man.png"
-                                        alt="Ski" width="527" height="481" class="layer" data-depth="0.2"
-                                        style="position: relative; display: block; left: 0px; top: 0px; transform: translate3d(6.28557px, -9.08883px, 0px); transform-style: preserve-3d; backface-visibility: hidden;">
-                                </figure>
-                                <div class="banner-content y-50">
-                                    <h5 class="banner-subtitle text-uppercase font-weight-bold slide-animate"
-                                        data-animation-options="{
-                            'name': 'fadeInRightShorter', 'duration': '1s'
-                        }">Top Monthly Seller</h5>
-                                    <h4 class="banner-title ls-25 slide-animate" data-animation-options="{
-                            'name': 'fadeInRightShorter', 'duration': '1s'
-                        }">Sumsung 52 Inches Full HD <span class="text-primary">Smart LED</span> TV</h4>
-                                    <p class="font-weight-normal text-dark slide-animate" data-animation-options="{
-                            'name': 'fadeInRightShorter', 'duration': '1s'
-                        }">Only until the end of this week.</p>
-                                    <a href="shop-banner-sidebar.html"
-                                        class="btn btn-dark btn-outline btn-rounded btn-icon-right slide-animate"
-                                        data-animation-options="{
-                            'name': 'fadeInRightShorter', 'duration': '1s'
-                        }">Shop Now<i class="w-icon-long-arrow-right"></i></a>
-                                </div>
-                                <!-- End of .banner-content -->
-                            </div>
-                            <!-- End of .container -->
-                        </div>
-                    </div>
+        <div id="carouselExampleSlidesOnly" class="carousel slide" data-ride="carousel">
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <img class="d-block w-100" src="https://eg.jumia.is/cms/eid-adha-21/sliders/g2.jpg"
+                        alt="First slide">
+                </div>
+                <div class="carousel-item">
+                    <img class="d-block w-100" src="https://eg.jumia.is/cms/eid-adha-21/sliders/g2.jpg"
+                        alt="Second slide">
+                </div>
+                <div class="carousel-item">
+                    <img class="d-block w-100" src="https://eg.jumia.is/cms/eid-adha-21/sliders/g2.jpg"
+                        alt="Third slide">
                 </div>
             </div>
-            <div class="owl-nav disabled"><button type="button" role="presentation" class="owl-prev"><i
-                        class="w-icon-angle-left"></i></button><button type="button" role="presentation"
-                    class="owl-next"><i class="w-icon-angle-right"></i></button></div>
-            <div class="owl-dots"><button role="presentation" class="owl-dot"><span></span></button><button
-                    role="presentation" class="owl-dot active"><span></span></button><button role="presentation"
-                    class="owl-dot"><span></span></button></div>
         </div>
     </div>
     <!-- End of .intro-section -->
@@ -2808,42 +2672,42 @@ $menu = false ;
                 <div class="product-single-carousel owl-carousel owl-theme owl-nav-inner row cols-1 gutter-no">
                     <figure class="product-image">
                         <img src="https://www.portotheme.com/html/wolmart/assets/images/products/popup/1-440x494.jpg"
-                            data-zoom-image="https://www.portotheme.com/html/wolmart/assets/images/products/popup/1-800x900.jpg" alt="Water Boil Black Utensil"
-                            width="800" height="900">
+                            data-zoom-image="https://www.portotheme.com/html/wolmart/assets/images/products/popup/1-800x900.jpg"
+                            alt="Water Boil Black Utensil" width="800" height="900">
                     </figure>
                     <figure class="product-image">
                         <img src="https://www.portotheme.com/html/wolmart/assets/images/products/popup/2-440x494.jpg"
-                            data-zoom-image="https://www.portotheme.com/html/wolmart/assets/images/products/popup/2-800x900.jpg" alt="Water Boil Black Utensil"
-                            width="800" height="900">
+                            data-zoom-image="https://www.portotheme.com/html/wolmart/assets/images/products/popup/2-800x900.jpg"
+                            alt="Water Boil Black Utensil" width="800" height="900">
                     </figure>
                     <figure class="product-image">
                         <img src="https://www.portotheme.com/html/wolmart/assets/images/products/popup/3-440x494.jpg"
-                            data-zoom-image="https://www.portotheme.com/html/wolmart/assets/images/products/popup/3-800x900.jpg" alt="Water Boil Black Utensil"
-                            width="800" height="900">
+                            data-zoom-image="https://www.portotheme.com/html/wolmart/assets/images/products/popup/3-800x900.jpg"
+                            alt="Water Boil Black Utensil" width="800" height="900">
                     </figure>
                     <figure class="product-image">
                         <img src="https://www.portotheme.com/html/wolmart/assets/images/products/popup/4-440x494.jpg"
-                            data-zoom-image="https://www.portotheme.com/html/wolmart/assets/images/products/popup/4-800x900.jpg" alt="Water Boil Black Utensil"
-                            width="800" height="900">
+                            data-zoom-image="https://www.portotheme.com/html/wolmart/assets/images/products/popup/4-800x900.jpg"
+                            alt="Water Boil Black Utensil" width="800" height="900">
                     </figure>
                 </div>
                 <div class="product-thumbs-wrap">
                     <div class="product-thumbs">
                         <div class="product-thumb active">
-                            <img src="https://www.portotheme.com/html/wolmart/assets/images/products/popup/1-103x116.jpg" alt="Product Thumb" width="103"
-                                height="116">
+                            <img src="https://www.portotheme.com/html/wolmart/assets/images/products/popup/1-103x116.jpg"
+                                alt="Product Thumb" width="103" height="116">
                         </div>
                         <div class="product-thumb">
-                            <img src="https://www.portotheme.com/html/wolmart/assets/images/products/popup/2-103x116.jpg" alt="Product Thumb" width="103"
-                                height="116">
+                            <img src="https://www.portotheme.com/html/wolmart/assets/images/products/popup/2-103x116.jpg"
+                                alt="Product Thumb" width="103" height="116">
                         </div>
                         <div class="product-thumb">
-                            <img src="https://www.portotheme.com/html/wolmart/assets/images/products/popup/3-103x116.jpg" alt="Product Thumb" width="103"
-                                height="116">
+                            <img src="https://www.portotheme.com/html/wolmart/assets/images/products/popup/3-103x116.jpg"
+                                alt="Product Thumb" width="103" height="116">
                         </div>
                         <div class="product-thumb">
-                            <img src="https://www.portotheme.com/html/wolmart/assets/images/products/popup/4-103x116.jpg" alt="Product Thumb" width="103"
-                                height="116">
+                            <img src="https://www.portotheme.com/html/wolmart/assets/images/products/popup/4-103x116.jpg"
+                                alt="Product Thumb" width="103" height="116">
                         </div>
                     </div>
                     <button class="thumb-up disabled"><i class="w-icon-angle-left"></i></button>
@@ -2856,7 +2720,8 @@ $menu = false ;
                 <h2 class="product-title">Electronics Black Wrist Watch</h2>
                 <div class="product-bm-wrapper">
                     <figure class="brand">
-                        <img src="https://www.portotheme.com/html/wolmart/assets/images/products/brand/brand-1.jpg" alt="Brand" width="102" height="48" />
+                        <img src="https://www.portotheme.com/html/wolmart/assets/images/products/brand/brand-1.jpg"
+                            alt="Brand" width="102" height="48" />
                     </figure>
                     <div class="product-meta">
                         <div class="product-categories">
