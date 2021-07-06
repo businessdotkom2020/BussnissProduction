@@ -33,8 +33,8 @@
 <link rel="stylesheet" type="text/css" href="{{ asset('vendor/owl-carousel/owl.carousel.min.css')}}">
 <link rel="stylesheet" type="text/css" href="{{ asset('vendor/animate/animate.min.css')}}">
 <link rel="stylesheet" type="text/css" href="{{ asset('vendor/magnific-popup/magnific-popup.min.css')}}">
-<link rel="stylesheet" type="text/css" href="{{ asset('vendor/style.min.css')}}">
 <link rel="stylesheet" type="text/css" href="{{ asset('vendor/theme_style.css')}}">
+<link rel="stylesheet" type="text/css" href="{{ asset('vendor/style.min.css')}}">
 
 @endpush
 
