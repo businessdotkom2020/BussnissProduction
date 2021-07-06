@@ -348,6 +348,10 @@
         <!-- End of Container -->
 
         <div class="main-content">
+            <div class="title-link-wrapper mb-3">
+                <h2 class="title mb-0 pt-2 pb-2">latest products</h2>
+                <a href="shop-boxed-banner.html" class="mb-0">More Products<i class="w-icon-long-arrow-right"></i></a>
+            </div>
             <div class="product-wrapper row cols-xl-7 cols-lg-6 cols-md-4 cols-sm-3 cols-2">
                 <div class="product-wrap">
                     <div class="product text-center">
