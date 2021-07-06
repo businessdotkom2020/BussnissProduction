@@ -1193,7 +1193,7 @@
                             <figure>
                                 <img src="https://www.palmermoving.com/data/images/palmer_moving_services_Atlas_Van_Op_With_Couple_opt.jpg"
                                     alt="Banner" width="820" height="364"
-                                    style="background-color: #EBEBEB;max-height: 400px;" />
+                                    style="background-color: #EBEBEB;max-height: 350px;" />
                             </figure>
                         </a>
                     </div>
