@@ -49,9 +49,11 @@ $menu = false ;
 
 
 <main class="main">
-    <div class="intro-section mt-4">
-        @include('Home.main_slider')
+    <div class="container pb-2">
+        <div class="intro-section mt-4">
+            @include('Home.main_slider')
 
+        </div>
     </div>
     <!-- End of .intro-section -->
 
