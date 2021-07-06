@@ -8,7 +8,7 @@
                 <a href="#currency">USD</a>
                 <div class="dropdown-box">
                     @foreach (currency()->getCurrencies() as $currency)
-                        <a href="{{route('currency',['code' => $currency['code']])}}">$currency['name']</a>
+                    <a href="{{route('currency',['code' => $currency['code']])}}">{{$currency['name']}}</a>
                     @endforeach
 
                 </div>
