@@ -1202,7 +1202,7 @@
                     <div class="product product-simple text-center">
                         <figure class="product-media">
                             <a href="#">
-                                <img src="https://www.portotheme.com/html/wolmart/assets/images/demos/demo8/product/3-1.jpg"
+                                <img src="https://www.aircargonews.net/wp-content/uploads/2019/05/DHL-EHANG.jpg"
                                     alt="Product" width="260" height="291" />
                             </a>
                             <div class="product-action-vertical">
@@ -1228,7 +1228,7 @@
                     <div class="product product-simple text-center">
                         <figure class="product-media">
                             <a href="#">
-                                <img src="https://www.portotheme.com/html/wolmart/assets/images/demos/demo8/product/3-2.jpg"
+                                <img src="https://i0.wp.com/agslogistics.org/wp-content/uploads/2019/07/Custom-Clearance.jpg?fit=900%2C600&ssl=1"
                                     alt="Product" width="260" height="291" />
                             </a>
                             <div class="product-action-vertical">
