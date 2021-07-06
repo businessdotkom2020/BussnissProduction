@@ -1229,7 +1229,7 @@
                                 </div>
                             </div>
                             <div class="sold-by">
-                                Sold By: <a href="#">Vendor 1</a>
+                                Provided from : <a href="#">Vendor 1</a>
                             </div>
                         </div>
                     </div>
@@ -1265,7 +1265,7 @@
                                 </div>
                             </div>
                             <div class="sold-by">
-                                Sold By: <a href="#">Vendor 4</a>
+                                Provided from : <a href="#">Vendor 4</a>
                             </div>
                         </div>
                     </div>
@@ -1301,7 +1301,7 @@
                                 </div>
                             </div>
                             <div class="sold-by">
-                                Sold By: <a href="#">Vendor 3</a>
+                                Provided from : <a href="#">Vendor 3</a>
                             </div>
                         </div>
                     </div>
@@ -1337,7 +1337,7 @@
                                 </div>
                             </div>
                             <div class="sold-by">
-                                Sold By: <a href="#">Vendor 3</a>
+                                Provided from : <a href="#">Vendor 3</a>
                             </div>
                         </div>
                     </div>
@@ -1373,7 +1373,7 @@
                                 </div>
                             </div>
                             <div class="sold-by">
-                                Sold By: <a href="#">Vendor 2</a>
+                                Provided from : <a href="#">Vendor 2</a>
                             </div>
                         </div>
                     </div>
@@ -1409,7 +1409,7 @@
                                 </div>
                             </div>
                             <div class="sold-by">
-                                Sold By: <a href="#">Vendor 3</a>
+                                Provided from : <a href="#">Vendor 3</a>
                             </div>
                         </div>
                     </div>
@@ -1445,7 +1445,7 @@
                                 </div>
                             </div>
                             <div class="sold-by">
-                                Sold By: <a href="#">Vendor 5</a>
+                                Provided from : <a href="#">Vendor 5</a>
                             </div>
                         </div>
                     </div>
