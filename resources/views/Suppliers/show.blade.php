@@ -1,9 +1,5 @@
 @extends('layouts.app')
 
-@php
-$menu = false ;
-@endphp
-
 
 @push('styles')
 
@@ -27,27 +23,23 @@ $menu = false ;
         })(document);
 </script>
 
-<link rel="preload" href="{{ asset('vendor/fontawesome-free/webfonts/fa-regular-400.woff2')}}" as="font"
+    <link rel="preload" href="{{ asset('vendor/fontawesome-free/webfonts/fa-regular-400.woff2')}}" as="font"
     type="font/woff2" crossorigin="anonymous">
-<link rel="preload" href="{{ asset('vendor/fontawesome-free/webfonts/fa-solid-900.woff2')}}" as="font" type="font/woff2"
-    crossorigin="anonymous">
+    <link rel="preload" href="{{ asset('vendor/fontawesome-free/webfonts/fa-solid-900.woff2')}}" as="font" type="font/woff2"
+        crossorigin="anonymous">
 
-<link rel="stylesheet" type="text/css" href="{{ asset('vendor/fontawesome-free/css/all.min.css')}}">
-<link rel="stylesheet" type="text/css" href="{{ asset('vendor/animate/animate.min.css')}}">
-<link rel="stylesheet" type="text/css" href="{{ asset('vendor/owl-carousel/owl.carousel.min.css')}}">
-<link rel="stylesheet" type="text/css" href="{{ asset('vendor/animate/animate.min.css')}}">
-<link rel="stylesheet" type="text/css" href="{{ asset('vendor/magnific-popup/magnific-popup.min.css')}}">
-<link rel="stylesheet" type="text/css" href="{{ asset('vendor/style.min.css')}}">
-
-
-
+    <link rel="stylesheet" type="text/css" href="{{ asset('vendor/fontawesome-free/css/all.min.css')}}">
+    <link rel="stylesheet" type="text/css" href="{{ asset('vendor/animate/animate.min.css')}}">
+    <link rel="stylesheet" type="text/css" href="{{ asset('vendor/owl-carousel/owl.carousel.min.css')}}">
+    <link rel="stylesheet" type="text/css" href="{{ asset('vendor/animate/animate.min.css')}}">
+    <link rel="stylesheet" type="text/css" href="{{ asset('vendor/magnific-popup/magnific-popup.min.css')}}">
+    <link rel="stylesheet" type="text/css" href="{{ asset('vendor/style.min.css')}}">
 
 @endpush
 
 @section('content')
 
-<div class="page-wrapper">
-
+ 
 
     <!-- Start of Main -->
     <main class="main">
