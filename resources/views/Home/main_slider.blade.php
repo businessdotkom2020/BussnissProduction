@@ -12,7 +12,7 @@
     <div class="owl-stage-outer">
         <div class="owl-stage"
             style="transform: translate3d(0px, 0px, 0px); transition: all 0s ease 0s; width: 3240px;">
-            <div class="owl-item active" style="width: 1080px;">
+            <div class="owl-item f" style="width: 1080px;">
                 <div class="banner banner-fixed intro-slide intro-slide1 br-sm"
                     style="background-image: url(https://www.portotheme.com/html/wolmart/assets/images/demos/demo8/slides/slide-1.jpg); background-color: #E8EAEF;"
                     data-index="1">
