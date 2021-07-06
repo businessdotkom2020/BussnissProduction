@@ -21,7 +21,7 @@ URL::forceScheme('https');
 Route::get('/', 'web\HomeController@home');
 
 Route::get('/home', function () {
-    return view('home.index');
+    return view('Home.index');
 });
 
 
