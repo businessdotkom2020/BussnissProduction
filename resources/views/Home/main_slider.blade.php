@@ -1,6 +1,6 @@
 <div class="owl-carousel owl-theme owl-dot-inner animation-slider owl-loaded owl-drag" data-owl-options="{
         'nav': false,
-        'autoWidth':true,
+        'dotsEach':true,
         'dots': true
     }">
 
