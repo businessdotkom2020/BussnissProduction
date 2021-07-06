@@ -45,6 +45,16 @@
 <!-- Start of Main -->
 <main class="main">
 
+    <nav class="breadcrumb-nav">
+        <div class="container">
+            <ul class="breadcrumb bb-no">
+                <li><a href="demo1.html">Home</a></li>
+                <li><a href="#">Vendor</a></li>
+                <li><a href="#">Dokan</a></li>
+                <li>Store</li>
+            </ul>
+        </div>
+    </nav>
 
     <!-- Start of Pgae Contetn -->
     <div class="page-content mb-8">
