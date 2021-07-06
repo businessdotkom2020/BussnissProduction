@@ -2,13 +2,13 @@
 use Session;
 
  
-if (!function_exists('current_locale')) {
+if (!function_exists('current_currency')) {
     /**
      * Get the authenticated user.
      *
      * @return \App\Models\Auth\User
     */
-    function current_locale()
+    function current_currency()
     {
         return Session::get('currency') ? \Session::get('currency')  : currency()->config('default') ; 
     }
