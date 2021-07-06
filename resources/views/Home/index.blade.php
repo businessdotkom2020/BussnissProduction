@@ -1,6 +1,6 @@
 @extends('layouts.app')
 
- 
+
 @push('styles')
 
 <style>
@@ -53,8 +53,11 @@
 
         </div>
 
-        <div class="row category-wrapper cols-lg-3 cols-sm-2 appear-animate mb-8 fadeIn appear-animation-visible" style="animation-duration: 1.2s;">
+        <div class="row category-wrapper cols-lg-3 cols-sm-2 appear-animate mb-8 fadeIn appear-animation-visible"
+            style="animation-duration: 1.2s; margin-top: 50px;">
             <div class="category-wrap mb-4">
+
+
                 <div class="category category-group-image br-sm">
                     <div class="category-content">
                         <h4 class="category-name"><a href="shop-fullwidth-banner.html">Clothings</a>
@@ -70,7 +73,8 @@
                     </div>
                     <a href="shop-fullwidth-banner.html">
                         <figure class="category-media">
-                            <img src="https://www.portotheme.com/html/wolmart/assets/images/demos/demo4/categories/1-1.jpg" alt="Category" width="190" height="215">
+                            <img src="https://www.portotheme.com/html/wolmart/assets/images/demos/demo4/categories/1-1.jpg"
+                                alt="Category" width="190" height="215">
                         </figure>
                     </a>
                 </div>
@@ -92,7 +96,8 @@
                     </div>
                     <a href="shop-fullwidth-banner.html">
                         <figure class="category-media">
-                            <img src="https://www.portotheme.com/html/wolmart/assets/images/demos/demo4/categories/1-2.jpg" alt="Category" width="190" height="215">
+                            <img src="https://www.portotheme.com/html/wolmart/assets/images/demos/demo4/categories/1-2.jpg"
+                                alt="Category" width="190" height="215">
                         </figure>
                     </a>
                 </div>
@@ -114,7 +119,8 @@
                     </div>
                     <a href="shop-fullwidth-banner.html">
                         <figure class="category-media">
-                            <img src="https://www.portotheme.com/html/wolmart/assets/images/demos/demo4/categories/1-3.jpg" alt="Category" width="190" height="215">
+                            <img src="https://www.portotheme.com/html/wolmart/assets/images/demos/demo4/categories/1-3.jpg"
+                                alt="Category" width="190" height="215">
                         </figure>
                     </a>
                 </div>
@@ -136,7 +142,8 @@
                     </div>
                     <a href="shop-fullwidth-banner.html">
                         <figure class="category-media">
-                            <img src="https://www.portotheme.com/html/wolmart/assets/images/demos/demo4/categories/1-4.jpg" alt="Category" width="190" height="215">
+                            <img src="https://www.portotheme.com/html/wolmart/assets/images/demos/demo4/categories/1-4.jpg"
+                                alt="Category" width="190" height="215">
                         </figure>
                     </a>
                 </div>
@@ -158,7 +165,8 @@
                     </div>
                     <a href="shop-fullwidth-banner.html">
                         <figure class="category-media">
-                            <img src="https://www.portotheme.com/html/wolmart/assets/images/demos/demo4/categories/1-5.jpg" alt="Category" width="190" height="214">
+                            <img src="https://www.portotheme.com/html/wolmart/assets/images/demos/demo4/categories/1-5.jpg"
+                                alt="Category" width="190" height="214">
                         </figure>
                     </a>
                 </div>
@@ -180,7 +188,8 @@
                     </div>
                     <a href="shop-fullwidth-banner.html">
                         <figure class="category-media">
-                            <img src="https://www.portotheme.com/html/wolmart/assets/images/demos/demo4/categories/1-6.jpg" alt="Category" width="190" height="214">
+                            <img src="https://www.portotheme.com/html/wolmart/assets/images/demos/demo4/categories/1-6.jpg"
+                                alt="Category" width="190" height="214">
                         </figure>
                     </a>
                 </div>
@@ -271,8 +280,8 @@
         }">
             <div class="banner banner-fixed category-banner br-sm">
                 <figure>
-                    <img src="https://www.portotheme.com/html/wolmart/assets/images/demos/demo8/category/1-1.jpg" alt="Category Banner" width="447" height="230"
-                        style="background-color: #cfd1cf;" />
+                    <img src="https://www.portotheme.com/html/wolmart/assets/images/demos/demo8/category/1-1.jpg"
+                        alt="Category Banner" width="447" height="230" style="background-color: #cfd1cf;" />
                 </figure>
                 <div class="banner-content y-50">
                     <h3 class="banner-title text-capitalize ls-25 mb-0">For Men's</h3>
@@ -287,8 +296,8 @@
             <!-- End of Category Banner -->
             <div class="banner banner-fixed category-banner br-sm">
                 <figure>
-                    <img src="https://www.portotheme.com/html/wolmart/assets/images/demos/demo8/category/1-2.jpg" alt="Category Banner" width="447" height="230"
-                        style="background-color: #333" />
+                    <img src="https://www.portotheme.com/html/wolmart/assets/images/demos/demo8/category/1-2.jpg"
+                        alt="Category Banner" width="447" height="230" style="background-color: #333" />
                 </figure>
                 <div class="banner-content text-center x-50 y-50 w-100 pl-2 pr-2">
                     <h5 class="banner-subtitle text-primary text-capitalize ls-25 font-weight-bold">Get 30% Off
@@ -304,8 +313,8 @@
             <!-- End of Category Banner -->
             <div class="banner banner-fixed category-banner br-sm">
                 <figure>
-                    <img src="https://www.portotheme.com/html/wolmart/assets/images/demos/demo8/category/1-3.jpg" alt="Category Banner" width="447" height="230"
-                        style="background-color: #e0dddd;" />
+                    <img src="https://www.portotheme.com/html/wolmart/assets/images/demos/demo8/category/1-3.jpg"
+                        alt="Category Banner" width="447" height="230" style="background-color: #e0dddd;" />
                 </figure>
                 <div class="banner-content y-50">
                     <h3 class="banner-title text-capitalize ls-25 mb-0">For Women's</h3>
@@ -349,8 +358,8 @@
                 <div class="category category-classic category-absolute overlay-zoom br-sm">
                     <a href="demo8-shop.html">
                         <figure class="category-media">
-                            <img src="https://www.portotheme.com/html/wolmart/assets/images/demos/demo8/product/1-1.jpg" alt="Category" width="213"
-                                height="213" />
+                            <img src="https://www.portotheme.com/html/wolmart/assets/images/demos/demo8/product/1-1.jpg"
+                                alt="Category" width="213" height="213" />
                         </figure>
                     </a>
                     <div class="category-content">
@@ -364,8 +373,8 @@
                 <div class="category category-classic category-absolute overlay-zoom br-sm">
                     <a href="demo8-shop.html">
                         <figure class="category-media">
-                            <img src="https://www.portotheme.com/html/wolmart/assets/images/demos/demo8/product/1-2.jpg" alt="Category" width="213"
-                                height="213" />
+                            <img src="https://www.portotheme.com/html/wolmart/assets/images/demos/demo8/product/1-2.jpg"
+                                alt="Category" width="213" height="213" />
                         </figure>
                     </a>
                     <div class="category-content">
@@ -379,8 +388,8 @@
                 <div class="category category-classic category-absolute overlay-zoom br-sm">
                     <a href="demo8-shop.html">
                         <figure class="category-media">
-                            <img src="https://www.portotheme.com/html/wolmart/assets/images/demos/demo8/product/1-3.jpg" alt="Category" width="213"
-                                height="213" />
+                            <img src="https://www.portotheme.com/html/wolmart/assets/images/demos/demo8/product/1-3.jpg"
+                                alt="Category" width="213" height="213" />
                         </figure>
                     </a>
                     <div class="category-content">
@@ -394,8 +403,8 @@
                 <div class="category category-classic category-absolute overlay-zoom br-sm">
                     <a href="demo8-shop.html">
                         <figure class="category-media">
-                            <img src="https://www.portotheme.com/html/wolmart/assets/images/demos/demo8/product/1-4.jpg" alt="Category" width="213"
-                                height="213" />
+                            <img src="https://www.portotheme.com/html/wolmart/assets/images/demos/demo8/product/1-4.jpg"
+                                alt="Category" width="213" height="213" />
                         </figure>
                     </a>
                     <div class="category-content">
@@ -409,8 +418,8 @@
                 <div class="category category-classic category-absolute overlay-zoom br-sm">
                     <a href="demo8-shop.html">
                         <figure class="category-media">
-                            <img src="https://www.portotheme.com/html/wolmart/assets/images/demos/demo8/product/1-5.jpg" alt="Category" width="213"
-                                height="213" />
+                            <img src="https://www.portotheme.com/html/wolmart/assets/images/demos/demo8/product/1-5.jpg"
+                                alt="Category" width="213" height="213" />
                         </figure>
                     </a>
                     <div class="category-content">
@@ -424,8 +433,8 @@
                 <div class="category category-classic category-absolute overlay-zoom br-sm">
                     <a href="demo8-shop.html">
                         <figure class="category-media">
-                            <img src="https://www.portotheme.com/html/wolmart/assets/images/demos/demo8/product/1-6.jpg" alt="Category" width="213"
-                                height="213" />
+                            <img src="https://www.portotheme.com/html/wolmart/assets/images/demos/demo8/product/1-6.jpg"
+                                alt="Category" width="213" height="213" />
                         </figure>
                     </a>
                     <div class="category-content">
@@ -544,8 +553,8 @@
                     <div class="product product-widget">
                         <figure class="product-media">
                             <a href="product-default.html">
-                                <img src="https://www.portotheme.com/html/wolmart/assets/images/demos/demo8/product/2-2.jpg" alt="Product" width="300"
-                                    height="338">
+                                <img src="https://www.portotheme.com/html/wolmart/assets/images/demos/demo8/product/2-2.jpg"
+                                    alt="Product" width="300" height="338">
                             </a>
                         </figure>
                         <div class="product-details">
@@ -569,8 +578,8 @@
                     <div class="product product-widget">
                         <figure class="product-media">
                             <a href="product-default.html">
-                                <img src="https://www.portotheme.com/html/wolmart/assets/images/demos/demo8/product/2-3.jpg" alt="Product" width="300"
-                                    height="338">
+                                <img src="https://www.portotheme.com/html/wolmart/assets/images/demos/demo8/product/2-3.jpg"
+                                    alt="Product" width="300" height="338">
                             </a>
                         </figure>
                         <div class="product-details">
@@ -594,8 +603,8 @@
                     <div class="product product-widget">
                         <figure class="product-media">
                             <a href="product-default.html">
-                                <img src="https://www.portotheme.com/html/wolmart/assets/images/demos/demo8/product/2-4.jpg" alt="Product" width="300"
-                                    height="338">
+                                <img src="https://www.portotheme.com/html/wolmart/assets/images/demos/demo8/product/2-4.jpg"
+                                    alt="Product" width="300" height="338">
                             </a>
                         </figure>
                         <div class="product-details">
@@ -619,8 +628,8 @@
                     <div class="product product-widget">
                         <figure class="product-media">
                             <a href="product-default.html">
-                                <img src="https://www.portotheme.com/html/wolmart/assets/images/demos/demo8/product/2-5.jpg" alt="Product" width="300"
-                                    height="338">
+                                <img src="https://www.portotheme.com/html/wolmart/assets/images/demos/demo8/product/2-5.jpg"
+                                    alt="Product" width="300" height="338">
                             </a>
                         </figure>
                         <div class="product-details">
@@ -644,8 +653,8 @@
                     <div class="product product-widget">
                         <figure class="product-media">
                             <a href="product-default.html">
-                                <img src="https://www.portotheme.com/html/wolmart/assets/images/demos/demo8/product/2-6.jpg" alt="Product" width="300"
-                                    height="338">
+                                <img src="https://www.portotheme.com/html/wolmart/assets/images/demos/demo8/product/2-6.jpg"
+                                    alt="Product" width="300" height="338">
                             </a>
                         </figure>
                         <div class="product-details">
@@ -669,8 +678,8 @@
                     <div class="product product-widget">
                         <figure class="product-media">
                             <a href="product-default.html">
-                                <img src="https://www.portotheme.com/html/wolmart/assets/images/demos/demo8/product/2-7.jpg" alt="Product" width="300"
-                                    height="338">
+                                <img src="https://www.portotheme.com/html/wolmart/assets/images/demos/demo8/product/2-7.jpg"
+                                    alt="Product" width="300" height="338">
                             </a>
                         </figure>
                         <div class="product-details">
@@ -694,8 +703,8 @@
                     <div class="product product-widget">
                         <figure class="product-media">
                             <a href="product-default.html">
-                                <img src="https://www.portotheme.com/html/wolmart/assets/images/demos/demo8/product/2-8.jpg" alt="Product" width="300"
-                                    height="338">
+                                <img src="https://www.portotheme.com/html/wolmart/assets/images/demos/demo8/product/2-8.jpg"
+                                    alt="Product" width="300" height="338">
                             </a>
                         </figure>
                         <div class="product-details">
@@ -719,8 +728,8 @@
                     <div class="product product-widget">
                         <figure class="product-media">
                             <a href="product-default.html">
-                                <img src="https://www.portotheme.com/html/wolmart/assets/images/demos/demo8/product/2-9.jpg" alt="Product" width="300"
-                                    height="338">
+                                <img src="https://www.portotheme.com/html/wolmart/assets/images/demos/demo8/product/2-9.jpg"
+                                    alt="Product" width="300" height="338">
                             </a>
                         </figure>
                         <div class="product-details">
@@ -750,8 +759,8 @@
         <div class="row cols-md-2 category-banner-2cols mb-5">
             <div class="banner banner-fixed mb-4">
                 <figure class="br-sm">
-                    <img src="https://www.portotheme.com/html/wolmart/assets/images/demos/demo8/category/2-1.jpg" alt="Category Banner" width="680" height="220"
-                        style="background-color: #384744;" />
+                    <img src="https://www.portotheme.com/html/wolmart/assets/images/demos/demo8/category/2-1.jpg"
+                        alt="Category Banner" width="680" height="220" style="background-color: #384744;" />
                 </figure>
                 <div class="banner-content y-50">
                     <h5 class="banner-subtitle text-uppercase text-white font-weight-bold">Natural Process</h5>
@@ -763,8 +772,8 @@
             <!-- End of Banner -->
             <div class="banner banner-fixed mb-4">
                 <figure class="br-sm">
-                    <img src="https://www.portotheme.com/html/wolmart/assets/images/demos/demo8/category/2-2.jpg" alt="Category Banner" width="680" height="220"
-                        style="background-color: #e7e7e7;" />
+                    <img src="https://www.portotheme.com/html/wolmart/assets/images/demos/demo8/category/2-2.jpg"
+                        alt="Category Banner" width="680" height="220" style="background-color: #e7e7e7;" />
                 </figure>
                 <div class="banner-content y-50">
                     <h5 class="banner-subtitle text-uppercase font-weight-bold">Trending Now</h5>
@@ -785,8 +794,8 @@
             <div class="grid-item col-xl-5col3 col-lg-3 col-sm-8 col-12">
                 <div class="banner banner-fixed br-sm">
                     <figure>
-                        <img src="https://www.portotheme.com/html/wolmart/assets/images/demos/demo8/banner/1.jpg" alt="Banner" width="820" height="364"
-                            style="background-color: #EBEBEB;" />
+                        <img src="https://www.portotheme.com/html/wolmart/assets/images/demos/demo8/banner/1.jpg"
+                            alt="Banner" width="820" height="364" style="background-color: #EBEBEB;" />
                     </figure>
                     <div class="banner-content y-50">
                         <h5 class="banner-subtitle text-capitalize font-weight-normal">Special Offers</h5>
@@ -804,8 +813,8 @@
                 <div class="product product-simple text-center">
                     <figure class="product-media">
                         <a href="product-default.html">
-                            <img src="https://www.portotheme.com/html/wolmart/assets/images/demos/demo8/product/3-1.jpg" alt="Product" width="260"
-                                height="291" />
+                            <img src="https://www.portotheme.com/html/wolmart/assets/images/demos/demo8/product/3-1.jpg"
+                                alt="Product" width="260" height="291" />
                         </a>
                         <div class="product-action-vertical">
                             <a href="#" class="btn-product-icon btn-wishlist w-icon-heart" title="Add to wishlist"></a>
@@ -837,8 +846,8 @@
                 <div class="product product-simple text-center">
                     <figure class="product-media">
                         <a href="product-default.html">
-                            <img src="https://www.portotheme.com/html/wolmart/assets/images/demos/demo8/product/3-2.jpg" alt="Product" width="260"
-                                height="291" />
+                            <img src="https://www.portotheme.com/html/wolmart/assets/images/demos/demo8/product/3-2.jpg"
+                                alt="Product" width="260" height="291" />
                         </a>
                         <div class="product-action-vertical">
                             <a href="#" class="btn-product-icon btn-wishlist w-icon-heart" title="Add to wishlist"></a>
@@ -870,8 +879,8 @@
                 <div class="product product-simple text-center">
                     <figure class="product-media">
                         <a href="product-default.html">
-                            <img src="https://www.portotheme.com/html/wolmart/assets/images/demos/demo8/product/3-3.jpg" alt="Product" width="260"
-                                height="291" />
+                            <img src="https://www.portotheme.com/html/wolmart/assets/images/demos/demo8/product/3-3.jpg"
+                                alt="Product" width="260" height="291" />
                         </a>
                         <div class="product-action-vertical">
                             <a href="#" class="btn-product-icon btn-wishlist w-icon-heart" title="Add to wishlist"></a>
@@ -903,8 +912,8 @@
                 <div class="product product-simple text-center">
                     <figure class="product-media">
                         <a href="product-default.html">
-                            <img src="https://www.portotheme.com/html/wolmart/assets/images/demos/demo8/product/3-4.jpg" alt="Product" width="260"
-                                height="291" />
+                            <img src="https://www.portotheme.com/html/wolmart/assets/images/demos/demo8/product/3-4.jpg"
+                                alt="Product" width="260" height="291" />
                         </a>
                         <div class="product-action-vertical">
                             <a href="#" class="btn-product-icon btn-wishlist w-icon-heart" title="Add to wishlist"></a>
@@ -936,8 +945,8 @@
                 <div class="product product-simple text-center">
                     <figure class="product-media">
                         <a href="product-default.html">
-                            <img src="https://www.portotheme.com/html/wolmart/assets/images/demos/demo8/product/3-5.jpg" alt="Product" width="260"
-                                height="291" />
+                            <img src="https://www.portotheme.com/html/wolmart/assets/images/demos/demo8/product/3-5.jpg"
+                                alt="Product" width="260" height="291" />
                         </a>
                         <div class="product-action-vertical">
                             <a href="#" class="btn-product-icon btn-wishlist w-icon-heart" title="Add to wishlist"></a>
@@ -969,8 +978,8 @@
                 <div class="product product-simple text-center">
                     <figure class="product-media">
                         <a href="product-default.html">
-                            <img src="https://www.portotheme.com/html/wolmart/assets/images/demos/demo8/product/3-6.jpg" alt="Product" width="260"
-                                height="291" />
+                            <img src="https://www.portotheme.com/html/wolmart/assets/images/demos/demo8/product/3-6.jpg"
+                                alt="Product" width="260" height="291" />
                         </a>
                         <div class="product-action-vertical">
                             <a href="#" class="btn-product-icon btn-wishlist w-icon-heart" title="Add to wishlist"></a>
@@ -1002,8 +1011,8 @@
                 <div class="product product-simple text-center">
                     <figure class="product-media">
                         <a href="product-default.html">
-                            <img src="https://www.portotheme.com/html/wolmart/assets/images/demos/demo8/product/3-7.jpg" alt="Product" width="260"
-                                height="291" />
+                            <img src="https://www.portotheme.com/html/wolmart/assets/images/demos/demo8/product/3-7.jpg"
+                                alt="Product" width="260" height="291" />
                         </a>
                         <div class="product-action-vertical">
                             <a href="#" class="btn-product-icon btn-wishlist w-icon-heart" title="Add to wishlist"></a>
@@ -1042,8 +1051,8 @@
             <div class="grid-item col-xl-5col3 col-lg-3 col-sm-8 col-12">
                 <div class="banner banner-fixed br-sm">
                     <figure>
-                        <img src="https://www.portotheme.com/html/wolmart/assets/images/demos/demo8/banner/2.jpg" alt="Banner" width="820" height="364"
-                            style="background-color: #E4E5E7;" />
+                        <img src="https://www.portotheme.com/html/wolmart/assets/images/demos/demo8/banner/2.jpg"
+                            alt="Banner" width="820" height="364" style="background-color: #E4E5E7;" />
                     </figure>
                     <div class="banner-content y-50">
                         <h5 class="banner-subtitle text-capitalize font-weight-normal">Get up to <strong
@@ -1061,8 +1070,8 @@
                 <div class="product product-simple text-center">
                     <figure class="product-media">
                         <a href="product-default.html">
-                            <img src="https://www.portotheme.com/html/wolmart/assets/images/demos/demo8/product/4-1.jpg" alt="Product" width="260"
-                                height="291" />
+                            <img src="https://www.portotheme.com/html/wolmart/assets/images/demos/demo8/product/4-1.jpg"
+                                alt="Product" width="260" height="291" />
                         </a>
                         <div class="product-action-vertical">
                             <a href="#" class="btn-product-icon btn-wishlist w-icon-heart" title="Add to wishlist"></a>
@@ -1094,8 +1103,8 @@
                 <div class="product product-simple text-center">
                     <figure class="product-media">
                         <a href="product-default.html">
-                            <img src="https://www.portotheme.com/html/wolmart/assets/images/demos/demo8/product/4-2.jpg" alt="Product" width="260"
-                                height="291" />
+                            <img src="https://www.portotheme.com/html/wolmart/assets/images/demos/demo8/product/4-2.jpg"
+                                alt="Product" width="260" height="291" />
                         </a>
                         <div class="product-action-vertical">
                             <a href="#" class="btn-product-icon btn-wishlist w-icon-heart" title="Add to wishlist"></a>
@@ -1127,8 +1136,8 @@
                 <div class="product product-simple text-center">
                     <figure class="product-media">
                         <a href="product-default.html">
-                            <img src="https://www.portotheme.com/html/wolmart/assets/images/demos/demo8/product/4-3.jpg" alt="Product" width="260"
-                                height="291" />
+                            <img src="https://www.portotheme.com/html/wolmart/assets/images/demos/demo8/product/4-3.jpg"
+                                alt="Product" width="260" height="291" />
                         </a>
                         <div class="product-action-vertical">
                             <a href="#" class="btn-product-icon btn-wishlist w-icon-heart" title="Add to wishlist"></a>
@@ -1160,8 +1169,8 @@
                 <div class="product product-simple text-center">
                     <figure class="product-media">
                         <a href="product-default.html">
-                            <img src="https://www.portotheme.com/html/wolmart/assets/images/demos/demo8/product/4-4.jpg" alt="Product" width="260"
-                                height="291" />
+                            <img src="https://www.portotheme.com/html/wolmart/assets/images/demos/demo8/product/4-4.jpg"
+                                alt="Product" width="260" height="291" />
                         </a>
                         <div class="product-action-vertical">
                             <a href="#" class="btn-product-icon btn-wishlist w-icon-heart" title="Add to wishlist"></a>
@@ -1193,8 +1202,8 @@
                 <div class="product product-simple text-center">
                     <figure class="product-media">
                         <a href="product-default.html">
-                            <img src="https://www.portotheme.com/html/wolmart/assets/images/demos/demo8/product/4-5.jpg" alt="Product" width="260"
-                                height="291" />
+                            <img src="https://www.portotheme.com/html/wolmart/assets/images/demos/demo8/product/4-5.jpg"
+                                alt="Product" width="260" height="291" />
                         </a>
                         <div class="product-action-vertical">
                             <a href="#" class="btn-product-icon btn-wishlist w-icon-heart" title="Add to wishlist"></a>
@@ -1226,8 +1235,8 @@
                 <div class="product product-simple text-center">
                     <figure class="product-media">
                         <a href="product-default.html">
-                            <img src="https://www.portotheme.com/html/wolmart/assets/images/demos/demo8/product/4-6.jpg" alt="Product" width="260"
-                                height="291" />
+                            <img src="https://www.portotheme.com/html/wolmart/assets/images/demos/demo8/product/4-6.jpg"
+                                alt="Product" width="260" height="291" />
                         </a>
                         <div class="product-action-vertical">
                             <a href="#" class="btn-product-icon btn-wishlist w-icon-heart" title="Add to wishlist"></a>
@@ -1259,8 +1268,8 @@
                 <div class="product product-simple text-center">
                     <figure class="product-media">
                         <a href="product-default.html">
-                            <img src="https://www.portotheme.com/html/wolmart/assets/images/demos/demo8/product/4-7.jpg" alt="Product" width="260"
-                                height="291" />
+                            <img src="https://www.portotheme.com/html/wolmart/assets/images/demos/demo8/product/4-7.jpg"
+                                alt="Product" width="260" height="291" />
                         </a>
                         <div class="product-action-vertical">
                             <a href="#" class="btn-product-icon btn-wishlist w-icon-heart" title="Add to wishlist"></a>
@@ -1308,8 +1317,9 @@
                 </a>
             </div>
             <figure class="image-shoes skrollable">
-                <img src="https://www.portotheme.com/html/wolmart/assets/images/demos/demo8/banner/shoes.png" alt="Shoes"
-                    data-bottom-top="transform: translateY(2vh);" data-top-bottom="transform: translateY(-2vh);">
+                <img src="https://www.portotheme.com/html/wolmart/assets/images/demos/demo8/banner/shoes.png"
+                    alt="Shoes" data-bottom-top="transform: translateY(2vh);"
+                    data-top-bottom="transform: translateY(-2vh);">
             </figure>
         </div>
         <!-- End of Banner Shoes -->
@@ -1344,7 +1354,8 @@
             <div class="product product-simple text-center">
                 <figure class="product-media">
                     <a href="product-default.html">
-                        <img src="https://www.portotheme.com/html/wolmart/assets/images/demos/demo8/product/5-1.jpg" alt="Product" width="260" height="291" />
+                        <img src="https://www.portotheme.com/html/wolmart/assets/images/demos/demo8/product/5-1.jpg"
+                            alt="Product" width="260" height="291" />
                     </a>
                     <div class="product-action-vertical">
                         <a href="#" class="btn-product-icon btn-wishlist w-icon-heart" title="Add to wishlist"></a>
@@ -1380,7 +1391,8 @@
             <div class="product product-simple text-center">
                 <figure class="product-media">
                     <a href="product-default.html">
-                        <img src="https://www.portotheme.com/html/wolmart/assets/images/demos/demo8/product/5-2.jpg" alt="Product" width="260" height="291" />
+                        <img src="https://www.portotheme.com/html/wolmart/assets/images/demos/demo8/product/5-2.jpg"
+                            alt="Product" width="260" height="291" />
                     </a>
                     <div class="product-action-vertical">
                         <a href="#" class="btn-product-icon btn-wishlist w-icon-heart" title="Add to wishlist"></a>
@@ -1411,7 +1423,8 @@
             <div class="product product-simple text-center">
                 <figure class="product-media">
                     <a href="product-default.html">
-                        <img src="https://www.portotheme.com/html/wolmart/assets/images/demos/demo8/product/5-3.jpg" alt="Product" width="260" height="291" />
+                        <img src="https://www.portotheme.com/html/wolmart/assets/images/demos/demo8/product/5-3.jpg"
+                            alt="Product" width="260" height="291" />
                     </a>
                     <div class="product-action-vertical">
                         <a href="#" class="btn-product-icon btn-wishlist w-icon-heart" title="Add to wishlist"></a>
@@ -1442,7 +1455,8 @@
             <div class="product product-simple text-center">
                 <figure class="product-media">
                     <a href="product-default.html">
-                        <img src="https://www.portotheme.com/html/wolmart/assets/images/demos/demo8/product/5-4.jpg" alt="Product" width="260" height="291" />
+                        <img src="https://www.portotheme.com/html/wolmart/assets/images/demos/demo8/product/5-4.jpg"
+                            alt="Product" width="260" height="291" />
                     </a>
                     <div class="product-action-vertical">
                         <a href="#" class="btn-product-icon btn-wishlist w-icon-heart" title="Add to wishlist"></a>
@@ -1473,7 +1487,8 @@
             <div class="product product-simple text-center">
                 <figure class="product-media">
                     <a href="product-default.html">
-                        <img src="https://www.portotheme.com/html/wolmart/assets/images/demos/demo8/product/5-5.jpg" alt="Product" width="260" height="291" />
+                        <img src="https://www.portotheme.com/html/wolmart/assets/images/demos/demo8/product/5-5.jpg"
+                            alt="Product" width="260" height="291" />
                     </a>
                     <div class="product-action-vertical">
                         <a href="#" class="btn-product-icon btn-wishlist w-icon-heart" title="Add to wishlist"></a>
@@ -1504,7 +1519,8 @@
             <div class="product product-simple text-center">
                 <figure class="product-media">
                     <a href="product-default.html">
-                        <img src="https://www.portotheme.com/html/wolmart/assets/images/demos/demo8/product/5-6.jpg" alt="Product" width="260" height="291" />
+                        <img src="https://www.portotheme.com/html/wolmart/assets/images/demos/demo8/product/5-6.jpg"
+                            alt="Product" width="260" height="291" />
                     </a>
                     <div class="product-action-vertical">
                         <a href="#" class="btn-product-icon btn-wishlist w-icon-heart" title="Add to wishlist"></a>
@@ -1535,7 +1551,7 @@
         </div>
         <!-- End of Owl Carousel -->
 
-      
+
 
         <h2 class="title text-left mb-5 appear-animate">Our Clients</h2>
         <div class="owl-carousel owl-theme row cols-xl-8 cols-lg-6 cols-md-4 cols-sm-3 cols-2 brands-wrapper br-sm mb-9 appear-animate"
@@ -1565,28 +1581,36 @@
             }
         }">
             <figure>
-                <img src="https://www.portotheme.com/html/wolmart/assets/images/demos/demo8/brand/1.png" alt="Brand" width="310" height="180" />
+                <img src="https://www.portotheme.com/html/wolmart/assets/images/demos/demo8/brand/1.png" alt="Brand"
+                    width="310" height="180" />
             </figure>
             <figure>
-                <img src="https://www.portotheme.com/html/wolmart/assets/images/demos/demo8/brand/2.png" alt="Brand" width="310" height="180" />
+                <img src="https://www.portotheme.com/html/wolmart/assets/images/demos/demo8/brand/2.png" alt="Brand"
+                    width="310" height="180" />
             </figure>
             <figure>
-                <img src="https://www.portotheme.com/html/wolmart/assets/images/demos/demo8/brand/3.png" alt="Brand" width="310" height="180" />
+                <img src="https://www.portotheme.com/html/wolmart/assets/images/demos/demo8/brand/3.png" alt="Brand"
+                    width="310" height="180" />
             </figure>
             <figure>
-                <img src="https://www.portotheme.com/html/wolmart/assets/images/demos/demo8/brand/4.png" alt="Brand" width="310" height="180" />
+                <img src="https://www.portotheme.com/html/wolmart/assets/images/demos/demo8/brand/4.png" alt="Brand"
+                    width="310" height="180" />
             </figure>
             <figure>
-                <img src="https://www.portotheme.com/html/wolmart/assets/images/demos/demo8/brand/5.png" alt="Brand" width="310" height="180" />
+                <img src="https://www.portotheme.com/html/wolmart/assets/images/demos/demo8/brand/5.png" alt="Brand"
+                    width="310" height="180" />
             </figure>
             <figure>
-                <img src="https://www.portotheme.com/html/wolmart/assets/images/demos/demo8/brand/6.png" alt="Brand" width="310" height="180" />
+                <img src="https://www.portotheme.com/html/wolmart/assets/images/demos/demo8/brand/6.png" alt="Brand"
+                    width="310" height="180" />
             </figure>
             <figure>
-                <img src="https://www.portotheme.com/html/wolmart/assets/images/demos/demo8/brand/7.png" alt="Brand" width="310" height="180" />
+                <img src="https://www.portotheme.com/html/wolmart/assets/images/demos/demo8/brand/7.png" alt="Brand"
+                    width="310" height="180" />
             </figure>
             <figure>
-                <img src="https://www.portotheme.com/html/wolmart/assets/images/demos/demo8/brand/8.png" alt="Brand" width="310" height="180" />
+                <img src="https://www.portotheme.com/html/wolmart/assets/images/demos/demo8/brand/8.png" alt="Brand"
+                    width="310" height="180" />
             </figure>
         </div>
         <!-- End of Brands Wrapper -->
@@ -1624,8 +1648,8 @@
                 <div class="product text-center product-absolute">
                     <figure class="product-media">
                         <a href="product-defaproduct-default.html">
-                            <img src="https://www.portotheme.com/html/wolmart/assets/images/demos/demo8/product/5-1.jpg" alt="Category image" width="213"
-                                height="238" style="background-color: #fff" />
+                            <img src="https://www.portotheme.com/html/wolmart/assets/images/demos/demo8/product/5-1.jpg"
+                                alt="Category image" width="213" height="238" style="background-color: #fff" />
                         </a>
                     </figure>
                     <h4 class="product-name">
@@ -1638,8 +1662,8 @@
                 <div class="product text-center product-absolute">
                     <figure class="product-media">
                         <a href="product-defaproduct-default.html">
-                            <img src="https://www.portotheme.com/html/wolmart/assets/images/demos/demo8/product/5-5.jpg" alt="Category image" width="213"
-                                height="238" style="background-color: #fff" />
+                            <img src="https://www.portotheme.com/html/wolmart/assets/images/demos/demo8/product/5-5.jpg"
+                                alt="Category image" width="213" height="238" style="background-color: #fff" />
                         </a>
                     </figure>
                     <h4 class="product-name">
@@ -1652,8 +1676,8 @@
                 <div class="product text-center product-absolute">
                     <figure class="product-media">
                         <a href="product-defaproduct-default.html">
-                            <img src="https://www.portotheme.com/html/wolmart/assets/images/demos/demo8/product/5-3.jpg" alt="Category image" width="213"
-                                height="238" style="background-color: #fff" />
+                            <img src="https://www.portotheme.com/html/wolmart/assets/images/demos/demo8/product/5-3.jpg"
+                                alt="Category image" width="213" height="238" style="background-color: #fff" />
                         </a>
                     </figure>
                     <h4 class="product-name">
@@ -1666,8 +1690,8 @@
                 <div class="product text-center product-absolute">
                     <figure class="product-media">
                         <a href="product-defaproduct-default.html">
-                            <img src="https://www.portotheme.com/html/wolmart/assets/images/demos/demo8/product/3-6.jpg" alt="Category image" width="260"
-                                height="291" style="background-color: #fff" />
+                            <img src="https://www.portotheme.com/html/wolmart/assets/images/demos/demo8/product/3-6.jpg"
+                                alt="Category image" width="260" height="291" style="background-color: #fff" />
                         </a>
                     </figure>
                     <h4 class="product-name">
@@ -1680,8 +1704,8 @@
                 <div class="product text-center product-absolute">
                     <figure class="product-media">
                         <a href="product-defaproduct-default.html">
-                            <img src="https://www.portotheme.com/html/wolmart/assets/images/demos/demo8/product/2-2.jpg" alt="Category image" width="138"
-                                height="155" style="background-color: #fff" />
+                            <img src="https://www.portotheme.com/html/wolmart/assets/images/demos/demo8/product/2-2.jpg"
+                                alt="Category image" width="138" height="155" style="background-color: #fff" />
                         </a>
                     </figure>
                     <h4 class="product-name">
@@ -1694,8 +1718,8 @@
                 <div class="product text-center product-absolute">
                     <figure class="product-media">
                         <a href="product-defaproduct-default.html">
-                            <img src="https://www.portotheme.com/html/wolmart/assets/images/demos/demo8/product/4-7.jpg" alt="Category image" width="260"
-                                height="291" style="background-color: #fff" />
+                            <img src="https://www.portotheme.com/html/wolmart/assets/images/demos/demo8/product/4-7.jpg"
+                                alt="Category image" width="260" height="291" style="background-color: #fff" />
                         </a>
                     </figure>
                     <h4 class="product-name">
@@ -1708,8 +1732,8 @@
                 <div class="product text-center product-absolute">
                     <figure class="product-media">
                         <a href="product-defaproduct-default.html">
-                            <img src="https://www.portotheme.com/html/wolmart/assets/images/demos/demo8/product/5-4.jpg" alt="Category image" width="213"
-                                height="238" style="background-color: #fff" />
+                            <img src="https://www.portotheme.com/html/wolmart/assets/images/demos/demo8/product/5-4.jpg"
+                                alt="Category image" width="213" height="238" style="background-color: #fff" />
                         </a>
                     </figure>
                     <h4 class="product-name">
@@ -1722,8 +1746,8 @@
                 <div class="product text-center product-absolute">
                     <figure class="product-media">
                         <a href="product-defaproduct-default.html">
-                            <img src="https://www.portotheme.com/html/wolmart/assets/images/demos/demo8/product/4-3.jpg" alt="Category image" width="260"
-                                height="291" style="background-color: #fff" />
+                            <img src="https://www.portotheme.com/html/wolmart/assets/images/demos/demo8/product/4-3.jpg"
+                                alt="Category image" width="260" height="291" style="background-color: #fff" />
                         </a>
                     </figure>
                     <h4 class="product-name">
