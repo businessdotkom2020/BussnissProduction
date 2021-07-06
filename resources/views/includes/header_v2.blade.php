@@ -1,47 +1,5 @@
 <header class="header">
-    <div class="header-top">
-        <div class="container">
-            <div class="header-left">
-                <p class="welcome-msg">Welcome to Wolmart Store message or remove it!</p>
-            </div>
-            <div class="header-right">
-                <div class="dropdown">
-                    <a href="#currency">USD</a>
-                    <div class="dropdown-box">
-                        <a href="#USD">USD</a>
-                        <a href="#EUR">EUR</a>
-                    </div>
-                </div>
-                <!-- End of DropDown Menu -->
 
-                <div class="dropdown">
-                    <a href="#language"><img src="assets/images/flags/eng.png" alt="ENG Flag" width="14" height="8"
-                            class="dropdown-image" /> ENG</a>
-                    <div class="dropdown-box">
-                        <a href="#ENG">
-                            <img src="assets/images/flags/eng.png" alt="ENG Flag" width="14" height="8"
-                                class="dropdown-image" />
-                            ENG
-                        </a>
-                        <a href="#FRA">
-                            <img src="assets/images/flags/fra.png" alt="FRA Flag" width="14" height="8"
-                                class="dropdown-image" />
-                            FRA
-                        </a>
-                    </div>
-                </div>
-                <!-- End of Dropdown Menu -->
-                <span class="divider d-lg-show"></span>
-                <a href="blog.html" class="d-lg-show">Blog</a>
-                <a href="contact-us.html" class="d-lg-show">Contact Us</a>
-                <a href="my-account.html" class="d-lg-show">My Account</a>
-                <a href="assets/ajax/login.html" class="d-lg-show login sign-in"><i class="w-icon-account"></i>Sign
-                    In</a>
-                <span class="delimiter d-lg-show">/</span>
-                <a href="assets/ajax/login.html" class="ml-0 d-lg-show login register">Register</a>
-            </div>
-        </div>
-    </div>
     <!-- End of Header Top -->
 
     <div class="header-middle">
@@ -49,8 +7,8 @@
             <div class="header-left mr-md-4">
                 <a href="#" class="mobile-menu-toggle text-white w-icon-hamburger">
                 </a>
-                <a href="demo8.html" class="logo ml-lg-0">
-                    <img src="assets/images/demos/demo8/header-logo.png" alt="lo\go" width="144" height="45" />
+                <a href="{{url('/')}}" class="logo ml-lg-0">
+                    <img src="{{ asset('/web/images/logo.png')}}" alt="lo\go" width="144" height="45" />
                 </a>
                 <form method="get" action="#" class="input-wrapper header-search hs-expanded hs-round d-none d-md-flex">
                     <div class="select-box bg-white">
@@ -734,8 +692,12 @@
                     </nav>
                 </div>
                 <div class="header-right">
-                    <a href="#" class="d-xl-show"><i class="w-icon-map-marker mr-1"></i>Track Order</a>
-                    <a href="#"><i class="w-icon-sale"></i>Daily Deals</a>
+                    <a href="#" class="d-xl-show">
+                        <img src="https://img.icons8.com/ios/50/000000/holding-box.png"
+                            style="width: 20px; margin-right: 5px; margin-left: 5px; " /></i>Create Request</a>
+                    <a href="#">
+                        <img src="https://img.icons8.com/pastel-glyph/64/000000/box--v3.png"
+                            style="width: 20px; margin-right: 5px; margin-left: 5px; " /></i>Create Product</a>
                 </div>
             </div>
         </div>

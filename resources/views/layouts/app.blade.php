@@ -61,7 +61,7 @@
 
         <div class="page-wrapper">
 
-            @include('includes.header_v2')
+            @include('includes.app_header')
 
             @include('includes.app_mobile_menu')
 
