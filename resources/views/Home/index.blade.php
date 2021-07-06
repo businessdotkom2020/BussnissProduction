@@ -49,7 +49,7 @@ $menu = false ;
 
 
 <main class="main">
-    <div class="intro-section">
+    <div class="intro-section mt-4">
         @include('Home.main_slider')
 
     </div>
