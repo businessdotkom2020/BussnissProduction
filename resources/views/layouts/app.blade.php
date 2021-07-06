@@ -59,12 +59,14 @@
     <div class="wrapper col-xs-12">
 
 
+        <div class="page-wrapper">
+
+            @include('includes.app_header')
 
 
+            @yield('content')
 
-        @yield('content')
-
-
+        </div>
 
         @include('includes.app_footer')
 
