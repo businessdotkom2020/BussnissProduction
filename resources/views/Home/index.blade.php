@@ -1208,8 +1208,7 @@
                             <div class="product-action-vertical">
                                 <a href="#" class="btn-product-icon btn-wishlist w-icon-heart"
                                     title="Add to wishlist"></a>
-                                <a href="#" class="btn-product-icon btn-compare w-icon-compare"
-                                    title="Add to Compare"></a>
+
                             </div>
                             <div class="product-action">
                                 <a href="#" class="btn-product btn-quickview" title="Quick View">Quick
@@ -1218,16 +1217,7 @@
                         </figure>
                         <div class="product-details">
                             <h4 class="product-name"><a href="product-default.html">Comfortable Blanket</a></h4>
-                            <div class="product-pa-wrapper">
-                                <div class="product-price">
-                                    <ins class="new-price">$30.00 - $36.00</ins>
-                                </div>
-                                <div class="product-action">
-                                    <a href="#"
-                                        class="btn-cart btn-product btn btn-icon-right btn-link btn-underline">Add
-                                        To Cart</a>
-                                </div>
-                            </div>
+
                             <div class="sold-by">
                                 Provided from : <a href="#">Vendor 1</a>
                             </div>
@@ -1244,8 +1234,7 @@
                             <div class="product-action-vertical">
                                 <a href="#" class="btn-product-icon btn-wishlist w-icon-heart"
                                     title="Add to wishlist"></a>
-                                <a href="#" class="btn-product-icon btn-compare w-icon-compare"
-                                    title="Add to Compare"></a>
+
                             </div>
                             <div class="product-action">
                                 <a href="#" class="btn-product btn-quickview" title="Quick View">Quick
@@ -1254,16 +1243,7 @@
                         </figure>
                         <div class="product-details">
                             <h4 class="product-name"><a href="product-default.html">Men's T-Shirt</a></h4>
-                            <div class="product-pa-wrapper">
-                                <div class="product-price">
-                                    <ins class="new-price">$25.00 - $26.00</ins>
-                                </div>
-                                <div class="product-action">
-                                    <a href="#"
-                                        class="btn-cart btn-product btn btn-icon-right btn-link btn-underline">Add
-                                        To Cart</a>
-                                </div>
-                            </div>
+
                             <div class="sold-by">
                                 Provided from : <a href="#">Vendor 4</a>
                             </div>
@@ -1280,8 +1260,7 @@
                             <div class="product-action-vertical">
                                 <a href="#" class="btn-product-icon btn-wishlist w-icon-heart"
                                     title="Add to wishlist"></a>
-                                <a href="#" class="btn-product-icon btn-compare w-icon-compare"
-                                    title="Add to Compare"></a>
+
                             </div>
                             <div class="product-action">
                                 <a href="#" class="btn-product btn-quickview" title="Quick View">Quick
@@ -1290,16 +1269,7 @@
                         </figure>
                         <div class="product-details">
                             <h4 class="product-name"><a href="product-default.html">White Schoolbag</a></h4>
-                            <div class="product-pa-wrapper">
-                                <div class="product-price">
-                                    <ins class="new-price">$56.48</ins>
-                                </div>
-                                <div class="product-action">
-                                    <a href="#"
-                                        class="btn-cart btn-product btn btn-icon-right btn-link btn-underline">Add
-                                        To Cart</a>
-                                </div>
-                            </div>
+
                             <div class="sold-by">
                                 Provided from : <a href="#">Vendor 3</a>
                             </div>
@@ -1316,8 +1286,7 @@
                             <div class="product-action-vertical">
                                 <a href="#" class="btn-product-icon btn-wishlist w-icon-heart"
                                     title="Add to wishlist"></a>
-                                <a href="#" class="btn-product-icon btn-compare w-icon-compare"
-                                    title="Add to Compare"></a>
+
                             </div>
                             <div class="product-action">
                                 <a href="#" class="btn-product btn-quickview" title="Quick View">Quick
@@ -1326,16 +1295,7 @@
                         </figure>
                         <div class="product-details">
                             <h4 class="product-name"><a href="product-default.html">Chain Handle Umbrella</a></h4>
-                            <div class="product-pa-wrapper">
-                                <div class="product-price">
-                                    <ins class="new-price">$28.98</ins><del class="old-price">$32.62</del>
-                                </div>
-                                <div class="product-action">
-                                    <a href="#"
-                                        class="btn-cart btn-product btn btn-icon-right btn-link btn-underline">Add
-                                        To Cart</a>
-                                </div>
-                            </div>
+
                             <div class="sold-by">
                                 Provided from : <a href="#">Vendor 3</a>
                             </div>
@@ -1352,8 +1312,8 @@
                             <div class="product-action-vertical">
                                 <a href="#" class="btn-product-icon btn-wishlist w-icon-heart"
                                     title="Add to wishlist"></a>
-                                <a href="#" class="btn-product-icon btn-compare w-icon-compare"
-                                    title="Add to Compare"></a>
+
+
                             </div>
                             <div class="product-action">
                                 <a href="#" class="btn-product btn-quickview" title="Quick View">Quick
@@ -1362,16 +1322,7 @@
                         </figure>
                         <div class="product-details">
                             <h4 class="product-name"><a href="product-default.html">Men's Suede Belt</a></h4>
-                            <div class="product-pa-wrapper">
-                                <div class="product-price">
-                                    <ins class="new-price">$73.71</ins><del class="old-price">$78.04</del>
-                                </div>
-                                <div class="product-action">
-                                    <a href="#"
-                                        class="btn-cart btn-product btn btn-icon-right btn-link btn-underline">Add
-                                        To Cart</a>
-                                </div>
-                            </div>
+
                             <div class="sold-by">
                                 Provided from : <a href="#">Vendor 2</a>
                             </div>
@@ -1388,8 +1339,7 @@
                             <div class="product-action-vertical">
                                 <a href="#" class="btn-product-icon btn-wishlist w-icon-heart"
                                     title="Add to wishlist"></a>
-                                <a href="#" class="btn-product-icon btn-compare w-icon-compare"
-                                    title="Add to Compare"></a>
+
                             </div>
                             <div class="product-action">
                                 <a href="#" class="btn-product btn-quickview" title="Quick View">Quick
@@ -1398,16 +1348,7 @@
                         </figure>
                         <div class="product-details">
                             <h4 class="product-name"><a href="product-default.html">Men's Travel Bag</a></h4>
-                            <div class="product-pa-wrapper">
-                                <div class="product-price">
-                                    <ins class="new-price">$23.99</ins><del class="old-price">$25.68</del>
-                                </div>
-                                <div class="product-action">
-                                    <a href="#"
-                                        class="btn-cart btn-product btn btn-icon-right btn-link btn-underline">Add
-                                        To Cart</a>
-                                </div>
-                            </div>
+
                             <div class="sold-by">
                                 Provided from : <a href="#">Vendor 3</a>
                             </div>
@@ -1424,8 +1365,7 @@
                             <div class="product-action-vertical">
                                 <a href="#" class="btn-product-icon btn-wishlist w-icon-heart"
                                     title="Add to wishlist"></a>
-                                <a href="#" class="btn-product-icon btn-compare w-icon-compare"
-                                    title="Add to Compare"></a>
+
                             </div>
                             <div class="product-action">
                                 <a href="#" class="btn-product btn-quickview" title="Quick View">Quick
@@ -1434,16 +1374,7 @@
                         </figure>
                         <div class="product-details">
                             <h4 class="product-name"><a href="product-default.html">Grey Calotte</a></h4>
-                            <div class="product-pa-wrapper">
-                                <div class="product-price">
-                                    <ins class="new-price">$173.84</ins>
-                                </div>
-                                <div class="product-action">
-                                    <a href="#"
-                                        class="btn-cart btn-product btn btn-icon-right btn-link btn-underline">Add
-                                        To Cart</a>
-                                </div>
-                            </div>
+
                             <div class="sold-by">
                                 Provided from : <a href="#">Vendor 5</a>
                             </div>
