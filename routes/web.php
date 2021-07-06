@@ -181,7 +181,7 @@ Route::post('add_subscriber', 'web\SettingsController@add_subscriber')->name('ad
 
 
 Route::get('locale/{locale}','web\SettingsController@locale' )->name('locale');
-Route::get('currency/{currency}','web\SettingsController@currency' )->name('currency');
+Route::get('currency/{code}','web\SettingsController@currency' )->name('currency');
 
  
 
