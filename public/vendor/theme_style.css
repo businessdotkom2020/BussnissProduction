@@ -10909,7 +10909,7 @@ body .product-popup {
 }
 
 .header-top {
-  background: #0088dd;
+  background: #f5f6f8;
   font-size: 1.1rem;
   letter-spacing: -0.027em;
   text-transform: capitalize;
@@ -11028,8 +11028,8 @@ body .product-popup {
 .header-middle {
   padding-top: 3.2rem;
   padding-bottom: 3.2rem;
-  color: #fff;
-  background: #0088dd;
+  color: #333;
+  background: #fff;
   font-size: 1.2rem;
   border-bottom: 0;
 }
