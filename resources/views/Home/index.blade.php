@@ -1188,21 +1188,14 @@
             <div class="row grid banner-product-wrapper mb-6">
                 <div class="grid-item col-xl-5col3 col-lg-3 col-sm-8 col-12">
                     <div class="banner banner-fixed br-sm">
-                        <figure>
-                            <img src="https://www.palmermoving.com/data/images/palmer_moving_services_Atlas_Van_Op_With_Couple_opt.jpg"
-                                alt="Banner" width="820" height="364"
-                                style="background-color: #EBEBEB;max-height: 400px;" />
-                        </figure>
-                        <div class="banner-content y-50">
-                            <h5 class="banner-subtitle text-capitalize font-weight-normal">Special Offers</h5>
-                            <h3 class="banner-title text-uppercase">Fashion Sale</h3>
-                            <div class="banner-price-info text-dark lh-1 ls-25">Up to <strong
-                                    class="text-secondary text-uppercase">40% Off</strong></div>
-                            <hr class="banner-divider bg-dark">
-                            <a href="demo8-shop.html" class="btn btn-dark btn-link btn-slide-right btn-icon-right">
-                                Start Shopping<i class="w-icon-long-arrow-right mb-1"></i>
-                            </a>
-                        </div>
+                        <a href="#">
+
+                            <figure>
+                                <img src="https://www.palmermoving.com/data/images/palmer_moving_services_Atlas_Van_Op_With_Couple_opt.jpg"
+                                    alt="Banner" width="820" height="364"
+                                    style="background-color: #EBEBEB;max-height: 400px;" />
+                            </figure>
+                        </a>
                     </div>
                 </div>
                 <div class="grid-item col-xl-5col col-lg-3 col-sm-4 col-6">
