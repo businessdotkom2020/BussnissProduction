@@ -12921,7 +12921,7 @@ body .product-popup {
 .header-top .dropdown > a:hover,
 .header-middle .header-right > a:hover,
 .header-middle .dropdown > a:hover {
-  color: #fff;
+  color: rgb(20, 158, 235);
 }
 
 .header-search .btn-search:hover, .header-search .btn-search:active, .header-search .btn-search:focus {
