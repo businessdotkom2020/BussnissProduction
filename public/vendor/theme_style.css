@@ -11245,7 +11245,7 @@ body .product-popup {
   cursor: pointer;
   margin-top: 0.1rem;
   font-weight: inherit;
-  color: #eee;
+  color: inherit;
 }
 .compare i {
   font-size: 3.3rem;
@@ -11265,7 +11265,7 @@ body .product-popup {
 .wishlist span {
   margin-top: 0.3rem;
   font-weight: inherit;
-  color: #eee;
+  color: inherit;
   cursor: pointer;
 }
 .wishlist i {
