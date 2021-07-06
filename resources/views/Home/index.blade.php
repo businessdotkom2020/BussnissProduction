@@ -118,7 +118,7 @@
         </div>
         <!-- End of Icon Box Wrapper -->
         <div class="row category-wrapper cols-lg-3 cols-sm-2 appear-animate mb-8 fadeIn appear-animation-visible"
-            style="animation-duration: 1.2s; margin-top: 50px;">
+            style="animation-duration: 1.2s; ">
             <div class="category-wrap mb-4">
 
 
