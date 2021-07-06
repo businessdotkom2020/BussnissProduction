@@ -180,6 +180,11 @@ Route::post('add_subscriber', 'web\SettingsController@add_subscriber')->name('ad
 
 
 
+Route::get('locale/{locale}','web\SettingsController@locale' )->name('locale');
+Route::get('currency/{currency}','web\SettingsController@currency' )->name('currency');
+
+ 
+
 
 
 Route::group(['prefix' => 'admin'], function () {
@@ -200,15 +205,6 @@ Route::get('cat/{id}', function ($id) {
         'parent_id' => (string) $cat->parent->id,
         'category' => (string) $cat->parent->parent->id,
     ];
-});
-
-
-Route::get('locale/{locale}', function ($locale) {
-    Session::put('locale', $locale);
-    return redirect()->back();
-});
-Route::get('spam', function () {
-     return view('Suppliers.spam');
 });
 
 

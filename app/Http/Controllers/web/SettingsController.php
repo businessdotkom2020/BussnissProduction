@@ -41,6 +41,16 @@ class SettingsController extends Controller
     {
         return view('settings.contact');
     }
+    public function local($local)
+    {
+        Session::put('locale', $locale);
+        return redirect()->back();
+    }
+    public function currency($currency)
+    {
+        Session::put('currency', $currency);
+        return redirect()->back();
+    }
 
     public function add_subscriber()
     {
