@@ -1,4 +1,5 @@
 <?php
+use Session;
 
  
 if (!function_exists('current_locale')) {

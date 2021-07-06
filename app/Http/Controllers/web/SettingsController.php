@@ -47,9 +47,9 @@ class SettingsController extends Controller
         Session::put('locale', $locale);
         return redirect()->back();
     }
-    public function currency($currency)
+    public function currency($code)
     {
-        Session::put('currency', $currency);
+        Session::put('currency', $code);
         return redirect()->back();
     }
 
