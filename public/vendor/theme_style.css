@@ -11702,7 +11702,7 @@ body .product-popup {
 }
 .category-dropdown:hover > a, .category-dropdown.show > a {
   color: #fff;
-  background-color: #0088dd;
+  background-color: #fff;
 }
 .category-dropdown .dropdown-box {
   padding: 0;
