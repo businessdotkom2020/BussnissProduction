@@ -6,13 +6,13 @@
     <div class="header-middle">
         <div class="container">
             <div class="header-left mr-md-4">
-                <a href="#" class="mobile-menu-toggle text-white w-icon-hamburger">
+                <a href="{{url('/')}}" class="mobile-menu-toggle  w-icon-hamburger">
                 </a>
                 <a href="{{url('/')}}" class="logo ml-lg-0">
                     <img src="{{ asset('/web/images/logo.png')}}" alt="lo\go" width="144" height="45" />
                 </a>
                 <form method="get" action="#" class="input-wrapper header-search hs-expanded hs-round d-none d-md-flex">
-                    <div class="select-box bg-white">
+                    <div class="select-box  ">
                         <select id="category" name="category">
                             <option value="">All Categories</option>
                             <option value="4">Fashion</option>
@@ -26,19 +26,19 @@
                             <option value="12">Clothing</option>
                         </select>
                     </div>
-                    <input type="text" class="form-control bg-white" name="search" id="search"
-                        placeholder="Search in..." required />
+                    <input type="text" class="form-control  " name="search" id="search" placeholder="Search in..."
+                        required />
                     <button class="btn btn-search" type="submit"><i class="w-icon-search"></i>
                     </button>
                 </form>
             </div>
             <div class="header-right ml-4">
                 <div class="header-call d-xs-show d-lg-flex align-items-center">
-                    <a href="tel:#" class="w-icon-call text-white"></a>
+                    <a href="tel:#" class="w-icon-call "></a>
                     <div class="call-info d-lg-show">
-                        <h4 class="chat font-weight-normal font-size-md text-normal ls-normal text-white mb-0">
-                            <a href="mailto:#" class="text-capitalize text-white">Live Chat</a> or :</h4>
-                        <a href="tel:#" class="phone-number font-weight-bolder text-white ls-50">0(800)123-456</a>
+                        <h4 class="chat font-weight-normal font-size-md text-normal ls-normal  mb-0">
+                            <a href="mailto:#" class="text-capitalize ">Live Chat</a> or :</h4>
+                        <a href="tel:#" class="phone-number font-weight-bolder  ls-50">0(800)123-456</a>
                     </div>
                 </div>
                 <a class="wishlist label-down link d-xs-show" href="wishlist.html">
@@ -51,7 +51,7 @@
                 </a>
                 <div class="dropdown cart-dropdown cart-offcanvas mr-0 mr-lg-2">
                     <div class="cart-overlay"></div>
-                    <a href="#" class="cart-toggle label-down link text-white">
+                    <a href="#" class="cart-toggle label-down link ">
                         <i class="w-icon-cart">
                             <span class="cart-count">2</span>
                         </i>
@@ -130,7 +130,7 @@
                 <div class="header-left">
                     <div class="dropdown category-dropdown has-border {{Route::current()->getName() == 'home' ? "show-dropdown" : ""}}"
                         data-visible="false">
-                        <a href="#" class="category-toggle text-dark bg-white text-capitalize" role="button"
+                        <a href="#" class="category-toggle text-dark   text-capitalize" role="button"
                             data-toggle="dropdown" aria-haspopup="true" aria-expanded="true" data-display="static"
                             title="Browse Categories">
                             <i class="w-icon-category"></i>
@@ -270,16 +270,16 @@
                                                         width="235" height="461" />
                                                 </figure>
                                                 <div class="banner-content">
-                                                    <h4 class="banner-subtitle font-weight-normal text-white mb-1">
+                                                    <h4 class="banner-subtitle font-weight-normal  mb-1">
                                                         Restroom</h4>
-                                                    <h3 class="banner-title font-weight-bolder text-white ls-normal">
+                                                    <h3 class="banner-title font-weight-bolder  ls-normal">
                                                         Furniture Sale</h3>
-                                                    <div class="banner-price-info text-white font-weight-normal ls-25">
+                                                    <div class="banner-price-info  font-weight-normal ls-25">
                                                         Up to <span
                                                             class="text-secondary text-uppercase font-weight-bold">25%
                                                             Off</span></div>
                                                     <a href="demo8-shop.html"
-                                                        class="btn btn-white btn-link btn-sm btn-slide-right btn-icon-right">
+                                                        class="btn   btn-link btn-sm btn-slide-right btn-icon-right">
                                                         Shop Now<i class="w-icon-long-arrow-right"></i>
                                                     </a>
                                                 </div>
@@ -355,13 +355,13 @@
                                                 <div class="banner-content">
                                                     <h4 class="banner-subtitle font-weight-normal">Deals Of The
                                                         Week</h4>
-                                                    <h3 class="banner-title text-white">Save On Smart EarPhone
+                                                    <h3 class="banner-title ">Save On Smart EarPhone
                                                     </h3>
                                                     <div
                                                         class="banner-price-info text-secondary font-weight-bolder text-uppercase text-secondary">
                                                         20% Off</div>
                                                     <a href="demo8-shop.html"
-                                                        class="btn btn-white btn-outline btn-sm btn-rounded">Shop
+                                                        class="btn   btn-outline btn-sm btn-rounded">Shop
                                                         Now</a>
                                                 </div>
                                             </div>
@@ -462,14 +462,12 @@
                                                             style="background-color: #9F9888;" />
                                                     </figure>
                                                     <div class="banner-content y-50">
-                                                        <h4
-                                                            class="banner-subtitle font-weight-normal text-white text-capitalize">
+                                                        <h4 class="banner-subtitle font-weight-normal  text-capitalize">
                                                             Best Seller</h4>
                                                         <h3
-                                                            class="banner-title font-weight-bolder text-capitalize text-white ls-normal">
+                                                            class="banner-title font-weight-bolder text-capitalize  ls-normal">
                                                             Chair &amp; Lamp</h3>
-                                                        <div
-                                                            class="banner-price-info font-weight-normal ls-normal text-white">
+                                                        <div class="banner-price-info font-weight-normal ls-normal ">
                                                             From <strong>$165.00</strong></div>
                                                     </div>
                                                 </div>
