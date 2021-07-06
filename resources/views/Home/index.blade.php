@@ -50,7 +50,7 @@ $menu = false ;
 
 <main class="main">
     <div class="intro-section">
-        @include('home.main_slider')
+        @include('Home.main_slider')
 
     </div>
     <!-- End of .intro-section -->
