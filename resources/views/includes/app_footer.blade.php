@@ -2,7 +2,7 @@
 <footer class="footer appear-animate" data-animation-options="{
     'name': 'fadeIn'
 }">
-    <div class="footer-newsletter bg-primary pt-6 pb-6">
+    {{-- <div class="footer-newsletter bg-primary pt-6 pb-6">
         <div class="container">
             <div class="row justify-content-center align-items-center">
                 <div class="col-xl-5 col-lg-6">
@@ -28,7 +28,7 @@
                 </div>
             </div>
         </div>
-    </div>
+    </div> --}}
     <div class="container">
         <div class="footer-top">
             <div class="row">
