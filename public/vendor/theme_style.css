@@ -10913,7 +10913,7 @@ body .product-popup {
   font-size: 1.1rem;
   letter-spacing: -0.027em;
   text-transform: capitalize;
-  color: #fff;
+  color: #000;
   border-bottom: 1px solid;
   border-color: rgba(238, 238, 238, 0.2);
 }
