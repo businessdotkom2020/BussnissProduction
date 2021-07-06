@@ -50,7 +50,7 @@ $menu = false ;
 
 <main class="main">
     <div class="container pb-2">
-        <div class="intro-section mt-4">
+        <div class="intro-wrapper mt-4">
             @include('Home.main_slider')
 
         </div>
