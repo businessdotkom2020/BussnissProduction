@@ -8,7 +8,7 @@
         <!-- End of Intro Slide 2 -->
         
         <!-- End of Intro Slide 3 -->
-    <div class="owl-stage-outer"><div class="owl-stage" style="transform: translate3d(0px, 0px, 0px); transition: all 0s ease 0s; width: 3240px;"><div class="owl-item active" style="width: 1080px;"><div class="banner banner-fixed intro-slide intro-slide1 br-sm" style="background-image: url(assets/images/demos/demo8/slides/slide-1.jpg); background-color: #E8EAEF;" data-index="1">
+    <div class="owl-stage-outer"><div class="owl-stage" style="transform: translate3d(0px, 0px, 0px); transition: all 0s ease 0s; width: 3240px;"><div class="owl-item active" style="width: 1080px;"><div class="banner banner-fixed intro-slide intro-slide1 br-sm" style="background-image: url(https://www.portotheme.com/html/wolmart/assets/images/demos/demo8/slides/slide-1.jpg); background-color: #E8EAEF;" data-index="1">
             <div class="banner-content y-50 text-right">
                 <div class="slide-animate fadeInUpShorter show-content" data-animation-options="{
                     'name': 'fadeInUpShorter', 'duration': '1s'
@@ -24,7 +24,7 @@
                     </a>
                 </div>
             </div>
-        </div></div><div class="owl-item" style="width: 1080px;"><div class="banner banner-fixed intro-slide intro-slide2 br-sm" style="background-image: url(assets/images/demos/demo8/slides/slide-2.jpg); background-color: #2e3233;" data-index="2">
+        </div></div><div class="owl-item" style="width: 1080px;"><div class="banner banner-fixed intro-slide intro-slide2 br-sm" style="background-image: url(https://www.portotheme.com/html/wolmart/assets/images/demos/demo8/slides/slide-2.jpg); background-color: #2e3233;" data-index="2">
             <div class="banner-content y-50">
                 <div class="slide-animate" data-animation-options="{
                     'name': 'flipInY', 'duration': '1s'
@@ -39,7 +39,7 @@
                     </a>
                 </div>
             </div>
-        </div></div><div class="owl-item" style="width: 1080px;"><div class="banner banner-fixed intro-slide intro-slide3 br-sm" style="background-image: url(assets/images/demos/demo8/slides/slide-3.jpg); background-color:#363332;" data-index="3">
+        </div></div><div class="owl-item" style="width: 1080px;"><div class="banner banner-fixed intro-slide intro-slide3 br-sm" style="background-image: url(https://www.portotheme.com/html/wolmart/assets/images/demos/demo8/slides/slide-3.jpg); background-color:#363332;" data-index="3">
             <div class="banner-content y-50">
                 <div class="slide-animate" data-animation-options="{
                     'name': 'zoomIn', 'duration': '1s'
