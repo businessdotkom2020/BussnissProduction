@@ -77,7 +77,7 @@
                                 </div>
                                 <figure class="product-media">
                                     <a href="product-default.html">
-                                        <img src="assets/images/cart/product-1.jpg" alt="product" height="84"
+                                        <img src=" https://www.portotheme.com/html/wolmart/assets/images/cart/product-1.jpg" alt="product" height="84"
                                             width="94" />
                                     </a>
                                 </figure>
@@ -98,7 +98,7 @@
                                 </div>
                                 <figure class="product-media">
                                     <a href="product-default.html">
-                                        <img src="assets/images/cart/product-2.jpg" alt="product" width="84"
+                                        <img src=" https://www.portotheme.com/html/wolmart/assets/images/cart/product-2.jpg" alt="product" width="84"
                                             height="94" />
                                     </a>
                                 </figure>
@@ -185,7 +185,7 @@
                                         <li>
                                             <div class="banner-fixed menu-banner menu-banner2">
                                                 <figure>
-                                                    <img src="assets/images/menu/banner-2.jpg" alt="Menu Banner"
+                                                    <img src=" https://www.portotheme.com/html/wolmart/assets/images/menu/banner-2.jpg" alt="Menu Banner"
                                                         width="235" height="347" />
                                                 </figure>
                                                 <div class="banner-content">
@@ -267,7 +267,7 @@
                                         <li>
                                             <div class="menu-banner banner-fixed menu-banner3">
                                                 <figure>
-                                                    <img src="assets/images/menu/banner-3.jpg" alt="Menu Banner"
+                                                    <img src=" https://www.portotheme.com/html/wolmart/assets/images/menu/banner-3.jpg" alt="Menu Banner"
                                                         width="235" height="461" />
                                                 </figure>
                                                 <div class="banner-content">
@@ -350,7 +350,7 @@
                                         <li>
                                             <div class="menu-banner banner-fixed menu-banner4">
                                                 <figure>
-                                                    <img src="assets/images/menu/banner-4.jpg" alt="Menu Banner"
+                                                    <img src=" https://www.portotheme.com/html/wolmart/assets/images/menu/banner-4.jpg" alt="Menu Banner"
                                                         width="235" height="433" />
                                                 </figure>
                                                 <div class="banner-content">
@@ -439,7 +439,7 @@
                                             <div class="col-6">
                                                 <div class="banner banner-fixed menu-banner5 br-xs">
                                                     <figure>
-                                                        <img src="assets/images/menu/banner-5.jpg" alt="Banner"
+                                                        <img src=" https://www.portotheme.com/html/wolmart/assets/images/menu/banner-5.jpg" alt="Banner"
                                                             width="410" height="123"
                                                             style="background-color: #D2D2D2;" />
                                                     </figure>
@@ -458,7 +458,7 @@
                                             <div class="col-6">
                                                 <div class="banner banner-fixed menu-banner5 br-xs">
                                                     <figure>
-                                                        <img src="assets/images/menu/banner-6.jpg" alt="Banner"
+                                                        <img src=" https://www.portotheme.com/html/wolmart/assets/images/menu/banner-6.jpg" alt="Banner"
                                                             width="410" height="123"
                                                             style="background-color: #9F9888;" />
                                                     </figure>
