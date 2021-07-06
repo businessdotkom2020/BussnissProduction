@@ -1254,8 +1254,8 @@
                     <div class="product product-simple text-center">
                         <figure class="product-media">
                             <a href="#">
-                                <img src="https://www.portotheme.com/html/wolmart/assets/images/demos/demo8/product/3-3.jpg"
-                                    alt="Product" width="260" height="291" />
+                                <img src="https://cdn.mosoah.com/wp-content/uploads/2019/07/30124813/%D9%85%D9%83%D8%A7%D8%AA%D8%A8-%D8%A7%D8%B3%D8%AA%D8%B4%D8%A7%D8%B1%D8%A7%D8%AA-%D9%87%D9%86%D8%AF%D8%B3%D9%8A%D8%A9-%D9%81%D9%8A-%D8%A7%D9%84%D8%B4%D8%A7%D8%B1%D9%82%D8%A9.jpg"
+                                    alt="Product" width="260" height="291"  style="min-height: 280px;" />
                             </a>
                             <div class="product-action-vertical">
                                 <a href="#" class="btn-product-icon btn-wishlist w-icon-heart"
@@ -1280,8 +1280,8 @@
                     <div class="product product-simple text-center">
                         <figure class="product-media">
                             <a href="#">
-                                <img src="https://www.portotheme.com/html/wolmart/assets/images/demos/demo8/product/3-4.jpg"
-                                    alt="Product" width="260" height="291" />
+                                <img src="https://www.traveldailynews.com/assets/thumbnails/09/092058bdb76d7a7607730c0351c8129c.jpg"
+                                    alt="Product" width="260" height="291"  style="min-height: 280px;" />
                             </a>
                             <div class="product-action-vertical">
                                 <a href="#" class="btn-product-icon btn-wishlist w-icon-heart"
