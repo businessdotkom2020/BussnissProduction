@@ -127,7 +127,8 @@
         <div class="container">
             <div class="inner-wrap">
                 <div class="header-left">
-                    <div class="dropdown category-dropdown has-border show-dropdown" data-visible="true">
+                    <div class="dropdown category-dropdown has-border {{Route::current()->getName() == 'home' ? "show-dropdown" : ""}}"
+                        data-visible="false">
                         <a href="#" class="category-toggle text-dark bg-white text-capitalize" role="button"
                             data-toggle="dropdown" aria-haspopup="true" aria-expanded="true" data-display="static"
                             title="Browse Categories">
