@@ -2807,42 +2807,42 @@ $menu = false ;
             <div class="product-gallery product-gallery-sticky mb-0">
                 <div class="product-single-carousel owl-carousel owl-theme owl-nav-inner row cols-1 gutter-no">
                     <figure class="product-image">
-                        <img src="assets/images/products/popup/1-440x494.jpg"
-                            data-zoom-image="assets/images/products/popup/1-800x900.jpg" alt="Water Boil Black Utensil"
+                        <img src="https://www.portotheme.com/html/wolmart/assets/images/products/popup/1-440x494.jpg"
+                            data-zoom-image="https://www.portotheme.com/html/wolmart/assets/images/products/popup/1-800x900.jpg" alt="Water Boil Black Utensil"
                             width="800" height="900">
                     </figure>
                     <figure class="product-image">
-                        <img src="assets/images/products/popup/2-440x494.jpg"
-                            data-zoom-image="assets/images/products/popup/2-800x900.jpg" alt="Water Boil Black Utensil"
+                        <img src="https://www.portotheme.com/html/wolmart/assets/images/products/popup/2-440x494.jpg"
+                            data-zoom-image="https://www.portotheme.com/html/wolmart/assets/images/products/popup/2-800x900.jpg" alt="Water Boil Black Utensil"
                             width="800" height="900">
                     </figure>
                     <figure class="product-image">
-                        <img src="assets/images/products/popup/3-440x494.jpg"
-                            data-zoom-image="assets/images/products/popup/3-800x900.jpg" alt="Water Boil Black Utensil"
+                        <img src="https://www.portotheme.com/html/wolmart/assets/images/products/popup/3-440x494.jpg"
+                            data-zoom-image="https://www.portotheme.com/html/wolmart/assets/images/products/popup/3-800x900.jpg" alt="Water Boil Black Utensil"
                             width="800" height="900">
                     </figure>
                     <figure class="product-image">
-                        <img src="assets/images/products/popup/4-440x494.jpg"
-                            data-zoom-image="assets/images/products/popup/4-800x900.jpg" alt="Water Boil Black Utensil"
+                        <img src="https://www.portotheme.com/html/wolmart/assets/images/products/popup/4-440x494.jpg"
+                            data-zoom-image="https://www.portotheme.com/html/wolmart/assets/images/products/popup/4-800x900.jpg" alt="Water Boil Black Utensil"
                             width="800" height="900">
                     </figure>
                 </div>
                 <div class="product-thumbs-wrap">
                     <div class="product-thumbs">
                         <div class="product-thumb active">
-                            <img src="assets/images/products/popup/1-103x116.jpg" alt="Product Thumb" width="103"
+                            <img src="https://www.portotheme.com/html/wolmart/assets/images/products/popup/1-103x116.jpg" alt="Product Thumb" width="103"
                                 height="116">
                         </div>
                         <div class="product-thumb">
-                            <img src="assets/images/products/popup/2-103x116.jpg" alt="Product Thumb" width="103"
+                            <img src="https://www.portotheme.com/html/wolmart/assets/images/products/popup/2-103x116.jpg" alt="Product Thumb" width="103"
                                 height="116">
                         </div>
                         <div class="product-thumb">
-                            <img src="assets/images/products/popup/3-103x116.jpg" alt="Product Thumb" width="103"
+                            <img src="https://www.portotheme.com/html/wolmart/assets/images/products/popup/3-103x116.jpg" alt="Product Thumb" width="103"
                                 height="116">
                         </div>
                         <div class="product-thumb">
-                            <img src="assets/images/products/popup/4-103x116.jpg" alt="Product Thumb" width="103"
+                            <img src="https://www.portotheme.com/html/wolmart/assets/images/products/popup/4-103x116.jpg" alt="Product Thumb" width="103"
                                 height="116">
                         </div>
                     </div>
@@ -2856,7 +2856,7 @@ $menu = false ;
                 <h2 class="product-title">Electronics Black Wrist Watch</h2>
                 <div class="product-bm-wrapper">
                     <figure class="brand">
-                        <img src="assets/images/products/brand/brand-1.jpg" alt="Brand" width="102" height="48" />
+                        <img src="https://www.portotheme.com/html/wolmart/assets/images/products/brand/brand-1.jpg" alt="Brand" width="102" height="48" />
                     </figure>
                     <div class="product-meta">
                         <div class="product-categories">
