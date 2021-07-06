@@ -13053,9 +13053,9 @@ body .product-popup {
 .horizontal-menu {
   width: 100%;
   padding: 1rem 3.2rem;
-  background-color: #333;
+  background-color: rgb(245, 246, 248);
   border-radius: 0.5rem;
-  color: #fff;
+  color: black;
   overflow-x: auto;
 }
 .horizontal-menu > li {
