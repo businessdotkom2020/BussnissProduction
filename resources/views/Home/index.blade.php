@@ -53,6 +53,141 @@
 
         </div>
 
+        <div class="row category-wrapper cols-lg-3 cols-sm-2 appear-animate mb-8 fadeIn appear-animation-visible" style="animation-duration: 1.2s;">
+            <div class="category-wrap mb-4">
+                <div class="category category-group-image br-sm">
+                    <div class="category-content">
+                        <h4 class="category-name"><a href="shop-fullwidth-banner.html">Clothings</a>
+                        </h4>
+                        <ul class="category-list">
+                            <li><a href="shop-fullwidth-banner.html">Knitwears</a></li>
+                            <li><a href="shop-fullwidth-banner.html">Jumpers</a></li>
+                            <li><a href="shop-fullwidth-banner.html">Trousers</a></li>
+                            <li><a href="shop-fullwidth-banner.html">Dress &amp; Skirts</a></li>
+                            <li><a href="shop-fullwidth-banner.html">Men's</a></li>
+                            <li><a href="shop-fullwidth-banner.html">Accessories</a></li>
+                        </ul>
+                    </div>
+                    <a href="shop-fullwidth-banner.html">
+                        <figure class="category-media">
+                            <img src="https://www.portotheme.com/html/wolmart/assets/images/demos/demo4/categories/1-1.jpg" alt="Category" width="190" height="215">
+                        </figure>
+                    </a>
+                </div>
+            </div>
+            <!-- End of Category Wrap -->
+            <div class="category-wrap mb-4">
+                <div class="category category-group-image br-sm">
+                    <div class="category-content">
+                        <h4 class="category-name"><a href="shop-fullwidth-banner.html">Office
+                                Electronics</a></h4>
+                        <ul class="category-list">
+                            <li><a href="shop-fullwidth-banner.html">Printers</a></li>
+                            <li><a href="shop-fullwidth-banner.html">Store &amp; Business</a></li>
+                            <li><a href="shop-fullwidth-banner.html">Scanners</a></li>
+                            <li><a href="shop-fullwidth-banner.html">Projectors</a></li>
+                            <li><a href="shop-fullwidth-banner.html">Phones</a></li>
+                            <li><a href="shop-fullwidth-banner.html">Accessories</a></li>
+                        </ul>
+                    </div>
+                    <a href="shop-fullwidth-banner.html">
+                        <figure class="category-media">
+                            <img src="https://www.portotheme.com/html/wolmart/assets/images/demos/demo4/categories/1-2.jpg" alt="Category" width="190" height="215">
+                        </figure>
+                    </a>
+                </div>
+            </div>
+            <!-- End of Category Wrap -->
+            <div class="category-wrap mb-4">
+                <div class="category category-group-image br-sm">
+                    <div class="category-content">
+                        <h4 class="category-name"><a href="shop-fullwidth-banner.html">Home &amp; Kitchen</a>
+                        </h4>
+                        <ul class="category-list">
+                            <li><a href="shop-fullwidth-banner.html">Furnitures &amp; Decor</a></li>
+                            <li><a href="shop-fullwidth-banner.html">Cookwares</a></li>
+                            <li><a href="shop-fullwidth-banner.html">Utensil &amp; Gadgets</a></li>
+                            <li><a href="shop-fullwidth-banner.html">Garden Tools</a></li>
+                            <li><a href="shop-fullwidth-banner.html">Livingroom</a></li>
+                            <li><a href="shop-fullwidth-banner.html">Bedroom</a></li>
+                        </ul>
+                    </div>
+                    <a href="shop-fullwidth-banner.html">
+                        <figure class="category-media">
+                            <img src="https://www.portotheme.com/html/wolmart/assets/images/demos/demo4/categories/1-3.jpg" alt="Category" width="190" height="215">
+                        </figure>
+                    </a>
+                </div>
+            </div>
+            <!-- End of Category Wrap -->
+            <div class="category-wrap mb-4">
+                <div class="category category-group-image br-sm">
+                    <div class="category-content">
+                        <h4 class="category-name"><a href="shop-fullwidth-banner.html">Television</a>
+                        </h4>
+                        <ul class="category-list">
+                            <li><a href="shop-fullwidth-banner.html">Smart TV</a></li>
+                            <li><a href="shop-fullwidth-banner.html">4K Ultra HD TVs</a></li>
+                            <li><a href="shop-fullwidth-banner.html">LED TVs</a></li>
+                            <li><a href="shop-fullwidth-banner.html">OLED TVs</a></li>
+                            <li><a href="shop-fullwidth-banner.html">Camera</a></li>
+                            <li><a href="shop-fullwidth-banner.html">Accessories</a></li>
+                        </ul>
+                    </div>
+                    <a href="shop-fullwidth-banner.html">
+                        <figure class="category-media">
+                            <img src="https://www.portotheme.com/html/wolmart/assets/images/demos/demo4/categories/1-4.jpg" alt="Category" width="190" height="215">
+                        </figure>
+                    </a>
+                </div>
+            </div>
+            <!-- End of Category Wrap -->
+            <div class="category-wrap mb-4">
+                <div class="category category-group-image br-sm">
+                    <div class="category-content">
+                        <h4 class="category-name"><a href="shop-fullwidth-banner.html">Healthy &amp; Beauty</a>
+                        </h4>
+                        <ul class="category-list">
+                            <li><a href="shop-fullwidth-banner.html">Makeup</a></li>
+                            <li><a href="shop-fullwidth-banner.html">Skin Care</a></li>
+                            <li><a href="shop-fullwidth-banner.html">Hair Care</a></li>
+                            <li><a href="shop-fullwidth-banner.html">Tools &amp; Equipments</a></li>
+                            <li><a href="shop-fullwidth-banner.html">Perfumes</a></li>
+                            <li><a href="shop-fullwidth-banner.html">Accessories</a></li>
+                        </ul>
+                    </div>
+                    <a href="shop-fullwidth-banner.html">
+                        <figure class="category-media">
+                            <img src="https://www.portotheme.com/html/wolmart/assets/images/demos/demo4/categories/1-5.jpg" alt="Category" width="190" height="214">
+                        </figure>
+                    </a>
+                </div>
+            </div>
+            <!-- End of Category Wrap -->
+            <div class="category-wrap mb-4">
+                <div class="category category-group-image br-sm">
+                    <div class="category-content">
+                        <h4 class="category-name"><a href="shop-fullwidth-banner.html">Jewelry &amp; Watch</a>
+                        </h4>
+                        <ul class="category-list">
+                            <li><a href="shop-fullwidth-banner.html">Pendant</a></li>
+                            <li><a href="shop-fullwidth-banner.html">Necklace</a></li>
+                            <li><a href="shop-fullwidth-banner.html">Watch</a></li>
+                            <li><a href="shop-fullwidth-banner.html">Bracelets</a></li>
+                            <li><a href="shop-fullwidth-banner.html">Smart Watches</a></li>
+                            <li><a href="shop-fullwidth-banner.html">Accessories</a></li>
+                        </ul>
+                    </div>
+                    <a href="shop-fullwidth-banner.html">
+                        <figure class="category-media">
+                            <img src="https://www.portotheme.com/html/wolmart/assets/images/demos/demo4/categories/1-6.jpg" alt="Category" width="190" height="214">
+                        </figure>
+                    </a>
+                </div>
+            </div>
+            <!-- End of Category Wrap -->
+        </div>
+
         <div class="owl-carousel owl-theme row cols-md-4 cols-sm-3 cols-1 icon-box-wrapper appear-animate br-sm mt-6 mb-10 appear-animate"
             data-owl-options="{
             'nav': false,
