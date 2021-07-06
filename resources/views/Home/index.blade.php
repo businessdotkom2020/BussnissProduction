@@ -1189,8 +1189,9 @@
                 <div class="grid-item col-xl-5col3 col-lg-3 col-sm-8 col-12">
                     <div class="banner banner-fixed br-sm">
                         <figure>
-                            <img src="https://www.portotheme.com/html/wolmart/assets/images/demos/demo8/banner/1.jpg"
-                                alt="Banner" width="820" height="364" style="background-color: #EBEBEB;" />
+                            <img src="https://www.palmermoving.com/data/images/palmer_moving_services_Atlas_Van_Op_With_Couple_opt.jpg"
+                                alt="Banner" width="820" height="364"
+                                style="background-color: #EBEBEB;max-height: 400px;" />
                         </figure>
                         <div class="banner-content y-50">
                             <h5 class="banner-subtitle text-capitalize font-weight-normal">Special Offers</h5>
