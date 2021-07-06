@@ -13,7 +13,7 @@
                 </a>
                 <form method="get" action="#" class="header-search hs-expanded hs-round d-none d-md-flex input-wrapper">
                     <div class="select-box">
-                        <select id="category" name="category">
+                        <selaect id="category" name="category">
                             <option value="">All Categories</option>
                             <option value="4">Fashion</option>
                             <option value="5">Furniture</option>
