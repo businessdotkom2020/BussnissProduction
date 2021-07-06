@@ -63,6 +63,7 @@
 
             @include('includes.app_header')
 
+            @include('includes.app_mobile_menu')
 
             @yield('content')
 
