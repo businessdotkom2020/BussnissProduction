@@ -652,7 +652,7 @@
             <div class="container">
                 <div class="inner-wrap">
                     <div class="header-left">
-                        <div class="dropdown category-dropdown has-border show-dropdown" data-visible="false">
+                        <div class="dropdown category-dropdown has-border  " data-visible="false">
                             <a href="#" class="category-toggle text-dark bg-white text-capitalize" role="button"
                                 data-toggle="dropdown" aria-haspopup="false" aria-expanded="false" data-display="static"
                                 title="Browse Categories">
@@ -707,14 +707,16 @@
                                             <li>
                                                 <div class="banner-fixed menu-banner menu-banner2">
                                                     <figure>
-                                                        <img src="assets/images/menu/banner-2.jpg" alt="Menu Banner" width="235" height="347">
+                                                        <img src="assets/images/menu/banner-2.jpg" alt="Menu Banner"
+                                                            width="235" height="347">
                                                     </figure>
                                                     <div class="banner-content">
                                                         <div class="banner-price-info mb-1 ls-normal">Get up to
                                                             <strong class="text-primary text-uppercase">20%Off</strong>
                                                         </div>
                                                         <h3 class="banner-title ls-normal">Hot Sales</h3>
-                                                        <a href="shop-banner-sidebar.html" class="btn btn-dark btn-sm btn-link btn-slide-right btn-icon-right">
+                                                        <a href="shop-banner-sidebar.html"
+                                                            class="btn btn-dark btn-sm btn-link btn-slide-right btn-icon-right">
                                                             Shop Now<i class="w-icon-long-arrow-right"></i>
                                                         </a>
                                                     </div>
@@ -787,17 +789,22 @@
                                             <li>
                                                 <div class="menu-banner banner-fixed menu-banner3">
                                                     <figure>
-                                                        <img src="assets/images/menu/banner-3.jpg" alt="Menu Banner" width="235" height="461">
+                                                        <img src="assets/images/menu/banner-3.jpg" alt="Menu Banner"
+                                                            width="235" height="461">
                                                     </figure>
                                                     <div class="banner-content">
                                                         <h4 class="banner-subtitle font-weight-normal text-white mb-1">
                                                             Restroom</h4>
-                                                        <h3 class="banner-title font-weight-bolder text-white ls-normal">
+                                                        <h3
+                                                            class="banner-title font-weight-bolder text-white ls-normal">
                                                             Furniture Sale</h3>
-                                                        <div class="banner-price-info text-white font-weight-normal ls-25">
-                                                            Up to <span class="text-secondary text-uppercase font-weight-bold">25%
+                                                        <div
+                                                            class="banner-price-info text-white font-weight-normal ls-25">
+                                                            Up to <span
+                                                                class="text-secondary text-uppercase font-weight-bold">25%
                                                                 Off</span></div>
-                                                        <a href="shop-banner-sidebar.html" class="btn btn-white btn-link btn-sm btn-slide-right btn-icon-right">
+                                                        <a href="shop-banner-sidebar.html"
+                                                            class="btn btn-white btn-link btn-sm btn-slide-right btn-icon-right">
                                                             Shop Now<i class="w-icon-long-arrow-right"></i>
                                                         </a>
                                                     </div>
@@ -867,16 +874,19 @@
                                             <li>
                                                 <div class="menu-banner banner-fixed menu-banner4">
                                                     <figure>
-                                                        <img src="assets/images/menu/banner-4.jpg" alt="Menu Banner" width="235" height="433">
+                                                        <img src="assets/images/menu/banner-4.jpg" alt="Menu Banner"
+                                                            width="235" height="433">
                                                     </figure>
                                                     <div class="banner-content">
                                                         <h4 class="banner-subtitle font-weight-normal">Deals Of The
                                                             Week</h4>
                                                         <h3 class="banner-title text-white">Save On Smart EarPhone
                                                         </h3>
-                                                        <div class="banner-price-info text-secondary font-weight-bolder text-uppercase text-secondary">
+                                                        <div
+                                                            class="banner-price-info text-secondary font-weight-bolder text-uppercase text-secondary">
                                                             20% Off</div>
-                                                        <a href="shop-banner-sidebar.html" class="btn btn-white btn-outline btn-sm btn-rounded">Shop
+                                                        <a href="shop-banner-sidebar.html"
+                                                            class="btn btn-white btn-outline btn-sm btn-rounded">Shop
                                                             Now</a>
                                                     </div>
                                                 </div>
@@ -953,12 +963,16 @@
                                                 <div class="col-6">
                                                     <div class="banner banner-fixed menu-banner5 br-xs">
                                                         <figure>
-                                                            <img src="assets/images/menu/banner-5.jpg" alt="Banner" width="410" height="123" style="background-color: #D2D2D2;">
+                                                            <img src="assets/images/menu/banner-5.jpg" alt="Banner"
+                                                                width="410" height="123"
+                                                                style="background-color: #D2D2D2;">
                                                         </figure>
                                                         <div class="banner-content text-right y-50">
-                                                            <h4 class="banner-subtitle font-weight-normal text-default text-capitalize">
+                                                            <h4
+                                                                class="banner-subtitle font-weight-normal text-default text-capitalize">
                                                                 New Arrivals</h4>
-                                                            <h3 class="banner-title font-weight-bolder text-capitalize ls-normal">
+                                                            <h3
+                                                                class="banner-title font-weight-bolder text-capitalize ls-normal">
                                                                 Amazing Sofa</h3>
                                                             <div class="banner-price-info font-weight-normal ls-normal">
                                                                 Starting at <strong>$125.00</strong></div>
@@ -968,14 +982,19 @@
                                                 <div class="col-6">
                                                     <div class="banner banner-fixed menu-banner5 br-xs">
                                                         <figure>
-                                                            <img src="assets/images/menu/banner-6.jpg" alt="Banner" width="410" height="123" style="background-color: #9F9888;">
+                                                            <img src="assets/images/menu/banner-6.jpg" alt="Banner"
+                                                                width="410" height="123"
+                                                                style="background-color: #9F9888;">
                                                         </figure>
                                                         <div class="banner-content y-50">
-                                                            <h4 class="banner-subtitle font-weight-normal text-white text-capitalize">
+                                                            <h4
+                                                                class="banner-subtitle font-weight-normal text-white text-capitalize">
                                                                 Best Seller</h4>
-                                                            <h3 class="banner-title font-weight-bolder text-capitalize text-white ls-normal">
+                                                            <h3
+                                                                class="banner-title font-weight-bolder text-capitalize text-white ls-normal">
                                                                 Chair &amp; Lamp</h3>
-                                                            <div class="banner-price-info font-weight-normal ls-normal text-white">
+                                                            <div
+                                                                class="banner-price-info font-weight-normal ls-normal text-white">
                                                                 From <strong>$165.00</strong></div>
                                                         </div>
                                                     </div>
@@ -1019,7 +1038,8 @@
                                         </a>
                                     </li>
                                     <li>
-                                        <a href="shop-banner-sidebar.html" class="font-weight-bold text-primary text-uppercase ls-25">
+                                        <a href="shop-banner-sidebar.html"
+                                            class="font-weight-bold text-primary text-uppercase ls-25">
                                             View All Categories<i class="w-icon-angle-right"></i>
                                         </a>
                                     </li>
