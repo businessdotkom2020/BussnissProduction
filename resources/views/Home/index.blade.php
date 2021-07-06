@@ -343,302 +343,526 @@
     </div>
     <!-- End of Container -->
 
-    <section class="grey-section appear-animate">
-        <div class="container mb-2">
-            <div class="title-link-wrapper mb-2">
-                <h2 class="title">Featured Products</h2>
-                <a href="#">More Products<i class="w-icon-long-arrow-right"></i></a>
-            </div>
-            <div class="row grid grid-type">
-                <div class="grid-item grid-item-single">
-                    <div class="product product-single">
-                        <div class="row align-items-center">
-                            <div class="col-md-6">
-                                <div class="product-gallery mb-0">
-                                    <figure class="product-image">
-                                        <img src="https://www.portotheme.com/html/wolmart/assets/images/demos/demo8/product/2-1.jpg"
-                                            data-zoom-image="https://www.portotheme.com/html/wolmart/assets/images/demos/demo8/product/2-1-800x900.jpg"
-                                            alt="Product Image" width="800" height="900">
-                                    </figure>
-                                </div>
-                            </div>
-                            <div class="col-md-6 mt-4 mt-md-0">
-                                <div class="product-details scrollable pl-0">
-                                    <h2 class="product-title mb-1"><a href="product-default.html">Men's Season
-                                            Blue Clothes</a></h2>
-
-                                    <hr class="product-divider">
-
-                                    <div class="product-price">
-                                        <del class="old-price">$284.35</del><ins class="new-price ls-50">$235.35</ins>
-                                    </div>
-
-                                    <div class="ratings-container">
-                                        <div class="ratings-full">
-                                            <span class="ratings" style="width: 80%;"></span>
-                                            <span class="tooltiptext tooltip-top"></span>
-                                        </div>
-                                        <a href="#" class="rating-reviews">(3 Reviews)</a>
-                                    </div>
-
-                                    <div class="product-form product-variation-form product-size-swatch mb-3">
-                                        <label class="mb-1">Size:</label>
-                                        <div class="flex-wrap d-flex align-items-center product-variations">
-                                            <a href="#" class="size">Small</a>
-                                            <a href="#" class="size">Medium</a>
-                                            <a href="#" class="size">Large</a>
-                                            <a href="#" class="size">Extra Large</a>
-                                        </div>
-                                        <a href="#" class="product-variation-clean">Clean All</a>
-                                    </div>
-
-                                    <div class="product-variation-price">
-                                        <span></span>
-                                    </div>
-
-                                    <div class="product-form pt-4">
-                                        <div class="product-qty-form mr-2">
-                                            <div class="input-group">
-                                                <input class="quantity form-control pl-4" type="number" min="1"
-                                                    max="10000000">
-                                                <button class="quantity-minus w-icon-minus"></button>
-                                                <button class="quantity-plus w-icon-plus"></button>
-                                            </div>
-                                        </div>
-                                        <button class="btn btn-primary btn-cart">
-                                            <i class="w-icon-cart"></i>
-                                            <span>Add to Cart</span>
-                                        </button>
-                                    </div>
-
-                                    <div class="social-links-wrapper mt-1">
-                                        <div class="social-links">
-                                            <div class="social-icons social-no-color border-thin">
-                                                <a href="#" class="social-icon social-facebook w-icon-facebook"></a>
-                                                <a href="#" class="social-icon social-twitter w-icon-twitter"></a>
-                                                <a href="#" class="social-icon social-pinterest fab fa-pinterest-p"></a>
-                                                <a href="#" class="social-icon social-whatsapp fab fa-whatsapp"></a>
-                                            </div>
-                                        </div>
-                                        <span class="divider d-xs-show"></span>
-                                        <div class="product-link-wrapper d-flex">
-                                            <a href="#"
-                                                class="btn-product-icon btn-wishlist w-icon-heart"><span></span></a>
-                                            <a href="#"
-                                                class="btn-product-icon btn-compare btn-icon-left w-icon-compare"><span></span></a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
+    <div class="product-wrapper row cols-xl-7 cols-lg-6 cols-md-4 cols-sm-3 cols-2">
+        <div class="product-wrap">
+            <div class="product text-center">
+                <figure class="product-media">
+                    <a href="product-default.html">
+                        <img src="https://www.portotheme.com/html/wolmart/assets/images/shop/1.jpg" alt="Product"
+                            width="300" height="338" />
+                    </a>
+                    <div class="product-action-horizontal">
+                        <a href="#" class="btn-product-icon btn-cart w-icon-cart" title="Add to cart"></a>
+                        <a href="#" class="btn-product-icon btn-wishlist w-icon-heart" title="Wishlist"></a>
+                        <a href="#" class="btn-product-icon btn-compare w-icon-compare" title="Compare"></a>
+                        <a href="#" class="btn-product-icon btn-quickview w-icon-search" title="Quick View"></a>
+                    </div>
+                </figure>
+                <div class="product-details">
+                    <div class="product-cat">
+                        <a href="shop-banner-sidebar.html">Electronics</a>
+                    </div>
+                    <h3 class="product-name">
+                        <a href="product-default.html">3D Television</a>
+                    </h3>
+                    <div class="ratings-container">
+                        <div class="ratings-full">
+                            <span class="ratings" style="width: 100%;"></span>
+                            <span class="tooltiptext tooltip-top"></span>
+                        </div>
+                        <a href="product-default.html" class="rating-reviews">(3 reviews)</a>
+                    </div>
+                    <div class="product-pa-wrapper">
+                        <div class="product-price">
+                            $220.00 - $230.00
                         </div>
                     </div>
                 </div>
-                <!-- End of Grid Item -->
-                <div class="grid-item grid-item-widget">
-                    <div class="product product-widget">
-                        <figure class="product-media">
-                            <a href="product-default.html">
-                                <img src="https://www.portotheme.com/html/wolmart/assets/images/demos/demo8/product/2-2.jpg"
-                                    alt="Product" width="300" height="338">
-                            </a>
-                        </figure>
-                        <div class="product-details">
-                            <h4 class="product-name">
-                                <a href="product-default.html">Top Rating Helmet</a>
-                            </h4>
-                            <div class="ratings-container">
-                                <div class="ratings-full">
-                                    <span class="ratings" style="width: 80%;"></span>
-                                    <span class="tooltiptext tooltip-top"></span>
-                                </div>
-                            </div>
-                            <div class="product-price">
-                                <ins class="new-price">$34.99</ins>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <!-- End of Grid Item -->
-                <div class="grid-item grid-item-widget">
-                    <div class="product product-widget">
-                        <figure class="product-media">
-                            <a href="product-default.html">
-                                <img src="https://www.portotheme.com/html/wolmart/assets/images/demos/demo8/product/2-3.jpg"
-                                    alt="Product" width="300" height="338">
-                            </a>
-                        </figure>
-                        <div class="product-details">
-                            <h4 class="product-name">
-                                <a href="product-default.html">Smartphone Electronic Charger</a>
-                            </h4>
-                            <div class="ratings-container">
-                                <div class="ratings-full">
-                                    <span class="ratings" style="width: 80%;"></span>
-                                    <span class="tooltiptext tooltip-top"></span>
-                                </div>
-                            </div>
-                            <div class="product-price">
-                                <ins class="new-price">$35.00</ins>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <!-- End of Grid Item -->
-                <div class="grid-item grid-item-widget">
-                    <div class="product product-widget">
-                        <figure class="product-media">
-                            <a href="product-default.html">
-                                <img src="https://www.portotheme.com/html/wolmart/assets/images/demos/demo8/product/2-4.jpg"
-                                    alt="Product" width="300" height="338">
-                            </a>
-                        </figure>
-                        <div class="product-details">
-                            <h4 class="product-name">
-                                <a href="product-default.html">Skate Pan</a>
-                            </h4>
-                            <div class="ratings-container">
-                                <div class="ratings-full">
-                                    <span class="ratings" style="width: 80%;"></span>
-                                    <span class="tooltiptext tooltip-top"></span>
-                                </div>
-                            </div>
-                            <div class="product-price">
-                                <ins class="new-price">$50.99</ins>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <!-- End of Grid Item -->
-                <div class="grid-item grid-item-widget">
-                    <div class="product product-widget">
-                        <figure class="product-media">
-                            <a href="product-default.html">
-                                <img src="https://www.portotheme.com/html/wolmart/assets/images/demos/demo8/product/2-5.jpg"
-                                    alt="Product" width="300" height="338">
-                            </a>
-                        </figure>
-                        <div class="product-details">
-                            <h4 class="product-name">
-                                <a href="product-default.html">Blue Ski Boots</a>
-                            </h4>
-                            <div class="ratings-container">
-                                <div class="ratings-full">
-                                    <span class="ratings" style="width: 100%;"></span>
-                                    <span class="tooltiptext tooltip-top"></span>
-                                </div>
-                            </div>
-                            <div class="product-price">
-                                <ins class="new-price">$88.00</ins>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <!-- End of Grid Item -->
-                <div class="grid-item grid-item-widget">
-                    <div class="product product-widget">
-                        <figure class="product-media">
-                            <a href="product-default.html">
-                                <img src="https://www.portotheme.com/html/wolmart/assets/images/demos/demo8/product/2-6.jpg"
-                                    alt="Product" width="300" height="338">
-                            </a>
-                        </figure>
-                        <div class="product-details">
-                            <h4 class="product-name">
-                                <a href="product-default.html">Dumbells</a>
-                            </h4>
-                            <div class="ratings-container">
-                                <div class="ratings-full">
-                                    <span class="ratings" style="width: 100%;"></span>
-                                    <span class="tooltiptext tooltip-top"></span>
-                                </div>
-                            </div>
-                            <div class="product-price">
-                                <ins class="new-price">$59.00</ins>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <!-- End of Grid Item -->
-                <div class="grid-item grid-item-widget">
-                    <div class="product product-widget">
-                        <figure class="product-media">
-                            <a href="product-default.html">
-                                <img src="https://www.portotheme.com/html/wolmart/assets/images/demos/demo8/product/2-7.jpg"
-                                    alt="Product" width="300" height="338">
-                            </a>
-                        </figure>
-                        <div class="product-details">
-                            <h4 class="product-name">
-                                <a href="product-default.html">Professional Perfect Camera</a>
-                            </h4>
-                            <div class="ratings-container">
-                                <div class="ratings-full">
-                                    <span class="ratings" style="width: 100%;"></span>
-                                    <span class="tooltiptext tooltip-top"></span>
-                                </div>
-                            </div>
-                            <div class="product-price">
-                                <ins class="new-price">$123.00</ins>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <!-- End of Grid Item -->
-                <div class="grid-item grid-item-widget">
-                    <div class="product product-widget">
-                        <figure class="product-media">
-                            <a href="product-default.html">
-                                <img src="https://www.portotheme.com/html/wolmart/assets/images/demos/demo8/product/2-8.jpg"
-                                    alt="Product" width="300" height="338">
-                            </a>
-                        </figure>
-                        <div class="product-details">
-                            <h4 class="product-name">
-                                <a href="product-default.html">Soft Sound Marker</a>
-                            </h4>
-                            <div class="ratings-container">
-                                <div class="ratings-full">
-                                    <span class="ratings" style="width: 100%;"></span>
-                                    <span class="tooltiptext tooltip-top"></span>
-                                </div>
-                            </div>
-                            <div class="product-price">
-                                <ins class="new-price">$39.99</ins>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <!-- End of Grid Item -->
-                <div class="grid-item grid-item-widget">
-                    <div class="product product-widget">
-                        <figure class="product-media">
-                            <a href="product-default.html">
-                                <img src="https://www.portotheme.com/html/wolmart/assets/images/demos/demo8/product/2-9.jpg"
-                                    alt="Product" width="300" height="338">
-                            </a>
-                        </figure>
-                        <div class="product-details">
-                            <h4 class="product-name">
-                                <a href="product-default.html">Roller Skates</a>
-                            </h4>
-                            <div class="ratings-container">
-                                <div class="ratings-full">
-                                    <span class="ratings" style="width: 100%;"></span>
-                                    <span class="tooltiptext tooltip-top"></span>
-                                </div>
-                            </div>
-                            <div class="product-price">
-                                <ins class="new-price">$66.99</ins>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <!-- End of Grid Item -->
             </div>
         </div>
-        <!-- End of Container -->
-    </section>
-    <!-- End of Grey Section -->
+        <div class="product-wrap">
+            <div class="product text-center">
+                <figure class="product-media">
+                    <a href="product-default.html">
+                        <img src="https://www.portotheme.com/html/wolmart/assets/images/shop/2-1.jpg" alt="Product"
+                            width="300" height="338" />
+                        <img src="https://www.portotheme.com/html/wolmart/assets/images/shop/2-2.jpg" alt="Product"
+                            width="300" height="338" />
+                    </a>
+                    <div class="product-countdown-container">
+                        <div class="product-countdown countdown-compact" data-until="2021, 9, 9" data-format="DHMS"
+                            data-compact="false" data-labels-short="Days, Hours, Mins, Secs">
+                            00:00:00:00</div>
+                    </div>
+                    <div class="product-action-horizontal">
+                        <a href="#" class="btn-product-icon btn-cart w-icon-cart" title="Add to cart"></a>
+                        <a href="#" class="btn-product-icon btn-wishlist w-icon-heart" title="Wishlist"></a>
+                        <a href="#" class="btn-product-icon btn-compare w-icon-compare" title="Compare"></a>
+                        <a href="#" class="btn-product-icon btn-quickview w-icon-search" title="Quick View"></a>
+                    </div>
+                </figure>
+                <div class="product-details">
+                    <div class="product-cat">
+                        <a href="shop-banner-sidebar.html">Electronics</a>
+                    </div>
+                    <h3 class="product-name">
+                        <a href="product-default.html">Alarm Clock With Lamp</a>
+                    </h3>
+                    <div class="ratings-container">
+                        <div class="ratings-full">
+                            <span class="ratings" style="width: 100%;"></span>
+                            <span class="tooltiptext tooltip-top"></span>
+                        </div>
+                        <a href="product-default.html" class="rating-reviews">(10 reviews)</a>
+                    </div>
+                    <div class="product-pa-wrapper">
+                        <div class="product-price">
+                            <ins class="new-price">$30.00</ins><del class="old-price">$60.00</del>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="product-wrap">
+            <div class="product text-center">
+                <figure class="product-media">
+                    <a href="product-default.html">
+                        <img src="https://www.portotheme.com/html/wolmart/assets/images/shop/3.jpg" alt="Product"
+                            width="300" height="338" />
+                    </a>
+                    <div class="product-action-horizontal">
+                        <a href="#" class="btn-product-icon btn-cart w-icon-cart" title="Add to cart"></a>
+                        <a href="#" class="btn-product-icon btn-wishlist w-icon-heart" title="Wishlist"></a>
+                        <a href="#" class="btn-product-icon btn-compare w-icon-compare" title="Compare"></a>
+                        <a href="#" class="btn-product-icon btn-quickview w-icon-search" title="Quick View"></a>
+                    </div>
+                </figure>
+                <div class="product-details">
+                    <div class="product-cat">
+                        <a href="shop-banner-sidebar.html">Electronics</a>
+                    </div>
+                    <h3 class="product-name">
+                        <a href="product-default.html">Apple Laptop</a>
+                    </h3>
+                    <div class="ratings-container">
+                        <div class="ratings-full">
+                            <span class="ratings" style="width: 80%;"></span>
+                            <span class="tooltiptext tooltip-top"></span>
+                        </div>
+                        <a href="product-default.html" class="rating-reviews">(5 reviews)</a>
+                    </div>
+                    <div class="product-pa-wrapper">
+                        <div class="product-price">
+                            $1,000.00
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="product-wrap">
+            <div class="product text-center">
+                <figure class="product-media">
+                    <a href="product-default.html">
+                        <img src="https://www.portotheme.com/html/wolmart/assets/images/shop/4.jpg" alt="Product"
+                            width="300" height="338" />
+                    </a>
+                    <div class="product-action-horizontal">
+                        <a href="#" class="btn-product-icon btn-cart w-icon-cart" title="Add to cart"></a>
+                        <a href="#" class="btn-product-icon btn-wishlist w-icon-heart" title="Wishlist"></a>
+                        <a href="#" class="btn-product-icon btn-compare w-icon-compare" title="Compare"></a>
+                        <a href="#" class="btn-product-icon btn-quickview w-icon-search" title="Quick View"></a>
+                    </div>
+                </figure>
+                <div class="product-details">
+                    <div class="product-cat">
+                        <a href="shop-banner-sidebar.html">Electronics</a>
+                    </div>
+                    <h3 class="product-name">
+                        <a href="product-default.html">Attachable Charge Alarm</a>
+                    </h3>
+                    <div class="ratings-container">
+                        <div class="ratings-full">
+                            <span class="ratings" style="width: 60%;"></span>
+                            <span class="tooltiptext tooltip-top"></span>
+                        </div>
+                        <a href="product-default.html" class="rating-reviews">(7 reviews)</a>
+                    </div>
+                    <div class="product-pa-wrapper">
+                        <div class="product-price">
+                            $15.00
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="product-wrap">
+            <div class="product text-center">
+                <figure class="product-media">
+                    <a href="product-default.html">
+                        <img src="https://www.portotheme.com/html/wolmart/assets/images/shop/5.jpg" alt="Product"
+                            width="300" height="338" />
+                    </a>
+                    <div class="product-action-horizontal">
+                        <a href="#" class="btn-product-icon btn-cart w-icon-cart" title="Add to cart"></a>
+                        <a href="#" class="btn-product-icon btn-wishlist w-icon-heart" title="Wishlist"></a>
+                        <a href="#" class="btn-product-icon btn-compare w-icon-compare" title="Compare"></a>
+                        <a href="#" class="btn-product-icon btn-quickview w-icon-search" title="Quick View"></a>
+                    </div>
+                </figure>
+                <div class="product-details">
+                    <div class="product-cat">
+                        <a href="shop-banner-sidebar.html">Fashion</a>
+                    </div>
+                    <h3 class="product-name">
+                        <a href="product-default.html">Best Travel Bag</a>
+                    </h3>
+                    <div class="ratings-container">
+                        <div class="ratings-full">
+                            <span class="ratings" style="width: 80%;"></span>
+                            <span class="tooltiptext tooltip-top"></span>
+                        </div>
+                        <a href="product-default.html" class="rating-reviews">(4 reviews)</a>
+                    </div>
+                    <div class="product-pa-wrapper">
+                        <div class="product-price">
+                            $83.00
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="product-wrap">
+            <div class="product text-center">
+                <figure class="product-media">
+                    <a href="product-default.html">
+                        <img src="https://www.portotheme.com/html/wolmart/assets/images/shop/6.jpg" alt="Product"
+                            width="300" height="338" />
+                    </a>
+                    <div class="product-action-horizontal">
+                        <a href="#" class="btn-product-icon btn-cart w-icon-cart" title="Add to cart"></a>
+                        <a href="#" class="btn-product-icon btn-wishlist w-icon-heart" title="Wishlist"></a>
+                        <a href="#" class="btn-product-icon btn-compare w-icon-compare" title="Compare"></a>
+                        <a href="#" class="btn-product-icon btn-quickview w-icon-search" title="Quick View"></a>
+                    </div>
+                </figure>
+                <div class="product-details">
+                    <div class="product-cat">
+                        <a href="shop-banner-sidebar.html">Sports</a>
+                    </div>
+                    <h3 class="product-name">
+                        <a href="product-default.html">Black Stunt Motor</a>
+                    </h3>
+                    <div class="ratings-container">
+                        <div class="ratings-full">
+                            <span class="ratings" style="width: 100%;"></span>
+                            <span class="tooltiptext tooltip-top"></span>
+                        </div>
+                        <a href="product-default.html" class="rating-reviews">(12 reviews)</a>
+                    </div>
+                    <div class="product-pa-wrapper">
+                        <div class="product-price">
+                            $374.00
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="product-wrap">
+            <div class="product text-center">
+                <figure class="product-media">
+                    <a href="product-default.html">
+                        <img src="https://www.portotheme.com/html/wolmart/assets/images/shop/7-1.jpg" alt="Product"
+                            width="300" height="338" />
+                        <img src="https://www.portotheme.com/html/wolmart/assets/images/shop/7-2.jpg" alt="Product"
+                            width="300" height="338" />
+                    </a>
+                    <div class="product-action-horizontal">
+                        <a href="#" class="btn-product-icon btn-cart w-icon-cart" title="Add to cart"></a>
+                        <a href="#" class="btn-product-icon btn-wishlist w-icon-heart" title="Wishlist"></a>
+                        <a href="#" class="btn-product-icon btn-compare w-icon-compare" title="Compare"></a>
+                        <a href="#" class="btn-product-icon btn-quickview w-icon-search" title="Quick View"></a>
+                    </div>
+                </figure>
+                <div class="product-details">
+                    <div class="product-cat">
+                        <a href="shop-banner-sidebar.html">Fashion</a>
+                    </div>
+                    <h3 class="product-name">
+                        <a href="product-default.html">Blue Sky Trunk</a>
+                    </h3>
+                    <div class="ratings-container">
+                        <div class="ratings-full">
+                            <span class="ratings" style="width: 100%;"></span>
+                            <span class="tooltiptext tooltip-top"></span>
+                        </div>
+                        <a href="product-default.html" class="rating-reviews">(9 reviews)</a>
+                    </div>
+                    <div class="product-pa-wrapper">
+                        <div class="product-price">
+                            $85.00
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="product-wrap">
+            <div class="product text-center">
+                <figure class="product-media">
+                    <a href="product-default.html">
+                        <img src="https://www.portotheme.com/html/wolmart/assets/images/shop/8.jpg" alt="Product"
+                            width="300" height="338" />
+                    </a>
+                    <div class="product-action-horizontal">
+                        <a href="#" class="btn-product-icon btn-cart w-icon-cart" title="Add to cart"></a>
+                        <a href="#" class="btn-product-icon btn-wishlist w-icon-heart" title="Wishlist"></a>
+                        <a href="#" class="btn-product-icon btn-compare w-icon-compare" title="Compare"></a>
+                        <a href="#" class="btn-product-icon btn-quickview w-icon-search" title="Quick View"></a>
+                    </div>
+                </figure>
+                <div class="product-details">
+                    <div class="product-cat">
+                        <a href="shop-banner-sidebar.html">Beauty</a>
+                    </div>
+                    <h3 class="product-name">
+                        <a href="product-default.html">Bodycare Smooth Powder</a>
+                    </h3>
+                    <div class="ratings-container">
+                        <div class="ratings-full">
+                            <span class="ratings" style="width: 60%;"></span>
+                            <span class="tooltiptext tooltip-top"></span>
+                        </div>
+                        <a href="product-default.html" class="rating-reviews">(4 reviews)</a>
+                    </div>
+                    <div class="product-pa-wrapper">
+                        <div class="product-price">
+                            $25.00
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="product-wrap">
+            <div class="product text-center">
+                <figure class="product-media">
+                    <a href="product-default.html">
+                        <img src="https://www.portotheme.com/html/wolmart/assets/images/shop/9.jpg" alt="Product"
+                            width="300" height="338" />
+                    </a>
+                    <div class="product-action-horizontal">
+                        <a href="#" class="btn-product-icon btn-cart w-icon-cart" title="Add to cart"></a>
+                        <a href="#" class="btn-product-icon btn-wishlist w-icon-heart" title="Wishlist"></a>
+                        <a href="#" class="btn-product-icon btn-compare w-icon-compare" title="Compare"></a>
+                        <a href="#" class="btn-product-icon btn-quickview w-icon-search" title="Quick View"></a>
+                    </div>
+                </figure>
+                <div class="product-details">
+                    <div class="product-cat">
+                        <a href="shop-banner-sidebar.html">Electronics</a>
+                    </div>
+                    <h3 class="product-name">
+                        <a href="product-default.html">Bright Green IPhone</a>
+                    </h3>
+                    <div class="ratings-container">
+                        <div class="ratings-full">
+                            <span class="ratings" style="width: 80%;"></span>
+                            <span class="tooltiptext tooltip-top"></span>
+                        </div>
+                        <a href="product-default.html" class="rating-reviews">(4 reviews)</a>
+                    </div>
+                    <div class="product-pa-wrapper">
+                        <div class="product-price">
+                            $950.00
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="product-wrap">
+            <div class="product text-center">
+                <figure class="product-media">
+                    <a href="product-default.html">
+                        <img src="https://www.portotheme.com/html/wolmart/assets/images/shop/10.jpg" alt="Product"
+                            width="300" height="338" />
+                    </a>
+                    <div class="product-action-horizontal">
+                        <a href="#" class="btn-product-icon btn-cart w-icon-cart" title="Add to cart"></a>
+                        <a href="#" class="btn-product-icon btn-wishlist w-icon-heart" title="Wishlist"></a>
+                        <a href="#" class="btn-product-icon btn-compare w-icon-compare" title="Compare"></a>
+                        <a href="#" class="btn-product-icon btn-quickview w-icon-search" title="Quick View"></a>
+                    </div>
+                </figure>
+                <div class="product-details">
+                    <div class="product-cat">
+                        <a href="shop-banner-sidebar.html">Fashion</a>
+                    </div>
+                    <h3 class="product-name">
+                        <a href="product-default.html">Cavin Fashion Suede Handbag</a>
+                    </h3>
+                    <div class="ratings-container">
+                        <div class="ratings-full">
+                            <span class="ratings" style="width: 80%;"></span>
+                            <span class="tooltiptext tooltip-top"></span>
+                        </div>
+                        <a href="product-default.html" class="rating-reviews">(4 reviews)</a>
+                    </div>
+                    <div class="product-pa-wrapper">
+                        <div class="product-price">
+                            $163.00
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="product-wrap">
+            <div class="product text-center">
+                <figure class="product-media">
+                    <a href="product-default.html">
+                        <img src="https://www.portotheme.com/html/wolmart/assets/images/shop/11-1.jpg" alt="Product"
+                            width="300" height="338" />
+                        <img src="https://www.portotheme.com/html/wolmart/assets/images/shop/11-2.jpg" alt="Product"
+                            width="300" height="338" />
+                    </a>
+                    <div class="product-action-horizontal">
+                        <a href="#" class="btn-product-icon btn-cart w-icon-cart" title="Add to cart"></a>
+                        <a href="#" class="btn-product-icon btn-wishlist w-icon-heart" title="Wishlist"></a>
+                        <a href="#" class="btn-product-icon btn-compare w-icon-compare" title="Compare"></a>
+                        <a href="#" class="btn-product-icon btn-quickview w-icon-search" title="Quick View"></a>
+                    </div>
+                </figure>
+                <div class="product-details">
+                    <div class="product-cat">
+                        <a href="shop-banner-sidebar.html">Electronics</a>
+                    </div>
+                    <h3 class="product-name">
+                        <a href="product-default.html">Charming Design Watch</a>
+                    </h3>
+                    <div class="ratings-container">
+                        <div class="ratings-full">
+                            <span class="ratings" style="width: 100%;"></span>
+                            <span class="tooltiptext tooltip-top"></span>
+                        </div>
+                        <a href="product-default.html" class="rating-reviews">(10 reviews)</a>
+                    </div>
+                    <div class="product-pa-wrapper">
+                        <div class="product-price">
+                            $30.00
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="product-wrap">
+            <div class="product text-center">
+                <figure class="product-media">
+                    <a href="product-default.html">
+                        <img src="https://www.portotheme.com/html/wolmart/assets/images/shop/12.jpg" alt="Product"
+                            width="300" height="338" />
+                    </a>
+                    <div class="product-action-horizontal">
+                        <a href="#" class="btn-product-icon btn-cart w-icon-cart" title="Add to cart"></a>
+                        <a href="#" class="btn-product-icon btn-wishlist w-icon-heart" title="Wishlist"></a>
+                        <a href="#" class="btn-product-icon btn-compare w-icon-compare" title="Compare"></a>
+                        <a href="#" class="btn-product-icon btn-quickview w-icon-search" title="Quick View"></a>
+                    </div>
+                </figure>
+                <div class="product-details">
+                    <div class="product-cat">
+                        <a href="shop-banner-sidebar.html">Fashion</a>
+                    </div>
+                    <h3 class="product-name">
+                        <a href="product-default.html">Classic Simple Backpack</a>
+                    </h3>
+                    <div class="ratings-container">
+                        <div class="ratings-full">
+                            <span class="ratings" style="width: 100%;"></span>
+                            <span class="tooltiptext tooltip-top"></span>
+                        </div>
+                        <a href="product-default.html" class="rating-reviews">(9 reviews)</a>
+                    </div>
+                    <div class="product-pa-wrapper">
+                        <div class="product-price">
+                            $85.00
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="product-wrap">
+            <div class="product text-center">
+                <figure class="product-media">
+                    <a href="product-default.html">
+                        <img src="https://www.portotheme.com/html/wolmart/assets/images/shop/13.jpg" alt="Product"
+                            width="300" height="338" />
+                    </a>
+                    <div class="product-action-horizontal">
+                        <a href="#" class="btn-product-icon btn-cart w-icon-cart" title="Add to cart"></a>
+                        <a href="#" class="btn-product-icon btn-wishlist w-icon-heart" title="Wishlist"></a>
+                        <a href="#" class="btn-product-icon btn-compare w-icon-compare" title="Compare"></a>
+                        <a href="#" class="btn-product-icon btn-quickview w-icon-search" title="Quick View"></a>
+                    </div>
+                </figure>
+                <div class="product-details">
+                    <div class="product-cat">
+                        <a href="shop-banner-sidebar.html">Watches</a>
+                    </div>
+                    <h3 class="product-name">
+                        <a href="product-default.html">Smart Watch</a>
+                    </h3>
+                    <div class="ratings-container">
+                        <div class="ratings-full">
+                            <span class="ratings" style="width: 100%;"></span>
+                            <span class="tooltiptext tooltip-top"></span>
+                        </div>
+                        <a href="product-default.html" class="rating-reviews">(9 reviews)</a>
+                    </div>
+                    <div class="product-pa-wrapper">
+                        <div class="product-price">
+                            $90.00
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="product-wrap">
+            <div class="product text-center">
+                <figure class="product-media">
+                    <a href="product-default.html">
+                        <img src="https://www.portotheme.com/html/wolmart/assets/images/shop/19-1.jpg" alt="Product"
+                            width="300" height="338" />
+                        <img src="https://www.portotheme.com/html/wolmart/assets/images/shop/19-2.jpg" alt="Product"
+                            width="300" height="338" />
+                    </a>
+                    <div class="product-action-horizontal">
+                        <a href="#" class="btn-product-icon btn-cart w-icon-cart" title="Add to cart"></a>
+                        <a href="#" class="btn-product-icon btn-wishlist w-icon-heart" title="Wishlist"></a>
+                        <a href="#" class="btn-product-icon btn-compare w-icon-compare" title="Compare"></a>
+                        <a href="#" class="btn-product-icon btn-quickview w-icon-search" title="Quick View"></a>
+                    </div>
+                </figure>
+                <div class="product-details">
+                    <div class="product-cat">
+                        <a href="shop-banner-sidebar.html">Accessories</a>
+                    </div>
+                    <h3 class="product-name">
+                        <a href="product-default.html">Handmade Ring</a>
+                    </h3>
+                    <div class="ratings-container">
+                        <div class="ratings-full">
+                            <span class="ratings" style="width: 100%;"></span>
+                            <span class="tooltiptext tooltip-top"></span>
+                        </div>
+                        <a href="product-default.html" class="rating-reviews">(1 reviews)</a>
+                    </div>
+                    <div class="product-pa-wrapper">
+                        <div class="product-price">
+                            $5.00
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
 
     <div class="container mt-10 pt-2">
         <div class="row cols-md-2 category-banner-2cols mb-5">
