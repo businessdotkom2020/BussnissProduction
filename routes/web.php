@@ -30,7 +30,7 @@ Route::get('/product-v2', function () {
 
 Route::get('/request-v2', function () {
     return view('Home.request_2');
-})->name('request_2');
+})->name('request_v2');
 
 Route::get('/service-v2', function () {
     return view('Home.service_v2');
