@@ -1385,283 +1385,8 @@
             </div>
             <!-- End of Banner Product Wrapper -->
 
-            <div class="title-link-wrapper mb-3">
-                <h2 class="title mb-0 pt-2 pb-2">Food &amp; Kitchen</h2>
-                <a href="shop-boxed-banner.html" class="mb-0">More Products<i class="w-icon-long-arrow-right"></i></a>
-            </div>
-            <div class="row grid banner-product-wrapper">
-                <div class="grid-item col-xl-5col3 col-lg-3 col-sm-8 col-12">
-                    <div class="banner banner-fixed br-sm">
-                        <figure>
-                            <img src="https://www.portotheme.com/html/wolmart/assets/images/demos/demo8/banner/2.jpg"
-                                alt="Banner" width="820" height="364" style="background-color: #E4E5E7;" />
-                        </figure>
-                        <div class="banner-content y-50">
-                            <h5 class="banner-subtitle text-capitalize font-weight-normal">Get up to <strong
-                                    class="text-secondary">25% Off</strong></h5>
-                            <h3 class="banner-title text-uppercase">Electronic Kettle</h3>
-                            <div class="banner-price-info text-dark lh-1 ls-25">Collection</div>
-                            <hr class="banner-divider bg-dark">
-                            <a href="demo8-shop.html" class="btn btn-dark btn-link btn-slide-right btn-icon-right">
-                                Start Shopping<i class="w-icon-long-arrow-right mb-1"></i>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-                <div class="grid-item col-xl-5col col-lg-3 col-sm-4 col-6">
-                    <div class="product product-simple text-center">
-                        <figure class="product-media">
-                            <a href="#">
-                                <img src="https://www.portotheme.com/html/wolmart/assets/images/demos/demo8/product/4-1.jpg"
-                                    alt="Product" width="260" height="291" />
-                            </a>
-                            <div class="product-action-vertical">
-                                <a href="#" class="btn-product-icon btn-wishlist w-icon-heart"
-                                    title="Add to wishlist"></a>
-                                <a href="#" class="btn-product-icon btn-compare w-icon-compare"
-                                    title="Add to Compare"></a>
-                            </div>
-                            <div class="product-action">
-                                <a href="#" class="btn-product btn-quickview" title="Quick View">Quick
-                                    View</a>
-                            </div>
-                        </figure>
-                        <div class="product-details">
-                            <h4 class="product-name"><a href="#">High Preesure Pot</a></h4>
-                            <div class="product-pa-wrapper">
-                                <div class="product-price">
-                                    <ins class="new-price">$30.00 - $45.00</ins>
-                                </div>
-                                <div class="product-action">
-                                    <a href="#"
-                                        class="btn-cart btn-product btn btn-icon-right btn-link btn-underline">Add
-                                        To Cart</a>
-                                </div>
-                            </div>
-                            <div class="sold-by">
-                                Sold By: <a href="#">Vendor 5</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="grid-item col-xl-5col col-lg-3 col-sm-4 col-6">
-                    <div class="product product-simple text-center">
-                        <figure class="product-media">
-                            <a href="#">
-                                <img src="https://www.portotheme.com/html/wolmart/assets/images/demos/demo8/product/4-2.jpg"
-                                    alt="Product" width="260" height="291" />
-                            </a>
-                            <div class="product-action-vertical">
-                                <a href="#" class="btn-product-icon btn-wishlist w-icon-heart"
-                                    title="Add to wishlist"></a>
-                                <a href="#" class="btn-product-icon btn-compare w-icon-compare"
-                                    title="Add to Compare"></a>
-                            </div>
-                            <div class="product-action">
-                                <a href="#" class="btn-product btn-quickview" title="Quick View">Quick
-                                    View</a>
-                            </div>
-                        </figure>
-                        <div class="product-details">
-                            <h4 class="product-name"><a href="#">Baharu Nescafe</a></h4>
-                            <div class="product-pa-wrapper">
-                                <div class="product-price">
-                                    <ins class="new-price">$99.680</ins>
-                                </div>
-                                <div class="product-action">
-                                    <a href="#"
-                                        class="btn-cart btn-product btn btn-icon-right btn-link btn-underline">Add
-                                        To Cart</a>
-                                </div>
-                            </div>
-                            <div class="sold-by">
-                                Sold By: <a href="#">Vendor 4</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="grid-item col-xl-5col col-lg-3 col-sm-4 col-6">
-                    <div class="product product-simple text-center">
-                        <figure class="product-media">
-                            <a href="#">
-                                <img src="https://www.portotheme.com/html/wolmart/assets/images/demos/demo8/product/4-3.jpg"
-                                    alt="Product" width="260" height="291" />
-                            </a>
-                            <div class="product-action-vertical">
-                                <a href="#" class="btn-product-icon btn-wishlist w-icon-heart"
-                                    title="Add to wishlist"></a>
-                                <a href="#" class="btn-product-icon btn-compare w-icon-compare"
-                                    title="Add to Compare"></a>
-                            </div>
-                            <div class="product-action">
-                                <a href="#" class="btn-product btn-quickview" title="Quick View">Quick
-                                    View</a>
-                            </div>
-                        </figure>
-                        <div class="product-details">
-                            <h4 class="product-name"><a href="#">Excellent Liverte</a></h4>
-                            <div class="product-pa-wrapper">
-                                <div class="product-price">
-                                    <ins class="new-price">$250.68</ins>
-                                </div>
-                                <div class="product-action">
-                                    <a href="#"
-                                        class="btn-cart btn-product btn btn-icon-right btn-link btn-underline">Add
-                                        To Cart</a>
-                                </div>
-                            </div>
-                            <div class="sold-by">
-                                Sold By: <a href="#">Vendor 3</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="grid-item col-xl-5col col-lg-3 col-sm-4 col-6">
-                    <div class="product product-simple text-center">
-                        <figure class="product-media">
-                            <a href="#">
-                                <img src="https://www.portotheme.com/html/wolmart/assets/images/demos/demo8/product/4-4.jpg"
-                                    alt="Product" width="260" height="291" />
-                            </a>
-                            <div class="product-action-vertical">
-                                <a href="#" class="btn-product-icon btn-wishlist w-icon-heart"
-                                    title="Add to wishlist"></a>
-                                <a href="#" class="btn-product-icon btn-compare w-icon-compare"
-                                    title="Add to Compare"></a>
-                            </div>
-                            <div class="product-action">
-                                <a href="#" class="btn-product btn-quickview" title="Quick View">Quick
-                                    View</a>
-                            </div>
-                        </figure>
-                        <div class="product-details">
-                            <h4 class="product-name"><a href="#">Roaster</a></h4>
-                            <div class="product-pa-wrapper">
-                                <div class="product-price">
-                                    <ins class="new-price">$215.00</ins>
-                                </div>
-                                <div class="product-action">
-                                    <a href="#"
-                                        class="btn-cart btn-product btn btn-icon-right btn-link btn-underline">Add
-                                        To Cart</a>
-                                </div>
-                            </div>
-                            <div class="sold-by">
-                                Sold By: <a href="#">Vendor 3</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="grid-item col-xl-5col col-lg-3 col-sm-4 col-6">
-                    <div class="product product-simple text-center">
-                        <figure class="product-media">
-                            <a href="#">
-                                <img src="https://www.portotheme.com/html/wolmart/assets/images/demos/demo8/product/4-5.jpg"
-                                    alt="Product" width="260" height="291" />
-                            </a>
-                            <div class="product-action-vertical">
-                                <a href="#" class="btn-product-icon btn-wishlist w-icon-heart"
-                                    title="Add to wishlist"></a>
-                                <a href="#" class="btn-product-icon btn-compare w-icon-compare"
-                                    title="Add to Compare"></a>
-                            </div>
-                            <div class="product-action">
-                                <a href="#" class="btn-product btn-quickview" title="Quick View">Quick
-                                    View</a>
-                            </div>
-                        </figure>
-                        <div class="product-details">
-                            <h4 class="product-name"><a href="#">Packed Actinidias</a></h4>
-                            <div class="product-pa-wrapper">
-                                <div class="product-price">
-                                    <ins class="new-price">$73.71</ins><del class="old-price">$150.60</del>
-                                </div>
-                                <div class="product-action">
-                                    <a href="#"
-                                        class="btn-cart btn-product btn btn-icon-right btn-link btn-underline">Add
-                                        To Cart</a>
-                                </div>
-                            </div>
-                            <div class="sold-by">
-                                Sold By: <a href="#">Vendor 2</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="grid-item col-xl-5col col-lg-3 col-sm-4 col-6">
-                    <div class="product product-simple text-center">
-                        <figure class="product-media">
-                            <a href="#">
-                                <img src="https://www.portotheme.com/html/wolmart/assets/images/demos/demo8/product/4-6.jpg"
-                                    alt="Product" width="260" height="291" />
-                            </a>
-                            <div class="product-action-vertical">
-                                <a href="#" class="btn-product-icon btn-wishlist w-icon-heart"
-                                    title="Add to wishlist"></a>
-                                <a href="#" class="btn-product-icon btn-compare w-icon-compare"
-                                    title="Add to Compare"></a>
-                            </div>
-                            <div class="product-action">
-                                <a href="#" class="btn-product btn-quickview" title="Quick View">Quick
-                                    View</a>
-                            </div>
-                        </figure>
-                        <div class="product-details">
-                            <h4 class="product-name"><a href="#">Tea Computer</a></h4>
-                            <div class="product-pa-wrapper">
-                                <div class="product-price">
-                                    <ins class="new-price">$137.35</ins><del class="old-price">$155.65</del>
-                                </div>
-                                <div class="product-action">
-                                    <a href="#"
-                                        class="btn-cart btn-product btn btn-icon-right btn-link btn-underline">Add
-                                        To Cart</a>
-                                </div>
-                            </div>
-                            <div class="sold-by">
-                                Sold By: <a href="#">Vendor 3</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="grid-item col-xl-5col col-lg-3 col-sm-4 col-6">
-                    <div class="product product-simple text-center">
-                        <figure class="product-media">
-                            <a href="#">
-                                <img src="https://www.portotheme.com/html/wolmart/assets/images/demos/demo8/product/4-7.jpg"
-                                    alt="Product" width="260" height="291" />
-                            </a>
-                            <div class="product-action-vertical">
-                                <a href="#" class="btn-product-icon btn-wishlist w-icon-heart"
-                                    title="Add to wishlist"></a>
-                                <a href="#" class="btn-product-icon btn-compare w-icon-compare"
-                                    title="Add to Compare"></a>
-                            </div>
-                            <div class="product-action">
-                                <a href="#" class="btn-product btn-quickview" title="Quick View">Quick
-                                    View</a>
-                            </div>
-                        </figure>
-                        <div class="product-details">
-                            <h4 class="product-name"><a href="#">Organic Wine</a></h4>
-                            <div class="product-pa-wrapper">
-                                <div class="product-price">
-                                    <ins class="new-price">$220.25</ins>
-                                </div>
-                                <div class="product-action">
-                                    <a href="#"
-                                        class="btn-cart btn-product btn btn-icon-right btn-link btn-underline">Add
-                                        To Cart</a>
-                                </div>
-                            </div>
-                            <div class="sold-by">
-                                Sold By: <a href="#">Vendor 5</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <!-- End of Banner Product Wrapper -->
+
+
 
             <div class="banner banner-shoes br-sm mb-9" style="background-image: url(assets/images/demos/demo8/banner/3.jpg);
             background-color: #36332C;">
@@ -1692,229 +1417,240 @@
                 <h2 class="title mb-0 pt-2 pb-2">Top Rated Products</h2>
                 <a href="shop-boxed-banner.html" class="mb-0">More Products<i class="w-icon-long-arrow-right"></i></a>
             </div>
-            <div class="owl-carousel owl-theme product-wrapper row cols-xl-6 cols-lg-5 cols-md-4 cols-sm-3 cols-2"
-                data-owl-options="{
-            'nav': false,
-            'dots': true,
-            'margin': 20,
-            'responsive': {
-                '0': {
-                    'items': 2
-                },
-                '576': {
-                    'items': 3
-                },
-                '768': {
-                    'items': 4
-                },
-                '992': {
-                    'items': 5
-                },
-                '1200': {
-                    'items': 6
-                }
-            }
-        }">
-                <div class="product product-simple text-center">
-                    <figure class="product-media">
-                        <a href="#">
-                            <img src="https://www.portotheme.com/html/wolmart/assets/images/demos/demo8/product/5-1.jpg"
-                                alt="Product" width="260" height="291" />
-                        </a>
-                        <div class="product-action-vertical">
-                            <a href="#" class="btn-product-icon btn-wishlist w-icon-heart" title="Add to wishlist"></a>
-                            <a href="#" class="btn-product-icon btn-compare w-icon-compare" title="Add to Compare"></a>
+            <div class="row cols-lg-4 cols-md-2 cols-sm-2 cols-1 mt-4">
+                <div class="store-wrap mb-4">
+                    <div class="store store-grid">
+                        <div class="store-header">
+                            <figure class="store-banner">
+                                <img src="https://portotheme.com/html/wolmart/assets/images/vendor/dokan/1.jpg" alt="Vendor" width="400" height="194" style="background-color: #40475E">
+                            </figure>
                         </div>
-                        <div class="product-action">
-                            <a href="#" class="btn-product btn-quickview" title="Quick View">Quick
-                                View</a>
-                        </div>
-                        <div class="product-countdown-container">
-                            <div class="product-countdown countdown-compact" data-until="2021, 9, 9" data-format="DHMS"
-                                data-compact="false" data-labels-short="Days, Hours, Mins, Secs">
-                                00:00:00:00</div>
-                        </div>
-                    </figure>
-                    <div class="product-details">
-                        <h4 class="product-name"><a href="#">Charge &amp; Alarm Machine</a></h4>
-                        <div class="product-pa-wrapper">
-                            <div class="product-price">
-                                <ins class="new-price">$26.88</ins><del class="old-price">$27.89</del>
+                        <!-- End of Store Header -->
+                        <div class="store-content">
+                            <h4 class="store-title">
+                                <a href="vendor-dokan-store.html">Vendor 1</a>
+                                <label class="featured-label">Featured</label>
+                            </h4>
+                            <div class="ratings-container">
+                                <div class="ratings-full">
+                                    <span class="ratings" style="width: 100%;"></span>
+                                    <span class="tooltiptext tooltip-top"></span>
+                                </div>
                             </div>
-                            <div class="product-action">
-                                <a href="#" class="btn-cart btn-product btn btn-icon-right btn-link btn-underline">Add
-                                    To Cart</a>
+                            <div class="store-address">
+                                Steven Street, El Carjon
+                                California, United States (US)
                             </div>
+                            <ul class="seller-info-list list-style-none">
+                                <li class="store-phone">
+                                    <a href="tel:1234567890"><i class="w-icon-phone"></i>1234567890</a>
+                                </li>
+                            </ul>
                         </div>
-                        <div class="sold-by">
-                            Sold By: <a href="#">Vendor 5</a>
+                        <!-- End of Store Content -->
+                        <div class="store-footer">
+                            <figure class="seller-brand">
+                                <img src="https://portotheme.com/html/wolmart/assets/images/vendor/brand/1.jpg" alt="Brand" width="80" height="80">
+                            </figure>
+                            <a href="vendor-dokan-store.html" class="btn btn-dark btn-link btn-underline btn-icon-right btn-visit">
+                                Visit Store<i class="w-icon-long-arrow-right"></i></a>
                         </div>
+                        <!-- End of Store Footer -->
                     </div>
+                    <!-- End of Store -->
                 </div>
-                <!-- End of Product Simple -->
-                <div class="product product-simple text-center">
-                    <figure class="product-media">
-                        <a href="#">
-                            <img src="https://www.portotheme.com/html/wolmart/assets/images/demos/demo8/product/5-2.jpg"
-                                alt="Product" width="260" height="291" />
-                        </a>
-                        <div class="product-action-vertical">
-                            <a href="#" class="btn-product-icon btn-wishlist w-icon-heart" title="Add to wishlist"></a>
-                            <a href="#" class="btn-product-icon btn-compare w-icon-compare" title="Add to Compare"></a>
+                <div class="store-wrap mb-4">
+                    <div class="store store-grid">
+                        <div class="store-header">
+                            <figure class="store-banner">
+                                <img src="https://portotheme.com/html/wolmart/assets/images/vendor/dokan/2.jpg" alt="Vendor" width="400" height="194" style="background-color: #6C6C6C">
+                            </figure>
                         </div>
-                        <div class="product-action">
-                            <a href="#" class="btn-product btn-quickview" title="Quick View">Quick
-                                View</a>
-                        </div>
-                    </figure>
-                    <div class="product-details">
-                        <h4 class="product-name"><a href="#">Women's Comforter</a></h4>
-                        <div class="product-pa-wrapper">
-                            <div class="product-price">
-                                <ins class="new-price">$25.68</ins><del class="old-price">$30.45</del>
+                        <!-- End of Store Header -->
+                        <div class="store-content">
+                            <h4 class="store-title">
+                                <a href="vendor-dokan-store.html">Vendor 2</a>
+                            </h4>
+                            <div class="ratings-container">
+                                <div class="ratings-full">
+                                    <span class="ratings" style="width: 100%;"></span>
+                                    <span class="tooltiptext tooltip-top"></span>
+                                </div>
                             </div>
-                            <div class="product-action">
-                                <a href="#" class="btn-cart btn-product btn btn-icon-right btn-link btn-underline">Add
-                                    To Cart</a>
+                            <div class="store-address">
+                                London, United Kingdom (UK)
                             </div>
+                            <ul class="seller-info-list list-style-none">
+                                <li class="store-phone">
+                                    <a href="tel:123456789"><i class="w-icon-phone"></i>123456789</a>
+                                </li>
+                            </ul>
                         </div>
-                        <div class="sold-by">
-                            Sold By: <a href="#">Vendor 2</a>
+                        <!-- End of Store Content -->
+                        <div class="store-footer">
+                            <figure class="seller-brand">
+                                <img src="https://portotheme.com/html/wolmart/assets/images/vendor/brand/2.jpg" alt="Brand" width="80" height="80">
+                            </figure>
+                            <a href="vendor-dokan-store.html" class="btn btn-dark btn-link btn-underline btn-icon-right btn-visit">Visit Store<i class="w-icon-long-arrow-right"></i></a>
                         </div>
+                        <!-- End of Store Footer -->
                     </div>
+                    <!-- End of Store -->
                 </div>
-                <!-- End of Product Simple -->
-                <div class="product product-simple text-center">
-                    <figure class="product-media">
-                        <a href="#">
-                            <img src="https://www.portotheme.com/html/wolmart/assets/images/demos/demo8/product/5-3.jpg"
-                                alt="Product" width="260" height="291" />
-                        </a>
-                        <div class="product-action-vertical">
-                            <a href="#" class="btn-product-icon btn-wishlist w-icon-heart" title="Add to wishlist"></a>
-                            <a href="#" class="btn-product-icon btn-compare w-icon-compare" title="Add to Compare"></a>
+                <div class="store-wrap mb-4">
+                    <div class="store store-grid">
+                        <div class="store-header">
+                            <figure class="store-banner">
+                                <img src="https://portotheme.com/html/wolmart/assets/images/vendor/dokan/3.jpg" alt="Vendor" width="400" height="194" style="background-color: #A891BF">
+                            </figure>
                         </div>
-                        <div class="product-action">
-                            <a href="#" class="btn-product btn-quickview" title="Quick View">Quick
-                                View</a>
-                        </div>
-                    </figure>
-                    <div class="product-details">
-                        <h4 class="product-name"><a href="#">Gold Watch</a></h4>
-                        <div class="product-pa-wrapper">
-                            <div class="product-price">
-                                <ins class="new-price">$164.47</ins><del class="old-price">$183.47</del>
+                        <!-- End of Store Header -->
+                        <div class="store-content">
+                            <h4 class="store-title">
+                                <a href="vendor-dokan-store.html">Vendor 3</a>
+                            </h4>
+                            <div class="ratings-container">
+                                <div class="ratings-full">
+                                    <span class="ratings" style="width: 100%;"></span>
+                                    <span class="tooltiptext tooltip-top"></span>
+                                </div>
                             </div>
-                            <div class="product-action">
-                                <a href="#" class="btn-cart btn-product btn btn-icon-right btn-link btn-underline">Add
-                                    To Cart</a>
+                            <div class="store-address">
+                                Rio de Janeiro, Brazil
                             </div>
+                            <ul class="seller-info-list list-style-none">
+                                <li class="store-phone">
+                                  <a href="tel:1234567890"><i class="w-icon-phone"></i>1234567890</a>
+                                </li>
+                            </ul>
                         </div>
-                        <div class="sold-by">
-                            Sold By: <a href="#">Vendor 1</a>
+                        <!-- End of Store Content -->
+                        <div class="store-footer">
+                            <figure class="seller-brand">
+                                <img src="https://portotheme.com/html/wolmart/assets/images/vendor/brand/3.jpg" alt="Brand" width="80" height="80">
+                            </figure>
+                            <a href="vendor-dokan-store.html" class="btn btn-dark btn-link btn-underline btn-icon-right btn-visit">Visit Store<i class="w-icon-long-arrow-right"></i></a>
                         </div>
+                        <!-- End of Store Footer -->
                     </div>
+                    <!-- End of Store -->
                 </div>
-                <!-- End of Product Simple -->
-                <div class="product product-simple text-center">
-                    <figure class="product-media">
-                        <a href="#">
-                            <img src="https://www.portotheme.com/html/wolmart/assets/images/demos/demo8/product/5-4.jpg"
-                                alt="Product" width="260" height="291" />
-                        </a>
-                        <div class="product-action-vertical">
-                            <a href="#" class="btn-product-icon btn-wishlist w-icon-heart" title="Add to wishlist"></a>
-                            <a href="#" class="btn-product-icon btn-compare w-icon-compare" title="Add to Compare"></a>
+                <div class="store-wrap mb-4">
+                    <div class="store store-grid">
+                        <div class="store-header">
+                            <figure class="store-banner">
+                                <img src="https://portotheme.com/html/wolmart/assets/images/vendor/dokan/4.jpg" alt="Vendor" width="400" height="194" style="background-color: #28292D">
+                            </figure>
                         </div>
-                        <div class="product-action">
-                            <a href="#" class="btn-product btn-quickview" title="Quick View">Quick
-                                View</a>
-                        </div>
-                    </figure>
-                    <div class="product-details">
-                        <h4 class="product-name"><a href="#">Mini Wireless Earphone</a></h4>
-                        <div class="product-pa-wrapper">
-                            <div class="product-price">
-                                <ins class="new-price">$3.66</ins>
+                        <!-- End of Store Header -->
+                        <div class="store-content">
+                            <h4 class="store-title">
+                                <a href="vendor-dokan-store.html">Vendor 4</a>
+                            </h4>
+                            <div class="ratings-container">
+                                <div class="ratings-full">
+                                    <span class="ratings" style="width: 100%;"></span>
+                                    <span class="tooltiptext tooltip-top"></span>
+                                </div>
                             </div>
-                            <div class="product-action">
-                                <a href="#" class="btn-cart btn-product btn btn-icon-right btn-link btn-underline">Add
-                                    To Cart</a>
+                            <div class="store-address">
+                                Ontario, Canada
                             </div>
+                            <ul class="seller-info-list list-style-none">
+                                <li class="store-phone">
+                                    <a href="tel:123456789"><i class="w-icon-phone"></i>123456789</a>
+                                </li>
+                            </ul>
                         </div>
-                        <div class="sold-by">
-                            Sold By: <a href="#">Vendor 2</a>
+                        <!-- End of Store Content -->
+                        <div class="store-footer">
+                            <figure class="seller-brand">
+                                <img src="https://portotheme.com/html/wolmart/assets/images/vendor/brand/4.jpg" alt="Brand" width="80" height="80">
+                            </figure>
+                            <a href="vendor-dokan-store.html" class="btn btn-dark btn-link btn-underline btn-icon-right btn-visit">Visit Store<i class="w-icon-long-arrow-right"></i></a>
                         </div>
+                        <!-- End of Store Footer -->
                     </div>
+                    <!-- End of Store -->
                 </div>
-                <!-- End of Product Simple -->
-                <div class="product product-simple text-center">
-                    <figure class="product-media">
-                        <a href="#">
-                            <img src="https://www.portotheme.com/html/wolmart/assets/images/demos/demo8/product/5-5.jpg"
-                                alt="Product" width="260" height="291" />
-                        </a>
-                        <div class="product-action-vertical">
-                            <a href="#" class="btn-product-icon btn-wishlist w-icon-heart" title="Add to wishlist"></a>
-                            <a href="#" class="btn-product-icon btn-compare w-icon-compare" title="Add to Compare"></a>
+                <div class="store-wrap mb-4">
+                    <div class="store store-grid">
+                        <div class="store-header">
+                            <figure class="store-banner">
+                                <img src="https://portotheme.com/html/wolmart/assets/images/vendor/dokan/5.jpg" alt="Vendor" width="400" height="194" style="background-color: #7E7D7B">
+                            </figure>
                         </div>
-                        <div class="product-action">
-                            <a href="#" class="btn-product btn-quickview" title="Quick View">Quick
-                                View</a>
-                        </div>
-                    </figure>
-                    <div class="product-details">
-                        <h4 class="product-name"><a href="#">Headkerchief</a></h4>
-                        <div class="product-pa-wrapper">
-                            <div class="product-price">
-                                <ins class="new-price">$28.99</ins>
+                        <!-- End of Store Header -->
+                        <div class="store-content">
+                            <h4 class="store-title">
+                                <a href="vendor-dokan-store.html">Vendor 5</a>
+                                <label class="featured-label">Featured</label>
+                            </h4>
+                            <div class="ratings-container">
+                                <div class="ratings-full">
+                                    <span class="ratings" style="width: 100%;"></span>
+                                    <span class="tooltiptext tooltip-top"></span>
+                                </div>
                             </div>
-                            <div class="product-action">
-                                <a href="#" class="btn-cart btn-product btn btn-icon-right btn-link btn-underline">Add
-                                    To Cart</a>
+                            <div class="store-address">
+                                Australia
                             </div>
+                            <ul class="seller-info-list list-style-none">
+                                <li class="store-phone">
+                                  <a href="tel:1234567890"><i class="w-icon-phone"></i>1234567890</a>
+                                </li>
+                            </ul>
                         </div>
-                        <div class="sold-by">
-                            Sold By: <a href="#">Vendor 4</a>
+                        <!-- End of Store Content -->
+                        <div class="store-footer">
+                            <figure class="seller-brand">
+                                <img src="https://portotheme.com/html/wolmart/assets/images/vendor/brand/5.jpg" alt="Brand" width="80" height="80">
+                            </figure>
+                            <a href="vendor-dokan-store.html" class="btn btn-dark btn-link btn-underline btn-icon-right btn-visit">Visit Store<i class="w-icon-long-arrow-right"></i></a>
                         </div>
+                        <!-- End of Store Footer -->
                     </div>
+                    <!-- End of Store -->
                 </div>
-                <!-- End of Product Simple -->
-                <div class="product product-simple text-center">
-                    <figure class="product-media">
-                        <a href="#">
-                            <img src="https://www.portotheme.com/html/wolmart/assets/images/demos/demo8/product/5-6.jpg"
-                                alt="Product" width="260" height="291" />
-                        </a>
-                        <div class="product-action-vertical">
-                            <a href="#" class="btn-product-icon btn-wishlist w-icon-heart" title="Add to wishlist"></a>
-                            <a href="#" class="btn-product-icon btn-compare w-icon-compare" title="Add to Compare"></a>
+                <div class="store-wrap mb-4">
+                    <div class="store store-grid">
+                        <div class="store-header">
+                            <figure class="store-banner">
+                                <img src="https://portotheme.com/html/wolmart/assets/images/vendor/dokan/6.jpg" alt="Vendor" width="400" height="194" style="background-color: #5B5B62">
+                            </figure>
                         </div>
-                        <div class="product-action">
-                            <a href="#" class="btn-product btn-quickview" title="Quick View">Quick
-                                View</a>
-                        </div>
-                    </figure>
-                    <div class="product-details">
-                        <h4 class="product-name"><a href="#">White Schoolbag</a></h4>
-                        <div class="product-pa-wrapper">
-                            <div class="product-price">
-                                <ins class="new-price">$50.65</ins><del class="old-price">$78.23</del>
+                        <!-- End of Store Header -->
+                        <div class="store-content">
+                            <h4 class="store-title">
+                                <a href="vendor-dokan-store.html">Vendor 6</a>
+                            </h4>
+                            <div class="ratings-container">
+                                <div class="ratings-full">
+                                    <span class="ratings" style="width: 100%;"></span>
+                                    <span class="tooltiptext tooltip-top">5.00</span>
+                                </div>
                             </div>
-                            <div class="product-action">
-                                <a href="#" class="btn-cart btn-product btn btn-icon-right btn-link btn-underline">Add
-                                    To Cart</a>
+                            <div class="store-address">
+                                Germany
                             </div>
+                            <ul class="seller-info-list list-style-none">
+                                <li class="store-phone">
+                                    <a href="tel:123456789"><i class="w-icon-phone"></i>123456789</a>
+                                </li>
+                            </ul>
                         </div>
-                        <div class="sold-by">
-                            Sold By: <a href="#">Vendor 2</a>
+                        <!-- End of Store Content -->
+                        <div class="store-footer">
+                            <figure class="seller-brand">
+                                <img src="https://portotheme.com/html/wolmart/assets/images/vendor/brand/6.jpg" alt="Brand" width="80" height="80">
+                            </figure>
+                            <a href="vendor-dokan-store.html" class="btn btn-dark btn-link btn-underline btn-icon-right btn-visit">Visit Store<i class="w-icon-long-arrow-right"></i></a>
                         </div>
+                        <!-- End of Store Footer -->
                     </div>
+                    <!-- End of Store -->
                 </div>
-                <!-- End of Product Simple -->
             </div>
-            <!-- End of Owl Carousel -->
-
 
 
             <h2 class="title text-left mb-5 appear-animate">Our Clients</h2>
