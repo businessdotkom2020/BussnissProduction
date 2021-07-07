@@ -59,7 +59,8 @@
                     <i class="w-icon-angle-left"></i>
                 </a>
                 <span class="product-nav-popup">
-                    <img src="assets/images/products/product-nav-prev.jpg" alt="Product" width="110" height="110" />
+                    <img src="https://portotheme.com/html/wolmart/assets/images/products/product-nav-prev.jpg"
+                        alt="Product" width="110" height="110" />
                     <span class="product-name">Soft Sound Maker</span>
                 </span>
             </li>
@@ -68,7 +69,8 @@
                     <i class="w-icon-angle-right"></i>
                 </a>
                 <span class="product-nav-popup">
-                    <img src="assets/images/products/product-nav-next.jpg" alt="Product" width="110" height="110" />
+                    <img src="https://portotheme.com/html/wolmart/assets/images/products/product-nav-next.jpg"
+                        alt="Product" width="110" height="110" />
                     <span class="product-name">Fabulous Sound Speaker</span>
                 </span>
             </li>
@@ -87,42 +89,42 @@
                                 <div
                                     class="product-single-carousel owl-carousel owl-theme owl-nav-inner row cols-1 gutter-no">
                                     <figure class="product-image">
-                                        <img src="assets/images/products/vertical_thumb/1-800x900.jpg"
-                                            data-zoom-image="assets/images/products/vertical_thumb/1-800x900.jpg"
+                                        <img src="https://portotheme.com/html/wolmart/assets/images/products/vertical_thumb/1-800x900.jpg"
+                                            data-zoom-image="https://portotheme.com/html/wolmart/assets/images/products/vertical_thumb/1-800x900.jpg"
                                             alt="Professsional Camera Set" width="800" height="900">
                                     </figure>
                                     <figure class="product-image">
-                                        <img src="assets/images/products/vertical_thumb/2-800x900.jpg"
-                                            data-zoom-image="assets/images/products/vertical_thumb/2-800x900.jpg"
+                                        <img src="https://portotheme.com/html/wolmart/assets/images/products/vertical_thumb/2-800x900.jpg"
+                                            data-zoom-image="https://portotheme.com/html/wolmart/assets/images/products/vertical_thumb/2-800x900.jpg"
                                             alt="Professsional Camera Set" width="488" height="549">
                                     </figure>
                                     <figure class="product-image">
-                                        <img src="assets/images/products/vertical_thumb/3-800x900.jpg"
-                                            data-zoom-image="assets/images/products/vertical_thumb/3-800x900.jpg"
+                                        <img src="https://portotheme.com/html/wolmart/assets/images/products/vertical_thumb/3-800x900.jpg"
+                                            data-zoom-image="https://portotheme.com/html/wolmart/assets/images/products/vertical_thumb/3-800x900.jpg"
                                             alt="Professsional Camera Set" width="800" height="900">
                                     </figure>
                                     <figure class="product-image">
-                                        <img src="assets/images/products/vertical_thumb/4-800x900.jpg"
-                                            data-zoom-image="assets/images/products/vertical_thumb/4-800x900.jpg"
+                                        <img src="https://portotheme.com/html/wolmart/assets/images/products/vertical_thumb/4-800x900.jpg"
+                                            data-zoom-image="https://portotheme.com/html/wolmart/assets/images/products/vertical_thumb/4-800x900.jpg"
                                             alt="Professsional Camera Set" width="800" height="900">
                                     </figure>
                                 </div>
                                 <div class="product-thumbs-wrap">
                                     <div class="product-thumbs">
                                         <div class="product-thumb active">
-                                            <img src="assets/images/products/vertical_thumb/1-800x900.jpg"
+                                            <img src="https://portotheme.com/html/wolmart/assets/images/products/vertical_thumb/1-800x900.jpg"
                                                 alt="Product Thumb" width="800" height="900">
                                         </div>
                                         <div class="product-thumb">
-                                            <img src="assets/images/products/vertical_thumb/2-800x900.jpg"
+                                            <img src="https://portotheme.com/html/wolmart/assets/images/products/vertical_thumb/2-800x900.jpg"
                                                 alt="Product Thumb" width="800" height="900">
                                         </div>
                                         <div class="product-thumb">
-                                            <img src="assets/images/products/vertical_thumb/3-800x900.jpg"
+                                            <img src="https://portotheme.com/html/wolmart/assets/images/products/vertical_thumb/3-800x900.jpg"
                                                 alt="Product Thumb" width="800" height="900">
                                         </div>
                                         <div class="product-thumb">
-                                            <img src="assets/images/products/vertical_thumb/4-800x900.jpg"
+                                            <img src="https://portotheme.com/html/wolmart/assets/images/products/vertical_thumb/4-800x900.jpg"
                                                 alt="Product Thumb" width="800" height="900">
                                         </div>
                                     </div>
@@ -136,8 +138,8 @@
                                 <h1 class="product-title">Professsional Camera Set</h1>
                                 <div class="product-bm-wrapper">
                                     <figure class="brand">
-                                        <img src="assets/images/products/brand/brand-2.jpg" alt="Brand" width="105"
-                                            height="48" />
+                                        <img src="https://portotheme.com/html/wolmart/assets/images/products/brand/brand-2.jpg"
+                                            alt="Brand" width="105" height="48" />
                                     </figure>
                                     <div class="product-meta">
                                         <div class="product-categories">
@@ -241,12 +243,12 @@
                                         <div class="banner banner-video product-video br-xs">
                                             <figure class="banner-media">
                                                 <a href="#">
-                                                    <img src="assets/images/products/video-banner-610x300.jpg"
+                                                    <img src="https://portotheme.com/html/wolmart/assets/images/products/video-banner-610x300.jpg"
                                                         alt="banner" width="610" height="300"
                                                         style="background-color: #bebebe;">
                                                 </a>
                                                 <a class="btn-play-video btn-iframe"
-                                                    href="assets/video/memory-of-a-woman.mp4"></a>
+                                                    href="https://portotheme.com/html/wolmart/assets/video/memory-of-a-woman.mp4"></a>
                                             </figure>
                                         </div>
                                     </div>
@@ -276,16 +278,17 @@
                                 <div class="row mb-3">
                                     <div class="col-md-6 mb-4">
                                         <figure class="vendor-banner br-sm">
-                                            <img src="assets/images/products/vendor-banner.jpg" alt="Vendor Banner"
-                                                width="610" height="295" style="background-color: #353B55;" />
+                                            <img src="https://portotheme.com/html/wolmart/assets/images/products/vendor-banner.jpg"
+                                                alt="Vendor Banner" width="610" height="295"
+                                                style="background-color: #353B55;" />
                                         </figure>
                                     </div>
                                     <div class="col-md-6 pl-2 pl-md-6 mb-4">
                                         <div class="vendor-user">
                                             <figure class="vendor-logo mr-4">
                                                 <a href="#">
-                                                    <img src="assets/images/products/vendor-logo.jpg" alt="Vendor Logo"
-                                                        width="80" height="80" />
+                                                    <img src="https://portotheme.com/html/wolmart/assets/images/products/vendor-logo.jpg"
+                                                        alt="Vendor Logo" width="80" height="80" />
                                                 </a>
                                             </figure>
                                             <div>
@@ -499,7 +502,7 @@
                                                 <li class="comment">
                                                     <div class="comment-body">
                                                         <figure class="comment-avatar">
-                                                            <img src="assets/images/agents/1-100x100.png"
+                                                            <img src="https://portotheme.com/html/wolmart/assets/images/agents/1-100x100.png"
                                                                 alt="Commenter Avatar" width="90" height="90">
                                                         </figure>
                                                         <div class="comment-content">
@@ -533,10 +536,10 @@
                                                                 <div class="review-image">
                                                                     <a href="#">
                                                                         <figure>
-                                                                            <img src="assets/images/products/default/review-img-1.jpg"
+                                                                            <img src="https://portotheme.com/html/wolmart/assets/images/products/default/review-img-1.jpg"
                                                                                 width="60" height="60"
                                                                                 alt="Attachment image of John Doe's review on Electronics Black Wrist Watch"
-                                                                                data-zoom-image="assets/images/products/default/review-img-1-800x900.jpg" />
+                                                                                data-zoom-image="https://portotheme.com/html/wolmart/assets/images/products/default/review-img-1-800x900.jpg" />
                                                                         </figure>
                                                                     </a>
                                                                 </div>
@@ -547,7 +550,7 @@
                                                 <li class="comment">
                                                     <div class="comment-body">
                                                         <figure class="comment-avatar">
-                                                            <img src="assets/images/agents/2-100x100.png"
+                                                            <img src="https://portotheme.com/html/wolmart/assets/images/agents/2-100x100.png"
                                                                 alt="Commenter Avatar" width="90" height="90">
                                                         </figure>
                                                         <div class="comment-content">
@@ -581,18 +584,18 @@
                                                                 <div class="review-image">
                                                                     <a href="#">
                                                                         <figure>
-                                                                            <img src="assets/images/products/default/review-img-2.jpg"
+                                                                            <img src="https://portotheme.com/html/wolmart/assets/images/products/default/review-img-2.jpg"
                                                                                 width="60" height="60"
                                                                                 alt="Attachment image of John Doe's review on Electronics Black Wrist Watch"
-                                                                                data-zoom-image="assets/images/products/default/review-img-2.jpg" />
+                                                                                data-zoom-image="https://portotheme.com/html/wolmart/assets/images/products/default/review-img-2.jpg" />
                                                                         </figure>
                                                                     </a>
                                                                     <a href="#">
                                                                         <figure>
-                                                                            <img src="assets/images/products/default/review-img-3.jpg"
+                                                                            <img src="https://portotheme.com/html/wolmart/assets/images/products/default/review-img-3.jpg"
                                                                                 width="60" height="60"
                                                                                 alt="Attachment image of John Doe's review on Electronics Black Wrist Watch"
-                                                                                data-zoom-image="assets/images/products/default/review-img-3.jpg" />
+                                                                                data-zoom-image="https://portotheme.com/html/wolmart/assets/images/products/default/review-img-3.jpg" />
                                                                         </figure>
                                                                     </a>
                                                                 </div>
@@ -603,7 +606,7 @@
                                                 <li class="comment">
                                                     <div class="comment-body">
                                                         <figure class="comment-avatar">
-                                                            <img src="assets/images/agents/3-100x100.png"
+                                                            <img src="https://portotheme.com/html/wolmart/assets/images/agents/3-100x100.png"
                                                                 alt="Commenter Avatar" width="90" height="90">
                                                         </figure>
                                                         <div class="comment-content">
@@ -645,7 +648,7 @@
                                                 <li class="comment">
                                                     <div class="comment-body">
                                                         <figure class="comment-avatar">
-                                                            <img src="assets/images/agents/1-100x100.png"
+                                                            <img src="https://portotheme.com/html/wolmart/assets/images/agents/1-100x100.png"
                                                                 alt="Commenter Avatar" width="90" height="90">
                                                         </figure>
                                                         <div class="comment-content">
@@ -679,10 +682,10 @@
                                                                 <div class="review-image">
                                                                     <a href="#">
                                                                         <figure>
-                                                                            <img src="assets/images/products/default/review-img-1.jpg"
+                                                                            <img src="https://portotheme.com/html/wolmart/assets/images/products/default/review-img-1.jpg"
                                                                                 width="60" height="60"
                                                                                 alt="Attachment image of John Doe's review on Electronics Black Wrist Watch"
-                                                                                data-zoom-image="assets/images/products/default/review-img-1.jpg" />
+                                                                                data-zoom-image="https://portotheme.com/html/wolmart/assets/images/products/default/review-img-1.jpg" />
                                                                         </figure>
                                                                     </a>
                                                                 </div>
@@ -693,7 +696,7 @@
                                                 <li class="comment">
                                                     <div class="comment-body">
                                                         <figure class="comment-avatar">
-                                                            <img src="assets/images/agents/2-100x100.png"
+                                                            <img src="https://portotheme.com/html/wolmart/assets/images/agents/2-100x100.png"
                                                                 alt="Commenter Avatar" width="90" height="90">
                                                         </figure>
                                                         <div class="comment-content">
@@ -727,18 +730,18 @@
                                                                 <div class="review-image">
                                                                     <a href="#">
                                                                         <figure>
-                                                                            <img src="assets/images/products/default/review-img-2.jpg"
+                                                                            <img src="https://portotheme.com/html/wolmart/assets/images/products/default/review-img-2.jpg"
                                                                                 width="60" height="60"
                                                                                 alt="Attachment image of John Doe's review on Electronics Black Wrist Watch"
-                                                                                data-zoom-image="assets/images/products/default/review-img-2-800x900.jpg" />
+                                                                                data-zoom-image="https://portotheme.com/html/wolmart/assets/images/products/default/review-img-2-800x900.jpg" />
                                                                         </figure>
                                                                     </a>
                                                                     <a href="#">
                                                                         <figure>
-                                                                            <img src="assets/images/products/default/review-img-3.jpg"
+                                                                            <img src="https://portotheme.com/html/wolmart/assets/images/products/default/review-img-3.jpg"
                                                                                 width="60" height="60"
                                                                                 alt="Attachment image of John Doe's review on Electronics Black Wrist Watch"
-                                                                                data-zoom-image="assets/images/products/default/review-img-3-800x900.jpg" />
+                                                                                data-zoom-image="https://portotheme.com/html/wolmart/assets/images/products/default/review-img-3-800x900.jpg" />
                                                                         </figure>
                                                                     </a>
                                                                 </div>
@@ -753,7 +756,7 @@
                                                 <li class="comment">
                                                     <div class="comment-body">
                                                         <figure class="comment-avatar">
-                                                            <img src="assets/images/agents/3-100x100.png"
+                                                            <img src="https://portotheme.com/html/wolmart/assets/images/agents/3-100x100.png"
                                                                 alt="Commenter Avatar" width="90" height="90">
                                                         </figure>
                                                         <div class="comment-content">
@@ -795,7 +798,7 @@
                                                 <li class="comment">
                                                     <div class="comment-body">
                                                         <figure class="comment-avatar">
-                                                            <img src="assets/images/agents/2-100x100.png"
+                                                            <img src="https://portotheme.com/html/wolmart/assets/images/agents/2-100x100.png"
                                                                 alt="Commenter Avatar" width="90" height="90">
                                                         </figure>
                                                         <div class="comment-content">
@@ -829,18 +832,18 @@
                                                                 <div class="review-image">
                                                                     <a href="#">
                                                                         <figure>
-                                                                            <img src="assets/images/products/default/review-img-2.jpg"
+                                                                            <img src="https://portotheme.com/html/wolmart/assets/images/products/default/review-img-2.jpg"
                                                                                 width="60" height="60"
                                                                                 alt="Attachment image of John Doe's review on Electronics Black Wrist Watch"
-                                                                                data-zoom-image="assets/images/products/default/review-img-2-800x900.jpg" />
+                                                                                data-zoom-image="https://portotheme.com/html/wolmart/assets/images/products/default/review-img-2-800x900.jpg" />
                                                                         </figure>
                                                                     </a>
                                                                     <a href="#">
                                                                         <figure>
-                                                                            <img src="assets/images/products/default/review-img-3.jpg"
+                                                                            <img src="https://portotheme.com/html/wolmart/assets/images/products/default/review-img-3.jpg"
                                                                                 width="60" height="60"
                                                                                 alt="Attachment image of John Doe's review on Electronics Black Wrist Watch"
-                                                                                data-zoom-image="assets/images/products/default/review-img-3-800x900.jpg" />
+                                                                                data-zoom-image="https://portotheme.com/html/wolmart/assets/images/products/default/review-img-3-800x900.jpg" />
                                                                         </figure>
                                                                     </a>
                                                                 </div>
@@ -855,7 +858,7 @@
                                                 <li class="comment">
                                                     <div class="comment-body">
                                                         <figure class="comment-avatar">
-                                                            <img src="assets/images/agents/1-100x100.png"
+                                                            <img src="https://portotheme.com/html/wolmart/assets/images/agents/1-100x100.png"
                                                                 alt="Commenter Avatar" width="90" height="90">
                                                         </figure>
                                                         <div class="comment-content">
@@ -889,10 +892,10 @@
                                                                 <div class="review-image">
                                                                     <a href="#">
                                                                         <figure>
-                                                                            <img src="assets/images/products/default/review-img-3.jpg"
+                                                                            <img src="https://portotheme.com/html/wolmart/assets/images/products/default/review-img-3.jpg"
                                                                                 width="60" height="60"
                                                                                 alt="Attachment image of John Doe's review on Electronics Black Wrist Watch"
-                                                                                data-zoom-image="assets/images/products/default/review-img-3-800x900.jpg" />
+                                                                                data-zoom-image="https://portotheme.com/html/wolmart/assets/images/products/default/review-img-3-800x900.jpg" />
                                                                         </figure>
                                                                     </a>
                                                                 </div>
@@ -935,10 +938,10 @@
                             <div class="product">
                                 <figure class="product-media">
                                     <a href="product-default.html">
-                                        <img src="assets/images/products/default/1-1.jpg" alt="Product" width="300"
-                                            height="338" />
-                                        <img src="assets/images/products/default/1-2.jpg" alt="Product" width="300"
-                                            height="338" />
+                                        <img src="https://portotheme.com/html/wolmart/assets/images/products/default/1-1.jpg"
+                                            alt="Product" width="300" height="338" />
+                                        <img src="https://portotheme.com/html/wolmart/assets/images/products/default/1-2.jpg"
+                                            alt="Product" width="300" height="338" />
                                     </a>
                                     <div class="product-action-vertical">
                                         <a href="#" class="btn-product-icon btn-cart w-icon-cart"
@@ -973,8 +976,8 @@
                             <div class="product">
                                 <figure class="product-media">
                                     <a href="product-default.html">
-                                        <img src="assets/images/products/default/2.jpg" alt="Product" width="300"
-                                            height="338" />
+                                        <img src="https://portotheme.com/html/wolmart/assets/images/products/default/2.jpg"
+                                            alt="Product" width="300" height="338" />
                                     </a>
                                     <div class="product-action-vertical">
                                         <a href="#" class="btn-product-icon btn-cart w-icon-cart"
@@ -1011,8 +1014,8 @@
                             <div class="product">
                                 <figure class="product-media">
                                     <a href="product-default.html">
-                                        <img src="assets/images/products/default/3.jpg" alt="Product" width="300"
-                                            height="338" />
+                                        <img src="https://portotheme.com/html/wolmart/assets/images/products/default/3.jpg"
+                                            alt="Product" width="300" height="338" />
                                     </a>
                                     <div class="product-action-vertical">
                                         <a href="#" class="btn-product-icon btn-cart w-icon-cart"
@@ -1047,10 +1050,10 @@
                             <div class="product">
                                 <figure class="product-media">
                                     <a href="product-default.html">
-                                        <img src="assets/images/products/default/4-1.jpg" alt="Product" width="300"
-                                            height="338" />
-                                        <img src="assets/images/products/default/4-2.jpg" alt="Product" width="300"
-                                            height="338" />
+                                        <img src="https://portotheme.com/html/wolmart/assets/images/products/default/4-1.jpg"
+                                            alt="Product" width="300" height="338" />
+                                        <img src="https://portotheme.com/html/wolmart/assets/images/products/default/4-2.jpg"
+                                            alt="Product" width="300" height="338" />
                                     </a>
                                     <div class="product-action-vertical">
                                         <a href="#" class="btn-product-icon btn-cart w-icon-cart"
@@ -1112,8 +1115,8 @@
                             <div class="product">
                                 <figure class="product-media">
                                     <a href="product-default.html">
-                                        <img src="assets/images/products/default/5.jpg" alt="Product" width="300"
-                                            height="338" />
+                                        <img src="https://portotheme.com/html/wolmart/assets/images/products/default/5.jpg"
+                                            alt="Product" width="300" height="338" />
                                     </a>
                                     <div class="product-action-vertical">
                                         <a href="#" class="btn-product-icon btn-cart w-icon-cart"
@@ -1145,8 +1148,8 @@
                             <div class="product">
                                 <figure class="product-media">
                                     <a href="product-default.html">
-                                        <img src="assets/images/products/default/6.jpg" alt="Product" width="300"
-                                            height="338" />
+                                        <img src="https://portotheme.com/html/wolmart/assets/images/products/default/6.jpg"
+                                            alt="Product" width="300" height="338" />
                                     </a>
                                     <div class="product-action-vertical">
                                         <a href="#" class="btn-product-icon btn-cart w-icon-cart"
@@ -1181,10 +1184,10 @@
                             <div class="product">
                                 <figure class="product-media">
                                     <a href="product-default.html">
-                                        <img src="assets/images/products/default/7-1.jpg" alt="Product" width="300"
-                                            height="338" />
-                                        <img src="assets/images/products/default/7-2.jpg" alt="Product" width="300"
-                                            height="338" />
+                                        <img src="https://portotheme.com/html/wolmart/assets/images/products/default/7-1.jpg"
+                                            alt="Product" width="300" height="338" />
+                                        <img src="https://portotheme.com/html/wolmart/assets/images/products/default/7-2.jpg"
+                                            alt="Product" width="300" height="338" />
                                     </a>
                                     <div class="product-action-vertical">
                                         <a href="#" class="btn-product-icon btn-cart w-icon-cart"
@@ -1217,8 +1220,8 @@
                             <div class="product">
                                 <figure class="product-media">
                                     <a href="product-default.html">
-                                        <img src="assets/images/products/default/8.jpg" alt="Product" width="300"
-                                            height="338" />
+                                        <img src="https://portotheme.com/html/wolmart/assets/images/products/default/8.jpg"
+                                            alt="Product" width="300" height="338" />
                                     </a>
                                     <div class="product-action-vertical">
                                         <a href="#" class="btn-product-icon btn-cart w-icon-cart"
@@ -1292,8 +1295,8 @@
                             <div class="widget widget-banner mb-9">
                                 <div class="banner banner-fixed br-sm">
                                     <figure>
-                                        <img src="assets/images/shop/banner3.jpg" alt="Banner" width="266" height="220"
-                                            style="background-color: #1D2D44;" />
+                                        <img src="https://portotheme.com/html/wolmart/assets/images/shop/banner3.jpg"
+                                            alt="Banner" width="266" height="220" style="background-color: #1D2D44;" />
                                     </figure>
                                     <div class="banner-content">
                                         <div class="banner-price-info font-weight-bolder text-white lh-1 ls-25">
@@ -1322,8 +1325,8 @@
                                         <div class="product product-widget">
                                             <figure class="product-media">
                                                 <a href="#">
-                                                    <img src="assets/images/shop/13.jpg" alt="Product" width="100"
-                                                        height="113" />
+                                                    <img src="https://portotheme.com/html/wolmart/assets/images/shop/13.jpg"
+                                                        alt="Product" width="100" height="113" />
                                                 </a>
                                             </figure>
                                             <div class="product-details">
@@ -1342,8 +1345,8 @@
                                         <div class="product product-widget">
                                             <figure class="product-media">
                                                 <a href="#">
-                                                    <img src="assets/images/shop/14.jpg" alt="Product" width="100"
-                                                        height="113" />
+                                                    <img src="https://portotheme.com/html/wolmart/assets/images/shop/14.jpg"
+                                                        alt="Product" width="100" height="113" />
                                                 </a>
                                             </figure>
                                             <div class="product-details">
@@ -1362,8 +1365,8 @@
                                         <div class="product product-widget">
                                             <figure class="product-media">
                                                 <a href="#">
-                                                    <img src="assets/images/shop/15.jpg" alt="Product" width="100"
-                                                        height="113" />
+                                                    <img src="https://portotheme.com/html/wolmart/assets/images/shop/15.jpg"
+                                                        alt="Product" width="100" height="113" />
                                                 </a>
                                             </figure>
                                             <div class="product-details">
@@ -1384,8 +1387,8 @@
                                         <div class="product product-widget">
                                             <figure class="product-media">
                                                 <a href="#">
-                                                    <img src="assets/images/shop/16.jpg" alt="Product" width="100"
-                                                        height="113" />
+                                                    <img src="https://portotheme.com/html/wolmart/assets/images/shop/16.jpg"
+                                                        alt="Product" width="100" height="113" />
                                                 </a>
                                             </figure>
                                             <div class="product-details">
@@ -1404,8 +1407,8 @@
                                         <div class="product product-widget">
                                             <figure class="product-media">
                                                 <a href="#">
-                                                    <img src="assets/images/shop/17.jpg" alt="Product" width="100"
-                                                        height="113" />
+                                                    <img src="https://portotheme.com/html/wolmart/assets/images/shop/17.jpg"
+                                                        alt="Product" width="100" height="113" />
                                                 </a>
                                             </figure>
                                             <div class="product-details">
@@ -1424,8 +1427,8 @@
                                         <div class="product product-widget">
                                             <figure class="product-media">
                                                 <a href="#">
-                                                    <img src="assets/images/shop/18.jpg" alt="Product" width="100"
-                                                        height="113" />
+                                                    <img src="https://portotheme.com/html/wolmart/assets/images/shop/18.jpg"
+                                                        alt="Product" width="100" height="113" />
                                                 </a>
                                             </figure>
                                             <div class="product-details">
