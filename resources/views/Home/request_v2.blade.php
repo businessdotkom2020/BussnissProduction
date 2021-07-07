@@ -148,7 +148,6 @@
 
                                 <hr class="product-divider">
 
-                                <div class="product-price"><ins class="new-price">$86.00</ins></div>
 
                                 <div class="ratings-container">
                                     <div class="ratings-full">
