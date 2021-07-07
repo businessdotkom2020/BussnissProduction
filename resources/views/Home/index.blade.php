@@ -1333,8 +1333,8 @@
                     <div class="product product-simple text-center">
                         <figure class="product-media">
                             <a href="#">
-                                <img src="https://www.portotheme.com/html/wolmart/assets/images/demos/demo8/product/3-6.jpg"
-                                    alt="Product" width="260" height="291" />
+                                <img src="https://scx2.b-cdn.net/gfx/news/hires/2020/doctor.jpg" alt="Product"
+                                    width="260" height="291" />
                             </a>
                             <div class="product-action-vertical">
                                 <a href="#" class="btn-product-icon btn-wishlist w-icon-heart"
