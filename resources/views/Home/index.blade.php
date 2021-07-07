@@ -1037,6 +1037,78 @@
                     <div class="product product-simple text-center">
                         <figure class="product-media">
                             <a href="#">
+                                <img src="https://www.portotheme.com/html/wolmart/assets/images/demos/demo8/product/3-3.jpg"
+                                    alt="Product" width="260" height="291" />
+                            </a>
+                            <div class="product-action-vertical">
+                                <a href="#" class="btn-product-icon btn-wishlist w-icon-heart"
+                                    title="Add to wishlist"></a>
+                                <a href="#" class="btn-product-icon btn-compare w-icon-compare"
+                                    title="Add to Compare"></a>
+                            </div>
+                            <div class="product-action">
+                                <a href="#" class="btn-product btn-quickview" title="Quick View">Quick
+                                    View</a>
+                            </div>
+                        </figure>
+                        <div class="product-details">
+                            <h4 class="product-name"><a href="#">White Schoolbag</a></h4>
+                            <div class="product-pa-wrapper">
+                                <div class="product-price">
+                                    <ins class="new-price">$56.48</ins>
+                                </div>
+                                <div class="product-action">
+                                    <a href="#"
+                                        class="btn-cart btn-product btn btn-icon-right btn-link btn-underline">Add
+                                        To Cart</a>
+                                </div>
+                            </div>
+                            <div class="sold-by">
+                                Sold By: <a href="#">Vendor 3</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="grid-item col-xl-5col col-lg-3 col-sm-4 col-6">
+                    <div class="product product-simple text-center">
+                        <figure class="product-media">
+                            <a href="#">
+                                <img src="https://www.portotheme.com/html/wolmart/assets/images/demos/demo8/product/3-3.jpg"
+                                    alt="Product" width="260" height="291" />
+                            </a>
+                            <div class="product-action-vertical">
+                                <a href="#" class="btn-product-icon btn-wishlist w-icon-heart"
+                                    title="Add to wishlist"></a>
+                                <a href="#" class="btn-product-icon btn-compare w-icon-compare"
+                                    title="Add to Compare"></a>
+                            </div>
+                            <div class="product-action">
+                                <a href="#" class="btn-product btn-quickview" title="Quick View">Quick
+                                    View</a>
+                            </div>
+                        </figure>
+                        <div class="product-details">
+                            <h4 class="product-name"><a href="#">White Schoolbag</a></h4>
+                            <div class="product-pa-wrapper">
+                                <div class="product-price">
+                                    <ins class="new-price">$56.48</ins>
+                                </div>
+                                <div class="product-action">
+                                    <a href="#"
+                                        class="btn-cart btn-product btn btn-icon-right btn-link btn-underline">Add
+                                        To Cart</a>
+                                </div>
+                            </div>
+                            <div class="sold-by">
+                                Sold By: <a href="#">Vendor 3</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="grid-item col-xl-5col col-lg-3 col-sm-4 col-6">
+                    <div class="product product-simple text-center">
+                        <figure class="product-media">
+                            <a href="#">
                                 <img src="https://www.portotheme.com/html/wolmart/assets/images/demos/demo8/product/3-4.jpg"
                                     alt="Product" width="260" height="291" />
                             </a>
