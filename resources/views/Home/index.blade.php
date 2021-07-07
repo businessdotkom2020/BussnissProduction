@@ -1754,7 +1754,7 @@
                     <h2 class="title mb-0 pt-2 pb-2">Latest Requests</h2>
                     <a href="#" class="mb-0">More Products<i class="w-icon-long-arrow-right"></i></a>
                 </div>
-                <div class="product-wrapper row cols-xl-7 cols-lg-6 cols-md-4 cols-sm-3 cols-2">
+                <div class="product-wrapper row cols-xl-6 cols-lg-6 cols-md-4 cols-sm-3 cols-2">
                     <div class="product-wrap">
                         <div class="product text-center">
                             <figure class="product-media">
