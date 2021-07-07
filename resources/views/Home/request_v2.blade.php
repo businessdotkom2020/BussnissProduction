@@ -49,7 +49,7 @@
     <nav class="breadcrumb-nav container">
         <ul class="breadcrumb bb-no">
             <li><a href="demo1.html">Home</a></li>
-            <li><a href="product-default.html">Products</a></li>
+            <li><a href="product-default.html">Requests</a></li>
             <li>Grid</li>
         </ul>
         <ul class="product-nav list-style-none">
@@ -238,13 +238,13 @@
                                     <div class="mb-3">
                                         <h5 class="sub-title font-weight-bold"><span class="mr-3">1.</span>Free
                                             Shipping &amp; Return</h5>
-                                        <p class="detail pl-5">We offer free shipping for products on orders
+                                        <p class="detail pl-5">We offer free shipping for Requests on orders
                                             above 50$ and offer free delivery for all orders in US.</p>
                                     </div>
                                     <div class="mb-3">
                                         <h5 class="sub-title font-weight-bold"><span>2.</span>Free and Easy
                                             Returns</h5>
-                                        <p class="detail pl-5">We guarantee our products and you could get back
+                                        <p class="detail pl-5">We guarantee our Requests and you could get back
                                             all of your money anytime you want in 30 days.</p>
                                     </div>
                                     <div class="mb-3">
@@ -893,9 +893,9 @@
                     </div>
                     <section class="vendor-product-section">
                         <div class="title-link-wrapper mb-4">
-                            <h4 class="title text-left">More Products From This Vendor</h4>
+                            <h4 class="title text-left">More Requests From This Vendor</h4>
                             <a href="#" class="btn btn-dark btn-link btn-slide-right btn-icon-right">More
-                                Products<i class="w-icon-long-arrow-right"></i></a>
+                                Requests<i class="w-icon-long-arrow-right"></i></a>
                         </div>
                         <div class="owl-carousel owl-theme row cols-lg-3 cols-md-4 cols-sm-3 cols-2" data-owl-options="{
                                     'nav': false,
@@ -949,9 +949,7 @@
                                         </div>
                                         <a href="product-default.html" class="rating-reviews">(3 reviews)</a>
                                     </div>
-                                    <div class="product-pa-wrapper">
-                                        <div class="product-price">$20.00</div>
-                                    </div>
+
                                 </div>
                             </div>
                             <div class="product">
@@ -985,11 +983,7 @@
                                         </div>
                                         <a href="product-default.html" class="rating-reviews">(5 reviews)</a>
                                     </div>
-                                    <div class="product-pa-wrapper">
-                                        <div class="product-price">
-                                            <ins class="new-price">$480.00</ins><del class="old-price">$534.00</del>
-                                        </div>
-                                    </div>
+
                                 </div>
                             </div>
                             <div class="product">
@@ -1021,11 +1015,7 @@
                                         </div>
                                         <a href="product-default.html" class="rating-reviews">(3 reviews)</a>
                                     </div>
-                                    <div class="product-pa-wrapper">
-                                        <div class="product-price">
-                                            <ins class="new-price">$278.00</ins><del class="old-price">$310.00</del>
-                                        </div>
-                                    </div>
+
                                 </div>
                             </div>
                             <div class="product">
@@ -1061,18 +1051,16 @@
                                         </div>
                                         <a href="product-default.html" class="rating-reviews">(5 reviews)</a>
                                     </div>
-                                    <div class="product-pa-wrapper">
-                                        <div class="product-price">$40.00</div>
-                                    </div>
+
                                 </div>
                             </div>
                         </div>
                     </section>
                     <section class="related-product-section">
                         <div class="title-link-wrapper mb-4">
-                            <h4 class="title">Related Products</h4>
+                            <h4 class="title">Related Requests</h4>
                             <a href="#" class="btn btn-dark btn-link btn-slide-right btn-icon-right">More
-                                Products<i class="w-icon-long-arrow-right"></i></a>
+                                Requests<i class="w-icon-long-arrow-right"></i></a>
                         </div>
                         <div class="owl-carousel owl-theme row cols-lg-3 cols-md-4 cols-sm-3 cols-2" data-owl-options="{
                                     'nav': false,
@@ -1121,9 +1109,7 @@
                                         </div>
                                         <a href="product-default.html" class="rating-reviews">(3 reviews)</a>
                                     </div>
-                                    <div class="product-pa-wrapper">
-                                        <div class="product-price">$632.00</div>
-                                    </div>
+
                                 </div>
                             </div>
                             <div class="product">
@@ -1155,11 +1141,7 @@
                                         </div>
                                         <a href="product-default.html" class="rating-reviews">(3 reviews)</a>
                                     </div>
-                                    <div class="product-pa-wrapper">
-                                        <div class="product-price">
-                                            <ins class="new-price">$263.00</ins><del class="old-price">$300.00</del>
-                                        </div>
-                                    </div>
+
                                 </div>
                             </div>
                             <div class="product">
@@ -1193,9 +1175,7 @@
                                         </div>
                                         <a href="product-default.html" class="rating-reviews">(8 reviews)</a>
                                     </div>
-                                    <div class="product-pa-wrapper">
-                                        <div class="product-price">$23.00</div>
-                                    </div>
+
                                 </div>
                             </div>
                             <div class="product">
@@ -1227,9 +1207,7 @@
                                         </div>
                                         <a href="product-default.html" class="rating-reviews">(9 reviews)</a>
                                     </div>
-                                    <div class="product-pa-wrapper">
-                                        <div class="product-price">$50.00</div>
-                                    </div>
+
                                 </div>
                             </div>
                         </div>
@@ -1293,7 +1271,7 @@
 
                             <div class="widget widget-products">
                                 <div class="title-link-wrapper mb-2">
-                                    <h4 class="title title-link font-weight-bold">More Products</h4>
+                                    <h4 class="title title-link font-weight-bold">More Requests</h4>
                                 </div>
 
                                 <div class="owl-carousel owl-theme owl-nav-top" data-owl-options="{
