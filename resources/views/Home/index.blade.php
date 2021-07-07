@@ -2440,64 +2440,49 @@
 
                 <hr class="product-divider">
 
-                <div class="product-form product-variation-form product-color-swatch">
-                    <label>Color:</label>
-                    <div class="d-flex align-items-center product-variations">
-                        <a href="#" class="color" style="background-color: #ffcc01"></a>
-                        <a href="#" class="color" style="background-color: #ca6d00;"></a>
-                        <a href="#" class="color" style="background-color: #1c93cb;"></a>
-                        <a href="#" class="color" style="background-color: #ccc;"></a>
-                        <a href="#" class="color" style="background-color: #333;"></a>
+                <div class="store-content">
+                    <figure class="seller-brand">
+                        <img src="https://portotheme.com/html/wolmart/assets/images/vendor/brand/1.jpg" alt="Brand"
+                            width="80" height="80">
+                    </figure>
+                    <h4 class="store-title">Vendor 1</h4>
+                    <ul class="seller-info-list list-style-none mb-6">
+                        <li class="store-address">
+                            <i class="w-icon-map-marker"></i>
+                            Steven Street, El Carjon
+                            California, United States (US)
+                        </li>
+                        <li class="store-phone">
+                            <a href="tel:1234567890">
+                                <i class="w-icon-phone"></i>
+                                1234567890
+                            </a>
+                        </li>
+                        <li class="store-rating">
+                            <i class="w-icon-star-full"></i>
+                            4.33 rating from 3 reviews
+                        </li>
+                        <li class="store-open">
+                            <i class="w-icon-cart"></i>
+                            Store Open
+                        </li>
+                    </ul>
+                    <div class="social-icons social-no-color border-thin">
+                        <a href="#" class="social-icon social-facebook w-icon-facebook"></a>
+                        <a href="#" class="social-icon social-google w-icon-google"></a>
+                        <a href="#" class="social-icon social-twitter w-icon-twitter"></a>
+                        <a href="#" class="social-icon social-pinterest w-icon-pinterest"></a>
+                        <a href="#" class="social-icon social-youtube w-icon-youtube"></a>
+                        <a href="#" class="social-icon social-instagram w-icon-instagram"></a>
                     </div>
-                </div>
-                <div class="product-form product-variation-form product-size-swatch">
-                    <label class="mb-1">Size:</label>
-                    <div class="flex-wrap d-flex align-items-center product-variations">
-                        <a href="#" class="size">Small</a>
-                        <a href="#" class="size">Medium</a>
-                        <a href="#" class="size">Large</a>
-                        <a href="#" class="size">Extra Large</a>
-                    </div>
-                    <a href="#" class="product-variation-clean">Clean All</a>
                 </div>
 
-                <div class="product-variation-price">
-                    <span></span>
-                </div>
 
-                <div class="product-form">
-                    <div class="product-qty-form">
-                        <div class="input-group">
-                            <input class="quantity form-control" type="number" min="1" max="10000000">
-                            <button class="quantity-plus w-icon-plus"></button>
-                            <button class="quantity-minus w-icon-minus"></button>
-                        </div>
-                    </div>
-                    <button class="btn btn-primary btn-cart">
-                        <i class="w-icon-cart"></i>
-                        <span>Add to Cart</span>
-                    </button>
-                </div>
 
-                <div class="social-links-wrapper">
-                    <div class="social-links">
-                        <div class="social-icons social-no-color border-thin">
-                            <a href="#" class="social-icon social-facebook w-icon-facebook"></a>
-                            <a href="#" class="social-icon social-twitter w-icon-twitter"></a>
-                            <a href="#" class="social-icon social-instagram w-icon-instagram"></a>
-                            <a href="#" class="social-icon social-youtube w-icon-youtube"></a>
-                            <a href="#" class="social-icon social-pinterest w-icon-pinterest"></a>
-                        </div>
-                    </div>
-                    <span class="divider d-xs-show"></span>
-                    <div class="product-link-wrapper d-flex">
-                        <a href="#" class="btn-product-icon btn-wishlist w-icon-heart"><span></span></a>
-                        <a href="#" class="btn-product-icon btn-compare btn-icon-left w-icon-compare"><span></span></a>
-                    </div>
-                </div>
             </div>
         </div>
     </div>
+</div>
 </div>
 <!-- End of Quick view -->
 
