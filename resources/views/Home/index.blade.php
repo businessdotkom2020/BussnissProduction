@@ -2440,41 +2440,36 @@
 
                 <hr class="product-divider">
 
-                <div class="store-content">
-                    <figure class="seller-brand">
-                        <img src="https://portotheme.com/html/wolmart/assets/images/vendor/brand/1.jpg" alt="Brand"
-                            width="80" height="80">
-                    </figure>
-                    <h4 class="store-title">Vendor 1</h4>
-                    <ul class="seller-info-list list-style-none mb-6">
-                        <li class="store-address">
-                            <i class="w-icon-map-marker"></i>
-                            Steven Street, El Carjon
-                            California, United States (US)
-                        </li>
-                        <li class="store-phone">
-                            <a href="tel:1234567890">
-                                <i class="w-icon-phone"></i>
-                                1234567890
+                <div class="vendor-widget">
+                    <div class="vendor-widget-banner">
+                        <figure class="vendor-banner">
+                            <a href="vendor-dokan-store.html">
+                                <img src="https://portotheme.com/html/wolmart/assets/images/vendor/element/banner/2.jpg"
+                                    alt="Vendor Banner" width="625" height="300" style="background-color: #595959;">
                             </a>
-                        </li>
-                        <li class="store-rating">
-                            <i class="w-icon-star-full"></i>
-                            4.33 rating from 3 reviews
-                        </li>
-                        <li class="store-open">
-                            <i class="w-icon-cart"></i>
-                            Store Open
-                        </li>
-                    </ul>
-                    <div class="social-icons social-no-color border-thin">
-                        <a href="#" class="social-icon social-facebook w-icon-facebook"></a>
-                        <a href="#" class="social-icon social-google w-icon-google"></a>
-                        <a href="#" class="social-icon social-twitter w-icon-twitter"></a>
-                        <a href="#" class="social-icon social-pinterest w-icon-pinterest"></a>
-                        <a href="#" class="social-icon social-youtube w-icon-youtube"></a>
-                        <a href="#" class="social-icon social-instagram w-icon-instagram"></a>
+                        </figure>
+                        <div class="vendor-details">
+                            <figure class="vendor-logo">
+                                <a href="vendor-dokan-store.html">
+                                    <img src="https://portotheme.com/html/wolmart/assets/images/vendor/brand/2.jpg"
+                                        alt="Vendor Logo" width="80" height="80">
+                                </a>
+                            </figure>
+                            <div class="vendor-personal">
+                                <h4 class="vendor-name">
+                                    <a href="vendor-dokan-store.html">Trident Store</a>
+                                </h4>
+                                <div class="ratings-container">
+                                    <div class="ratings-full">
+                                        <span class="ratings" style="width: 100%;"></span>
+                                        <span class="tooltiptext tooltip-top"></span>
+                                    </div>
+                                </div>
+                                <span class="vendor-product-count">11 Products</span>
+                            </div>
+                        </div>
                     </div>
+                    <!-- End of Vendor Widget Banner -->
                 </div>
 
 
