@@ -1334,7 +1334,7 @@
                         <figure class="product-media">
                             <a href="#">
                                 <img src="https://scx2.b-cdn.net/gfx/news/hires/2020/doctor.jpg" alt="Product"
-                                    width="260" height="291" />
+                                    width="260" height="291" style="min-height: 280px;" />
                             </a>
                             <div class="product-action-vertical">
                                 <a href="#" class="btn-product-icon btn-wishlist w-icon-heart"
