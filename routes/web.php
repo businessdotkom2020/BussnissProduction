@@ -24,6 +24,18 @@ Route::get('/home', function () {
     return view('Home.index');
 })->name('home');
 
+Route::get('/product-v2', function () {
+    return view('Home.product_v2');
+})->name('home');
+
+Route::get('/request-v2', function () {
+    return view('Home.request_2');
+})->name('home');
+
+Route::get('/service-v2', function () {
+    return view('Home.service_v2');
+})->name('home');
+
 
 //////////////////// dashboard ///////////////////////////
 Route::get('/dashboard', function () {
