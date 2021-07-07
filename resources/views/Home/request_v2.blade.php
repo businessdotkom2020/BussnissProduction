@@ -48,8 +48,8 @@
     <!-- Start of Breadcrumb -->
     <nav class="breadcrumb-nav container">
         <ul class="breadcrumb bb-no">
-            <li><a href="demo1.html">Home</a></li>
-            <li><a href="product-default.html">Requests</a></li>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Requests</a></li>
             <li>Grid</li>
         </ul>
         <ul class="product-nav list-style-none">
@@ -298,7 +298,7 @@
                                                 <a href="#tel:">1234567890</a>
                                             </li>
                                         </ul>
-                                        <a href="vendor-dokan-store.html"
+                                        <a href="#"
                                             class="btn btn-dark btn-link btn-underline btn-icon-right">Visit
                                             Store<i class="w-icon-long-arrow-right"></i></a>
                                     </div>
@@ -918,7 +918,7 @@
                                 }">
                             <div class="product">
                                 <figure class="product-media">
-                                    <a href="product-default.html">
+                                    <a href="#">
                                         <img src="https://portotheme.com/html/wolmart/assets/images/products/default/1-1.jpg"
                                             alt="Product" width="300" height="338" />
                                         <img src="https://portotheme.com/html/wolmart/assets/images/products/default/1-2.jpg"
@@ -938,23 +938,23 @@
                                     </div>
                                 </figure>
                                 <div class="product-details">
-                                    <div class="product-cat"><a href="shop-banner-sidebar.html">Accessories</a>
+                                    <div class="product-cat"><a href="#">Accessories</a>
                                     </div>
-                                    <h4 class="product-name"><a href="product-default.html">Sticky Pencil</a>
+                                    <h4 class="product-name"><a href="#">Sticky Pencil</a>
                                     </h4>
                                     <div class="ratings-container">
                                         <div class="ratings-full">
                                             <span class="ratings" style="width: 100%;"></span>
                                             <span class="tooltiptext tooltip-top"></span>
                                         </div>
-                                        <a href="product-default.html" class="rating-reviews">(3 reviews)</a>
+                                        <a href="#" class="rating-reviews">(3 reviews)</a>
                                     </div>
 
                                 </div>
                             </div>
                             <div class="product">
                                 <figure class="product-media">
-                                    <a href="product-default.html">
+                                    <a href="#">
                                         <img src="https://portotheme.com/html/wolmart/assets/images/products/default/2.jpg"
                                             alt="Product" width="300" height="338" />
                                     </a>
@@ -972,23 +972,23 @@
                                     </div>
                                 </figure>
                                 <div class="product-details">
-                                    <div class="product-cat"><a href="shop-banner-sidebar.html">Electronics</a>
+                                    <div class="product-cat"><a href="#">Electronics</a>
                                     </div>
-                                    <h4 class="product-name"><a href="product-default.html">Mini
+                                    <h4 class="product-name"><a href="#">Mini
                                             Multi-Functional Cooker</a></h4>
                                     <div class="ratings-container">
                                         <div class="ratings-full">
                                             <span class="ratings" style="width: 80%;"></span>
                                             <span class="tooltiptext tooltip-top"></span>
                                         </div>
-                                        <a href="product-default.html" class="rating-reviews">(5 reviews)</a>
+                                        <a href="#" class="rating-reviews">(5 reviews)</a>
                                     </div>
 
                                 </div>
                             </div>
                             <div class="product">
                                 <figure class="product-media">
-                                    <a href="product-default.html">
+                                    <a href="#">
                                         <img src="https://portotheme.com/html/wolmart/assets/images/products/default/3.jpg"
                                             alt="Product" width="300" height="338" />
                                     </a>
@@ -1006,21 +1006,21 @@
                                     </div>
                                 </figure>
                                 <div class="product-details">
-                                    <div class="product-cat"><a href="shop-banner-sidebar.html">Sports</a></div>
-                                    <h4 class="product-name"><a href="product-default.html">Skate Pan</a></h4>
+                                    <div class="product-cat"><a href="#">Sports</a></div>
+                                    <h4 class="product-name"><a href="#">Skate Pan</a></h4>
                                     <div class="ratings-container">
                                         <div class="ratings-full">
                                             <span class="ratings" style="width: 100%;"></span>
                                             <span class="tooltiptext tooltip-top"></span>
                                         </div>
-                                        <a href="product-default.html" class="rating-reviews">(3 reviews)</a>
+                                        <a href="#" class="rating-reviews">(3 reviews)</a>
                                     </div>
 
                                 </div>
                             </div>
                             <div class="product">
                                 <figure class="product-media">
-                                    <a href="product-default.html">
+                                    <a href="#">
                                         <img src="https://portotheme.com/html/wolmart/assets/images/products/default/4-1.jpg"
                                             alt="Product" width="300" height="338" />
                                         <img src="https://portotheme.com/html/wolmart/assets/images/products/default/4-2.jpg"
@@ -1040,16 +1040,16 @@
                                     </div>
                                 </figure>
                                 <div class="product-details">
-                                    <div class="product-cat"><a href="shop-banner-sidebar.html">Accessories</a>
+                                    <div class="product-cat"><a href="#">Accessories</a>
                                     </div>
-                                    <h4 class="product-name"><a href="product-default.html">Clip Attachment</a>
+                                    <h4 class="product-name"><a href="#">Clip Attachment</a>
                                     </h4>
                                     <div class="ratings-container">
                                         <div class="ratings-full">
                                             <span class="ratings" style="width: 100%;"></span>
                                             <span class="tooltiptext tooltip-top"></span>
                                         </div>
-                                        <a href="product-default.html" class="rating-reviews">(5 reviews)</a>
+                                        <a href="#" class="rating-reviews">(5 reviews)</a>
                                     </div>
 
                                 </div>
@@ -1083,7 +1083,7 @@
                                 }">
                             <div class="product">
                                 <figure class="product-media">
-                                    <a href="product-default.html">
+                                    <a href="#">
                                         <img src="https://portotheme.com/html/wolmart/assets/images/products/default/5.jpg"
                                             alt="Product" width="300" height="338" />
                                     </a>
@@ -1101,20 +1101,20 @@
                                     </div>
                                 </figure>
                                 <div class="product-details">
-                                    <h4 class="product-name"><a href="product-default.html">Drone</a></h4>
+                                    <h4 class="product-name"><a href="#">Drone</a></h4>
                                     <div class="ratings-container">
                                         <div class="ratings-full">
                                             <span class="ratings" style="width: 100%;"></span>
                                             <span class="tooltiptext tooltip-top"></span>
                                         </div>
-                                        <a href="product-default.html" class="rating-reviews">(3 reviews)</a>
+                                        <a href="#" class="rating-reviews">(3 reviews)</a>
                                     </div>
 
                                 </div>
                             </div>
                             <div class="product">
                                 <figure class="product-media">
-                                    <a href="product-default.html">
+                                    <a href="#">
                                         <img src="https://portotheme.com/html/wolmart/assets/images/products/default/6.jpg"
                                             alt="Product" width="300" height="338" />
                                     </a>
@@ -1132,21 +1132,21 @@
                                     </div>
                                 </figure>
                                 <div class="product-details">
-                                    <h4 class="product-name"><a href="product-default.html">Official Camera</a>
+                                    <h4 class="product-name"><a href="#">Official Camera</a>
                                     </h4>
                                     <div class="ratings-container">
                                         <div class="ratings-full">
                                             <span class="ratings" style="width: 100%;"></span>
                                             <span class="tooltiptext tooltip-top"></span>
                                         </div>
-                                        <a href="product-default.html" class="rating-reviews">(3 reviews)</a>
+                                        <a href="#" class="rating-reviews">(3 reviews)</a>
                                     </div>
 
                                 </div>
                             </div>
                             <div class="product">
                                 <figure class="product-media">
-                                    <a href="product-default.html">
+                                    <a href="#">
                                         <img src="https://portotheme.com/html/wolmart/assets/images/products/default/7-1.jpg"
                                             alt="Product" width="300" height="338" />
                                         <img src="https://portotheme.com/html/wolmart/assets/images/products/default/7-2.jpg"
@@ -1166,21 +1166,21 @@
                                     </div>
                                 </figure>
                                 <div class="product-details">
-                                    <h4 class="product-name"><a href="product-default.html">Phone Charge Pad</a>
+                                    <h4 class="product-name"><a href="#">Phone Charge Pad</a>
                                     </h4>
                                     <div class="ratings-container">
                                         <div class="ratings-full">
                                             <span class="ratings" style="width: 80%;"></span>
                                             <span class="tooltiptext tooltip-top"></span>
                                         </div>
-                                        <a href="product-default.html" class="rating-reviews">(8 reviews)</a>
+                                        <a href="#" class="rating-reviews">(8 reviews)</a>
                                     </div>
 
                                 </div>
                             </div>
                             <div class="product">
                                 <figure class="product-media">
-                                    <a href="product-default.html">
+                                    <a href="#">
                                         <img src="https://portotheme.com/html/wolmart/assets/images/products/default/8.jpg"
                                             alt="Product" width="300" height="338" />
                                     </a>
@@ -1198,14 +1198,14 @@
                                     </div>
                                 </figure>
                                 <div class="product-details">
-                                    <h4 class="product-name"><a href="product-default.html">Fashionalble
+                                    <h4 class="product-name"><a href="#">Fashionalble
                                             Pencil</a></h4>
                                     <div class="ratings-container">
                                         <div class="ratings-full">
                                             <span class="ratings" style="width: 100%;"></span>
                                             <span class="tooltiptext tooltip-top"></span>
                                         </div>
-                                        <a href="product-default.html" class="rating-reviews">(9 reviews)</a>
+                                        <a href="#" class="rating-reviews">(9 reviews)</a>
                                     </div>
 
                                 </div>
