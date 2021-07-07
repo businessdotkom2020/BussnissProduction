@@ -2466,6 +2466,9 @@
                                     </div>
                                 </div>
                                 <span class="vendor-product-count">11 Products</span>
+                                <span class="vendor-product-count">11 Products</span>
+                                <span class="vendor-product-count">11 Products</span>
+                                <span class="vendor-produact-count">11 Products</span>
                             </div>
                         </div>
                     </div>
