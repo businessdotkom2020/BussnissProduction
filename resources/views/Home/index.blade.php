@@ -1414,7 +1414,7 @@
             <!-- End of Banner Shoes -->
 
             <div class="title-link-wrapper mb-3">
-                <h2 class="title mb-0 pt-2 pb-2">Top Rated Products</h2>
+                <h2 class="title mb-0 pt-2 pb-2">Top Rated Suppliers</h2>
                 <a href="shop-boxed-banner.html" class="mb-0">More Products<i class="w-icon-long-arrow-right"></i></a>
             </div>
             <div class="row cols-lg-4 cols-md-2 cols-sm-2 cols-1 mt-4">
@@ -1422,7 +1422,8 @@
                     <div class="store store-grid">
                         <div class="store-header">
                             <figure class="store-banner">
-                                <img src="https://portotheme.com/html/wolmart/assets/images/vendor/dokan/1.jpg" alt="Vendor" width="400" height="194" style="background-color: #40475E">
+                                <img src="https://portotheme.com/html/wolmart/assets/images/vendor/dokan/1.jpg"
+                                    alt="Vendor" width="400" height="194" style="background-color: #40475E">
                             </figure>
                         </div>
                         <!-- End of Store Header -->
@@ -1450,9 +1451,11 @@
                         <!-- End of Store Content -->
                         <div class="store-footer">
                             <figure class="seller-brand">
-                                <img src="https://portotheme.com/html/wolmart/assets/images/vendor/brand/1.jpg" alt="Brand" width="80" height="80">
+                                <img src="https://portotheme.com/html/wolmart/assets/images/vendor/brand/1.jpg"
+                                    alt="Brand" width="80" height="80">
                             </figure>
-                            <a href="vendor-dokan-store.html" class="btn btn-dark btn-link btn-underline btn-icon-right btn-visit">
+                            <a href="vendor-dokan-store.html"
+                                class="btn btn-dark btn-link btn-underline btn-icon-right btn-visit">
                                 Visit Store<i class="w-icon-long-arrow-right"></i></a>
                         </div>
                         <!-- End of Store Footer -->
@@ -1463,7 +1466,8 @@
                     <div class="store store-grid">
                         <div class="store-header">
                             <figure class="store-banner">
-                                <img src="https://portotheme.com/html/wolmart/assets/images/vendor/dokan/2.jpg" alt="Vendor" width="400" height="194" style="background-color: #6C6C6C">
+                                <img src="https://portotheme.com/html/wolmart/assets/images/vendor/dokan/2.jpg"
+                                    alt="Vendor" width="400" height="194" style="background-color: #6C6C6C">
                             </figure>
                         </div>
                         <!-- End of Store Header -->
@@ -1489,9 +1493,12 @@
                         <!-- End of Store Content -->
                         <div class="store-footer">
                             <figure class="seller-brand">
-                                <img src="https://portotheme.com/html/wolmart/assets/images/vendor/brand/2.jpg" alt="Brand" width="80" height="80">
+                                <img src="https://portotheme.com/html/wolmart/assets/images/vendor/brand/2.jpg"
+                                    alt="Brand" width="80" height="80">
                             </figure>
-                            <a href="vendor-dokan-store.html" class="btn btn-dark btn-link btn-underline btn-icon-right btn-visit">Visit Store<i class="w-icon-long-arrow-right"></i></a>
+                            <a href="vendor-dokan-store.html"
+                                class="btn btn-dark btn-link btn-underline btn-icon-right btn-visit">Visit Store<i
+                                    class="w-icon-long-arrow-right"></i></a>
                         </div>
                         <!-- End of Store Footer -->
                     </div>
@@ -1501,7 +1508,8 @@
                     <div class="store store-grid">
                         <div class="store-header">
                             <figure class="store-banner">
-                                <img src="https://portotheme.com/html/wolmart/assets/images/vendor/dokan/3.jpg" alt="Vendor" width="400" height="194" style="background-color: #A891BF">
+                                <img src="https://portotheme.com/html/wolmart/assets/images/vendor/dokan/3.jpg"
+                                    alt="Vendor" width="400" height="194" style="background-color: #A891BF">
                             </figure>
                         </div>
                         <!-- End of Store Header -->
@@ -1520,16 +1528,19 @@
                             </div>
                             <ul class="seller-info-list list-style-none">
                                 <li class="store-phone">
-                                  <a href="tel:1234567890"><i class="w-icon-phone"></i>1234567890</a>
+                                    <a href="tel:1234567890"><i class="w-icon-phone"></i>1234567890</a>
                                 </li>
                             </ul>
                         </div>
                         <!-- End of Store Content -->
                         <div class="store-footer">
                             <figure class="seller-brand">
-                                <img src="https://portotheme.com/html/wolmart/assets/images/vendor/brand/3.jpg" alt="Brand" width="80" height="80">
+                                <img src="https://portotheme.com/html/wolmart/assets/images/vendor/brand/3.jpg"
+                                    alt="Brand" width="80" height="80">
                             </figure>
-                            <a href="vendor-dokan-store.html" class="btn btn-dark btn-link btn-underline btn-icon-right btn-visit">Visit Store<i class="w-icon-long-arrow-right"></i></a>
+                            <a href="vendor-dokan-store.html"
+                                class="btn btn-dark btn-link btn-underline btn-icon-right btn-visit">Visit Store<i
+                                    class="w-icon-long-arrow-right"></i></a>
                         </div>
                         <!-- End of Store Footer -->
                     </div>
@@ -1539,7 +1550,8 @@
                     <div class="store store-grid">
                         <div class="store-header">
                             <figure class="store-banner">
-                                <img src="https://portotheme.com/html/wolmart/assets/images/vendor/dokan/4.jpg" alt="Vendor" width="400" height="194" style="background-color: #28292D">
+                                <img src="https://portotheme.com/html/wolmart/assets/images/vendor/dokan/4.jpg"
+                                    alt="Vendor" width="400" height="194" style="background-color: #28292D">
                             </figure>
                         </div>
                         <!-- End of Store Header -->
@@ -1565,9 +1577,12 @@
                         <!-- End of Store Content -->
                         <div class="store-footer">
                             <figure class="seller-brand">
-                                <img src="https://portotheme.com/html/wolmart/assets/images/vendor/brand/4.jpg" alt="Brand" width="80" height="80">
+                                <img src="https://portotheme.com/html/wolmart/assets/images/vendor/brand/4.jpg"
+                                    alt="Brand" width="80" height="80">
                             </figure>
-                            <a href="vendor-dokan-store.html" class="btn btn-dark btn-link btn-underline btn-icon-right btn-visit">Visit Store<i class="w-icon-long-arrow-right"></i></a>
+                            <a href="vendor-dokan-store.html"
+                                class="btn btn-dark btn-link btn-underline btn-icon-right btn-visit">Visit Store<i
+                                    class="w-icon-long-arrow-right"></i></a>
                         </div>
                         <!-- End of Store Footer -->
                     </div>
@@ -1577,7 +1592,8 @@
                     <div class="store store-grid">
                         <div class="store-header">
                             <figure class="store-banner">
-                                <img src="https://portotheme.com/html/wolmart/assets/images/vendor/dokan/5.jpg" alt="Vendor" width="400" height="194" style="background-color: #7E7D7B">
+                                <img src="https://portotheme.com/html/wolmart/assets/images/vendor/dokan/5.jpg"
+                                    alt="Vendor" width="400" height="194" style="background-color: #7E7D7B">
                             </figure>
                         </div>
                         <!-- End of Store Header -->
@@ -1597,16 +1613,19 @@
                             </div>
                             <ul class="seller-info-list list-style-none">
                                 <li class="store-phone">
-                                  <a href="tel:1234567890"><i class="w-icon-phone"></i>1234567890</a>
+                                    <a href="tel:1234567890"><i class="w-icon-phone"></i>1234567890</a>
                                 </li>
                             </ul>
                         </div>
                         <!-- End of Store Content -->
                         <div class="store-footer">
                             <figure class="seller-brand">
-                                <img src="https://portotheme.com/html/wolmart/assets/images/vendor/brand/5.jpg" alt="Brand" width="80" height="80">
+                                <img src="https://portotheme.com/html/wolmart/assets/images/vendor/brand/5.jpg"
+                                    alt="Brand" width="80" height="80">
                             </figure>
-                            <a href="vendor-dokan-store.html" class="btn btn-dark btn-link btn-underline btn-icon-right btn-visit">Visit Store<i class="w-icon-long-arrow-right"></i></a>
+                            <a href="vendor-dokan-store.html"
+                                class="btn btn-dark btn-link btn-underline btn-icon-right btn-visit">Visit Store<i
+                                    class="w-icon-long-arrow-right"></i></a>
                         </div>
                         <!-- End of Store Footer -->
                     </div>
@@ -1616,7 +1635,8 @@
                     <div class="store store-grid">
                         <div class="store-header">
                             <figure class="store-banner">
-                                <img src="https://portotheme.com/html/wolmart/assets/images/vendor/dokan/6.jpg" alt="Vendor" width="400" height="194" style="background-color: #5B5B62">
+                                <img src="https://portotheme.com/html/wolmart/assets/images/vendor/dokan/6.jpg"
+                                    alt="Vendor" width="400" height="194" style="background-color: #5B5B62">
                             </figure>
                         </div>
                         <!-- End of Store Header -->
@@ -1642,9 +1662,12 @@
                         <!-- End of Store Content -->
                         <div class="store-footer">
                             <figure class="seller-brand">
-                                <img src="https://portotheme.com/html/wolmart/assets/images/vendor/brand/6.jpg" alt="Brand" width="80" height="80">
+                                <img src="https://portotheme.com/html/wolmart/assets/images/vendor/brand/6.jpg"
+                                    alt="Brand" width="80" height="80">
                             </figure>
-                            <a href="vendor-dokan-store.html" class="btn btn-dark btn-link btn-underline btn-icon-right btn-visit">Visit Store<i class="w-icon-long-arrow-right"></i></a>
+                            <a href="vendor-dokan-store.html"
+                                class="btn btn-dark btn-link btn-underline btn-icon-right btn-visit">Visit Store<i
+                                    class="w-icon-long-arrow-right"></i></a>
                         </div>
                         <!-- End of Store Footer -->
                     </div>
