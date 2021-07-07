@@ -2439,7 +2439,7 @@
                 </div>
 
                 <hr class="product-divider">
-
+                <h2 class="title title-center mb-4" style="margin-bottom: 1.9rem;"> Vendor Details </h2>
                 <div class="vendor-widget">
                     <div class="vendor-widget-banner">
                         <figure class="vendor-banner">
@@ -2468,7 +2468,36 @@
                                 <span class="vendor-product-count">11 Products</span>
                                 <span class="vendor-product-count">11 Products</span>
                                 <span class="vendor-product-count">11 Products</span>
-                                <span class="vendor-produact-count">11 Products</span>
+                                <span class="vendor-product-count">11 Products</span>
+                                <ul class="seller-info-list list-style-none mb-6">
+                                    <li class="store-address">
+                                        <i class="w-icon-map-marker"></i>
+                                        Steven Street, El Carjon
+                                        California, United States (US)
+                                    </li>
+                                    <li class="store-phone">
+                                        <a href="tel:1234567890">
+                                            <i class="w-icon-phone"></i>
+                                            1234567890
+                                        </a>
+                                    </li>
+                                    <li class="store-rating">
+                                        <i class="w-icon-star-full"></i>
+                                        4.33 rating from 3 reviews
+                                    </li>
+                                    <li class="store-open">
+                                        <i class="w-icon-cart"></i>
+                                        Store Open
+                                    </li>
+                                </ul>
+                                <div class="social-icons social-no-color border-thin">
+                                    <a href="#" class="social-icon social-facebook w-icon-facebook"></a>
+                                    <a href="#" class="social-icon social-google w-icon-google"></a>
+                                    <a href="#" class="social-icon social-twitter w-icon-twitter"></a>
+                                    <a href="#" class="social-icon social-pinterest w-icon-pinterest"></a>
+                                    <a href="#" class="social-icon social-youtube w-icon-youtube"></a>
+                                    <a href="#" class="social-icon social-instagram w-icon-instagram"></a>
+                                </div>
                             </div>
                         </div>
                     </div>
