@@ -1298,7 +1298,7 @@
                                                         <span class="tooltiptext tooltip-top"></span>
                                                     </div>
                                                 </div>
-                                                <div class="product-price">$80.00 - $90.00</div>
+
                                             </div>
                                         </div>
                                         <div class="product product-widget">
@@ -1318,7 +1318,7 @@
                                                         <span class="tooltiptext tooltip-top"></span>
                                                     </div>
                                                 </div>
-                                                <div class="product-price">$58.00</div>
+
                                             </div>
                                         </div>
                                         <div class="product product-widget">
@@ -1338,7 +1338,6 @@
                                                         <span class="tooltiptext tooltip-top"></span>
                                                     </div>
                                                 </div>
-                                                <div class="product-price">$374.00</div>
                                             </div>
                                         </div>
                                     </div>
@@ -1360,7 +1359,7 @@
                                                         <span class="tooltiptext tooltip-top"></span>
                                                     </div>
                                                 </div>
-                                                <div class="product-price">$278.00</div>
+
                                             </div>
                                         </div>
                                         <div class="product product-widget">
@@ -1380,7 +1379,7 @@
                                                         <span class="tooltiptext tooltip-top"></span>
                                                     </div>
                                                 </div>
-                                                <div class="product-price">$324.00</div>
+
                                             </div>
                                         </div>
                                         <div class="product product-widget">
@@ -1400,7 +1399,7 @@
                                                         <span class="tooltiptext tooltip-top"></span>
                                                     </div>
                                                 </div>
-                                                <div class="product-price">$236.00</div>
+
                                             </div>
                                         </div>
                                     </div>
