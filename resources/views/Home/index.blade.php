@@ -1329,6 +1329,33 @@
                         </div>
                     </div>
                 </div>
+
+                <div class="grid-item col-xl-5col col-lg-3 col-sm-4 col-6">
+                    <div class="product product-simple text-center">
+                        <figure class="product-media">
+                            <a href="#">
+                                <img src="https://businesspartnermagazine.com/wp-content/uploads/2020/11/How-often-are-electricians-injured-on-the-job_.jpg"
+                                    alt="Product" width="260" height="291" style="min-height: 280px;" />
+                            </a>
+                            <div class="product-action-vertical">
+                                <a href="#" class="btn-product-icon btn-wishlist w-icon-heart"
+                                    title="Add to wishlist"></a>
+
+                            </div>
+                            <div class="product-action">
+                                <a href="#" class="btn-product btn-quickview" title="Quick View">Quick
+                                    View</a>
+                            </div>
+                        </figure>
+                        <div class="product-details">
+                            <h4 class="product-name"><a href="#">Grey Calotte</a></h4>
+
+                            <div class="sold-by">
+                                Provided from : <a href="#">Vendor 5</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
                 <div class="grid-item col-xl-5col col-lg-3 col-sm-4 col-6">
                     <div class="product product-simple text-center">
                         <figure class="product-media">
@@ -1351,32 +1378,6 @@
 
                             <div class="sold-by">
                                 Provided from : <a href="#">Vendor 3</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="grid-item col-xl-5col col-lg-3 col-sm-4 col-6">
-                    <div class="product product-simple text-center">
-                        <figure class="product-media">
-                            <a href="#">
-                                <img src="https://www.portotheme.com/html/wolmart/assets/images/demos/demo8/product/3-7.jpg"
-                                    alt="Product" width="260" height="291" />
-                            </a>
-                            <div class="product-action-vertical">
-                                <a href="#" class="btn-product-icon btn-wishlist w-icon-heart"
-                                    title="Add to wishlist"></a>
-
-                            </div>
-                            <div class="product-action">
-                                <a href="#" class="btn-product btn-quickview" title="Quick View">Quick
-                                    View</a>
-                            </div>
-                        </figure>
-                        <div class="product-details">
-                            <h4 class="product-name"><a href="#">Grey Calotte</a></h4>
-
-                            <div class="sold-by">
-                                Provided from : <a href="#">Vendor 5</a>
                             </div>
                         </div>
                     </div>
