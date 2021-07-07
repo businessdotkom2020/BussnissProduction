@@ -2465,27 +2465,24 @@
                                         <span class="tooltiptext tooltip-top"></span>
                                     </div>
                                 </div>
-                                <span class="vendor-product-count">11 Products</span>
-                                <span class="vendor-product-count">11 Products</span>
-                                <span class="vendor-product-count">11 Products</span>
-                                <span class="vendor-product-count">11 Products</span>
+
                                 <ul class="seller-info-list list-style-none mb-6">
-                                    <li class="store-address">
+                                    <li class="store-address" style="color: black;">
                                         <i class="w-icon-map-marker"></i>
                                         Steven Street, El Carjon
                                         California, United States (US)
                                     </li>
-                                    <li class="store-phone">
+                                    <li class="store-phone" style="color: black;">
                                         <a href="tel:1234567890">
                                             <i class="w-icon-phone"></i>
                                             1234567890
                                         </a>
                                     </li>
-                                    <li class="store-rating">
+                                    <li class="store-rating" style="color: black;">
                                         <i class="w-icon-star-full"></i>
                                         4.33 rating from 3 reviews
                                     </li>
-                                    <li class="store-open">
+                                    <li class="store-open" style="color: black;">
                                         <i class="w-icon-cart"></i>
                                         Store Open
                                     </li>
