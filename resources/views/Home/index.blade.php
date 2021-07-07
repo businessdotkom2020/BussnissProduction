@@ -126,18 +126,18 @@
 
                     <div class="category category-group-image br-sm">
                         <div class="category-content">
-                            <h4 class="category-name"><a href="shop-fullwidth-banner.html">Clothings</a>
+                            <h4 class="category-name"><a href="#">Clothings</a>
                             </h4>
                             <ul class="category-list">
-                                <li><a href="shop-fullwidth-banner.html">Knitwears</a></li>
-                                <li><a href="shop-fullwidth-banner.html">Jumpers</a></li>
-                                <li><a href="shop-fullwidth-banner.html">Trousers</a></li>
-                                <li><a href="shop-fullwidth-banner.html">Dress &amp; Skirts</a></li>
-                                <li><a href="shop-fullwidth-banner.html">Men's</a></li>
-                                <li><a href="shop-fullwidth-banner.html">Accessories</a></li>
+                                <li><a href="#">Knitwears</a></li>
+                                <li><a href="#">Jumpers</a></li>
+                                <li><a href="#">Trousers</a></li>
+                                <li><a href="#">Dress &amp; Skirts</a></li>
+                                <li><a href="#">Men's</a></li>
+                                <li><a href="#">Accessories</a></li>
                             </ul>
                         </div>
-                        <a href="shop-fullwidth-banner.html">
+                        <a href="#">
                             <figure class="category-media">
                                 <img src="https://www.portotheme.com/html/wolmart/assets/images/demos/demo4/categories/1-1.jpg"
                                     alt="Category" width="190" height="215">
@@ -149,18 +149,18 @@
                 <div class="category-wrap mb-4">
                     <div class="category category-group-image br-sm">
                         <div class="category-content">
-                            <h4 class="category-name"><a href="shop-fullwidth-banner.html">Office
+                            <h4 class="category-name"><a href="#">Office
                                     Electronics</a></h4>
                             <ul class="category-list">
-                                <li><a href="shop-fullwidth-banner.html">Printers</a></li>
-                                <li><a href="shop-fullwidth-banner.html">Store &amp; Business</a></li>
-                                <li><a href="shop-fullwidth-banner.html">Scanners</a></li>
-                                <li><a href="shop-fullwidth-banner.html">Projectors</a></li>
-                                <li><a href="shop-fullwidth-banner.html">Phones</a></li>
-                                <li><a href="shop-fullwidth-banner.html">Accessories</a></li>
+                                <li><a href="#">Printers</a></li>
+                                <li><a href="#">Store &amp; Business</a></li>
+                                <li><a href="#">Scanners</a></li>
+                                <li><a href="#">Projectors</a></li>
+                                <li><a href="#">Phones</a></li>
+                                <li><a href="#">Accessories</a></li>
                             </ul>
                         </div>
-                        <a href="shop-fullwidth-banner.html">
+                        <a href="#">
                             <figure class="category-media">
                                 <img src="https://www.portotheme.com/html/wolmart/assets/images/demos/demo4/categories/1-2.jpg"
                                     alt="Category" width="190" height="215">
@@ -172,18 +172,18 @@
                 <div class="category-wrap mb-4">
                     <div class="category category-group-image br-sm">
                         <div class="category-content">
-                            <h4 class="category-name"><a href="shop-fullwidth-banner.html">Home &amp; Kitchen</a>
+                            <h4 class="category-name"><a href="#">Home &amp; Kitchen</a>
                             </h4>
                             <ul class="category-list">
-                                <li><a href="shop-fullwidth-banner.html">Furnitures &amp; Decor</a></li>
-                                <li><a href="shop-fullwidth-banner.html">Cookwares</a></li>
-                                <li><a href="shop-fullwidth-banner.html">Utensil &amp; Gadgets</a></li>
-                                <li><a href="shop-fullwidth-banner.html">Garden Tools</a></li>
-                                <li><a href="shop-fullwidth-banner.html">Livingroom</a></li>
-                                <li><a href="shop-fullwidth-banner.html">Bedroom</a></li>
+                                <li><a href="#">Furnitures &amp; Decor</a></li>
+                                <li><a href="#">Cookwares</a></li>
+                                <li><a href="#">Utensil &amp; Gadgets</a></li>
+                                <li><a href="#">Garden Tools</a></li>
+                                <li><a href="#">Livingroom</a></li>
+                                <li><a href="#">Bedroom</a></li>
                             </ul>
                         </div>
-                        <a href="shop-fullwidth-banner.html">
+                        <a href="#">
                             <figure class="category-media">
                                 <img src="https://www.portotheme.com/html/wolmart/assets/images/demos/demo4/categories/1-3.jpg"
                                     alt="Category" width="190" height="215">
@@ -195,18 +195,18 @@
                 <div class="category-wrap mb-4">
                     <div class="category category-group-image br-sm">
                         <div class="category-content">
-                            <h4 class="category-name"><a href="shop-fullwidth-banner.html">Television</a>
+                            <h4 class="category-name"><a href="#">Television</a>
                             </h4>
                             <ul class="category-list">
-                                <li><a href="shop-fullwidth-banner.html">Smart TV</a></li>
-                                <li><a href="shop-fullwidth-banner.html">4K Ultra HD TVs</a></li>
-                                <li><a href="shop-fullwidth-banner.html">LED TVs</a></li>
-                                <li><a href="shop-fullwidth-banner.html">OLED TVs</a></li>
-                                <li><a href="shop-fullwidth-banner.html">Camera</a></li>
-                                <li><a href="shop-fullwidth-banner.html">Accessories</a></li>
+                                <li><a href="#">Smart TV</a></li>
+                                <li><a href="#">4K Ultra HD TVs</a></li>
+                                <li><a href="#">LED TVs</a></li>
+                                <li><a href="#">OLED TVs</a></li>
+                                <li><a href="#">Camera</a></li>
+                                <li><a href="#">Accessories</a></li>
                             </ul>
                         </div>
-                        <a href="shop-fullwidth-banner.html">
+                        <a href="#">
                             <figure class="category-media">
                                 <img src="https://www.portotheme.com/html/wolmart/assets/images/demos/demo4/categories/1-4.jpg"
                                     alt="Category" width="190" height="215">
@@ -218,18 +218,18 @@
                 <div class="category-wrap mb-4">
                     <div class="category category-group-image br-sm">
                         <div class="category-content">
-                            <h4 class="category-name"><a href="shop-fullwidth-banner.html">Healthy &amp; Beauty</a>
+                            <h4 class="category-name"><a href="#">Healthy &amp; Beauty</a>
                             </h4>
                             <ul class="category-list">
-                                <li><a href="shop-fullwidth-banner.html">Makeup</a></li>
-                                <li><a href="shop-fullwidth-banner.html">Skin Care</a></li>
-                                <li><a href="shop-fullwidth-banner.html">Hair Care</a></li>
-                                <li><a href="shop-fullwidth-banner.html">Tools &amp; Equipments</a></li>
-                                <li><a href="shop-fullwidth-banner.html">Perfumes</a></li>
-                                <li><a href="shop-fullwidth-banner.html">Accessories</a></li>
+                                <li><a href="#">Makeup</a></li>
+                                <li><a href="#">Skin Care</a></li>
+                                <li><a href="#">Hair Care</a></li>
+                                <li><a href="#">Tools &amp; Equipments</a></li>
+                                <li><a href="#">Perfumes</a></li>
+                                <li><a href="#">Accessories</a></li>
                             </ul>
                         </div>
-                        <a href="shop-fullwidth-banner.html">
+                        <a href="#">
                             <figure class="category-media">
                                 <img src="https://www.portotheme.com/html/wolmart/assets/images/demos/demo4/categories/1-5.jpg"
                                     alt="Category" width="190" height="214">
@@ -241,18 +241,18 @@
                 <div class="category-wrap mb-4">
                     <div class="category category-group-image br-sm">
                         <div class="category-content">
-                            <h4 class="category-name"><a href="shop-fullwidth-banner.html">Jewelry &amp; Watch</a>
+                            <h4 class="category-name"><a href="#">Jewelry &amp; Watch</a>
                             </h4>
                             <ul class="category-list">
-                                <li><a href="shop-fullwidth-banner.html">Pendant</a></li>
-                                <li><a href="shop-fullwidth-banner.html">Necklace</a></li>
-                                <li><a href="shop-fullwidth-banner.html">Watch</a></li>
-                                <li><a href="shop-fullwidth-banner.html">Bracelets</a></li>
-                                <li><a href="shop-fullwidth-banner.html">Smart Watches</a></li>
-                                <li><a href="shop-fullwidth-banner.html">Accessories</a></li>
+                                <li><a href="#">Pendant</a></li>
+                                <li><a href="#">Necklace</a></li>
+                                <li><a href="#">Watch</a></li>
+                                <li><a href="#">Bracelets</a></li>
+                                <li><a href="#">Smart Watches</a></li>
+                                <li><a href="#">Accessories</a></li>
                             </ul>
                         </div>
-                        <a href="shop-fullwidth-banner.html">
+                        <a href="#">
                             <figure class="category-media">
                                 <img src="https://www.portotheme.com/html/wolmart/assets/images/demos/demo4/categories/1-6.jpg"
                                     alt="Category" width="190" height="214">
@@ -290,8 +290,7 @@
                         <div class="banner-price-info text-uppercase text-default ls-25 font-weight-bold">Starting
                             at <span class="text-secondary">$29.00</span></div>
                         <hr class="banner-divider bg-dark">
-                        <a href="demo8-shop.html"
-                            class="btn btn-dark btn-link btn-outline btn-icon-right btn-slide-right">
+                        <a href="#" class="btn btn-dark btn-link btn-outline btn-icon-right btn-slide-right">
                             Shop Now<i class="w-icon-long-arrow-right"></i>
                         </a>
                     </div>
@@ -307,7 +306,7 @@
                             Your Entire Order!</h5>
                         <h3 class="banner-title text-white text-uppercase ls-25">Black Friday Sale</h3>
                         <p>Use code <strong class="text-uppercase text-white">Blkfri40</strong> at checkout.</p>
-                        <a href="demo8-shop.html"
+                        <a href="#"
                             class="btn btn-primary btn-outline btn-rounded btn-icon-right text-white btn-slide-right">
                             Shop Now<i class="w-icon-long-arrow-right"></i>
                         </a>
@@ -324,8 +323,7 @@
                         <div class="banner-price-info text-uppercase text-default ls-25 font-weight-bold">From Only
                             <span class="text-secondary">$29.00</span></div>
                         <hr class="banner-divider bg-dark">
-                        <a href="demo8-shop.html"
-                            class="btn btn-dark btn-link btn-outline btn-icon-right btn-slide-right">
+                        <a href="#" class="btn btn-dark btn-link btn-outline btn-icon-right btn-slide-right">
                             Shop Now<i class="w-icon-long-arrow-right"></i>
                         </a>
                     </div>
@@ -350,7 +348,7 @@
         <div class="main-content">
             <div class="title-link-wrapper mb-3">
                 <h2 class="title mb-0 pt-2 pb-2">latest products</h2>
-                <a href="shop-boxed-banner.html" class="mb-0">More Products<i class="w-icon-long-arrow-right"></i></a>
+                <a href="#" class="mb-0">More Products<i class="w-icon-long-arrow-right"></i></a>
             </div>
             <div class="product-wrapper row cols-xl-7 cols-lg-6 cols-md-4 cols-sm-3 cols-2">
                 <div class="product-wrap">
@@ -369,7 +367,7 @@
                         </figure>
                         <div class="product-details">
                             <div class="product-cat">
-                                <a href="shop-banner-sidebar.html">Electronics</a>
+                                <a href="#">Electronics</a>
                             </div>
                             <h3 class="product-name">
                                 <a href="#">3D Television</a>
@@ -412,7 +410,7 @@
                         </figure>
                         <div class="product-details">
                             <div class="product-cat">
-                                <a href="shop-banner-sidebar.html">Electronics</a>
+                                <a href="#">Electronics</a>
                             </div>
                             <h3 class="product-name">
                                 <a href="#">Alarm Clock With Lamp</a>
@@ -448,7 +446,7 @@
                         </figure>
                         <div class="product-details">
                             <div class="product-cat">
-                                <a href="shop-banner-sidebar.html">Electronics</a>
+                                <a href="#">Electronics</a>
                             </div>
                             <h3 class="product-name">
                                 <a href="#">Apple Laptop</a>
@@ -484,7 +482,7 @@
                         </figure>
                         <div class="product-details">
                             <div class="product-cat">
-                                <a href="shop-banner-sidebar.html">Electronics</a>
+                                <a href="#">Electronics</a>
                             </div>
                             <h3 class="product-name">
                                 <a href="#">Attachable Charge Alarm</a>
@@ -520,7 +518,7 @@
                         </figure>
                         <div class="product-details">
                             <div class="product-cat">
-                                <a href="shop-banner-sidebar.html">Fashion</a>
+                                <a href="#">Fashion</a>
                             </div>
                             <h3 class="product-name">
                                 <a href="#">Best Travel Bag</a>
@@ -556,7 +554,7 @@
                         </figure>
                         <div class="product-details">
                             <div class="product-cat">
-                                <a href="shop-banner-sidebar.html">Sports</a>
+                                <a href="#">Sports</a>
                             </div>
                             <h3 class="product-name">
                                 <a href="#">Black Stunt Motor</a>
@@ -594,7 +592,7 @@
                         </figure>
                         <div class="product-details">
                             <div class="product-cat">
-                                <a href="shop-banner-sidebar.html">Fashion</a>
+                                <a href="#">Fashion</a>
                             </div>
                             <h3 class="product-name">
                                 <a href="#">Blue Sky Trunk</a>
@@ -630,7 +628,7 @@
                         </figure>
                         <div class="product-details">
                             <div class="product-cat">
-                                <a href="shop-banner-sidebar.html">Beauty</a>
+                                <a href="#">Beauty</a>
                             </div>
                             <h3 class="product-name">
                                 <a href="#">Bodycare Smooth Powder</a>
@@ -666,7 +664,7 @@
                         </figure>
                         <div class="product-details">
                             <div class="product-cat">
-                                <a href="shop-banner-sidebar.html">Electronics</a>
+                                <a href="#">Electronics</a>
                             </div>
                             <h3 class="product-name">
                                 <a href="#">Bright Green IPhone</a>
@@ -702,7 +700,7 @@
                         </figure>
                         <div class="product-details">
                             <div class="product-cat">
-                                <a href="shop-banner-sidebar.html">Fashion</a>
+                                <a href="#">Fashion</a>
                             </div>
                             <h3 class="product-name">
                                 <a href="#">Cavin Fashion Suede Handbag</a>
@@ -740,7 +738,7 @@
                         </figure>
                         <div class="product-details">
                             <div class="product-cat">
-                                <a href="shop-banner-sidebar.html">Electronics</a>
+                                <a href="#">Electronics</a>
                             </div>
                             <h3 class="product-name">
                                 <a href="#">Charming Design Watch</a>
@@ -776,7 +774,7 @@
                         </figure>
                         <div class="product-details">
                             <div class="product-cat">
-                                <a href="shop-banner-sidebar.html">Fashion</a>
+                                <a href="#">Fashion</a>
                             </div>
                             <h3 class="product-name">
                                 <a href="#">Classic Simple Backpack</a>
@@ -812,7 +810,7 @@
                         </figure>
                         <div class="product-details">
                             <div class="product-cat">
-                                <a href="shop-banner-sidebar.html">Watches</a>
+                                <a href="#">Watches</a>
                             </div>
                             <h3 class="product-name">
                                 <a href="#">Smart Watch</a>
@@ -850,7 +848,7 @@
                         </figure>
                         <div class="product-details">
                             <div class="product-cat">
-                                <a href="shop-banner-sidebar.html">Accessories</a>
+                                <a href="#">Accessories</a>
                             </div>
                             <h3 class="product-name">
                                 <a href="#">Handmade Ring</a>
@@ -883,7 +881,7 @@
                     <div class="banner-content y-50">
                         <h5 class="banner-subtitle text-uppercase text-white font-weight-bold">Natural Process</h5>
                         <h3 class="banner-title text-capitalize text-white">Cosmetic Makeup<br>Professional</h3>
-                        <a href="demo8-shop.html" class="btn btn-white btn-link btn-slide-right btn-icon-right">
+                        <a href="#" class="btn btn-white btn-link btn-slide-right btn-icon-right">
                             Shop Now<i class="w-icon-long-arrow-right"></i></a>
                     </div>
                 </div>
@@ -896,7 +894,7 @@
                     <div class="banner-content y-50">
                         <h5 class="banner-subtitle text-uppercase font-weight-bold">Trending Now</h5>
                         <h3 class="banner-title text-capitalize">Women’s Lifestyle<br>Collection</h3>
-                        <a href="demo8-shop.html" class="btn btn-dark btn-link btn-slide-right btn-icon-right">
+                        <a href="#" class="btn btn-dark btn-link btn-slide-right btn-icon-right">
                             Shop Now<i class="w-icon-long-arrow-right"></i></a>
                     </div>
                 </div>
@@ -906,7 +904,7 @@
 
             <div class="title-link-wrapper mb-3">
                 <h2 class="title mb-0 pt-2 pb-2">Apparels &amp; Clothings</h2>
-                <a href="shop-boxed-banner.html" class="mb-0">More Products<i class="w-icon-long-arrow-right"></i></a>
+                <a href="#" class="mb-0">More Products<i class="w-icon-long-arrow-right"></i></a>
             </div>
             <div class="row grid banner-product-wrapper mb-6">
                 <div class="grid-item col-xl-5col3 col-lg-3 col-sm-8 col-12">
@@ -921,7 +919,7 @@
                             <div class="banner-price-info text-dark lh-1 ls-25">Up to <strong
                                     class="text-secondary text-uppercase">40% Off</strong></div>
                             <hr class="banner-divider bg-dark">
-                            <a href="demo8-shop.html" class="btn btn-dark btn-link btn-slide-right btn-icon-right">
+                            <a href="#" class="btn btn-dark btn-link btn-slide-right btn-icon-right">
                                 Start Shopping<i class="w-icon-long-arrow-right mb-1"></i>
                             </a>
                         </div>
@@ -1183,7 +1181,7 @@
             <!-- End of Banner Product Wrapper -->
             <div class="title-link-wrapper mb-3">
                 <h2 class="title mb-0 pt-2 pb-2">Top Rated Services</h2>
-                <a href="shop-boxed-banner.html" class="mb-0">More Products<i class="w-icon-long-arrow-right"></i></a>
+                <a href="#" class="mb-0">More Products<i class="w-icon-long-arrow-right"></i></a>
             </div>
             <div class="row grid banner-product-wrapper mb-6">
                 <div class="grid-item col-xl-5col3 col-lg-3 col-sm-8 col-12">
@@ -1400,8 +1398,7 @@
                             Summer Season's Sale<br><strong>For Men's Sneakers</strong>
                         </h3>
                     </div>
-                    <a href="demo8-shop.html"
-                        class="content-right btn btn-white btn-outline btn-rounded btn-icon-right">
+                    <a href="#" class="content-right btn btn-white btn-outline btn-rounded btn-icon-right">
                         Discover Now<i class="w-icon-long-arrow-right"></i>
                     </a>
                 </div>
@@ -1415,7 +1412,7 @@
 
             <div class="title-link-wrapper mb-3">
                 <h2 class="title mb-0 pt-2 pb-2">Top Rated Suppliers</h2>
-                <a href="shop-boxed-banner.html" class="mb-0">More Products<i class="w-icon-long-arrow-right"></i></a>
+                <a href="#" class="mb-0">More Products<i class="w-icon-long-arrow-right"></i></a>
             </div>
             <div class="row cols-lg-4 cols-md-2 cols-sm-2 cols-1 mt-4">
                 <div class="store-wrap mb-4">
@@ -1429,7 +1426,7 @@
                         <!-- End of Store Header -->
                         <div class="store-content">
                             <h4 class="store-title">
-                                <a href="vendor-dokan-store.html">Vendor 1</a>
+                                <a href="#">Vendor 1</a>
                                 <label class="featured-label">Featured</label>
                             </h4>
                             <div class="ratings-container">
@@ -1454,8 +1451,7 @@
                                 <img src="https://portotheme.com/html/wolmart/assets/images/vendor/brand/1.jpg"
                                     alt="Brand" width="80" height="80">
                             </figure>
-                            <a href="vendor-dokan-store.html"
-                                class="btn btn-dark btn-link btn-underline btn-icon-right btn-visit">
+                            <a href="#" class="btn btn-dark btn-link btn-underline btn-icon-right btn-visit">
                                 Visit Store<i class="w-icon-long-arrow-right"></i></a>
                         </div>
                         <!-- End of Store Footer -->
@@ -1473,7 +1469,7 @@
                         <!-- End of Store Header -->
                         <div class="store-content">
                             <h4 class="store-title">
-                                <a href="vendor-dokan-store.html">Vendor 2</a>
+                                <a href="#">Vendor 2</a>
                             </h4>
                             <div class="ratings-container">
                                 <div class="ratings-full">
@@ -1496,9 +1492,8 @@
                                 <img src="https://portotheme.com/html/wolmart/assets/images/vendor/brand/2.jpg"
                                     alt="Brand" width="80" height="80">
                             </figure>
-                            <a href="vendor-dokan-store.html"
-                                class="btn btn-dark btn-link btn-underline btn-icon-right btn-visit">Visit Store<i
-                                    class="w-icon-long-arrow-right"></i></a>
+                            <a href="#" class="btn btn-dark btn-link btn-underline btn-icon-right btn-visit">Visit
+                                Store<i class="w-icon-long-arrow-right"></i></a>
                         </div>
                         <!-- End of Store Footer -->
                     </div>
@@ -1515,7 +1510,7 @@
                         <!-- End of Store Header -->
                         <div class="store-content">
                             <h4 class="store-title">
-                                <a href="vendor-dokan-store.html">Vendor 3</a>
+                                <a href="#">Vendor 3</a>
                             </h4>
                             <div class="ratings-container">
                                 <div class="ratings-full">
@@ -1538,9 +1533,8 @@
                                 <img src="https://portotheme.com/html/wolmart/assets/images/vendor/brand/3.jpg"
                                     alt="Brand" width="80" height="80">
                             </figure>
-                            <a href="vendor-dokan-store.html"
-                                class="btn btn-dark btn-link btn-underline btn-icon-right btn-visit">Visit Store<i
-                                    class="w-icon-long-arrow-right"></i></a>
+                            <a href="#" class="btn btn-dark btn-link btn-underline btn-icon-right btn-visit">Visit
+                                Store<i class="w-icon-long-arrow-right"></i></a>
                         </div>
                         <!-- End of Store Footer -->
                     </div>
@@ -1557,7 +1551,7 @@
                         <!-- End of Store Header -->
                         <div class="store-content">
                             <h4 class="store-title">
-                                <a href="vendor-dokan-store.html">Vendor 4</a>
+                                <a href="#">Vendor 4</a>
                             </h4>
                             <div class="ratings-container">
                                 <div class="ratings-full">
@@ -1580,9 +1574,8 @@
                                 <img src="https://portotheme.com/html/wolmart/assets/images/vendor/brand/4.jpg"
                                     alt="Brand" width="80" height="80">
                             </figure>
-                            <a href="vendor-dokan-store.html"
-                                class="btn btn-dark btn-link btn-underline btn-icon-right btn-visit">Visit Store<i
-                                    class="w-icon-long-arrow-right"></i></a>
+                            <a href="#" class="btn btn-dark btn-link btn-underline btn-icon-right btn-visit">Visit
+                                Store<i class="w-icon-long-arrow-right"></i></a>
                         </div>
                         <!-- End of Store Footer -->
                     </div>
@@ -1599,7 +1592,7 @@
                         <!-- End of Store Header -->
                         <div class="store-content">
                             <h4 class="store-title">
-                                <a href="vendor-dokan-store.html">Vendor 5</a>
+                                <a href="#">Vendor 5</a>
                                 <label class="featured-label">Featured</label>
                             </h4>
                             <div class="ratings-container">
@@ -1623,9 +1616,8 @@
                                 <img src="https://portotheme.com/html/wolmart/assets/images/vendor/brand/5.jpg"
                                     alt="Brand" width="80" height="80">
                             </figure>
-                            <a href="vendor-dokan-store.html"
-                                class="btn btn-dark btn-link btn-underline btn-icon-right btn-visit">Visit Store<i
-                                    class="w-icon-long-arrow-right"></i></a>
+                            <a href="#" class="btn btn-dark btn-link btn-underline btn-icon-right btn-visit">Visit
+                                Store<i class="w-icon-long-arrow-right"></i></a>
                         </div>
                         <!-- End of Store Footer -->
                     </div>
@@ -1642,7 +1634,7 @@
                         <!-- End of Store Header -->
                         <div class="store-content">
                             <h4 class="store-title">
-                                <a href="vendor-dokan-store.html">Vendor 6</a>
+                                <a href="#">Vendor 6</a>
                             </h4>
                             <div class="ratings-container">
                                 <div class="ratings-full">
@@ -1665,9 +1657,8 @@
                                 <img src="https://portotheme.com/html/wolmart/assets/images/vendor/brand/6.jpg"
                                     alt="Brand" width="80" height="80">
                             </figure>
-                            <a href="vendor-dokan-store.html"
-                                class="btn btn-dark btn-link btn-underline btn-icon-right btn-visit">Visit Store<i
-                                    class="w-icon-long-arrow-right"></i></a>
+                            <a href="#" class="btn btn-dark btn-link btn-underline btn-icon-right btn-visit">Visit
+                                Store<i class="w-icon-long-arrow-right"></i></a>
                         </div>
                         <!-- End of Store Footer -->
                     </div>
@@ -1740,7 +1731,7 @@
 
             <div class="title-link-wrapper mb-4 appear-animate">
                 <h2 class="title mb-0 ls-normal appear-animate pb-1">Recently Viewed</h2>
-                <a href="shop-boxed-banner.html" class="font-weight-bold ls-25">
+                <a href="#" class="font-weight-bold ls-25">
                     More Products<i class="w-icon-long-arrow-right"></i></a>
             </div>
             <div class="owl-carousel owl-theme owl-shadow-carousel appear-animate row cols-xl-8 cols-lg-6 cols-md-4 cols-2 mb-10 pb-2"
