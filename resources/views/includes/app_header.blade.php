@@ -89,7 +89,23 @@
 
                                     @if($category->hasChild == true)
 
+                                    <ul class="megamenu">
 
+                                        @foreach ($category->children as $sub_cat)
+
+                                        <li>
+                                            <h4 class="menu-title">
+                                                {{$sub_cat->getTranslatedAttribute('name',current_locale())}}</h4>
+                                            <hr class="divider">
+                                            @if($sub_cat->hasChild == true)
+
+
+                                            @endif
+                                        </li>
+
+                                        @endforeach
+
+                                    </ul>
 
                                     @endif
                                 </li>
