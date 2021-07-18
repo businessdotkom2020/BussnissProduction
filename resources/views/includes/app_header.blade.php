@@ -79,7 +79,7 @@
 
                         <div class="dropdown-box text-default">
                             <ul class="menu vertical-menu category-menu">
-                                @foreach (\App\Models\Category::whereNull('parent_id')->get() as $category)
+                                @foreach (\App\Models\Category::where('in_sidebar',1)->get() as $category)
 
                                 <li>
                                     <a href="{{url('category/'.$category->id)}}">
