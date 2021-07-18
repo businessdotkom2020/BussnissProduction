@@ -99,7 +99,18 @@
                                             <hr class="divider">
                                             @if($sub_cat->hasChild == true)
 
+                                            <ul>
+                                                @foreach ($sub_cat->children as $sub_sub_cat)
 
+                                                <li>
+                                                    <a
+                                                        href="{{url('category/'.$sub_sub_cat->id)}}">{{$sub_sub_cat->getTranslatedAttribute('name',current_locale())}}</a>
+                                                </li>
+
+
+                                                @endforeach
+
+                                            </ul>
                                             @endif
                                         </li>
 
