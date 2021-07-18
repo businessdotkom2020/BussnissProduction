@@ -38,7 +38,7 @@
 
             @if (Auth::check())
             <a href="my-account.html" class="d-lg-show">My Account</a>
-
+            @endif
             <a href="assets/ajax/login.html" class="d-lg-show login sign-in"><i class="w-icon-account"></i>Sign
                 In</a>
             <span class="delimiter d-lg-show">/</span>
