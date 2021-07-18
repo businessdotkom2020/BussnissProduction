@@ -8,15 +8,19 @@
     <div class="category-wrap mb-4">
         <div class="category category-group-image br-sm">
             <div class="category-content">
-                <h4 class="category-name"><a href="#">Jewelry &amp; Watch</a>
+                <h4 class="category-name"><a href="{{url('category/'.$category->id)}}">
+                        {{$category->getTranslatedAttribute('name',current_locale())}}
+                    </a>
                 </h4>
                 <ul class="category-list">
+
                     <li><a href="#">Pendant</a></li>
                     <li><a href="#">Necklace</a></li>
                     <li><a href="#">Watch</a></li>
                     <li><a href="#">Bracelets</a></li>
                     <li><a href="#">Smart Watches</a></li>
                     <li><a href="#">Accessories</a></li>
+
                 </ul>
             </div>
             <a href="#">
