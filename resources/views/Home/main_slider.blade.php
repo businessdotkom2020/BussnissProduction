@@ -6,7 +6,7 @@
 
     <div class="banner banner-fixed intro-slide intro-slide1 br-sm"
         style="background-image: url({{$slider->image_url}}); background-color: #E8EAEF;">
-
+        <a href="{{url('/')}}"></a>
     </div>
     @endforeach
 
