@@ -24,6 +24,7 @@
             }
         }">
 
+    @foreach (\App\Models\Feature::get() as $featuer_slider)
 
     <div class="icon-box icon-box-side text-dark icon-box-chat">
         <span class="icon-box-icon icon-chat">
@@ -34,31 +35,7 @@
             <p class="text-default">Call or email us 24/7</p>
         </div>
     </div>
-    <div class="icon-box icon-box-side text-dark icon-box-chat">
-        <span class="icon-box-icon icon-chat">
-            <i class="w-icon-chat"></i>
-        </span>
-        <div class="icon-box-content">
-            <h4 class="icon-box-title">Customer Support</h4>
-            <p class="text-default">Call or email us 24/7</p>
-        </div>
-    </div>
-    <div class="icon-box icon-box-side text-dark icon-box-chat">
-        <span class="icon-box-icon icon-chat">
-            <i class="w-icon-chat"></i>
-        </span>
-        <div class="icon-box-content">
-            <h4 class="icon-box-title">Customer Support</h4>
-            <p class="text-default">Call or email us 24/7</p>
-        </div>
-    </div>
-    <div class="icon-box icon-box-side text-dark icon-box-chat">
-        <span class="icon-box-icon icon-chat">
-            <i class="w-icon-chat"></i>
-        </span>
-        <div class="icon-box-content">
-            <h4 class="icon-box-title">Customer Support</h4>
-            <p class="text-default">Call or email us 24/7</p>
-        </div>
-    </div>
+    @endforeach
+
+
 </div>
