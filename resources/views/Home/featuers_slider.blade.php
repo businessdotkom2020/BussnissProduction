@@ -31,8 +31,8 @@
             <i class="w-icon-chat"></i>
         </span>
         <div class="icon-box-content">
-            <h4 class="icon-box-title">Customer Support</h4>
-            <p class="text-default">Call or email us 24/7</p>
+            <h4 class="icon-box-title">{{$featuer_slider->title}}</h4>
+            <p class="text-default">{{$featuer_slider->body}}</p>
         </div>
     </div>
     @endforeach
