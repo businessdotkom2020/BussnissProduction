@@ -18,6 +18,7 @@ class CreateHomeSlidersTable extends Migration
             $table->string('image');
             $table->string('product_id')->nullable();
             $table->string('link')->nullable();
+            $table->boolean('status')->default(1)->nullable();
             $table->timestamps();
         });
     }
