@@ -39,14 +39,16 @@
             @if (Auth::check())
             <a href="my-account.html" class="d-lg-show">My Account</a>
             @endif
-            <a href="assets/ajax/login.html" class="d-lg-show login sign-in"><i class="w-icon-account"></i>Sign
-                In</a>
+            <a href="{{url('register/supplier')}}" class="d-lg-show login sign-in"><i
+                    class="w-icon-account"></i>{{__('general.login')}}</a>
             <span class="delimiter d-lg-show">/</span>
-            <a href="assets/ajax/login.html" class="ml-0 d-lg-show login register">Register</a>
-            <a href="assets/ajax/login.html" class="d-lg-show login sign-in"><i class="w-icon-store"></i>Sign
-                In</a>
+            <a href="{{url('login')}}" class="ml-0 d-lg-show login register">{{__('general.register')}}</a>
+            <a href="{{url('register')}}" class="d-lg-show login sign-in"><i
+                    class="w-icon-store"></i>{{__('general.login')}}
+            </a>
             <span class="delimiter d-lg-show">/</span>
-            <a href="assets/ajax/login.html" class="ml-0 d-lg-show login register">Register</a>
+            <a href="{{url('register/supplier')}}"
+                class="ml-0 d-lg-show login register">{{__('general.register_supplier')}}</a>
         </div>
     </div>
 </div>
