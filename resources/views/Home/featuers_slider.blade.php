@@ -28,7 +28,7 @@
 
     <div class="icon-box icon-box-side text-dark icon-box-chat">
         <span class="icon-box-icon icon-chat">
-            <i class="w-icon-chat"></i>
+            <i class="{{$featuer_slider->icon}}"></i>
         </span>
         <div class="icon-box-content">
             <h4 class="icon-box-title">{{$featuer_slider->title}}</h4>
