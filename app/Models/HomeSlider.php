@@ -20,9 +20,9 @@ class HomeSlider extends Model
     public function getPathUrlAttribute()
     {
         if($this->product_id){
-            url('product/'.$this->product_id);
+            return url('product/'.$this->product_id);
         }
-        return url('url/'.$this->link);
+            return url('url/'.$this->link);
     }
     
 }
