@@ -40,6 +40,10 @@
                 In</a>
             <span class="delimiter d-lg-show">/</span>
             <a href="assets/ajax/login.html" class="ml-0 d-lg-show login register">Register</a>
+            <a href="assets/ajax/login.html" class="d-lg-show login sign-in"><i class="w-icon-store"></i>Sign
+                In</a>
+            <span class="delimiter d-lg-show">/</span>
+            <a href="assets/ajax/login.html" class="ml-0 d-lg-show login register">Register</a>
         </div>
     </div>
 </div>
