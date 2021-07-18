@@ -23,7 +23,7 @@
 }
 }
 }">
-    @foreach (\App\Models\Featuere::get() as $featuer_slider)
+    @foreach (\App\Models\Feature::get() as $featuer_slider)
 
     <div class="icon-box icon-box-side text-dark icon-box-chat">
         <span class="icon-box-icon icon-chat">
