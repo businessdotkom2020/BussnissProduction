@@ -13,6 +13,18 @@ if (!function_exists('current_currency')) {
     }
     
 }
+if (!function_exists('current_locale')) {
+    /**
+     * Get the authenticated user.
+     *
+     * @return \App\Models\Auth\User
+    */
+    function current_locale()
+    {
+        return Session::get('locale') ? \Session::get('locale')  : Config::get('app.locale'); 
+    }
+    
+}
 
 
  
