@@ -22,10 +22,9 @@
 
                 </ul>
             </div>
-            <a href="#">
+            <a href="{{url('category/'.$category->id)}}">
                 <figure class="category-media">
-                    <img src="https://www.portotheme.com/html/wolmart/assets/images/demos/demo4/categories/1-6.jpg"
-                        alt="Category" width="190" height="214">
+                    <img src="{{url('storage/'.$category->image)}}" alt="Category" width="190" height="214">
                 </figure>
             </a>
         </div>
