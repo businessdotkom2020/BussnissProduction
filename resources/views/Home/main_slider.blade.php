@@ -2,19 +2,13 @@
 'nav': false,
 'dots': true
 }">
+    @foreach (\App\Models\HomeSlider::get() as $slider)
+
     <div class="banner banner-fixed intro-slide intro-slide1 br-sm"
-        style="background-image: url(https://www.portotheme.com/html/wolmart/assets/images/demos/demo8/slides/slide-1.jpg); background-color: #E8EAEF;">
+        style="background-image: url({{$slider->image_url}}); background-color: #E8EAEF;">
 
     </div>
-    <!-- End of Intro Slide 1 -->
-    <div class="banner banner-fixed intro-slide intro-slide2 br-sm"
-        style="background-image: url(https://www.portotheme.com/html/wolmart/assets/images/demos/demo8/slides/slide-2.jpg); background-color: #2e3233;">
+    @endforeach
 
-    </div>
-    <!-- End of Intro Slide 2 -->
-    <div class="banner banner-fixed intro-slide intro-slide3 br-sm"
-        style="background-image: url(https://www.portotheme.com/html/wolmart/assets/images/demos/demo8/slides/slide-3.jpg); background-color:#363332;">
-
-    </div>
     <!-- End of Intro Slide 3 -->
 </div>
