@@ -16,7 +16,7 @@
 
                     @foreach ($category->children as $sub_cat)
                     <li><a
-                            href="{{url('category/'.$sub_sub_cat->id)}}">{{$sub_sub_cat->getTranslatedAttribute('name',current_locale())}}</a>
+                            href="{{url('category/'.$sub_cat->id)}}">{{$sub_cat->getTranslatedAttribute('name',current_locale())}}</a>
                     </li>
                     @endforeach
 
