@@ -1984,7 +1984,6 @@
                                     <a href="product-default.html" class="rating-reviews">(4
                                         reviews)</a>
                                 </div>
-
                             </div>
                         </div>
                     </div>
@@ -2079,15 +2078,11 @@
                                     <a href="product-default.html" class="rating-reviews">(9
                                         reviews)</a>
                                 </div>
-
                             </div>
                         </div>
                     </div>
-
                 </div>
             </div>
-
-
             <h2 class="title text-left mb-5 appear-animate">Our Clients</h2>
             <div class="owl-carousel owl-theme row cols-xl-8 cols-lg-6 cols-md-4 cols-sm-3 cols-2 brands-wrapper br-sm mb-9 appear-animate"
                 data-owl-options="{
@@ -2149,7 +2144,6 @@
                 </figure>
             </div>
             <!-- End of Brands Wrapper -->
-
             <div class="title-link-wrapper mb-4 appear-animate">
                 <h2 class="title mb-0 ls-normal appear-animate pb-1">Recently Viewed</h2>
                 <a href="#" class="font-weight-bold ls-25">
@@ -2296,9 +2290,7 @@
         </div>
         <!-- End of Container -->
     </div>
-
 </main>
-
 <!-- Start of Quick View -->
 <div class="product product-single product-popup">
     <div class="row gutter-lg">
@@ -2368,11 +2360,8 @@
                         </div>
                     </div>
                 </div>
-
                 <hr class="product-divider">
-
                 <div class="product-price">$40.00</div>
-
                 <div class="ratings-container">
                     <div class="ratings-full">
                         <span class="ratings" style="width: 80%;"></span>
@@ -2380,7 +2369,6 @@
                     </div>
                     <a href="#" class="rating-reviews">(3 Reviews)</a>
                 </div>
-
                 <div class="product-short-desc">
                     <ul class="list-type-check list-style-none">
                         <li>Ultrices eros in cursus turpis massa cursus mattis.</li>
@@ -2388,7 +2376,6 @@
                         <li>Aliquam id diam maecenas ultricies mi eget mauris.</li>
                     </ul>
                 </div>
-
                 <hr class="product-divider">
                 <h2 class="title title-center mb-4" style="margin-bottom: 1.9rem;"> Vendor Details </h2>
                 <div class="vendor-widget">
@@ -2416,7 +2403,6 @@
                                         <span class="tooltiptext tooltip-top"></span>
                                     </div>
                                 </div>
-
                                 <ul class="seller-info-list list-style-none mb-6">
                                     <li class="store-address" style="color: black;">
                                         <i class="w-icon-map-marker"></i>
@@ -2451,23 +2437,14 @@
                     </div>
                     <!-- End of Vendor Widget Banner -->
                 </div>
-
-
-
             </div>
         </div>
     </div>
 </div>
 </div>
 <!-- End of Quick view -->
-
 @endsection
-
-
 @push('first_scripts')
-
-
-
 <!-- Plugin JS File -->
 <script src="{{ asset('vendor/jquery/jquery.min.js')}}"></script>
 <script src="{{ asset('vendor/jquery.plugin/jquery.plugin.min.js')}}"></script>
@@ -2477,17 +2454,10 @@
 <script src="{{ asset('vendor/owl-carousel/owl.carousel.min.js')}}"></script>
 <script src="{{ asset('vendor/magnific-popup/jquery.magnific-popup.min.js')}}"></script>
 <script src="{{ asset('vendor/jquery.gmap/jquery.gmap.min.js')}}"></script>
-
 <script src="{{ asset('vendor/floating-parallax/parallax.min.js')}}"></script>
-
-
 <!-- Main JS -->
 <script src="{{ asset('vendor/main.min.js')}}"></script>
-
-
-
 <script type="text/javascript" src="{{ asset('/web/js/branches_map.js')}}"></script>
-
 <script>
     $('#map').show();
     $("#map").css("position","fixed !important");
@@ -2496,6 +2466,4 @@
 <script
     src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBcP3JChqWSCHtsjW4e_Ug8h0htjiIhcHw&libraries=places&callback=initMap"
     async defer></script>
-
-
 @endpush
