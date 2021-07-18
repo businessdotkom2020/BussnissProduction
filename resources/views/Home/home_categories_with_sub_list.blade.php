@@ -2,7 +2,7 @@
 <div class="row category-wrapper cols-lg-3 cols-sm-2 appear-animate mb-8 fadeIn appear-animation-visible"
     style="animation-duration: 1.2s; ">
 
-    @foreach (\App\Models\Category::where('in_sidebar',1)->get() as $category)
+    @foreach (\App\Models\Category::where('is_featured',1)->get() as $category)
 
     <!-- End of Category Wrap -->
     <div class="category-wrap mb-4">
