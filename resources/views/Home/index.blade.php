@@ -67,7 +67,7 @@
             </div>
 
             @include('Home.featuers_slider')
-            @include('Home.home_categories_with_sub_list.blade')
+            @include('Home.home_categories_with_sub_list')
 
 
 
