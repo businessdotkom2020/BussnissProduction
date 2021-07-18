@@ -15,18 +15,14 @@
             <!-- End of DropDown Menu -->
 
             <div class="dropdown">
-                <a href="{{url('locale/en')}}"><img
-                        src="https://portotheme.com/html/wolmart/assets/images/flags/eng.png" alt="ENG Flag" width="14"
-                        height="8" class="dropdown-image" /> ENG</a>
+
                 <div class="dropdown-box">
                     <a href="#ENG">
-                        <img src="https://portotheme.com/html/wolmart/assets/images/flags/eng.png" alt="ENG Flag"
-                            width="14" height="8" class="dropdown-image" />
+
                         English
                     </a>
                     <a href="{{url('locale/ar')}}">
-                        <img src="https://portotheme.com/html/wolmart/assets/images/flags/ar.png" alt="Ar Flag"
-                            class="dropdown-image" />
+
                         عربي
                     </a>
 
