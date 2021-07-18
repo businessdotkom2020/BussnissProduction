@@ -83,7 +83,7 @@
 
                                 <li>
                                     <a href="{{url('category/'.$category->id)}}">
-                                        <i class="w-icon-tshirt2"></i>
+                                        <i class="{{$category->icon}}"></i>
                                         {{$category->getTranslatedAttribute('name',current_locale())}}
                                     </a>
 
