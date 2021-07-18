@@ -23,10 +23,16 @@
         })(document);
 </script>
 
-<link rel="preload" href="{{ asset('fonts/Simple-Line-Icons.woff')}}" as="font" type="font/font"
-    crossorigin="anonymous">
-<link rel="preload" href="{{ asset('fonts/Simple-Line-Icons.woff2')}}" as="font" type="font/woff2"
-    crossorigin="anonymous">
+
+<link rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/simple-line-icons/2.5.5/css/simple-line-icons.min.css"
+    integrity="sha512-QKC1UZ/ZHNgFzVKSAhV5v5j73eeL9EEN289eKAEFaAjgAiobVAnVv/AGuPbXsKl1dNoel3kNr6PYnSiTzVVBCw=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/simple-line-icons/2.5.5/css/simple-line-icons.css"
+    integrity="sha512-9Tu/Gu0+bXW+oGrTGJOeNz2RG4MaF52FznXCciXFrXehFTLF6phJnJFNVOU2mmj9FWIXk9ap0H1ocygu1ZTRqg=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+
 
 <link rel="preload" href="{{ asset('vendor/fontawesome-free/webfonts/fa-regular-400.woff2')}}" as="font"
     type="font/woff2" crossorigin="anonymous">
