@@ -15,9 +15,11 @@
             <!-- End of DropDown Menu -->
 
             <div class="dropdown">
+                <a href="#currency">{{current_currency()}}</a>
 
                 <div class="dropdown-box">
-                    <a href="#ENG">
+
+                    <a {{url('locale/en')}} href="#ENG">
 
                         English
                     </a>
