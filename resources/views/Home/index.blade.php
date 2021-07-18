@@ -23,6 +23,11 @@
         })(document);
 </script>
 
+<link rel="preload" href="{{ asset('fonts/Simple-Line-Icons.woff')}}" as="font" type="font/font"
+    crossorigin="anonymous">
+<link rel="preload" href="{{ asset('fonts/Simple-Line-Icons.woff2')}}" as="font" type="font/woff2"
+    crossorigin="anonymous">
+
 <link rel="preload" href="{{ asset('vendor/fontawesome-free/webfonts/fa-regular-400.woff2')}}" as="font"
     type="font/woff2" crossorigin="anonymous">
 <link rel="preload" href="{{ asset('vendor/fontawesome-free/webfonts/fa-solid-900.woff2')}}" as="font" type="font/woff2"
