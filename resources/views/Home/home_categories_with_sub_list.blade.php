@@ -14,12 +14,11 @@
                 </h4>
                 <ul class="category-list">
 
-                    <li><a href="#">Pendant</a></li>
-                    <li><a href="#">Necklace</a></li>
-                    <li><a href="#">Watch</a></li>
-                    <li><a href="#">Bracelets</a></li>
-                    <li><a href="#">Smart Watches</a></li>
-                    <li><a href="#">Accessories</a></li>
+                    @foreach ($category->children as $sub_cat)
+                    <li><a
+                            href="{{url('category/'.$sub_sub_cat->id)}}">{{$sub_sub_cat->getTranslatedAttribute('name',current_locale())}}</a>
+                    </li>
+                    @endforeach
 
                 </ul>
             </div>
