@@ -24,4 +24,5 @@ class HomeSlider extends Model
         }
         return url('url/'.$this->link);
     }
+    
 }
